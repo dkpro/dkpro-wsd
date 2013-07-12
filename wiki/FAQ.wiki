@@ -1,0 +1,39 @@
+#summary Frequently asked questions about DKPro WSD
+
+= What is DKPro WSD? =
+
+DKPro WSD is a general-purpose framework for word sense disambiguation (WSD) which is both modular and extensible.  DKPro WSD was designed primarily to support the needs of WSD researchers, who will appreciate the convenience and flexibility it affords in tuning and comparing algorithms and data sets.  However, as a general-purpose toolkit it could also be used to implement a WSD module for a real-world natural language processing application.  Its support for interactive visualization of the disambiguation process also makes it a powerful tool for learning or teaching the principles of WSD.
+
+By _modular_ we mean that the framework makes a logical separation between the _data sets_ (e.g., the corpora to be annotated, the answer keys, manually annotated training examples, etc.), the _sense inventories_ (i.e., the lexical-semantic resources enumerating the senses to which words in the corpora are assigned), and the _algorithms_ (i.e., code which actually performs the sense assignments and prerequisite linguistic annotations), and provides a standard interface for each of these component types.  Components which provide the same functionality can be freely swapped, so that one can easily run the same algorithm on different data sets (irrespective of which sense inventory they use), or test several different algorithms on the same data set.
+
+By _extensible_ we mean that it is easy to adapt to work with new methods and resources.  The system is written in Java and is based on UIMA, an industry-standard architecture for analysis of unstructured information.  Support for new corpus formats, sense inventories, and WSD algorithms can be added by implementing new UIMA components for them, or more conveniently by writing UIMA wrappers around existing code.
+
+= What licence is DKPro WSD released under? =
+
+DKPro WSD is licensed under the terms of the [http://www.apache.org/licenses/LICENSE-2.0 Apache Licence 2.0].  Some third-party libraries it depends on have different (but Apache-compatible) licences.
+
+= How do I get DKPro WSD? =
+
+TBA
+
+= What is the relationship between DKPro WSD and  DKPro Core? =
+
+DKPro Core is a collection of general-purpose software components for natural language processing (NLP) based on the Apache UIMA framework. DKPro WSD is a separate product in the DKPro family which provides a unified framework and set of tools geared specifically towards word sense disambiguation.  Many of the modules in DKPro WSD make use of or extend DKPro Core components.
+
+
+= How can I cite DKPro WSD in a paper I'm writing? =
+
+To reference DKPro WSD please cite the following paper:
+
+Tristan Miller, Nicolai Erbs, Hans-Peter Zorn, Torsten Zesch, and Iryna Gurevych. DKPro WSD: A generalized UIMA-based framework for word sense disambiguation. In _Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (ACL 2013)_, August 2013.
+
+You can use the following BibTeX entry:
+{{{
+@InProceedings{miller2013dkpro,
+  author =    {Tristan Miller and Nicolai Erbs and Hans-Peter Zorn and Torsten Zesch and Iryna Gurevych},
+  title =     {{DKPro} {WSD}: A Generalized {UIMA}-based Framework for Word Sense Disambiguation},
+  booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (ACL 2013)},
+  year =      2013,
+  month =     aug,
+}
+}}}
