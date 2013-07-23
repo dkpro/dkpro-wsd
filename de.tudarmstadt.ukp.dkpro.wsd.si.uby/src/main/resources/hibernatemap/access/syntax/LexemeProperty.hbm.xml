@@ -1,0 +1,23 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.syntax.LexemeProperty" table="LexemeProperty"
+	 node="LexemeProperty" dynamic-insert="true">
+	 
+    <id column="lexemePropertyId" type="long">
+           <generator class="increment"/>
+    </id>
+    
+    <property name="auxiliary" column="auxiliary" node="@auxiliary">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EAuxiliary</param>         	
+      	</type>
+  	</property>
+ 	<property name="syntacticProperty" column="syntacticProperty" node="@syntacticProperty">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ESyntacticProperty</param>         	
+      	</type>
+  	</property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> 	
+
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.Component" table="Component" node="Component" dynamic-insert="true">
+	<id column="componentId" type="long">
+           <generator class="increment"/>
+    </id>         
+
+    <property name="isBreakBefore" column="isBreakBefore" node="@isBreakBefore">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EYesNo</param>         	
+      	</type>
+  	</property>  
+    
+    <property name="isHead" column="isHead" node="@isHead">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EYesNo</param>         	
+      	</type>
+  	</property>  	
+  	
+    
+    <property name="position" column="position" node="@position" type="integer"/>
+		
+  	<many-to-one name="targetLexicalEntry" class="de.tudarmstadt.ukp.lmf.model.core.LexicalEntry" column="targetLexicalEntry" 
+			node="@targetLexicalEntry" foreign-key="none" not-found="ignore"/>
+		
+</class>
+</hibernate-mapping>

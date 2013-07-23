@@ -1,0 +1,23 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+
+<class name="de.tudarmstadt.ukp.lmf.model.meta.SemanticLabel" table="SemanticLabel" node="SemanticLabel" dynamic-insert="true">
+    <id column="semanticLabelId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="label" column="label" node="@label" type="string"/>
+	<property name="type" column="type" node="@type" type="string" />
+	<property name="quantification" column="quantification" node="@quantification" type="long" />    
+ 
+     <list name="monolingualExternalRefs" node=".">
+            <key column="semanticLabelId" on-delete="cascade"/>
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.MonolingualExternalRef" node="MonolingualExternalRef"/>
+    </list> 
+</class>
+
+
+
+</hibernate-mapping>

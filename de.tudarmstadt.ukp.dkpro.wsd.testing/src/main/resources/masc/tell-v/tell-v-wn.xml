@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph xmlns="http://www.xces.org/ns/GrAF/1.0/">
+    <header>
+ 	   <tagsDecl>
+            <tagUsage gi="WordNet" occurs="815"/>
+        </tagsDecl>
+        <annotationSets>
+            <annotationSet name="WordNet" type="http://wordnet.princeton.edu/"/>
+            <annotationSet name="xces" type="http://www.xces.org/schema/2003"/>
+        </annotationSets>
+    </header>
+    <region xml:id="wn_r1" anchors="0 34"/>
+    <region xml:id="wn_r0" anchors="26 30"/>
+    <region xml:id="wn_r4" anchors="36 96"/>
+    <region xml:id="wn_r2" anchors="42 46"/>
+    <region xml:id="wn_r3" anchors="79 86"/>
+    <node xml:id="wn_n0">
+        <link targets="wn_r0"/>
+    </node>
+    <a label="WordNet" ref="wn_n0" as="WordNet">
+        <fs>
+            <f name="annotation0">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann108"/>
+                </fs>
+            </f>
+            <f name="orig-text-location">
+                <fs>
+                    <f name="orig-text" value="file:/c:/OANC/data/written_2/technical/911report/chapter-6.anc"/>
+                    <f name="orig-start" value="114971"/>
+                    <f name="orig-end" value="115034"/>
+                </fs>
+            </f>
+            <f name="annotation1">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann102"/>
+                </fs>
+            </f>
+            <f name="annotation2">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann101"/>
+                </fs>
+            </f>
+            <f name="annotation3">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann107"/>
+                </fs>
+            </f>
+            <f name="annotation4">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann103"/>
+                </fs>
+            </f>
+        </fs>
+    </a>
+    <node xml:id="wn_n1">
+        <link targets="wn_r2"/>
+    </node>
+    <a label="WordNet" ref="wn_n1" as="WordNet">
+        <fs>
+            <f name="annotation0">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann108"/>
+                </fs>
+            </f>
+            <f name="orig-text-location">
+                <fs>
+                    <f name="orig-text" value="file:/c:/OANC/data/written_2/technical/911report/chapter-6.anc"/>
+                    <f name="orig-start" value="114971"/>
+                    <f name="orig-end" value="115034"/>
+                </fs>
+            </f>
+            <f name="annotation1">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann101"/>
+                </fs>
+            </f>
+            <f name="annotation2">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann107"/>
+                </fs>
+            </f>
+            <f name="annotation3">
+                <fs>
+                    <f name="sense" value="tell%2:32:00::"/>
+                    <f name="annotator" value="ann102"/>
+                </fs>
+            </f>
+            <f name="annotation4">
+                <fs>
+                    <f name="sense" value="tell%2:32:00::"/>
+                    <f name="annotator" value="ann105"/>
+                </fs>
+            </f>
+            <f name="annotation5">
+                <fs>
+                    <f name="sense" value="tell%2:32:00::"/>
+                    <f name="annotator" value="ann103"/>
+                </fs>
+            </f>
+        </fs>
+    </a>
+    <node xml:id="wn_n2">
+        <link targets="wn_r3"/>
+    </node>
+    <a label="WordNet" ref="wn_n2" as="WordNet">
+        <fs>
+            <f name="annotation0">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann108"/>
+                </fs>
+            </f>
+            <f name="orig-text-location">
+                <fs>
+                    <f name="orig-text" value="file:/c:/OANC/data/written_2/technical/911report/chapter-6.anc"/>
+                    <f name="orig-start" value="114971"/>
+                    <f name="orig-end" value="115034"/>
+                </fs>
+            </f>
+            <f name="annotation1">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann101"/>
+                </fs>
+            </f>
+            <f name="annotation2">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann107"/>
+                </fs>
+            </f>
+            <f name="annotation3">
+                <fs>
+                    <f name="sense" value="tell%2:32:00::"/>
+                    <f name="annotator" value="ann102"/>
+                </fs>
+            </f>
+            <f name="annotation4">
+                <fs>
+                    <f name="sense" value="tell%2:32:00::"/>
+                    <f name="annotator" value="ann105"/>
+                </fs>
+            </f>
+            <f name="annotation5">
+                <fs>
+                    <f name="sense" value="tell%2:32:04::"/>
+                    <f name="annotator" value="ann103"/>
+                </fs>
+            </f>
+        </fs>
+    </a>
+</graph>

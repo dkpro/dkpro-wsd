@@ -1,0 +1,43 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.core.Lexicon" table="Lexicon" node="Lexicon" dynamic-insert="true">
+	<id name="id" column="lexiconId" node="@id" type="string"/>
+	<property name="name" column="lexiconName" node="@name" type="string"/>
+	
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>
+	 <bag name="lexicalEntries" node="." lazy="extra">
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.LexicalEntry" node="LexicalEntry"/>
+     </bag>
+	 <bag name="subcategorizationFrames" node="." lazy="extra">
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.syntax.SubcategorizationFrame" node="SubcategorizationFrame"/>
+     </bag>
+     <bag name="subcategorizationFrameSets" node="." lazy="extra">
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.syntax.SubcategorizationFrameSet" node="SubcategorizationFrameSet"/>
+     </bag>
+ 	 <bag name="semanticPredicates" node="." lazy="extra">
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SemanticPredicate" node="SemanticPredicate"/>         
+     </bag>     
+     <bag name="synsets" node="." lazy="extra">
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.Synset" node="Synset"/>
+     </bag>
+     <bag name="synSemCorrespondences" node="." lazy="extra">               	
+         <key column="lexiconId" not-null="true" />
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SynSemCorrespondence" node="SynSemCorrespondence"/>
+     </bag>
+     
+    <!-- Not in the model, mapped for convenience -->	
+    <many-to-one name="lexicalResource" column="lexicalResourceId" class="de.tudarmstadt.ukp.lmf.model.core.LexicalResource"
+    		insert="false" update="false"/>
+</class>
+</hibernate-mapping>

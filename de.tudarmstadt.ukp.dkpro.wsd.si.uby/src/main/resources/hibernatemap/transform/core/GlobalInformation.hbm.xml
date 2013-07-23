@@ -1,0 +1,12 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.core.GlobalInformation" table="GlobalInformation"
+		 node="GlobalInformation" dynamic-insert="true">
+	<id column="globalInformationId" type="int">
+           <generator class="increment"/>
+    </id>  
+    <property name="label" column="label" node="@label" type="string"/>
+</class>
+</hibernate-mapping>

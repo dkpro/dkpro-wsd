@@ -1,0 +1,63 @@
+<contextfile concordance="brown">
+<context filename="br-a02" paras="yes">
+<p pnum="1">
+<s snum="1">
+<wf cmd="done" pos="NN" lemma="committee" wnsn="1" lexsn="1:14:00::">Committee</wf>
+<wf cmd="done" pos="NN" lemma="approval" wnsn="1" lexsn="1:04:02::">approval</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="done" rdf="person" pos="NNP" lemma="person" wnsn="1" lexsn="1:03:00::" pn="person">Gov._Price_Daniel</wf>
+<wf cmd="ignore" pos="POS">'s</wf>
+<punc>``</punc>
+<wf cmd="done" pos="JJ" lemma="abandoned" wnsn="1" lexsn="5:00:00:uninhabited:00">abandoned</wf>
+<wf cmd="done" pos="NN" lemma="property" wnsn="1" lexsn="1:21:00::">property</wf>
+<punc>''</punc>
+<wf cmd="done" pos="NN" lemma="act" wnsn="1" lexsn="1:10:01::">act</wf>
+<wf cmd="done" pos="VB" lemma="seem" wnsn="1" lexsn="2:39:00::">seemed</wf>
+<wf cmd="done" pos="JJ" lemma="certain" wnsn="4" lexsn="3:00:03::">certain</wf>
+<wf cmd="done" pos="NN" lemma="thursday" wnsn="1" lexsn="1:28:00::">Thursday</wf>
+<wf cmd="ignore" pos="IN">despite</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="JJ" lemma="adamant" wnsn="1" lexsn="5:00:00:inflexible:02">adamant</wf>
+<wf cmd="done" pos="NN" lemma="protest" wnsn="1" lexsn="1:10:00::">protests</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="done" pos="NN" lemma="texas" wnsn="1" lexsn="1:15:00::">Texas</wf>
+<wf cmd="done" pos="NN" lemma="banker" wnsn="1" lexsn="1:18:00::">bankers</wf>
+<punc>.</punc>
+</s>
+</p>
+<p pnum="2">
+<s snum="2">
+<wf cmd="done" rdf="person" pos="NNP" lemma="person" wnsn="1" lexsn="1:03:00::" pn="person">Daniel</wf>
+<wf cmd="done" pos="RB" lemma="personally" wnsn="1" lexsn="4:02:01::">personally</wf>
+<wf cmd="done" pos="VB" lemma="lead" wnsn="7" lexsn="2:41:00::">led</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="fight" wnsn="2" lexsn="1:04:02::">fight</wf>
+<wf cmd="done" pos="VB" ot="notag">for</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="measure" wnsn="3" lexsn="1:10:02::">measure</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="WDT">which</wf>
+<wf cmd="ignore" pos="PRP">he</wf>
+<wf cmd="done" pos="VBD" ot="notag">had</wf>
+<wf cmd="done" pos="VB" lemma="water_down" wnsn="1" lexsn="2:30:00::">watered_down</wf>
+<wf cmd="done" pos="RB" lemma="considerably" wnsn="1" lexsn="4:02:01::">considerably</wf>
+<wf cmd="ignore" pos="IN">since</wf>
+<wf cmd="ignore" pos="PRP$">its</wf>
+<wf cmd="done" pos="NN" lemma="rejection" wnsn="1" lexsn="1:04:00::">rejection</wf>
+<wf cmd="ignore" pos="IN">by</wf>
+<wf cmd="done" pos="JJ" lemma="two" wnsn="1" lexsn="5:00:00:cardinal:00">two</wf>
+<wf cmd="done" pos="JJ" lemma="previous" wnsn="2" lexsn="5:00:00:past:00">previous</wf>
+<wf cmd="done" pos="NN" lemma="legislature" wnsn="1" lexsn="1:14:00::">Legislatures</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="IN">in</wf>
+<wf cmd="ignore" pos="DT">a</wf>
+<wf cmd="done" pos="JJ" lemma="public" wnsn="1" lexsn="3:00:00::">public</wf>
+<wf cmd="done" pos="NN" lemma="hearing" wnsn="1" lexsn="1:04:01::">hearing</wf>
+<wf cmd="ignore" pos="IN">before</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" rdf="group" pos="NNP" lemma="group" wnsn="1" lexsn="1:03:00::" pn="group">House_Committee_on_Revenue_and_Taxation</wf>
+<punc>.</punc>
+</s>
+</p>
+</context>
+</contextfile>

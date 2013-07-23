@@ -1,0 +1,16 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.SynSemCorrespondence" table="SynSemCorrespondence" node="SynSemCorrespondence" dynamic-insert="true">
+
+    <id name="id" column="synSemCorrespondenceId" node="@id" type="string"/>
+  	
+	 <list name="synSemArgMaps" node=".">
+         <key column="synSemCorrespondenceId" />
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SynSemArgMap" node="SynSemArgMap"/>
+     </list>   	
+</class>
+
+</hibernate-mapping>
