@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT corpus (text+)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!ELEMENT text (#PCDATA | head | sat)*>
+<!ATTLIST text id ID #REQUIRED>
+<!ATTLIST text src CDATA #IMPLIED>
+<!ATTLIST text title CDATA #IMPLIED>
+<!ATTLIST text author CDATA #IMPLIED>
+<!ATTLIST text refs CDATA #IMPLIED>
+
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head id ID #REQUIRED>
+<!ATTLIST head lemma CDATA #REQUIRED>
+<!ATTLIST head luids CDATA #REQUIRED>
+<!ATTLIST head pos (a|n|v) #REQUIRED>
+
+<!ELEMENT sat (#PCDATA)>
+<!ATTLIST sat id IDREF #REQUIRED>
+
+<!ENTITY lt     "&#38;#60;">
+<!ENTITY gt     "&#62;">
+<!ENTITY amp    "&#38;#38;">
+<!ENTITY apos   "&#39;">
+<!ENTITY quot   "&#34;">

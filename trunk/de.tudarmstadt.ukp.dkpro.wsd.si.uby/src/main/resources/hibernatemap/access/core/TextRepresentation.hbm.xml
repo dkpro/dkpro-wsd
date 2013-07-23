@@ -1,0 +1,65 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-cascade = "save-update" >  
+<class name="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" entity-name="TextRepresentation_Definition"
+	table="TextRepresentation_Definition" node="TextRepresentation" dynamic-insert="true">
+    <id column="textRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>  	
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>	       	
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="writtenText" column="writtenText" node="@writtenText" type="text"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" entity-name="TextRepresentation_SenseExample"
+	table="TextRepresentation_SenseExample" node="TextRepresentation" dynamic-insert="true">
+    <id column="textRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>  	
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>	       	
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="writtenText" column="writtenText" node="@writtenText" type="text"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" entity-name="TextRepresentation_Statement"
+	table="TextRepresentation_Statement" node="TextRepresentation" dynamic-insert="true">
+    <id column="textRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>  	
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>	       	
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="writtenText" column="writtenText" node="@writtenText" type="text"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" entity-name="TextRepresentation_Context"
+	table="TextRepresentation_Context" node="TextRepresentation" dynamic-insert="true">
+    <id column="textRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>  	
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>	       	
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="writtenText" column="writtenText" node="@writtenText" type="text"/>
+</class>
+
+</hibernate-mapping>

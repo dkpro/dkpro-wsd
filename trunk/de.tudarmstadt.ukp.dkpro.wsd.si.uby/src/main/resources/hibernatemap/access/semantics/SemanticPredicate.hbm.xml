@@ -1,0 +1,54 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.SemanticPredicate" table="SemanticPredicate" 
+		node="SemanticPredicate" dynamic-insert="true">
+
+   <id name="id" column="semanticPredicateId" node="@id" type="string"/>
+
+  	<property name="label" column="label" node="@label" type="string"/>
+  		  
+    <property name="lexicalized" column="lexicalized" node="@lexicalized"> 
+        <type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EYesNo</param>         	
+      	</type>
+  	</property>  
+
+    <property name="perspectivalized" column="perspectivalized" node="@perspectivalized"> 
+        <type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EYesNo</param>         	
+      	</type>
+  	</property>
+  	    	
+  	<list name="semanticLabels"  node=".">
+          <key column="semanticPredicateId" />
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.SemanticLabel" 
+           node="SemanticLabel"/>
+    </list>  
+    
+    <list name="definitions"  node=".">
+          <key column="semanticPredicateId" />
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.Definition" node="Definition"/>
+    </list>  
+    <list name="semanticArguments" node=".">
+         <key column="semanticPredicateId" />
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SemanticArgument" node="SemanticArgument"/>
+    </list> 
+    <list name="predicateRelations" node=".">
+         <key column="semanticPredicateId" />
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.PredicateRelation" node="PredicateRelation"/>
+    </list> 
+    <list name="frequencies" node=".">
+         <key column="semanticPredicateId" />
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.Frequency" node="Frequency"/>
+     </list> 
+   
+</class>
+
+</hibernate-mapping>

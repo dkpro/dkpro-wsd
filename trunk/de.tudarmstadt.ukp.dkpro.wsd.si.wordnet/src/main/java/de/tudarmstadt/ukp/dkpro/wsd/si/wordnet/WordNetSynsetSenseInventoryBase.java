@@ -1,0 +1,467 @@
+/*******************************************************************************
+ * Copyright 2013
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
+
+/**
+ *
+ */
+package de.tudarmstadt.ukp.dkpro.wsd.si.wordnet;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import net.sf.extjwnl.JWNLException;
+import net.sf.extjwnl.data.IndexWord;
+import net.sf.extjwnl.data.Pointer;
+import net.sf.extjwnl.data.PointerTarget;
+import net.sf.extjwnl.data.Synset;
+import net.sf.extjwnl.data.Word;
+
+import org.apache.commons.collections15.Transformer;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
+import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseDictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
+import edu.uci.ics.jung.graph.Graph;
+import edu.uci.ics.jung.graph.UndirectedGraph;
+import edu.uci.ics.jung.graph.UndirectedSparseGraph;
+import edu.uci.ics.jung.graph.util.Graphs;
+
+/**
+ * Abstract class for WordNet-like sense inventories, where synset IDs are used
+ * as sense IDs.
+ *
+ * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ *
+ */
+public abstract class WordNetSynsetSenseInventoryBase
+    extends WordNetSenseInventoryBase
+    implements SenseDictionary, SenseTaxonomy
+{
+
+    private final Log logger = LogFactory.getLog(getClass());
+
+    // Transformers
+    private final SynsetToString synsetToString = new SynsetToString();
+    private final PointerToUnorderedPair pointerToUnorderedPair = new PointerToUnorderedPair();
+    private final WordNetPosToString wordNetPosToString = new WordNetPosToString();
+    private final StringToSynset stringToSynset = new StringToSynset();
+    private final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
+
+    // Variables and cache for sense descriptions
+    private final Map<String, CachedSense> senses = new HashMap<String, CachedSense>();
+
+    @Override
+    public String getWordNetSenseKey(String senseId, String lemma)
+        throws SenseInventoryException
+    {
+        try {
+            Synset s = stringToSynset.transform(senseId);
+            return getWordNetSenseKey(s.getOffset(), lemma, s.getPOS());
+        }
+        catch (NoSuchElementException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    @Override
+    protected List<String> getSenses(String sod, net.sf.extjwnl.data.POS pos)
+        throws SenseInventoryException
+    {
+        try {
+            IndexWord indexWord = wn.getIndexWord(pos, sod);
+            List<String> senses = new ArrayList<String>();
+            if (indexWord == null) {
+                return senses;
+            }
+            for (Synset s : indexWord.getSenses()) {
+                senses.add(synsetToString.transform(s));
+            }
+            return senses;
+        }
+        catch (JWNLException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    @Override
+    public String getMostFrequentSense(String sod, POS pos)
+        throws SenseInventoryException, UnsupportedOperationException
+    {
+        try {
+            IndexWord indexWord = wn.getIndexWord(
+                    siPosToWordNetPos.transform(pos), sod);
+            if (indexWord == null) {
+                return null;
+            }
+            return synsetToString.transform(indexWord.getSenses().get(0));
+        }
+        catch (JWNLException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    /**
+     * Retrieves a sense from the cache, or creates one and adds it to the cache
+     * if it's not already there
+     *
+     * @param senseId
+     * @return
+     * @throws SenseInventoryException
+     */
+    @Override
+    protected CachedWordNetSense getSense(String senseId)
+        throws SenseInventoryException
+    {
+        CachedSense s = senses.get(senseId);
+        if (s == null) {
+            s = new CachedSense(senseId);
+            senses.put(senseId, s);
+        }
+        return s;
+    }
+
+    /**
+     * A class for the textual information associated with a WordNet synset
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class CachedSense
+        extends CachedWordNetSense
+    {
+
+        public CachedSense(String senseId)
+            throws SenseInventoryException
+        {
+            super(senseId);
+            synset = stringToSynset.transform(id);
+        }
+
+        @Override
+        public Set<String> getSynonyms()
+        {
+            if (synonyms != null) {
+                return synonyms;
+            }
+
+            synonyms = new HashSet<String>();
+            for (Word word : synset.getWords()) {
+                synonyms.add(word.getLemma().replace('_', ' '));
+            }
+            return synonyms;
+        }
+
+        @Override
+        protected void setDefinitionAndExamples()
+            throws SenseInventoryException
+        {
+            examples = new HashSet<String>();
+            String gloss;
+            try {
+                gloss = synset.getGloss();
+            }
+            catch (IllegalArgumentException e) {
+                throw new SenseInventoryException(e);
+            }
+            if (gloss == null) {
+                if (senseDescriptionFormat.matches(".*%[de].*")) {
+                    logger.warn("Sense " + id + " has no gloss");
+                }
+                definition = "";
+                return;
+            }
+            Matcher glossMatcher = glossPattern.matcher(gloss);
+
+            if (glossMatcher.matches()) {
+                definition = glossMatcher.group(1);
+                Scanner scanner = new Scanner(glossMatcher.group(2));
+                scanner.useDelimiter("(\"$)|(\"?; \")");
+                while (scanner.hasNext()) {
+                    examples.add(scanner.next());
+                }
+                scanner.close();
+            }
+            else {
+                definition = gloss;
+            }
+        }
+
+        @Override
+        public Set<String> getNeighbours()
+            throws SenseInventoryException
+        {
+            if (neighbours != null) {
+                return neighbours;
+            }
+
+            neighbours = new HashSet<String>();
+
+            // Add neighbours
+            for (Pointer pointer : synset.getPointers()) {
+                neighbours.add(synsetToString.transform(pointer
+                        .getTargetSynset()));
+            }
+
+            return neighbours;
+        }
+    }
+
+    /**
+     * Read WordNet into a graph
+     *
+     * @param g
+     * @throws JWNLException
+     */
+    @Override
+    public UndirectedGraph<String, UnorderedPair<String>> getUndirectedGraph()
+        throws SenseInventoryException
+    {
+        if (undirectedWNGraph != null) {
+            return undirectedWNGraph;
+        }
+
+        undirectedWNGraph = new UndirectedSparseGraph<String, UnorderedPair<String>>();
+        int synsetCount = 0, pointerCount = 0;
+
+        for (Object pos : net.sf.extjwnl.data.POS.getAllPOS()) {
+            logger.info("Adding synsets for " + pos);
+            try {
+                for (Iterator<?> i = wn
+                        .getSynsetIterator((net.sf.extjwnl.data.POS) pos); i
+                        .hasNext();) {
+                    Synset s = (Synset) i.next();
+                    String s_name = synsetToString.transform(s);
+                    undirectedWNGraph.addVertex(s_name);
+                    synsetCount++;
+                    for (Pointer p : s.getPointers()) {
+                        pointerCount++;
+                        UnorderedPair<String> e = pointerToUnorderedPair
+                                .transform(p);
+                        if (!undirectedWNGraph.containsEdge(e)) {
+                            undirectedWNGraph.addEdge(e, s_name, synsetToString
+                                    .transform(p.getTargetSynset()));
+                        }
+                    }
+                }
+            }
+            catch (JWNLException e) {
+                throw new SenseInventoryException(e);
+            }
+            logger.info("# vertices = " + undirectedWNGraph.getVertexCount()
+                    + "; # synsets = " + synsetCount + "; # edges = "
+                    + undirectedWNGraph.getEdgeCount() + "; # pointers = "
+                    + pointerCount);
+        }
+
+        undirectedWNGraph = Graphs
+                .unmodifiableUndirectedGraph(undirectedWNGraph);
+        return undirectedWNGraph;
+
+    }
+
+    /**
+     * Transforms a String to a WordNet POS by performing the inverse of
+     * WordNetPosToString
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private static class StringToWordNetPos
+        implements Transformer<String, net.sf.extjwnl.data.POS>
+    {
+        @Override
+        public net.sf.extjwnl.data.POS transform(String s)
+        {
+            if (s.equals("n")) {
+                return net.sf.extjwnl.data.POS.NOUN;
+            }
+            else if (s.equals("v")) {
+                return net.sf.extjwnl.data.POS.VERB;
+            }
+            else if (s.equals("a")) {
+                return net.sf.extjwnl.data.POS.ADJECTIVE;
+            }
+            else if (s.equals("r")) {
+                return net.sf.extjwnl.data.POS.ADVERB;
+            }
+            else {
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+
+    /**
+     * Transforms a WordNet POS to a String
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private static class WordNetPosToString
+        implements Transformer<net.sf.extjwnl.data.POS, String>
+    {
+        @Override
+        public String transform(net.sf.extjwnl.data.POS pos)
+        {
+            return pos.getKey();
+        }
+    }
+
+    /**
+     * Transforms a String to a WordNet Synset by doing the inverse of
+     * SynsetToString
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class StringToSynset
+        implements Transformer<String, Synset>
+    {
+        private final Pattern synsetOffsetPattern = Pattern
+                .compile("^([0-9]+)-?([anvr])$");
+
+        @Override
+        public Synset transform(String s)
+        {
+            Matcher m = synsetOffsetPattern.matcher(s);
+            if (m.matches() == false || m.groupCount() != 2) {
+                throw new IllegalArgumentException();
+            }
+            try {
+                return wn.getSynsetAt(stringToWordNetPos.transform(m.group(2)),
+                        Long.parseLong(m.group(1)));
+            }
+            catch (JWNLException e) {
+                throw new IllegalArgumentException(e);
+            }
+        }
+    }
+
+    /**
+     * Transforms a WordNet synset to a unique string representation
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class SynsetToString
+        implements Transformer<Synset, String>
+    {
+        @Override
+        public String transform(Synset s)
+        {
+            return String.format("%08d%s", s.getOffset(),
+                    wordNetPosToString.transform(s.getPOS()));
+        }
+    }
+
+    /**
+     * Compact string representation of a <Synset, Pointer> graph
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class GraphToString
+        implements Transformer<Graph<Synset, Pointer>, String>
+    {
+        SynsetToString sts = new SynsetToString();
+        PointerToString pts = new PointerToString();
+
+        @Override
+        public String transform(Graph<Synset, Pointer> g)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Vertices (" + g.getVertexCount() + "):\n");
+            for (Synset s : g.getVertices()) {
+                sb.append("\t" + sts.transform(s) + "\n");
+            }
+            sb.append("Edges (" + g.getEdgeCount() + "):\n");
+            for (Pointer p : g.getEdges()) {
+                sb.append("\t" + pts.transform(p) + "\n");
+            }
+            return sb.toString();
+        }
+    }
+
+    /**
+     * Transforms a WordNet pointer to a String representation indicating only
+     * its source and target synsets. (Note that the output does not uniquely
+     * identify the pointer, since type information is not included.)
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class PointerToString
+        implements Transformer<Pointer, String>
+    {
+        @Override
+        public String transform(Pointer p)
+        {
+            Synset source;
+            PointerTarget pt = p.getSource();
+            if (pt instanceof Word) {
+                source = ((Word) pt).getSynset();
+            }
+            else {
+                source = (Synset) pt;
+            }
+            return synsetToString.transform(source) + " -> "
+                    + synsetToString.transform(p.getTargetSynset());
+        }
+    }
+
+    /**
+     * Transforms a WordNet pointer to an unordered pair of Strings indicating
+     * only the two synsets in the relation. (Note that the output does not
+     * uniquely identify the pointer, since type information is not included,
+     * and because the directionality of the pointer is not preserved.)
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    private class PointerToUnorderedPair
+        implements Transformer<Pointer, UnorderedPair<String>>
+    {
+        @Override
+        public UnorderedPair<String> transform(Pointer p)
+        {
+            Synset source;
+            PointerTarget pt = p.getSource();
+            if (pt instanceof Word) {
+                source = ((Word) pt).getSynset();
+            }
+            else {
+                source = (Synset) pt;
+            }
+            return new UnorderedPair<String>(synsetToString.transform(source),
+                    synsetToString.transform(p.getTargetSynset()));
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> 	
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.Lemma" table="Lemma" node="Lemma" dynamic-insert="true">
+	<id column="lemmaId" type="long">
+           <generator class="increment"/>
+    </id>
+    
+   <list name="formRepresentations" node=".">
+          <key column="lemmaId" on-delete="cascade"/>
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation" 
+          		entity-name="FormRepresentation_Lemma" node="FormRepresentation"/>
+    </list> 
+    
+    <list name="frequencies" node=".">
+         <key column="lexicalEntryId" on-delete="cascade"/>
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.Frequency" node="Frequency"/>
+     </list>   
+</class>
+</hibernate-mapping>

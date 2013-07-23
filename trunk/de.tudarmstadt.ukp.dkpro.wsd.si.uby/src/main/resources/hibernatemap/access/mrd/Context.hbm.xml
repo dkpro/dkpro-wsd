@@ -1,0 +1,31 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.mrd.Context" table="Context" node="Context" dynamic-insert="true">
+    <id column="contextId" type="long">
+           <generator class="increment"/>
+    </id>	
+	<property name="source" column="source" node="@source" type="string" />
+	<property name="contextType" node="@contextType" >    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EContextType</param>         	
+      	</type>
+  	</property>
+  	
+  	 <list name="textRepresentations" node=".">
+          <key column="contextId" />
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" 
+          		entity-name="TextRepresentation_Context" node="TextRepresentation"/>
+    </list>
+    
+    <list name="monolingualExternalRefs" node=".">
+            <key column="contextId" />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.MonolingualExternalRef" node="MonolingualExternalRef"/>
+    </list>
+    
+</class>
+
+</hibernate-mapping>

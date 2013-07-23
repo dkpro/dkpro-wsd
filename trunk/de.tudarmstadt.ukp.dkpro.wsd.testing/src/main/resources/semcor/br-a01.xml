@@ -1,0 +1,73 @@
+<contextfile concordance="brown">
+<context filename="br-a01" paras="yes">
+<p pnum="1">
+<s snum="1">
+<wf cmd="ignore" pos="DT">The</wf>
+<wf cmd="done" rdf="group" pos="NNP" lemma="group" wnsn="1" lexsn="1:03:00::" pn="group">Fulton_County_Grand_Jury</wf>
+<wf cmd="done" pos="VB" lemma="say" wnsn="1" lexsn="2:32:00::">said</wf>
+<wf cmd="done" pos="NN" lemma="friday" wnsn="1" lexsn="1:28:00::">Friday</wf>
+<wf cmd="ignore" pos="DT">an</wf>
+<wf cmd="done" pos="NN" lemma="investigation" wnsn="1" lexsn="1:09:00::">investigation</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="done" pos="NN" lemma="atlanta" wnsn="1" lexsn="1:15:00::">Atlanta</wf>
+<wf cmd="ignore" pos="POS">'s</wf>
+<wf cmd="done" pos="JJ" lemma="recent" wnsn="2" lexsn="5:00:00:past:00">recent</wf>
+<wf cmd="done" pos="NN" lemma="primary_election" wnsn="1" lexsn="1:04:00::">primary_election</wf>
+<wf cmd="done" pos="VB" lemma="produce" wnsn="4" lexsn="2:39:01::">produced</wf>
+<punc>``</punc>
+<wf cmd="ignore" pos="DT">no</wf>
+<wf cmd="done" pos="NN" lemma="evidence" wnsn="1" lexsn="1:09:00::">evidence</wf>
+<punc>''</punc>
+<wf cmd="ignore" pos="IN">that</wf>
+<wf cmd="ignore" pos="DT">any</wf>
+<wf cmd="done" pos="NN" lemma="irregularity" wnsn="1" lexsn="1:04:00::">irregularities</wf>
+<wf cmd="done" pos="VB" lemma="take_place" wnsn="1" lexsn="2:30:00::">took_place</wf>
+<punc>.</punc>
+</s>
+</p>
+<p pnum="2">
+<s snum="2">
+<wf cmd="ignore" pos="DT">The</wf>
+<wf cmd="done" pos="NN" lemma="jury" wnsn="1" lexsn="1:14:00::">jury</wf>
+<wf cmd="done" pos="RB" lemma="far" wnsn="2" lexsn="4:02:00::">further</wf>
+<wf cmd="done" pos="VB" lemma="say" wnsn="1" lexsn="2:32:00::">said</wf>
+<wf cmd="ignore" pos="IN">in</wf>
+<wf cmd="done" pos="NN" lemma="term" wnsn="2" lexsn="1:28:00::">term</wf>
+<wf cmd="done" pos="NN" lemma="end" wnsn="2" lexsn="1:28:00::">end</wf>
+<wf cmd="done" pos="NN" lemma="presentment" wnsn="1" lexsn="1:04:00::">presentments</wf>
+<wf cmd="ignore" pos="IN">that</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" rdf="group" pos="NNP" lemma="group" wnsn="1" lexsn="1:03:00::" pn="group">City_Executive_Committee</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="WDT">which</wf>
+<wf cmd="done" pos="VB" lemma="have" wnsn="4" lexsn="2:40:04::">had</wf>
+<wf cmd="done" pos="JJ" lemma="overall" wnsn="2" lexsn="5:00:00:gross:00">over-all</wf>
+<wf cmd="done" pos="NN" lemma="charge" wnsn="6" lexsn="1:04:03::">charge</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="election" wnsn="1" lexsn="1:04:01::">election</wf>
+<punc>,</punc>
+<punc>``</punc>
+<wf cmd="done" pos="VB" lemma="deserve" wnsn="1" lexsn="2:42:00::">deserves</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="praise" wnsn="1" lexsn="1:10:00::">praise</wf>
+<wf cmd="ignore" pos="CC">and</wf>
+<wf cmd="done" pos="NN" lemma="thanks" wnsn="1" lexsn="1:10:00::">thanks</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" rdf="location" pos="NNP" lemma="location" wnsn="1" lexsn="1:03:00::" pn="location">City_of_Atlanta</wf>
+<punc>''</punc>
+<wf cmd="ignore" pos="IN">for</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="manner" wnsn="1" lexsn="1:07:02::">manner</wf>
+<wf cmd="done" pos="RB" ot="notag">in</wf>
+<wf cmd="done" pos="RB" ot="notag">which</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" pos="NN" lemma="election" wnsn="1" lexsn="1:04:01::">election</wf>
+<wf cmd="done" pos="VBD" ot="notag">was</wf>
+<wf cmd="done" pos="VB" lemma="conduct" wnsn="1" lexsn="2:41:00::">conducted</wf>
+<punc>.</punc>
+</s>
+</p>
+</context>
+</contextfile>

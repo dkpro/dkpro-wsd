@@ -1,0 +1,75 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="de.tudarmstadt.ukp.lmf.model.core.Sense" table="Sense" node="Sense" dynamic-insert="true">        
+    <id name="id" column="senseId" node="@id" type="string"/>            
+    <property name="index" column="_index" node="@index" type="integer"/>    
+    
+     <!-- <property name="semanticClassLabel" column="semanticClassLabel" node="@semanticClassLabel" type="string"/>  -->	
+   
+    <property name="transparentMeaning" column="transparentMeaning" node="@transparentMeaning"> 
+        <type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EYesNo</param>         	
+      	</type>
+  	</property>  
+  	
+  	<list name="definitions" node=".">
+          <key column="senseId" />
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.Definition" node="Definition"/>
+    </list>  
+    
+    <many-to-one name="incorporatedSemArg" class="de.tudarmstadt.ukp.lmf.model.semantics.SemanticArgument" column="incorporatedSemArg" 
+			node="@incorporatedSemArg" foreign-key="none" not-found="ignore"/>
+    
+    <many-to-one name="synset" class="de.tudarmstadt.ukp.lmf.model.semantics.Synset" column="synsetId" 
+			node="@synset" foreign-key="none" not-found="ignore"/>
+    
+    <list name="senseRelations" node=".">
+            <key column="senseId" />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SenseRelation" node="SenseRelation"/>
+    </list> 	
+     <list name="senseExamples" node=".">
+            <key column="senseId" />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.SenseExample" node="SenseExample"/>
+    </list> 	
+    <list name="monolingualExternalRefs" node=".">
+            <key column="senseId" />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.MonolingualExternalRef" node="MonolingualExternalRef"/>
+    </list> 
+    
+    <list name="semanticLabels" node="."> 
+           <key column="senseId"  /> 
+           <index column="idx"/> 
+           <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.SemanticLabel" 
+           node="SemanticLabel"/> 
+    </list> 
+    
+    
+    <list name="contexts" node=".">
+            <key column="senseId"  />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.mrd.Context" node="Context"/>
+    </list> 
+    
+    <list name="predicativeRepresentations" node=".">
+            <key column="senseId"  />
+            <index column="idx"/>
+            <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.PredicativeRepresentation" node="PredicativeRepresentation"/>
+    </list>   
+    <list name="frequencies" node=".">
+         <key column="senseId" />
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.Frequency" node="Frequency"/>
+    </list>     
+    
+    
+    <!-- Not in the model, mapped for convenience -->	
+    <many-to-one name="lexicalEntry" column="lexicalEntryId" class="de.tudarmstadt.ukp.lmf.model.core.LexicalEntry"
+    		insert="false" update="false"/>
+</class>
+</hibernate-mapping>

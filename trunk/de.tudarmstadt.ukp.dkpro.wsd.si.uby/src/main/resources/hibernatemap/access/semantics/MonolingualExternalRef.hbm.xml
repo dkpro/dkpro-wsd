@@ -1,0 +1,18 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.MonolingualExternalRef" 
+		table="MonolingualExternalRef" node="MonolingualExternalRef" dynamic-insert="true">
+		
+    <!-- <id name="id" column="monolingualExternalRefId" node="@id" type="string"/>  -->
+    <id column="monolingualExternalRefId" type="long">
+           <generator class="increment"/>
+    </id>
+    <property name="externalSystem" column="externalSystem" node="@externalSystem" type="string"/>	       	
+    <property name="externalReference" column="externalReference" node="@externalReference" type="string"/>	       	
+    
+    
+    
+</class>
+</hibernate-mapping>
