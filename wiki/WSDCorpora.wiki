@@ -1,4 +1,10 @@
-#summary One-sentence summary of this page.
+#summary A table of major WSD data sets
+
+= WSD corpora =
+
+<wiki:toc max_depth="3" />
+
+== Table of WSD corpora ==
 
 || *Date* || *Corpus* || *Language* || *Style* || *Train* || *Format* || *Inventory* || *POS-tagged* || *Lemmatized* || *Segmented* ||
 || 1998 || [http://www.itri.brighton.ac.uk/events/senseval/ARCHIVE/index.html Senseval-1 task: English lexical sample] || en || LS || no || Senseval2LS  || HECTOR || ? || ? || ? ||
@@ -9,7 +15,6 @@
 || 2001 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-2 task: English all words] || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English group lexical sample] || en || LS || yes || Senseval2LS  || WordNet 1.7pre || yes || yes || no ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English lexical sample] || en || LS || no || Senseval2LS  || WordNet 1.7pre || yes || yes || no ||
-|| 2001 || [UKP Senseval-2 task: Estonian all words] || et || AW || yes || Semeval1AW || Estonian EWN v37 || yes || yes || yes ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Estonian all words] || et || AW || yes || Senseval2AW || Estonian EWN v37 || no || no || no ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Italian lexical sample] || it || LS || no || Senseval2LS  || Italian EWN || no || yes || no ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Japanese lexical sample] || ja || LS || yes || Senseval2LS  || custom, XML || no || yes || no ||
@@ -86,3 +91,20 @@
 || 2011 || [http://www.mpi-inf.mpg.de/yago-naga/aida/ Yago_CoNLL] || en || AW || no || custom || Wikipedia, DBPedia || no || no || no ||
 || 2012 || [http://www.anc.org/MASC/ MASC] || en || LS || no || custom XML || WordNet 3.1, FrameNet || yes || yes || yes ||
 || 2013 || [http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml WebCAGe] || de || LS || no || custom XML || GermaNet || yes || yes || yes ||
+
+== Legend ==
+
+  * *Date*:	The date the corpus (or the original corpus upon which this version is based) was first published
+  * *Corpus*:	The name of the corpus, possibly with a hyperlink to where it can be obtained
+  * *Language*:	The language(s) of the corpus
+  * *Style*:	AW = all-words, LS = lexical sample
+  * *Train*:	Whether the corpus is split into separate training and test corpora
+  * *Format*:	The file format for the data
+  * *Inventory*:	Which sense inventory is used to annotate the data
+  * *POS-tagged*:	Whether the corpus has POS annotations
+  * *Lemmatized*:	Whether the corpus has lemma annotations
+  * *Segmented*:	Whether the corpus has sentence annotations
+
+== Notes ==
+  * Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
+  * According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
