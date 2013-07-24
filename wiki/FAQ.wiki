@@ -67,7 +67,7 @@ You can use the following BibTeX entry:
 
 === What corpus readers should I use for the various Senseval and SemEval data sets? ===
 
-The formats for the Senseval and SemEval data sets differ from task to task, and from year to year.  First, refer to our table of CorpusFormats to find out which format is used by the data set you are interested in.  Then, consult the table below to see which reader class works with that format:
+The formats for the Senseval and SemEval data sets differ from task to task, and from year to year.  First, refer to our table of [WSDCorpora WSD corpora] to find out which format is used by the data set you are interested in.  Then, consult the table below to see which reader class works with that format:
 
 || *Format* || *Reader class* ||
 || Senseval-2 LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
@@ -79,7 +79,7 @@ All the above classes are in the module `de.tudarmstadt.ukp.dkpro.wsd.senseval`.
 
 === What sense inventories should I use for the various Senseval and SemEval data sets? ===
 
-The sense inventories for the Senseval and SemEval data sets differ from task to task, and from year to year.  Please refer to our table of CorpusFormats to find out which sense inventory is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the sense inventories in this table.
+The sense inventories for the Senseval and SemEval data sets differ from task to task, and from year to year.  Please refer to our table of [WSDCorpora WSD corpora] to find out which sense inventory is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the sense inventories in this table.
 
 For data sets which use WordNet, you can use various modules, depending on the underlying WordNet library you prefer to use.  There is `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
 
