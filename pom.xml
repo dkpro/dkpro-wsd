@@ -21,7 +21,7 @@
   <parent>
     <groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
     <artifactId>dkpro-parent-pom</artifactId>
-    <version>3</version>
+    <version>4</version>
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd-gpl</artifactId>
@@ -42,4 +42,17 @@
   		</dependency>
   	</dependencies>
   </dependencyManagement>
+  <name>DKPro WSD GPL</name>
+  <url>https://code.google.com/p/dkpro-wsd-gpl/</url>
+  <description>DKPro WSD is a UIMA framework for word sense disambiguation licensed under the Apache License 2.0. This project contains GPL-licensed components for use with the main DKPro WSD project. </description>
+  <inceptionYear>2013</inceptionYear>
+  <scm>
+  	<url>https://code.google.com/p/dkpro-wsd-gpl/source/browse/#svn/trunk</url>
+  	<connection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</connection>
+  	<developerConnection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</developerConnection>
+  </scm>
+  <issueManagement>
+  	<system>Google Code</system>
+  	<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
+  </issueManagement>
 </project>
