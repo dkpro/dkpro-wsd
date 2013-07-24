@@ -20,7 +20,7 @@
 	<parent>
 		<artifactId>dkpro-parent-pom</artifactId>
 		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
-		<version>3</version>
+		<version>4</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -167,4 +167,17 @@
 			</build>
 		</profile>
 	</profiles>
+	<name>DKPro WSD</name>
+	<url>https://code.google.com/p/dkpro-wsd/</url>
+	<description>DKPro WSD is a UIMA framework for word sense disambiguation. It is designed to complement DKPro Core, a collection of software components for natural language processing (NLP) based on the Apache UIMA framework. </description>
+	<inceptionYear>2013</inceptionYear>
+	<scm>
+		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/trunk</url>
+		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>Google Code</system>
+		<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
+	</issueManagement>
 </project>
