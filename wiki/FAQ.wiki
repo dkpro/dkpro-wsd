@@ -65,23 +65,39 @@ You can use the following BibTeX entry:
 
 == Using DKPro WSD ==
 
-=== What corpus readers should I use for the various Senseval and SemEval data sets? ===
+=== What corpus readers should I use for the various Senseval, !SemEval, and other WSD data sets? ===
 
-The formats for the Senseval and SemEval data sets differ from task to task, and from year to year.  First, refer to our table of [WSDCorpora WSD corpora] to find out which format is used by the data set you are interested in.  Then, consult the table below to see which reader class works with that format:
+First, refer to our table of [WSDCorpora WSD corpora] to find out which format is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the formats in this table.  Consult the table below to see if DKPro has a reader class for your data set's format:
 
-|| *Format* || *Reader class* ||
-|| Senseval-2 LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
-|| Senseval-2 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
-|| Semeval-1 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
-|| Semeval-2 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
+|| *Format* || *Class* ||
+|| Aida || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
+|| MASC || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.MASCReader` ||
+|| Senseval2LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
+|| Senseval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
+|| SemCor || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader` ||
+|| Semeval1AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
+|| Semeval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
+|| WebCAGe || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.WebCAGeXMLReader` ||
+|| TAC_KBP || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp.TacKbpOfficialformatReader` ||
 
-All the above classes are in the module `de.tudarmstadt.ukp.dkpro.wsd.senseval`.
+=== What sense inventories should I use for the various Senseval, !SemEval, and other WSD data sets? ===
 
-=== What sense inventories should I use for the various Senseval and SemEval data sets? ===
+First, refer to our table of [WSDCorpora WSD corpora] to find out which sense inventory is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the sense inventories in this table.  Consult the table below to see if DKPro has an interface to your data set's sense inventory:
 
-The sense inventories for the Senseval and SemEval data sets differ from task to task, and from year to year.  Please refer to our table of [WSDCorpora WSD corpora] to find out which sense inventory is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the sense inventories in this table.
+|| *Sense inventory* || *Classes supporting this inventory* ||
+|| EuroWordNet || `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` ||
+|| FrameNet || `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| GermaNet || `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| Google || `de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.GoogleDictionaryInventory` ||
+|| OmegaWiki || `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| TWSI || `de.tudarmstadt.ukp.dkpro.wsd.si.twsi.TwsiSenseInventory` ||
+|| UKB || `de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.UkbDictionaryInventory` ||
+|| VerbNet || `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| Wikipedia || `de.tudarmstadt.ukp.dkpro.wsd.si.lsr`, `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| Wiktionary || `de.tudarmstadt.ukp.dkpro.wsd.si.lsr`, `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
+|| WordNet || `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet`, `de.tudarmstadt.ukp.dkpro.wsd.si.lsr`, `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
 
-For data sets which use WordNet, you can use various modules, depending on the underlying WordNet library you prefer to use.  There is `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
+Note that for some sense inventories, you can use various modules, depending on the underlying library you prefer to use.  For example, WordNet can be accessed via `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
 
 === Where can I get the !WordNet 1.7 pre-release used by the English Senseval-2 tasks? ===
 
