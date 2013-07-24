@@ -65,6 +65,28 @@ You can use the following BibTeX entry:
 
 == Using DKPro WSD ==
 
+=== What corpus readers should I use for the various Senseval and SemEval data sets? ===
+
+The formats for the Senseval and SemEval data sets differ from task to task, and from year to year.  First, refer to our table of CorpusFormats to find out which format is used by the data set you are interested in.  Then, consult the table below to see which reader class works with that format:
+
+|| *Format* || *Reader class* ||
+|| Senseval-2 LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
+|| Senseval-2 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
+|| Semeval-1 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
+|| Semeval-2 AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
+
+All the above classes are in the module `de.tudarmstadt.ukp.dkpro.wsd.senseval`.
+
+=== What sense inventories should I use for the various Senseval and SemEval data sets? ===
+
+The sense inventories for the Senseval and SemEval data sets differ from task to task, and from year to year.  Please refer to our table of CorpusFormats to find out which sense inventory is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the sense inventories in this table.
+
+For data sets which use WordNet, you can use various modules, depending on the underlying WordNet library you prefer to use.  There is `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
+
+=== Where can I get the WordNet 1.7 pre-release used by the English Senseval-2 tasks? ===
+
+You probably can't.  This version of WordNet was never officially published, but was made available only to the participants.  We contacted both the WordNet maintainers and the Senseval-2 organizers, and neither was able to locate a copy of this version.  A Senseval-2 participant sent us a copy he had archived, but its sense keys turned out to be incompatible with those of the Senseval-2 data sets.
+
 === How can I get help with DKPro WSD? ===
 
 For help with DKPro WSD, please use the [http://groups.google.com/group/dkpro-wsd-users dkpro-wsd-users] mailing list.
