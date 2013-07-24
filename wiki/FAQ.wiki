@@ -83,7 +83,7 @@ The sense inventories for the Senseval and SemEval data sets differ from task to
 
 For data sets which use WordNet, you can use various modules, depending on the underlying WordNet library you prefer to use.  There is `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
 
-=== Where can I get the WordNet 1.7 pre-release used by the English Senseval-2 tasks? ===
+=== Where can I get the !WordNet 1.7 pre-release used by the English Senseval-2 tasks? ===
 
 You probably can't.  This version of WordNet was never officially published, but was made available only to the participants.  We contacted both the WordNet maintainers and the Senseval-2 organizers, and neither was able to locate a copy of this version.  A Senseval-2 participant sent us a copy he had archived, but its sense keys turned out to be incompatible with those of the Senseval-2 data sets.
 
