@@ -2,7 +2,7 @@
 
 = Frequently Asked Questions =
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 == About DKPro WSD ==
 
