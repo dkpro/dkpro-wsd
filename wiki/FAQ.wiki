@@ -20,7 +20,7 @@ The code in the [https://code.google.com/p/dkpro-wsd/ dkpro-wsd project] is lice
 
 === How do I get DKPro WSD? ===
 
-The [https://code.google.com/p/dkpro-wsd/source/checkout source code for DKPro WSD] (and the [https://code.google.com/p/dkpro-wsd-gpl/source/checkout DKPro WSD GPL components) is available in Google Code's Subversion repository.
+The [https://code.google.com/p/dkpro-wsd/source/checkout source code for DKPro WSD] (and the [https://code.google.com/p/dkpro-wsd-gpl/source/checkout DKPro WSD GPL components]) is available in Google Code's Subversion repository.
 
 Maven users can obtain prepackage artifacts by adding the following repository section to your project:
 
