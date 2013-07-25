@@ -24,10 +24,11 @@ import java.net.URL;
 
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.dictionary.Dictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
 /**
- * A sense inventory for WordNet, based on extJWNL.  Sense keys are used as
- * sense IDs.
+ * A sense inventory for WordNet, based on extJWNL. Sense keys are used as sense
+ * IDs.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -37,14 +38,21 @@ public class WordNetSenseKeySenseInventory
 {
 
     public WordNetSenseKeySenseInventory(URL propertiesURL)
-            throws JWNLException, IOException
-        {
-            wn = Dictionary.getInstance(propertiesURL.openStream());
-        }
+        throws JWNLException, IOException
+    {
+        wn = Dictionary.getInstance(propertiesURL.openStream());
+    }
 
-        public WordNetSenseKeySenseInventory(InputStream propertiesStream)
-            throws JWNLException, IOException
-        {
-            wn = Dictionary.getInstance(propertiesStream);
-        }
+    public WordNetSenseKeySenseInventory(InputStream propertiesStream)
+        throws JWNLException, IOException
+    {
+        wn = Dictionary.getInstance(propertiesStream);
+    }
+
+    @Override
+    public String getWordNetSynsetAndPos(String senseId)
+        throws SenseInventoryException
+    {
+        return senseKeyToSynsetOffsetAndPos(senseId);
+    }
 }

@@ -29,10 +29,8 @@ import net.sf.extjwnl.JWNLException;
 
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.uimafit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
-import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.WordNetSynsetSenseInventory;
 
 /**
@@ -42,16 +40,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.WordNetSynsetSenseInventory;
  *
  */
 public class WordNetSynsetSenseInventoryResource
-    extends SenseInventoryResourceBase
+    extends WordNetSenseInventoryResourceBase
 {
-    public static final String PARAM_WORDNET_PROPERTIES_URL = "wordNetPropertiesURL";
-    @ConfigurationParameter(name = PARAM_WORDNET_PROPERTIES_URL, description = "The URL of the WordNet properties file", mandatory = true)
-    protected String wordNetPropertiesURL;
-
-    public static final String PARAM_SENSE_DESCRIPTION_FORMAT = "senseDescriptionFormat";
-    @ConfigurationParameter(name = PARAM_SENSE_DESCRIPTION_FORMAT, description = "A format string specifying how sense descriptions should be printed", mandatory = false)
-    protected String senseDescriptionFormat;
-
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override
     public boolean initialize(ResourceSpecifier aSpecifier,
@@ -82,22 +72,6 @@ public class WordNetSynsetSenseInventoryResource
                     .setSenseDescriptionFormat(senseDescriptionFormat);
         }
         return true;
-    }
-
-    /**
-     * Given a lemma and a string representing a synset + part of speech,
-     * returns a corresponding sense key.
-     *
-     * @param senseId
-     * @param lemma
-     * @return
-     * @throws SenseInventoryException
-     */
-    public String getWordNetSenseKey(String senseId, String lemma)
-        throws SenseInventoryException
-    {
-        return ((WordNetSynsetSenseInventory) inventory).getWordNetSenseKey(senseId,
-                lemma);
     }
 
 }

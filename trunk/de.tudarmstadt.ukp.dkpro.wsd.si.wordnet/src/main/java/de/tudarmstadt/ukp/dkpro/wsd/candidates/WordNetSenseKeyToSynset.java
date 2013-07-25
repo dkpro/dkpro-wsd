@@ -28,11 +28,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.uima.UimaContext;
+import org.apache.uima.analysis_engine.annotator.AnnotatorConfigurationException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
 import de.tudarmstadt.ukp.dkpro.wsd.WSDUtils;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
+import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSenseInventoryResourceBase;
 
 /**
  * Converts WordNet sense keys to synset offset+POS
@@ -44,7 +47,7 @@ public class WordNetSenseKeyToSynset
     extends SenseConverter
 {
     public static final String PARAM_INDEX_SENSE_FILE = "IndexSenseFile";
-    @ConfigurationParameter(name = PARAM_INDEX_SENSE_FILE, mandatory = true, description = "The location of the WordNet index.sense file")
+    @ConfigurationParameter(name = PARAM_INDEX_SENSE_FILE, mandatory = false, description = "The location of the WordNet index.sense file.  This parameter can be used only if a WordNet sense inventory resource is not specified.")
     private String indexSenseFile;
 
     private static final Pattern senseKeyPattern = Pattern
@@ -58,12 +61,22 @@ public class WordNetSenseKeyToSynset
     {
         super.initialize(context);
 
-        try {
-            senseMap = getSenseMap(ResourceUtils.resolveLocation(
-                    indexSenseFile, this, context));
+        if (indexSenseFile != null && sourceInventory != null) {
+            throw new ResourceInitializationException(
+                    new AnnotatorConfigurationException(
+                            AnnotatorConfigurationException.MUTUALLY_EXCLUSIVE_PARAMS,
+                            new String[] { PARAM_INDEX_SENSE_FILE + ", "
+                                    + SOURCE_SENSE_INVENTORY_RESOURCE }));
         }
-        catch (Exception e) {
-            throw new ResourceInitializationException(e);
+
+        if (indexSenseFile != null) {
+            try {
+                senseMap = getSenseMap(ResourceUtils.resolveLocation(
+                        indexSenseFile, this, context));
+            }
+            catch (Exception e) {
+                throw new ResourceInitializationException(e);
+            }
         }
     }
 
@@ -112,8 +125,15 @@ public class WordNetSenseKeyToSynset
 
     @Override
     public String convert(String senseId)
+        throws SenseInventoryException
     {
-        return senseMap.get(senseId);
+        if (senseMap != null) {
+            return senseMap.get(senseId);
+        }
+        else {
+            return ((WordNetSenseInventoryResourceBase) sourceInventory)
+                    .getWordNetSynsetOffsetAndPos(senseId);
+        }
     }
 
 }

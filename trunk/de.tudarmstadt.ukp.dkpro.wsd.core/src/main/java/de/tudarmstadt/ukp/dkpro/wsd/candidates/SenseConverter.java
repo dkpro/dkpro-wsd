@@ -30,6 +30,7 @@ import org.uimafit.descriptor.ExternalResource;
 import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
 /**
@@ -99,20 +100,22 @@ public abstract class SenseConverter
         	if (r.getSenseInventory().equals(sourceSenseInventoryName)) {
         		for (int i = 0; i < r.getSenses().size(); i++) {
         			fromSense = r.getSenses(i).getId();
+        			toSense = null;
         			if (ignorePattern.matcher(fromSense).find() == true) {
                         continue;
                     }
-        			toSense = convert(fromSense);
-        			if (toSense == null) {
-        				if (ignoreUnknownSenses == false) {
-        				    getLogger().error("Can't convert sense " + fromSense);
-        					throw new AnalysisEngineProcessException();
-        				}
-                        else {
-                            getLogger().debug("Can't convert sense " + fromSense);
+        			try {
+                        toSense = convert(fromSense);
+                    }
+                    catch (SenseInventoryException e) {
+                        getLogger().error("Can't convert sense " + fromSense);
+                        if (ignoreUnknownSenses == false) {
+                            throw new AnalysisEngineProcessException(e);
                         }
-        			}
-                    else {
+                    }
+        			if (toSense != null) {
+                        getLogger().debug("Converting " + fromSense + " to "
+                                + toSense);
                         r.getSenses(i).setId(toSense);
                     }
         		}
@@ -121,5 +124,5 @@ public abstract class SenseConverter
         }
 	}
 
-	public abstract String convert(String senseId);
+	public abstract String convert(String senseId) throws SenseInventoryException;
 }
