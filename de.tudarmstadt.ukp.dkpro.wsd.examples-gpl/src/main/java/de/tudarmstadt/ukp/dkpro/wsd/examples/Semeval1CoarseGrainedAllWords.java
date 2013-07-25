@@ -39,8 +39,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedExtendedLesk;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.SecondObjects;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.overlap.PairedOverlap;
-import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseConfidenceNormalizer;
+import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.WordNetSenseKeyToSynset;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.SingleExactMatchEvaluatorText;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader;
@@ -167,8 +167,10 @@ public class Semeval1CoarseGrainedAllWords
 
         AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
                 WordNetSenseKeyToSynset.class,
-                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
-                "classpath:/WordNet/WordNet_2.1/dict/index.sense",
+                WordNetSenseKeyToSynset.SOURCE_SENSE_INVENTORY_RESOURCE,
+                wordnet2_1,
+//                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
+//                "classpath:/WordNet/WordNet_2.1/dict/index.sense",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "WordNet_2.1_sensekey",
                 SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_2.1_synset",
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, false);

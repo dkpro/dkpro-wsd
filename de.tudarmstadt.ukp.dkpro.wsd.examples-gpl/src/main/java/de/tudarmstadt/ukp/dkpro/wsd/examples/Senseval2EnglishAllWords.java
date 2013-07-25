@@ -57,7 +57,7 @@ public class Senseval2EnglishAllWords
 
         // For our corpus and answer key we will use the Senseval-2 English
         // Lexical Sample training data.
-        final String directory = "classpath:/senseval-2/english-all-words/test/";
+        final String directory = "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-all-words/test/";
         final String corpus = directory + "eng-all-words.test.fixed.xml";
         final String answerkey = directory + "eng-all-words.test.key";
 
@@ -85,12 +85,21 @@ public class Senseval2EnglishAllWords
         // uses to perform the conversion.
         AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
-                "classpath:/WordNet/wordnet_senseval.tsv",
+                "classpath:/wordnet_senseval.tsv",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "Senseval2_sensekey",
                 SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
                 "WordNet_1.7pre_sensekey", SenseMapper.PARAM_KEY_COLUMN, 2,
                 SenseMapper.PARAM_VALUE_COLUMN, 1,
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
+
+        ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
+                WordNetSynsetSenseInventoryResource.class,
+                WordNetSynsetSenseInventoryResource.PARAM_WORDNET_PROPERTIES_URL,
+                "/home/miller/share/WordNet/WordNet-1.7pre/extjwnl_properties.xml",
+                WordNetSynsetSenseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
+                "WordNet_1.7pre_synset",
+                WordNetSynsetSenseInventoryResource.PARAM_SENSE_DESCRIPTION_FORMAT,
+                "%d %e %w");
 
         // WordNet 1.7-prerelease sense keys are not unique identifiers for
         // WordNet synsets (that is, multiple sense keys map to the same synset)
@@ -99,20 +108,12 @@ public class Senseval2EnglishAllWords
         // identify WordNet senses.
         AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
                 WordNetSenseKeyToSynset.class,
-                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
-                "classpath:/WordNet/WordNet_1.7pre/dict/index.sense",
+                WordNetSenseKeyToSynset.SOURCE_SENSE_INVENTORY_RESOURCE,
+                wordnet1_7,
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
                 "WordNet_1.7pre_sensekey",
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset");
-
-        ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
-                WordNetSynsetSenseInventoryResource.class,
-                WordNetSynsetSenseInventoryResource.PARAM_WORDNET_PROPERTIES_URL,
-                "/home/miller/share/WordNet/WordNet-1.7pre/wordnet_properties.xml",
-                WordNetSynsetSenseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_synset",
-                WordNetSynsetSenseInventoryResource.PARAM_SENSE_DESCRIPTION_FORMAT,
-                "%d %e %w");
+                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset",
+                SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // Here's a resource encapsulating the random sense baseline algorithm.
         ExternalResourceDescription randomBaselineResource = createExternalResourceDescription(

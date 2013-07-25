@@ -63,7 +63,7 @@ public class Senseval2EnglishLexicalSample
 
         // For our corpus and answer key we will use the Senseval-2 English
         // Lexical Sample training data.
-        final String directory = "classpath:/senseval-2/english-lex-sample/train/";
+        final String directory = "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-lex-sample/train/";
         final String corpus = directory + "eng-lex-sample.train.xml";
         final String answerkey = directory + "eng-lex-sample.train.fixed.key";
 
@@ -74,9 +74,8 @@ public class Senseval2EnglishLexicalSample
         // This AE reads the Senseval-2 answer key. Because the Senseval
         // answer key format doesn't itself indicate what sense inventory is
         // used for the keys, we need to pass this as a configuration parameter.
-        // In this case, the keys use sense identifiers which are specific
-        // to the Senseval task, so we shall arbitrarily name this sense
-        // inventory "Senseval2_sensekey".
+        // Senseval uses an identifier scheme which is similar to (but not the
+        // same as) WordNet sense keys, so let's call it "Senseval2_sensekey".
         AnalysisEngineDescription answerReader = createPrimitiveDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
@@ -91,25 +90,11 @@ public class Senseval2EnglishLexicalSample
         // uses to perform the conversion.
         AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
-                "classpath:/WordNet/wordnet_senseval.tsv",
+                "classpath:/wordnet_senseval.tsv",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "Senseval2_sensekey",
                 SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
                 "WordNet_1.7pre_sensekey", SenseMapper.PARAM_KEY_COLUMN, 2,
                 SenseMapper.PARAM_VALUE_COLUMN, 1,
-                SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
-
-        // WordNet 1.7-prerelease sense keys are not unique identifiers for
-        // WordNet synsets (that is, multiple sense keys map to the same synset)
-        // we use another annotator to convert them to strings comprised of the
-        // WordNet synset offset plus part of speech. These strings uniquely
-        // identify WordNet senses.
-        AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
-                WordNetSenseKeyToSynset.class,
-                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
-                "classpath:/WordNet/WordNet_1.7pre/dict/index.sense",
-                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_sensekey",
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset",
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // The WSD baseline algorithms we will be using need to select senses
@@ -122,6 +107,20 @@ public class Senseval2EnglishLexicalSample
                 LsrSenseInventoryResource.class,
                 LsrSenseInventoryResource.PARAM_RESOURCE_NAME, "wordnet17",
                 LsrSenseInventoryResource.PARAM_RESOURCE_LANGUAGE, "en");
+
+        // WordNet 1.7-prerelease sense keys are not unique identifiers for
+        // WordNet synsets (that is, multiple sense keys map to the same synset)
+        // we use another annotator to convert them to strings comprised of the
+        // WordNet synset offset plus part of speech. These strings uniquely
+        // identify WordNet senses.
+        AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
+                WordNetSenseKeyToSynset.class,
+                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
+                "/home/miller/share/WordNet/WordNet-1.7pre/dict/index.sense",
+                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
+                "WordNet_1.7pre_sensekey",
+                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset",
+                SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // The sense identifiers returned by JLSR are also proprietary, so we
         // use this AE to convert them to strings comprised of the
