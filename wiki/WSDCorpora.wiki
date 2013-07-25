@@ -2,7 +2,7 @@
 
 = WSD corpora =
 
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="3" /> 
 
 == Table of WSD corpora ==
 
