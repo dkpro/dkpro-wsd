@@ -72,13 +72,13 @@ First, refer to our table of [WSDCorpora WSD corpora] to find out which format i
 || *Format* || *Class* ||
 || Aida || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
 || MASC || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.MASCReader` ||
-|| Senseval2LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
-|| Senseval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
 || SemCor || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader` ||
 || Semeval1AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
 || Semeval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
-|| WebCAGe || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.WebCAGeXMLReader` ||
+|| Senseval2LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
+|| Senseval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
 || TAC_KBP || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp.TacKbpOfficialformatReader` ||
+|| WebCAGe || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.WebCAGeXMLReader` ||
 
 === What sense inventories should I use for the various Senseval, !SemEval, and other WSD data sets? ===
 
