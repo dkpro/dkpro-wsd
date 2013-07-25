@@ -27,11 +27,9 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.IndexWord;
@@ -69,11 +67,7 @@ public abstract class WordNetSynsetSenseInventoryBase
     private final Log logger = LogFactory.getLog(getClass());
 
     // Transformers
-    private final SynsetToString synsetToString = new SynsetToString();
     private final PointerToUnorderedPair pointerToUnorderedPair = new PointerToUnorderedPair();
-    private final WordNetPosToString wordNetPosToString = new WordNetPosToString();
-    private final StringToSynset stringToSynset = new StringToSynset();
-    private final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
 
     // Variables and cache for sense descriptions
     private final Map<String, CachedSense> senses = new HashMap<String, CachedSense>();
@@ -82,13 +76,7 @@ public abstract class WordNetSynsetSenseInventoryBase
     public String getWordNetSenseKey(String senseId, String lemma)
         throws SenseInventoryException
     {
-        try {
-            Synset s = stringToSynset.transform(senseId);
-            return getWordNetSenseKey(s.getOffset(), lemma, s.getPOS());
-        }
-        catch (NoSuchElementException e) {
-            throw new SenseInventoryException(e);
-        }
+        return synsetOffsetAndPosToSenseKey(senseId, lemma);
     }
 
     @Override
@@ -285,100 +273,6 @@ public abstract class WordNetSynsetSenseInventoryBase
                 .unmodifiableUndirectedGraph(undirectedWNGraph);
         return undirectedWNGraph;
 
-    }
-
-    /**
-     * Transforms a String to a WordNet POS by performing the inverse of
-     * WordNetPosToString
-     *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
-     *
-     */
-    private static class StringToWordNetPos
-        implements Transformer<String, net.sf.extjwnl.data.POS>
-    {
-        @Override
-        public net.sf.extjwnl.data.POS transform(String s)
-        {
-            if (s.equals("n")) {
-                return net.sf.extjwnl.data.POS.NOUN;
-            }
-            else if (s.equals("v")) {
-                return net.sf.extjwnl.data.POS.VERB;
-            }
-            else if (s.equals("a")) {
-                return net.sf.extjwnl.data.POS.ADJECTIVE;
-            }
-            else if (s.equals("r")) {
-                return net.sf.extjwnl.data.POS.ADVERB;
-            }
-            else {
-                throw new IllegalArgumentException();
-            }
-        }
-    }
-
-    /**
-     * Transforms a WordNet POS to a String
-     *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
-     *
-     */
-    private static class WordNetPosToString
-        implements Transformer<net.sf.extjwnl.data.POS, String>
-    {
-        @Override
-        public String transform(net.sf.extjwnl.data.POS pos)
-        {
-            return pos.getKey();
-        }
-    }
-
-    /**
-     * Transforms a String to a WordNet Synset by doing the inverse of
-     * SynsetToString
-     *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
-     *
-     */
-    private class StringToSynset
-        implements Transformer<String, Synset>
-    {
-        private final Pattern synsetOffsetPattern = Pattern
-                .compile("^([0-9]+)-?([anvr])$");
-
-        @Override
-        public Synset transform(String s)
-        {
-            Matcher m = synsetOffsetPattern.matcher(s);
-            if (m.matches() == false || m.groupCount() != 2) {
-                throw new IllegalArgumentException();
-            }
-            try {
-                return wn.getSynsetAt(stringToWordNetPos.transform(m.group(2)),
-                        Long.parseLong(m.group(1)));
-            }
-            catch (JWNLException e) {
-                throw new IllegalArgumentException(e);
-            }
-        }
-    }
-
-    /**
-     * Transforms a WordNet synset to a unique string representation
-     *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
-     *
-     */
-    private class SynsetToString
-        implements Transformer<Synset, String>
-    {
-        @Override
-        public String transform(Synset s)
-        {
-            return String.format("%08d%s", s.getOffset(),
-                    wordNetPosToString.transform(s.getPOS()));
-        }
     }
 
     /**

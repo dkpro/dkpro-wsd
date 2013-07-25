@@ -24,7 +24,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.si.wordnet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import net.sf.extjwnl.JWNLException;
@@ -62,6 +64,10 @@ public abstract class WordNetSenseInventoryBase
     protected String senseDescriptionFormat = "%w; %d";
     protected final static Pattern glossPattern = Pattern
             .compile("(.*?)(; \".*)");
+    protected final SynsetToString synsetToString = new SynsetToString();
+    protected final WordNetPosToString wordNetPosToString = new WordNetPosToString();
+    protected final StringToSynset stringToSynset = new StringToSynset();
+    protected final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
 
     @Override
     public void setUndirectedGraph(
@@ -136,8 +142,8 @@ public abstract class WordNetSenseInventoryBase
     }
 
     /**
-     * Given a lemma and a string representing a synset + part of speech,
-     * returns a corresponding sense key.
+     * Given a sense ID of the format used by this class, returns a
+     * corresponding WordNet sense key.
      *
      * @param senseId
      * @param lemma
@@ -147,9 +153,157 @@ public abstract class WordNetSenseInventoryBase
     abstract public String getWordNetSenseKey(String senseId, String lemma)
         throws SenseInventoryException;
 
+    /**
+     * Given a sense ID of the format used by this class, returns a
+     * corresponding WordNet synset offset + POS
+     *
+     * @param senseId
+     * @return
+     * @throws SenseInventoryException
+     */
+    abstract public String getWordNetSynsetAndPos(String senseId)
+        throws SenseInventoryException;
+
     abstract protected List<String> getSenses(String sod,
             net.sf.extjwnl.data.POS pos)
         throws SenseInventoryException;
+
+    /**
+     * Given a lemma and a string representing a synset + part of speech,
+     * returns a corresponding sense key.
+     *
+     * @param senseId
+     * @param lemma
+     * @return
+     * @throws SenseInventoryException
+     */
+    public String synsetOffsetAndPosToSenseKey(String senseId, String lemma)
+        throws SenseInventoryException
+    {
+        try {
+            Synset s = stringToSynset.transform(senseId);
+            return getWordNetSenseKey(s.getOffset(), lemma, s.getPOS());
+        }
+        catch (NoSuchElementException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    /**
+     * Given a WordNet sense key, returns the corresponding synset offset + POS
+     *
+     * @param senseKey
+     * @return
+     * @throws SenseInventoryException
+     */
+    public String senseKeyToSynsetOffsetAndPos(String senseKey)
+        throws SenseInventoryException
+    {
+        try {
+            Word w = wn.getWordBySenseKey(senseKey);
+            if (w == null) {
+                throw new SenseInventoryException("Sense key " + senseKey + " not found");
+            }
+            return synsetToString.transform(w.getSynset());
+        }
+        catch (JWNLException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    /**
+     * Transforms a String to a WordNet POS by performing the inverse of
+     * WordNetPosToString
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected static class StringToWordNetPos
+        implements Transformer<String, net.sf.extjwnl.data.POS>
+    {
+        @Override
+        public net.sf.extjwnl.data.POS transform(String s)
+        {
+            if (s.equals("n")) {
+                return net.sf.extjwnl.data.POS.NOUN;
+            }
+            else if (s.equals("v")) {
+                return net.sf.extjwnl.data.POS.VERB;
+            }
+            else if (s.equals("a")) {
+                return net.sf.extjwnl.data.POS.ADJECTIVE;
+            }
+            else if (s.equals("r")) {
+                return net.sf.extjwnl.data.POS.ADVERB;
+            }
+            else {
+                throw new IllegalArgumentException();
+            }
+        }
+    }
+
+    /**
+     * Transforms a WordNet POS to a String
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected static class WordNetPosToString
+        implements Transformer<net.sf.extjwnl.data.POS, String>
+    {
+        @Override
+        public String transform(net.sf.extjwnl.data.POS pos)
+        {
+            return pos.getKey();
+        }
+    }
+
+    /**
+     * Transforms a String to a WordNet Synset by doing the inverse of
+     * SynsetToString
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected class StringToSynset
+        implements Transformer<String, Synset>
+    {
+        private final Pattern synsetOffsetPattern = Pattern
+                .compile("^([0-9]+)-?([anvr])$");
+
+        @Override
+        public Synset transform(String s)
+        {
+            Matcher m = synsetOffsetPattern.matcher(s);
+            if (m.matches() == false || m.groupCount() != 2) {
+                throw new IllegalArgumentException();
+            }
+            try {
+                return wn.getSynsetAt(stringToWordNetPos.transform(m.group(2)),
+                        Long.parseLong(m.group(1)));
+            }
+            catch (JWNLException e) {
+                throw new IllegalArgumentException(e);
+            }
+        }
+    }
+
+    /**
+     * Transforms a WordNet synset to a unique string representation
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected class SynsetToString
+        implements Transformer<Synset, String>
+    {
+        @Override
+        public String transform(Synset s)
+        {
+            return String.format("%08d%s", s.getOffset(),
+                    wordNetPosToString.transform(s.getPOS()));
+        }
+    }
 
     @Override
     public List<String> getSenses(String sod, POS pos)

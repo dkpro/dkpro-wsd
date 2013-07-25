@@ -19,11 +19,13 @@
 package de.tudarmstadt.ukp.dkpro.wsd.candidates;
 
 import java.io.IOException;
-import java.util.Map;
 
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.commons.collections15.Transformer;
+import org.uimafit.descriptor.ExternalResource;
 
-import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
+import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.WordNetSenseInventoryBase;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
 /**
@@ -33,17 +35,26 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 public class WordNetSenseConfidenceClusterer
     extends SenseConfidenceClusterer
 {
-    public static final String PARAM_INDEX_SENSE_FILE = "IndexSenseFile";
-    @ConfigurationParameter(name = PARAM_INDEX_SENSE_FILE, mandatory = true, description = "The location of the WordNet index.sense file")
-    private String indexSenseFile;
+    public final static String SENSE_INVENTORY_RESOURCE = "SenseInventory";
+    @ExternalResource(key = SENSE_INVENTORY_RESOURCE)
+    protected SenseInventory inventory;
 
     @Override
     protected void initializeSenseClusterer()
         throws IOException
     {
-        Map<String, String> senseMap = WordNetSenseKeyToSynset
-                .getSenseMap(ResourceUtils.resolveLocation(indexSenseFile,
-                        this, this.getContext()));
+        Transformer<String, String> senseMap = new Transformer<String, String>() {
+
+            @Override
+            public String transform(String input)
+            {
+                try {
+                    return ((WordNetSenseInventoryBase) inventory).senseKeyToSynsetOffsetAndPos(input);
+                }
+                catch (SenseInventoryException e) {
+                    throw new IllegalArgumentException(e);
+                }
+            } };
         senseClusterer = new SenseClusterer(clusterUrl, delimiterRegex, senseMap);
     }
 }

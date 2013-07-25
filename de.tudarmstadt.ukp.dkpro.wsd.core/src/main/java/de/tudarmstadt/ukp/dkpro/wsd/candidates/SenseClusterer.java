@@ -35,6 +35,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.apache.commons.collections15.Transformer;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 
@@ -54,7 +55,7 @@ public class SenseClusterer
     Map<String, Set<String>> membershipMap = new HashMap<String, Set<String>>();
     protected final Map<String, Set<String>> clusterMap = new HashMap<String, Set<String>>();
     private final Logger logger = Logger.getLogger(getClass());
-    protected Map<String, String> senseMap = null;
+    protected Transformer<String, String> senseTransformer = null;
 
     @Override
     public String toString()
@@ -69,10 +70,10 @@ public class SenseClusterer
     }
 
     public SenseClusterer(String clusterUrl, String delimiterRegex,
-            Map<String, String> senseMap)
+            Transformer<String, String> senseTransformer)
         throws IOException
     {
-        this.senseMap = senseMap;
+        this.senseTransformer = senseTransformer;
         loadClusters(clusterUrl, delimiterRegex);
     }
 
@@ -124,13 +125,13 @@ public class SenseClusterer
      */
     protected Set<String> createCluster(String[] lineParts)
     {
-        if (senseMap == null) {
+        if (senseTransformer == null) {
             return new TreeSet<String>(Arrays.asList(lineParts));
         }
 
         Set<String> cluster = new TreeSet<String>();
         for (String sense : lineParts) {
-            String synset = senseMap.get(sense);
+            String synset = senseTransformer.transform(sense);
             if (synset == null) {
                 logger.error("No mapping for sense ID " + sense);
                 throw new IllegalArgumentException();
@@ -250,9 +251,9 @@ public class SenseClusterer
         return true;
     }
 
-    public void setSenseMap(Map<String, String> senseMap)
+    public void setSenseMap(Transformer<String, String> senseTransformer)
     {
-        this.senseMap = senseMap;
+        this.senseTransformer = senseTransformer;
     }
 
 }

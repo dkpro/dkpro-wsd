@@ -27,7 +27,7 @@ import org.apache.uima.jcas.JCas;
 import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSynsetSenseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSenseInventoryResourceBase;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
 /**
@@ -50,24 +50,23 @@ public class WordNetSynsetToSenseKey
             if (r.getSenseInventory().equals(sourceSenseInventoryName)) {
                 for (int i = 0; i < r.getSenses().size(); i++) {
                     fromSense = r.getSenses(i).getId();
+                    toSense = null;
                     if (ignorePattern.matcher(fromSense).find() == true) {
                         continue;
                     }
-                    toSense = convert(fromSense, r.getWsdItem()
-                            .getSubjectOfDisambiguation());
-                    if (toSense == null) {
+                    try {
+                        toSense = convert(fromSense, r.getWsdItem()
+                                .getSubjectOfDisambiguation());
+                    }
+                    catch (SenseInventoryException e) {
+                        logger.error("Can't convert sense " + fromSense);
                         if (ignoreUnknownSenses == false) {
-                            logger.error(
-                                    "Can't convert sense " + fromSense);
-                            throw new AnalysisEngineProcessException();
-                        }
-                        else {
-                            logger.debug(
-                                    "Can't convert sense " + fromSense);
+                            throw new AnalysisEngineProcessException(e);
                         }
                     }
-                    else {
-                        logger.debug("Converting " + fromSense + " to " + toSense);
+                    if (toSense != null) {
+                        logger.debug("Converting " + fromSense + " to "
+                                + toSense);
                         r.getSenses(i).setId(toSense);
                     }
                 }
@@ -76,15 +75,10 @@ public class WordNetSynsetToSenseKey
         }
     }
 
-    public String convert(String senseId, String lemma)
+    public String convert(String senseId, String lemma) throws SenseInventoryException
     {
-        try {
-            return ((WordNetSynsetSenseInventoryResource) sourceInventory)
-                    .getWordNetSenseKey(senseId, lemma);
-        }
-        catch (SenseInventoryException e) {
-            return null;
-        }
+        return ((WordNetSenseInventoryResourceBase) sourceInventory)
+                .getWordNetSenseKey(senseId, lemma);
     }
 
     @Override
