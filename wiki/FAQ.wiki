@@ -101,8 +101,12 @@ Note that for some sense inventories, you can use various modules, depending on 
 
 === Where can I get the !WordNet 1.7 pre-release used by the English Senseval-2 tasks? ===
 
-You probably can't.  This version of WordNet was never officially published, but was made available only to the participants.  We contacted both the WordNet maintainers and the Senseval-2 organizers, and neither was able to locate a copy of this version.  A Senseval-2 participant sent us a copy he had archived, but its sense keys turned out to be incompatible with those of the Senseval-2 data sets.
+You probably can't.  This version of WordNet was never officially published, but was made available only to the participants.  We contacted both the WordNet maintainers and the Senseval-2 organizers, and neither was able to locate a copy of this version.  A Senseval-2 participant sent us a copy he had archived, but its sense keys turned out to be incompatible with those of the Senseval-2 data sets.  If you must use this data set, then you could use WordNet 1.7, but keep in mind that you will not be able to achieve full accuracy, since some of the sense keys found in the answer key won't exist in the sense inventory.
 
 === How can I get help with DKPro WSD? ===
 
 For help with DKPro WSD, please use the [http://groups.google.com/group/dkpro-wsd-users dkpro-wsd-users] mailing list.
+
+=== How can I report a bug with DKPro WSD? ===
+
+Consider first discussing the problem on the [http://groups.google.com/group/dkpro-wsd-users dkpro-wsd-users] mailing list.  If you're fairly sure it's a bug, you can report the problem on the [https://code.google.com/p/dkpro-wsd/issues/list DKPro WSD issue tracker].  Patches are welcome.
