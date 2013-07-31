@@ -20,6 +20,7 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.exception.ResourceLoaderException;
@@ -30,6 +31,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
 
 public class ImsWsdDisambiguatorTest {
 
+    @Ignore
     @Test
     public void imsWsdDisambiguatorTest() throws SenseInventoryException {
         SenseInventory inventory;
