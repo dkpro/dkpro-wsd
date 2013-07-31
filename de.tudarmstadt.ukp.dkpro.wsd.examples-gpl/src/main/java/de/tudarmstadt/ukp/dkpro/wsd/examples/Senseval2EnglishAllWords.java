@@ -32,18 +32,17 @@ import org.uimafit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.RandomSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
-import de.tudarmstadt.ukp.dkpro.wsd.candidates.WordNetSenseKeyToSynset;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.MultipleExactMatchEvaluator;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.writer.WSDWriter;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSynsetSenseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSenseKeySenseInventoryResource;
 import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
 
 /**
- * This class illustrates a pipeline which runs various WSD algorithms on
- * the Senseval-2 English all words test data.
+ * This class illustrates a pipeline which runs a WSD algorithm on the
+ * Senseval-2 English all words test data.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -54,28 +53,49 @@ public class Senseval2EnglishAllWords
     public static void main(String[] args)
         throws UIMAException, IOException
     {
-
         // For our corpus and answer key we will use the Senseval-2 English
-        // Lexical Sample training data.
-        final String directory = "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-all-words/test/";
-        final String corpus = directory + "eng-all-words.test.fixed.xml";
+        // All Words test data.  You need to obtain this data set from the
+        // Senseval-2 website.  Change the value of the directory variable
+        // to point to the location on your filesystem where you stored the
+        // data set.
+        final String directory= "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-all-words/test/";
+        final String corpus = directory + "eng-all-words.test.xml";
         final String answerkey = directory + "eng-all-words.test.key";
 
-        // A collection reader for the documents to be disambiguated.
+        // This is a collection reader for the documents to be disambiguated.
+        // The original corpus contains errors so we instruct the collection
+        // reader to ignore them.
         CollectionReader reader = createCollectionReader(
-                Senseval2AWReader.class, Senseval2AWReader.PARAM_FILE, corpus);
+                Senseval2AWReader.class, Senseval2AWReader.PARAM_FILE, corpus,
+                Senseval2AWReader.PARAM_IGNORE_MISSING_SATELLITES, true);
+
+
+        // This Senseval data set uses an unpublished pre-release version of
+        // WordNet 1.7 as its sense inventory.  This pre-release version is
+        // lost.  Here we use WordNet 1.7 instead, though some of the sense
+        // keys are slightly different.  You need to create an extJWNL
+        // properties file and change the value of the
+        // PARAM_WORDNET_PROPERTIES_URL to point to its location on your file
+        // system.
+        final String wordnetInventoryName = "WordNet_1.7pre_sensekey";
+        ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
+                WordNetSenseKeySenseInventoryResource.class,
+                WordNetSenseKeySenseInventoryResource.PARAM_WORDNET_PROPERTIES_URL,
+                "/home/miller/share/WordNet/WordNet-1.7pre/extjwnl_properties.xml",
+                WordNetSenseKeySenseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
+                wordnetInventoryName);
 
         // This AE reads the Senseval-2 answer key. Because the Senseval
         // answer key format doesn't itself indicate what sense inventory is
         // used for the keys, we need to pass this as a configuration parameter.
         // In this case, the keys use sense identifiers which are specific
-        // to the Senseval task, so we shall arbitrarily name this sense
-        // inventory "Senseval2_sensekey".
+        // to the Senseval task, so we give it a unique ID.
+        final String sensevalInventoryName = "Senseval2_sensekey";
         AnalysisEngineDescription answerReader = createPrimitiveDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
-                "Senseval2_sensekey");
+                sensevalInventoryName);
 
         // The Senseval2 sense identifiers are actually based on sense keys from
         // the WordNet 1.7-prerelease, so for ease of interoperability we use
@@ -86,40 +106,18 @@ public class Senseval2EnglishAllWords
         AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
                 "classpath:/wordnet_senseval.tsv",
-                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "Senseval2_sensekey",
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_sensekey", SenseMapper.PARAM_KEY_COLUMN, 2,
-                SenseMapper.PARAM_VALUE_COLUMN, 1,
-                SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
-
-        ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
-                WordNetSynsetSenseInventoryResource.class,
-                WordNetSynsetSenseInventoryResource.PARAM_WORDNET_PROPERTIES_URL,
-                "/home/miller/share/WordNet/WordNet-1.7pre/extjwnl_properties.xml",
-                WordNetSynsetSenseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_synset",
-                WordNetSynsetSenseInventoryResource.PARAM_SENSE_DESCRIPTION_FORMAT,
-                "%d %e %w");
-
-        // WordNet 1.7-prerelease sense keys are not unique identifiers for
-        // WordNet synsets (that is, multiple sense keys map to the same synset)
-        // we use another annotator to convert them to strings comprised of the
-        // WordNet synset offset plus part of speech. These strings uniquely
-        // identify WordNet senses.
-        AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
-                WordNetSenseKeyToSynset.class,
-                WordNetSenseKeyToSynset.SOURCE_SENSE_INVENTORY_RESOURCE,
-                wordnet1_7,
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_sensekey",
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset",
+                sensevalInventoryName,
+                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
+                wordnetInventoryName, SenseMapper.PARAM_KEY_COLUMN, 2,
+                SenseMapper.PARAM_VALUE_COLUMN, 1,
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // Here's a resource encapsulating the random sense baseline algorithm.
         ExternalResourceDescription randomBaselineResource = createExternalResourceDescription(
                 WSDResourceIndividualBasic.class,
-                WSDResourceIndividualBasic.SENSE_INVENTORY_RESOURCE, wordnet1_7,
-                WSDResourceIndividualBasic.DISAMBIGUATION_METHOD,
+                WSDResourceIndividualBasic.SENSE_INVENTORY_RESOURCE,
+                wordnet1_7, WSDResourceIndividualBasic.DISAMBIGUATION_METHOD,
                 RandomSenseBaseline.class.getName());
 
         AnalysisEngineDescription randomBaseline = createPrimitiveDescription(
@@ -138,15 +136,13 @@ public class Senseval2EnglishAllWords
         // recall, and coverage.
         AnalysisEngineDescription evaluator = createPrimitiveDescription(
                 MultipleExactMatchEvaluator.class,
-                MultipleExactMatchEvaluator.PARAM_GOLD_STANDARD_ALGORITHM, answerkey);
+                MultipleExactMatchEvaluator.PARAM_GOLD_STANDARD_ALGORITHM,
+                answerkey);
 
         // Here we run the pipeline
-        SimplePipeline.runPipeline(reader,
-                answerReader,
-                convertSensevalToSensekey,
-                convertSensekeyToSynset,
-                randomBaseline,
-                // writer,
+        SimplePipeline.runPipeline(reader, answerReader,
+                convertSensevalToSensekey, randomBaseline,
+                //writer,
                 evaluator);
     }
 
