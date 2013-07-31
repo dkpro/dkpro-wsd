@@ -1,0 +1,55 @@
+--- eng-all-words.test.xml	2013-04-11 16:36:16.000000000 +0200
++++ eng-all-words.test.fixed.xml	2013-07-31 15:24:13.606975505 +0200
+@@ -1,5 +1,16 @@
+ <?xml version="1.0"?>
+ <!DOCTYPE corpus SYSTEM  "all-words.dtd">
++<!-- 
++
++The original file provided for Senseval-2 had a number of errors (i.e.,
++heads referencing nonexistent satellite IDs).  These have been fixed
++in this file.
++
++- Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
++  2012-01-17
++
++-->
++
+ <corpus lang="en">
+ 
+ <text id="d00">
+@@ -986,7 +997,7 @@
+ the
+ <head id="d00.s37.t04" sats="d00.s37.t04 d00.s37.t04-1">Church</head>
+ <sat id="d00.s37.t04">of</sat>
+-<sat id="d00.s37.t04">England</sat>
++<sat id="d00.s37.t04-1">England</sat>
+ <head id="d00.s37.t07">steadily</head>
+ <head id="d00.s37.t08" >dwindling</head>
+ ,
+@@ -2008,7 +2019,7 @@
+ <head id="d01.s09.t13">cell</head>
+ 's
+ <head id="d01.s09.t15">growth</head>
+-<sat id="d01.s09.t16.s0">in</sat>
++<sat id="d01.s09.t17.s0">in</sat>
+ <head id="d01.s09.t17" sats="d01.s09.t17.s0">check</head>
+ .
+ But
+@@ -2044,7 +2055,7 @@
+ and
+ <head id="d01.s10.t31">cells</head>
+ <head id="d01.s10.t32">normally</head>
+-<sat id="d01.s10.t33.s0">under</sat>
++<sat id="d01.s10.t34.s0">under</sat>
+ <head id="d01.s10.t34" sats="d01.s10.t34.s0">control</head>
+ <head id="d01.s10.t35" >turn</head>
+ <head id="d01.s10.t36">malignant</head>
+@@ -2125,7 +2136,7 @@
+ <head id="d01.s13.t15">cancer</head>
+ <head id="d01.s13.t16">genes</head>
+ <head id="d01.s13.t17" >work</head>
+-<sat id="d01.s13.t18.s0">in</sat>
++<sat id="d01.s13.t19.s0">in</sat>
+ <head id="d01.s13.t19" sats="d01.s13.t19.s0">concert</head>
+ :
+ An

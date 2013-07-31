@@ -231,7 +231,9 @@ public abstract class SensevalReader
 
             int i = 1;
             for (String satId : satIds) {
-                wsdItemAnnotation.setConstituents(i++, lics.get(satId));
+                if (lics.get(satId) != null) {
+                    wsdItemAnnotation.setConstituents(i++, lics.get(satId));
+                }
             }
         }
     }
