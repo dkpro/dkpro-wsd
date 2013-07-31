@@ -88,7 +88,7 @@
 || 2011 || [http://cogcomp.cs.illinois.edu/Data/WikificationACL2011Data.zip ACE] || en || AW || ? || ? || Wikipedia || no || no || no ||
 || 2011 || [http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2011T03 OntoNotes 4.0] || en || ? || no || ? || OntoNotes || yes || yes || yes ||
 || 2011 || [http://www.aclweb.org/anthology-new/P/P11/P11-1095.pdf WikiAmbi] || en || LS || no || ? || Wikipedia || no || no || no ||
-|| 2011 || [http://www.mpi-inf.mpg.de/yago-naga/aida/ Yago_CoNLL] || en || AW || no || custom || Wikipedia, DBPedia || no || no || no ||
+|| 2011 || [http://www.mpi-inf.mpg.de/yago-naga/aida/ Yago_CoNLL] || en || AW || no || AIDA || Wikipedia, DBPedia || no || no || no ||
 || 2012 || [http://www.anc.org/MASC/ MASC] || en || LS || no || MASC || WordNet 3.1, FrameNet || yes || yes || yes ||
 || 2013 || [http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml WebCAGe] || de || LS || no || WebCAGe || GermaNet || yes || yes || yes ||
 
