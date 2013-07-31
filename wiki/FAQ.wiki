@@ -70,7 +70,7 @@ You can use the following BibTeX entry:
 First, refer to our table of [WSDCorpora WSD corpora] to find out which format is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the formats in this table.  Consult the table below to see if DKPro has a reader class for your data set's format:
 
 || *Format* || *Class* ||
-|| Aida || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
+|| AIDA || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
 || MASC || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.MASCReader` ||
 || SemCor || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader` ||
 || Semeval1AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
