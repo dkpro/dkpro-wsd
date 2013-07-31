@@ -48,8 +48,10 @@ import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorContextPOS;
 import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualPOS;
 
 /**
- * This class illustrates a pipeline which runs various WSD baselines on
- * the Senseval-2 English Lexical Sample training data.
+ * This class illustrates a pipeline which runs various WSD baselines on the
+ * Senseval-2 English Lexical Sample training data. It uses the
+ * {@link LsrSenseInventoryResource} resource to access WordNet via the DKPro
+ * LSR library.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -60,12 +62,17 @@ public class Senseval2EnglishLexicalSample
     public static void main(String[] args)
         throws UIMAException, IOException
     {
+        // Set this to a negative value to disambiguate all items in the corpus.
+        final int maxItemsToAttempt = -1;
 
         // For our corpus and answer key we will use the Senseval-2 English
-        // Lexical Sample training data.
+        // lexical sample training data. You need to obtain this data set from
+        // the Senseval-2 website. Change the value of the directory variable
+        // to point to the location on your filesystem where you stored the
+        // data set.
         final String directory = "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-lex-sample/train/";
         final String corpus = directory + "eng-lex-sample.train.xml";
-        final String answerkey = directory + "eng-lex-sample.train.fixed.key";
+        final String answerkey = directory + "eng-lex-sample.train.key";
 
         // A collection reader for the documents to be disambiguated.
         CollectionReader reader = createCollectionReader(
@@ -76,6 +83,7 @@ public class Senseval2EnglishLexicalSample
         // used for the keys, we need to pass this as a configuration parameter.
         // Senseval uses an identifier scheme which is similar to (but not the
         // same as) WordNet sense keys, so let's call it "Senseval2_sensekey".
+        final String sensevalInventoryName = "Senseval2_sensekey";
         AnalysisEngineDescription answerReader = createPrimitiveDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
@@ -88,13 +96,15 @@ public class Senseval2EnglishLexicalSample
         // have a delimited text file providing a mapping between the two
         // sense identifiers, which the SenseMapper annotator reads in and
         // uses to perform the conversion.
+        final String wordnet17SenseKeyInventoryName = "WordNet_1.7pre_sensekey";
         AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
                 "classpath:/wordnet_senseval.tsv",
-                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "Senseval2_sensekey",
+                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
+                sensevalInventoryName,
                 SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_sensekey", SenseMapper.PARAM_KEY_COLUMN, 2,
-                SenseMapper.PARAM_VALUE_COLUMN, 1,
+                wordnet17SenseKeyInventoryName, SenseMapper.PARAM_KEY_COLUMN,
+                2, SenseMapper.PARAM_VALUE_COLUMN, 1,
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // The WSD baseline algorithms we will be using need to select senses
@@ -102,7 +112,7 @@ public class Senseval2EnglishLexicalSample
         // the WordNet 1.7 prerelease. For this to work you will need
         // to have the WordNet 1.7 prerelease installed on your local system,
         // and to have an appropriately configured WordNet properties file and
-        // DKPro resources.xml file.
+        // DKPro LSR resources.xml file.
         ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
                 LsrSenseInventoryResource.class,
                 LsrSenseInventoryResource.PARAM_RESOURCE_NAME, "wordnet17",
@@ -110,16 +120,20 @@ public class Senseval2EnglishLexicalSample
 
         // WordNet 1.7-prerelease sense keys are not unique identifiers for
         // WordNet synsets (that is, multiple sense keys map to the same synset)
-        // we use another annotator to convert them to strings comprised of the
-        // WordNet synset offset plus part of speech. These strings uniquely
-        // identify WordNet senses.
+        // so we use another annotator to convert them to strings comprised of
+        // the WordNet synset offset plus part of speech. These strings uniquely
+        // identify WordNet senses. You need to change the value of the
+        // PARAM_INDEX_SENSE_FILE to point to the location of the WordNet
+        // index.sense file on your file system.
+        final String wordnet17SynsetInventoryName = "WordNet_1.7pre_synset";
         AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
                 WordNetSenseKeyToSynset.class,
                 WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
-                "/home/miller/share/WordNet/WordNet-1.7pre/dict/index.sense",
+                "/home/miller/share/WordNet/WordNet-1.7/dict/index.sense",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_sensekey",
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_1.7pre_synset",
+                wordnet17SenseKeyInventoryName,
+                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
+                wordnet17SynsetInventoryName,
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
         // The sense identifiers returned by JLSR are also proprietary, so we
@@ -130,7 +144,7 @@ public class Senseval2EnglishLexicalSample
                 LsrToWordNetSynsetOffset.PARAM_SOURCE_SENSE_INVENTORY_NAME,
                 "WordNet_3.0_LSR",
                 LsrToWordNetSynsetOffset.PARAM_TARGET_SENSE_INVENTORY_NAME,
-                "WordNet_1.7pre_synset");
+                wordnet17SynsetInventoryName);
 
         // Here's a resource encapsulating the most frequent sense baseline
         // algorithm, which we bind to the JLSR sense inventory.
@@ -145,7 +159,9 @@ public class Senseval2EnglishLexicalSample
         AnalysisEngineDescription mfsBaseline = createPrimitiveDescription(
                 WSDAnnotatorIndividualPOS.class,
                 WSDAnnotatorIndividualPOS.WSD_ALGORITHM_RESOURCE,
-                mfsBaselineResource);
+                mfsBaselineResource,
+                WSDAnnotatorIndividualPOS.PARAM_MAXIMUM_ITEMS_TO_ATTEMPT,
+                maxItemsToAttempt);
 
         // Here's a resource encapsulating the simplified Lesk algorithm (that
         // is, a Lesk-like algorithm where the word's definitions are compared
@@ -169,15 +185,16 @@ public class Senseval2EnglishLexicalSample
         AnalysisEngineDescription simplifiedLesk = createPrimitiveDescription(
                 WSDAnnotatorContextPOS.class,
                 WSDAnnotatorContextPOS.WSD_METHOD_CONTEXT,
-                simplifiedLeskResource);
+                simplifiedLeskResource,
+                WSDAnnotatorContextPOS.PARAM_MAXIMUM_ITEMS_TO_ATTEMPT,
+                maxItemsToAttempt);
 
         // This AE prints out detailed information on the AEs' sense
         // assignments.
         AnalysisEngineDescription writer = createPrimitiveDescription(
                 EvaluationTableHTML.class,
                 EvaluationTableHTML.PARAM_GOLD_STANDARD_ALGORITHM, answerkey,
-                EvaluationTableHTML.PARAM_OUTPUT_FILE,
-                "/tmp/Senseval2LS.html");
+                EvaluationTableHTML.PARAM_OUTPUT_FILE, "/tmp/Senseval2LS.html");
 
         // This AE compares the sense assignments of the SimplifiedLesk
         // algorithm against the given gold standard (in this case, the answer
@@ -186,21 +203,17 @@ public class Senseval2EnglishLexicalSample
         AnalysisEngineDescription evaluator = createPrimitiveDescription(
                 SingleExactMatchEvaluatorText.class,
                 SingleExactMatchEvaluatorText.PARAM_GOLD_STANDARD_ALGORITHM,
-                answerkey,
-                SingleExactMatchEvaluatorText.PARAM_TEST_ALGORITHM, SimplifiedLesk.class.getName(),
-                SingleExactMatchEvaluatorText.PARAM_BACKOFF_ALGORITHM, MostFrequentSenseBaseline.class.getName()
-                //, SingleExactMatchEvaluator.PARAM_IGNORE_ALL_GOLD, "^[PU]$"
-                );
+                answerkey, SingleExactMatchEvaluatorText.PARAM_TEST_ALGORITHM,
+                SimplifiedLesk.class.getName(),
+                SingleExactMatchEvaluatorText.PARAM_BACKOFF_ALGORITHM,
+                MostFrequentSenseBaseline.class.getName()
+        // , SingleExactMatchEvaluator.PARAM_IGNORE_ALL_GOLD, "^[PU]$"
+        );
 
         // Here we run the pipeline
-        SimplePipeline.runPipeline(reader,
-                answerReader,
-                convertSensevalToSensekey,
-                convertSensekeyToSynset,
-                mfsBaseline,
-                simplifiedLesk,
-                convertLSRtoSynset,
-                writer,
+        SimplePipeline.runPipeline(reader, answerReader,
+                convertSensevalToSensekey, convertSensekeyToSynset,
+                mfsBaseline, simplifiedLesk, convertLSRtoSynset, writer,
                 evaluator);
     }
 

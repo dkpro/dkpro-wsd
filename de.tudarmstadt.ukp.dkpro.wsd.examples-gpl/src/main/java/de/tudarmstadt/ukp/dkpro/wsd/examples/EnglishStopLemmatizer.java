@@ -35,6 +35,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.jcas.JCas;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
+import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordLemmatizer;
 import de.tudarmstadt.ukp.dkpro.core.stopwordremover.StopWordRemover;
 import de.tudarmstadt.ukp.dkpro.core.tokit.BreakIteratorSegmenter;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.tokenization.TokenizationStrategy;
@@ -59,8 +60,7 @@ public class EnglishStopLemmatizer
 		try {
 		lemmatizer = createAggregateDescription(
 				createPrimitiveDescription(BreakIteratorSegmenter.class),
-				// TODO: Replace TreeTagger with a different tagger/lemmatizer
-				//				createPrimitiveDescription(TreeTaggerPosLemmaTT4J.class),
+                createPrimitiveDescription(StanfordLemmatizer.class),
 				createPrimitiveDescription(StopWordRemover.class,
 						StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES,
 						new String[] { "classpath:/stopwords/stoplist_en.txt" }));

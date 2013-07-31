@@ -42,7 +42,9 @@ import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
 
 /**
  * This class illustrates a pipeline which runs a WSD algorithm on the
- * Senseval-2 English all words test data.
+ * Senseval-2 English all words test data. It uses the
+ * {@link WordNetSenseKeySenseInventoryResource} resource to access WordNet via
+ * the extJWNL library.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -54,11 +56,11 @@ public class Senseval2EnglishAllWords
         throws UIMAException, IOException
     {
         // For our corpus and answer key we will use the Senseval-2 English
-        // All Words test data.  You need to obtain this data set from the
-        // Senseval-2 website.  Change the value of the directory variable
+        // all-words test data. You need to obtain this data set from the
+        // Senseval-2 website. Change the value of the directory variable
         // to point to the location on your filesystem where you stored the
         // data set.
-        final String directory= "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-all-words/test/";
+        final String directory = "/home/miller/workspace/de.tudarmstadt.ukp.experiments.tm.wsdcorpora/src/main/resources/senseval-2/english-all-words/test/";
         final String corpus = directory + "eng-all-words.test.xml";
         final String answerkey = directory + "eng-all-words.test.key";
 
@@ -69,11 +71,10 @@ public class Senseval2EnglishAllWords
                 Senseval2AWReader.class, Senseval2AWReader.PARAM_FILE, corpus,
                 Senseval2AWReader.PARAM_IGNORE_MISSING_SATELLITES, true);
 
-
         // This Senseval data set uses an unpublished pre-release version of
-        // WordNet 1.7 as its sense inventory.  This pre-release version is
-        // lost.  Here we use WordNet 1.7 instead, though some of the sense
-        // keys are slightly different.  You need to create an extJWNL
+        // WordNet 1.7 as its sense inventory. This pre-release version is
+        // lost. Here we use WordNet 1.7 instead, though some of the sense
+        // keys are slightly different. You need to create an extJWNL
         // properties file and change the value of the
         // PARAM_WORDNET_PROPERTIES_URL to point to its location on your file
         // system.
@@ -142,7 +143,7 @@ public class Senseval2EnglishAllWords
         // Here we run the pipeline
         SimplePipeline.runPipeline(reader, answerReader,
                 convertSensevalToSensekey, randomBaseline,
-                //writer,
+                // writer,
                 evaluator);
     }
 
