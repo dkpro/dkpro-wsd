@@ -32,7 +32,7 @@ We have split DKPro WSD across two Google Code projects according to the softwar
 
 The Google Code Subversion repository contains [https://code.google.com/p/dkpro-wsd/source/checkout source code for DKPro WSD] and the [https://code.google.com/p/dkpro-wsd-gpl/source/checkout DKPro WSD GPL components].
 
-Maven users can obtain prepackaged artifacts by adding the following repository section to your project:
+If you are a Maven user, you can obtain prepackaged artifacts by adding the following repository section to your project:
 
 {{{
 <repositories>
