@@ -18,7 +18,11 @@ You can also access WordNet through the `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` mo
 
 == !EuroWordNet ==
 
-EuroWordNet (EWN) sense inventories are generally not freely available; they must be purchased from the individual publishers. The `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can read EWN resources, provided they are in Princeton WordNet format.  You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.
+EuroWordNet (EWN) sense inventories are generally not freely available; they must be purchased from the individual publishers. The `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` module can read EWN resources, provided they are in Princeton WordNet format.  You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.
+
+== !WordNet++ ==
+
+[http://lcl.uniroma1.it/wordnetplusplus/ WordNet++] is available for download from its authors.  The `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` module can read the !WordNet++ resource.
 
 == Turk Bootstrap Word Sense Inventory (TWSI) ==
 
