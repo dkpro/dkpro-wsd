@@ -71,6 +71,13 @@
 			<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+			<artifactId>
+				de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity
+			</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
