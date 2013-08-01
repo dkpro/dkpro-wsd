@@ -11,6 +11,10 @@ of the Senseval-3 all-words data published at
 http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor so that they are 
 well-formed XML and conform to the SemCor schema.
 
+semeval1-en-cgaw-test-key.sh - a Bash script which fixes the SemEval-2007
+English coarse-grained all-words answer keys by lowercasing the sense keys to
+match the representations in WordNet 2.1.
+
 senseval2-en-aw-test.patch - a patch file which fixes numerous errors (i.e.,
 heads referencing nonexistent satellite IDs) in the Senseval-2 English 
 all-words test corpus.

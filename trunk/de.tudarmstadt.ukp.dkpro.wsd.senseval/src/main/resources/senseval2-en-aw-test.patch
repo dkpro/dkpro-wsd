@@ -1,5 +1,5 @@
 --- eng-all-words.test.xml	2013-04-11 16:36:16.000000000 +0200
-+++ eng-all-words.test.fixed.xml	2013-07-31 15:24:13.606975505 +0200
++++ eng-all-words.test.xml	2013-07-31 15:24:13.606975505 +0200
 @@ -1,5 +1,16 @@
  <?xml version="1.0"?>
  <!DOCTYPE corpus SYSTEM  "all-words.dtd">
