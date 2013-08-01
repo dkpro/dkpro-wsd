@@ -24,6 +24,10 @@ the Senseval-2 English lexical sample training corpus test key which do not
 exist in WordNet 1.7, or replaces them with senses which do exist in
 WordNet 1.7.
 
+senseval2-en-ls-test-key.patch - a patch file which removes sense keys in
+the Senseval-2 English lexical sample training corpus test key which do not
+exist in WordNet 1.7.
+
 wordnet_senseval.tsv - a mapping of Senseval/SemEval sense keys to WordNet
 sense keys.  This works for all versions of WordNet from 1.7 to 3.0.  This 
 mapping can be applied on the fly using the SenseMapper class; there is no
