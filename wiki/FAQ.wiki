@@ -85,7 +85,7 @@ First, refer to our table of [WSDCorpora WSD corpora] to find out which sense in
 || Wiktionary || `de.tudarmstadt.ukp.dkpro.wsd.si.lsr`, `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
 || WordNet || `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet`, `de.tudarmstadt.ukp.dkpro.wsd.si.lsr`, `de.tudarmstadt.ukp.dkpro.wsd.si.uby` ||
 
-Note that for some sense inventories, you can use various modules, depending on the underlying library you prefer to use.  For example, WordNet can be accessed via `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` (which wraps [http://extjwnl.sourceforge.net/ extJWNL]), `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` (which wraps [https://code.google.com/p/dkpro-lsr/ DKPro LSR]), and `de.tudarmstadt.ukp.dkpro.wsd.si.uby` (which wraps [https://code.google.com/p/uby/ UBY]).  `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can also be used with EuroWordNet (EWN) sense inventories, provided they are in Princeton WordNet format.  (You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.)
+Note that for some sense inventories, you can use various modules, depending on the underlying library you prefer to use. Please refer to our [LSRs list of LSRs] for further details.
 
 === Why am I getting a lot of errors or warnings when reading in the Senseval and !SemEval data sets? ===
 
