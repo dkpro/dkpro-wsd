@@ -44,7 +44,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.Pair;
 
 /**
  * An API for the <a href=
- * "http://nlp.lsi.upc.edu/web/index.php?option=com_content&task=view&id=21&Itemid=57"
+ * "http://www.talp.upc.edu/index.php/technology/resources/multilingual-lexicons-and-machine-translation-resources/multilingual-lexicons/98-wordnet-mappings"
  * >UPC WordNet Mappings</a>
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
