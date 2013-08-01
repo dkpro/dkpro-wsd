@@ -55,7 +55,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualPOS;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public class Senseval2EnglishLexicalSample
+public class Senseval2EnLSExample
 {
 
     public static void main(String[] args)
@@ -89,9 +89,9 @@ public class Senseval2EnglishLexicalSample
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
                 "Senseval2_sensekey");
 
-        // The Senseval2 sense identifiers are actually based on sense keys from
-        // the WordNet 1.7-prerelease, so for ease of interoperability we use
-        // this AE to convert them to WordNet 1.7-prerelease sense keys. We
+        // The Senseval-2 sense identifiers are based on (but subtly different
+        // from) sense keys from the WordNet 1.7-prerelease.  We therefore
+        // use this AE  to convert them to WordNet 1.7-prerelease sense keys. We
         // have a delimited text file providing a mapping between the two
         // sense identifiers, which the SenseMapper annotator reads in and
         // uses to perform the conversion.
@@ -198,7 +198,9 @@ public class Senseval2EnglishLexicalSample
                 answerkey, SingleExactMatchEvaluatorText.PARAM_TEST_ALGORITHM,
                 SimplifiedLesk.class.getName(),
                 SingleExactMatchEvaluatorText.PARAM_BACKOFF_ALGORITHM,
-                MostFrequentSenseBaseline.class.getName());
+                MostFrequentSenseBaseline.class.getName(),
+                SingleExactMatchEvaluatorText.PARAM_MAXIMUM_ITEMS_TO_ATTEMPT,
+                maxItemsToAttempt);
 
         // Here we run the pipeline
         SimplePipeline.runPipeline(reader, answerReader,

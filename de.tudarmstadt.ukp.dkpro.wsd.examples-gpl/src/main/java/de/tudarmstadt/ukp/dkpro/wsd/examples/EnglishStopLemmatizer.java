@@ -42,66 +42,69 @@ import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.tokenization.Tokenizati
 
 /**
  * A TokenizationStrategy for use with the Lesk family of algorithms which
- * lemmatizes and removes stop words from strings.  This class is specific to
+ * lemmatizes and removes stop words from strings. This class is specific to
  * English.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
 public class EnglishStopLemmatizer
-	implements TokenizationStrategy
+    implements TokenizationStrategy
 {
-	private AnalysisEngineDescription lemmatizer;
-	private final Pattern pattern = Pattern.compile("\\w");
-	private AnalysisEngine engine;
+    private AnalysisEngineDescription lemmatizer;
+    private final Pattern pattern = Pattern.compile("\\w");
+    private AnalysisEngine engine;
 
-	public EnglishStopLemmatizer() {
-		// Set up stemmer and lemmatizer
-		try {
-		lemmatizer = createAggregateDescription(
-				createPrimitiveDescription(BreakIteratorSegmenter.class),
-                createPrimitiveDescription(StanfordLemmatizer.class),
-				createPrimitiveDescription(StopWordRemover.class,
-						StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES,
-						new String[] { "classpath:/stopwords/stoplist_en.txt" }));
-		engine = createPrimitive(lemmatizer);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	/**
-	 * Takes a string of words and returns a list of lemmatized forms with
-	 * non-alphabetic and stop words removed
-	 *
-	 * @param text
-	 * @return
-	 * @throws Exception
-	 */
-	@Override
-	public List<String> tokenize(String text)
-	{
-		List<String> lemmas = new ArrayList<String>();
+    public EnglishStopLemmatizer()
+    {
+        // Set up stemmer and lemmatizer
+        try {
+            lemmatizer = createAggregateDescription(
+                    createPrimitiveDescription(BreakIteratorSegmenter.class),
+                    createPrimitiveDescription(StanfordLemmatizer.class),
+                    createPrimitiveDescription(
+                            StopWordRemover.class,
+                            StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES,
+                            new String[] { "classpath:/stopwords/stoplist_en.txt" }));
+            engine = createPrimitive(lemmatizer);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-		JCas jcas = null;
+    /**
+     * Takes a string of words and returns a list of lemmatized forms with
+     * non-alphabetic and stop words removed
+     *
+     * @param text
+     * @return
+     * @throws Exception
+     */
+    @Override
+    public List<String> tokenize(String text)
+    {
+        List<String> lemmas = new ArrayList<String>();
 
-		try {
-			jcas = engine.newJCas();
-			jcas.setDocumentLanguage("en");
-			jcas.setDocumentText(text);
-			engine.process(jcas);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+        JCas jcas = null;
 
-		for (Lemma l : select(jcas, Lemma.class)) {
-			if (pattern.matcher(l.getValue()).find()) {
-				lemmas.add(l.getValue().toLowerCase());
-			}
-		}
+        try {
+            jcas = engine.newJCas();
+            jcas.setDocumentLanguage("en");
+            jcas.setDocumentText(text);
+            engine.process(jcas);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
 
-		return lemmas;
-	}
+        for (Lemma l : select(jcas, Lemma.class)) {
+            if (pattern.matcher(l.getValue()).find()) {
+                lemmas.add(l.getValue().toLowerCase());
+            }
+        }
+
+        return lemmas;
+    }
 
 }

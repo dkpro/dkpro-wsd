@@ -49,7 +49,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public class Senseval2EnglishAllWords
+public class Senseval2EnAWExample
 {
 
     public static void main(String[] args)
@@ -98,9 +98,9 @@ public class Senseval2EnglishAllWords
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
                 sensevalInventoryName);
 
-        // The Senseval2 sense identifiers are actually based on sense keys from
-        // the WordNet 1.7-prerelease, so for ease of interoperability we use
-        // this AE to convert them to WordNet 1.7-prerelease sense keys. We
+        // The Senseval-2 sense identifiers are based on (but subtly different
+        // from) sense keys from the WordNet 1.7-prerelease.  We therefore
+        // use this AE  to convert them to WordNet 1.7-prerelease sense keys. We
         // have a delimited text file providing a mapping between the two
         // sense identifiers, which the SenseMapper annotator reads in and
         // uses to perform the conversion.
