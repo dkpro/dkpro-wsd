@@ -21,7 +21,7 @@
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Korean lexical sample] || ko || LS || yes || Senseval2LS  || custom, DOC || no || no || no ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Spanish lexical sample] || es || LS || yes || Senseval2LS  || custom, text || no || yes || no ||
 || 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Swedish lexical sample] || sv || LS || yes || Senseval2LS  || custom, XML || no || yes || no ||
-|| 2002 || [http://www.cl.ut.ee/korpused/semkorpus/ SemCor] || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes ||
+|| 2002 || [http://nltk.github.com/nltk_data/packages/corpora/semcor.zip SemCor (NLTK's XML conversion)] || en || AW || no || SemCor || WordNet 3.0 || yes || yes || yes ||
 || 2003 || [http://www.cse.unt.edu/~rada/downloads.html#twa TWA] || en || LS || no || custom XML || custom || yes || yes || yes ||
 || 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 01: English all words] || en || AW || no || Senseval2AW || WordNet 1.7.1 || no || no || no ||
 || 2004 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-3 task 01: English all words] || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes ||
