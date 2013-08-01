@@ -107,6 +107,10 @@ Many of the Senseval data sets, as originally distributed by the task organizers
 
 You probably can't.  This version of WordNet was never officially published, but was made available only to the participants.  We contacted both the WordNet maintainers and the Senseval-2 organizers, and neither was able to locate a copy of this version.  A Senseval-2 participant sent us a copy he had archived, but its sense keys turned out to be incompatible with those of the Senseval-2 data sets.  If you must use this data set, then you could use WordNet 1.7, but keep in mind that you will not be able to achieve full accuracy, since some of the sense keys found in the answer key won't exist in the sense inventory.
 
+=== Where can I get a distributional thesaurus for use with the lexically expanded Lesk module? ===
+
+You can get data sets and precomputed models, and instructions for producing your own, from the [http://sourceforge.net/p/jobimtext/wiki/Home/ JobimText Project].
+
 === How can I get help with DKPro WSD? ===
 
 For help with DKPro WSD, please use the [http://groups.google.com/group/dkpro-wsd-users dkpro-wsd-users] mailing list.
