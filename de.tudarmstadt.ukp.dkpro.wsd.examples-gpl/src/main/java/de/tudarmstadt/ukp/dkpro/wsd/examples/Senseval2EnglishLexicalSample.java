@@ -36,7 +36,6 @@ import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.SecondObj
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.overlap.PairedOverlap;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.WordNetSenseKeyToSynset;
-import de.tudarmstadt.ukp.dkpro.wsd.evaluation.EvaluationTableHTML;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.SingleExactMatchEvaluatorText;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
@@ -63,7 +62,7 @@ public class Senseval2EnglishLexicalSample
         throws UIMAException, IOException
     {
         // Set this to a negative value to disambiguate all items in the corpus.
-        final int maxItemsToAttempt = -1;
+        final int maxItemsToAttempt = 50;
 
         // For our corpus and answer key we will use the Senseval-2 English
         // lexical sample training data. You need to obtain this data set from
@@ -74,7 +73,7 @@ public class Senseval2EnglishLexicalSample
         final String corpus = directory + "eng-lex-sample.train.xml";
         final String answerkey = directory + "eng-lex-sample.train.key";
 
-        // A collection reader for the documents to be disambiguated.
+        // This is a collection reader for the documents to be disambiguated.
         CollectionReader reader = createCollectionReader(
                 Senseval2LSReader.class, Senseval2LSReader.PARAM_FILE, corpus);
 
@@ -189,13 +188,6 @@ public class Senseval2EnglishLexicalSample
                 WSDAnnotatorContextPOS.PARAM_MAXIMUM_ITEMS_TO_ATTEMPT,
                 maxItemsToAttempt);
 
-        // This AE prints out detailed information on the AEs' sense
-        // assignments.
-        AnalysisEngineDescription writer = createPrimitiveDescription(
-                EvaluationTableHTML.class,
-                EvaluationTableHTML.PARAM_GOLD_STANDARD_ALGORITHM, answerkey,
-                EvaluationTableHTML.PARAM_OUTPUT_FILE, "/tmp/Senseval2LS.html");
-
         // This AE compares the sense assignments of the SimplifiedLesk
         // algorithm against the given gold standard (in this case, the answer
         // key we read in) and computes and prints out useful statistics, such
@@ -206,15 +198,12 @@ public class Senseval2EnglishLexicalSample
                 answerkey, SingleExactMatchEvaluatorText.PARAM_TEST_ALGORITHM,
                 SimplifiedLesk.class.getName(),
                 SingleExactMatchEvaluatorText.PARAM_BACKOFF_ALGORITHM,
-                MostFrequentSenseBaseline.class.getName()
-        // , SingleExactMatchEvaluator.PARAM_IGNORE_ALL_GOLD, "^[PU]$"
-        );
+                MostFrequentSenseBaseline.class.getName());
 
         // Here we run the pipeline
         SimplePipeline.runPipeline(reader, answerReader,
                 convertSensevalToSensekey, convertSensekeyToSynset,
-                mfsBaseline, simplifiedLesk, convertLSRtoSynset, writer,
-                evaluator);
+                mfsBaseline, simplifiedLesk, convertLSRtoSynset, evaluator);
     }
 
 }
