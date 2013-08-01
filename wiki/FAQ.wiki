@@ -32,25 +32,7 @@ We have split DKPro WSD across two Google Code projects according to the softwar
 
 The Google Code Subversion repository contains [https://code.google.com/p/dkpro-wsd/source/checkout source code for DKPro WSD] and the [https://code.google.com/p/dkpro-wsd-gpl/source/checkout DKPro WSD GPL components].
 
-If you are a Maven user, you can obtain prepackaged artifacts by adding the following repository section to your project:
-
-{{{
-<repositories>
-  <repository>
-    <id>ukp-oss-releases</id>
-    <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
-   </repository>
-</repositories>
-}}}
-
-You can then add individual DKPro WSD artifacts to your POM.  For example:
-{{{
-<dependency>
-    <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-    <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-    <version>0.1.0</version>
-</dependency>
-}}}
+If you are a Maven user, you can obtain prepackaged artifacts.  See our GettingStarted page for details.
 
 === How can I cite DKPro WSD in a paper I'm writing? ===
 
