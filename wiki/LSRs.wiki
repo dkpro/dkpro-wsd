@@ -1,0 +1,53 @@
+#summary Lexical semantic resources
+
+<wiki:toc max_depth="3" />
+
+= Lexical semantic resources =
+
+This page lists the lexical semantic resources (sense inventories) most commonly used for word sense disambiguation experimenst, and includes links to where they can be downloaded.
+
+== !WordNet ==
+
+Versions 1.5 to 3.1 of WordNet can be obtained from the [http://wordnet.princeton.edu/ WordNet home page].
+
+DKPro WSD can automatically convert between versions of WordNet.  In order to use this feature you need to obtain synset mapping files such as the [http://nlp.lsi.upc.edu/web/index.php?option=com_content&task=view&id=21&Itemid=57 WN-Map mappings] from the UPC TALP Research Center.
+
+To access WordNet through the `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` module, you need to prepare an [http://sourceforge.net/apps/trac/extjwnl/wiki/GettingStarted extJWNL properties file] which points to your WordNet installation.
+
+You can also access WordNet through the `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` module (in which case you need to prepare a DKPro LSR `resources.xml` file which points to your WordNet installation) or the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module (in which case you need to produce or [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing WordNet).
+
+== !EuroWordNet ==
+
+EuroWordNet (EWN) sense inventories are generally not freely available; they must be purchased from the individual publishers. The `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` can read EWN resources, provided they are in Princeton WordNet format.  You can use [https://code.google.com/p/jmwnl/ JMWNL] to convert EWN sense inventories to Princeton WordNet format.
+
+== Turk Bootstrap Word Sense Inventory (TWSI) ==
+
+The [http://www.ukp.tu-darmstadt.de/software/twsi-sense-substituter/ TWSI sense inventory] is available for download from its author.
+
+== Wiktionary and Wikipedia ==
+
+Database dumps of Wiktionary and Wikipedia for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` module are available from the [http://dumps.wikimedia.org/ Wikimedia Downloads] page.  Alternatively you can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing Wiktionary and Wikipedia for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+
+== !GermaNet ==
+
+Instuctions for obtaining !GermaNet can be found on the [http://www.sfs.uni-tuebingen.de/lsd/ GermaNet home page].  At present DKPro WSD can access !GermaNet only through the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.  Since !GermaNet is not freely redistributable, you need to produce your own UBY database containing it.
+
+== !FrameNet ==
+
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing !FrameNet for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+
+== !VerbNet ==
+
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing !VerbNet for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+
+== !OmegaWiki ==
+
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing !OmegaWiki for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+
+== !OpenThesaurus ==
+
+You can [http://www.openthesaurus.de/about/download download OpenThesaurus] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.lsr` module.
+
+== UBY ==
+
+[https://code.google.com/p/uby/ UBY] is a network of interlinked lexical resources, including support for English WordNet 3.0, Wiktionary, Wikipedia, FrameNet 1.5, and VerbNet 3.1; the German Wikipedia, Wiktionary, GermaNet 7.0, IMSLex-Subcat; and the multilingual OmegaWiki.  You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing most of these resources.
