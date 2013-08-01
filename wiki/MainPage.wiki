@@ -1,0 +1,7 @@
+#summary DKPro WSD wiki home page
+
+= DKPro WSD user documentation =
+
+  * [GettingStarted Getting started] - system requirements, obtaining DKPro WSD, example code
+  * [WSDCorpora List of WSD corpora] - information on common WSD data sets and where to obtain them
+  * [FAQ Frequently asked questions] - answers to common questions about DKPro WSD
