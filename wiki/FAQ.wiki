@@ -14,9 +14,19 @@ By _modular_ we mean that the framework makes a logical separation between the _
 
 By _extensible_ we mean that it is easy to adapt to work with new methods and resources.  The system is written in Java and is based on [https://uima.apache.org/ Apache UIMA], an industry-standard architecture for analysis of unstructured information.  Support for new corpus formats, sense inventories, and WSD algorithms can be added by implementing new UIMA components for them, or more conveniently by writing UIMA wrappers around existing code.
 
+=== What is DKPro? ===
+
+DKPro is a family of Java- and [https://uima.apache.org/ UIMA]-based toolkits for natural language processing.  These include:
+  * [https://code.google.com/p/dkpro-core-asl/ DKPro Core], a collection of general-purpose NLP components
+  * [https://code.google.com/p/dkpro-similarity-asl/ DKPro Similarity], a framework for text similarity
+  * [https://code.google.com/p/dkpro-lab/ DKPro Lab], a workflow engine for parameter sweeping
+  * [https://code.google.com/p/dkpro-lsr/ DKPro LSR], a unified API for lexical semantic resources
+  * [https://code.google.com/p/dkpro-tc/ DKPro Text Classification], a toolset supporting supervised machine learning on text
+DKPro WSD is a separate product in the DKPro family which provides a unified framework and set of tools geared specifically towards word sense disambiguation.  Many of the modules in DKPro WSD make use of or extend components from DKPro Core and other DKPro toolkits.
+
 === What licence is DKPro WSD released under? ===
 
-The code in the [https://code.google.com/p/dkpro-wsd/ dkpro-wsd project] is licensed under the terms of the [http://www.apache.org/licenses/LICENSE-2.0 Apache Licence 2.0].  The code in the [https://code.google.com/p/dkpro-wsd-gpl/ dkpro-wsd-gpl project] is licensed under the terms of the [https://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3].
+We have split DKPro WSD across two Google Code projects according to the software licence covering the code.  The code in the [https://code.google.com/p/dkpro-wsd/ dkpro-wsd project] is licensed under the terms of the [http://www.apache.org/licenses/LICENSE-2.0 Apache Licence 2.0].  The code in the [https://code.google.com/p/dkpro-wsd-gpl/ dkpro-wsd-gpl project] is licensed under the terms of the [https://www.gnu.org/licenses/gpl.html GNU General Public License, Version 3].
 
 === How do I get DKPro WSD? ===
 
@@ -41,10 +51,6 @@ You can then add individual DKPro WSD artifacts to your POM.  For example:
     <version>0.1.0</version>
 </dependency>
 }}}
-
-=== What is the relationship between DKPro WSD and DKPro Core? ===
-
-[https://code.google.com/p/dkpro-core-asl/ DKPro Core] is a collection of general-purpose software components for natural language processing (NLP) based on the [https://uima.apache.org/ Apache UIMA] framework. DKPro WSD is a separate product in the DKPro family which provides a unified framework and set of tools geared specifically towards word sense disambiguation.  Many of the modules in DKPro WSD make use of or extend DKPro Core components.
 
 === How can I cite DKPro WSD in a paper I'm writing? ===
 
