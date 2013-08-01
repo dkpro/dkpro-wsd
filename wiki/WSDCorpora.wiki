@@ -6,91 +6,91 @@
 
 == Table of WSD corpora ==
 
-|| *Date* || *Corpus* || *Language* || *Style* || *Train* || *Format* || *Inventory* || *POS-tagged* || *Lemmatized* || *Segmented* ||
-|| 1998 || [http://www.itri.brighton.ac.uk/events/senseval/ARCHIVE/index.html Senseval-1 task: English lexical sample] || en || LS || no || Senseval2LS  || HECTOR || ? || ? || ? ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Basque lexical sample] || eu || LS || no || Senseval2LS  || Euskal Hiztegia subset, TEI-SGML || yes || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Czech all words] || cs || AW || no || Senseval2AW || custom, text || no || no || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Dutch all words] || nl || AW || no || Senseval2AW || none || no || no || yes ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English all words] || en || AW || no || Senseval2AW || WordNet 1.7pre || no || no || no ||
-|| 2001 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-2 task: English all words] (Rada Mihalcea's conversion) || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English group lexical sample] || en || LS || yes || Senseval2LS  || WordNet 1.7pre || yes || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English lexical sample] || en || LS || no || Senseval2LS  || WordNet 1.7pre || yes || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Estonian all words] || et || AW || yes || Senseval2AW || Estonian EWN v37 || no || no || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Italian lexical sample] || it || LS || no || Senseval2LS  || Italian EWN || no || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Japanese lexical sample] || ja || LS || yes || Senseval2LS  || custom, XML || no || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Korean lexical sample] || ko || LS || yes || Senseval2LS  || custom, DOC || no || no || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Spanish lexical sample] || es || LS || yes || Senseval2LS  || custom, text || no || yes || no ||
-|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Swedish lexical sample] || sv || LS || yes || Senseval2LS  || custom, XML || no || yes || no ||
-|| 2002 || [http://nltk.github.com/nltk_data/packages/corpora/semcor.zip SemCor] (NLTK's conversion to XML) || en || AW || no || SemCor || WordNet 3.0 || yes || yes || yes ||
-|| 2003 || [http://www.cse.unt.edu/~rada/downloads.html#twa TWA] || en || LS || no || custom XML || custom || yes || yes || yes ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 01: English all words] || en || AW || no || Senseval2AW || WordNet 1.7.1 || no || no || no ||
-|| 2004 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-3 task 01: English all words] (Rada Mihalcea's conversion) || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 02: Italian all words] || it || AW || no || ? || ItalWordNet || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 03: Basque lexical sample] || eu || LS || yes || custom XML || ? || yes || yes || yes ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 04: Catalan lexical sample] || ca || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 05: Chinese lexical sample] || zh || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 06: English lexical sample] || en || LS || yes || Senseval2LS  || WordNet 1.7.1, Wordsmyth || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 07: Italian lexical sample] || it || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 08: Romanian lexical sample] || ro || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 09: Spanish lexical sample] || es || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 10: Automatic subcategorization acquisition] || en || LS || no || ? || WordNet 1.7.1 || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 11: Multilingual lexical sample] || en,hi || LS || yes || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 12: WSD of WordNet glosses] || en || AW || no || ? || ? || ? || ? || ? ||
-|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 13: Semantic Roles] || en || LS || yes || ? || ? || ? || ? || ? ||
-|| 2005 || [http://www.cl.ut.ee/korpused/semkorpus/ Estonian WSD corpus] || et || AW || no || XML, text || Estonian EWN (various versions) || yes || yes || yes ||
-|| 2007 || [http://research.microsoft.com/en-us/um/people/silviu/WebAssistant/TestData/ MSNBC] || en || AW || ? || ? || Wikipedia || no || no || no ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 01: Evaluating WSD on Cross Language Information Retrieval] || en,es || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 02: Evaluating Word Sense Induction and Discrimination Systems] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 04: Classification of Semantic Relations between Nominals] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 05: Multilingual Chinese-English Lexical Sample Task] || en,zh || LS || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 06: Word-Sense Disambiguation of Prepositions] || en || LS || ? || ? || custom, XML || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 07: Coarse-grained English all-words] || en || AW || no || Semeval1AW || WordNet 2.1 || yes || yes || yes ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 08: Metonymy Resolution at Semeval-2007] || en || LS || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 09: Multilevel Semantic Annotation of Catalan and Spanish] || ca,es || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 10: English Lexical Substitution Task for SemEval-2007] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 11: English Lexical Sample Task via English-Chinese Parallel Text] || en || LS || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 12: Turkish Lexical Sample Task] || tr || LS || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 13: Web People Search] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 14: Affective Text] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 15: TempEval: A proposal for Evaluating Time-Event Temporal Relation Identification] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 16: Evaluation of wide coverage knowledge resources] || en || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.1: Coarse-grained English Lexical Sample] || en || LS || yes || ? || OntoNotes (WordNet 1.7, 2.0, 2.1) || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.2: Coarse-grained English Lexical Sample SRL] || en || LS || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.3: English fine-grained all-words] || en || AW || ? || Senseval2AW || WordNet 2.1 || no || no || no ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 18: Arabic Semantic Labeling] || ar || ? || ? || ? || ? || ? || ? || ? ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 19: Frame Semantic Structure Extraction] || en || ? || ? || ? || FrameNet 1.3 || ? || ? || ? ||
-|| 2008 || [http://www.nzdl.org/wikification/docs.html AQUAINT Newswire] || en || AW || no || ? || Wikipedia || no || no || no ||
-|| 2009 || [http://www.ldc.upenn.edu/ TAC_KBP 2009 Newswire] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no ||
-|| 2009 || [http://www.ldc.upenn.edu/ TAC_KBP 2010 Newswire] || en || LS || no || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 01: Coreference Resolution in Multiple Languages] || mul || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 02: Cross-Lingual Lexical Substitution] || mul || LS || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 03: Cross-Lingual Word Sense Disambiguation] || mul || ? || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 04: VP Ellipsis - Detection and Resolution] || ? || ? || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 05: Automatic Keyphrase Extraction from Scientific Articles] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 07: Argument Selection and Coercion] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 08: Multi-Way Classification of Semantic Relations Between Pairs of Nominals] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 09: Noun Compound Interpretation Using Paraphrasing Verbs] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 10: Linking Events and their Participants in Discourse] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 11: Event Detection in Chinese News Sentences] || zh || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 12: Parser Training and Evaluation using Textual Entailment] || ? || ? || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 13: TempEval 2] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 14: Word Sense Induction] || ? || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 15: Infrequent Sense Identification for Mandarin Text to Speech Systems] || zh || ? || ? || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 16: Japanese WSD] || ja || ? || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || en || AW || no || Semeval2AW || WordNet 3.0 (?) || no || no || no ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || it || AW || no || Semeval2AW || ? || no || no || no ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || nl || AW || no || Semeval2AW || ? || no || no || no ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || zh || AW || no || Semeval2AW || ? || no || no || no ||
-|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 18: Disambiguating Sentiment Ambiguous Adjectives] || ? || ? || no || ? || ? || ? || ? || ? ||
-|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2010 Web data] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no ||
-|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2011 Newswire] || en || LS || no || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no ||
-|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2011 Web data] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no ||
-|| 2011 || [http://cogcomp.cs.illinois.edu/Data/WikificationACL2011Data.zip ACE] || en || AW || ? || ? || Wikipedia || no || no || no ||
-|| 2011 || [http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2011T03 OntoNotes 4.0] || en || ? || no || ? || OntoNotes || yes || yes || yes ||
-|| 2011 || [http://www.aclweb.org/anthology-new/P/P11/P11-1095.pdf WikiAmbi] || en || LS || no || ? || Wikipedia || no || no || no ||
-|| 2011 || [http://www.mpi-inf.mpg.de/yago-naga/aida/ Yago_CoNLL] || en || AW || no || AIDA || Wikipedia, DBPedia || no || no || no ||
-|| 2012 || [http://www.anc.org/MASC/ MASC] || en || LS || no || MASC || WordNet 3.1, FrameNet || yes || yes || yes ||
-|| 2013 || [http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml WebCAGe] || de || LS || no || WebCAGe || GermaNet || yes || yes || yes ||
+|| *Date* || *Corpus* || *Language* || *Style* || *Train* || *Format* || *Inventory* || *POS* || *Lemma* || *Sent.* || *Notes* ||
+|| 1998 || [http://www.itri.brighton.ac.uk/events/senseval/ARCHIVE/index.html Senseval-1 task: English lexical sample] || en || LS || no || Senseval2LS  || HECTOR || ? || ? || ? || 1 ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Basque lexical sample] || eu || LS || no || Senseval2LS  || Euskal Hiztegia subset, TEI-SGML || yes || yes || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Czech all words] || cs || AW || no || Senseval2AW || custom, text || no || no || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Dutch all words] || nl || AW || no || Senseval2AW || none || no || no || yes || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English all words] || en || AW || no || Senseval2AW || WordNet 1.7pre || no || no || no || 2 ||
+|| 2001 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-2 task: English all words] (Rada Mihalcea's conversion) || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes || 3 ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English group lexical sample] || en || LS || yes || Senseval2LS  || WordNet 1.7pre || yes || yes || no || 2 ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: English lexical sample] || en || LS || no || Senseval2LS  || WordNet 1.7pre || yes || yes || no || 2, 3 ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Estonian all words] || et || AW || yes || Senseval2AW || Estonian EWN v37 || no || no || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Italian lexical sample] || it || LS || no || Senseval2LS  || Italian EWN || no || yes || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Japanese lexical sample] || ja || LS || yes || Senseval2LS  || custom, XML || no || yes || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Korean lexical sample] || ko || LS || yes || Senseval2LS  || custom, DOC || no || no || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Spanish lexical sample] || es || LS || yes || Senseval2LS  || custom, text || no || yes || no || ||
+|| 2001 || [http://86.188.143.199/senseval2/ Senseval-2 task: Swedish lexical sample] || sv || LS || yes || Senseval2LS  || custom, XML || no || yes || no || ||
+|| 2002 || [http://nltk.github.com/nltk_data/packages/corpora/semcor.zip SemCor] (NLTK's conversion to XML) || en || AW || no || SemCor || WordNet 3.0 || yes || yes || yes || ||
+|| 2003 || [http://www.cse.unt.edu/~rada/downloads.html#twa TWA] || en || LS || no || custom XML || custom || yes || yes || yes || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 01: English all words] || en || AW || no || Senseval2AW || WordNet 1.7.1 || no || no || no || ||
+|| 2004 || [http://www.cse.unt.edu/~rada/downloads.html#sensevalsemcor Senseval-3 task 01: English all words] (Rada Mihalcea's conversion) || en || AW || no || SemCor || WordNet 1.7.1 through 3.0 || yes || yes || yes || 3 ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 02: Italian all words] || it || AW || no || ? || ItalWordNet || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 03: Basque lexical sample] || eu || LS || yes || custom XML || ? || yes || yes || yes || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 04: Catalan lexical sample] || ca || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 05: Chinese lexical sample] || zh || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 06: English lexical sample] || en || LS || yes || Senseval2LS  || WordNet 1.7.1, Wordsmyth || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 07: Italian lexical sample] || it || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 08: Romanian lexical sample] || ro || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 09: Spanish lexical sample] || es || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 10: Automatic subcategorization acquisition] || en || LS || no || ? || WordNet 1.7.1 || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 11: Multilingual lexical sample] || en,hi || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 12: WSD of WordNet glosses] || en || AW || no || ? || ? || ? || ? || ? || ||
+|| 2004 || [http://www.senseval.org/senseval3 Senseval-3 task 13: Semantic Roles] || en || LS || yes || ? || ? || ? || ? || ? || ||
+|| 2005 || [http://www.cl.ut.ee/korpused/semkorpus/ Estonian WSD corpus] || et || AW || no || XML, text || Estonian EWN (various versions) || yes || yes || yes || ||
+|| 2007 || [http://research.microsoft.com/en-us/um/people/silviu/WebAssistant/TestData/ MSNBC] || en || AW || ? || ? || Wikipedia || no || no || no || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 01: Evaluating WSD on Cross Language Information Retrieval] || en,es || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 02: Evaluating Word Sense Induction and Discrimination Systems] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 04: Classification of Semantic Relations between Nominals] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 05: Multilingual Chinese-English Lexical Sample Task] || en,zh || LS || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 06: Word-Sense Disambiguation of Prepositions] || en || LS || ? || ? || custom, XML || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 07: Coarse-grained English all-words] || en || AW || no || Semeval1AW || WordNet 2.1 || yes || yes || yes || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 08: Metonymy Resolution at Semeval-2007] || en || LS || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 09: Multilevel Semantic Annotation of Catalan and Spanish] || ca,es || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 10: English Lexical Substitution Task for SemEval-2007] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 11: English Lexical Sample Task via English-Chinese Parallel Text] || en || LS || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 12: Turkish Lexical Sample Task] || tr || LS || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 13: Web People Search] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 14: Affective Text] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 15: TempEval: A proposal for Evaluating Time-Event Temporal Relation Identification] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 16: Evaluation of wide coverage knowledge resources] || en || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.1: Coarse-grained English Lexical Sample] || en || LS || yes || ? || OntoNotes (WordNet 1.7, 2.0, 2.1) || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.2: Coarse-grained English Lexical Sample SRL] || en || LS || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 17.3: English fine-grained all-words] || en || AW || ? || Senseval2AW || WordNet 2.1 || no || no || no || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 18: Arabic Semantic Labeling] || ar || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 19: Frame Semantic Structure Extraction] || en || ? || ? || ? || FrameNet 1.3 || ? || ? || ? || ||
+|| 2008 || [http://www.nzdl.org/wikification/docs.html AQUAINT Newswire] || en || AW || no || ? || Wikipedia || no || no || no || ||
+|| 2009 || [http://www.ldc.upenn.edu/ TAC_KBP 2009 Newswire] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no || ||
+|| 2009 || [http://www.ldc.upenn.edu/ TAC_KBP 2010 Newswire] || en || LS || no || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 01: Coreference Resolution in Multiple Languages] || mul || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 02: Cross-Lingual Lexical Substitution] || mul || LS || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 03: Cross-Lingual Word Sense Disambiguation] || mul || ? || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 04: VP Ellipsis - Detection and Resolution] || ? || ? || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 05: Automatic Keyphrase Extraction from Scientific Articles] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 07: Argument Selection and Coercion] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 08: Multi-Way Classification of Semantic Relations Between Pairs of Nominals] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 09: Noun Compound Interpretation Using Paraphrasing Verbs] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 10: Linking Events and their Participants in Discourse] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 11: Event Detection in Chinese News Sentences] || zh || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 12: Parser Training and Evaluation using Textual Entailment] || ? || ? || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 13: TempEval 2] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 14: Word Sense Induction] || ? || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 15: Infrequent Sense Identification for Mandarin Text to Speech Systems] || zh || ? || ? || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 16: Japanese WSD] || ja || ? || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || en || AW || no || Semeval2AW || WordNet 3.0 (?) || no || no || no || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || it || AW || no || Semeval2AW || ? || no || no || no || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || nl || AW || no || Semeval2AW || ? || no || no || no || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 17: All-words Word Sense Disambiguation on a Specific Domain] || zh || AW || no || Semeval2AW || ? || no || no || no || ||
+|| 2010 || [http://stel.ub.edu/semeval2010-coref/ Semeval-2 task 18: Disambiguating Sentiment Ambiguous Adjectives] || ? || ? || no || ? || ? || ? || ? || ? || ||
+|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2010 Web data] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no || ||
+|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2011 Newswire] || en || LS || no || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no || ||
+|| 2010 || [http://www.ldc.upenn.edu/ TAC_KBP 2011 Web data] || en || LS || yes || TAC_KBP || TAC_KB (October 2008 Wikipedia) || no || no || no || ||
+|| 2011 || [http://cogcomp.cs.illinois.edu/Data/WikificationACL2011Data.zip ACE] || en || AW || ? || ? || Wikipedia || no || no || no || ||
+|| 2011 || [http://www.ldc.upenn.edu/Catalog/catalogEntry.jsp?catalogId=LDC2011T03 OntoNotes 4.0] || en || ? || no || ? || OntoNotes || yes || yes || yes || ||
+|| 2011 || [http://www.aclweb.org/anthology-new/P/P11/P11-1095.pdf WikiAmbi] || en || LS || no || ? || Wikipedia || no || no || no || ||
+|| 2011 || [http://www.mpi-inf.mpg.de/yago-naga/aida/ Yago_CoNLL] || en || AW || no || AIDA || Wikipedia, DBPedia || no || no || no || ||
+|| 2012 || [http://www.anc.org/MASC/ MASC] || en || LS || no || MASC || WordNet 3.1, FrameNet || yes || yes || yes || ||
+|| 2013 || [http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml WebCAGe] || de || LS || no || WebCAGe || GermaNet || yes || yes || yes || ||
 
 == Legend ==
 
@@ -101,10 +101,12 @@
   * *Train*:	Whether the corpus is split into separate training and test corpora
   * *Format*:	The file format for the data
   * *Inventory*:	Which sense inventory is used to annotate the data
-  * *POS-tagged*:	Whether the corpus has POS annotations
-  * *Lemmatized*:	Whether the corpus has lemma annotations
-  * *Segmented*:	Whether the corpus has sentence annotations
+  * *POS*:	Whether the corpus has POS annotations
+  * *Lemma*:	Whether the corpus has lemma annotations
+  * *Sent.*:	Whether the corpus has sentence annotations
+  * *Notes*:	Notes (see below)
 
 == Notes ==
-  * Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
-  * According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
+  # Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
+  # According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
+  # This data set contains errors (incorrect POS tags, mismatched ID references, invalid XML, etc.).  We provide [https://code.google.com/p/dkpro-wsd/source/browse/#svn%2Ftrunk%2Fde.tudarmstadt.ukp.dkpro.wsd.senseval%2Fsrc%2Fmain%2Fresources patches and conversion scripts] to fix them.
