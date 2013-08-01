@@ -109,4 +109,4 @@
 == Notes ==
   # Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
   # According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
-  # This data set contains errors (incorrect POS tags, mismatched ID references, invalid XML, etc.).  We provide [https://code.google.com/p/dkpro-wsd/source/browse/#svn%2Ftrunk%2Fde.tudarmstadt.ukp.dkpro.wsd.senseval%2Fsrc%2Fmain%2Fresources patches and conversion scripts] to fix them.
+  # These data sets contain errors (incorrect POS tags, mismatched ID references, invalid XML, etc.).  We provide [https://code.google.com/p/dkpro-wsd/source/browse/#svn%2Ftrunk%2Fde.tudarmstadt.ukp.dkpro.wsd.senseval%2Fsrc%2Fmain%2Fresources patches and conversion scripts] to fix them.
