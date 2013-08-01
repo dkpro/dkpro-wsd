@@ -44,7 +44,7 @@
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 04: Classification of Semantic Relations between Nominals] || en || ? || ? || ? || ? || ? || ? || ? || ||
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 05: Multilingual Chinese-English Lexical Sample Task] || en,zh || LS || ? || ? || ? || ? || ? || ? || ||
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 06: Word-Sense Disambiguation of Prepositions] || en || LS || ? || ? || custom, XML || ? || ? || ? || ||
-|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 07: Coarse-grained English all-words] || en || AW || no || Semeval1AW || WordNet 2.1 || yes || yes || yes || ||
+|| 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 07: Coarse-grained English all-words] || en || AW || no || Semeval1AW || WordNet 2.1 || yes || yes || yes || 3 ||
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 08: Metonymy Resolution at Semeval-2007] || en || LS || ? || ? || ? || ? || ? || ? || ||
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 09: Multilevel Semantic Annotation of Catalan and Spanish] || ca,es || ? || ? || ? || ? || ? || ? || ? || ||
 || 2007 || [http://nlp.cs.swarthmore.edu/semeval/ Semeval-1 task 10: English Lexical Substitution Task for SemEval-2007] || en || ? || ? || ? || ? || ? || ? || ? || ||
