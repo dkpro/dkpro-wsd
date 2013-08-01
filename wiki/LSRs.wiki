@@ -1,10 +1,10 @@
 #summary Lexical semantic resources
 
-<wiki:toc max_depth="3" />
-
 = Lexical semantic resources =
 
 This page lists the lexical semantic resources (sense inventories) most commonly used for word sense disambiguation experimenst, and includes links to where they can be downloaded.
+
+<wiki:toc max_depth="3" />
 
 == !WordNet ==
 
@@ -50,4 +50,4 @@ You can [http://www.openthesaurus.de/about/download download OpenThesaurus] for 
 
 == UBY ==
 
-[https://code.google.com/p/uby/ UBY] is a network of interlinked lexical resources, including support for English WordNet 3.0, Wiktionary, Wikipedia, FrameNet 1.5, and VerbNet 3.1; the German Wikipedia, Wiktionary, GermaNet 7.0, IMSLex-Subcat; and the multilingual OmegaWiki.  You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing most of these resources.
+[https://code.google.com/p/uby/ UBY] is a network of interlinked lexical resources, including support for English WordNet 3.0, Wiktionary, Wikipedia, FrameNet 1.5, and VerbNet 3.1; the German Wikipedia, Wiktionary, GermaNet 7.0, and IMSLex-Subcat; and the multilingual OmegaWiki.  You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing most of these resources.
