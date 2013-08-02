@@ -70,17 +70,4 @@ public class WordNetSenseInventoryResourceBase
         return ((WordNetSenseInventoryBase) inventory)
                 .senseKeyToSynsetOffsetAndPos(senseKey);
     }
-
-    /**
-     * Given a WordNet sense key, respond the corresponding synset offset
-     *
-     * @param senseKey
-     * @return
-     */
-    public long getWordNetSynsetOffset(String senseKey)
-    {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
 }
