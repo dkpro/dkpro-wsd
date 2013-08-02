@@ -159,7 +159,6 @@ public class SenseClusterer
 
     private Set<String> mergeSets(Set<Set<String>> sets)
     {
-        /* TODO: pick the largest set to minimize update */
         Iterator<Set<String>> i = sets.iterator();
         Set<String> mergedSet = i.next();
         if (mergedSet == null) {
