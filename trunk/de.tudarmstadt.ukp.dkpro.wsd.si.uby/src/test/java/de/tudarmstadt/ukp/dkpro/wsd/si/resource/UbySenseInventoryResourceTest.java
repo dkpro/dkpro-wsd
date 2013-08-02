@@ -69,11 +69,11 @@ public class UbySenseInventoryResourceTest
         bindResource(desc, Annotator.MODEL_KEY,
                 UbySenseInventoryResource.class,
                 UbySenseInventoryResource.PARAM_UBY_DATABASE_URL,
-                "uby.ukp.informatik.tu-darmstadt.de/uby_release_1_0",
+                "ubyhost/uby_release_1_0",
                 UbySenseInventoryResource.PARAM_UBY_DB_VENDOR, "mysql",
                 UbySenseInventoryResource.PARAM_UBY_JDBC_DRIVER_CLASS,
                 "com.mysql.jdbc.Driver",
-                UbySenseInventoryResource.PARAM_UBY_PASSWORD, "mySQLpass",
+                UbySenseInventoryResource.PARAM_UBY_PASSWORD, "ubyPassword",
                 UbySenseInventoryResource.PARAM_UBY_USER, "miller");
 
         // Check the external resource was injected
