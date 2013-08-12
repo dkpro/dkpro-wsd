@@ -2,7 +2,7 @@
 
 = Lexical semantic resources =
 
-This page lists the lexical semantic resources (sense inventories) most commonly used for word sense disambiguation experimenst, and includes links to where they can be downloaded.
+This page lists the lexical semantic resources (sense inventories) most commonly used for word sense disambiguation experiments, and includes links to where they can be downloaded.
 
 <wiki:toc max_depth="3" />
 
