@@ -38,15 +38,15 @@ Instuctions for obtaining !GermaNet can be found on the [http://www.sfs.uni-tueb
 
 == !FrameNet ==
 
-You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing ![https://framenet.icsi.berkeley.edu/fndrupal/ FrameNet] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing [https://framenet.icsi.berkeley.edu/fndrupal/ FrameNet] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
 
 == !VerbNet ==
 
-You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing ![http://verbs.colorado.edu/~mpalmer/projects/verbnet.html VerbNet] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing [http://verbs.colorado.edu/~mpalmer/projects/verbnet.html VerbNet] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
 
 == !OmegaWiki ==
 
-You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing ![http://www.omegawiki.org/ OmegaWiki] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
+You can [http://uby.ukp.informatik.tu-darmstadt.de/uby/ download a UBY database] containing [http://www.omegawiki.org/ OmegaWiki] for use with the `de.tudarmstadt.ukp.dkpro.wsd.si.uby` module.
 
 == !OpenThesaurus ==
 
