@@ -55,18 +55,7 @@ You can use the following BibTeX entry:
 
 === What corpus readers should I use for the various Senseval, !SemEval, and other WSD data sets? ===
 
-First, refer to our table of [WSDCorpora WSD corpora] to find out which format is used by the data set you are interested in.  DKPro WSD supports many (but not all) of the formats in this table.  Consult the table below to see if DKPro has a reader class for your data set's format:
-
-|| *Format* || *Class* ||
-|| AIDA || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
-|| MASC || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.MASCReader` ||
-|| SemCor || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader` ||
-|| Semeval1AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
-|| Semeval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
-|| Senseval2LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
-|| Senseval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
-|| TAC_KBP || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp.TacKbpOfficialformatReader` ||
-|| WebCAGe || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.WebCAGeXMLReader` ||
+Refer to the two tables on our [WSDCorpora WSD corpora] page.  The first table indicates the file format used by each data set.  The second table lists the formats DKPro WSD can read, along with the relevant reader classes.
 
 === What sense inventories should I use for the various Senseval, !SemEval, and other WSD data sets? ===
 
