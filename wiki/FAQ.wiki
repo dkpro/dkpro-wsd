@@ -38,7 +38,7 @@ If you are a Maven user, you can obtain prepackaged artifacts.  See our GettingS
 
 To reference DKPro WSD please cite the following paper:
 
- Tristan Miller, Nicolai Erbs, Hans-Peter Zorn, Torsten Zesch, and Iryna Gurevych. DKPro WSD: A generalized UIMA-based framework for word sense disambiguation. In _Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (ACL 2013)_, August 2013.
+ Tristan Miller, Nicolai Erbs, Hans-Peter Zorn, Torsten Zesch, and Iryna Gurevych. DKPro WSD: A generalized UIMA-based framework for word sense disambiguation. In _Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (System Demonstrations) (ACL 2013)_, pages 37–42, August 2013.
 
 You can use the following BibTeX entry:
 {{{
