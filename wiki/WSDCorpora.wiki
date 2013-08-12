@@ -92,7 +92,7 @@
 || 2012 || [http://www.anc.org/MASC/ MASC] || en || LS || no || MASC || WordNet 3.1, FrameNet || yes || yes || yes || ||
 || 2013 || [http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml WebCAGe] || de || LS || no || WebCAGe || GermaNet || yes || yes || yes || ||
 
-== Legend ==
+=== Legend ===
 
   * *Date*:	The date the corpus (or the original corpus upon which this version is based) was first published
   * *Corpus*:	The name of the corpus, possibly with a hyperlink to where it can be obtained
@@ -106,7 +106,22 @@
   * *Sent.*:	Whether the corpus has sentence annotations
   * *Notes*:	Notes (see below)
 
-== Notes ==
+=== Notes ===
   # Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
   # According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
   # These data sets contain errors (incorrect POS tags, mismatched ID references, invalid XML, etc.).  We provide [https://code.google.com/p/dkpro-wsd/source/browse/#svn%2Ftrunk%2Fde.tudarmstadt.ukp.dkpro.wsd.senseval%2Fsrc%2Fmain%2Fresources patches and conversion scripts] to fix them.
+
+== Formats supported by DKPro WSD ==
+
+DKPro WSD supports many (but not all) of the formats in the table above.  The table below shows the DKPro WSD reader classes for supported formats:
+
+|| *Format* || *Class* ||
+|| AIDA || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.AidaReader` ||
+|| MASC || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.MASCReader` ||
+|| SemCor || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader` ||
+|| Semeval1AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader` ||
+|| Semeval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval2AWReader` ||
+|| Senseval2LS || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader` ||
+|| Senseval2AW || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader` ||
+|| TAC_KBP || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp.TacKbpOfficialformatReader` ||
+|| WebCAGe || `de.tudarmstadt.ukp.dkpro.wsd.io.reader.WebCAGeXMLReader` ||
