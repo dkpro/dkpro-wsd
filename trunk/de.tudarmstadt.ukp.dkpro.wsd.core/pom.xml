@@ -24,9 +24,9 @@
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-  <name>de.tudarmstadt.ukp.dkpro.wsd.core</name>
+  <name>DKPro WSD - Core</name>
   <version>0.0.1-SNAPSHOT</version>
-  <description>Word Sense Disambiguation Framework</description>
+  <description>Core modules for DKPro WSD</description>
   <dependencies>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>

@@ -35,4 +35,6 @@
   		<scope>test</scope>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD - Senseval</name>
+  <description>DKPro WSD modules for working with Senseval and SemEval data sets</description>
 </project>

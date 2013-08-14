@@ -46,4 +46,6 @@
   	</dependency>
   </dependencies>
   <version>0.0.1-SNAPSHOT</version>
+  <name>DKPro WSD - WordNet</name>
+  <description>DKPro WSD modules for using WordNet as a sense inventory (via extJWNL)</description>
 </project>

@@ -31,4 +31,6 @@
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD - Link database</name>
+  <description>DKPro WSD modules for handling link database sense inventories</description>
 </project>

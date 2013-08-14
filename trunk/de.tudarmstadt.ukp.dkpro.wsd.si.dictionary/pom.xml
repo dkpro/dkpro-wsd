@@ -23,7 +23,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</artifactId>
-  <description>Sense Inventories that are based on dictionaries</description>
+  <description>DKPro WSD sense Inventories based on dictionaries</description>
   <dependencies>
   	<dependency>
   		<groupId>org.apache.commons</groupId>
@@ -36,4 +36,5 @@
   	</dependency>
   </dependencies>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+  <name>DKPro WSD - Dictionary</name>
 </project>

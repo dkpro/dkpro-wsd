@@ -36,4 +36,6 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>DKPro WSD - Testing</name>
+	<description>Data used in JUnit tests by various DKPro WSD modules</description>
 </project>
