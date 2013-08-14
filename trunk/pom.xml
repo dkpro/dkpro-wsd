@@ -25,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-	<version>0.9.0</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<dependencies>
 		<dependency>
@@ -49,19 +49,19 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.io</artifactId>
-				<version>0.9.0</version>
+				<version>0.9.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.testing</artifactId>
-				<version>0.9.0</version>
+				<version>0.9.1-SNAPSHOT</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>0.9.0</version>
+				<version>0.9.1-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -130,9 +130,9 @@
 	<description>DKPro WSD is a UIMA framework for word sense disambiguation. It is designed to complement DKPro Core, a collection of software components for natural language processing (NLP) based on the Apache UIMA framework. </description>
 	<inceptionYear>2013</inceptionYear>
 	<scm>
-		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/tags/de.tudarmstadt.ukp.dkpro.wsd-0.9.0</url>
-		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-0.9.0</connection>
-		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-0.9.0</developerConnection>
+		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/trunk</url>
+		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</developerConnection>
 	</scm>
 	<issueManagement>
 		<system>Google Code</system>

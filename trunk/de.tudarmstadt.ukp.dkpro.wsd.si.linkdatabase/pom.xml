@@ -20,11 +20,11 @@
   <parent>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-    <version>0.9.0</version>
+    <version>0.9.1-SNAPSHOT</version>
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</artifactId>
-  <version>0.9.0</version>
+  <version>0.9.1-SNAPSHOT</version>
   <dependencies>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
