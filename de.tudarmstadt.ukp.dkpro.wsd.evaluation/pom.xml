@@ -43,7 +43,6 @@
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
-  		<version>0.9.1-SNAPSHOT</version>
   		<scope>test</scope>
   	</dependency>
   	<dependency>
