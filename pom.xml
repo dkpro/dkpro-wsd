@@ -16,17 +16,18 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<artifactId>dkpro-parent-pom</artifactId>
 		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 		<version>4</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-  <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -37,8 +38,8 @@
 			<artifactId>uimafit</artifactId>
 		</dependency>
 	</dependencies>
-  <dependencyManagement>
-  	<dependencies>
+	<dependencyManagement>
+		<dependencies>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.core-asl</artifactId>
@@ -63,67 +64,25 @@
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
-			<!-- 
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-tx</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-core</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-asm</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-beans</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-expression</artifactId>
-				<version>3.2.3.RELEASE</version>
-			</dependency>
-			 -->
-  	</dependencies>
-  </dependencyManagement>
-  <modules>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.core</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.io</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.testing</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.evaluation</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.alignment</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.si.uby</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.lesk</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.tackbp</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.senseval</module>
-  </modules>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.core</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.io</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.testing</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.evaluation</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.alignment</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.uby</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.lesk</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.tackbp</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.senseval</module>
+	</modules>
 	<profiles>
 		<profile>
 			<id>rat-check</id>
@@ -180,4 +139,24 @@
 		<system>Google Code</system>
 		<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
 	</issueManagement>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
