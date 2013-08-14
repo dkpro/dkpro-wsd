@@ -16,7 +16,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp;
+package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tackbp;
 
 /**
  * A helper class to represent a document in TAC KBP format as an instance of this class
