@@ -62,4 +62,6 @@
   		<artifactId>dom4j</artifactId>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD - I/O</name>
+  <description>DKPro WSD modules dealing with input and output of data sets</description>
 </project>

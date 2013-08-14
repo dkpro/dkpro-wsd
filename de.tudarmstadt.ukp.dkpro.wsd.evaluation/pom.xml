@@ -54,4 +54,6 @@
   		<scope>test</scope>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD - Evaluation</name>
+  <description>DKPro WSD modules for evaluating disambiguation results</description>
 </project>

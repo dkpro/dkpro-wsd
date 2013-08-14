@@ -25,7 +25,7 @@
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <description>Link based wsd algorithms with Wikipedia</description>
+  <description>DKPro WSD modules for link-based WSD algorithms using Wikipedia</description>
   <dependencies>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -70,4 +70,5 @@
   		<scope>test</scope>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD - Link-based Wikipedia</name>
 </project>

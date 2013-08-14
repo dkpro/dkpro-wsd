@@ -51,4 +51,6 @@
   		</dependency>
   	</dependencies>
   </dependencyManagement>
+  <name>DKPro WSD - UBY</name>
+  <description>DKPro WSD modules for using UBY as a sense inventory</description>
 </project>
