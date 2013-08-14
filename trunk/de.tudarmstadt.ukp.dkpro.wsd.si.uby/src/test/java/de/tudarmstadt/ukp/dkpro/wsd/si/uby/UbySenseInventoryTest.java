@@ -38,6 +38,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
+@Ignore
 public class UbySenseInventoryTest
 {
     private static UbySenseInventory si;
