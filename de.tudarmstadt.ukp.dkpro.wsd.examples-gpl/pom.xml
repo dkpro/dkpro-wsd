@@ -92,4 +92,6 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<name>DKPro WSD GPL - Examples</name>
+	<description>Example code for DKPro WSD</description>
 </project>

@@ -100,4 +100,6 @@
 			<version>3.1</version>
 		</dependency>
 	</dependencies>
+	<name>DKPro WSD GPL - IMS</name>
+	<description>DKPro WSD modules for the It Makes Sense (IMS) disambiguation system</description>
 </project>

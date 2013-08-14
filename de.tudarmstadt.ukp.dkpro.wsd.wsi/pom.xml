@@ -80,6 +80,6 @@
 			<version>1.0.0</version>
 		</dependency>
   </dependencies>
-  <name>DKPro WSD Word Sense Induction</name>
-  <description>DKPro WSD WSI contains modules supporting Word Sense Induction evaluation tasks.</description>
+  <name>DKPro WSD GPL - WSI</name>
+  <description>DKPro WSD modules supporting word sense induction evaluation tasks.</description>
 </project>

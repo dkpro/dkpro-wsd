@@ -38,4 +38,6 @@
   		<version>1.0.0</version>
   	</dependency>
   </dependencies>
+  <name>DKPro WSD GPL - TWSI</name>
+  <description>DKPro WSD modules for the Turk Bootstrap Word Sense Inventory</description>
 </project>
