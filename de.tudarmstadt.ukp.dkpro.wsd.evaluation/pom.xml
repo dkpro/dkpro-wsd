@@ -37,13 +37,6 @@
   		<scope>test</scope>
   	</dependency>
   	<dependency>
-  		<groupId>de.tudarmstadt.ukp.dkpro.lab</groupId>
-  		<artifactId>
-  			de.tudarmstadt.ukp.dkpro.lab.uima.engine.simple
-  		</artifactId>
-  		<version>0.8.0-SNAPSHOT</version>
-  	</dependency>
-  	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   	</dependency>
@@ -52,6 +45,13 @@
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>de.tudarmstadt.ukp.dkpro.lab</groupId>
+  		<artifactId>
+  			de.tudarmstadt.ukp.dkpro.lab.uima.engine.simple
+  		</artifactId>
+  		<version>0.9.1</version>
   	</dependency>
   </dependencies>
   <name>DKPro WSD - Evaluation</name>
