@@ -32,7 +32,6 @@
   	<module>de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi-gpl</module>
   	<module>de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl</module>
   	<module>de.tudarmstadt.ukp.dkpro.wsd.examples-gpl</module>
-  	<module>de.tudarmstadt.ukp.dkpro.wsd.wsi</module>
   </modules>
   <dependencyManagement>
   	<dependencies>
