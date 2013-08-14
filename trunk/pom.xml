@@ -48,7 +48,72 @@
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.alignment</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.evaluation</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.io</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.lesk</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.uby</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.tackbp</artifactId>
 				<version>0.9.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
@@ -57,11 +122,6 @@
 				<version>0.9.1-SNAPSHOT</version>
 				<type>jar</type>
 				<scope>compile</scope>
-			</dependency>
-			<dependency>
-				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
