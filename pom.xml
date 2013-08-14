@@ -57,4 +57,23 @@
   	<system>Google Code</system>
   	<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
   </issueManagement>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
