@@ -1,0 +1,16 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.SynSemArgMap" table="SynSemArgMap" node="SynSemArgMap" dynamic-insert="true">
+    <id column="synSemArgMapId" type="int">
+           <generator class="increment"/>
+    </id>    
+    <many-to-one name="syntacticArgument" class="de.tudarmstadt.ukp.lmf.model.syntax.SyntacticArgument" column="syntacticArgumentId"
+    	 node="@syntacticArgument" foreign-key="none" not-found="ignore"/>
+    <many-to-one name="semanticArgument" class="de.tudarmstadt.ukp.lmf.model.semantics.SemanticArgument" column="semanticArgumentId" 
+    	 node="@semanticArgument" foreign-key="none" not-found="ignore" />
+    
+</class>
+
+</hibernate-mapping>

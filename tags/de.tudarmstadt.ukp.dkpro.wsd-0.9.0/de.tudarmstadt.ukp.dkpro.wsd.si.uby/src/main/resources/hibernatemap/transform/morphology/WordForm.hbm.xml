@@ -1,0 +1,57 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping> 	
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.WordForm" table="WordForm" node="WordForm" dynamic-insert="true">
+	<id column="wordFormId" type="long">
+           <generator class="increment"/>
+    </id>     
+   <list name="formRepresentations" node=".">
+          <key column="wordFormId" on-delete="cascade"/>
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation"
+          		entity-name="FormRepresentation_WordForm" node="FormRepresentation"/>
+    </list> 
+    <list name="frequencies" node=".">
+          <key column="wordFormId" on-delete="cascade"/>
+          <index column="idx"/>            
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.Frequency" node="Frequency"/>
+    </list>     
+    
+    <property name="grammaticalNumber" column="grammaticalNumber" node="@grammaticalNumber">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EGrammaticalNumber</param>         	
+      	</type>
+  	</property>  	
+  	
+  	<property name="grammaticalGender" column="grammaticalGender" node="@grammaticalGender">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EGrammaticalGender</param>         	
+      	</type>
+  	</property>  	
+  	
+  	<property name="case" column="_case" node="@case">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ECase</param>         	
+      	</type>
+  	</property>  	
+  	
+  	 <property name="person" column="person" node="@person">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EPerson</param>         	
+      	</type>
+  	</property>  	
+  	
+  	    <property name="tense" column="tense" node="@tense">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ETense</param>         	
+      	</type>
+  	</property>  	
+  	
+  	<property name="verbFormMood" column="verbFormMood" node="@verbFormMood">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EVerbFormMood</param>         	
+      	</type>
+  	</property>
+</class>
+</hibernate-mapping>

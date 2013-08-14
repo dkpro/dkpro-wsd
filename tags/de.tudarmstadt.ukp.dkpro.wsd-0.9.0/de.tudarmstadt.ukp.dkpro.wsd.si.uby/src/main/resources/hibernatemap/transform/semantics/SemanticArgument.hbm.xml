@@ -1,0 +1,44 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.SemanticArgument" table="SemanticArgument" node="SemanticArgument" dynamic-insert="true">
+   <id name="id" column="semanticArgumentId" node="@id" type="string"/>
+  
+     <property name="semanticRole" column="semanticRole" node="@semanticRole" type="string"></property>
+
+    <property name="coreType" column="coreType" node="@coreType"> 
+        <type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ECoreType</param>         	
+      	</type>
+  	</property> 
+  	
+  	<list name="semanticLabels"  node=".">
+          <key column="semanticArgumentId" on-delete="cascade"/>
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.SemanticLabel" 
+          node="SemanticLabel"/>
+    </list>  
+  		
+  	
+	 <list name="argumentRelations"  node=".">
+          <key column="semanticArgumentId" on-delete="cascade"/>
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.semantics.ArgumentRelation" node="ArgumentRelation"/>
+    </list>  
+        
+    <list name="definitions"  node=".">
+          <key column="semanticArgumentId" on-delete="cascade"/>
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.Definition" node="Definition"/>
+    </list>  
+    
+    <list name="frequencies" node=".">
+         <key column="semanticArgumentId" on-delete="cascade"/>
+         <index column="idx"/>
+         <one-to-many class="de.tudarmstadt.ukp.lmf.model.meta.Frequency" node="Frequency"/>
+     </list>   
+    
+</class>
+
+</hibernate-mapping>

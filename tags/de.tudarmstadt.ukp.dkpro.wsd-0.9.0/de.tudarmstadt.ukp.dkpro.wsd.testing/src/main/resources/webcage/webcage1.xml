@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  <!DOCTYPE corpus SYSTEM "webcage.dtd">   -->
+<corpus lang="de">
+<text id="verben_abbrechen_20127" src="https://de.wikipedia.org/wiki/Escape-Taste" title="Escape-Taste">
+Der Ladevorgang einer Internetseite kann in verschiedenen Webbrowsern mit der Escape-Taste unterbrochen werden. In den meisten Dialogfenstern von Windows-Anwendungen entspricht das Drücken der Escape-Taste einem Klick auf die Schaltfläche „<head id="1" luids="l83332" lemma="abbrechen" pos="v">Abbrechen</head>“. Ein Druck auf die Escape-Taste <head id="2" luids="l83332" lemma="abbrechen" pos="v">bricht</head> auch eine bereits begonnene Eingabe in einem Textfeld <sat id="2">ab</sat> und stellt den Ursprungszustand wieder her.
+</text>
+<text id="verben_zocken_2" src="http://www.monde-diplomatique.de/pm/2007/10/12.mondeText.artikel,a0047.idx,17">
+Im Augenblick sind vierzehn Kasinos 24 Stunden am Tag geöffnet, zu Lande oder auf dem Meer, in denen Spielergruppen - weitaus leiser, als man vermuten möchte - ohne Unterbrechung in fensterlosen Sälen unter gleißendem Neonlicht <head id="2" luids="l79948" lemma="zocken" pos="v">zocken</head>.
+</text>
+</corpus>

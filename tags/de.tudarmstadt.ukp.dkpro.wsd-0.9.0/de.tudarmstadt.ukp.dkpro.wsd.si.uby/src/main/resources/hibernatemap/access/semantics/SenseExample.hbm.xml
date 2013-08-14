@@ -1,0 +1,24 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+<class name="de.tudarmstadt.ukp.lmf.model.semantics.SenseExample" table="SenseExample" node="SenseExample" dynamic-insert="true">
+    <id name="id" column="senseExampleId" node="@id" type="string"/>
+
+	<property name="exampleType" column="exampleType" node="@exampleType">    
+	   	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+	       	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.EExampleType</param>         	
+	   	</type>
+	</property>	
+	
+   <list name="textRepresentations" node=".">
+          <key column="senseExampleId" />
+          <index column="idx"/>            
+          <one-to-many class="de.tudarmstadt.ukp.lmf.model.core.TextRepresentation" 
+          		entity-name="TextRepresentation_SenseExample" node="TextRepresentation"/>
+    </list>  
+    
+    	
+</class>
+
+</hibernate-mapping>

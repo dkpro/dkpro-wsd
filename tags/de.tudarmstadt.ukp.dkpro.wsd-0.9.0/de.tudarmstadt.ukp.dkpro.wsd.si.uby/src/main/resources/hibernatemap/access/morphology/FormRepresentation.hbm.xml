@@ -1,0 +1,87 @@
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>  
+
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation" entity-name="FormRepresentation_Lemma" 
+	table="FormRepresentation_Lemma" node="FormRepresentation" dynamic-insert="true">
+    <id column="formRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="writtenForm" column="writtenForm" node="@writtenForm" type="string" length="500" index="writtenFormIdx"/>
+	
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>	
+  	
+  	<property name="phoneticForm" column="phoneticForm" node="@phoneticForm" type="string"/>	       	
+	<property name="sound" column="sound" node="@sound" type="string"/>
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="hyphenation" column="hyphenation" node="@hyphenation" type="string"/>
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation" entity-name="FormRepresentation_WordForm" 
+	table="FormRepresentation_WordForm" node="FormRepresentation" dynamic-insert="true">
+    <id column="formRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="writtenForm" column="writtenForm" node="@writtenForm" type="string" length="500" index="writtenFormIdx"/>
+	
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>	
+  	
+  	<property name="phoneticForm" column="phoneticForm" node="@phoneticForm" type="string"/>	       	
+	<property name="sound" column="sound" node="@sound" type="string"/>
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="hyphenation" column="hyphenation" node="@hyphenation" type="string"/>
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation" entity-name="FormRepresentation_RelatedForm" 
+	table="FormRepresentation_RelatedForm" node="FormRepresentation" dynamic-insert="true">
+    <id column="formRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="writtenForm" column="writtenForm" node="@writtenForm" type="string" length="500" index="writtenFormIdx"/>
+	
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>	
+  	
+  	<property name="phoneticForm" column="phoneticForm" node="@phoneticForm" type="string"/>	       	
+	<property name="sound" column="sound" node="@sound" type="string"/>
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="hyphenation" column="hyphenation" node="@hyphenation" type="string"/>
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>
+</class>
+
+<class name="de.tudarmstadt.ukp.lmf.model.morphology.FormRepresentation" entity-name="FormRepresentation_SenseRelation" 
+	table="FormRepresentation_SenseRelation" node="FormRepresentation" dynamic-insert="true">
+    <id column="formRepresentationId" type="long">
+           <generator class="increment"/>
+    </id>
+	<property name="writtenForm" column="writtenForm" node="@writtenForm" type="string" length="500" index="writtenFormIdx"/>
+	
+	<property name="languageIdentifier" column="languageIdentifier" node="@languageIdentifier">    
+    	<type name="de.tudarmstadt.ukp.lmf.hibernate.EnumUserType">
+         	<param name="enumClassName">de.tudarmstadt.ukp.lmf.model.enums.ELanguageIdentifier</param>         	
+      	</type>
+  	</property>	
+  	
+  	<property name="phoneticForm" column="phoneticForm" node="@phoneticForm" type="string"/>	       	
+	<property name="sound" column="sound" node="@sound" type="string"/>
+	<property name="geographicalVariant" column="geographicalVariant" node="@geographicalVariant" type="string"/>
+	<property name="hyphenation" column="hyphenation" node="@hyphenation" type="string"/>
+	<property name="orthographyName" column="orthographyName" node="@orthographyName" type="string"/>
+</class>
+
+
+</hibernate-mapping>

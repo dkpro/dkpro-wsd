@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<!--
+The lexical sample tasks senseval is a word sense disambiguation task
+for particular (preselected) lexical items.
+
+Answers to a lexical sample task may be provided as a table of 
+INSTANCEID, SENSEID pairs, where INSTANCEID refers to the value
+of each "id" attribute of each "instance" element in documents 
+conforming to this dtd.  Additionally, answers may be embedded 
+in this document in order to distribute "gold standard" corpora or 
+to facilitate software processing of all the relevant data.
+ -->
+
+<!-- a corpus is divided up by lexical item and is associated
+     with a language (should maybe use isoXXX character set encodings) -->
+
+<!ELEMENT corpus (lexelt+)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!ELEMENT lexelt (instance+)>
+
+<!ATTLIST lexelt item CDATA #REQUIRED
+                 pos  (n | v | a | unk) 'unk'>
+
+
+<!--  
+Instances must denote exactly one head element, which may have satellites in
+the case of (discontinuous) multi word expressions.  Answers will be associated
+with the instances by the instances 'id' attribute.
+
+The docsrc and topic attributes may be used to help track and index the source
+of the data used for senseval.
+-->
+
+<!ELEMENT instance (answer*, context)>
+
+<!ATTLIST instance
+          id  ID #REQUIRED
+          docsrc CDATA #IMPLIED
+          topic  CDATA #IMPLIED>
+
+<!-- an answer has an explicit reference to the associated instance
+     it must specify the instance by referring to it's id -->
+
+<!ELEMENT answer EMPTY>
+<!ATTLIST answer 
+          instance IDREF #REQUIRED  
+          senseid  CDATA #IMPLIED>
+
+<!ELEMENT context (#PCDATA | head | sat)*>
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head 
+   sats IDREFS #IMPLIED>
+
+<!ELEMENT sat (#PCDATA)>
+<!ATTLIST sat 
+          id ID #REQUIRED>
+
+
+<!-- <!ENTITY entities SYSTEM "/home/ak28/BNC/SGML/bncents_no_comments.dtd">
+&entities; -->
+
+
+<!ENTITY ast "[ast]">
+<!ENTITY equals "[equals]">
+<!ENTITY percnt "[percnt]">
+<!ENTITY plus "[plus]">
+<!ENTITY sol "[sol]">
+<!ENTITY half "[half]">
+<!ENTITY horbar "[horbar]">
+<!ENTITY lowbar "[lowbar]">
+<!ENTITY dash "[dash]">
+<!ENTITY Aacute "[Aacute]">
+<!ENTITY aacute "[aacute]">
+<!ENTITY abreve "[abreve]">
+<!ENTITY Acirc "[Acirc]">
+<!ENTITY acirc "[acirc]">
+<!ENTITY acute "[acute]">
+<!ENTITY AElig "[AElig]">
+<!ENTITY aelig "[aelig]">
+<!ENTITY agr "[agr]">
+<!ENTITY Agrave "[Agrave]">
+<!ENTITY agrave "[agrave]">
+<!ENTITY Amacr "[Amacr]">
+<!ENTITY amacr "[amacr]">
+<!ENTITY ape "[ape]">
+<!ENTITY aogon "[aogon]">
+<!ENTITY Aring "[Aring]">
+<!ENTITY aring "[aring]">
+<!ENTITY atilde "[atilde]">
+<!ENTITY Auml "[Auml]">
+<!ENTITY auml "[auml]">
+<!ENTITY Bgr "[Bgr]">
+<!ENTITY bgr "[bgr]">
+<!ENTITY bquo "[bquo]">
+<!ENTITY bsol "[bsol]">
+<!ENTITY bull "[bull]">
+<!ENTITY cacute "[cacute]">
+<!ENTITY Ccaron "[Ccaron]">
+<!ENTITY ccaron "[ccaron]">
+<!ENTITY Ccedil "[Ccedil]">
+<!ENTITY ccedil "[ccedil]">
+<!ENTITY ccirc "[ccirc]">
+<!ENTITY cent "[cent]">
+<!ENTITY check "[check]">
+<!ENTITY cir "[cir]">
+<!ENTITY circ "[circ]">
+<!ENTITY commat "[commat]">
+<!ENTITY copy "[copy]">
+<!ENTITY darr "[darr]">
+<!ENTITY dcaron "[dcaron]">
+<!ENTITY deg "[deg]">
+<!ENTITY Dgr "[Dgr]">
+<!ENTITY dgr "[dgr]">
+<!ENTITY die "[die]">
+<!ENTITY divide "[divide]">
+<!ENTITY dollar "[dollar]">
+<!ENTITY dstrok "[dstrok]">
+<!ENTITY dtrif "[dtrif]">
+<!ENTITY Eacute "[Eacute]">
+<!ENTITY eacute "[eacute]">
+<!ENTITY Ecaron "[Ecaron]">
+<!ENTITY ecaron "[ecaron]">
+<!ENTITY Ecirc "[Ecirc]">
+<!ENTITY ecirc "[ecirc]">
+<!ENTITY eegr "[eegr]">
+<!ENTITY Egr "[Egr]">
+<!ENTITY egr "[egr]">
+<!ENTITY Egrave "[Egrave]">
+<!ENTITY egrave "[egrave]">
+<!ENTITY Emacr "[Emacr]">
+<!ENTITY emacr "[emacr]">
+<!ENTITY eogon "[eogon]">
+<!ENTITY equo "[equo]">
+<!ENTITY eth "[eth]">
+<!ENTITY Euml "[Euml]">
+<!ENTITY euml "[euml]">
+<!ENTITY flat "[flat]">
+<!ENTITY formula "[formula]">
+<!ENTITY frac12 "[frac12]">
+<!ENTITY frac13 "[frac13]">
+<!ENTITY frac14 "[frac14]">
+<!ENTITY frac15 "[frac15]">
+<!ENTITY frac16 "[frac16]">
+<!ENTITY frac17 "[frac17]">
+<!ENTITY frac18 "[frac18]">
+<!ENTITY frac19 "[frac19]">
+<!ENTITY frac23 "[frac23]">
+<!ENTITY frac25 "[frac25]">
+<!ENTITY frac34 "[frac34]">
+<!ENTITY frac35 "[frac35]">
+<!ENTITY frac38 "[frac38]">
+<!ENTITY frac45 "[frac45]">
+<!ENTITY frac47 "[frac47]">
+<!ENTITY frac56 "[frac56]">
+<!ENTITY frac58 "[frac58]">
+<!ENTITY frac78 "[frac78]">
+<!ENTITY ft "[ft]">
+<!ENTITY ge "[ge]">
+<!ENTITY Ggr "[Ggr]">
+<!ENTITY ggr "[ggr]">
+<!ENTITY grave "[grave]">
+<!ENTITY Gt "[Gt]">
+<!ENTITY hearts "[hearts]">
+<!ENTITY hellip "[hellip]">
+<!ENTITY hstrok "[hstrok]">
+<!ENTITY Iacute "[Iacute]">
+<!ENTITY iacute "[iacute]">
+<!ENTITY Icirc "[Icirc]">
+<!ENTITY icirc "[icirc]">
+<!ENTITY iexcl "[iexcl]">
+<!ENTITY igr "[igr]">
+<!ENTITY igrave "[igrave]">
+<!ENTITY imacr "[imacr]">
+<!ENTITY infin "[infin]">
+<!ENTITY ins "[ins]">
+<!ENTITY iquest "[iquest]">
+<!ENTITY Iuml "[Iuml]">
+<!ENTITY iuml "[iuml]">
+<!ENTITY kgr "[kgr]">
+<!ENTITY khgr "[khgr]">
+<!ENTITY Lacute "[Lacute]">
+<!ENTITY lacute "[lacute]">
+<!ENTITY larr "[larr]">
+<!ENTITY lcub "[lcub]">
+<!ENTITY le "[le]">
+<!ENTITY lgr "[lgr]">
+<!ENTITY lsqb "[lsqb]">
+<!ENTITY Lstrok "[Lstrok]">
+<!ENTITY lstrok "[lstrok]">
+<!ENTITY Lt "[Lt]">
+<!ENTITY mdash "[mdash]">
+<!ENTITY Mgr "[Mgr]">
+<!ENTITY mgr "[mgr]">
+<!ENTITY micro "[micro]">
+<!ENTITY middot "[middot]">
+<!ENTITY nacute "[nacute]">
+<!ENTITY natur "[natur]">
+<!ENTITY ncaron "[ncaron]">
+<!ENTITY ncedil "[ncedil]">
+<!ENTITY ndash "[ndash]">
+<!ENTITY ngr "[ngr]">
+<!ENTITY Ntilde "[Ntilde]">
+<!ENTITY ntilde "[ntilde]">
+<!ENTITY num "[num]">
+<!ENTITY Oacute "[Oacute]">
+<!ENTITY oacute "[oacute]">
+<!ENTITY Ocirc "[Ocirc]">
+<!ENTITY ocirc "[ocirc]">
+<!ENTITY OElig "[OElig]">
+<!ENTITY oelig "[oelig]">
+<!ENTITY Ogr "[Ogr]">
+<!ENTITY ogr "[ogr]">
+<!ENTITY ograve "[ograve]">
+<!ENTITY OHgr "[OHgr]">
+<!ENTITY ohgr "[ohgr]">
+<!ENTITY ohm "[ohm]">
+<!ENTITY omacr "[omacr]">
+<!ENTITY Oslash "[Oslash]">
+<!ENTITY oslash "[oslash]">
+<!ENTITY Otilde "[Otilde]">
+<!ENTITY otilde "[otilde]">
+<!ENTITY Ouml "[Ouml]">
+<!ENTITY ouml "[ouml]">
+<!ENTITY Pgr "[Pgr]">
+<!ENTITY pgr "[pgr]">
+<!ENTITY PHgr "[PHgr]">
+<!ENTITY phgr "[phgr]">
+<!ENTITY plusmn "[plusmn]">
+<!ENTITY pound "[pound]">
+<!ENTITY Prime "[Prime]">
+<!ENTITY prime "[prime]">
+<!ENTITY PSgr "[PSgr]">
+<!ENTITY psgr "[psgr]">
+<!ENTITY racute "[racute]">
+<!ENTITY radic "[radic]">
+<!ENTITY rarr "[rarr]">
+<!ENTITY Rcaron "[Rcaron]">
+<!ENTITY rcaron "[rcaron]">
+<!ENTITY rcub "[rcub]">
+<!ENTITY reg "[reg]">
+<!ENTITY rehy "[rehy]">
+<!ENTITY rgr "[rgr]">
+<!ENTITY rsqb "[rsqb]">
+<!ENTITY Sacute "[Sacute]">
+<!ENTITY sacute "[sacute]">
+<!ENTITY Scaron "[Scaron]">
+<!ENTITY scaron "[scaron]">
+<!ENTITY Scedil "[Scedil]">
+<!ENTITY scedil "[scedil]">
+<!ENTITY scirc "[scirc]">
+<!ENTITY sect "[sect]">
+<!ENTITY Sgr "[Sgr]">
+<!ENTITY sgr "[sgr]">
+<!ENTITY sharp "[sharp]">
+<!ENTITY sim "[sim]">
+<!ENTITY shilling "[shilling]">
+<!ENTITY sup1 "[sup1]">
+<!ENTITY sup2 "[sup2]">
+<!ENTITY sup3 "[sup3]">
+<!ENTITY szlig "[szlig]">
+<!ENTITY tcaron "[tcaron]">
+<!ENTITY tcedil "[tcedil]">
+<!ENTITY tgr "[tgr]">
+<!ENTITY THgr "[THgr]">
+<!ENTITY thgr "[thgr]">
+<!ENTITY THORN "[THORN]">
+<!ENTITY thorn "[thorn]">
+<!ENTITY tilde "[tilde]">
+<!ENTITY times "[times]">
+<!ENTITY trade "[trade]">
+<!ENTITY Uacute "[Uacute]">
+<!ENTITY uacute "[uacute]">
+<!ENTITY Ucirc "[Ucirc]">
+<!ENTITY ucirc "[ucirc]">
+<!ENTITY Ugr "[Ugr]">
+<!ENTITY ugr "[ugr]">
+<!ENTITY ugrave "[ugrave]">
+<!ENTITY umacr "[umacr]">
+<!ENTITY uml "[uml]">
+<!ENTITY uring "[uring]">
+<!ENTITY Uuml "[Uuml]">
+<!ENTITY uuml "[uuml]">
+<!ENTITY verbar "[verbar]">
+<!ENTITY wcirc "[wcirc]">
+<!ENTITY xgr "[xgr]">
+<!ENTITY yacute "[yacute]">
+<!ENTITY Ycirc "[Ycirc]">
+<!ENTITY ycirc "[ycirc]">
+<!ENTITY yen "[yen]">
+<!ENTITY Yuml "[Yuml]">
+<!ENTITY yuml "[yuml]">
+<!ENTITY zacute "[zacute]">
+<!ENTITY Zcaron "[Zcaron]">
+<!ENTITY zcaron "[zcaron]">
+<!ENTITY zdot "[zdot]">
+<!ENTITY Zgr "[Zgr]">
+<!ENTITY zgr "[zgr]">
+

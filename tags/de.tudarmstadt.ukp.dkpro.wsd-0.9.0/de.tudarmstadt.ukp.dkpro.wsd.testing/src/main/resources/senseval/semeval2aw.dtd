@@ -1,0 +1,99 @@
+<!--
+	Document definition for an all-words task for senseval. Draft version
+	20001209.
+
+        The answers to a given all words document can be provided
+        in a simple table of TEXTID, SENSEID pairs, where TEXTIDs
+        refer to the id attribute of "head" elements.
+
+        Answers may also be embedded in the document for the purpose
+        of distributing "gold standard" corpora or for faciliating
+        software processing of all the relevant data.
+
+CHANGES: 20100130 for Semeval 2010 task #17
+         - added sentence boundaries 
+         - added components to encode lemmas inside a compound
+           (only used for Dutch for the time being) 
+-->
+
+<!ENTITY agrave "`">
+<!ENTITY bsol "\">
+<!ENTITY circ "^">
+<!ENTITY dollar "$">
+<!ENTITY lowbar "_">
+<!ENTITY lsqb "[">
+<!ENTITY percnt "&#37;">
+<!ENTITY rsqb "]">
+<!ENTITY verbar "|">
+
+
+<!ELEMENT corpus (descr?,text+,answer*)>
+<!ATTLIST corpus lang CDATA #REQUIRED>
+
+<!-- 
+	"descr" is a place to add arbitrary meta info such as where the 
+     	data came from, who collected it, etc.  It is an optional item.
+ -->
+<!ELEMENT descr (#PCDATA)>
+
+<!-- Each corpus contains a set of texts. Each text has sentences to
+	be marked up. Each sentence has lexical items to be marked up.
+	In general, lexical items will be single continuous words.
+	However, in some cases, the lexical item may be discontinous
+	and phrasal, in which case we'd like to accurately denote the
+	text that is associated with a sense tag.  We do this with an
+	optional satellite tag.
+
+   The docsrc and topic attributes are optional and may be used to
+   help track and or index senseval data with respect to its origins. 
+ -->
+
+<!ELEMENT text (s)*>
+<!ATTLIST text
+          id ID #REQUIRED
+	  docsrc CDATA #IMPLIED
+	  topic CDATA #IMPLIED>
+
+
+<!ELEMENT s (#PCDATA | head | sat | components)*>
+
+
+<!--
+
+components refer to components of compounds.
+They are encoded as a set of "head" elements
+which are associated to a single compound.
+
+ -->
+
+
+<!ELEMENT components (head*)>
+
+<!--
+
+heads are elements with which sense tags are associated.  They
+require a unique id, and may be associated with satellites.
+ -->
+
+<!ELEMENT head (#PCDATA)>
+<!ATTLIST head 
+   id ID  #REQUIRED
+   sats IDREFS #IMPLIED
+   lemma  CDATA #IMPLIED>
+
+<!ELEMENT sat (#PCDATA)>
+<!ATTLIST sat 
+          id ID #REQUIRED>
+
+<!-- 
+an answer has an explicit reference to it's associated head word 
+via the "head" attribute.  senseids may be left blank for distributing
+fill in the blank corpora or for answers which mean "don't know". 
+
+More than one answer may be specified per head ID.
+-->
+<!ELEMENT answer EMPTY>
+<!ATTLIST answer 
+          head IDREF #REQUIRED  
+          senseid  CDATA #IMPLIED>
+
