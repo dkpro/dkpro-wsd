@@ -16,7 +16,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp;
+package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tackbp;
 
 import java.io.File;
 import java.io.IOException;

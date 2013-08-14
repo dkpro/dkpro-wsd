@@ -16,7 +16,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tacKbp;
+package de.tudarmstadt.ukp.dkpro.wsd.io.reader.tackbp;
 
 
 
@@ -25,6 +25,8 @@ import java.io.File;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import de.tudarmstadt.ukp.dkpro.wsd.io.reader.tackbp.TacKbpOfficialFormatReader;
 
 import static junit.framework.Assert.*;
 
