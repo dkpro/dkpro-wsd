@@ -60,11 +60,6 @@
 			<artifactId>icu4j</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>de.tudarmstadt.ukp.dkpro.lab</groupId>
-			<artifactId>de.tudarmstadt.ukp.dkpro.lab.core</artifactId>
-			<version>0.6.0</version>
-		</dependency>
-		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 			<artifactId>
 				de.tudarmstadt.ukp.dkpro.wsd.evaluation
