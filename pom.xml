@@ -118,6 +118,11 @@
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.wsi</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.testing</artifactId>
 				<version>0.9.1-SNAPSHOT</version>
 				<type>jar</type>
@@ -141,6 +146,7 @@
 		<module>de.tudarmstadt.ukp.dkpro.wsd.lesk</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.tackbp</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.senseval</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.wsi</module>
 	</modules>
 	<profiles>
 		<profile>
