@@ -3,9 +3,9 @@
   <parent>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.9.1-SNAPSHOT</version>
   </parent>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd.wsi</groupId>
+  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.wsi</artifactId>
   <dependencies>
   	<dependency>
@@ -80,6 +80,7 @@
 			<version>1.0.0</version>
 		</dependency>
   </dependencies>
-  <name>DKPro WSD Word Sense Induction</name>
+  <name>DKPro WSD - Word Sense Induction</name>
   <description>DKPro WSD WSI contains modules supporting Word Sense Induction evaluation tasks.</description>
+  <version>0.9.1-SNAPSHOT</version>
 </project>
