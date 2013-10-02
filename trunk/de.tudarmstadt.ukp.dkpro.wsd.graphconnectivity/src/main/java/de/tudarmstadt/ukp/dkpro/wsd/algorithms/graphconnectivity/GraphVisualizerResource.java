@@ -26,8 +26,8 @@ import java.util.Map;
 import org.apache.commons.collections15.Transformer;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.uimafit.component.Resource_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.component.Resource_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
 import edu.uci.ics.jung.graph.Graph;
