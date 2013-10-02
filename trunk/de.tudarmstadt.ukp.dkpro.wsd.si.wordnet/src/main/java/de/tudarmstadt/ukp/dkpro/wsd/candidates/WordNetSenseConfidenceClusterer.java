@@ -21,7 +21,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.candidates;
 import java.io.IOException;
 
 import org.apache.commons.collections15.Transformer;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
