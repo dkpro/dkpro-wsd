@@ -22,9 +22,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi.resource;
 
 import java.util.Map;
 
+import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.uimafit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.twsi.TwsiSenseInventory;
@@ -56,7 +56,7 @@ public class TwsiWsdDisambiguatorResource
     }
 
     @Override
-    public void afterResourcesInitialized()
+    public void afterResourcesInitialized() throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
 

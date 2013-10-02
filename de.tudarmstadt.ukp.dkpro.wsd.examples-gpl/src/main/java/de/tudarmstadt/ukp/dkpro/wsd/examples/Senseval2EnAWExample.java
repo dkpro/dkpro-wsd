@@ -20,9 +20,9 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.examples;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
-import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
+import static org.apache.uima.fit.factory.ExternalResourceFactory.createExternalResourceDescription;
 
 import java.io.IOException;
 
@@ -30,7 +30,7 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ExternalResourceDescription;
-import org.uimafit.pipeline.SimplePipeline;
+import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.RandomSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
@@ -69,7 +69,7 @@ public class Senseval2EnAWExample
         // This is a collection reader for the documents to be disambiguated.
         // The original corpus contains errors so we instruct the collection
         // reader to ignore them.
-        CollectionReader reader = createCollectionReader(
+        CollectionReader reader = createReader(
                 Senseval2AWReader.class, Senseval2AWReader.PARAM_FILE, corpus,
                 Senseval2AWReader.PARAM_IGNORE_MISSING_SATELLITES, true);
 
@@ -94,7 +94,7 @@ public class Senseval2EnAWExample
         // In this case, the keys use sense identifiers which are specific
         // to the Senseval task, so we give it a unique ID.
         final String sensevalInventoryName = "Senseval2_sensekey";
-        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+        AnalysisEngineDescription answerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
@@ -106,7 +106,7 @@ public class Senseval2EnAWExample
         // have a delimited text file providing a mapping between the two
         // sense identifiers, which the SenseMapper annotator reads in and
         // uses to perform the conversion.
-        AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
+        AnalysisEngineDescription convertSensevalToSensekey = createEngineDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
                 "classpath:/wordnet_senseval.tsv",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
@@ -123,7 +123,7 @@ public class Senseval2EnAWExample
                 wordnet1_7, WSDResourceIndividualBasic.DISAMBIGUATION_METHOD,
                 RandomSenseBaseline.class.getName());
 
-        AnalysisEngineDescription randomBaseline = createPrimitiveDescription(
+        AnalysisEngineDescription randomBaseline = createEngineDescription(
                 WSDAnnotatorIndividualBasic.class,
                 WSDAnnotatorIndividualBasic.WSD_ALGORITHM_RESOURCE,
                 randomBaselineResource);
@@ -131,13 +131,13 @@ public class Senseval2EnAWExample
         // This AE prints out detailed information on the AEs' sense
         // assignments. It's excluded from the pipeline by default as it
         // produces quite a lot of output.
-        AnalysisEngineDescription writer = createPrimitiveDescription(WSDWriter.class);
+        AnalysisEngineDescription writer = createEngineDescription(WSDWriter.class);
 
         // This AE compares the sense assignments of all algorithms against
         // the given gold standard (in this case, the answer key we read in)
         // and computes and prints out useful statistics, such as precision,
         // recall, and coverage.
-        AnalysisEngineDescription evaluator = createPrimitiveDescription(
+        AnalysisEngineDescription evaluator = createEngineDescription(
                 MultipleExactMatchEvaluator.class,
                 MultipleExactMatchEvaluator.PARAM_GOLD_STANDARD_ALGORITHM,
                 answerkey);

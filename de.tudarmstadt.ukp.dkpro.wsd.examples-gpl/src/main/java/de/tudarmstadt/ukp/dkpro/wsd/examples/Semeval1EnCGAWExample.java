@@ -20,9 +20,9 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.examples;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
-import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
+import static org.apache.uima.fit.factory.ExternalResourceFactory.createExternalResourceDescription;
 
 import java.io.IOException;
 
@@ -30,7 +30,7 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ExternalResourceDescription;
-import org.uimafit.pipeline.SimplePipeline;
+import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
@@ -76,7 +76,7 @@ public class Semeval1EnCGAWExample
         final String answerkey = directory + "key/dataset21.test.key";
 
         // A reader for the SemEval-2007 English coarse-grained all-words corpus
-        CollectionReader reader = createCollectionReader(
+        CollectionReader reader = createReader(
                 Semeval1AWReader.class, Semeval1AWReader.PARAM_FILE, corpus);
 
         // A resource for WordNet 2.1. You need to create an extJWNL properties
@@ -92,7 +92,7 @@ public class Semeval1EnCGAWExample
 
         // A reader for the gold standard answer key
         final String semEvalInventoryName = "SemEval1_sensekey";
-        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+        AnalysisEngineDescription answerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
@@ -104,7 +104,7 @@ public class Semeval1EnCGAWExample
         // file providing a mapping between the two sense identifiers, which
         // the SenseMapper annotator reads in and uses to perform the
         // conversion.
-        AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
+        AnalysisEngineDescription convertSensevalToSensekey = createEngineDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
                 "classpath:/wordnet_senseval.tsv",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
@@ -133,7 +133,7 @@ public class Semeval1EnCGAWExample
         // Lesk resource to it, and specify some further parameters, such as
         // how much text to pass it (in this case, a sentence) and how to
         // post-process the disambiguation confidence scores
-        AnalysisEngineDescription simplifiedLesk = createPrimitiveDescription(
+        AnalysisEngineDescription simplifiedLesk = createEngineDescription(
                 WSDAnnotatorContextPOS.class,
                 WSDAnnotatorContextPOS.WSD_METHOD_CONTEXT,
                 simplifiedLeskResource,
@@ -152,7 +152,7 @@ public class Semeval1EnCGAWExample
                 MostFrequentSenseBaseline.class.getName());
 
         // Create an annotator for the MFS baseline
-        AnalysisEngineDescription mfsBaseline = createPrimitiveDescription(
+        AnalysisEngineDescription mfsBaseline = createEngineDescription(
                 WSDAnnotatorIndividualPOS.class,
                 WSDAnnotatorIndividualPOS.WSD_ALGORITHM_RESOURCE,
                 mfsBaselineResource,
@@ -162,7 +162,7 @@ public class Semeval1EnCGAWExample
         // Output the raw sense assignments to HTML.  You should change the
         // value of the PARAM_OUTPUT_FILE configuration parameter to point to
         // some writable location on your filesystem.
-        AnalysisEngineDescription writer = createPrimitiveDescription(
+        AnalysisEngineDescription writer = createEngineDescription(
                 EvaluationTableHTML.class,
                 EvaluationTableHTML.PARAM_GOLD_STANDARD_ALGORITHM, answerkey,
                 EvaluationTableHTML.PARAM_OUTPUT_FILE,
@@ -175,7 +175,7 @@ public class Semeval1EnCGAWExample
         // output them to HTML. You should change the
         // value of the PARAM_OUTPUT_FILE configuration parameter to point to
         // some writable location on your filesystem.
-        AnalysisEngineDescription evaluator = createPrimitiveDescription(
+        AnalysisEngineDescription evaluator = createEngineDescription(
                 SingleExactMatchEvaluatorHTML.class,
                 SingleExactMatchEvaluatorHTML.PARAM_GOLD_STANDARD_ALGORITHM,
                 answerkey, SingleExactMatchEvaluatorHTML.PARAM_TEST_ALGORITHM,

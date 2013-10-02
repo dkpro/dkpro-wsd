@@ -20,9 +20,9 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.examples;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
-import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
+import static org.apache.uima.fit.factory.ExternalResourceFactory.createExternalResourceDescription;
 
 import java.io.IOException;
 
@@ -30,7 +30,7 @@ import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ExternalResourceDescription;
-import org.uimafit.pipeline.SimplePipeline;
+import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedLesk;
@@ -76,7 +76,7 @@ public class Senseval2EnLSExample
         final String answerkey = directory + "eng-lex-sample.train.key";
 
         // This is a collection reader for the documents to be disambiguated.
-        CollectionReader reader = createCollectionReader(
+        CollectionReader reader = createReader(
                 Senseval2LSReader.class, Senseval2LSReader.PARAM_FILE, corpus);
 
         // This AE reads the Senseval-2 answer key. Because the Senseval
@@ -85,7 +85,7 @@ public class Senseval2EnLSExample
         // Senseval uses an identifier scheme which is similar to (but not the
         // same as) WordNet sense keys, so let's call it "Senseval2_sensekey".
         final String sensevalInventoryName = "Senseval2_sensekey";
-        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+        AnalysisEngineDescription answerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, answerkey,
                 SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY,
@@ -98,7 +98,7 @@ public class Senseval2EnLSExample
         // sense identifiers, which the SenseMapper annotator reads in and
         // uses to perform the conversion.
         final String wordnet17SenseKeyInventoryName = "WordNet_1.7pre_sensekey";
-        AnalysisEngineDescription convertSensevalToSensekey = createPrimitiveDescription(
+        AnalysisEngineDescription convertSensevalToSensekey = createEngineDescription(
                 SenseMapper.class, SenseMapper.PARAM_FILE,
                 "classpath:/wordnet_senseval.tsv",
                 SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
@@ -127,7 +127,7 @@ public class Senseval2EnLSExample
         // PARAM_INDEX_SENSE_FILE to point to the location of the WordNet
         // index.sense file on your file system.
         final String wordnet17SynsetInventoryName = "WordNet_1.7pre_synset";
-        AnalysisEngineDescription convertSensekeyToSynset = createPrimitiveDescription(
+        AnalysisEngineDescription convertSensekeyToSynset = createEngineDescription(
                 WordNetSenseKeyToSynset.class,
                 WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
                 "/home/miller/share/WordNet/WordNet-1.7/dict/index.sense",
@@ -140,7 +140,7 @@ public class Senseval2EnLSExample
         // The sense identifiers returned by JLSR are also proprietary, so we
         // use this AE to convert them to strings comprised of the
         // WordNet 1.7-prerelease synset offset plus part of speech.
-        AnalysisEngineDescription convertLSRtoSynset = createPrimitiveDescription(
+        AnalysisEngineDescription convertLSRtoSynset = createEngineDescription(
                 LsrToWordNetSynsetOffset.class,
                 LsrToWordNetSynsetOffset.PARAM_SOURCE_SENSE_INVENTORY_NAME,
                 "WordNet_3.0_LSR",
@@ -157,7 +157,7 @@ public class Senseval2EnLSExample
 
         // And here we create an analysis engine, and bind to it the
         // most frequent sense baseline resource.
-        AnalysisEngineDescription mfsBaseline = createPrimitiveDescription(
+        AnalysisEngineDescription mfsBaseline = createEngineDescription(
                 WSDAnnotatorIndividualPOS.class,
                 WSDAnnotatorIndividualPOS.WSD_ALGORITHM_RESOURCE,
                 mfsBaselineResource,
@@ -183,7 +183,7 @@ public class Senseval2EnLSExample
                 EnglishStopLemmatizer.class.getName());
 
         // Next we create the analysis engine for the Lesk algorithm
-        AnalysisEngineDescription simplifiedLesk = createPrimitiveDescription(
+        AnalysisEngineDescription simplifiedLesk = createEngineDescription(
                 WSDAnnotatorContextPOS.class,
                 WSDAnnotatorContextPOS.WSD_METHOD_CONTEXT,
                 simplifiedLeskResource,
@@ -194,7 +194,7 @@ public class Senseval2EnLSExample
         // algorithm against the given gold standard (in this case, the answer
         // key we read in) and computes and prints out useful statistics, such
         // as precision, recall, and coverage.
-        AnalysisEngineDescription evaluator = createPrimitiveDescription(
+        AnalysisEngineDescription evaluator = createEngineDescription(
                 SingleExactMatchEvaluatorText.class,
                 SingleExactMatchEvaluatorText.PARAM_GOLD_STANDARD_ALGORITHM,
                 answerkey, SingleExactMatchEvaluatorText.PARAM_TEST_ALGORITHM,

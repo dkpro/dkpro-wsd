@@ -22,9 +22,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.resource;
 
 import java.util.Map;
 
+import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.uimafit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
@@ -51,7 +51,7 @@ public class ImsWsdDisambiguatorResource
 	}
 
 	@Override
-	public void afterResourcesInitialized()
+	public void afterResourcesInitialized() throws ResourceInitializationException
 	{
 		super.afterResourcesInitialized();
 

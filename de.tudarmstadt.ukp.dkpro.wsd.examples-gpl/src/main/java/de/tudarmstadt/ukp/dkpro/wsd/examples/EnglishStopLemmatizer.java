@@ -23,10 +23,10 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.examples;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createAggregateDescription;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitive;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.util.JCasUtil.select;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.util.JCasUtil.select;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,14 +61,14 @@ public class EnglishStopLemmatizer
     {
         // Set up stemmer and lemmatizer
         try {
-            lemmatizer = createAggregateDescription(
-                    createPrimitiveDescription(BreakIteratorSegmenter.class),
-                    createPrimitiveDescription(StanfordLemmatizer.class),
-                    createPrimitiveDescription(
+            lemmatizer = createEngineDescription(
+                    createEngineDescription(BreakIteratorSegmenter.class),
+                    createEngineDescription(StanfordLemmatizer.class),
+                    createEngineDescription(
                             StopWordRemover.class,
                             StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES,
                             new String[] { "classpath:/stopwords/stoplist_en.txt" }));
-            engine = createPrimitive(lemmatizer);
+            engine = createEngine(lemmatizer);
         }
         catch (Exception e) {
             e.printStackTrace();
