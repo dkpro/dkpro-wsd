@@ -23,8 +23,8 @@ import java.util.Collection;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.cas.FSArray;
-import org.uimafit.descriptor.ConfigurationParameter;
-import org.uimafit.util.JCasUtil;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
