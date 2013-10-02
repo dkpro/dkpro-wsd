@@ -21,8 +21,8 @@ package de.tudarmstadt.ukp.dkpro.wsd.io.writer;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
-import org.uimafit.component.JCasConsumer_ImplBase;
-import org.uimafit.util.JCasUtil;
+import org.apache.uima.fit.component.JCasConsumer_ImplBase;
+import org.apache.uima.fit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
