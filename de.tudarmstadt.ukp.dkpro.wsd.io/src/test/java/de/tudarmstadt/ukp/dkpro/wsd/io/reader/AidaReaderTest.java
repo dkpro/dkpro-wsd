@@ -18,8 +18,10 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.reader;
 
-import static org.junit.Assert.*;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,10 +29,10 @@ import java.util.List;
 
 import org.apache.uima.UIMAException;
 import org.apache.uima.collection.CollectionReader;
+import org.apache.uima.fit.pipeline.JCasIterator;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.junit.Test;
-import org.uimafit.pipeline.JCasIterable;
-import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
@@ -40,25 +42,25 @@ public class AidaReaderTest {
 
 	@Test
 	public void aidaReaderTest() throws UIMAException, IOException {
-		CollectionReader reader = createCollectionReader(
+		CollectionReader reader = createReader(
                 AidaReader.class,
                 AidaReader.PARAM_INPUT_PATH, "src/test/resources/aida_test.tsv");
 
-		JCasIterable jCasIterable = new JCasIterable(reader);
+        JCasIterator i = new JCasIterator(reader);
 
-		assertTrue(jCasIterable.hasNext());
-		JCas jCas = jCasIterable.next();
+		assertTrue(i.hasNext());
+		JCas jCas = i.next();
 		testJCas(jCas,0);
 
-		assertTrue(jCasIterable.hasNext());
-		jCas = jCasIterable.next();
+		assertTrue(i.hasNext());
+		jCas = i.next();
 		testJCas(jCas,1);
 
-		assertTrue(jCasIterable.hasNext());
-		jCas = jCasIterable.next();
+		assertTrue(i.hasNext());
+		jCas = i.next();
 		testJCas(jCas,2);
-		
-		assertFalse(jCasIterable.hasNext());
+
+		assertFalse(i.hasNext());
 
 	}
 
@@ -67,10 +69,10 @@ public class AidaReaderTest {
 		docIds.add("1_EU");
 		docIds.add("2_Rare");
 		docIds.add("3_China");
-		
+
 		assertEquals("src/test/resources/aida_test.tsv", DocumentMetaData.get(jCas).getCollectionId());
 		assertTrue(docIds.contains(DocumentMetaData.get(jCas).getDocumentId()));
-		
+
 		if(i==0){
 			String euStart = "EU rejects German call to boycott British lamb . \nPeter Blackburn \nBRUSSELS 1996-08-22 \nThe Europ";
 			assertTrue(jCas.getDocumentText().startsWith(euStart));
@@ -79,7 +81,7 @@ public class AidaReaderTest {
 		for(WSDItem wsdItem : JCasUtil.select(jCas, WSDItem.class)){
 			assertEquals(wsdItem.getSubjectOfDisambiguation().replaceAll(" ", ""), wsdItem.getCoveredText().replaceAll(" ", ""));
 		}
-		
-		
+
+
 	}
 }
