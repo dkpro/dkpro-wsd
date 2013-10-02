@@ -22,7 +22,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmCollectiveSequentialBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
@@ -57,7 +58,7 @@ public class WSDResourceCollectiveSequentialBasic
     }
 
     @Override
-    public void afterResourcesInitialized()
+    public void afterResourcesInitialized() throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
         ((WSDAlgorithmCollectiveSequentialBasic) wsdAlgorithm)
