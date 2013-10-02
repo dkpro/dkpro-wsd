@@ -1,4 +1,4 @@
-/*******************************************************************************
+/**
  * Copyright 2013
  * Ubiquitous Knowledge Processing (UKP) Lab
  * Technische Universität Darmstadt
@@ -15,9 +15,7 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- *
- ******************************************************************************/
-
+ */
 package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims;
 
 import java.io.File;
