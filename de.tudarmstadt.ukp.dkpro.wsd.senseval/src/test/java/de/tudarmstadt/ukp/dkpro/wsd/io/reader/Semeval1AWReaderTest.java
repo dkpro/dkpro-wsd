@@ -18,17 +18,17 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.reader;
 
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
 import org.apache.uima.collection.CollectionReader;
+import org.apache.uima.fit.pipeline.JCasIterator;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.junit.Test;
-import org.uimafit.pipeline.JCasIterable;
-import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
@@ -44,12 +44,12 @@ public class Semeval1AWReaderTest
 		Sentence s;
 		WSDItem w;
 		LexicalItemConstituent c;
-		CollectionReader reader = createCollectionReader(
+		CollectionReader reader = createReader(
                 Semeval1AWReader.class,
                 Semeval1AWReader.PARAM_FILE, "classpath:/senseval/semeval1aw.xml"
                 );
 
-		JCasIterable i = new JCasIterable(reader);
+		JCasIterator i = new JCasIterator(reader);
 		assertTrue(i.hasNext());
 		JCas j = i.next();
 		assertEquals(" Eggs looked like food . ", j.getDocumentText());

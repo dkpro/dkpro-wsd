@@ -18,19 +18,19 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.reader;
 
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
 import org.apache.uima.collection.CollectionReader;
+import org.apache.uima.fit.pipeline.JCasIterator;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.junit.Test;
-import org.uimafit.pipeline.JCasIterable;
-import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.type.LexicalItemConstituent;
@@ -45,12 +45,12 @@ public class Semeval2AWReaderTest
 		Sentence s;
 		WSDItem w;
 		LexicalItemConstituent c;
-		CollectionReader reader = createCollectionReader(
+		CollectionReader reader = createReader(
                 Semeval2AWReader.class,
                 Semeval2AWReader.PARAM_FILE, "classpath:/senseval/semeval2aw.xml"
                 );
-		
-		JCasIterable i = new JCasIterable(reader);
+
+		JCasIterator i = new JCasIterator(reader);
 		assertTrue(i.hasNext());
 		JCas j = i.next();
 		assertEquals(" Eggs looked up like food . ", j.getDocumentText());
@@ -66,7 +66,7 @@ public class Semeval2AWReaderTest
 		assertEquals("en1.s001.t3", w.getId());
 		assertEquals("look up", w.getSubjectOfDisambiguation());
 		assertNull(w.getPos());
-		
+
 		FSArray constituents = w.getConstituents();
 		assertNotNull(constituents);
 		assertEquals(2, w.getConstituents().size());
@@ -87,7 +87,7 @@ public class Semeval2AWReaderTest
 		assertNotNull(c.getConstituentType());
 		assertEquals("food", c.getCoveredText());
 		assertEquals("en1.s001.t6", c.getId());
-		
+
 		assertTrue(i.hasNext());
 		j = i.next();
 		assertEquals(" Hello .  He is good . ", j.getDocumentText());

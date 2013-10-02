@@ -18,15 +18,15 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.writer;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 
 import java.io.File;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.junit.Test;
-import org.uimafit.pipeline.SimplePipeline;
+import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
@@ -39,15 +39,15 @@ public class SensevalAnswerKeyWriterTest
     {
         File temp = File.createTempFile("SensevalAnswerKeyWriterTest", ".key");
 
-        CollectionReader reader = createCollectionReader(
+        CollectionReader reader = createReader(
                 Senseval2LSReader.class,
                 Senseval2LSReader.PARAM_FILE, "classpath:/senseval/senseval2ls.xml"
                 );
-        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+        AnalysisEngineDescription answerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls.key"
         );
-        AnalysisEngineDescription answerWriter = createPrimitiveDescription(
+        AnalysisEngineDescription answerWriter = createEngineDescription(
                 SensevalAnswerKeyWriter.class,
                 SensevalAnswerKeyWriter.PARAM_INCLUDE_CONFIDENCE_VALUES, true,
                 SensevalAnswerKeyWriter.PARAM_REPLACE_APOSTROPHES, false,
