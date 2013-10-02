@@ -18,13 +18,13 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.evaluation;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
 import org.junit.Test;
-import org.uimafit.pipeline.SimplePipeline;
+import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
@@ -39,19 +39,19 @@ public class ExactMatchEvaluatorTest
     throws Exception
 	{
 
-		CollectionReader reader = createCollectionReader(
+		CollectionReader reader = createReader(
                 Senseval2LSReader.class,
                 Senseval2LSReader.PARAM_FILE, "classpath:/senseval/senseval2ls.xml"
                 );
-        AnalysisEngineDescription goldAnswerReader = createPrimitiveDescription(
+        AnalysisEngineDescription goldAnswerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls.key"
         );
-        AnalysisEngineDescription testAnswerReader = createPrimitiveDescription(
+        AnalysisEngineDescription testAnswerReader = createEngineDescription(
                 SensevalAnswerKeyReader.class,
                 SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls_test.key"
         );
-        AnalysisEngineDescription exactMatchEvaluator = createPrimitiveDescription(
+        AnalysisEngineDescription exactMatchEvaluator = createEngineDescription(
                 MultipleExactMatchEvaluator.class,
                 MultipleExactMatchEvaluator.PARAM_GOLD_STANDARD_ALGORITHM, "classpath:/senseval/senseval2ls.key"
         );
