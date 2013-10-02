@@ -21,7 +21,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.resource;
 import java.util.Collection;
 import java.util.Map;
 
-import org.uimafit.component.Resource_ImplBase;
+import org.apache.uima.fit.component.Resource_ImplBase;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmCollectiveBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
