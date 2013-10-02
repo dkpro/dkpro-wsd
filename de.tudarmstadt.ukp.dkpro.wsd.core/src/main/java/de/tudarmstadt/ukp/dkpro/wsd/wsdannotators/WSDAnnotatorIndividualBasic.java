@@ -23,7 +23,7 @@ import java.util.Map;
 import org.apache.uima.UimaContext;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmIndividualBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
