@@ -19,7 +19,8 @@
 package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
 import org.apache.log4j.Logger;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithm;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
@@ -44,6 +45,7 @@ public class WSDResourceBasic
     @SuppressWarnings("unchecked")
     @Override
     public void afterResourcesInitialized()
+        throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
 
@@ -61,7 +63,7 @@ public class WSDResourceBasic
             catch (Exception e) {
                 logger.error("Can't instantiate method " + disambiguationMethod);
                 e.printStackTrace();
-                throw new IllegalStateException(e);
+                throw new ResourceInitializationException(e);
             }
         }
     }
