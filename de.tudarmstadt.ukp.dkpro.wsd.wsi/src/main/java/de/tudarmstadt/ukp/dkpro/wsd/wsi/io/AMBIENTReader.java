@@ -43,8 +43,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.jsoup.Jsoup;
-import org.uimafit.component.CasCollectionReader_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.component.CasCollectionReader_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import com.ibm.icu.text.CharsetDetector;
 

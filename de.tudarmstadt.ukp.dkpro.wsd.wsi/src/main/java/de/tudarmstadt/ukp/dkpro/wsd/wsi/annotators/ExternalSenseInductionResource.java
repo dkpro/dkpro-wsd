@@ -19,8 +19,8 @@ package de.tudarmstadt.ukp.dkpro.wsd.wsi.annotators;
 
 import java.util.Collection;
 
-import org.uimafit.component.Resource_ImplBase;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.component.Resource_ImplBase;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.WSDException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
