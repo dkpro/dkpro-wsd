@@ -18,7 +18,6 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.si.resource;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.net.URL;
@@ -26,8 +25,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.uimafit.component.Resource_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.component.Resource_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
 import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
@@ -64,7 +64,7 @@ public abstract class SenseInventoryResourceBase
 
     @SuppressWarnings("unchecked")
     @Override
-    public void afterResourcesInitialized()
+    public void afterResourcesInitialized() throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
 
@@ -89,17 +89,8 @@ public abstract class SenseInventoryResourceBase
             ((SenseTaxonomy) inventory).setUndirectedGraph(g);
 
         }
-        catch (IOException e) {
-            throw new IllegalArgumentException(e);
-        }
-        catch (ClassNotFoundException e) {
-            throw new IllegalArgumentException(e);
-        }
-        catch (SenseInventoryException e) {
-            throw new IllegalArgumentException(e);
-        }
-        catch (UnsupportedOperationException e) {
-            throw new IllegalArgumentException(e);
+        catch (Exception e) {
+            throw new ResourceInitializationException(e);
         }
     }
 
