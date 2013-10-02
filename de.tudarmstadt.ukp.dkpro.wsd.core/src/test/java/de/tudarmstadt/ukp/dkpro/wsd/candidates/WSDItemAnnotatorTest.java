@@ -26,8 +26,8 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.junit.Test;
-import org.uimafit.factory.AnalysisEngineFactory;
-import org.uimafit.util.JCasUtil;
+import org.apache.uima.fit.factory.AnalysisEngineFactory;
+import org.apache.uima.fit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.WSDItemAnnotator;
@@ -39,7 +39,7 @@ public class WSDItemAnnotatorTest {
 
 	@Test
 	public void testProcessJCasTokens() throws AnalysisEngineProcessException, ResourceInitializationException {
-        AnalysisEngine engine = AnalysisEngineFactory.createPrimitive(
+        AnalysisEngine engine = AnalysisEngineFactory.createEngine(
         		WSDItemAnnotator.class,
         		WSDItemAnnotator.PARAM_FEATURE_PATH, Token.class.getName());
  

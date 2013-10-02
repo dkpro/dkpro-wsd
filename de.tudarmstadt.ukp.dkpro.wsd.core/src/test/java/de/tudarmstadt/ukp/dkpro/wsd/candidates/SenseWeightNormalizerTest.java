@@ -31,23 +31,23 @@ public class SenseWeightNormalizerTest
 //		WSDItem w;
 //		WSDResult r;
 //
-//		CollectionReader reader = createCollectionReader(
+//		CollectionReader reader = createReader(
 //                Senseval2LSReader.class,
 //                Senseval2LSReader.PARAM_FILE, "classpath:/senseval/senseval2ls.xml"
 //                );
-//        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+//        AnalysisEngineDescription answerReader = createEngineDescription(
 //                SensevalAnswerKeyReader.class,
 //                SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls.key"
 //        );
-//        AnalysisEngineDescription senseWeightNormalizer = createPrimitiveDescription(
+//        AnalysisEngineDescription senseWeightNormalizer = createEngineDescription(
 //                SenseConfidenceNormalizer.class
 //        );
-//        AnalysisEngineDescription aggregate = createAggregateDescription(
+//        AnalysisEngineDescription aggregate = createEngineDescription(
 //           		answerReader,
 //           		senseWeightNormalizer
 //            );
 //
-//        AnalysisEngine engine = createAggregate(aggregate);
+//        AnalysisEngine engine = createEngine(aggregate);
 //        JCasIterable i = new JCasIterable(reader, engine);
 //		assertTrue(i.hasNext());
 //		JCas j = i.next();
