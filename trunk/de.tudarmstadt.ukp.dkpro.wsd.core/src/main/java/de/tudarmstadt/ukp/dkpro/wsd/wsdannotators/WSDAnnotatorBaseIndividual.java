@@ -22,7 +22,7 @@ import java.util.Map;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
-import org.uimafit.util.JCasUtil;
+import org.apache.uima.fit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
