@@ -21,8 +21,9 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity;
 
-import org.uimafit.descriptor.ConfigurationParameter;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectivePOS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
@@ -49,7 +50,7 @@ public class WSDResourceDegreeCentrality
     protected GraphVisualizer graphVisualizer;
 
     @Override
-    public void afterResourcesInitialized()
+    public void afterResourcesInitialized() throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
         wsdAlgorithm = new DegreeCentralityWSD((SenseTaxonomy) inventory);
