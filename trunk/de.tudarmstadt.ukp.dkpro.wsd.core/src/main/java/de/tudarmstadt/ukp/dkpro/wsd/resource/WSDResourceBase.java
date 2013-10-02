@@ -18,8 +18,8 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
-import org.uimafit.component.Resource_ImplBase;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.component.Resource_ImplBase;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithm;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
