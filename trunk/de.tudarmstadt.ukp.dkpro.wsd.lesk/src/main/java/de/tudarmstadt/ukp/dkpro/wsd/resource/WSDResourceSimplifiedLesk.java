@@ -20,9 +20,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
 import java.util.Map;
 
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.uimafit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedLesk;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.NormalizationStrategy;
@@ -135,7 +135,7 @@ public class WSDResourceSimplifiedLesk
     }
 
     @Override
-    public void afterResourcesInitialized()
+    public void afterResourcesInitialized() throws ResourceInitializationException
     {
         super.afterResourcesInitialized();
         initializeWsdAlgorithm();

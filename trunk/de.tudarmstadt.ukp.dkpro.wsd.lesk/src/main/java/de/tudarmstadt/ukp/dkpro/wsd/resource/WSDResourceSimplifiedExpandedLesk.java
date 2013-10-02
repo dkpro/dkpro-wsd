@@ -21,7 +21,7 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedExpandedLesk;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedExtendedLesk;
