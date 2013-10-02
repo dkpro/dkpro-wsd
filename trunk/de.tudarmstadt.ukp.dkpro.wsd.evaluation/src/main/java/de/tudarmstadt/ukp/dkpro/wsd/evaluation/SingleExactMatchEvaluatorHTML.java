@@ -21,7 +21,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.evaluation;
 import java.io.IOException;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 //TODO: Rewrite with Chunk
 
