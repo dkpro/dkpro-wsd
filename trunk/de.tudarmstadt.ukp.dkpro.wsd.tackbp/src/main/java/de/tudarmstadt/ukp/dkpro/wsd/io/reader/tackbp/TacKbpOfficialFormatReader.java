@@ -34,8 +34,8 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
-import org.uimafit.component.JCasCollectionReader_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
+import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
