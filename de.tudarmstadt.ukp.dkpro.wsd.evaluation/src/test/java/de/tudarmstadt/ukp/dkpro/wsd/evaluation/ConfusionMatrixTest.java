@@ -24,7 +24,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.junit.Test;
-import org.uimafit.factory.AnalysisEngineFactory;
+import org.apache.uima.fit.factory.AnalysisEngineFactory;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
@@ -42,7 +42,7 @@ public class ConfusionMatrixTest
     public void testProcessJCasTokens()
         throws AnalysisEngineProcessException, ResourceInitializationException
     {
-        AnalysisEngine engine = AnalysisEngineFactory.createPrimitive(
+        AnalysisEngine engine = AnalysisEngineFactory.createEngine(
                 ConfusionMatrix.class,
                 ConfusionMatrix.PARAM_GOLD_STANDARD_ALGORITHM, gold,
                 ConfusionMatrix.PARAM_TEST_ALGORITHM1, method1,
