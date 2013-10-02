@@ -27,23 +27,23 @@ public class WSDWriterTest
 //	public void wsdWriterTest()
 //    throws Exception
 //	{
-//		CollectionReader reader = createCollectionReader(
+//		CollectionReader reader = createReader(
 //                Senseval2LSReader.class,
 //                Senseval2LSReader.PARAM_FILE, "classpath:/senseval/senseval2ls.xml"
 //        );
-//        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+//        AnalysisEngineDescription answerReader = createEngineDescription(
 //                SensevalAnswerKeyReader.class,
 //                SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls.key"
 //        );
-//        AnalysisEngineDescription answerWriter = createPrimitiveDescription(
+//        AnalysisEngineDescription answerWriter = createEngineDescription(
 //                WSDWriter.class
 //        );
-//        AnalysisEngineDescription aggregate = createAggregateDescription(
+//        AnalysisEngineDescription aggregate = createEngineDescription(
 //           		answerReader,
 //           		answerWriter
 //        );
 //
-//        AnalysisEngine engine = createAggregate(aggregate);
+//        AnalysisEngine engine = createEngine(aggregate);
 //        JCasIterable i = new JCasIterable(reader, engine);
 //		assertTrue(i.hasNext());
 //		i.next();
