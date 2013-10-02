@@ -18,18 +18,18 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.reader;
 
+import static org.apache.uima.fit.factory.CollectionReaderFactory.createReader;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.uimafit.factory.CollectionReaderFactory.createCollectionReader;
 
 import org.apache.uima.collection.CollectionReader;
+import org.apache.uima.fit.pipeline.JCasIterator;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.junit.Test;
-import org.uimafit.pipeline.JCasIterable;
-import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
@@ -49,7 +49,7 @@ public class MASCReaderTest
         WSDItem w;
         WSDResult r;
         final String MASCDirectory = "classpath:/masc";
-        CollectionReader reader = createCollectionReader(
+        CollectionReader reader = createReader(
                 MASCReader.class,
                 MASCReader.PARAM_IGNORE_TIES, true,
                 MASCReader.PARAM_PATH, MASCDirectory,
@@ -58,7 +58,7 @@ public class MASCReaderTest
                 );
 
 
-        JCasIterable i = new JCasIterable(reader);
+        JCasIterator i = new JCasIterator(reader);
         assertTrue(i.hasNext());
         JCas j = i.next();
         assertEquals("en", j.getDocumentLanguage());
