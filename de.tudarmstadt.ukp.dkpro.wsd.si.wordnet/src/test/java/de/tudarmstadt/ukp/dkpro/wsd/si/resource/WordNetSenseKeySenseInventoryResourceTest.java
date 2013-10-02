@@ -18,9 +18,9 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.si.resource;
 
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitive;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.ExternalResourceFactory.bindResource;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.ExternalResourceFactory.bindResource;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
@@ -28,8 +28,8 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.uimafit.component.JCasAnnotator_ImplBase;
-import org.uimafit.descriptor.ExternalResource;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 
@@ -59,7 +59,7 @@ public class WordNetSenseKeySenseInventoryResourceTest
     @Ignore
     @Test
     public void configureAggregatedExample() throws Exception {
-        AnalysisEngineDescription desc = createPrimitiveDescription(Annotator.class);
+        AnalysisEngineDescription desc = createEngineDescription(Annotator.class);
 
         bindResource(
                 desc,
@@ -69,14 +69,14 @@ public class WordNetSenseKeySenseInventoryResourceTest
         );
 
         // Check the external resource was injected
-        AnalysisEngine ae = createPrimitive(desc);
+        AnalysisEngine ae = createEngine(desc);
         ae.process(ae.newJCas());
     }
 
     @Ignore
     @Test
     public void configureAggregatedExampleWithGraph() throws Exception {
-        AnalysisEngineDescription desc = createPrimitiveDescription(Annotator.class);
+        AnalysisEngineDescription desc = createEngineDescription(Annotator.class);
 
         bindResource(
                 desc,
@@ -87,7 +87,7 @@ public class WordNetSenseKeySenseInventoryResourceTest
         );
 
         // Check the external resource was injected
-        AnalysisEngine ae = createPrimitive(desc);
+        AnalysisEngine ae = createEngine(desc);
         ae.process(ae.newJCas());
     }
 }
