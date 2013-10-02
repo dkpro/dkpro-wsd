@@ -18,19 +18,18 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.algorithms;
 
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
+import static org.apache.uima.fit.factory.ExternalResourceFactory.createExternalResourceDescription;
 import static org.junit.Assert.assertEquals;
-import static org.uimafit.factory.AnalysisEngineFactory.createAggregate;
-import static org.uimafit.factory.AnalysisEngineFactory.createAggregateDescription;
-import static org.uimafit.factory.AnalysisEngineFactory.createPrimitiveDescription;
-import static org.uimafit.factory.ExternalResourceFactory.createExternalResourceDescription;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
+import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ExternalResourceDescription;
 import org.junit.Test;
-import org.uimafit.util.JCasUtil;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.core.tokit.BreakIteratorSegmenter;
@@ -55,25 +54,25 @@ public class WSDAnnotatorTest {
                 WSDResourceIndividualBasic.DISAMBIGUATION_METHOD, MostFrequentSenseBaseline.class.getName()
         );
 
-        AnalysisEngineDescription mfsBaseline = createPrimitiveDescription(
+        AnalysisEngineDescription mfsBaseline = createEngineDescription(
                 WSDAnnotatorIndividualBasic.class,
                 WSDAnnotatorIndividualBasic.WSD_ALGORITHM_RESOURCE, mfsBaselineResource
         );
 
-        AnalysisEngineDescription itemAnno = createPrimitiveDescription(
+        AnalysisEngineDescription itemAnno = createEngineDescription(
                 WSDItemAnnotator.class,
                 WSDItemAnnotator.PARAM_FEATURE_PATH, Token.class.getName()
         );
 
         // Bind external resource to the aggregate
-        AnalysisEngineDescription aggregate = createAggregateDescription(
-                createPrimitiveDescription(BreakIteratorSegmenter.class),
+        AnalysisEngineDescription aggregate = createEngineDescription(
+                createEngineDescription(BreakIteratorSegmenter.class),
                 itemAnno,
                 mfsBaseline
         );
 
         // Check the external resource was injected
-        AnalysisEngine engine = createAggregate(aggregate);
+        AnalysisEngine engine = createEngine(aggregate);
         JCas jcas = engine.newJCas();
         jcas.setDocumentText("bank bat test");
 

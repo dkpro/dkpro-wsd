@@ -29,27 +29,27 @@ public class SenseMapperTest
 //		WSDItem w;
 //		WSDResult r;
 //
-//		CollectionReader reader = createCollectionReader(
+//		CollectionReader reader = createReader(
 //                Senseval2LSReader.class,
 //                Senseval2LSReader.PARAM_FILE, "classpath:/senseval/senseval2ls.xml"
 //                );
-//        AnalysisEngineDescription answerReader = createPrimitiveDescription(
+//        AnalysisEngineDescription answerReader = createEngineDescription(
 //                SensevalAnswerKeyReader.class,
 //                SensevalAnswerKeyReader.PARAM_FILE, "classpath:/senseval/senseval2ls.key",
 //                SensevalAnswerKeyReader.PARAM_SENSE_INVENTORY, "Senseval_sensekey"
 //        );
-//        AnalysisEngineDescription converter = createPrimitiveDescription(
+//        AnalysisEngineDescription converter = createEngineDescription(
 //				SenseMapper.class,
 //				SenseMapper.PARAM_FILE, "classpath:/senseval/index.sense",
 //				SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME, "Senseval_sensekey",
 //				SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME, "WordNet_3.0_synset",
 //				SenseMapper.PARAM_KEY_COLUMN, 1,
 //				SenseMapper.PARAM_VALUE_COLUMN, 2);
-//        AnalysisEngineDescription aggregate = createAggregateDescription(
+//        AnalysisEngineDescription aggregate = createEngineDescription(
 //      		answerReader,
 //       		converter
 //        );
-//        AnalysisEngine engine = createAggregate(aggregate);
+//        AnalysisEngine engine = createEngine(aggregate);
 //
 //        JCasIterable i = new JCasIterable(reader, engine);
 //		assertTrue(i.hasNext());
