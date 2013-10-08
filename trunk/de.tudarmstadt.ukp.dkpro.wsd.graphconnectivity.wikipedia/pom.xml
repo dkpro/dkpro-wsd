@@ -1,13 +1,77 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-    <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-    <version>0.9.1-SNAPSHOT</version>
-  </parent>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-  <artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.wikipedia</artifactId>
-  <name>DKPro WSD - Wikipedia graph connectivity</name>
-  <description>DKPro WSD algorithms based on graph connectivity which are specific to Wikipedia</description>
-  <version>0.9.1-SNAPSHOT</version>
+<!--
+	Copyright 2013
+	Ubiquitous Knowledge Processing (UKP) Lab
+	Technische Universität Darmstadt
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+		<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
+		<version>0.9.1-SNAPSHOT</version>
+	</parent>
+	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+	<artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.wikipedia</artifactId>
+	<name>DKPro WSD - Wikipedia graph connectivity</name>
+	<description>DKPro WSD algorithms based on graph connectivity which are specific to Wikipedia</description>
+	<version>0.9.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-api</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-graph-impl</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jung</groupId>
+			<artifactId>jung-visualization</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+			<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+			<artifactId>
+  			de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase
+  		</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.wikipedia</groupId>
+			<artifactId>de.tudarmstadt.ukp.wikipedia.api</artifactId>
+			<version>0.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>dkpro.similarity</groupId>
+			<artifactId>
+				dkpro.similarity.algorithms.wikipedia-asl
+			</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+			<artifactId>
+  			de.tudarmstadt.ukp.dkpro.wsd.si.dictionary
+  		</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
