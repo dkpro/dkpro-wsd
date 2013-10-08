@@ -27,12 +27,12 @@ import de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity.iterative.Seque
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity.iterative.wikipedia.util.IncomingLinksCache;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.PerformanceLinkInformationReader;
-import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiApiException;
+import dkpro.similarity.algorithms.api.SimilarityException;
 
 /**
- * A class for sequential disambiguation using Wikipedia links from a special database as weights between senses 
- * 
+ * A class for sequential disambiguation using Wikipedia links from a special database as weights between senses
+ *
  * @author nico.erbs@gmail.com
  *
  */

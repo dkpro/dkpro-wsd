@@ -38,14 +38,14 @@ import de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity.iterative.wikip
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseWeightedInventory;
-import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
+import dkpro.similarity.algorithms.api.SimilarityException;
 import edu.uci.ics.jung.algorithms.scoring.PageRankWithPriors;
 import edu.uci.ics.jung.graph.DirectedSparseGraph;
 import edu.uci.ics.jung.graph.Graph;
 
 /**
  * Base for all methods doing sequential disambiguation, i.e. iterating over lists of sods and taking previous disambiguations into account
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */

@@ -20,17 +20,17 @@ package de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity.iterative.wiki
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.graphconnectivity.iterative.SequentialGraphDisambiguation;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
-import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
-import de.tudarmstadt.ukp.similarity.algorithms.wikipedia.measures.WikiLinkComparator;
 import de.tudarmstadt.ukp.wikipedia.api.DatabaseConfiguration;
 import de.tudarmstadt.ukp.wikipedia.api.WikiConstants.Language;
 import de.tudarmstadt.ukp.wikipedia.api.Wikipedia;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiApiException;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiInitializationException;
+import dkpro.similarity.algorithms.api.SimilarityException;
+import dkpro.similarity.algorithms.wikipedia.measures.WikiLinkComparator;
 
 /**
- * A class for sequential disambiguation using Wikipedia links as weights between senses 
- * 
+ * A class for sequential disambiguation using Wikipedia links as weights between senses
+ *
  * @author nico.erbs@gmail.com
  *
  */
@@ -42,7 +42,7 @@ public class LinkMeasureSequentialDisambiguation extends
 	public LinkMeasureSequentialDisambiguation(SenseInventory inventory) {
 		super(inventory);
 	}
-	
+
 	public void setupWikipedia()
 		throws WikiApiException
 	{
@@ -76,10 +76,10 @@ public class LinkMeasureSequentialDisambiguation extends
 				throw new SimilarityException(e);
 			}
 		}
-		
+
 		double similarity = wlc.getSimilarity(baseSense, targetSense);
 		System.out.println("Similarity (" + baseSense + " - " + targetSense + "):\t" + similarity);
-		
+
 		return similarity;
 	}
 
