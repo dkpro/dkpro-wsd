@@ -33,8 +33,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.WSDException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.wsi.algorithm.SenseInductionAlgorithm;
 import de.tudarmstadt.ukp.dkpro.wsd.wsi.algorithm.WSIAlgorithmBase;
-import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
-import de.tudarmstadt.ukp.similarity.algorithms.api.TermSimilarityMeasure;
+import dkpro.similarity.algorithms.api.SimilarityException;
+import dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 import edu.uci.ics.jung.algorithms.cluster.EdgeBetweennessClusterer;
 import edu.uci.ics.jung.algorithms.cluster.WeakComponentClusterer;
 import edu.uci.ics.jung.algorithms.filters.FilterUtils;
@@ -43,7 +43,7 @@ import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 
 /**
  * @author zorn
- * 
+ *
  */
 public class SimpleGraphClusteringInductionAlgorithm
     extends WSIAlgorithmBase
@@ -72,7 +72,7 @@ public class SimpleGraphClusteringInductionAlgorithm
     /**
      * take the original feature vector for each new tag_n: mask the features that are zero in all
      * feature-vectors of the cluster-members
-     * 
+     *
      * @param tagid
      * @param data
      * @param similars
@@ -88,12 +88,12 @@ public class SimpleGraphClusteringInductionAlgorithm
 
     /**
      * Clusters a set of terms given a similarity function.
-     * 
+     *
      * @param term
      *            TODO
      * @param similars
-     * 
-     * 
+     *
+     *
      * @return
      */
     public List<List<String>> cluster(String term, Set<Entity> similarEntities)
@@ -223,7 +223,7 @@ public class SimpleGraphClusteringInductionAlgorithm
 
     /**
      * create a local graph from a term neighborhood
-     * 
+     *
      * @param collection
      * @param localGraph
      * @param mod_sim_thres
@@ -323,8 +323,9 @@ public class SimpleGraphClusteringInductionAlgorithm
                 }
             }
 
-            for (final List<String> cluster : clusters)
+            for (final List<String> cluster : clusters) {
                 senseInventory.addSense(term, term + "_" + clid++, cluster);
+            }
         }
         catch (LexicalSemanticResourceException e) {
             throw new WSDException(e);
