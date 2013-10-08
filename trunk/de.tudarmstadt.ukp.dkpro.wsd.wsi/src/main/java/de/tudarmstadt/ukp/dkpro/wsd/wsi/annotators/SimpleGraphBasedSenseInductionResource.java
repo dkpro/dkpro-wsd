@@ -21,19 +21,19 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.uima.resource.ResourceInitializationException;
-import org.apache.uima.resource.ResourceSpecifier;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.resource.ResourceSpecifier;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.LexicalSemanticResource;
 import de.tudarmstadt.ukp.dkpro.wsd.wsi.algorithm.graphbased.SimpleGraphClusteringInductionAlgorithm;
-import de.tudarmstadt.ukp.similarity.algorithms.api.SimilarityException;
-import de.tudarmstadt.ukp.similarity.algorithms.api.TermSimilarityMeasure;
+import dkpro.similarity.algorithms.api.SimilarityException;
+import dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 
 /**
  * @author zorn
- * 
+ *
  */
 public class SimpleGraphBasedSenseInductionResource
     extends SenseInductionResourceBase
@@ -68,8 +68,9 @@ public class SimpleGraphBasedSenseInductionResource
         super.initialize(aSpecifier, aAdditionalParams);
         try {
             measures.add(termMeasure1);
-            if (termMeasure2 != null)
+            if (termMeasure2 != null) {
                 measures.add(termMeasure2);
+            }
             wsiAlgorithm = new SimpleGraphClusteringInductionAlgorithm(thesaurus, sim_thres,
                     measures);
         }
