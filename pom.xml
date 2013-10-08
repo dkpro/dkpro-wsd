@@ -149,6 +149,9 @@
 		<module>de.tudarmstadt.ukp.dkpro.wsd.tackbp</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.senseval</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.wsi</module>
+		<module>
+			de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.wikipedia
+		</module>
 	</modules>
 	<profiles>
 		<profile>
