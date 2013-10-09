@@ -21,7 +21,6 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.si.uby;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -40,7 +39,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseDictionary;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 import de.tudarmstadt.ukp.lmf.api.Uby;
-import de.tudarmstadt.ukp.lmf.api.UbyInvalidArgumentException;
+import de.tudarmstadt.ukp.lmf.exceptions.UbyInvalidArgumentException;
 import de.tudarmstadt.ukp.lmf.model.core.LexicalEntry;
 import de.tudarmstadt.ukp.lmf.model.core.Lexicon;
 import de.tudarmstadt.ukp.lmf.model.core.Sense;
@@ -82,7 +81,7 @@ public class UbySenseInventory
         try {
             uby = new Uby(dbConfig);
         }
-        catch (FileNotFoundException e) {
+        catch (UbyInvalidArgumentException e) {
             throw new SenseInventoryException(e);
         }
     }
@@ -179,25 +178,17 @@ public class UbySenseInventory
      *            Password for accessing the database
      * @param password
      *            Database name
-     * @param hibernateMapPath
-     *            Path with Hibernate mapping files<br>
-     *            <ul>
-     *            <li>if null: automatically search in
-     *            classpath:hibernate/access/</li>
-     *            <li>if !null: search files in the given path</li>
-     *            <li>if FileNotFound: search in classpath:+ given path</li>
-     *            </ul>
      * @param showSQL
      *            If true all SQL queries are printed on the console
      * @throws SenseInventoryException
      */
     public UbySenseInventory(String url, String jdbc_driver_class,
             String db_vendor, String user, String password,
-            String hibernateMapPath, boolean showSQL)
+            boolean showSQL)
         throws SenseInventoryException
     {
         this(new DBConfig(url, jdbc_driver_class, db_vendor, user, password,
-                hibernateMapPath, showSQL));
+                showSQL));
     }
 
     @SuppressWarnings("unused")
@@ -545,7 +536,7 @@ public class UbySenseInventory
         {
             id = senseId;
             try {
-                sense = uby.getSenseByExactId(senseId);
+                sense = uby.getSenseById(senseId);
                 synset = sense.getSynset();
             }
             catch (UbyInvalidArgumentException e) {
@@ -583,7 +574,7 @@ public class UbySenseInventory
                 return alignments;
             }
 
-            List<SenseAxis> alignedSenses = uby.getSenseAxisBySense(sense);
+            List<SenseAxis> alignedSenses = uby.getSenseAxesBySense(sense);
             alignments = new HashSet<String>(alignedSenses.size());
             for (SenseAxis axis : alignedSenses) {
                 if (allowMultiLingualAlignments == false
@@ -662,8 +653,8 @@ public class UbySenseInventory
             // "SYNONYM":
             for (SenseRelation senseRelation : sense.getSenseRelations()) {
                 if (senseRelation.getRelName().equals("SYNONYM")
-                        && senseRelation.getTargetFormRepresentation() != null) {
-                    words.add(senseRelation.getTargetFormRepresentation()
+                        && senseRelation.getFormRepresentation() != null) {
+                    words.add(senseRelation.getFormRepresentation()
                             .getWrittenForm());
                 }
             }
