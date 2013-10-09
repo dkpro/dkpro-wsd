@@ -23,9 +23,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.si.resource;
 
 import java.util.Map;
 
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.uby.UbySenseInventory;
@@ -59,10 +59,6 @@ public class UbySenseInventoryResource
     @ConfigurationParameter(name = PARAM_UBY_PASSWORD, description = "Password for Uby database", mandatory = true)
     protected String ubyPassword;
 
-    public static final String PARAM_UBY_HIBERNATE_MAP_PATH = "ubyHibernateMapPath";
-    @ConfigurationParameter(name = PARAM_UBY_HIBERNATE_MAP_PATH, description = "Path to Hibernate mapping files for Uby", mandatory = false, defaultValue = "src/main/resources/hibernatemap/access")
-    protected String ubyHibernateMapPath;
-
     public static final String PARAM_UBY_SHOW_SQL = "ubyShowSql";
     @ConfigurationParameter(name = PARAM_UBY_SHOW_SQL, description = "Print Uby SQL queries to the console", mandatory = false, defaultValue = "false")
     protected String ubyShowSql;
@@ -92,8 +88,7 @@ public class UbySenseInventoryResource
         Boolean ubyShowSql = Boolean.valueOf(this.ubyShowSql);
         try {
             inventory = new UbySenseInventory(ubyUrl, ubyJdbcDriverClass,
-                    ubyDbVendor, ubyUser, ubyPassword, ubyHibernateMapPath,
-                    ubyShowSql);
+                    ubyDbVendor, ubyUser, ubyPassword, ubyShowSql);
             ((UbySenseInventory) inventory).setLexicon(ubyLexicon);
         }
         catch (SenseInventoryException e) {

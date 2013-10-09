@@ -51,7 +51,7 @@ public class UbySenseInventoryTest
         si = new UbySenseInventory(
                 "localhost/uby_release_1_0",
                 "com.mysql.jdbc.Driver", "mysql", "username", "password",
-                "src/main/resources/hibernatemap/access", false);
+                false);
     }
 
     @Ignore
