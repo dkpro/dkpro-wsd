@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>WSDResult</name>
+  <description/>
+  <version>1.0</version>
+  <vendor/>
+  <imports>
+    <import name="desc.type.Sense"/>
+    <import name="desc.type.WSDItem"/>
+  </imports>
+  <types>
+    <typeDescription>
+      <name>de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>senses</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>de.tudarmstadt.ukp.dkpro.wsd.type.Sense</elementType>
+          <multipleReferencesAllowed>false</multipleReferencesAllowed>
+        </featureDescription>
+        <featureDescription>
+          <name>disambiguationMethod</name>
+          <description>The method name which is used to determine senses</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>senseInventory</name>
+          <description>The textual represenatation of the used sense inventory</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>wsdItem</name>
+          <description>The corresponding WSDItem for this WSDResult</description>
+          <rangeTypeName>de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>comment</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

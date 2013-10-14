@@ -1,0 +1,211 @@
+This data set is made available under a Creative Commons License:
+  http://creativecommons.org/licenses/by/3.0/
+
+
+Attribution 3.0 Unported (CC BY 3.0) Human-Readable Summary
+===========================================================
+
+You are free:
+ - to Share -- to copy, distribute and transmit the work;
+ - to Remix -- to adapt the work;
+and to make commercial use of the work.
+
+
+Under the following conditions:
+
+* Attribution -- You must attribute the work in the manner specified
+by the author or licensor (but not in any way that suggests that
+they endorse you or your use of the work).
+
+
+With the understanding that:
+
+* Waiver -- Any of the above conditions can be waived if you get
+permission from the copyright holder.
+
+* Public Domain -- Where the work or any of its elements is in
+the public domain under applicable law, the status is in no way
+affected by the license.
+
+* Other Rights -- In no way are any of the following rights
+affected by the license:
+
+ - Your fair dealing or fair use rights, or other applicable
+copyright exceptions and limitations;
+
+ - The author's moral rights;
+
+ - Rights other persons may have either in the work itself or
+in how the work is used, such as publicity or privacy rights.
+
+* Notice -- For any reuse or distribution, you must make clear
+to others the license terms of this work.  The best way to do
+this is with a link to this web page:
+  http://creativecommons.org/licenses/by/3.0/
+
+
+
+Content
+=======
+
+This data set accompanies
+
+   Valentin I. Spitkovsky and Angel X. Chang. 2012.
+   A Cross-Lingual Dictionary for English Wikipedia Concepts.
+   In Proceedings of the Eighth International
+     Conference on Language Resources and Evaluation (LREC 2012).
+
+Please cite the appropriate publication if you use this data.  (See
+  http://nlp.stanford.edu/publications.shtml for .bib entries.)
+
+
+There are six line-based (and two other) text files, each of them
+lexicographically sorted, encoded with UTF-8, and compressed using
+bzip2 (-9).  One way to view the data without fully expanding it
+first is with the bzcat command, e.g.,
+
+  bzcat dictionary.bz2 | grep ... | less
+
+
+Note that raw data were gathered from heterogeneous sources, at
+different points in time, and are thus sometimes contradictory.
+We made a best effort at reconciling the information, but likely
+also introduced some bugs of our own, so be prepared to write
+fault-tolerant code...  keep in mind that even tiny error rates
+translate into millions of exceptions, over billions of datums.
+
+
+Primary Files
+=============
+
+- dictionary.bz2: the dictionary for mapping words to concepts
+
+    line format: <string><tab><cprob><space><url>[<space><score>]*
+
+  <string> is the text to be looked up, may be empty,
+    and could contain internal white-space;
+
+  en.wikipedia.org/wiki/<url> is the corresponding article,
+    which may represent an entire cluster of Wikipedia pages;
+
+  <cprob> is a conditional probability of <url> given <string>,
+    computed as the sum of the numerators of W, Wx, w and w'
+    divided by the sum of their denominators (see below);
+
+  the optional sequence of space-separated scores may contain
+  three types of <score> -- rational, integer and boolean:
+
+    rationals: <label><colon><numerator><colon><denominator>
+      - the W <label> states that out of a total of <denominator>
+          external (non-Wikipedia) web links into the article's
+          (English) cluster, <numerator> had hyper-text <string>;
+      - the Wx <label> is similar, but for links into articles
+          in other languages that are parallel to ones in English;
+      - the w <label> is analogous, for inter-English-Wikipedia
+          links, based on data from several older Wikipedia dumps;
+      - and w' is another estimate of w, based on a recent crawl.
+
+      - dl expresses that this anchor was the <numerator>th
+          link (out of a total of <denominator> hyper-links)
+          in a line of text of a Wikipedia disambiguation page;
+      - dt is analogous, but measured in numbers of tokens.
+
+    integers: <label><colon><count>
+      - ds states that a line in the disambiguation page from
+          which the link was extracted started with <count> stars;
+      - dc is also analogous (to dt), but measured in characters,
+          i.e., the link's position in a line (after any stars).
+
+    booleans: <label>
+      - D indicates that at least one article in the cluster
+          represented by <url> is a disambiguation page;
+      - l -- analogous, but is a list-of-... page;
+      - m -- also analogous, but is a meanings-of-... page;
+      - L, if <url> itself is a list-if-... page;
+      - M, if <url> itself is a meanings-of-... page.
+
+      - KB indicates that <url> is in the knowledge-base
+          associated with the 2009-11 TAC-KBP EL/SF tasks;
+      - W08 -- one of the cluster's articles is known
+          from a 2008 Wikipedia dump;
+      - W09 -- a 2009 Wikipedia dump;
+      - WDB -- a DBpedia dump;
+      - UNK is for unknown <url> values (very rare).
+
+      - RWB indicates that <url> redirects on the web;
+      - R08 states that it was a redirect in the 2008 dump;
+      - R09 -- in the 2009 dump;
+      - RDB -- in the DBpedia dump;
+      - NR states that even though a redirecting representative
+          <url> was chosen, there is at least one non-redirect in
+          its cluster (which was dispreferred for other reasons).
+
+      - CHRON:CENTURY indicates that an article is about a century;
+      - CHRON:DATE -- about a date;
+      - CHRON:DECADE -- decade;
+      - CHRON:MILLENIUM -- millennium (oops);
+      - CHRON:YEAR -- year.
+
+      - c is for clarification: either <string> or <string>_(...)
+          is the (English) title of some page in the cluster;
+      - f -- another clarification: ..._(<string>) is the title;
+      - t -- if <string> itself is the title.
+
+      - h is for hash: there exists a(n English) link of the form
+          ...#<string> into one of the pages in <url>'s cluster;
+      - H indicates the existence of the actual internal anchor;
+      - r -- a(n English) page with title <string>
+          redirects into this cluster.
+
+      - d -- a(n English) disambiguation page with title <string>
+          links to some page in the cluster represented by <url>;
+      - p is also on if d was signaled by the noisy WDB resource.
+
+      - x, for cross, indicates that <string> was obtained from
+         non-English data (and would differ from Wx>0 if we had
+         also mined non-English titles, etc.).
+
+- inv.dict.bz2: the inverse dictionary, for mapping concepts to words
+
+    line format: <url><tab><cprob><space><string>[<tab><score>[<space><score>]*]
+
+  ... as above, but now with conditional probabilities going the other way.
+
+
+Secondary Files
+===============
+
+- lnrm.forw.bz2: the normalized versions of each <string>
+
+    line format: <string><tab><lnrm>
+
+- lnrm.back.bz2: the reverse mapping
+
+    not-quite line-based format: <star><space><lnrm>\n[<string>\n]+\n
+
+- lnrm.dict.bz2: a collapsed version of the forward dictionary
+
+    format: same as in dictionary.bz2 (now aggregated by LNRM forms)
+
+- cross.map.bz2: the cross-mapper
+
+    format: <non-English-Wikipedia-url><tab><url>
+
+- redir.map.bz2: the remapper
+
+    format: <non-canonical-English-url><tab><url>[<space><score>]*
+
+- redir.log.bz2: the remapper's trace
+
+    ... not at all line-based; records all proposed and accepted
+    merges of various English Wikipedia URLs into canonical
+    forms, henceforth representing entire clusters.
+
+
+Enjoy!
+
+
+Valentin I. Spitkovsky (valentin@cs.stanford.edu)
+  and Angel X. Chang     (angelx@cs.stanford.edu)
+
+May 2012.
