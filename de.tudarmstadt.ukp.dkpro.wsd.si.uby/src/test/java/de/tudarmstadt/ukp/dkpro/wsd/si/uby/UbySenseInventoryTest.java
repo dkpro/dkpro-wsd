@@ -49,7 +49,7 @@ public class UbySenseInventoryTest
         throws Exception
     {
         si = new UbySenseInventory(
-                "localhost/uby_release_1_0",
+                "localhost/uby_open_0_3_0",
                 "com.mysql.jdbc.Driver", "mysql", "username", "password",
                 false);
     }
@@ -60,13 +60,17 @@ public class UbySenseInventoryTest
         throws SenseInventoryException
     {
 
+        si.setLexicon(null);
+        si.setAllowMultilingualAlignments(false);
         System.out.println(si.getSenseInventoryName());
 
         List<String> senses = si.getSenses("set", POS.NOUN);
 
-        assertEquals(44, senses.size());
+        assertEquals(47, senses.size());
 
+        int i = 0;
         for (String sense : senses) {
+            System.out.println("Sense " + i++ + " of " + senses.size());
             printSenseInformation(sense);
         }
     }
@@ -78,7 +82,7 @@ public class UbySenseInventoryTest
     {
         si.setLexicon(null);
         System.out.println(si.getSenseInventoryName());
-        assertEquals("FN_Sense_3049", si.getMostFrequentSense("set"));
+        assertEquals("FN_Sense_3178", si.getMostFrequentSense("set"));
 
         si.setLexicon("WordNet");
         System.out.println(si.getSenseInventoryName());
@@ -102,7 +106,8 @@ public class UbySenseInventoryTest
 
         si.setAllowMultilingualAlignments(true);
         alignments = si.getSenseAlignments(id);
-        assertEquals(12, alignments.size());
+        // The following only works if multilingual links have been imported
+        // assertEquals(12, alignments.size());
         System.out.println("All alignments of " + id + ": " + si.getSenseAlignments(id));
         for (String sense : alignments) {
             printSenseInformation(sense);

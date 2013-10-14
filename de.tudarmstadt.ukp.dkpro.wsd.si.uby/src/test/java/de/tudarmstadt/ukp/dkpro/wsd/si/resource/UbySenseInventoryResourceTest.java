@@ -18,19 +18,19 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.si.resource;
 
-import static org.junit.Assert.fail;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 import static org.apache.uima.fit.factory.ExternalResourceFactory.bindResource;
+import static org.junit.Assert.fail;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
+import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.jcas.JCas;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
-import org.apache.uima.fit.descriptor.ExternalResource;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
@@ -61,8 +61,8 @@ public class UbySenseInventoryResourceTest
         }
     }
 
-    @Ignore
     @Test
+    @Ignore
     public void configureAggregatedExample()
         throws Exception
     {
@@ -71,12 +71,12 @@ public class UbySenseInventoryResourceTest
         bindResource(desc, Annotator.MODEL_KEY,
                 UbySenseInventoryResource.class,
                 UbySenseInventoryResource.PARAM_UBY_DATABASE_URL,
-                "ubyhost/uby_release_1_0",
+                "localhost/uby_open_0_3_0",
                 UbySenseInventoryResource.PARAM_UBY_DB_VENDOR, "mysql",
                 UbySenseInventoryResource.PARAM_UBY_JDBC_DRIVER_CLASS,
                 "com.mysql.jdbc.Driver",
-                UbySenseInventoryResource.PARAM_UBY_PASSWORD, "ubyPassword",
-                UbySenseInventoryResource.PARAM_UBY_USER, "miller");
+                UbySenseInventoryResource.PARAM_UBY_PASSWORD, "password",
+                UbySenseInventoryResource.PARAM_UBY_USER, "username");
 
         // Check the external resource was injected
         AnalysisEngine ae = createEngine(desc);
