@@ -20,12 +20,12 @@
   <parent>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-    <version>0.9.1-SNAPSHOT</version>
+    <version>0.9.1</version>
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   <name>DKPro WSD - Core</name>
-  <version>0.9.1-SNAPSHOT</version>
+  <version>0.9.1</version>
   <description>Core modules for DKPro WSD</description>
   <dependencies>
   	<dependency>
