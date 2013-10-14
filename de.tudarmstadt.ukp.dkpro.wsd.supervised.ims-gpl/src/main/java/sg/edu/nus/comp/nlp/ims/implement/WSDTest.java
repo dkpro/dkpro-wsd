@@ -49,7 +49,7 @@ import sg.edu.nus.comp.nlp.ims.util.COpenNLPPOSTagger;
 import sg.edu.nus.comp.nlp.ims.util.COpenNLPSentenceSplitter;
 import sg.edu.nus.comp.nlp.ims.util.CWordNetSenseIndex;
 import sg.edu.nus.comp.nlp.ims.util.ISenseIndex;
-import de.tudarmstadt.ukp.dkpro.core.api.resources.DKProContext;
+import de.tudarmstadt.ukp.dkpro.core.api.resources.DkproContext;
 
 public class WSDTest {
 	// default instance extractor class name
@@ -328,9 +328,9 @@ public class WSDTest {
 
 	public static void main(String[] p_Args) throws Exception {
 
-	    File BASE_DIR = DKProContext.getContext().getWorkspace("ims_wsd").getAbsoluteFile();
+	    File BASE_DIR = DkproContext.getContext().getWorkspace("ims_wsd").getAbsoluteFile();
 		String LIB_DIR = BASE_DIR + "/lib/";
-		
+
 		WSDTest tester = new WSDTest();
 		File testPath = new File("src/test/resources/plain/test.txt");
 		String modelDir = BASE_DIR + "models/";
@@ -357,7 +357,7 @@ public class WSDTest {
 
 		tester.setEvaluator(evaluator);
 		tester.setWriter(writer);
-		
+
 		tester.setFeatureExtractorName("sg.edu.nus.comp.nlp.ims.feature.CAllWordsFeatureExtractorCombination");
 		tester.setCorpusClassName("sg.edu.nus.comp.nlp.ims.corpus.CAllWordsPlainCorpus");
 
