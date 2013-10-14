@@ -20,12 +20,12 @@
   <parent>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
-    <version>0.9.1-SNAPSHOT</version>
+    <version>0.9.1</version>
     <relativePath>..</relativePath>
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</artifactId>
-  <version>0.9.1-SNAPSHOT</version>
+  <version>0.9.1</version>
   <description>DKPro WSD algorithms based on graph connectivity</description>
   <dependencies>
   	<dependency>

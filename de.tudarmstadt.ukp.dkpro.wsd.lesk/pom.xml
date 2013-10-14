@@ -20,7 +20,7 @@
   <parent>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-    <version>0.9.1-SNAPSHOT</version>
+    <version>0.9.1</version>
   </parent>
   <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.lesk</artifactId>
