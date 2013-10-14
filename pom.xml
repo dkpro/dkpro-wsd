@@ -15,11 +15,10 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see <http://www.gnu.org/licenses />.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
@@ -28,7 +27,7 @@
 	</parent>
 	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd-gpl</artifactId>
-	<version>0.9.1-SNAPSHOT</version>
+	<version>0.9.1</version>
 	<packaging>pom</packaging>
 	<modules>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.si.twsi-gpl</module>
@@ -41,7 +40,7 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
+				<version>0.9.1</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -50,28 +49,28 @@
 				<artifactId>
   				de.tudarmstadt.ukp.dkpro.wsd.si.twsi-gpl
   			</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
+				<version>0.9.1</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>
   				de.tudarmstadt.ukp.dkpro.wsd.examples-gpl
   			</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
+				<version>0.9.1</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>
   				de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl
   			</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
+				<version>0.9.1</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>
   				de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi-gpl
   			</artifactId>
-				<version>0.9.1-SNAPSHOT</version>
+				<version>0.9.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -80,9 +79,9 @@
 	<description>DKPro WSD is a UIMA framework for word sense disambiguation licensed under the Apache License 2.0. This project contains GPL-licensed components for use with the main DKPro WSD project. </description>
 	<inceptionYear>2013</inceptionYear>
 	<scm>
-		<url>https://code.google.com/p/dkpro-wsd-gpl/source/browse/#svn/trunk</url>
-		<connection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</connection>
-		<developerConnection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</developerConnection>
+		<url>https://code.google.com/p/dkpro-wsd-gpl/source/browse/#svn/tags/de.tudarmstadt.ukp.dkpro.wsd-gpl-0.9.1</url>
+		<connection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-gpl-0.9.1</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-gpl-0.9.1</developerConnection>
 	</scm>
 	<issueManagement>
 		<system>Google Code</system>
