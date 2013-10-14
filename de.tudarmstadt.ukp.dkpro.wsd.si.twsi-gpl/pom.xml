@@ -37,7 +37,7 @@
   		<artifactId>
   			de.tudarmstadt.langtech.substituter.twsi
   		</artifactId>
-  		<version>1.0.0</version>
+  		<version>1.0.1</version>
   	</dependency>
   </dependencies>
   <name>DKPro WSD GPL - TWSI</name>
