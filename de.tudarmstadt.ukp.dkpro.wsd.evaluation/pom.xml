@@ -50,7 +50,7 @@
   		<artifactId>
   			de.tudarmstadt.ukp.dkpro.lab.uima.engine.simple
   		</artifactId>
-  		<version>0.9.1</version>
+  		<version>0.10.0</version>
   	</dependency>
   </dependencies>
   <name>DKPro WSD - Evaluation</name>
