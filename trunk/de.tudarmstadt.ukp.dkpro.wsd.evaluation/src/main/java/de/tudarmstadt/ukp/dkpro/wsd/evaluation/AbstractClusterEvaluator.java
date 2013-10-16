@@ -32,11 +32,11 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseClusterer;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
@@ -427,38 +427,33 @@ public abstract class AbstractClusterEvaluator
 
         // Print results for each part of speech
         for (POS pos : POS.values()) {
-            WSDStats wsdStats = new WSDStats(testAnnotatedInstances.get(pos),
+            WSDStats unclusteredWsdStats = new WSDStats(
+                    testAnnotatedInstances.get(pos),
                     bothAnnotatedInstances.get(pos),
                     goldAnnotatedInstances.get(pos), totalScore.get(pos));
-            totalTestAnnotatedInstances += wsdStats.testAnnotatedInstances;
-            totalBothAnnotatedInstances += wsdStats.bothAnnotatedInstances;
-            totalUnclusteredScore += wsdStats.totalScore;
+            totalTestAnnotatedInstances += unclusteredWsdStats.testAnnotatedInstances;
+            totalBothAnnotatedInstances += unclusteredWsdStats.bothAnnotatedInstances;
+            totalUnclusteredScore += unclusteredWsdStats.totalScore;
 
-            try {
-                putWSDStats(pos.toString(), wsdStats, "no");
-            }
-            catch (IOException e) {
-                throw new AnalysisEngineProcessException(e);
-            }
-
-            wsdStats = new WSDStats(testAnnotatedInstances.get(pos),
+            WSDStats clusteredWsdStats = new WSDStats(
+                    testAnnotatedInstances.get(pos),
                     bothAnnotatedInstances.get(pos),
                     goldAnnotatedInstances.get(pos), clusteredScore.get(pos));
-            totalClusteredScore += wsdStats.totalScore;
-            try {
-                putWSDStats(pos.toString(), wsdStats, "yes");
-            }
-            catch (IOException e) {
-                throw new AnalysisEngineProcessException(e);
-            }
+            totalClusteredScore += clusteredWsdStats.totalScore;
 
-            wsdStats = new WSDStats(testAnnotatedInstances.get(pos),
+            WSDStats randomClusteredWsdStats = new WSDStats(
+                    testAnnotatedInstances.get(pos),
                     bothAnnotatedInstances.get(pos),
                     goldAnnotatedInstances.get(pos),
                     randomClusteredScore.get(pos));
-            totalRandomClusteredScore += wsdStats.totalScore;
+            totalRandomClusteredScore += randomClusteredWsdStats.totalScore;
+
             try {
-                putWSDStats(pos.toString(), wsdStats, "random");
+                putWSDStats(pos.toString(), unclusteredWsdStats, "no", false);
+                putWSDStats(pos.toString(), clusteredWsdStats, "yes",
+                        clusteredWsdStats.f1 >= randomClusteredWsdStats.f1);
+                putWSDStats(pos.toString(), randomClusteredWsdStats, "random",
+                        randomClusteredWsdStats.f1 >= clusteredWsdStats.f1);
             }
             catch (IOException e) {
                 throw new AnalysisEngineProcessException(e);
@@ -466,29 +461,21 @@ public abstract class AbstractClusterEvaluator
         }
 
         // Print results for all POS combined
-        WSDStats wsdStats = new WSDStats(totalTestAnnotatedInstances,
-                totalBothAnnotatedInstances, totalGoldAnnotatedInstances,
-                totalUnclusteredScore);
-        try {
-            putWSDStats("all", wsdStats, "no");
-        }
-        catch (IOException e) {
-            throw new AnalysisEngineProcessException(e);
-        }
-        wsdStats = new WSDStats(totalTestAnnotatedInstances,
+        WSDStats unclusteredWsdStats = new WSDStats(
+                totalTestAnnotatedInstances, totalBothAnnotatedInstances,
+                totalGoldAnnotatedInstances, totalUnclusteredScore);
+        WSDStats clusteredWsdStats = new WSDStats(totalTestAnnotatedInstances,
                 totalBothAnnotatedInstances, totalGoldAnnotatedInstances,
                 totalClusteredScore);
+        WSDStats randomClusteredWsdStats = new WSDStats(
+                totalTestAnnotatedInstances, totalBothAnnotatedInstances,
+                totalGoldAnnotatedInstances, totalRandomClusteredScore);
         try {
-            putWSDStats("all", wsdStats, "yes");
-        }
-        catch (IOException e) {
-            throw new AnalysisEngineProcessException(e);
-        }
-        wsdStats = new WSDStats(totalTestAnnotatedInstances,
-                totalBothAnnotatedInstances, totalGoldAnnotatedInstances,
-                totalRandomClusteredScore);
-        try {
-            putWSDStats("all", wsdStats, "random");
+            putWSDStats("all", unclusteredWsdStats, "no", false);
+            putWSDStats("all", clusteredWsdStats, "yes",
+                    clusteredWsdStats.f1 >= randomClusteredWsdStats.f1);
+            putWSDStats("all", randomClusteredWsdStats, "random",
+                    randomClusteredWsdStats.f1 >= clusteredWsdStats.f1);
         }
         catch (IOException e) {
             throw new AnalysisEngineProcessException(e);
@@ -514,9 +501,12 @@ public abstract class AbstractClusterEvaluator
      *            The part of speech
      * @param wsdStats
      *            A @link{WSDStats} object containing the statistics
+     * @param mark
+     *            Whether to mark this entry
      * @throws IOException
      */
-    protected void putWSDStats(String pos, WSDStats wsdStats, String clustering)
+    protected void putWSDStats(String pos, WSDStats wsdStats,
+            String clustering, boolean mark)
         throws IOException
     {
         beginTableRow();
@@ -548,8 +538,8 @@ public abstract class AbstractClusterEvaluator
         // F1 score
         tableCell(String.format("%1.5f", wsdStats.f1));
 
-        // backoff
-        tableCell(String.format("%7s", clustering));
+        // clustering
+        tableCell(String.format("%7s", clustering + (mark ? "*" : "")));
 
         endTableRow();
     }
