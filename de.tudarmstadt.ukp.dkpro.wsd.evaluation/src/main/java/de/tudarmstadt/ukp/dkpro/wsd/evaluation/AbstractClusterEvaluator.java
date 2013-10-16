@@ -449,11 +449,14 @@ public abstract class AbstractClusterEvaluator
             totalRandomClusteredScore += randomClusteredWsdStats.totalScore;
 
             try {
-                putWSDStats(pos.toString(), unclusteredWsdStats, "no", false);
+                double maxF1 = Math.max(randomClusteredWsdStats.f1,
+                        clusteredWsdStats.f1);
+                putWSDStats(pos.toString(), unclusteredWsdStats, "no",
+                        unclusteredWsdStats.f1 >= maxF1);
                 putWSDStats(pos.toString(), clusteredWsdStats, "yes",
-                        clusteredWsdStats.f1 >= randomClusteredWsdStats.f1);
+                        clusteredWsdStats.f1 >= maxF1);
                 putWSDStats(pos.toString(), randomClusteredWsdStats, "random",
-                        randomClusteredWsdStats.f1 >= clusteredWsdStats.f1);
+                        randomClusteredWsdStats.f1 >= maxF1);
             }
             catch (IOException e) {
                 throw new AnalysisEngineProcessException(e);
@@ -471,11 +474,14 @@ public abstract class AbstractClusterEvaluator
                 totalTestAnnotatedInstances, totalBothAnnotatedInstances,
                 totalGoldAnnotatedInstances, totalRandomClusteredScore);
         try {
-            putWSDStats("all", unclusteredWsdStats, "no", false);
+            double maxF1 = Math.max(randomClusteredWsdStats.f1,
+                    clusteredWsdStats.f1);
+            putWSDStats("all", unclusteredWsdStats, "no",
+                    unclusteredWsdStats.f1 >= maxF1);
             putWSDStats("all", clusteredWsdStats, "yes",
-                    clusteredWsdStats.f1 >= randomClusteredWsdStats.f1);
+                    clusteredWsdStats.f1 >= maxF1);
             putWSDStats("all", randomClusteredWsdStats, "random",
-                    randomClusteredWsdStats.f1 >= clusteredWsdStats.f1);
+                    randomClusteredWsdStats.f1 >= maxF1);
         }
         catch (IOException e) {
             throw new AnalysisEngineProcessException(e);
