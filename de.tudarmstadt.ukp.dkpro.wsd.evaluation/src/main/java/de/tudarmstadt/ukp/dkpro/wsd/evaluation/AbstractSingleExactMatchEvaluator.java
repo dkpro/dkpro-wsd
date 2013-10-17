@@ -29,11 +29,11 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.lab.engine.TaskContext;
 import de.tudarmstadt.ukp.dkpro.lab.storage.impl.PropertiesAdapter;
@@ -62,8 +62,6 @@ public abstract class AbstractSingleExactMatchEvaluator
     @ConfigurationParameter(name = PARAM_TEST_ALGORITHM, mandatory = true, description = "The test algorithm to be evaluated")
     protected String testAlgorithm;
 
-    // TODO: Change this parameter so that it accepts a list of backoff
-    // algorithms to try in succession
     public static final String PARAM_BACKOFF_ALGORITHM = "backoffAlgorithm";
     @ConfigurationParameter(name = PARAM_BACKOFF_ALGORITHM, mandatory = false, description = "The backoff algorithm to use when the test algorithm is unable to make a sense assignment")
     protected String backoffAlgorithm;
