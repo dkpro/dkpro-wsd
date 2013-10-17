@@ -57,11 +57,9 @@ public class WSITopic_Type extends Annotation_Type {
   	  }
     };
   /** @generated */
-  @SuppressWarnings ("hiding")
   public final static int typeIndexID = WSITopic.typeIndexID;
   /** @generated
      @modifiable */
-  @SuppressWarnings ("hiding")
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("de.tudarmstadt.ukp.wsd.wsi.type.WSITopic");
 
   /** @generated */

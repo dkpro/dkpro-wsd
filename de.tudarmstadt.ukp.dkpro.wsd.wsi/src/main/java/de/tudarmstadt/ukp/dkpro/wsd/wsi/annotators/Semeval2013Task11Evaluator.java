@@ -19,9 +19,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.wsi.annotators;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Map.Entry;
 import java.util.SortedMap;
 import java.util.TreeMap;
@@ -29,10 +27,10 @@ import java.util.TreeMap;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.AbstractWSDEvaluator;
@@ -96,14 +94,17 @@ public class Semeval2013Task11Evaluator
         final String docId = documentMetaData.getDocumentId();
         final String collectionId = documentMetaData.getCollectionId();
         try {
-            final WSITopic wsiTopic = JCasUtil.selectSingle(aJCas, WSITopic.class);
-            final String term = wsiTopic.getSubjectOfDisambiguation().toLowerCase();
+            final WSITopic wsiTopic = JCasUtil.selectSingle(aJCas,
+                    WSITopic.class);
+            final String term = wsiTopic.getSubjectOfDisambiguation()
+                    .toLowerCase();
             String[] terms = term.split(" ");
             // outputFile.append();
             SortedMap<String, Integer> results = new TreeMap<String, Integer>();
             // Score each WSDItem
             for (WSDItem wsdItem : JCasUtil.select(aJCas, WSDItem.class)) {
-                POS pos = wsdItem.getPos() == null ? null : POS.valueOf(wsdItem.getPos());
+                POS pos = wsdItem.getPos() == null ? null : POS.valueOf(wsdItem
+                        .getPos());
                 // WSDResult goldResult = null;
                 WSDResult backoffResult = null;
                 WSDResult testResult = null;
@@ -114,9 +115,11 @@ public class Semeval2013Task11Evaluator
                 // results.
                 for (WSDResult r : wsdResults) {
                     if (backoffAlgorithm != null
-                            && r.getDisambiguationMethod().equals(backoffAlgorithm)) {
+                            && r.getDisambiguationMethod().equals(
+                                    backoffAlgorithm)) {
                         if (backoffResult != null) {
-                            // There should be only one backoff algorithm annotation
+                            // There should be only one backoff algorithm
+                            // annotation
                             logger.error("Multiple backoff algorithm annotations found for "
                                     + r.getWsdItem().getId());
                             throw new AnalysisEngineProcessException();
@@ -125,14 +128,16 @@ public class Semeval2013Task11Evaluator
                     }
                     else if (r.getDisambiguationMethod().equals(testAlgorithm)) {
                         if (testResult != null) {
-                            // There should be only one test algorithm annotation
+                            // There should be only one test algorithm
+                            // annotation
                             logger.error("Multiple test algorithm annotations found for "
                                     + r.getWsdItem().getId());
                             throw new AnalysisEngineProcessException();
                         }
                         testResult = r;
                         // testAnnotatedInstances.put(pos,
-                        // Integer.valueOf(testAnnotatedInstances.get(pos) + 1));
+                        // Integer.valueOf(testAnnotatedInstances.get(pos) +
+                        // 1));
                     }
                 }
 
@@ -146,16 +151,19 @@ public class Semeval2013Task11Evaluator
                     // replaceAll(" ", "_");
                     String id2 = wsiTopic.getId();
                     subtopic = id2.split("\\.")[0] + "." + subtopic;
-                    if (!results.containsKey(subtopic))
+                    if (!results.containsKey(subtopic)) {
                         results.put(subtopic, 1);
-                    else
+                    }
+                    else {
                         results.put(subtopic, results.get(subtopic) + 1);
+                    }
 
                     continue;
                 }
                 else
 
-                // We have a gold result but no test result, so we use the backoff
+                // We have a gold result but no test result, so we use the
+                // backoff
                 if (backoffResult != null) {
                     Sense bestSense = backoffResult.getBestSense();
                     String id = bestSense.getId();
@@ -163,12 +171,15 @@ public class Semeval2013Task11Evaluator
                     // replaceAll(" ", "_");
                     String id2 = wsiTopic.getId();
                     subtopic = id2.split("\\.")[0] + "." + subtopic;
-                    if (!results.containsKey(subtopic))
+                    if (!results.containsKey(subtopic)) {
                         results.put(subtopic, 1);
-                    else
+                    }
+                    else {
                         results.put(subtopic, results.get(subtopic) + 1);
+                    }
 
-                    // outputFile.append(backoffResult.getBestSense().getId().replaceAll(" ", "_")
+                    // outputFile.append(backoffResult.getBestSense().getId().replaceAll(" ",
+                    // "_")
                     // + "\t" + documentMetaData.getDocumentId() + "\n");
                     continue;
                 }
@@ -185,7 +196,8 @@ public class Semeval2013Task11Evaluator
                     }
 
                 }
-                outputFile.append(subtopic + "\t" + documentMetaData.getDocumentId() + "\n");
+                outputFile.append(subtopic + "\t"
+                        + documentMetaData.getDocumentId() + "\n");
             }
             catch (IOException e) {
                 // TODO Auto-generated catch block

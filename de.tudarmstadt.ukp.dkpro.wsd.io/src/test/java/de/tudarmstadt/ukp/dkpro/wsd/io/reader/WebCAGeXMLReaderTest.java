@@ -52,7 +52,7 @@ public class WebCAGeXMLReaderTest
 		LexicalItemConstituent c;
 		CollectionReader reader = createReader(
                 WebCAGeXMLReader.class,
-                WebCAGeXMLReader.PARAM_PATH, webCAGeDirectory,
+                WebCAGeXMLReader.PARAM_SOURCE_LOCATION, webCAGeDirectory,
                 WebCAGeXMLReader.PARAM_PATTERNS,  new String[] {
                         ResourceCollectionReaderBase.INCLUDE_PREFIX + "*.xml" }
                 );
