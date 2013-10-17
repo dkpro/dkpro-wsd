@@ -169,11 +169,14 @@ public class SensevalAnswerKeyReader
                 wsdResult.setSenseInventory(senseInventory);
                 wsdResult.setDisambiguationMethod(fileName);
                 wsdResult.addToIndexes();
+                answerKey.remove(wsdItem.getId());
             }
             else {
-                logger.warn("No answer key for " + wsdItem.getId() + " in "
-                        + fileName);
+                logger.warn(fileName + ": No answer key for " + wsdItem.getId());
             }
+        }
+        for (String k : answerKey.keySet()) {
+            logger.warn(fileName + ": No instance for answer key item " + k);
         }
     }
 
