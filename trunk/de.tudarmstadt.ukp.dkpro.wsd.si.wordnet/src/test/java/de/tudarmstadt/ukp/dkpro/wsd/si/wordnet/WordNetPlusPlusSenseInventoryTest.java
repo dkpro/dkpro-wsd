@@ -68,10 +68,10 @@ public class WordNetPlusPlusSenseInventoryTest
         }
 
 		String mfsMineNoun = si.getMostFrequentSense("mine", POS.NOUN);
-//        assertEquals("03768346n", mfsMineNoun);
+        assertEquals("03768346n", mfsMineNoun);
 
 		String mfsMineVerb = si.getMostFrequentSense("mine", POS.VERB);
-//        assertEquals("01163620v", mfsMineVerb);
+        assertEquals("01163620v", mfsMineVerb);
 
 		// When instantiating again the WordNet resource shouldn't be reread
 		si = new WordNetPlusPlusSenseInventory(

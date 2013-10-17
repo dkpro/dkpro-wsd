@@ -52,7 +52,7 @@ public class MASCReaderTest
         CollectionReader reader = createReader(
                 MASCReader.class,
                 MASCReader.PARAM_IGNORE_TIES, true,
-                MASCReader.PARAM_PATH, MASCDirectory,
+                MASCReader.PARAM_SOURCE_LOCATION, MASCDirectory,
                 MASCReader.PARAM_PATTERNS,  new String[] {
                         ResourceCollectionReaderBase.INCLUDE_PREFIX + "*/*-wn.xml" }
                 );

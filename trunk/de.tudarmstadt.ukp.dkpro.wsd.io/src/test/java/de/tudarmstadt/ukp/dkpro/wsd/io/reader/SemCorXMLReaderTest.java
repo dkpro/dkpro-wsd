@@ -57,7 +57,7 @@ public class SemCorXMLReaderTest
 		LexicalItemConstituent c;
 		CollectionReader reader = createReader(
                 SemCorXMLReader.class,
-                SemCorXMLReader.PARAM_PATH, semCorDirectory,
+                SemCorXMLReader.PARAM_SOURCE_LOCATION, semCorDirectory,
                 SemCorXMLReader.PARAM_PATTERNS,  new String[] {
                         ResourceCollectionReaderBase.INCLUDE_PREFIX + "*.xml" }
                 );
