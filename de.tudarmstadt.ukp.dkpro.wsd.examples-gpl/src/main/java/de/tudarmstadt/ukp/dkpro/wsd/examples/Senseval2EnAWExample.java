@@ -27,8 +27,8 @@ import java.io.IOException;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
-import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.fit.pipeline.SimplePipeline;
+import org.apache.uima.resource.ExternalResourceDescription;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.RandomSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
@@ -129,6 +129,7 @@ public class Senseval2EnAWExample
         // This AE prints out detailed information on the AEs' sense
         // assignments. It's excluded from the pipeline by default as it
         // produces quite a lot of output.
+        @SuppressWarnings("unused")
         AnalysisEngineDescription writer = createEngineDescription(WSDWriter.class);
 
         // This AE compares the sense assignments of all algorithms against
