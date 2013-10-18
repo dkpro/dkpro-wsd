@@ -23,10 +23,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 
+import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -35,7 +37,6 @@ import org.dom4j.DocumentException;
 import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
@@ -57,9 +58,12 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 public class SemCorXMLReader
     extends ResourceCollectionReaderBase
 {
-    public static final String DISAMBIGUATION_METHOD_NAME = SemCorXMLReader.class.getName();
+    public static final String DISAMBIGUATION_METHOD_NAME = SemCorXMLReader.class
+            .getName();
 
-    // private final Logger logger = Logger.getLogger(getClass());
+    private final static Logger logger = Logger.getLogger(SemCorXMLReader.class
+            .getName());
+
     private static final String ELEMENT_CONTEXT = "context";
     private static final String ELEMENT_CONTEXTFILE = "contextfile";
     private static final String ELEMENT_PARAGRAPH = "p";
@@ -88,13 +92,37 @@ public class SemCorXMLReader
     @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "WordNet_3.0_sensekey")
     private String senseInventory;
 
+    public static final String PARAM_SKIP_UNDONE = "skipUndone";
+    @ConfigurationParameter(name = PARAM_SKIP_UNDONE, mandatory = false, description = "Whether to skip word forms not marked as 'done'", defaultValue = "true")
+    private boolean skipUndone;
+
+    public static final String PARAM_SKIP_UNASSIGNABLE = "skipUnassignable";
+    @ConfigurationParameter(name = PARAM_SKIP_UNASSIGNABLE, mandatory = false, description = "Whether to skip unassignable word forms (i.e., where the ot attribute is present)", defaultValue = "true")
+    private boolean skipUnassignable;
+
+    public static final String PARAM_SKIP_WITHOUT_WNSN = "skipWithoutWnsn";
+    @ConfigurationParameter(name = PARAM_SKIP_WITHOUT_WNSN, mandatory = false, description = "Whether to skip word forms where the wnsn attribute does not contain a positive integer", defaultValue = "true")
+    private boolean skipWithoutWnsn;
+
+    public static final String PARAM_SKIP_WITHOUT_LEMMA = "skipWithoutLemma";
+    @ConfigurationParameter(name = PARAM_SKIP_WITHOUT_LEMMA, mandatory = false, description = "Whether to skip word forms without a lemma", defaultValue = "true")
+    private boolean skipWithoutLemma;
+
+    public static final String PARAM_SKIP_WITHOUT_POS = "skipWithoutPos";
+    @ConfigurationParameter(name = PARAM_SKIP_WITHOUT_POS, mandatory = false, description = "Whether to skip word forms without a POS tag", defaultValue = "true")
+    private boolean skipWithoutPos;
+
+    private int validWordFormCount;
+    private int totalWordFormCount;
+
     @Override
     public void initialize(UimaContext aContext)
         throws ResourceInitializationException
     {
         super.initialize(aContext);
+        validWordFormCount = 0;
+        totalWordFormCount = 0;
     }
-
 
     @Override
     @SuppressWarnings("unchecked")
@@ -135,6 +163,7 @@ public class SemCorXMLReader
         Element context = contextIterator.next();
         setDocumentMetadata(jCas, contextFile, context);
         String documentId = context.attributeValue(ATTR_FILENAME);
+        logger.debug("Found context filename: " + documentId);
 
         // Process document text
         StringBuffer documentText = processParagraphs(jCas, context, documentId);
@@ -142,6 +171,9 @@ public class SemCorXMLReader
             documentText = processSentences(jCas, context, 0, documentId);
         }
         jCas.setDocumentText(documentText.toString());
+        logger.info("Read " + validWordFormCount
+                + " valid word forms; skipped "
+                + (totalWordFormCount - validWordFormCount));
     }
 
     @SuppressWarnings("unchecked")
@@ -191,6 +223,7 @@ public class SemCorXMLReader
 
                 if (node.getName() == null
                         || node.getName().equals(ELEMENT_PUNCTUATION)) {
+                    logger.trace("Found punctuation " + node.getText());
                     continue;
                 }
 
@@ -199,20 +232,32 @@ public class SemCorXMLReader
                             new Object[] { node.getName() });
                 }
 
-                // Skip <wf> elements which are not marked as "done" or
-                // for which semantic tags could not be assigned
-                wordFormCount++;
-                Element wordForm = (Element) node;
-                if (wordForm.attributeValue(ATTR_CMD).equals(VAL_DONE) == false
-                        || wordForm.attributeValue(ATTR_OT) != null) {
-                    continue;
-                }
-
                 // Find or construct a unique ID for this word form
+                wordFormCount++;
+                totalWordFormCount++;
+                Element wordForm = (Element) node;
                 String wordFormId = wordForm.attributeValue(ATTR_ID);
                 if (wordFormId == null) {
                     wordFormId = idPrefix + ".s" + sentenceId + ".w"
                             + wordFormCount;
+                }
+                logger.trace("Found wf id: " + wordFormId);
+
+                // Skip <wf> elements which are not marked as "done"
+                if (skipUndone == true
+                        && wordForm.attributeValue(ATTR_CMD).equals(VAL_DONE) == false) {
+                    logger.debug("Skipping wf " + wordFormId
+                            + ": not marked as 'done'");
+                    continue;
+                }
+
+                // Skip <wf> elements for which semantic tags could not be
+                // assigned
+                if (skipUnassignable == true
+                        && wordForm.attributeValue(ATTR_OT) != null) {
+                    logger.debug("Skipping wf " + wordFormId + ": ot="
+                            + wordForm.attributeValue(ATTR_OT));
+                    continue;
                 }
 
                 // Find the number of valid sense tags for this word form.
@@ -220,7 +265,8 @@ public class SemCorXMLReader
                 // (or "-1" according to some specifications) could not be
                 // mapped and so are skipped.
                 String wnsn = wordForm.attributeValue(ATTR_WNSN);
-                if (wnsn == null) {
+                if (skipWithoutWnsn == true && wnsn == null) {
+                    logger.debug("Skipping wf " + wordFormId + ": no wnsn");
                     continue;
                 }
                 int totalValidWf = 0;
@@ -230,33 +276,31 @@ public class SemCorXMLReader
                         totalValidWf++;
                     }
                 }
-                if (totalValidWf == 0) {
+                if (skipWithoutWnsn == true && totalValidWf == 0) {
+                    logger.debug("Skipping wf " + wordFormId + ": wnsn="
+                            + wordForm.attributeValue(ATTR_WNSN));
                     continue;
                 }
 
                 // Skip word forms without a lemma
                 String lemma = wordForm.attributeValue(ATTR_LEMMA);
-                if (lemma == null) {
-                    getLogger().warn(
-                            "No lemma provided for " + wordFormId
-                                    + "; skipping");
+                if (skipWithoutLemma == true && lemma == null) {
+                    logger.warn("Sipping wf " + wordFormId + ": no lemma");
                     continue;
                 }
 
                 // Skip word forms without a POS
                 String pos = wordForm.attributeValue(ATTR_POS);
-                if (pos == null) {
-                    getLogger().warn(
-                            "No POS provided for " + wordFormId + "; skipping");
+                if (skipWithoutPos == true && pos == null) {
+                    logger.warn("Skipping " + wordFormId + ": no pos");
                     continue;
                 }
                 try {
                     pos = semCorPosToPOS(pos).toString();
                 }
                 catch (IllegalArgumentException e) {
-                    getLogger().warn(
-                            "Unrecognized POS " + pos + " provided for "
-                                    + wordFormId + "; skipping");
+                    logger.warn("Skipping wf " + wordFormId
+                            + ": unrecognized pos=" + pos);
                     continue;
                 }
 
@@ -402,6 +446,8 @@ public class SemCorXMLReader
         }
         w.setSubjectOfDisambiguation(lemma);
         w.addToIndexes();
+        logger.debug("Adding wsdItem " + id);
+        validWordFormCount++;
         return w;
     }
 
@@ -426,4 +472,5 @@ public class SemCorXMLReader
             throw new IllegalArgumentException("Unrecognized POS: " + pos);
         }
     }
+
 }
