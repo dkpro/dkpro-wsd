@@ -23,8 +23,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -108,6 +108,10 @@ public class SensevalAnswerKeyReader
     @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "Senseval_sensekey")
     private String senseInventory;
 
+    public static final String PARAM_NORMALIZE_CONFIDENCE = "normalizeConfidence";
+    @ConfigurationParameter(name = PARAM_NORMALIZE_CONFIDENCE , mandatory = false, description = "Wether to normalize confidence values", defaultValue = "false")
+    private boolean normalizeConfidence;
+
     private Map<String, String> answerKey;
 
     /**
@@ -120,7 +124,7 @@ public class SensevalAnswerKeyReader
     {
         super.initialize(context);
 
-        answerKey = new HashMap<String, String>();
+        answerKey = new TreeMap<String, String>();
 
         // Read the answer key file into a collection indexed by instance/head
         // ID
@@ -165,7 +169,7 @@ public class SensevalAnswerKeyReader
         for (WSDItem wsdItem : JCasUtil.select(aJCas, WSDItem.class)) {
             if ((key = answerKey.get(wsdItem.getId())) != null) {
                 WSDResult wsdResult = sensevalAnswerKeytoWSDResult(aJCas, key,
-                        wsdItem);
+                        wsdItem, normalizeConfidence);
                 wsdResult.setSenseInventory(senseInventory);
                 wsdResult.setDisambiguationMethod(fileName);
                 wsdResult.addToIndexes();
@@ -191,7 +195,7 @@ public class SensevalAnswerKeyReader
      *            known.
      */
     public static WSDResult sensevalAnswerKeytoWSDResult(JCas jCas,
-            String answerKey, WSDItem w)
+            String answerKey, WSDItem w, boolean normalizeConfidence)
     {
         Pattern commentPattern = Pattern
                 .compile("^(.*)([\\t ]+!![\\t ])+(.*)$");
@@ -254,6 +258,10 @@ public class SensevalAnswerKeyReader
                 throw new IllegalArgumentException("instance/head ID '"
                         + instanceId + "' not found");
             }
+        }
+
+        if (normalizeConfidence) {
+            r.normalize();
         }
 
         return r;
