@@ -69,13 +69,14 @@ public class ClusterEvaluatorText
         throws IOException
     {
         output.write(String.format(
-                "\n%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "POS",
-                "test", "gold", "both", "score", "p", "r", "cover", "F1",
-                "cluster"));
+                "\n%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\t%s\t%s\n",
+                "POS", "test", "gold", "both", "score", "p", "r", "cover",
+                "F1", "cluster", "ΔF none", "ΔF rand"));
         output.write(String.format(
-                "%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "-------",
+                "%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\t%s\t%s\n",
                 "-------", "-------", "-------", "-------", "-------",
-                "-------", "-------", "-------", "-------"));
+                "-------", "-------", "-------", "-------", "-------",
+                "-------", "-------"));
     }
 
     @Override
