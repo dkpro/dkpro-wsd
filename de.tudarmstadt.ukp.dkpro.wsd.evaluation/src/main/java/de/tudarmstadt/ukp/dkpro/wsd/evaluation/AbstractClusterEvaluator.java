@@ -449,11 +449,12 @@ public abstract class AbstractClusterEvaluator
             totalRandomClusteredScore += randomClusteredWsdStats.totalScore;
 
             try {
-                putWSDStats(pos.toString(), unclusteredWsdStats, "no", false);
-                putWSDStats(pos.toString(), clusteredWsdStats, "yes",
-                        clusteredWsdStats.f1 > randomClusteredWsdStats.f1);
+                putWSDStats(pos.toString(), unclusteredWsdStats, "no", null,
+                        null);
                 putWSDStats(pos.toString(), randomClusteredWsdStats, "random",
-                        false);
+                        unclusteredWsdStats, null);
+                putWSDStats(pos.toString(), clusteredWsdStats, "yes",
+                        unclusteredWsdStats, randomClusteredWsdStats);
             }
             catch (IOException e) {
                 throw new AnalysisEngineProcessException(e);
@@ -471,10 +472,11 @@ public abstract class AbstractClusterEvaluator
                 totalTestAnnotatedInstances, totalBothAnnotatedInstances,
                 totalGoldAnnotatedInstances, totalRandomClusteredScore);
         try {
-            putWSDStats("all", unclusteredWsdStats, "no", false);
-            putWSDStats("all", clusteredWsdStats, "yes",
-                    clusteredWsdStats.f1 > randomClusteredWsdStats.f1);
-            putWSDStats("all", randomClusteredWsdStats, "random", false);
+            putWSDStats("all", unclusteredWsdStats, "no", null, null);
+            putWSDStats("all", randomClusteredWsdStats, "random",
+                    unclusteredWsdStats, null);
+            putWSDStats("all", clusteredWsdStats, "yes", unclusteredWsdStats,
+                    randomClusteredWsdStats);
         }
         catch (IOException e) {
             throw new AnalysisEngineProcessException(e);
@@ -505,7 +507,8 @@ public abstract class AbstractClusterEvaluator
      * @throws IOException
      */
     protected void putWSDStats(String pos, WSDStats wsdStats,
-            String clustering, boolean mark)
+            String clustering, WSDStats unclusteredWsdStats,
+            WSDStats randomClusteredWsdStats)
         throws IOException
     {
         beginTableRow();
@@ -538,7 +541,25 @@ public abstract class AbstractClusterEvaluator
         tableCell(String.format("%1.5f", wsdStats.f1));
 
         // clustering
-        tableCell(String.format("%7s", clustering + (mark ? "*" : "")));
+        tableCell(String.format("%7s", clustering));
+
+        // improvement in recall over no clustering
+        if (unclusteredWsdStats != null) {
+            tableCell(String.format("%+1.4f", wsdStats.f1
+                    - unclusteredWsdStats.f1));
+        }
+        else {
+            tableCell(String.format("%7s", "—"));
+        }
+
+        // improvement in recall over random clustering
+        if (randomClusteredWsdStats != null) {
+            tableCell(String.format("%+1.4f", wsdStats.f1
+                    - randomClusteredWsdStats.f1));
+        }
+        else {
+            tableCell(String.format("%7s", "—"));
+        }
 
         endTableRow();
     }
