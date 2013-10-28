@@ -18,6 +18,8 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims;
 
+import junit.framework.Assert;
+
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -29,8 +31,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
 
 public class ImsWsdDisambiguatorTest {
 
-    @Ignore
     @Test
+    @Ignore
     public void imsWsdDisambiguatorTest() throws SenseInventoryException {
         SenseInventory inventory;
         try {
@@ -38,9 +40,12 @@ public class ImsWsdDisambiguatorTest {
         } catch (ResourceLoaderException e) {
             throw new SenseInventoryException(e);
         }
-
+        
         WSDAlgorithmDocumentBasic wsdAlgo = new ImsWsdDisambiguator(inventory);
 
-        System.out.println(wsdAlgo.getDisambiguation("I got money in the bank."));
+        String input = "I got money in the bank.";
+        String output = "{I 2x40x00xx 1x21x00xx in the 1x14x00xx .\n=1.0}";
+        
+        Assert.assertEquals(output, wsdAlgo.getDisambiguation(input).toString());
     }
 }
