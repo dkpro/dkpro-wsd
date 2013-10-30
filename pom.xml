@@ -150,7 +150,6 @@
 		<module>
 			de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.wikipedia
 		</module>
-		<module>de.tudarmstadt.ukp.dkpro.wsd.wrapper</module>
 	</modules>
 	<profiles>
 		<profile>
