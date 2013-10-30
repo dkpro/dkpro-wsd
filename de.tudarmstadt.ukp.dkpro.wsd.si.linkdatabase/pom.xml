@@ -30,6 +30,11 @@
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   	</dependency>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.26</version>
+  	</dependency>
   </dependencies>
   <name>DKPro WSD - Link database</name>
   <description>DKPro WSD modules for handling link database sense inventories</description>
