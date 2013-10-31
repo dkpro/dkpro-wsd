@@ -46,7 +46,6 @@ import sg.edu.nus.comp.nlp.ims.util.COpenNLPPOSTagger;
 import sg.edu.nus.comp.nlp.ims.util.COpenNLPSentenceSplitter;
 import sg.edu.nus.comp.nlp.ims.util.CWordNetSenseIndex;
 import sg.edu.nus.comp.nlp.ims.util.ISenseIndex;
-import de.tudarmstadt.ukp.dkpro.core.api.resources.DkproContext;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmDocumentBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
@@ -88,8 +87,8 @@ public class ImsWsdDisambiguator
     private void init()
     {
     	try {
-			BASE_DIR = DkproContext.getContext().getWorkspace("ims_wsd").getAbsolutePath();
-			LIB_DIR = BASE_DIR + "/lib/";
+			BASE_DIR = "src/main/resources/ims/";
+			LIB_DIR = BASE_DIR + "lib/";
 
 	        String modelDir = BASE_DIR + "models/";
 	        String statDir = "target/ims_stat/";
@@ -97,7 +96,7 @@ public class ImsWsdDisambiguator
 	        String evaluatorName = CLibLinearEvaluator.class.getName();
 	        String writerName = CPlainCorpusInlineWriter.class.getName();
 
-	        CJWNL.initial(new FileInputStream(new File(LIB_DIR + "prop.xml")));
+	        CJWNL.initial(new FileInputStream(new File(BASE_DIR + "prop.xml")));
 
 	        COpenNLPSentenceSplitter.setDefaultModel(LIB_DIR + "EnglishSD.bin.gz");
 	        COpenNLPPOSTagger.setDefaultModel(LIB_DIR + "tag.bin.gz");
