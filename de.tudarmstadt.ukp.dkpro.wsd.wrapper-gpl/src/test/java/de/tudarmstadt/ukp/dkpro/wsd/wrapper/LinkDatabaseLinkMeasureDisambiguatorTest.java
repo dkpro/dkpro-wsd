@@ -12,6 +12,7 @@ import org.junit.Test;
 public class LinkDatabaseLinkMeasureDisambiguatorTest {
 
 	@Test
+	@Ignore
 	public void disambiguateTest() throws IOException {
 		String input = "Please disambiguate this text.";
 		
