@@ -26,7 +26,7 @@
     <version>0.9.2-SNAPSHOT</version>
   </parent>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.wrapper-gpl</artifactId>
-  <name>DKPro WSD - Wrapper</name>
+  <name>DKPro WSD GPL - Wrapper</name>
   <description>Wrapper for word sense disambiguation</description>
   <dependencies>
   	<dependency>
