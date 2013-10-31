@@ -21,6 +21,11 @@ package de.tudarmstadt.ukp.dkpro.wsd.wrapper;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * A disambiguator that returns senses for an input text
+ * @author nico.erbs@gmail.com
+ *
+ */
 public interface Disambiguator {
 	
     /**
@@ -29,18 +34,16 @@ public interface Disambiguator {
      * @return
      *   The list of string with the senses disambiguated in the input text.
      */
-	List<String> disambiguate(String inputText) throws IOException;
+	public List<String> disambiguate(String inputText) throws IOException;
 	
     /**
      * @return The name of the disambiguator.
      */
-	String getName();
+	public String getName();
 	
     /**
      * @return Returns a string with the configuration details of this word sense disambiguator.
      */
-	String getConfigurationDetails();
+	public String getConfigurationDetails();
 	
-	
-
 }

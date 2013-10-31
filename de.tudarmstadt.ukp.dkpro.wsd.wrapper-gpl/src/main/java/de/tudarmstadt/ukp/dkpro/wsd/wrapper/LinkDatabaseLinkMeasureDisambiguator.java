@@ -29,14 +29,16 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.junit.Ignore;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithms.linkbased.WikipediaRelatednessMethod;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectiveBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.LinkDatabaseInventoryResource;
 import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorCollectiveBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
 
+/**
+ * This disambiguator uses the LinkDatabase as the sense inventory and returns the highest ranked sense by the link measure
+ * @author nico.erbs@gmail.com
+ *
+ */
 public class LinkDatabaseLinkMeasureDisambiguator extends Disambiguator_ImplBase {
 	
 	

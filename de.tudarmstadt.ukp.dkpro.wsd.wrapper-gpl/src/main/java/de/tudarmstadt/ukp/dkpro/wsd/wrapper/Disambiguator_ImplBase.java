@@ -60,12 +60,23 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 	 */
 	private boolean filterStopwords = true;
 	
+	/**
+	 * the disambiguation engine that is used for this wrapper
+	 */
 	private AnalysisEngine disambiguationEngine = null;
 
+	/**
+	 * sets language for wrapper - important for preprocessing
+	 * @param language language of cas
+	 */
 	public void setLanguage(String language) {
 		this.language = language;
 	}
 	
+	/**
+	 * sets whether stopwords should be filtered our
+	 * @param filterStopwords
+	 */
 	public void setFilterStopwords(boolean filterStopwords) {
 		this.filterStopwords = filterStopwords;
 	}
@@ -156,6 +167,11 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 		return bestSenses;
 	}
 
+	/**
+	 * Creates an engine for the processing
+	 * @return preprocessing engine
+	 * @throws ResourceInitializationException
+	 */
 	protected AnalysisEngineDescription getPreprocessingEngineDescritpion() throws ResourceInitializationException{
 
 		List<AnalysisEngineDescription> preprocessing = new ArrayList<AnalysisEngineDescription>();
@@ -181,9 +197,4 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 		}
 		return createEngineDescription(preprocessing.toArray(new AnalysisEngineDescription[preprocessing.size()]));
 	}
-
-
-
-
-
 }

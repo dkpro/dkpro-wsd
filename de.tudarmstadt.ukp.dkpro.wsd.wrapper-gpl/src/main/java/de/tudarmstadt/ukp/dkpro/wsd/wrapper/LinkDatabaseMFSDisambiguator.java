@@ -33,6 +33,11 @@ import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.LinkDatabaseInventoryResource;
 import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
 
+/**
+ * This disambiguator uses the LinkDatabase as the sense inventory and returns the most frequent sense
+ * @author nico.erbs@gmail.com
+ *
+ */
 public class LinkDatabaseMFSDisambiguator extends Disambiguator_ImplBase {
 	
 	
