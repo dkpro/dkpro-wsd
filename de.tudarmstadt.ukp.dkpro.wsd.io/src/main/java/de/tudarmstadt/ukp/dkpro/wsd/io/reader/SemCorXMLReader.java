@@ -140,6 +140,8 @@ public class SemCorXMLReader
         // Open the next file
         Document document;
         SAXReader reader = new SAXReader();
+        NullEntityResolver resolver = new NullEntityResolver();
+        reader.setEntityResolver(resolver);
         InputStream is = new BufferedInputStream(nextFile().getInputStream());
         try {
             document = reader.read(is);
