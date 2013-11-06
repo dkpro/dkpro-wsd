@@ -10,13 +10,13 @@
 <!ATTLIST text refs CDATA #IMPLIED>
 
 <!ELEMENT head (#PCDATA)>
-<!ATTLIST head id ID #REQUIRED>
+<!ATTLIST head id CDATA #REQUIRED>
 <!ATTLIST head lemma CDATA #REQUIRED>
 <!ATTLIST head luids CDATA #REQUIRED>
 <!ATTLIST head pos (a|n|v) #REQUIRED>
 
 <!ELEMENT sat (#PCDATA)>
-<!ATTLIST sat id IDREF #REQUIRED>
+<!ATTLIST sat id CDATA #REQUIRED>
 
 <!ENTITY lt     "&#38;#60;">
 <!ENTITY gt     "&#62;">
