@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!--  <!DOCTYPE corpus SYSTEM "webcage.dtd">   -->
+<!DOCTYPE corpus SYSTEM "webcage.dtd">
 <corpus lang="de">
 <text id="verben_abbrechen_20127" src="https://de.wikipedia.org/wiki/Escape-Taste" title="Escape-Taste">
 Der Ladevorgang einer Internetseite kann in verschiedenen Webbrowsern mit der Escape-Taste unterbrochen werden. In den meisten Dialogfenstern von Windows-Anwendungen entspricht das Drücken der Escape-Taste einem Klick auf die Schaltfläche „<head id="1" luids="l83332" lemma="abbrechen" pos="v">Abbrechen</head>“. Ein Druck auf die Escape-Taste <head id="2" luids="l83332" lemma="abbrechen" pos="v">bricht</head> auch eine bereits begonnene Eingabe in einem Textfeld <sat id="2">ab</sat> und stellt den Ursprungszustand wieder her.
