@@ -22,10 +22,8 @@
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <version>0.9.2-SNAPSHOT</version>
   </parent>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   <name>DKPro WSD - Core</name>
-  <version>0.9.2-SNAPSHOT</version>
   <description>Core modules for DKPro WSD</description>
   <dependencies>
   	<dependency>
