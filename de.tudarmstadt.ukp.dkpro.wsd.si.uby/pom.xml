@@ -24,7 +24,6 @@
     <relativePath>..</relativePath>
   </parent>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.uby</artifactId>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <dependencies>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.uby</groupId>

@@ -35,6 +35,5 @@
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
   	</dependency>
   </dependencies>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <name>DKPro WSD - Dictionary</name>
 </project>
