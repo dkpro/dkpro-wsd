@@ -35,6 +35,7 @@
 		<module>de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.examples-gpl</module>
 		<module>de.tudarmstadt.ukp.dkpro.wsd.wrapper-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.germanet</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
