@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.PerformanceLinkInformationRe
 
 /**
  * The inventory for a LinkDatabase
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */
@@ -71,7 +71,7 @@ public class LinkDatabaseInventory
 	public Map<String, List<String>> getSenseInventory()
 		throws SenseInventoryException
 	{
-		throw new SenseInventoryException("Not yet implemented");
+        throw new UnsupportedOperationException();
 	}
 
 	@Override

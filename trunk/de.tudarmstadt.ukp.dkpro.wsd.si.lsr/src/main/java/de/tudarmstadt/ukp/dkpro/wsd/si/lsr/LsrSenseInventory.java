@@ -86,7 +86,8 @@ public class LsrSenseInventory
         throws SenseInventoryException
     {
         try {
-            return lsr.getGloss(lsr.getEntityById(senseId));
+            String description = lsr.getGloss(lsr.getEntityById(senseId));
+            return (description == null) ? "" : description;
         }
         catch (LexicalSemanticResourceException e) {
             throw new SenseInventoryException(e);
