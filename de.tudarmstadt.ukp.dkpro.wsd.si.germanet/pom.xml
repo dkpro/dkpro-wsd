@@ -8,7 +8,6 @@
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.germanet</artifactId>
   <name>DKPro WSD GPL - GermaNet</name>
   <description>A DKPro WSD sense inventory module wrapping the GermaNet Java API</description>
-  <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   <dependencies>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
