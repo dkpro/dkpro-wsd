@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.util.UkbDictionary;
 
 /**
  * An implementation of a dictionary for UKB format
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */
@@ -51,7 +51,7 @@ public class UkbDictionaryInventory
 		//Open the serialized version or create it from scratch
 		try{
 //			System.out.println("Trying to load dictionary from serializable.");
-			ObjectInputStream dictionaryReader = 
+			ObjectInputStream dictionaryReader =
 				new ObjectInputStream(
 						new BZip2CompressorInputStream(
 								new FileInputStream(serializiblePath)));
@@ -59,12 +59,12 @@ public class UkbDictionaryInventory
 			dictionaryReader.close();
 //			System.out.println("Loaded dictionary from serializable.");
 		}
-		catch(Exception e){			
+		catch(Exception e){
 //			System.out.println("Trying to load dictionary from input.");
 			dictionary = new UkbDictionary(inputPath, neededMentionsPath);
 			System.out.println("Loaded dictionary from input.");
-			
-			ObjectOutputStream dictionaryWriter = 
+
+			ObjectOutputStream dictionaryWriter =
 				new ObjectOutputStream(
 						new BZip2CompressorOutputStream(
 								new FileOutputStream(serializiblePath)));
@@ -78,14 +78,14 @@ public class UkbDictionaryInventory
 	@Override
 	public Map<String, Double> getWeightedSenses(String sod)
 			throws SenseInventoryException {
-		
+
 		return dictionary.getWeightedSenses(sod);
 	}
-	
+
 	@Override
 	public Map<String, Double> getPopularityWeightedSenses(String sod)
 			throws SenseInventoryException {
-		
+
 		return dictionary.getPopularityWeightedSenses(sod);
 	}
 
@@ -121,8 +121,7 @@ public class UkbDictionaryInventory
 	@Override
 	public Map<String, List<String>> getSenseInventory()
 			throws SenseInventoryException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
