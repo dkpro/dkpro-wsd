@@ -114,8 +114,7 @@ public class UkbDictionaryInventory
 	@Override
 	public String getSenseDescription(String senseId)
 			throws SenseInventoryException {
-		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 
 	@Override
