@@ -117,6 +117,7 @@
 						<exclude>README.txt</exclude>
 						<exclude>LICENSE.txt</exclude>
 						<exclude>src/main/java/sg/**/*</exclude>
+						<exclude>src/main/java/de/tuebingen/**/*</exclude>
 						<exclude>src/main/resources/**/*</exclude>
 						<exclude>src/test/resources/**/*</exclude>
 						<exclude>.license-header.txt</exclude>
