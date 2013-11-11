@@ -255,7 +255,7 @@ public class GermaNet {
             }
             inputStreams = inputStreamList;
             xmlNames = nameList;
-
+            zipFile.close();
         } else {
             this.dir = dir;
         }
