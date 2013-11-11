@@ -94,11 +94,16 @@ public class UkbDocumentDependentDictionaryInventory
 		return dictionary.getMostFrequentTarget(sod);
 	}
 
-	@Override
-	public String getSenseDescription(String senseId)
-			throws SenseInventoryException {
-        return "";
-	}
+    @Override
+    public String getSenseDescription(String senseId)
+            throws SenseInventoryException {
+        if(dictionary.containsTarget(senseId)){
+            return "";
+        }
+        else{
+            return null;
+        }
+    }
 
 	@Override
 	public Map<String, List<String>> getSenseInventory()

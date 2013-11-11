@@ -114,7 +114,12 @@ public class UkbDictionaryInventory
 	@Override
 	public String getSenseDescription(String senseId)
 			throws SenseInventoryException {
-		return "";
+	    if(dictionary.containsTarget(senseId)){
+	        return "";
+	    }
+	    else{
+	        return null;
+	    }
 	}
 
 	@Override
