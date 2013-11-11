@@ -1,21 +1,23 @@
-/*
+/**
  * Copyright (C) 2012 Department of General and Computational Linguistics,
  * University of Tuebingen
  *
- * This file is part of the Java API to GermaNet.
+ * Copyright 2013
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
  *
- * The Java API to GermaNet is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * The Java API to GermaNet is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this API; if not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
@@ -25,17 +27,27 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.io.StreamCorruptedException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.TreeSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+
 import javax.xml.stream.XMLStreamException;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Provides high-level look-up access to GermaNet data. Intended as a read-only
  * resource - no public methods are provided for changing or adding data.<br><br>
- * 
+ *
  * GermaNet is a collection of German lexical units (<code>LexUnits</code>)
  * organized into sets of synonyms (<code>Synsets</code>).<br>
  * A <code>Synset</code> has a
@@ -52,7 +64,7 @@ import javax.xml.stream.XMLStreamException;
  * A <code>Frame</code> is simply a container for frame data (String).<br>
  * An <code>Example</code> consists of text (String) and zero or one
  * <code>Frame</code>(s).<br><br>
- * 
+ *
  * To construct a <code>GermaNet</code> object, provide the location of the
  * GermaNet data and (optionally) a flag indicating whether searches should be
  * done ignoring case. This data location can be set with a <code>String</code>
@@ -77,24 +89,26 @@ import javax.xml.stream.XMLStreamException;
  *    List&lt;Synset&gt; synList = gnet.getSynsets("gehen");<br>
  *    List&lt;Synset&gt; adjSynsets = gnet.getSynsets(WordCategory.adj);<br><br>
  * </code>
- * 
+ *
  * Unless otherwise stated, methods will return an empty List rather than null
  * to indicate that no objects exist for the given request. <br><br>
- * 
+ *
  * <b>Important Note:</b><br>
  * Loading GermaNet requires more memory than the JVM allocates by default. Any
  * application that loads GermaNet will most likely need to be run with JVM
  * options that increase the memory allocated, like this:<br><br>
- * 
+ *
  * <code>java -Xms128m -Xmx128m MyApplication</code><br><br>
- * 
+ *
  * Depending on the memory needs of the application itself, the 128's may
  * need to be changed to 256's or higher.
- * 
+ *
  * @author University of Tuebingen, Department of Linguistics (germanetinfo at uni-tuebingen.de)
  * @version 8.0
  */
 public class GermaNet {
+
+    private final Log logger = LogFactory.getLog(getClass());
 
     public static final String XML_SYNSETS = "synsets";
     public static final String XML_SYNSET = "synset";
@@ -151,13 +165,13 @@ public class GermaNet {
     public static final String XML_CATEGORY = "category";
     public static final String XML_COMPOUND_MODIFIER = "modifier";
     public static final String XML_COMPOUND_HEAD = "head";
-    private EnumMap<WordCategory, HashMap<String, ArrayList<LexUnit>>> wordCategoryMap;
-    private EnumMap<WordCategory, HashMap<String, ArrayList<LexUnit>>> wordCategoryMapAllOrthForms;
-    private TreeSet<Synset> synsets;
-    private ArrayList<IliRecord> iliRecords;
-    private ArrayList<WiktionaryParaphrase> wiktionaryParaphrases;
-    private HashMap<Integer, LexUnit> lexUnitID;
-    private HashMap<Integer, Synset> synsetID;
+    private final EnumMap<WordCategory, HashMap<String, ArrayList<LexUnit>>> wordCategoryMap;
+    private final EnumMap<WordCategory, HashMap<String, ArrayList<LexUnit>>> wordCategoryMapAllOrthForms;
+    private final TreeSet<Synset> synsets;
+    private final ArrayList<IliRecord> iliRecords;
+    private final ArrayList<WiktionaryParaphrase> wiktionaryParaphrases;
+    private final HashMap<Integer, LexUnit> lexUnitID;
+    private final HashMap<Integer, Synset> synsetID;
     private File dir = null;
     private List<InputStream> inputStreams = null;
     private List<String> xmlNames = null;
@@ -255,10 +269,10 @@ public class GermaNet {
     private void checkMemory() {
         long freeMemory = Runtime.getRuntime().freeMemory() / 1000000;
         if (freeMemory < 120) {
-            System.out.println("Warning: you may not have enough memory to "
+            logger.warn("Warning: you may not have enough memory to "
                     + "load GermaNet.");
-            System.out.println("Try using \"-Xms128m -Xmx128m\" JVM options:");
-            System.out.println("java -Xms128m -Xmx128m <restOfCommand>");
+            logger.warn("Try using \"-Xms128m -Xmx128m\" JVM options:");
+            logger.warn("java -Xms128m -Xmx128m <restOfCommand>");
         }
     }
 
@@ -414,8 +428,9 @@ public class GermaNet {
     public List<Synset> getSynsets() {
         List<Synset> rval = new ArrayList<Synset>(synsets.size());
         Iterator iter = synsets.iterator();
-        while (iter.hasNext())
+        while (iter.hasNext()) {
             rval.add((Synset) iter.next());
+        }
         return rval;
     }
 
@@ -760,7 +775,7 @@ public class GermaNet {
     public List<LexUnit> getLexUnits(WordCategory wordCategory) {
         ArrayList<LexUnit> rval = new ArrayList<LexUnit>();
         HashMap<String, ArrayList<LexUnit>> map;
-        map = (HashMap<String, ArrayList<LexUnit>>) wordCategoryMap.get(wordCategory);
+        map = wordCategoryMap.get(wordCategory);
 
         for (ArrayList<LexUnit> luList : map.values()) {
             rval.addAll((ArrayList<LexUnit>) luList.clone());
@@ -830,7 +845,10 @@ public class GermaNet {
                     }
                 }
                 loader.loadILI(iliStream);
-            } else loader.loadILI(new File(dir + "/interLingualIndex_DE-EN.xml"));
+            }
+            else {
+                loader.loadILI(new File(dir + "/interLingualIndex_DE-EN.xml"));
+            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GermaNet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -899,7 +917,10 @@ public class GermaNet {
             loader = new WiktionaryLoader(this);
             if (zip) {
                 loader.loadWiktionary(inputStreams, xmlNames);
-            } else loader.loadWiktionary(dir);
+            }
+            else {
+                loader.loadWiktionary(dir);
+            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GermaNet.class.getName()).log(Level.SEVERE, null, ex);
         }

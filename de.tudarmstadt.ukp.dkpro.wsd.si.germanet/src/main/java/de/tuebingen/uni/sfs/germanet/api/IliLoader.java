@@ -1,33 +1,40 @@
-/*
+/**
  * Copyright (C) 2012 Department of General and Computational Linguistics,
  * University of Tuebingen
  *
- * This file is part of the Java API to GermaNet.
+ * Copyright 2013
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
  *
- * The Java API to GermaNet is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * The Java API to GermaNet is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this API; if not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
-import java.util.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Load <code>IliRecords</code> into a specified <code>GermaNet</code> object.
@@ -37,7 +44,9 @@ import javax.xml.stream.XMLStreamReader;
  */
 class IliLoader {
 
-    private GermaNet germaNet;
+    private final Log logger = LogFactory.getLog(getClass());
+
+    private final GermaNet germaNet;
     private String namespace;
 
     /**
@@ -63,7 +72,7 @@ class IliLoader {
         XMLStreamReader parser = factory.createXMLStreamReader(in);
         int event;
         String nodeName;
-        System.out.println("Loading " +
+        logger.debug("Loading " +
                             iliFile.getName() + "...");
 
         //Parse entire file, looking for ili record start elements
@@ -83,7 +92,7 @@ class IliLoader {
             }
         }
         parser.close();
-        System.out.println("Done.");
+        logger.debug("Done.");
     }
 
     /**
@@ -97,7 +106,7 @@ class IliLoader {
         XMLStreamReader parser = factory.createXMLStreamReader(inputStream);
         int event;
         String nodeName;
-        System.out.println("Loading input stream interLingualIndex_DE-EN.xml...");
+        logger.debug("Loading input stream interLingualIndex_DE-EN.xml...");
 
         //Parse entire file, looking for ili record start elements
         while (parser.hasNext()) {
@@ -116,7 +125,7 @@ class IliLoader {
             }
         }
         parser.close();
-        System.out.println("Done.");
+        logger.debug("Done.");
     }
 
     /**
@@ -144,7 +153,7 @@ class IliLoader {
         pwn20Id = parser.getAttributeValue(namespace, GermaNet.XML_PWN20_ID);
         pwn30Id = parser.getAttributeValue(namespace, GermaNet.XML_PWN30_ID);
         pwn20paraphrase = parser.getAttributeValue(namespace, GermaNet.XML_PWN20_PARAPHRASE);
-        
+
         source = parser.getAttributeValue(namespace, GermaNet.XML_SOURCE);
 
         // process this lexUnit

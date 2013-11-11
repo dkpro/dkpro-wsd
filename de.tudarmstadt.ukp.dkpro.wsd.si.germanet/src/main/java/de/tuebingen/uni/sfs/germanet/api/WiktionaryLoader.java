@@ -1,31 +1,40 @@
-/*
+/**
  * Copyright (C) 2012 Department of General and Computational Linguistics,
  * University of Tuebingen
  *
- * This file is part of the Java API to GermaNet.
+ * Copyright 2013
+ * Ubiquitous Knowledge Processing (UKP) Lab
+ * Technische Universität Darmstadt
  *
- * The Java API to GermaNet is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * The Java API to GermaNet is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this API; if not, see <http://www.gnu.org/licenses/>.
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.util.List;
+
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Load <code>WiktionaryParaphrases</code> into a specified <code>GermaNet</code> object.
@@ -35,7 +44,9 @@ import javax.xml.stream.XMLStreamReader;
  */
 class WiktionaryLoader {
 
-    private GermaNet germaNet;
+    private final Log logger = LogFactory.getLog(getClass());
+
+    private final GermaNet germaNet;
     private String namespace;
     private File wikiDir;
 
@@ -67,10 +78,10 @@ class WiktionaryLoader {
                     + this.wikiDir.getPath() + "\"");
         }
 
-        for (int i = 0; i < wikiFiles.length; i++) {
-            System.out.println("Loading "
-                    + wikiFiles[i].getName() + "...");
-            InputStream in = new FileInputStream(wikiFiles[i]);
+        for (File wikiFile : wikiFiles) {
+            logger.debug("Loading "
+                    + wikiFile.getName() + "...");
+            InputStream in = new FileInputStream(wikiFile);
             XMLInputFactory factory = XMLInputFactory.newInstance();
             XMLStreamReader parser = factory.createXMLStreamReader(in);
             int event;
@@ -96,7 +107,7 @@ class WiktionaryLoader {
             parser.close();
         }
 
-        System.out.println("Done.");
+        logger.debug("Done.");
 
 
     }
@@ -114,7 +125,7 @@ class WiktionaryLoader {
 
         for (int i = 0; i < inputStreams.size(); i++) {
             if (xmlNames.get(i).startsWith("wiktionary")) {
-                System.out.println("Loading input stream "
+                logger.debug("Loading input stream "
                         + xmlNames.get(i) + "...");
                 XMLInputFactory factory = XMLInputFactory.newInstance();
                 XMLStreamReader parser = factory.createXMLStreamReader(inputStreams.get(i));
@@ -142,7 +153,7 @@ class WiktionaryLoader {
             }
         }
 
-        System.out.println("Done.");
+        logger.debug("Done.");
 
 
     }
