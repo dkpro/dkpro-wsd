@@ -61,7 +61,6 @@ public class UkbDictionary extends AbstractDictionary{
 		String line;
 		String[] lineArray;
 		List<String[]> entities;
-		int lineCounter = 0;
 //		Timer timer = new Timer(9615853);
 		while((line = reader.readLine()) != null){
 
@@ -87,12 +86,14 @@ public class UkbDictionary extends AbstractDictionary{
 				}
 				mentionMap.put(lineArray[0].toLowerCase(), entities);
 			}
-			lineCounter++;
-//			if(lineCounter%100000 == 0){
-//				System.out.println(timer.getStatus(lineCounter));
-//			}
 		}
 		reader.close();
 	}
+
+    @Override
+    public boolean containsTarget(String senseId)
+    {
+        return targetMap.containsKey(senseId);
+    }
 
 }

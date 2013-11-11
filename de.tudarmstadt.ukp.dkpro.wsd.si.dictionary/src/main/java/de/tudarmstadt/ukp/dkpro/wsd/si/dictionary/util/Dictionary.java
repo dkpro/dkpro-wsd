@@ -56,5 +56,7 @@ public interface Dictionary {
 	public abstract int getTargetSize();
 
 	public abstract long getNumberOfMentionEntityPairs();
+	
+	public abstract boolean containsTarget(String senseId);
 
 }

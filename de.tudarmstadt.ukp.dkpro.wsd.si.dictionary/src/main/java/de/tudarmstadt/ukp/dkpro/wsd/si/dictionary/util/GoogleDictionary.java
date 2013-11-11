@@ -66,7 +66,6 @@ public class GoogleDictionary extends AbstractDictionary {
 		boolean inKB;
 		boolean isTranslation;
 		//		Timer timer = new Timer(297073139);
-		long current = 0;
 		while((line = reader.readLine()) != null){
 			lineArray = line.split("\t");
 
@@ -106,12 +105,14 @@ public class GoogleDictionary extends AbstractDictionary {
 				}
 
 			}
-			current++;
-			//			if(current%100000 == 0){
-			//				System.out.println(timer.getStatus(current));
-			//			}
 		}
 
 		reader.close();
 	}
+
+    @Override
+    public boolean containsTarget(String senseId)
+    {
+        return targetMap.containsKey(senseId);
+    }
 }
