@@ -30,15 +30,15 @@ import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 import org.apache.uima.resource.ExternalResourceDescription;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.RandomSenseBaseline;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.RandomSenseBaseline;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorIndividualBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.MultipleExactMatchEvaluator;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2AWReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
 import de.tudarmstadt.ukp.dkpro.wsd.io.writer.WSDWriter;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSenseKeySenseInventoryResource;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2AWReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource.WordNetSenseKeySenseInventoryResource;
 
 /**
  * This class illustrates a pipeline which runs a WSD algorithm on the

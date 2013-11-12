@@ -24,7 +24,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.exception.ResourceLoaderException;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmDocumentBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;

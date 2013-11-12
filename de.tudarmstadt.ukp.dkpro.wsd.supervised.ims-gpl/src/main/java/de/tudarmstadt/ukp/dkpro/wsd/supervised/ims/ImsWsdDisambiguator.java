@@ -46,7 +46,7 @@ import sg.edu.nus.comp.nlp.ims.util.COpenNLPPOSTagger;
 import sg.edu.nus.comp.nlp.ims.util.COpenNLPSentenceSplitter;
 import sg.edu.nus.comp.nlp.ims.util.CWordNetSenseIndex;
 import sg.edu.nus.comp.nlp.ims.util.ISenseIndex;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmDocumentBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 

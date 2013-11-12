@@ -30,21 +30,21 @@ import org.apache.uima.collection.CollectionReader;
 import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedLesk;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.SecondObjects;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.overlap.PairedOverlap;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.MostFrequentSenseBaseline;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorContextPOS;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorIndividualPOS;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
-import de.tudarmstadt.ukp.dkpro.wsd.candidates.WordNetSenseKeyToSynset;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.SingleExactMatchEvaluatorText;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.algorithm.SimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.resource.WSDResourceSimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.SecondObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.PairedOverlap;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualPOS;
-import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceSimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
 import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrToWordNetSynsetOffset;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.LsrSenseInventoryResource;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorContextPOS;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualPOS;
+import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.resource.LsrSenseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.candidates.WordNetSenseKeyToSynset;
 
 /**
  * This class illustrates a pipeline which runs various WSD baselines on the

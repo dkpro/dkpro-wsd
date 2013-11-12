@@ -31,20 +31,20 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.MostFrequentSenseBaseline;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.SimplifiedLesk;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.NoNormalization;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.overlap.PairedOverlap;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.MostFrequentSenseBaseline;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorContextPOS;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorIndividualPOS;
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseMapper;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.EvaluationTableHTML;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.SingleExactMatchEvaluatorHTML;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Semeval1AWReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.algorithm.SimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.resource.WSDResourceSimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.NoNormalization;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.PairedOverlap;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualPOS;
-import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceSimplifiedLesk;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.WordNetSenseKeySenseInventoryResource;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorContextPOS;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorIndividualPOS;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Semeval1AWReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource.WordNetSenseKeySenseInventoryResource;
 
 /**
  * A sample pipeline which disambiguates a subset of the Semeval-1 English

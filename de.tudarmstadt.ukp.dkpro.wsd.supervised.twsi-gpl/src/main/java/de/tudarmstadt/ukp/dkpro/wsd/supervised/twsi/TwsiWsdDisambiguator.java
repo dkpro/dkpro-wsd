@@ -30,7 +30,7 @@ import de.tudarmstadt.langtech.substituter.Substitution;
 import de.tudarmstadt.langtech.substituter.settings.Configuration;
 import de.tudarmstadt.langtech.substituter.util.Util;
 import de.tudarmstadt.langtech.viterbitagger.Viterbitagger;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmDocumentTextBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentTextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.twsi.TwsiSenseInventory;
