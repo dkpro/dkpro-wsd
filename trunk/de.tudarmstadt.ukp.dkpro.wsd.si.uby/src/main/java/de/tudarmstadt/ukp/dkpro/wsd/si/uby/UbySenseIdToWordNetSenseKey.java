@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
 
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseConverter;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
-import de.tudarmstadt.ukp.dkpro.wsd.si.resource.UbySenseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.si.uby.resource.UbySenseInventoryResource;
 
 /**
  * Converts all Uby sense IDs to WordNet sense keys.

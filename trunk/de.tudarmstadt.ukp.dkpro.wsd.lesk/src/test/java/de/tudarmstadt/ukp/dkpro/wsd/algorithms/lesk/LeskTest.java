@@ -29,6 +29,8 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.algorithm.Lesk;
+
 public class LeskTest
 {
     List<String> s1 = Arrays.asList("foo bar bar".split(" "));

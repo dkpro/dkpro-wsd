@@ -23,7 +23,7 @@ import java.util.Map;
 
 import org.apache.uima.fit.component.Resource_ImplBase;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmCollectiveBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmCollectiveBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 

@@ -26,6 +26,16 @@ import java.util.List;
 
 import org.junit.Test;
 
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.FirstObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.FirstUniqueObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.MostObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.MostUniqueObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.NoNormalization;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.NormalizationStrategy;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.ProductMagnitude;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.TotalObjects;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.TotalUniqueObjects;
+
 
 /**
  * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>

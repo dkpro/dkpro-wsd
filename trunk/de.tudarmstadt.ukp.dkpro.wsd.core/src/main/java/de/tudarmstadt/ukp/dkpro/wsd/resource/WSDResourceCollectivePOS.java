@@ -22,7 +22,7 @@ import java.util.Collection;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.wsd.Pair;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmCollectivePOS;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmCollectivePOS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
