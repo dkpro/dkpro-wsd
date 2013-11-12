@@ -29,51 +29,55 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.junit.Ignore;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.linkbased.WikipediaRelatednessMethod;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorCollectiveBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.linkbased.algorithm.WikipediaRelatednessMethod;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectiveBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.LinkDatabaseInventoryResource;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorCollectiveBasic;
 
 /**
- * This disambiguator uses the LinkDatabase as the sense inventory and returns the highest ranked sense by the link measure
+ * This disambiguator uses the LinkDatabase as the sense inventory and returns
+ * the highest ranked sense by the link measure
+ *
  * @author nico.erbs@gmail.com
  *
  */
-public class LinkDatabaseLinkMeasureDisambiguator extends Disambiguator_ImplBase {
-	
-	
-	@Override
-	@Ignore
-	protected AnalysisEngineDescription createDisambiguationEngine()
-			throws ResourceInitializationException {
-		
-		List<AnalysisEngineDescription> components = new ArrayList<AnalysisEngineDescription>();
-		
-		components.add(getPreprocessingEngineDescritpion());
-		
+public class LinkDatabaseLinkMeasureDisambiguator
+    extends Disambiguator_ImplBase
+{
+
+    @Override
+    @Ignore
+    protected AnalysisEngineDescription createDisambiguationEngine()
+        throws ResourceInitializationException
+    {
+
+        List<AnalysisEngineDescription> components = new ArrayList<AnalysisEngineDescription>();
+
+        components.add(getPreprocessingEngineDescritpion());
+
         ExternalResourceDescription linkDatabase = createExternalResourceDescription(
                 LinkDatabaseInventoryResource.class,
                 LinkDatabaseInventoryResource.PARAM_RESOURCE_HOST, "localhost",
-                LinkDatabaseInventoryResource.PARAM_RESOURCE_DATABASE, "linkdatabase_wikipedia_en_20100615",
-                LinkDatabaseInventoryResource.PARAM_SENSE_INVENTORY_NAME, "LinkDatabase_20100615");
+                LinkDatabaseInventoryResource.PARAM_RESOURCE_DATABASE,
+                "linkdatabase_wikipedia_en_20100615",
+                LinkDatabaseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
+                "LinkDatabase_20100615");
 
         ExternalResourceDescription linkmeasureResource = createExternalResourceDescription(
-        		WSDResourceCollectiveBasic.class,
-        		WSDResourceCollectiveBasic.SENSE_INVENTORY_RESOURCE,
-	            linkDatabase, WSDResourceCollectiveBasic.DISAMBIGUATION_METHOD,
-	            WikipediaRelatednessMethod.class.getName());
+                WSDResourceCollectiveBasic.class,
+                WSDResourceCollectiveBasic.SENSE_INVENTORY_RESOURCE,
+                linkDatabase, WSDResourceCollectiveBasic.DISAMBIGUATION_METHOD,
+                WikipediaRelatednessMethod.class.getName());
 
-	    AnalysisEngineDescription linkmeasure = createEngineDescription(
-	            WSDAnnotatorCollectiveBasic.class,
-	            WSDAnnotatorCollectiveBasic.WSD_ALGORITHM_RESOURCE,
-	            linkmeasureResource);
-	    
-	    components.add(linkmeasure);
+        AnalysisEngineDescription linkmeasure = createEngineDescription(
+                WSDAnnotatorCollectiveBasic.class,
+                WSDAnnotatorCollectiveBasic.WSD_ALGORITHM_RESOURCE,
+                linkmeasureResource);
 
-		
-		return createEngineDescription(components.toArray(new AnalysisEngineDescription[components.size()]));
-	}
-	
+        components.add(linkmeasure);
 
+        return createEngineDescription(components
+                .toArray(new AnalysisEngineDescription[components.size()]));
+    }
 
 }
