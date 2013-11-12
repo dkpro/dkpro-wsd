@@ -28,7 +28,7 @@
 			<plugin>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
-					<excludePackageNames>de.tudarmstadt.ukp.dkpro.testing</excludePackageNames>
+					<excludePackageNames>de.tudarmstadt.ukp.dkpro.wsd.testing</excludePackageNames>
 				</configuration>
 			</plugin>
 		</plugins>

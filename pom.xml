@@ -192,12 +192,6 @@
 							</execution>
 						</executions>
 					</plugin>
-					<plugin>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<configuration>
-							<excludePackageNames>de.tudarmstadt.ukp.dkpro.wsd.testing</excludePackageNames>
-						</configuration>
-					</plugin>
 				</plugins>
 			</build>
 		</profile>
