@@ -36,6 +36,7 @@ import edu.uci.ics.jung.graph.Graph;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
+@Ignore
 public class GermaNetLexUnitSenseInventoryTest
 {
 
