@@ -18,7 +18,7 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmDocumentTextBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentTextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
 /**

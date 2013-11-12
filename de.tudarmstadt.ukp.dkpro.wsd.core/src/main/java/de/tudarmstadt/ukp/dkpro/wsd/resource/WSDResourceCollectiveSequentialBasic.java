@@ -25,7 +25,7 @@ import java.util.Map;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmCollectiveSequentialBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmCollectiveSequentialBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
 /**

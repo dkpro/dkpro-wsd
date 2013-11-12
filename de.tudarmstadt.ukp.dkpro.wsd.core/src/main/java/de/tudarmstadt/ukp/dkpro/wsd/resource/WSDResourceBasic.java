@@ -22,7 +22,7 @@ import org.apache.log4j.Logger;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithm;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithm;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 
 /**

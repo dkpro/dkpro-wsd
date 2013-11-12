@@ -32,9 +32,9 @@ import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
 import org.junit.Test;
 
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.writer.SensevalAnswerKeyWriter;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.writer.SensevalAnswerKeyWriter;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 

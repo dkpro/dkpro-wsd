@@ -23,7 +23,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.resource;
 
 import java.util.Map;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.WSDAlgorithmContextBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmContextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
 /**

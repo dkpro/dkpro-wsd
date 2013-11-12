@@ -37,9 +37,9 @@ import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
 
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorBase.TieStrategy;
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
-import de.tudarmstadt.ukp.dkpro.wsd.wsdannotators.WSDAnnotatorBase.TieStrategy;
 
 /**
  * Collapses the confidence scores of senses in {@link WSDResult}s according to

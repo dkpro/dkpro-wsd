@@ -18,6 +18,6 @@
 
 /**
  * This package contains UIMA resources encapsulating the algorithm types
- * of {@link de.tudarmstadt.ukp.dkpro.wsd.algorithms}.
+ * of {@link de.tudarmstadt.ukp.dkpro.wsd.algorithm}.
  */
 package de.tudarmstadt.ukp.dkpro.wsd.resource;

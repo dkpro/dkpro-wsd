@@ -26,8 +26,8 @@ import org.apache.uima.collection.CollectionReader;
 import org.junit.Test;
 import org.apache.uima.fit.pipeline.SimplePipeline;
 
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.Senseval2LSReader;
-import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SensevalAnswerKeyReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
 
 /**
  * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>

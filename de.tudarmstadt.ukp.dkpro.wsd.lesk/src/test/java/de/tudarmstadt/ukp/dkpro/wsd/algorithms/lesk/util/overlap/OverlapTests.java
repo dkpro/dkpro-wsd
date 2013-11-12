@@ -26,6 +26,11 @@ import java.util.List;
 
 import org.junit.Test;
 
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.DotProduct;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.OverlapStrategy;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.PairedOverlap;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.SetOverlap;
+
 /**
  * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  */

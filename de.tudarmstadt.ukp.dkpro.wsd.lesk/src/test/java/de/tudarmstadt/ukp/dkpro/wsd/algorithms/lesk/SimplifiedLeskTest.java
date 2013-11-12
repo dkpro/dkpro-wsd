@@ -24,9 +24,10 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.normalization.NoNormalization;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.overlap.SetOverlap;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithms.lesk.util.tokenization.StringSplit;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.algorithm.SimplifiedLesk;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.normalization.NoNormalization;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.SetOverlap;
+import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.tokenization.StringSplit;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
