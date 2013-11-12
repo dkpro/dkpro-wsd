@@ -35,7 +35,7 @@ import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
-import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.writer.SensevalAnswerKeyWriter;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.writer.SensevalAnswerKeyWriter;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 

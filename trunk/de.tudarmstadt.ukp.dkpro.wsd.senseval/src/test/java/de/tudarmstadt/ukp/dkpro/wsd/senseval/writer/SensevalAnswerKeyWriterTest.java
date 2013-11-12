@@ -30,7 +30,7 @@ import org.apache.uima.fit.pipeline.SimplePipeline;
 
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
-import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.writer.SensevalAnswerKeyWriter;
+import de.tudarmstadt.ukp.dkpro.wsd.senseval.writer.SensevalAnswerKeyWriter;
 
 public class SensevalAnswerKeyWriterTest
 {
