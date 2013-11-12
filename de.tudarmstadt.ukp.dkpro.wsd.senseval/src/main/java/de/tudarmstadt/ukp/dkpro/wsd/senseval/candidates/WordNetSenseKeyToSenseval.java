@@ -16,7 +16,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-package de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.candidates;
+package de.tudarmstadt.ukp.dkpro.wsd.senseval.candidates;
 
 import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseConverter;
 

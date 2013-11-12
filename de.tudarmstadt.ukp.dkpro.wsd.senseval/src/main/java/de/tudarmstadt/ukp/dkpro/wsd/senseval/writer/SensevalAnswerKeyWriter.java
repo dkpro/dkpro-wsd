@@ -16,7 +16,7 @@
  * limitations under the License.
  ******************************************************************************/
 
-package de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.writer;
+package de.tudarmstadt.ukp.dkpro.wsd.senseval.writer;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
