@@ -35,96 +35,106 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.util.UkbDictionary;
 
 /**
- * An inventory for dictionaries that return disambiguations based on the document id/text
+ * An inventory for dictionaries that return disambiguations based on the
+ * document id/text
  *
  * @author nico.erbs@gmail.com
  *
  */
 public class UkbDocumentDependentDictionaryInventory
-	implements IDocumentDependentDictionary
+    implements IDocumentDependentDictionary
 {
 
-	private UkbDictionary dictionary;
+    private UkbDictionary dictionary;
 
-	public UkbDocumentDependentDictionaryInventory(String inputPath, String serializiblePath, String neededMentionsPath) throws FileNotFoundException, IOException
-	{
-		//Open the serialized version or create it from scratch
-		try{
-//			System.out.println("Trying to load dictionary from serializable.");
-			ObjectInputStream dictionaryReader =
-				new ObjectInputStream(
-						new BZip2CompressorInputStream(
-								new FileInputStream(serializiblePath)));
-				dictionary = (UkbDictionary) dictionaryReader.readObject();
-			dictionaryReader.close();
-//			System.out.println("Loaded dictionary from serializable.");
-		}
-		catch(Exception e){
-//			System.out.println("Trying to load dictionary from input.");
-			dictionary = new UkbDictionary(inputPath, neededMentionsPath);
-			System.out.println("Loaded dictionary from input.");
+    public UkbDocumentDependentDictionaryInventory(String inputPath,
+            String serializiblePath, String neededMentionsPath)
+        throws FileNotFoundException, IOException
+    {
+        // Open the serialized version or create it from scratch
+        try {
+            // System.out.println("Trying to load dictionary from serializable.");
+            ObjectInputStream dictionaryReader = new ObjectInputStream(
+                    new BZip2CompressorInputStream(new FileInputStream(
+                            serializiblePath)));
+            dictionary = (UkbDictionary) dictionaryReader.readObject();
+            dictionaryReader.close();
+            // System.out.println("Loaded dictionary from serializable.");
+        }
+        catch (Exception e) {
+            // System.out.println("Trying to load dictionary from input.");
+            dictionary = new UkbDictionary(inputPath, neededMentionsPath);
+            System.out.println("Loaded dictionary from input.");
 
-			ObjectOutputStream dictionaryWriter =
-				new ObjectOutputStream(
-						new BZip2CompressorOutputStream(
-								new FileOutputStream(serializiblePath)));
-				dictionaryWriter.writeObject(dictionary);
-			dictionaryWriter.close();
-//			System.out.println("Stored dictionary in serializable.");
-		}
+            ObjectOutputStream dictionaryWriter = new ObjectOutputStream(
+                    new BZip2CompressorOutputStream(new FileOutputStream(
+                            serializiblePath)));
+            dictionaryWriter.writeObject(dictionary);
+            dictionaryWriter.close();
+            // System.out.println("Stored dictionary in serializable.");
+        }
 
-	}
+    }
 
-	@Override
-	public Map<String, Double> getWeightedSenses(String docId, String sod)
-			throws SenseInventoryException {
+    @Override
+    public Map<String, Double> getWeightedSenses(String docId, String sod)
+        throws SenseInventoryException
+    {
 
-		return dictionary.getWeightedSenses(sod);
-	}
+        return dictionary.getWeightedSenses(sod);
+    }
 
-	@Override
-	public String getMostFrequentSense(String sod)
-			throws SenseInventoryException, UnsupportedOperationException {
-		return dictionary.getMostFrequentTarget(sod);
-	}
+    @Override
+    public String getMostFrequentSense(String sod)
+        throws SenseInventoryException, UnsupportedOperationException
+    {
+        return dictionary.getMostFrequentTarget(sod);
+    }
 
-	@Override
-	public String getMostFrequentSense(String sod, POS pos)
-			throws SenseInventoryException, UnsupportedOperationException {
-		return dictionary.getMostFrequentTarget(sod);
-	}
+    @Override
+    public String getMostFrequentSense(String sod, POS pos)
+        throws SenseInventoryException, UnsupportedOperationException
+    {
+        return dictionary.getMostFrequentTarget(sod);
+    }
 
     @Override
     public String getSenseDescription(String senseId)
-            throws SenseInventoryException {
-        if(dictionary.containsTarget(senseId)){
+        throws SenseInventoryException
+    {
+        if (dictionary.containsTarget(senseId)) {
             return "";
         }
-        else{
-            return null;
+        else {
+            throw new SenseInventoryException("invalid sense ID " + senseId);
         }
     }
 
-	@Override
-	public Map<String, List<String>> getSenseInventory()
-			throws SenseInventoryException {
+    @Override
+    public Map<String, List<String>> getSenseInventory()
+        throws SenseInventoryException
+    {
         throw new UnsupportedOperationException();
-	}
+    }
 
-	@Override
-	public String getSenseInventoryName() {
-		return "UkbDict";
-	}
+    @Override
+    public String getSenseInventoryName()
+    {
+        return "UkbDict";
+    }
 
-	@Override
-	public List<String> getSenses(String sod) throws SenseInventoryException {
-		return dictionary.getTargets(sod);
-	}
+    @Override
+    public List<String> getSenses(String sod)
+        throws SenseInventoryException
+    {
+        return dictionary.getTargets(sod);
+    }
 
-	@Override
-	public List<String> getSenses(String sod, POS pos)
-			throws SenseInventoryException, UnsupportedOperationException {
-		return dictionary.getTargets(sod);
-	}
+    @Override
+    public List<String> getSenses(String sod, POS pos)
+        throws SenseInventoryException, UnsupportedOperationException
+    {
+        return dictionary.getTargets(sod);
+    }
 
 }

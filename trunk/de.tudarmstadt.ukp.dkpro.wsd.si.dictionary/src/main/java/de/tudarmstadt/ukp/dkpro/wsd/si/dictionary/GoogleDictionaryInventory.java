@@ -115,14 +115,16 @@ public class GoogleDictionaryInventory
 
     @Override
     public String getSenseDescription(String senseId)
-            throws SenseInventoryException {
-        if(dictionary.containsTarget(senseId)){
+        throws SenseInventoryException
+    {
+        if (dictionary.containsTarget(senseId)) {
             return "";
         }
-        else{
-            return null;
+        else {
+            throw new SenseInventoryException("invalid sense ID " + senseId);
         }
     }
+
     @Override
     public Map<String, List<String>> getSenseInventory()
         throws SenseInventoryException
