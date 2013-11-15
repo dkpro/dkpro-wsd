@@ -31,8 +31,15 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
 
 public class ImsWsdDisambiguatorTest {
 
-    @Test
-    @Ignore
+    /**
+     * Example how to use IMS WSD
+     * To run this example you need to install WordNet and install libraries from IMS.
+     * You'll find allr requires libraries at http://www.comp.nus.edu.sg/~nlp/sw/lib.tar.gz.
+     * Extract contents to the folder src/main/resources/ims/lib/ 
+     * @throws SenseInventoryException
+     */
+	@Test
+	@Ignore
     public void imsWsdDisambiguatorTest() throws SenseInventoryException {
         SenseInventory inventory;
         try {
