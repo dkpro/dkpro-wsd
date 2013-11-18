@@ -27,6 +27,7 @@ import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.Type;
 import org.apache.uima.collection.CollectionException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
@@ -40,8 +41,11 @@ import org.dom4j.io.SAXReader;
 
 import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
+import de.tudarmstadt.ukp.dkpro.core.api.resources.MappingProvider;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Paragraph;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.type.LexicalItemConstituent;
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
@@ -112,9 +116,15 @@ public class SemCorXMLReader
     @ConfigurationParameter(name = PARAM_SKIP_WITHOUT_POS, mandatory = false, description = "Whether to skip word forms without a POS tag", defaultValue = "true")
     private boolean skipWithoutPos;
 
+    public static final String PARAM_WRITE_CORE_ANNOTATIONS = "writeCoreAnnotations";
+    @ConfigurationParameter(name = PARAM_WRITE_CORE_ANNOTATIONS, mandatory = false, description = "Whether the reader should write core annotations like Token, Lemma, and POS (default=true)", defaultValue = "true")
+    private boolean shouldWriteCoreAnnotations;
+
     private int validWordFormCount;
     private int totalWordFormCount;
 
+    private MappingProvider mappingProvider;
+    
     @Override
     public void initialize(UimaContext aContext)
         throws ResourceInitializationException
@@ -122,6 +132,12 @@ public class SemCorXMLReader
         super.initialize(aContext);
         validWordFormCount = 0;
         totalWordFormCount = 0;
+        
+        mappingProvider = new MappingProvider();
+        mappingProvider.setDefault(MappingProvider.LOCATION, "classpath:/de/tudarmstadt/ukp/dkpro/" +
+                "core/api/lexmorph/tagset/en-brown-pos.map");
+        mappingProvider.setDefault(MappingProvider.BASE_TYPE, POS.class.getName());
+        mappingProvider.setDefault("pos.tagset", "default");
     }
 
     @Override
@@ -129,6 +145,8 @@ public class SemCorXMLReader
     public void getNext(CAS aCAS)
         throws IOException, CollectionException
     {
+        mappingProvider.configure(aCAS);
+        
         JCas jCas;
         try {
             jCas = aCAS.getJCas();
@@ -223,8 +241,11 @@ public class SemCorXMLReader
                 offset += nodeText.length();
                 sentenceText.append(nodeText);
 
-                if (node.getName() == null
-                        || node.getName().equals(ELEMENT_PUNCTUATION)) {
+                if (node.getName() == null) {
+                    continue;
+                }
+                
+                if (node.getName().equals(ELEMENT_PUNCTUATION)) {
                     logger.trace("Found punctuation " + node.getText());
                     continue;
                 }
@@ -244,6 +265,32 @@ public class SemCorXMLReader
                             + wordFormCount;
                 }
                 logger.trace("Found wf id: " + wordFormId);
+                
+                String lemma = wordForm.attributeValue(ATTR_LEMMA);
+                String pos = wordForm.attributeValue(ATTR_POS);
+
+                // write DKPro Core annotations Token, Lemma, and POS
+                if (shouldWriteCoreAnnotations) {
+                    Lemma lemmaAnno = null;
+                    if (lemma != null) {
+                        lemmaAnno = new Lemma(jCas, offset, oldOffset + nodeText.length());
+                        lemmaAnno.setValue(lemma);
+                        lemmaAnno.addToIndexes();
+                    }
+                    
+                    de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS posAnno = null;
+                    if (pos != null) {
+                        Type posTag = mappingProvider.getTagType(pos);
+                        posAnno = (de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS) jCas.getCas().createAnnotation(posTag, oldOffset, oldOffset + nodeText.length());
+                        posAnno.setPosValue(pos);
+                        posAnno.addToIndexes();
+                    }
+
+                    Token tokenAnno = new Token(jCas, oldOffset, oldOffset + nodeText.length());
+                    tokenAnno.setLemma(lemmaAnno);
+                    tokenAnno.setPos(posAnno);
+                    tokenAnno.addToIndexes();
+                }
 
                 // Skip <wf> elements which are not marked as "done"
                 if (skipUndone == true
@@ -285,14 +332,12 @@ public class SemCorXMLReader
                 }
 
                 // Skip word forms without a lemma
-                String lemma = wordForm.attributeValue(ATTR_LEMMA);
                 if (skipWithoutLemma == true && lemma == null) {
                     logger.warn("Sipping wf " + wordFormId + ": no lemma");
                     continue;
                 }
 
                 // Skip word forms without a POS
-                String pos = wordForm.attributeValue(ATTR_POS);
                 if (skipWithoutPos == true && pos == null) {
                     logger.warn("Skipping " + wordFormId + ": no pos");
                     continue;
