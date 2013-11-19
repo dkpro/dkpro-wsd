@@ -384,7 +384,7 @@ public class SemCorXMLReader
                     }
                 }
 
-                WSDResult wsdResult = new WSDResult(jCas);
+                WSDResult wsdResult = new WSDResult(jCas, oldOffset, oldOffset + nodeText.length());
                 wsdResult.setWsdItem(w);
                 wsdResult.setSenses(senseArray);
                 wsdResult.setSenseInventory(senseInventory);
