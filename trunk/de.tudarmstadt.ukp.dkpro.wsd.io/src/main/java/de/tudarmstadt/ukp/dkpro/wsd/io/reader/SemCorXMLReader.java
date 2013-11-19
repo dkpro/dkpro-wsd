@@ -133,9 +133,12 @@ public class SemCorXMLReader
         validWordFormCount = 0;
         totalWordFormCount = 0;
         
+        // FIXME brown tagset provider is only available from DKPro core 1.6.0 onwards
+        // once released, this should be changed back and tagmapping should be removed from the resources here
         mappingProvider = new MappingProvider();
-        mappingProvider.setDefault(MappingProvider.LOCATION, "classpath:/de/tudarmstadt/ukp/dkpro/" +
-                "core/api/lexmorph/tagset/en-brown-pos.map");
+//        mappingProvider.setDefault(MappingProvider.LOCATION, "classpath:/de/tudarmstadt/ukp/dkpro/" +
+//                "core/api/lexmorph/tagset/en-brown-pos.map");
+        mappingProvider.setDefault(MappingProvider.LOCATION, "classpath:/tagmapping/en-brown-pos.map");
         mappingProvider.setDefault(MappingProvider.BASE_TYPE, POS.class.getName());
         mappingProvider.setDefault("pos.tagset", "default");
     }
