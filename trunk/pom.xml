@@ -234,4 +234,26 @@
 			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-snapshots-local</url>
 		</snapshotRepository>
 	</distributionManagement>
+	<developers>
+		<developer>
+			<id>miller</id>
+			<name>Tristan Miller</name>
+			<email>miller@ukp.informatik.tu-darmstadt.de</email>
+			<url>http://www.nothingisreal.com/</url>
+			<organization>Ubiquitous Knowledge Processing Lab, Department of Computer Science, Technische Universität Darmstadt</organization>
+			<organizationUrl>http://www.ukp.tu-darmstadt.de/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A permissive free software licence</comments>
+		</license>
+	</licenses>
 </project>
