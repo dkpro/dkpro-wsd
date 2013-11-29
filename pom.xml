@@ -16,8 +16,7 @@
 	See the License for the specific language governing permissions and
 	limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<artifactId>dkpro-parent-pom</artifactId>
 		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
@@ -26,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-	<version>0.9.2-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<dependencies>
 		<dependency>
@@ -50,67 +49,67 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.alignment</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.evaluation</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.io</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.lesk</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.uby</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -120,12 +119,12 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.wsi</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.testing</artifactId>
-				<version>0.9.2-SNAPSHOT</version>
+				<version>1.0.0</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
@@ -201,9 +200,9 @@
 	<description>DKPro WSD is a UIMA framework for word sense disambiguation. It is designed to complement DKPro Core, a collection of software components for natural language processing (NLP) based on the Apache UIMA framework. </description>
 	<inceptionYear>2013</inceptionYear>
 	<scm>
-		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/trunk</url>
-		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</connection>
-		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</developerConnection>
+		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.0.0</url>
+		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.0.0</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.0.0</developerConnection>
 	</scm>
 	<issueManagement>
 		<system>Google Code</system>
