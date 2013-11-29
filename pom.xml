@@ -152,4 +152,26 @@
 			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
 		</repository>
 	</repositories>
+	<developers>
+		<developer>
+			<id>miller</id>
+			<name>Tristan Miller</name>
+			<email>miller@ukp.informatik.tu-darmstadt.de</email>
+			<url>http://www.nothingisreal.com/</url>
+			<organization>Ubiquitous Knowledge Processing Lab, Department of Computer Science, Technische Universität Darmstadt</organization>
+			<organizationUrl>http://www.ukp.tu-darmstadt.de/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The GNU General Public License, version 3.0</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+			<distribution>repo</distribution>
+			<comments>A free software licence</comments>
+		</license>
+	</licenses>
 </project>
