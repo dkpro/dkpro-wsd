@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<corpus lang="en">
+  <lexelt item="call.v" pos="v">
+    <instance id="call.1" docsrc="docsrc.1">
+      <context>Eggs <head sats="call_for:1">call</head> <sat id="call_for:1">for</sat> food.</context>
+    </instance>
+  </lexelt>
+  <lexelt item="animal.n" pos="n">
+    <instance id="animal.1" docsrc="docsrc.2">
+      <answer instance="animal.1" senseid="1" />
+      <context>Dave is an <head>animal</head>.</context>
+    </instance>
+  </lexelt>
+</corpus>

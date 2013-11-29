@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<corpus lang="en">
+<text id="d001">
+<sentence id="d001.s001">
+Eggs
+<instance id="d001.s001.t001" lemma="look" pos="v">looked</instance>
+like
+<instance id="d001.s001.t002" lemma="food" pos="n">food</instance>
+.
+</sentence>
+</text>
+<text id="d005">
+<sentence id="d005.s001">
+Hello
+.
+</sentence>
+<sentence id="d005.s002">
+He
+<instance id="d005.s002.t001" lemma="be" pos="v">is</instance>
+good
+.
+</sentence>
+</text>
+</corpus>

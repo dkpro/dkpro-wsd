@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus lang="en">
+<answer head="en1.s001.t3" senseid="1" />
+<text id="en1">
+<s>
+Eggs
+<head id="en1.s001.t3" sats="en1.s001.t4" lemma="look up">looked</head>
+<sat id="en1.s001.t4">up</sat>
+like
+<head id="en1.s001.t6">food</head>
+.
+</s>
+</text>
+<text id="en2">
+<s>
+Hello
+.
+</s>
+<s>
+He
+<head id="en1.s001.t3">is</head>
+good
+.
+</s>
+</text>
+</corpus>
