@@ -89,6 +89,8 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 			jcas.setDocumentText(inputText);
 			jcas.setDocumentLanguage(language);
 
+
+            createEngine(getPreprocessingEngineDescription()).process(jcas);
 			getDisambiguationEngine().process(jcas);
 		}
 		catch (ResourceInitializationException e) {
@@ -172,7 +174,7 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 	 * @return preprocessing engine
 	 * @throws ResourceInitializationException
 	 */
-	protected AnalysisEngineDescription getPreprocessingEngineDescritpion() throws ResourceInitializationException{
+	protected AnalysisEngineDescription getPreprocessingEngineDescription() throws ResourceInitializationException{
 
 		List<AnalysisEngineDescription> preprocessing = new ArrayList<AnalysisEngineDescription>();
 		if(featurePath.equals(Token.class.getName())){

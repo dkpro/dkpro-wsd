@@ -53,8 +53,6 @@ public class LinkDatabaseLinkMeasureDisambiguator
 
         List<AnalysisEngineDescription> components = new ArrayList<AnalysisEngineDescription>();
 
-        components.add(getPreprocessingEngineDescritpion());
-
         ExternalResourceDescription linkDatabase = createExternalResourceDescription(
                 LinkDatabaseInventoryResource.class,
                 LinkDatabaseInventoryResource.PARAM_RESOURCE_HOST, "localhost",
