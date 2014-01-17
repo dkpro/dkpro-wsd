@@ -275,7 +275,7 @@ public abstract class AbstractSingleExactMatchEvaluator
      * @param goldResult
      * @return
      */
-    double getMatchingScore(WSDResult testResult, WSDResult goldResult)
+    protected double getMatchingScore(WSDResult testResult, WSDResult goldResult)
     {
         double confidence = 0.0;
         for (int i = 0; i < goldResult.getSenses().size(); i++) {
