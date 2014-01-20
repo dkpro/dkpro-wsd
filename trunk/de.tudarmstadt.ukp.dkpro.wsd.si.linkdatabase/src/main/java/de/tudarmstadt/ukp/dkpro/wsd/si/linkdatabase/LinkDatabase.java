@@ -21,8 +21,8 @@ package de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase;
 import java.util.List;
 import java.util.Map;
 
-import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseWeightedInventory;
 
 /**
  * A link database is a specialized database containing link information
@@ -30,9 +30,9 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * @author nico.erbs@gmail.com
  *
  */
-public interface LinkDatabase extends SenseInventory {
+public interface LinkDatabase extends SenseWeightedInventory {
 	
-	public Map<String,Double> getWeightedSenses(String sod) throws SenseInventoryException;
+    public Map<String,Double> getWeightedSenses(String sod) throws SenseInventoryException;
 
 	public List<String> getIncomingLinks(String target)	throws SenseInventoryException, UnsupportedOperationException;
 	
