@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 
+import org.apache.log4j.Logger;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
@@ -67,7 +68,7 @@ public class WebCAGeXMLReader
     private static final String ATTR_LUIDS = "luids";
     private static final String ATTR_POS = "pos";
 
-    // private final Logger logger = Logger.getLogger(getClass());
+    private final Logger logger = Logger.getLogger(getClass());
 
     public static final String PARAM_SENSE_INVENTORY = "senseInventory";
     @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "GermaNet_7.0")
@@ -95,8 +96,10 @@ public class WebCAGeXMLReader
             SAXReader reader = new SAXReader();
             NullEntityResolver resolver = new NullEntityResolver();
             reader.setEntityResolver(resolver);
-            InputStream is = new BufferedInputStream(nextFile()
-                    .getInputStream());
+            Resource nextFile = nextFile();
+
+            logger.info("Reading " + nextFile.getLocation());
+            InputStream is = new BufferedInputStream(nextFile.getInputStream());
             try {
                 document = reader.read(is);
             }
