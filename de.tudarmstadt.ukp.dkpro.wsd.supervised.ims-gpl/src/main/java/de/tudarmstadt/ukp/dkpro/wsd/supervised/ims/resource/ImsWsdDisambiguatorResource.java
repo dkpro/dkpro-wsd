@@ -18,19 +18,22 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.resource;
 
+import java.io.IOException;
 import java.util.Map;
+
+import net.didion.jwnl.JWNLException;
 
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
 
-import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentTextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.ImsWsdDisambiguator;
 
 
 public class ImsWsdDisambiguatorResource
-	extends WSDResourceDocumentBasic
+	extends WSDResourceDocumentTextBasic
 {
     public static final String PARAM_SENSE_INVENTORY = "SenseInventory";
     @ExternalResource(key = PARAM_SENSE_INVENTORY)
@@ -53,6 +56,23 @@ public class ImsWsdDisambiguatorResource
 	{
 		super.afterResourcesInitialized();
 
-		wsdAlgorithm = new ImsWsdDisambiguator(senseInventory);
+		try {
+            wsdAlgorithm = new ImsWsdDisambiguator(senseInventory);
+        }
+        catch (JWNLException e) {
+            throw new ResourceInitializationException(e);
+        }
+        catch (IOException e) {
+            throw new ResourceInitializationException(e);
+        }
+        catch (InstantiationException e) {
+            throw new ResourceInitializationException(e);
+        }
+        catch (IllegalAccessException e) {
+            throw new ResourceInitializationException(e);
+        }
+        catch (ClassNotFoundException e) {
+            throw new ResourceInitializationException(e);
+        }
 	}
 }

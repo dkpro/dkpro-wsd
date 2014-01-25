@@ -18,13 +18,17 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.supervised.ims;
 
-import junit.framework.Assert;
+import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+
+import net.didion.jwnl.JWNLException;
 
 import org.junit.Ignore;
 import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.exception.ResourceLoaderException;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentTextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
@@ -37,10 +41,15 @@ public class ImsWsdDisambiguatorTest {
      * You'll find allr requires libraries at http://www.comp.nus.edu.sg/~nlp/sw/lib.tar.gz.
      * Extract contents to the folder src/main/resources/ims/lib/ 
      * @throws SenseInventoryException
+     * @throws ClassNotFoundException 
+     * @throws IllegalAccessException 
+     * @throws InstantiationException 
+     * @throws IOException 
+     * @throws JWNLException 
      */
 	@Test
 	@Ignore
-    public void imsWsdDisambiguatorTest() throws SenseInventoryException {
+	public void imsWsdDisambiguatorTest() throws SenseInventoryException, JWNLException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException {
         SenseInventory inventory;
         try {
             inventory = new LsrSenseInventory("wordnet", "en");
@@ -48,11 +57,11 @@ public class ImsWsdDisambiguatorTest {
             throw new SenseInventoryException(e);
         }
         
-        WSDAlgorithmDocumentBasic wsdAlgo = new ImsWsdDisambiguator(inventory);
+        WSDAlgorithmDocumentTextBasic wsdAlgo = new ImsWsdDisambiguator(inventory);
 
-        String input = "I got money in the bank.";
-        String output = "{I 2x40x00xx 1x21x00xx in the 1x14x00xx .\n=1.0}";
-        
-        Assert.assertEquals(output, wsdAlgo.getDisambiguation(input).toString());
-    }
+        String input = "I got money in the bank. Lucie sits on the bank in the park.";
+        String output = "I 2x40x00xx 1x21x00xx in the 1x14x00xx .\nLucie 2x35x00xx on the 1x14x00xx in the 1x15x00xx .\n";
+
+        assertEquals(output,wsdAlgo.getDisambiguation(input));
+	}
 }

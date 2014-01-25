@@ -24,10 +24,9 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Hashtable;
-import java.util.Map;
 
+import net.didion.jwnl.JWNLException;
 import sg.edu.nus.comp.nlp.ims.classifiers.CLibLinearEvaluator;
 import sg.edu.nus.comp.nlp.ims.classifiers.IEvaluator;
 import sg.edu.nus.comp.nlp.ims.corpus.ACorpus;
@@ -46,17 +45,17 @@ import sg.edu.nus.comp.nlp.ims.util.COpenNLPPOSTagger;
 import sg.edu.nus.comp.nlp.ims.util.COpenNLPSentenceSplitter;
 import sg.edu.nus.comp.nlp.ims.util.CWordNetSenseIndex;
 import sg.edu.nus.comp.nlp.ims.util.ISenseIndex;
-import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmDocumentTextBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 
 public class ImsWsdDisambiguator
-    implements WSDAlgorithmDocumentBasic
+implements WSDAlgorithmDocumentTextBasic
 {
-	private static String BASE_DIR;
-	private static String LIB_DIR;
+    private static String BASE_DIR;
+    private static String LIB_DIR;
 
-	// default instance extractor class name
+    // default instance extractor class name
     protected static final String INSTANCEEXTRACTOR = CInstanceExtractor.class.getName();
     // default feature extractor class name
     protected static final String FEATUREEXTRACTOR = CAllWordsFeatureExtractorCombination.class.getName();
@@ -78,81 +77,77 @@ public class ImsWsdDisambiguator
     SenseInventory inventory;
 
 
-    public ImsWsdDisambiguator(SenseInventory inventory)
-	{
-		this.inventory = inventory;
-		init();
-	}
-
-    private void init()
+    public ImsWsdDisambiguator(SenseInventory inventory) throws JWNLException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException
     {
-    	try {
-			BASE_DIR = "src/main/resources/ims/";
-			LIB_DIR = BASE_DIR + "lib/";
+        this.inventory = inventory;
+        init();
+    }
 
-	        String modelDir = BASE_DIR + "models/";
-	        String statDir = "target/ims_stat/";
-	        String saveDir = "target/ims_results/";
-	        String evaluatorName = CLibLinearEvaluator.class.getName();
-	        String writerName = CPlainCorpusInlineWriter.class.getName();
+    private void init() throws JWNLException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException
+    {
+        BASE_DIR = "src/main/resources/ims/";
+        LIB_DIR = BASE_DIR + "lib/";
 
-	        CJWNL.initial(new FileInputStream(new File(BASE_DIR + "prop.xml")));
+        String modelDir = BASE_DIR + "models/";
+        String statDir = "target/ims_stat/";
+        String saveDir = "target/ims_results/";
+        String evaluatorName = CLibLinearEvaluator.class.getName();
+        String writerName = CPlainCorpusInlineWriter.class.getName();
 
-	        COpenNLPSentenceSplitter.setDefaultModel(LIB_DIR + "EnglishSD.bin.gz");
-	        COpenNLPPOSTagger.setDefaultModel(LIB_DIR + "tag.bin.gz");
-	        COpenNLPPOSTagger.setDefaultPOSDictionary(LIB_DIR + "tagdict.txt");
+        CJWNL.initial(new FileInputStream(new File(LIB_DIR + "prop.xml")));
 
-	        IEvaluator evaluator = (IEvaluator) Class.forName(evaluatorName).newInstance();
-	        evaluator.setOptions(new String[]{"-m", modelDir, "-s", statDir});
+        COpenNLPSentenceSplitter.setDefaultModel(LIB_DIR + "EnglishSD.bin.gz");
+        COpenNLPPOSTagger.setDefaultModel(LIB_DIR + "tag.bin.gz");
+        COpenNLPPOSTagger.setDefaultPOSDictionary(LIB_DIR + "tagdict.txt");
 
-	        ISenseIndex senseIndex = new CWordNetSenseIndex(LIB_DIR + "dict/index.sense");
-	        evaluator.setSenseIndex(senseIndex);
+        IEvaluator evaluator = (IEvaluator) Class.forName(evaluatorName).newInstance();
+        evaluator.setOptions(new String[]{"-m", modelDir, "-s", statDir});
 
-	        IResultWriter writer = (IResultWriter) Class.forName(writerName).newInstance();
-	        writer.setOptions(new String[] { "-s", saveDir });
+        ISenseIndex senseIndex = new CWordNetSenseIndex(LIB_DIR + "dict/index.sense");
+        evaluator.setSenseIndex(senseIndex);
 
-	        setEvaluator(evaluator);
-	        setWriter(writer);
+        IResultWriter writer = (IResultWriter) Class.forName(writerName).newInstance();
+        writer.setOptions(new String[] { "-s", saveDir });
 
-	        setFeatureExtractorName("sg.edu.nus.comp.nlp.ims.feature.CAllWordsFeatureExtractorCombination");
-	        setCorpusClassName("sg.edu.nus.comp.nlp.ims.corpus.CAllWordsPlainCorpus");
-		}
-		catch (Exception e) {
-			System.err.println("Could not initialize " + this.getClass().getSimpleName());
-		}
+        setEvaluator(evaluator);
+        setWriter(writer);
+
+        setFeatureExtractorName("sg.edu.nus.comp.nlp.ims.feature.CAllWordsFeatureExtractorCombination");
+        setCorpusClassName("sg.edu.nus.comp.nlp.ims.corpus.CAllWordsPlainCorpus");
+
     }
 
     public void test(String text)
-    	throws SenseInventoryException
-    {
+            throws SenseInventoryException
+            {
         IInstanceExtractor instExtractor;
         IFeatureExtractor featExtractor;
         ACorpus corpus;
-		try {
-			instExtractor = (IInstanceExtractor) Class.forName(this.m_InstanceExtractorName).newInstance();
-			featExtractor = (IFeatureExtractor) Class.forName(this.m_FeatureExtractorName).newInstance();
-			corpus = (ACorpus) Class.forName(this.m_CorpusName).newInstance();
-		}
-		catch (InstantiationException e) {
-			throw new SenseInventoryException(e);
-		}
-		catch (IllegalAccessException e) {
-			throw new SenseInventoryException(e);
-		}
-		catch (ClassNotFoundException e) {
-			throw new SenseInventoryException(e);
-		}
+        try {
+            instExtractor = (IInstanceExtractor) Class.forName(this.m_InstanceExtractorName).newInstance();
+            featExtractor = (IFeatureExtractor) Class.forName(this.m_FeatureExtractorName).newInstance();
+            corpus = (ACorpus) Class.forName(this.m_CorpusName).newInstance();
+        }
+        catch (InstantiationException e) {
+            throw new SenseInventoryException(e);
+        }
+        catch (IllegalAccessException e) {
+            throw new SenseInventoryException(e);
+        }
+        catch (ClassNotFoundException e) {
+            throw new SenseInventoryException(e);
+        }
 
         corpus.setSplit(false);
         corpus.setTokenized(false);
         corpus.setPOSTagged(false);
         corpus.setLemmatized(false);
         try {
-			corpus.load(new StringReader(text));
-		}
-		catch (Exception e) {
-			throw new SenseInventoryException(e);
-		}
+            corpus.load(new StringReader(text));
+        }
+        catch (Exception e) {
+            throw new SenseInventoryException(e);
+        }
 
         if (this.m_Writer != null && CPlainCorpusInlineWriter.class.isInstance(this.m_Writer)) {
             ((CPlainCorpusInlineWriter)this.m_Writer).setCorpus(corpus);
@@ -177,13 +172,13 @@ public class ImsWsdDisambiguator
             System.err.println(lexeltID);
             Object lexelt = lexelts.remove(lexeltID);
             try {
-				this.m_Results.add(this.m_Evaluator.evaluate(lexelt));
-			}
-			catch (Exception e) {
-				throw new SenseInventoryException(e);
-			}
+                this.m_Results.add(this.m_Evaluator.evaluate(lexelt));
+            }
+            catch (Exception e) {
+                throw new SenseInventoryException(e);
+            }
         }
-    }
+            }
 
     public void setEvaluator(IEvaluator p_Evaluator) {
         this.m_Evaluator = p_Evaluator;
@@ -206,47 +201,46 @@ public class ImsWsdDisambiguator
     }
 
     public void write()
-    	throws SenseInventoryException
-    {
+            throws SenseInventoryException
+            {
         try {
-			this.m_Writer.write(this.m_Results);
-		}
-		catch (IOException e) {
-			throw new SenseInventoryException(e);
-		}
-    }
+            this.m_Writer.write(this.m_Results);
+        }
+        catch (IOException e) {
+            throw new SenseInventoryException(e);
+        }
+            }
 
     public void clear() {
         this.m_Results.clear();
     }
 
     @Override
-    public Map<String, Double> getDisambiguation(String documentText)
+    public String getDisambiguation(String documentText)
         throws SenseInventoryException
     {
-    	Map<String, Double> disambiguation = new HashMap<String, Double>();
         test(documentText);
-        disambiguation.put(this.m_Writer.toString(this.m_Results), 1d);
+        String disambiguation = this.m_Writer.toString(this.m_Results);
         clear();
 
         return disambiguation;
     }
 
-	@Override
-	public String getDisambiguationMethod()
-	{
-		return this.getClass().getSimpleName();
-	}
+    @Override
+    public String getDisambiguationMethod()
+    {
+        return this.getClass().getSimpleName();
+    }
 
-	@Override
-	public SenseInventory getSenseInventory()
-	{
-		return inventory;
-	}
+    @Override
+    public SenseInventory getSenseInventory()
+    {
+        return inventory;
+    }
 
-	@Override
-	public void setSenseInventory(SenseInventory senseInventory)
-	{
-		this.inventory = senseInventory;
-	}
+    @Override
+    public void setSenseInventory(SenseInventory senseInventory)
+    {
+        this.inventory = senseInventory;
+    }
 }
