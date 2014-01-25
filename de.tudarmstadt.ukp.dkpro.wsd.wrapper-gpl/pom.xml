@@ -65,6 +65,17 @@
   			de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia
   		</artifactId>
   	</dependency>
+  	<dependency>
+  		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+  		<artifactId>
+  			de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl
+  		</artifactId>
+  	</dependency>
+  	<dependency>
+  		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+  		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
+  		<scope>test</scope>
+  	</dependency>
   </dependencies>
   <dependencyManagement>
   	<dependencies>
