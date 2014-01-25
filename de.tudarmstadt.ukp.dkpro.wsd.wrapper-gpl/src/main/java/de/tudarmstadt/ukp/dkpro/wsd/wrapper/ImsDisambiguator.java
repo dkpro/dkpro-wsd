@@ -29,19 +29,21 @@ import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.junit.Ignore;
 
-import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorCollectiveBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.linkbased.algorithm.WikipediaRelatednessMethod;
-import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectiveBasic;
-import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.LinkDatabaseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorBase;
+import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentTextBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.resource.LsrSenseInventoryResource;
+import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.ImsWsdDisambiguator;
+import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.annotator.ImsWSDAnnotator;
+import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.resource.ImsWsdDisambiguatorResource;
 
 /**
- * This disambiguator uses the LinkDatabase as the sense inventory and returns
- * the highest ranked sense by the link measure
+ * This disambiguator uses WordNet as the sense inventory and returns
+ * the highest ranked sense by IMS
  *
  * @author nico.erbs@gmail.com
  *
  */
-public class LinkDatabaseLinkMeasureDisambiguator
+public class ImsDisambiguator
     extends Disambiguator_ImplBase
 {
 
@@ -53,25 +55,25 @@ public class LinkDatabaseLinkMeasureDisambiguator
 
         List<AnalysisEngineDescription> components = new ArrayList<AnalysisEngineDescription>();
 
-        ExternalResourceDescription linkDatabase = createExternalResourceDescription(
-                LinkDatabaseInventoryResource.class,
-                LinkDatabaseInventoryResource.PARAM_RESOURCE_HOST, "localhost",
-                LinkDatabaseInventoryResource.PARAM_RESOURCE_DATABASE, "linkdatabase_wikipedia_en_20100615",
-                LinkDatabaseInventoryResource.PARAM_SENSE_INVENTORY_NAME, "LinkDatabase_20100615"
+        ExternalResourceDescription wordnet = createExternalResourceDescription(
+                LsrSenseInventoryResource.class,
+                LsrSenseInventoryResource.PARAM_RESOURCE_NAME,"wordnet",
+                LsrSenseInventoryResource.PARAM_RESOURCE_LANGUAGE,"en"
                 );
 
-        ExternalResourceDescription linkmeasureResource = createExternalResourceDescription(
-                WSDResourceCollectiveBasic.class,
-                WSDResourceCollectiveBasic.SENSE_INVENTORY_RESOURCE,
-                linkDatabase, WSDResourceCollectiveBasic.DISAMBIGUATION_METHOD,
-                WikipediaRelatednessMethod.class.getName());
+        ExternalResourceDescription imsResource = createExternalResourceDescription(
+                ImsWsdDisambiguatorResource.class,
+                WSDResourceDocumentTextBasic.SENSE_INVENTORY_RESOURCE, wordnet,
+                WSDResourceDocumentTextBasic.DISAMBIGUATION_METHOD,
+                ImsWsdDisambiguator.class.getName());
 
-        AnalysisEngineDescription linkmeasure = createEngineDescription(
-                WSDAnnotatorCollectiveBasic.class,
-                WSDAnnotatorCollectiveBasic.WSD_ALGORITHM_RESOURCE,
-                linkmeasureResource);
+        
+        AnalysisEngineDescription imsAnnotator = createEngineDescription(
+                ImsWSDAnnotator.class,
+                ImsWSDAnnotator.WSD_ALGORITHM_RESOURCE, imsResource,
+                WSDAnnotatorBase.PARAM_SET_SENSE_DESCRIPTIONS, false);
 
-        components.add(linkmeasure);
+        components.add(imsAnnotator);
 
         return createEngineDescription(components
                 .toArray(new AnalysisEngineDescription[components.size()]));
