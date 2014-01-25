@@ -74,7 +74,6 @@
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
   		<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
-  		<scope>test</scope>
   	</dependency>
   </dependencies>
   <dependencyManagement>
