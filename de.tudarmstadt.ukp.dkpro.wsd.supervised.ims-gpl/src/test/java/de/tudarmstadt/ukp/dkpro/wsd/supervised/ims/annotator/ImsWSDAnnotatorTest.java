@@ -64,7 +64,7 @@ public class ImsWSDAnnotatorTest extends AbstractWSDEvaluator
     }
 
     @Test
-//    @Ignore
+    @Ignore
     public void testDisambiguation() throws AnalysisEngineProcessException, ResourceInitializationException
     {        
         ExternalResourceDescription wordnet = createExternalResourceDescription(
