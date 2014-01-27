@@ -87,7 +87,7 @@ extends WSDAnnotatorBaseDocumentCollective
         return disambiguation;
                     }
 
-    private Map<String, String> getMapping( String documentText, String senseDisambiguatedText) throws SenseInventoryException
+    static Map<String, String> getMapping( String documentText, String senseDisambiguatedText) throws SenseInventoryException
     {
         Map<String, String> mapping = new HashMap<String, String>();
         //Todo This mapping should be improved

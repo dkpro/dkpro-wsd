@@ -25,6 +25,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Map;
+
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.util.JCasUtil;
@@ -38,6 +40,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorBase;
 import de.tudarmstadt.ukp.dkpro.wsd.evaluation.AbstractWSDEvaluator;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceDocumentTextBasic;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.resource.LsrSenseInventoryResource;
 import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.ImsWsdDisambiguator;
 import de.tudarmstadt.ukp.dkpro.wsd.supervised.ims.annotator.ImsWSDAnnotator;
@@ -47,7 +50,19 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
 public class ImsWSDAnnotatorTest extends AbstractWSDEvaluator
 {
-    
+
+    @Test
+    public void testMapping() throws SenseInventoryException
+    {
+      String input = "Lucy is in the sky with diamonds.";
+      String output = "1x05x00xx 2x42x03xx in the 1x17x00xx with 1x21x00xx .";
+      Map<String,String> mapping = ImsWSDAnnotator.getMapping(input, output);
+      assertNotNull(mapping);
+      assertEquals(4, mapping.size());
+      assertEquals("1x21x00xx", mapping.get("diamonds"));
+      
+    }
+
     @Test
     @Ignore
     public void testDisambiguation() throws AnalysisEngineProcessException, ResourceInitializationException
@@ -64,46 +79,46 @@ public class ImsWSDAnnotatorTest extends AbstractWSDEvaluator
                 WSDResourceDocumentTextBasic.DISAMBIGUATION_METHOD,
                 ImsWsdDisambiguator.class.getName());
 
-        
+
         AnalysisEngine imsAnnotator = createEngine(
                 ImsWSDAnnotator.class,
                 ImsWSDAnnotator.WSD_ALGORITHM_RESOURCE, imsResource,
                 WSDAnnotatorBase.PARAM_SET_SENSE_DESCRIPTIONS, false);
-                
+
         JCas jcas = imsAnnotator.newJCas();       
         jcas.setDocumentLanguage("en");
         jcas.setDocumentText("Lucy is in the sky with diamonds. She lives in a yellow submarine.\n She has starnge hair.");
         DocumentMetaData dmd = DocumentMetaData.create(jcas);
         dmd.setDocumentId("Test");
-        
+
         assertNotNull(jcas);
         //Lucy is in the sky with diamonds.
         //1x05x00xx 2x42x03xx in the 1x17x00xx with 1x21x00xx .
-        
+
         WSDItem wsdItem = new WSDItem(jcas, 0, 4);
         wsdItem.addToIndexes();
-        
+
         wsdItem = new WSDItem(jcas, 5, 7);
         wsdItem.addToIndexes();
-        
+
         wsdItem = new WSDItem(jcas, 8, 10);
         wsdItem.addToIndexes();
-        
+
         imsAnnotator.process(jcas);  
-        
+
         assertEquals(3,JCasUtil.select(jcas, WSDItem.class).size());
-        
+
         for(WSDItem item : JCasUtil.select(jcas, WSDItem.class)){
             assertTrue(getWSDResults(jcas, item).size()<=1);
             for(WSDResult wsdResult : getWSDResults(jcas, item)){
-               if(item.getCoveredText().equals("Lucy")){
-                   assertEquals("1x05x00xx", wsdResult.getBestSense().getId());
-                   assertEquals(wsdResult.getBestSense().getConfidence(),1d,.00001);
-               }
-               if(item.getCoveredText().equals("in")){
-                   assertNull(wsdResult.getBestSense());
-               }
-           }
+                if(item.getCoveredText().equals("Lucy")){
+                    assertEquals("1x05x00xx", wsdResult.getBestSense().getId());
+                    assertEquals(wsdResult.getBestSense().getConfidence(),1d,.00001);
+                }
+                if(item.getCoveredText().equals("in")){
+                    assertNull(wsdResult.getBestSense());
+                }
+            }
         }
     }
 }
