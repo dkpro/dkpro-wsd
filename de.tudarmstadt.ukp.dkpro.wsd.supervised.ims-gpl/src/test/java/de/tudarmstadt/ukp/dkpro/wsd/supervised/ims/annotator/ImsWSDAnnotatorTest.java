@@ -54,17 +54,17 @@ public class ImsWSDAnnotatorTest extends AbstractWSDEvaluator
     @Test
     public void testMapping() throws SenseInventoryException
     {
-      String input = "Lucy is in the sky with diamonds.";
-      String output = "1x05x00xx 2x42x03xx in the 1x17x00xx with 1x21x00xx .";
+      String input = "Lucy is in the sky with diamonds. She lives in a yellow submarine.\n\nShe has starnge hair.";
+      String output = "1x05x00xx 2x42x03xx in the 1x17x00xx with 1x21x00xx .\nShe 2x42x08xx in a 5x00x00xchromaticx00 1x06x00xx .\nShe 2x40x00xx starnge 1x08x00xx .";
       Map<String,String> mapping = ImsWSDAnnotator.getMapping(input, output);
       assertNotNull(mapping);
-      assertEquals(4, mapping.size());
+      assertEquals(9, mapping.size());
       assertEquals("1x21x00xx", mapping.get("diamonds"));
       
     }
 
     @Test
-    @Ignore
+//    @Ignore
     public void testDisambiguation() throws AnalysisEngineProcessException, ResourceInitializationException
     {        
         ExternalResourceDescription wordnet = createExternalResourceDescription(
