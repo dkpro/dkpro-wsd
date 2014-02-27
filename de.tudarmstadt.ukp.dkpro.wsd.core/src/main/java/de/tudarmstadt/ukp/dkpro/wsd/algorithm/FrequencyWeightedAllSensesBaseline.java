@@ -47,6 +47,7 @@ public class FrequencyWeightedAllSensesBaseline
     public Map<String, Double> getDisambiguation(String sod)
         throws SenseInventoryException
     {
+//        System.out.println(sod + "\t" + ((SenseWeightedInventory)inventory).getWeightedSenses(sod));
         return ((SenseWeightedInventory)inventory).getWeightedSenses(sod);
     }
 }
