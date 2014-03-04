@@ -10,7 +10,7 @@ This page lists the lexical semantic resources (sense inventories) most commonly
 
 Versions 1.5 to 3.1 of WordNet can be obtained from the [http://wordnet.princeton.edu/ WordNet home page].
 
-DKPro WSD can automatically convert between versions of WordNet.  In order to use this feature you need to obtain synset mapping files such as the [http://nlp.lsi.upc.edu/web/index.php?option=com_content&task=view&id=21&Itemid=57 WN-Map mappings] from the UPC TALP Research Center.
+DKPro WSD can automatically convert between versions of WordNet.  In order to use this feature you need to obtain synset mapping files such as the [http://www.talp.upc.edu/index.php/technology/resources/multilingual-lexicons-and-machine-translation-resources/multilingual-lexicons/98-wordnet-mappings WN-Map mappings] from the UPC TALP Research Center.
 
 To access WordNet through the `de.tudarmstadt.ukp.dkpro.wsd.si.wordnet` module, you need to prepare an [http://sourceforge.net/apps/trac/extjwnl/wiki/GettingStarted extJWNL properties file] which points to your WordNet installation.
 
