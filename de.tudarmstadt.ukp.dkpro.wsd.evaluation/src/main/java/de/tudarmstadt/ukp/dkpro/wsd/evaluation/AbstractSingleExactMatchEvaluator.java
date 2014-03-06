@@ -50,6 +50,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * It is assumed that sense weights given by the test algorithm are normalized.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * 		   Andriy Nadolskyy
  */
 public abstract class AbstractSingleExactMatchEvaluator
     extends AbstractWSDEvaluator
@@ -62,9 +63,9 @@ public abstract class AbstractSingleExactMatchEvaluator
     @ConfigurationParameter(name = PARAM_TEST_ALGORITHM, mandatory = true, description = "The test algorithm to be evaluated")
     protected String testAlgorithm;
 
-    public static final String PARAM_BACKOFF_ALGORITHM = "backoffAlgorithm";
-    @ConfigurationParameter(name = PARAM_BACKOFF_ALGORITHM, mandatory = false, description = "The backoff algorithm to use when the test algorithm is unable to make a sense assignment")
-    protected String backoffAlgorithm;
+    public static final String PARAM_BACKOFF_ALGORITHMS = "backoffAlgorithm";
+    @ConfigurationParameter(name = PARAM_BACKOFF_ALGORITHMS, mandatory = false, description = "The backoff algorithms to use when the test algorithm is unable to make a sense assignment")
+    protected String backoffAlgorithms[];
 
     public static final String PARAM_PROPERTIES_OUTPUT = "output";
     @ConfigurationParameter(name = PARAM_PROPERTIES_OUTPUT, mandatory = false, description = "An output location for the properties file for use with DKPro Lab")
@@ -86,6 +87,7 @@ public abstract class AbstractSingleExactMatchEvaluator
     protected Map<POS, Integer> goldAnnotatedInstances;
     protected Map<POS, Integer> backoffAnnotatedInstances;
     protected int totalGoldAnnotatedInstances = 0;
+    protected Map<String, Integer> backoffAlgorithmToNumber;
 
     protected abstract void beginFile(String fileTitle)
         throws IOException;
@@ -136,6 +138,10 @@ public abstract class AbstractSingleExactMatchEvaluator
             totalScore.put(pos, Double.valueOf(0.0));
             backoffScore.put(pos, Double.valueOf(0.0));
         }
+        backoffAlgorithmToNumber = new HashMap<String, Integer>();
+        for (int i=0; i<backoffAlgorithms.length; i++){
+        	backoffAlgorithmToNumber.put(backoffAlgorithms[i], i);
+        }        
         if (outputFilename != null) {
             try {
                 output = new BufferedWriter(new FileWriter(outputFilename));
@@ -199,15 +205,19 @@ public abstract class AbstractSingleExactMatchEvaluator
                         totalGoldAnnotatedInstances++;
                     }
                 }
-                else if (backoffAlgorithm != null
-                        && r.getDisambiguationMethod().equals(backoffAlgorithm)) {
+                else if (backoffAlgorithms.length > 0 && 
+                			backoffAlgorithmToNumber.containsKey(r.getDisambiguationMethod())) {
+                	//look if the current backoff algorithm a "higher priority" than saved one has
                     if (backoffResult != null) {
-                        // There should be only one backoff algorithm annotation
-                        logger.error("Multiple backoff algorithm annotations found for "
-                                + r.getWsdItem().getId());
-                        throw new AnalysisEngineProcessException();
-                    }
-                    backoffResult = r;
+                    	String savedBackoffResultMethod = backoffResult.getDisambiguationMethod();
+                    	String currentBackoffResultMethod = r.getDisambiguationMethod();    
+                    	if(backoffAlgorithmToNumber.get(savedBackoffResultMethod) > 
+                    		backoffAlgorithmToNumber.get(currentBackoffResultMethod)){
+                    		backoffResult = r;
+                    	}
+                    }else{
+                    	backoffResult = r;
+                    }                    
                 }
                 else if (r.getDisambiguationMethod().equals(testAlgorithm)) {
                     if (testResult != null) {
@@ -379,8 +389,8 @@ public abstract class AbstractSingleExactMatchEvaluator
         Map<String, String> propertiesMap = null;
         if (ctx != null && outputProperties != null) {
             propertiesMap = new HashMap<String, String>();
-            if (backoffAlgorithm != null) {
-                propertiesMap.put(PROPERTIES_KEY_BACKOFF, backoffAlgorithm);
+            if (backoffAlgorithms[0] != null) {
+                propertiesMap.put(PROPERTIES_KEY_BACKOFF, backoffAlgorithms[0]);
             }
             propertiesMap.put("algorithm", testAlgorithm);
         }
@@ -402,7 +412,7 @@ public abstract class AbstractSingleExactMatchEvaluator
             }
             putWSDStatsToPropertiesMap(pos.toString(), wsdStats, false,
                     propertiesMap);
-            if (backoffAlgorithm != null) {
+            if (backoffAlgorithms[0] != null) {
                 wsdStats = new WSDStats(testAnnotatedInstances.get(pos)
                         + backoffAnnotatedInstances.get(pos),
                         bothAnnotatedInstances.get(pos)
@@ -434,7 +444,7 @@ public abstract class AbstractSingleExactMatchEvaluator
             throw new AnalysisEngineProcessException(e);
         }
         putWSDStatsToPropertiesMap("all", wsdStats, false, propertiesMap);
-        if (backoffAlgorithm != null) {
+        if (backoffAlgorithms[0] != null) {
             wsdStats = new WSDStats(totalTestAnnotatedInstances
                     + totalBackoffAnnotatedInstances,
                     totalBothAnnotatedInstances
@@ -495,7 +505,7 @@ public abstract class AbstractSingleExactMatchEvaluator
         tableCell(String.format("%7d", wsdStats.bothAnnotatedInstances));
 
         // Score
-        tableCell(String.format("%7.1f", wsdStats.totalScore));
+        tableCell(String.format("%7.2f", wsdStats.totalScore));
 
         // Precision
         tableCell(String.format("%1.5f", wsdStats.precision));
