@@ -1,0 +1,77 @@
+<contextfile concordance="senseval2">
+<context filename="d00" source="senseval2">
+<s snum="1">
+<wf cmd="ignore" pos="DT">The</wf>
+<wf cmd="done" id="d00.s00.t01" pos="NN" lemma="art" wnsn="3" lexsn="1:09:00::">art</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="done" id="d00.s00.t03" pos="NN" lemma="change_ringing" wnsn="1" lexsn="1:04:00::">change-ringing</wf>
+<wf cmd="done" id="d00.s00.t04" pos="VBZ" lemma="be" wnsn="1" lexsn="2:42:03::">is</wf>
+<wf cmd="done" id="d00.s00.t05" pos="JJ" lemma="peculiar" wnsn="2;4" lexsn="5:00:00:specific:00;5:00:00:characteristic:00">peculiar</wf>
+<wf cmd="ignore" pos="TO">to</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s00.t08" pos="NNS" lemma="english" wnsn="2" lexsn="1:18:00::">English</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="CC">and</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="IN">like</wf>
+<wf cmd="done" id="d00.s00.t13" pos="JJS" lemma="most" wnsn="1" lexsn="3:00:02::">most</wf>
+<wf cmd="done" id="d00.s00.t14" pos="JJ" lemma="english" wnsn="1" lexsn="3:01:00::">English</wf>
+<wf cmd="done" id="d00.s00.t15" pos="NNS" lemma="peculiarity" wnsn="1;2" lexsn="1:09:00::;1:07:02::">peculiarities</wf>
+<punc>,</punc>
+<wf cmd="done" id="d00.s00.t17" pos="JJ" lemma="unintelligible" wnsn="2" lexsn="5:00:00:incomprehensible:00">unintelligible</wf>
+<wf cmd="ignore" pos="TO">to</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s00.t20" pos="NN" lemma="rest" wnsn="1" lexsn="1:24:00::">rest</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s00.t23" pos="NN" lemma="world" wnsn="5" lexsn="1:14:02::">world</wf>
+<punc>.</punc>
+</s>
+<s snum="2">
+<wf cmd="ignore" pos="NNP">Dorothy</wf>
+<wf cmd="ignore" pos="NNP">L.</wf>
+<wf cmd="ignore" pos="NNP">Sayers</wf>
+<punc>,</punc>
+<punc>"</punc>
+<wf cmd="ignore" pos="DT">The</wf>
+<wf cmd="ignore" pos="CD">Nine</wf>
+<wf cmd="done" id="d00.s01.t08" pos="NNP" lemma="tailor" wnsn="1" lexsn="1:18:00::">Tailors</wf>
+<punc>"</punc>
+<wf cmd="ignore" pos="NNP">ASLACTON</wf>
+<punc>,</punc>
+<wf cmd="done" id="d00.s02.t02" pos="NNP" lemma="england" wnsn="1" lexsn="1:15:00::">England</wf>
+<wf cmd="ignore" pos="IN">Of</wf>
+<wf cmd="ignore" pos="DT">all</wf>
+<wf cmd="done" id="d00.s03.t03" pos="NNS" lemma="scene" wnsn="3" lexsn="1:09:00::">scenes</wf>
+<wf cmd="ignore" pos="WDT">that</wf>
+<wf cmd="done" id="d00.s03.t06" pos="VBP" lemma="evoke" wnsn="5" lexsn="2:32:01::">evoke</wf>
+<wf cmd="done" id="d00.s03.t07" pos="JJ" lemma="rural" wnsn="1" lexsn="3:00:00::">rural</wf>
+<wf cmd="done" id="d00.s03.t08" pos="NNP" lemma="england" wnsn="1" lexsn="1:15:00::">England</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="DT">this</wf>
+<wf cmd="ignore" pos="VBZ">is</wf>
+<wf cmd="ignore" pos="CD">one</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s03.t15" pos="JJS" lemma="lovely" wnsn="1" lexsn="5:00:00:beautiful:00">loveliest</wf>
+<punc>:</punc>
+<wf cmd="ignore" pos="DT">An</wf>
+<wf cmd="done" id="d00.s03.t19" pos="JJ" lemma="ancient" wnsn="2" lexsn="5:00:00:old:02">ancient</wf>
+<wf cmd="done" id="d00.s03.t20" pos="NN" lemma="stone" wnsn="2" lexsn="1:06:00::">stone</wf>
+<wf cmd="done" id="d00.s03.t21" pos="NN" lemma="church" wnsn="2" lexsn="1:06:00::">church</wf>
+<wf cmd="done" id="d00.s03.t22" pos="VBZ" lemma="stand" wnsn="3" lexsn="2:42:03::">stands</wf>
+<wf cmd="ignore" pos="IN">amid</wf>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s03.t25" pos="NNS" lemma="field" wnsn="9" lexsn="1:17:00::">fields</wf>
+<punc>,</punc>
+<wf cmd="ignore" pos="DT">the</wf>
+<wf cmd="done" id="d00.s03.t28" pos="NN" lemma="sound" wnsn="1" lexsn="1:07:00::">sound</wf>
+<wf cmd="ignore" pos="IN">of</wf>
+<wf cmd="done" id="d00.s03.t30" pos="NNS" lemma="bell" wnsn="1" lexsn="1:06:00::">bells</wf>
+<wf cmd="done" id="d00.s03.t31" pos="VBG" lemma="cascade" wnsn="1" lexsn="2:38:00::">cascading</wf>
+<wf cmd="ignore" pos="IN">from</wf>
+<wf cmd="ignore" pos="PRP$">its</wf>
+<wf cmd="done" id="d00.s03.t34" pos="NN" lemma="tower" wnsn="1" lexsn="1:06:00::">tower</wf>
+</s>
+</context>
+</contextfile>

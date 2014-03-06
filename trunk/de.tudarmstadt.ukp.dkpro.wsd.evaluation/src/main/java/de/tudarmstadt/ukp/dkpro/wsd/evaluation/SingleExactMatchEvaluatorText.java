@@ -26,6 +26,7 @@ import java.io.IOException;
  * A {@link AbstractSingleExactMatchEvaluator} with plain text output.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * 		   Andriy Nadolskyy
  */
 public class SingleExactMatchEvaluatorText
     extends AbstractSingleExactMatchEvaluator
@@ -84,7 +85,11 @@ public class SingleExactMatchEvaluatorText
 
         output.write("Test algorithm         : " + testAlgorithm + "\n");
         output.write("Gold standard algorithm: " + goldStandardAlgorithm + "\n");
-        output.write("Backoff algorithm      : " + backoffAlgorithm + "\n");
+        
+        output.write("Backoff algorithms     : " + backoffAlgorithms[0] + "\n");
+        for (int i=0+1; i<backoffAlgorithms.length; i++){
+        	output.write("\t\t\t\t\t\t " + backoffAlgorithms[i] + "\n");
+        }
     }
 
     @Override
