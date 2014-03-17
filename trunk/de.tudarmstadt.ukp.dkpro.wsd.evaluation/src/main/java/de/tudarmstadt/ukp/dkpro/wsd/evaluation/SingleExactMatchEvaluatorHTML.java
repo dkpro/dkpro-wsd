@@ -124,8 +124,10 @@ public class SingleExactMatchEvaluatorHTML
                 + "<br />");
         output.newLine();
         output.write("Backoff algorithms     : ");
-        for (String backoffAlgorithm : backoffAlgorithms) {
-            output.write(backoffAlgorithm + " ");
+        if (backoffAlgorithms != null) {
+            for (String backoffAlgorithm : backoffAlgorithms) {
+                output.write(backoffAlgorithm + " ");
+            }
         }
         output.write("<br />");
         output.newLine();
