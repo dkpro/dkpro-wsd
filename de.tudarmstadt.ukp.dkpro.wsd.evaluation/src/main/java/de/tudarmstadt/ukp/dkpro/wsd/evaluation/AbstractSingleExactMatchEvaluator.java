@@ -29,6 +29,7 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.fit.util.JCasUtil;
@@ -129,6 +130,10 @@ public abstract class AbstractSingleExactMatchEvaluator
     {
         super.initialize(context);
 
+        if (backoffAlgorithms != null && backoffAlgorithms.length == 0) {
+            throw new CASRuntimeException(CASRuntimeException.ILLEGAL_ARRAY_SIZE);
+        }
+
         if (backoffAlgorithm != null) {
             if (backoffAlgorithms != null) {
                 throw new ResourceInitializationException(
@@ -136,7 +141,7 @@ public abstract class AbstractSingleExactMatchEvaluator
                         "annotator_mutually_exclusive_params",
                         new Object[] { PARAM_BACKOFF_ALGORITHM + ", "
                                 + PARAM_BACKOFF_ALGORITHMS });
-            }
+                }
             backoffAlgorithms = new String[] { backoffAlgorithm };
             backoffAlgorithm = null;
         }
@@ -156,8 +161,10 @@ public abstract class AbstractSingleExactMatchEvaluator
             backoffScore.put(pos, Double.valueOf(0.0));
         }
         backoffAlgorithmToNumber = new HashMap<String, Integer>();
-        for (int i = 0; i < backoffAlgorithms.length; i++) {
-            backoffAlgorithmToNumber.put(backoffAlgorithms[i], i);
+        if (backoffAlgorithms != null) {
+            for (int i = 0; i < backoffAlgorithms.length; i++) {
+                backoffAlgorithmToNumber.put(backoffAlgorithms[i], i);
+            }
         }
         if (outputFilename != null) {
             try {
@@ -222,7 +229,7 @@ public abstract class AbstractSingleExactMatchEvaluator
                         totalGoldAnnotatedInstances++;
                     }
                 }
-                else if (backoffAlgorithms.length > 0
+                else if (backoffAlgorithms != null && backoffAlgorithms.length > 0
                         && backoffAlgorithmToNumber.containsKey(r
                                 .getDisambiguationMethod())) {
                     // look if the current backoff algorithm a "higher priority"
@@ -435,7 +442,7 @@ public abstract class AbstractSingleExactMatchEvaluator
             }
             putWSDStatsToPropertiesMap(pos.toString(), wsdStats, false,
                     propertiesMap);
-            if (backoffAlgorithms[0] != null) {
+            if (backoffAlgorithms != null) {
                 wsdStats = new WSDStats(testAnnotatedInstances.get(pos)
                         + backoffAnnotatedInstances.get(pos),
                         bothAnnotatedInstances.get(pos)
@@ -467,7 +474,7 @@ public abstract class AbstractSingleExactMatchEvaluator
             throw new AnalysisEngineProcessException(e);
         }
         putWSDStatsToPropertiesMap("all", wsdStats, false, propertiesMap);
-        if (backoffAlgorithms[0] != null) {
+        if (backoffAlgorithms != null) {
             wsdStats = new WSDStats(totalTestAnnotatedInstances
                     + totalBackoffAnnotatedInstances,
                     totalBothAnnotatedInstances

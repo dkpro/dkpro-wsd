@@ -92,10 +92,10 @@ public class SingleExactMatchEvaluatorText
         }
         else {
             output.write(backoffAlgorithms[0] + '\n');
-        }
-        for (int i = 1; i < backoffAlgorithms.length; i++) {
-            output.write("                         " + backoffAlgorithms[i]
-                    + "\n");
+            for (int i = 1; i < backoffAlgorithms.length; i++) {
+                output.write("                         " + backoffAlgorithms[i]
+                        + "\n");
+            }
         }
     }
 
