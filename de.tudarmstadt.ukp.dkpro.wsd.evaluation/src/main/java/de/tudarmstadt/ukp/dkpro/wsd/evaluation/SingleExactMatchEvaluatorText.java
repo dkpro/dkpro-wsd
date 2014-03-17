@@ -25,8 +25,8 @@ import java.io.IOException;
 /**
  * A {@link AbstractSingleExactMatchEvaluator} with plain text output.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
- * 		   Andriy Nadolskyy
+ * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de> Andriy
+ *         Nadolskyy
  */
 public class SingleExactMatchEvaluatorText
     extends AbstractSingleExactMatchEvaluator
@@ -71,9 +71,10 @@ public class SingleExactMatchEvaluatorText
                 "\n%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "POS",
                 "test", "gold", "both", "score", "p", "r", "cover", "F1",
                 "backoff"));
-        output.write(String.format("%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n",
+        output.write(String.format(
+                "%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "-------",
                 "-------", "-------", "-------", "-------", "-------",
-                "-------", "-------", "-------", "-------", "-------"));
+                "-------", "-------", "-------", "-------"));
     }
 
     @Override
@@ -85,10 +86,16 @@ public class SingleExactMatchEvaluatorText
 
         output.write("Test algorithm         : " + testAlgorithm + "\n");
         output.write("Gold standard algorithm: " + goldStandardAlgorithm + "\n");
-        
-        output.write("Backoff algorithms     : " + backoffAlgorithms[0] + "\n");
-        for (int i=0+1; i<backoffAlgorithms.length; i++){
-        	output.write("\t\t\t\t\t\t " + backoffAlgorithms[i] + "\n");
+        output.write("Backoff algorithms     : ");
+        if (backoffAlgorithms == null || backoffAlgorithms.length == 0) {
+            output.write("none\n");
+        }
+        else {
+            output.write(backoffAlgorithms[0] + '\n');
+        }
+        for (int i = 1; i < backoffAlgorithms.length; i++) {
+            output.write("                         " + backoffAlgorithms[i]
+                    + "\n");
         }
     }
 
