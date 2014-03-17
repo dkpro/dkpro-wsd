@@ -95,7 +95,7 @@ public abstract class AbstractClusterEvaluator
     {
         super.initialize(context);
 
-        if (backoffAlgorithm != null) {
+        if (backoffAlgorithms != null) {
             // TODO: Backoff support not implemented yet
             throw new ResourceInitializationException();
         }

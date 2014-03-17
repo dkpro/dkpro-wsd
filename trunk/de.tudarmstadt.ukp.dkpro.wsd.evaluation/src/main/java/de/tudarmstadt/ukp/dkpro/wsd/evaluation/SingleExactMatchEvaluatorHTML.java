@@ -123,7 +123,11 @@ public class SingleExactMatchEvaluatorHTML
         output.write("Gold standard algorithm: " + goldStandardAlgorithm
                 + "<br />");
         output.newLine();
-        output.write("Backoff algorithm      : " + backoffAlgorithm + "<br />");
+        output.write("Backoff algorithms     : ");
+        for (String backoffAlgorithm : backoffAlgorithms) {
+            output.write(backoffAlgorithm + " ");
+        }
+        output.write("<br />");
         output.newLine();
         output.write("</p>");
         output.newLine();
