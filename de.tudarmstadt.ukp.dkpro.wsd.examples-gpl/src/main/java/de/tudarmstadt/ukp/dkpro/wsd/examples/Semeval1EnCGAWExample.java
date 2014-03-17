@@ -27,8 +27,8 @@ import java.io.IOException;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
-import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.fit.pipeline.SimplePipeline;
+import org.apache.uima.resource.ExternalResourceDescription;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithm.MostFrequentSenseBaseline;
@@ -178,8 +178,8 @@ public class Semeval1EnCGAWExample
                 SingleExactMatchEvaluatorHTML.PARAM_GOLD_STANDARD_ALGORITHM,
                 answerkey, SingleExactMatchEvaluatorHTML.PARAM_TEST_ALGORITHM,
                 SimplifiedLesk.class.getName(),
-                SingleExactMatchEvaluatorHTML.PARAM_BACKOFF_ALGORITHM,
-                MostFrequentSenseBaseline.class.getName(),
+                SingleExactMatchEvaluatorHTML.PARAM_BACKOFF_ALGORITHMS,
+                new String[] {MostFrequentSenseBaseline.class.getName()},
                 SingleExactMatchEvaluatorHTML.PARAM_OPEN_IN_BROWSER, true,
                 SingleExactMatchEvaluatorHTML.PARAM_OUTPUT_FILE,
                 "/tmp/WSDWriterHTML_evaluator.html",
