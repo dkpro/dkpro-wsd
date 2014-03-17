@@ -49,8 +49,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * gold standard. The criteria are defined by Agirre &amp; Edmonds, pp. 78-79.
  * It is assumed that sense weights given by the test algorithm are normalized.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
- * 		   Andriy Nadolskyy
+ * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de> Andriy
+ *         Nadolskyy
  */
 public abstract class AbstractSingleExactMatchEvaluator
     extends AbstractWSDEvaluator
@@ -63,7 +63,11 @@ public abstract class AbstractSingleExactMatchEvaluator
     @ConfigurationParameter(name = PARAM_TEST_ALGORITHM, mandatory = true, description = "The test algorithm to be evaluated")
     protected String testAlgorithm;
 
-    public static final String PARAM_BACKOFF_ALGORITHMS = "backoffAlgorithm";
+    public static final String PARAM_BACKOFF_ALGORITHM = "backoffAlgorithm";
+    @ConfigurationParameter(name = PARAM_BACKOFF_ALGORITHM, mandatory = false, description = "The backoff algorithm to use when the test algorithm is unable to make a sense assignment")
+    protected String backoffAlgorithm;
+
+    public static final String PARAM_BACKOFF_ALGORITHMS = "backoffAlgorithms";
     @ConfigurationParameter(name = PARAM_BACKOFF_ALGORITHMS, mandatory = false, description = "The backoff algorithms to use when the test algorithm is unable to make a sense assignment")
     protected String backoffAlgorithms[];
 
@@ -124,6 +128,19 @@ public abstract class AbstractSingleExactMatchEvaluator
         throws ResourceInitializationException
     {
         super.initialize(context);
+
+        if (backoffAlgorithm != null) {
+            if (backoffAlgorithms != null) {
+                throw new ResourceInitializationException(
+                        org.apache.uima.UIMAException.STANDARD_MESSAGE_CATALOG,
+                        "annotator_mutually_exclusive_params",
+                        new Object[] { PARAM_BACKOFF_ALGORITHM + ", "
+                                + PARAM_BACKOFF_ALGORITHMS });
+            }
+            backoffAlgorithms = new String[] { backoffAlgorithm };
+            backoffAlgorithm = null;
+        }
+
         testAnnotatedInstances = new HashMap<POS, Integer>();
         bothAnnotatedInstances = new HashMap<POS, Integer>();
         backoffAnnotatedInstances = new HashMap<POS, Integer>();
@@ -139,9 +156,9 @@ public abstract class AbstractSingleExactMatchEvaluator
             backoffScore.put(pos, Double.valueOf(0.0));
         }
         backoffAlgorithmToNumber = new HashMap<String, Integer>();
-        for (int i=0; i<backoffAlgorithms.length; i++){
-        	backoffAlgorithmToNumber.put(backoffAlgorithms[i], i);
-        }        
+        for (int i = 0; i < backoffAlgorithms.length; i++) {
+            backoffAlgorithmToNumber.put(backoffAlgorithms[i], i);
+        }
         if (outputFilename != null) {
             try {
                 output = new BufferedWriter(new FileWriter(outputFilename));
@@ -205,19 +222,25 @@ public abstract class AbstractSingleExactMatchEvaluator
                         totalGoldAnnotatedInstances++;
                     }
                 }
-                else if (backoffAlgorithms.length > 0 && 
-                			backoffAlgorithmToNumber.containsKey(r.getDisambiguationMethod())) {
-                	//look if the current backoff algorithm a "higher priority" than saved one has
+                else if (backoffAlgorithms.length > 0
+                        && backoffAlgorithmToNumber.containsKey(r
+                                .getDisambiguationMethod())) {
+                    // look if the current backoff algorithm a "higher priority"
+                    // than saved one has
                     if (backoffResult != null) {
-                    	String savedBackoffResultMethod = backoffResult.getDisambiguationMethod();
-                    	String currentBackoffResultMethod = r.getDisambiguationMethod();    
-                    	if(backoffAlgorithmToNumber.get(savedBackoffResultMethod) > 
-                    		backoffAlgorithmToNumber.get(currentBackoffResultMethod)){
-                    		backoffResult = r;
-                    	}
-                    }else{
-                    	backoffResult = r;
-                    }                    
+                        String savedBackoffResultMethod = backoffResult
+                                .getDisambiguationMethod();
+                        String currentBackoffResultMethod = r
+                                .getDisambiguationMethod();
+                        if (backoffAlgorithmToNumber
+                                .get(savedBackoffResultMethod) > backoffAlgorithmToNumber
+                                .get(currentBackoffResultMethod)) {
+                            backoffResult = r;
+                        }
+                    }
+                    else {
+                        backoffResult = r;
+                    }
                 }
                 else if (r.getDisambiguationMethod().equals(testAlgorithm)) {
                     if (testResult != null) {
