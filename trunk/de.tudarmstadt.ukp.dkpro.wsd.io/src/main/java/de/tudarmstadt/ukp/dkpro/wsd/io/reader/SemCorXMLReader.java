@@ -124,7 +124,7 @@ public class SemCorXMLReader
     private int totalWordFormCount;
 
     private MappingProvider mappingProvider;
-    
+
     @Override
     public void initialize(UimaContext aContext)
         throws ResourceInitializationException
@@ -132,7 +132,7 @@ public class SemCorXMLReader
         super.initialize(aContext);
         validWordFormCount = 0;
         totalWordFormCount = 0;
-        
+
         // FIXME brown tagset provider is only available from DKPro core 1.6.0 onwards
         // once released, this should be changed back and tagmapping should be removed from the resources here
         mappingProvider = new MappingProvider();
@@ -149,7 +149,7 @@ public class SemCorXMLReader
         throws IOException, CollectionException
     {
         mappingProvider.configure(aCAS);
-        
+
         JCas jCas;
         try {
             jCas = aCAS.getJCas();
@@ -247,7 +247,7 @@ public class SemCorXMLReader
                 if (node.getName() == null) {
                     continue;
                 }
-                
+
                 if (node.getName().equals(ELEMENT_PUNCTUATION)) {
                     logger.trace("Found punctuation " + node.getText());
                     continue;
@@ -268,7 +268,7 @@ public class SemCorXMLReader
                             + wordFormCount;
                 }
                 logger.trace("Found wf id: " + wordFormId);
-                
+
                 String lemma = wordForm.attributeValue(ATTR_LEMMA);
                 String pos = wordForm.attributeValue(ATTR_POS);
 
@@ -280,7 +280,7 @@ public class SemCorXMLReader
                         lemmaAnno.setValue(lemma);
                         lemmaAnno.addToIndexes();
                     }
-                    
+
                     de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS posAnno = null;
                     if (pos != null) {
                         Type posTag = mappingProvider.getTagType(pos);
@@ -431,6 +431,7 @@ public class SemCorXMLReader
         // d.setDocumentUri(contextFiles[textCount].toURI().toString());
         d.setCollectionId(collectionId);
         d.setLanguage("en");
+        d.addToIndexes(jCas);
         jCas.setDocumentLanguage("en");
     }
 
