@@ -71,7 +71,7 @@ public class WebCAGeXMLReader
     private final Logger logger = Logger.getLogger(getClass());
 
     public static final String PARAM_SENSE_INVENTORY = "senseInventory";
-    @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "GermaNet_7.0")
+    @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "GermaNet_8.0")
     private String senseInventory;
 
     Element corpus = null;
