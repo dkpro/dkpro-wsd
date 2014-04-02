@@ -31,6 +31,7 @@ import org.apache.uima.jcas.JCas;
 import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
+import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Paragraph;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
@@ -65,6 +66,7 @@ public class SemCorXMLReaderTest
         JCasIterator i = new JCasIterator(reader);
 		assertTrue(i.hasNext());
 		JCas j = i.next();
+        System.out.println(DocumentMetaData.get(j).getDocumentId());
 		System.out.println(j.getDocumentText());
 
 		assertEquals(sentence1 + sentence2, j.getDocumentText());

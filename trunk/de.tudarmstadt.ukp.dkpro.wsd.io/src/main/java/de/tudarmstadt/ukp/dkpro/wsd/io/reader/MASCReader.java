@@ -252,7 +252,6 @@ public class MASCReader
         }
         d.setDocumentId(id);
         d.setLanguage(LANG);
-        d.addToIndexes(jCas);
         jCas.setDocumentLanguage(LANG);
     }
 

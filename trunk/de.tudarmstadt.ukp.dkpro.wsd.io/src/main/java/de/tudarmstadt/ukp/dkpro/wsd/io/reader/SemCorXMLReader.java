@@ -431,7 +431,6 @@ public class SemCorXMLReader
         // d.setDocumentUri(contextFiles[textCount].toURI().toString());
         d.setCollectionId(collectionId);
         d.setLanguage("en");
-        d.addToIndexes(jCas);
         jCas.setDocumentLanguage("en");
     }
 

@@ -31,6 +31,7 @@ import org.apache.uima.jcas.JCas;
 import org.junit.Test;
 
 import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
+import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.type.LexicalItemConstituent;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
@@ -60,6 +61,7 @@ public class WebCAGeXMLReaderTest
         JCasIterator i = new JCasIterator(reader);
 		assertTrue(i.hasNext());
 		JCas j = i.next();
+        System.out.println(DocumentMetaData.get(j).getDocumentId());
 		System.out.println(j.getDocumentText());
 		assertTrue(i.hasNext());
 
