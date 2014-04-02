@@ -248,7 +248,6 @@ public class AidaReader
         // d.setDocumentUri(contextFiles[textCount].toURI().toString());
         dmd.setCollectionId(collectionId);
         dmd.setLanguage("en");
-        dmd.addToIndexes(jCas);
         jCas.setDocumentLanguage("en");
     }
 

@@ -257,7 +257,6 @@ public class WebCAGeXMLReader
         // d.setDocumentUri(contextFiles[textCount].toURI().toString());
         // d.setCollectionId("WebCAGe_prerelease");
         d.setLanguage(language);
-        d.addToIndexes(jCas);
         jCas.setDocumentLanguage(language);
     }
 
