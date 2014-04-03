@@ -124,6 +124,9 @@ public abstract class AbstractSingleExactMatchEvaluator
     protected abstract void tableCell(String cellContents)
         throws IOException;
 
+    protected abstract void paragraph(String text)
+            throws IOException;
+
     @Override
     public void initialize(UimaContext context)
         throws ResourceInitializationException
@@ -405,6 +408,18 @@ public abstract class AbstractSingleExactMatchEvaluator
         try {
             beginDocument("Document");
             beginTable();
+            beginTableRow();
+            tableHeader("POS");
+            tableHeader("test");
+            tableHeader("gold");
+            tableHeader("both");
+            tableHeader("score");
+            tableHeader("p");
+            tableHeader("r");
+            tableHeader("cover");
+            tableHeader("F1");
+            tableHeader("backoff");
+            endTableRow();
         }
         catch (IOException e) {
             throw new AnalysisEngineProcessException(e);

@@ -150,11 +150,6 @@ public class SingleExactMatchEvaluatorHTML
     {
         output.write("<table>");
         output.newLine();
-        output.write(String
-                .format("<tr><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%7s</th><th>%s</th></tr>",
-                        "POS", "test", "gold", "both", "score", "p", "r",
-                        "coverage", "F1", "backoff"));
-        output.newLine();
     }
 
     @Override
@@ -168,6 +163,14 @@ public class SingleExactMatchEvaluatorHTML
         throws IOException
     {
         output.write("<td>" + cellContents + "</td>");
+    }
+
+    @Override
+    protected void paragraph(String text)
+        throws IOException
+    {
+        output.write("<p>" + text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;") + "</p>");
+        output.newLine();
     }
 
 }

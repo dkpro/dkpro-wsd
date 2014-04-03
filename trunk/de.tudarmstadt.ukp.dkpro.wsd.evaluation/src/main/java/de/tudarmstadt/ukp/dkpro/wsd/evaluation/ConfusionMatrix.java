@@ -49,6 +49,10 @@ public class ConfusionMatrix
     @ConfigurationParameter(name = PARAM_TEST_ALGORITHM2, mandatory = true, description = "The second test algorithm to be evaluated")
     protected String testAlgorithm2;
 
+    public static final String PARAM_MCNEMAR_CORRECTION = "mcnemarCorrection";
+    @ConfigurationParameter(name = PARAM_MCNEMAR_CORRECTION, mandatory = false, description = "The correction to use for McNemar's test", defaultValue = "0.0")
+    protected double mcnemarCorrection;
+
     protected double[][] agreement;
 
     private final Logger logger = Logger.getLogger(getClass());
@@ -207,5 +211,12 @@ public class ConfusionMatrix
                 agreement[0][1]);
         System.out.format("T1   correct\t%12f\t%12f\n", agreement[1][0],
                 agreement[1][1]);
+        System.out.format("\nMcNemar's test (with correction %f): %f", mcnemarCorrection, mcnemar(agreement, mcnemarCorrection));
+    }
+
+    public static double mcnemar(double[][] agreement, double mcnemarCorrection)
+    {
+        double x = Math.abs(agreement[0][1] - agreement[1][0] - mcnemarCorrection);
+        return (x * x) / (agreement[0][1] + agreement[1][0]);
     }
 }

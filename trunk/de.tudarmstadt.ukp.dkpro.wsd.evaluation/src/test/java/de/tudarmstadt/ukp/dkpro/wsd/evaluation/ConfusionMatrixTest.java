@@ -46,7 +46,8 @@ public class ConfusionMatrixTest
                 ConfusionMatrix.class,
                 ConfusionMatrix.PARAM_GOLD_STANDARD_ALGORITHM, gold,
                 ConfusionMatrix.PARAM_TEST_ALGORITHM1, method1,
-                ConfusionMatrix.PARAM_TEST_ALGORITHM2, method2);
+                ConfusionMatrix.PARAM_TEST_ALGORITHM2, method2,
+                ConfusionMatrix.PARAM_MCNEMAR_CORRECTION, 0.5f);
 
         JCas jcas = engine.newJCas();
 
