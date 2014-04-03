@@ -153,41 +153,6 @@ public class ConfusionMatrix
         }
     }
 
-    // /**
-    // * Given a test and gold standard set of disambiguation results, loop
-    // * through them to find the common senses, and return the sum of the test
-    // * results' confidence values.
-    // *
-    // * @param testResult
-    // * @param goldResult
-    // * @return
-    // * @throws AnalysisEngineProcessException
-    // */
-    // double getMatchingScore(WSDResult testResult, WSDResult goldResult)
-    // throws AnalysisEngineProcessException
-    // {
-    // if (testResult == null) {
-    // return 0.0;
-    // }
-    // // Test results must have only one sense annotation
-    // if (testResult.getSenses().size() != 1) {
-    // logger.error("Test algorithm result has multiple sense annotations");
-    // throw new AnalysisEngineProcessException();
-    //
-    // }
-    // // Test results must have a confidence of 1
-    // if (testResult.getSenses(0).getConfidence() != 1.0) {
-    // logger.error("Test algorithm has result a non-binary confidence");
-    // throw new AnalysisEngineProcessException();
-    // }
-    // for (int i = 0; i < goldResult.getSenses().size(); i++) {
-    // if (goldResult.getSenses(i).getId()
-    // .equals(testResult.getSenses(0).getId())) {
-    // return 1;
-    // }
-    // }
-    // return 0;
-    // }
     /**
      * Given a test and gold standard set of disambiguation results, loop
      * through them to find the common senses, and return the sum of the test
