@@ -68,6 +68,14 @@ public abstract class AbstractClusterEvaluator
     @ConfigurationParameter(name = PARAM_DELIMITER_REGEX, mandatory = false, description = "A regular expression matching the delimiter between clusters", defaultValue = "[\\t ]+")
     protected String delimiterRegex;
 
+    public final static String PARAM_SHOW_CONFUSION_MATRIX = "showConfusionMatrix";
+    @ConfigurationParameter(name = PARAM_SHOW_CONFUSION_MATRIX, mandatory = false, description = "Whether to show a confusion matrix comparing the clustering with the random clustering", defaultValue = "true")
+    protected boolean showConfusionMatrix;
+
+    public static final String PARAM_MCNEMAR_CORRECTION = "mcnemarCorrection";
+    @ConfigurationParameter(name = PARAM_MCNEMAR_CORRECTION, mandatory = false, description = "The correction to use for McNemar's test", defaultValue = "0.0")
+    protected double mcnemarCorrection;
+
     public final static String PARAM_SHOW_IMPROVED_SODS = "showImprovedSods";
     @ConfigurationParameter(name = PARAM_SHOW_IMPROVED_SODS, mandatory = false, description = "Whether to show the subjects of disambiguation with improved scores", defaultValue = "false")
     protected boolean showImprovedSods;
@@ -88,6 +96,7 @@ public abstract class AbstractClusterEvaluator
     protected Set<String> improvedSods;
     protected Map<String, Double> clusteredScoreByLemma;
     protected Map<String, Double> randomClusteredScoreByLemma;
+    protected double[][] agreement;
 
     @Override
     public void initialize(UimaContext context)
@@ -100,6 +109,7 @@ public abstract class AbstractClusterEvaluator
             throw new ResourceInitializationException();
         }
 
+        agreement = new double[2][2];
         improvedInstances = new ArrayList<String>();
         improvedSods = new HashSet<String>();
         numberOfClusteredLexicalItems = 0;
@@ -240,6 +250,12 @@ public abstract class AbstractClusterEvaluator
         scoreWithRandomClustering = (scoreWithoutClustering > 0.0) ? scoreWithoutClustering
                 : getRandomScore(wsdItem, pos);
         assert (scoreWithoutClustering <= scoreWithClustering);
+        assert (scoreWithRandomClustering >= 0.0);
+        assert (scoreWithoutClustering >= 0.0);
+        assert (scoreWithClustering >= 0.0);
+        assert (scoreWithRandomClustering <= 1.0);
+        assert (scoreWithoutClustering <= 1.0);
+        assert (scoreWithClustering <= 1.0);
 
         // Store unclustered, clustered, and random-clustered scores
         if (scoreWithoutClustering > 0.0) {
@@ -276,6 +292,15 @@ public abstract class AbstractClusterEvaluator
                                 + scoreWithRandomClustering));
             }
         }
+
+        // Update confusion matrix
+        agreement[1][1] += scoreWithRandomClustering * scoreWithClustering;
+        agreement[1][0] += scoreWithRandomClustering
+                * (1.0 - scoreWithClustering);
+        agreement[0][1] += (1.0 - scoreWithRandomClustering)
+                * scoreWithClustering;
+        agreement[0][0] += (1.0 - scoreWithRandomClustering)
+                * (1.0 - scoreWithClustering);
 
         // Make a note of any SoDs and Instances where clustering helped
         if (scoreWithClustering > scoreWithoutClustering
@@ -413,11 +438,96 @@ public abstract class AbstractClusterEvaluator
 
         try {
             beginDocument("Document");
-            beginTable();
+            showResultsTable();
+
+            if (showConfusionMatrix) {
+                showConfusionMatrix();
+            }
+
+            paragraph(numberOfClusteredLexicalItems + " lexical items in "
+                    + numberOfClusteredInstances
+                    + " instances were affected by the clustering.");
+            paragraph(improvedInstanceCount
+                    + " instances (representing "
+                    + improvedSods.size()
+                    + " lexical items) had clustered scores better than random clustering.");
+
+            if (showImprovedInstances) {
+                showImprovedInstances();
+            }
+
+            if (showImprovedSods) {
+                showImprovedSods();
+            }
+
+            endDocument();
+            endFile();
+            output.close();
         }
         catch (IOException e) {
             throw new AnalysisEngineProcessException(e);
         }
+    }
+
+    private void showImprovedSods()
+        throws IOException
+    {
+        paragraph("The total clustered score for the following lexical items exceeds the total random score:");
+        beginTable();
+        beginTableRow();
+        tableHeader("inc");
+        tableHeader("%inc");
+        tableHeader("lemma");
+        endTableRow();
+        for (String lemma : clusteredScoreByLemma.keySet()) {
+            double clusteredScore = clusteredScoreByLemma.get(lemma);
+            double randomClusteredScore = randomClusteredScoreByLemma
+                    .get(lemma);
+            beginTableRow();
+            tableCell(String.format("%06.1f", clusteredScore
+                    - randomClusteredScore));
+            tableCell(String.format("%2.4f",
+                    (clusteredScore - randomClusteredScore)
+                            / randomClusteredScore));
+            tableCell(lemma);
+            endTableRow();
+        }
+        endTable();
+    }
+
+    private void showImprovedInstances()
+        throws IOException
+    {
+        beginTable();
+        beginTableRow();
+        tableHeader("Improved instances");
+        endTableRow();
+        for (String s : improvedInstances) {
+            beginTableRow();
+            tableCell(s);
+            endTableRow();
+        }
+        endTable();
+    }
+
+    private void showResultsTable()
+        throws AnalysisEngineProcessException, IOException
+    {
+        beginTable();
+        beginTableRow();
+        tableHeader("POS");
+        tableHeader("test");
+        tableHeader("gold");
+        tableHeader("both");
+        tableHeader("score");
+        tableHeader("p");
+        tableHeader("r");
+        tableHeader("cover");
+        tableHeader("F1");
+        tableHeader("cluster");
+        tableHeader("ΔF none");
+        tableHeader("ΔF rand");
+        endTableRow();
 
         int totalTestAnnotatedInstances = 0;
         int totalBothAnnotatedInstances = 0;
@@ -448,17 +558,11 @@ public abstract class AbstractClusterEvaluator
                     randomClusteredScore.get(pos));
             totalRandomClusteredScore += randomClusteredWsdStats.totalScore;
 
-            try {
-                putWSDStats(pos.toString(), unclusteredWsdStats, "no", null,
-                        null);
-                putWSDStats(pos.toString(), randomClusteredWsdStats, "random",
-                        unclusteredWsdStats, null);
-                putWSDStats(pos.toString(), clusteredWsdStats, "yes",
-                        unclusteredWsdStats, randomClusteredWsdStats);
-            }
-            catch (IOException e) {
-                throw new AnalysisEngineProcessException(e);
-            }
+            putWSDStats(pos.toString(), unclusteredWsdStats, "no", null, null);
+            putWSDStats(pos.toString(), randomClusteredWsdStats, "random",
+                    unclusteredWsdStats, null);
+            putWSDStats(pos.toString(), clusteredWsdStats, "yes",
+                    unclusteredWsdStats, randomClusteredWsdStats);
         }
 
         // Print results for all POS combined
@@ -471,26 +575,37 @@ public abstract class AbstractClusterEvaluator
         WSDStats randomClusteredWsdStats = new WSDStats(
                 totalTestAnnotatedInstances, totalBothAnnotatedInstances,
                 totalGoldAnnotatedInstances, totalRandomClusteredScore);
-        try {
-            putWSDStats("all", unclusteredWsdStats, "no", null, null);
-            putWSDStats("all", randomClusteredWsdStats, "random",
-                    unclusteredWsdStats, null);
-            putWSDStats("all", clusteredWsdStats, "yes", unclusteredWsdStats,
-                    randomClusteredWsdStats);
-        }
-        catch (IOException e) {
-            throw new AnalysisEngineProcessException(e);
-        }
+        putWSDStats("all", unclusteredWsdStats, "no", null, null);
+        putWSDStats("all", randomClusteredWsdStats, "random",
+                unclusteredWsdStats, null);
+        putWSDStats("all", clusteredWsdStats, "yes", unclusteredWsdStats,
+                randomClusteredWsdStats);
 
-        try {
-            endTable();
-            endDocument();
-            endFile();
-            output.close();
-        }
-        catch (IOException e) {
-            throw new AnalysisEngineProcessException(e);
-        }
+        endTable();
+    }
+
+    private void showConfusionMatrix()
+        throws IOException
+    {
+        beginTable();
+        beginTableRow();
+        tableHeader("");
+        tableHeader("clust -");
+        tableHeader("clust +");
+        endTableRow();
+        beginTableRow();
+        tableHeader(" rand -");
+        tableCell(String.format("%5.1f", agreement[0][0]));
+        tableCell(String.format("%5.1f", agreement[0][1]));
+        endTableRow();
+        beginTableRow();
+        tableHeader(" rand +");
+        tableCell(String.format("%5.1f", agreement[1][0]));
+        tableCell(String.format("%5.1f", agreement[1][1]));
+        endTableRow();
+        endTable();
+        paragraph("McNemar's test (with correction " + mcnemarCorrection
+                + "): " + ConfusionMatrix.mcnemar(agreement, mcnemarCorrection));
     }
 
     /**

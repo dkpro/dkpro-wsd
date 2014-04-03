@@ -68,15 +68,7 @@ public class ClusterEvaluatorText
     protected void beginTable()
         throws IOException
     {
-        output.write(String.format(
-                "\n%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\t%s\t%s\n",
-                "POS", "test", "gold", "both", "score", "p", "r", "cover",
-                "F1", "cluster", "ΔF none", "ΔF rand"));
-        output.write(String.format(
-                "%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\t%s\t%s\n",
-                "-------", "-------", "-------", "-------", "-------",
-                "-------", "-------", "-------", "-------", "-------",
-                "-------", "-------"));
+        output.newLine();
     }
 
     @Override
@@ -95,38 +87,13 @@ public class ClusterEvaluatorText
     protected void endDocument()
         throws IOException
     {
-        output.write("\n" + numberOfClusteredLexicalItems
-                + " lexical items in " + numberOfClusteredInstances
-                + " instances were affected by the clustering.\n");
-        output.write(improvedInstanceCount
-                + " instances (representing "
-                + improvedSods.size()
-                + " lexical items) had clustered scores better than random clustering.\n");
-        if (showImprovedInstances) {
-            output.write("Improved instances:\n");
-            for (String s : improvedInstances) {
-                output.write(s + "\n");
-            }
-        }
-        if (showImprovedSods) {
-            output.write("The total clustered score for the following lexical items exceeds the total random score:\n");
-            output.write("inc    %inc   lemma\n");
-            for (String lemma : clusteredScoreByLemma.keySet()) {
-                double clusteredScore = clusteredScoreByLemma.get(lemma);
-                double randomClusteredScore = randomClusteredScoreByLemma
-                        .get(lemma);
-                output.write(String.format("%06.1f %2.4f %s\n", clusteredScore
-                        - randomClusteredScore,
-                        (clusteredScore - randomClusteredScore)
-                                / randomClusteredScore, lemma));
-            }
-        }
     }
 
     @Override
     protected void tableHeader(String cellContents)
         throws IOException
     {
+        output.write(cellContents + "\t");
     }
 
     @Override
@@ -136,4 +103,12 @@ public class ClusterEvaluatorText
         output.write(cellContents + "\t");
     }
 
+    @Override
+    protected void paragraph(String text)
+        throws IOException
+    {
+        output.newLine();
+        output.write(text);
+        output.newLine();
+    }
 }

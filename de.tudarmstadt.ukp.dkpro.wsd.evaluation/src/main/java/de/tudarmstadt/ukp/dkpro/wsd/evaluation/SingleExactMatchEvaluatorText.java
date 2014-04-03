@@ -25,8 +25,8 @@ import java.io.IOException;
 /**
  * A {@link AbstractSingleExactMatchEvaluator} with plain text output.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de> Andriy
- *         Nadolskyy
+ * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>, Andriy
+ *         Nadolskyy <nadolskyy@ukp.informatik.tu-darmstadt.de>
  */
 public class SingleExactMatchEvaluatorText
     extends AbstractSingleExactMatchEvaluator
@@ -67,14 +67,7 @@ public class SingleExactMatchEvaluatorText
     protected void beginTable()
         throws IOException
     {
-        output.write(String.format(
-                "\n%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "POS",
-                "test", "gold", "both", "score", "p", "r", "cover", "F1",
-                "backoff"));
-        output.write(String.format(
-                "%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%7s\t%s\n", "-------",
-                "-------", "-------", "-------", "-------", "-------",
-                "-------", "-------", "-------", "-------"));
+        output.newLine();
     }
 
     @Override
@@ -109,6 +102,7 @@ public class SingleExactMatchEvaluatorText
     protected void tableHeader(String cellContents)
         throws IOException
     {
+        output.write(cellContents + "\t");
     }
 
     @Override
@@ -118,4 +112,11 @@ public class SingleExactMatchEvaluatorText
         output.write(cellContents + "\t");
     }
 
+    @Override
+    protected void paragraph(String text)
+        throws IOException
+    {
+        output.write(text);
+        output.newLine();
+    }
 }
