@@ -23,10 +23,10 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
@@ -49,7 +49,7 @@ public class ConfusionMatrix
     @ConfigurationParameter(name = PARAM_TEST_ALGORITHM2, mandatory = true, description = "The second test algorithm to be evaluated")
     protected String testAlgorithm2;
 
-    protected int[][] agreement;
+    protected double[][] agreement;
 
     private final Logger logger = Logger.getLogger(getClass());
 
@@ -58,7 +58,7 @@ public class ConfusionMatrix
         throws ResourceInitializationException
     {
         super.initialize(context);
-        agreement = new int[2][2];
+        agreement = new double[2][2];
     }
 
     @Override
@@ -69,13 +69,14 @@ public class ConfusionMatrix
 
         // Score each WSDItem
         for (WSDItem wsdItem : JCasUtil.select(aJCas, WSDItem.class)) {
-            if (maxItemsAttempted >= 0 && numItemsAttempted++ >= maxItemsAttempted) {
+            if (maxItemsAttempted >= 0
+                    && numItemsAttempted++ >= maxItemsAttempted) {
                 break;
             }
             WSDResult goldResult = null;
             WSDResult test1Result = null;
             WSDResult test2Result = null;
-            int test1Score, test2Score;
+            double test1Score, test2Score;
             List<WSDResult> wsdResults = getWSDResults(aJCas, wsdItem);
 
             // Make a first pass through the list of WSDResults for this
@@ -84,8 +85,8 @@ public class ConfusionMatrix
             for (WSDResult r : wsdResults) {
                 if (r.getDisambiguationMethod().equals(goldStandardAlgorithm)) {
                     if (ignoreResult(r)) {
-                        logger.info(goldStandardAlgorithm
-                                + " result for " + wsdItem.getId()
+                        logger.info(goldStandardAlgorithm + " result for "
+                                + wsdItem.getId()
                                 + " matches the ignore pattern");
                     }
                     else if (goldResult != null) {
@@ -145,10 +146,48 @@ public class ConfusionMatrix
                     + " T2="
                     + (test2Result == null ? "null" : test2Result.getSenses(0)
                             .getId()));
-            agreement[test1Score][test2Score]++;
+            agreement[1][1] += test1Score * test2Score;
+            agreement[1][0] += test1Score * (1.0 - test2Score);
+            agreement[0][1] += (1.0 - test1Score) * test2Score;
+            agreement[0][0] += (1.0 - test1Score) * (1.0 - test2Score);
         }
     }
 
+    // /**
+    // * Given a test and gold standard set of disambiguation results, loop
+    // * through them to find the common senses, and return the sum of the test
+    // * results' confidence values.
+    // *
+    // * @param testResult
+    // * @param goldResult
+    // * @return
+    // * @throws AnalysisEngineProcessException
+    // */
+    // double getMatchingScore(WSDResult testResult, WSDResult goldResult)
+    // throws AnalysisEngineProcessException
+    // {
+    // if (testResult == null) {
+    // return 0.0;
+    // }
+    // // Test results must have only one sense annotation
+    // if (testResult.getSenses().size() != 1) {
+    // logger.error("Test algorithm result has multiple sense annotations");
+    // throw new AnalysisEngineProcessException();
+    //
+    // }
+    // // Test results must have a confidence of 1
+    // if (testResult.getSenses(0).getConfidence() != 1.0) {
+    // logger.error("Test algorithm has result a non-binary confidence");
+    // throw new AnalysisEngineProcessException();
+    // }
+    // for (int i = 0; i < goldResult.getSenses().size(); i++) {
+    // if (goldResult.getSenses(i).getId()
+    // .equals(testResult.getSenses(0).getId())) {
+    // return 1;
+    // }
+    // }
+    // return 0;
+    // }
     /**
      * Given a test and gold standard set of disambiguation results, loop
      * through them to find the common senses, and return the sum of the test
@@ -157,32 +196,34 @@ public class ConfusionMatrix
      * @param testResult
      * @param goldResult
      * @return
-     * @throws AnalysisEngineProcessException
      */
-    int getMatchingScore(WSDResult testResult, WSDResult goldResult)
-        throws AnalysisEngineProcessException
+    protected double getMatchingScore(WSDResult testResult, WSDResult goldResult)
     {
         if (testResult == null) {
-            return 0;
+            return 0.0;
         }
-        // Test results must have only one sense annotation
-        if (testResult.getSenses().size() != 1) {
-            logger.error("Test algorithm result has multiple sense annotations");
-            throw new AnalysisEngineProcessException();
-
-        }
-        // Test results must have a confidence of 1
-        if (testResult.getSenses(0).getConfidence() != 1.0) {
-            logger.error("Test algorithm has result a non-binary confidence");
-            throw new AnalysisEngineProcessException();
-        }
+        double confidence = 0.0;
         for (int i = 0; i < goldResult.getSenses().size(); i++) {
-            if (goldResult.getSenses(i).getId()
-                    .equals(testResult.getSenses(0).getId())) {
-                return 1;
+            for (int j = 0; j < testResult.getSenses().size(); j++) {
+                if (goldResult.getSenses(i).getId()
+                        .equals(testResult.getSenses(j).getId())) {
+                    double testConfidence = testResult.getSenses(j)
+                            .getConfidence();
+                    logger.info(testResult.getWsdItem().getId() + ": "
+                            + testResult.getDisambiguationMethod()
+                            + " annotation " + testResult.getSenseInventory()
+                            + "/" + testResult.getSenses(j).getId()
+                            + " score: " + testConfidence);
+                    confidence += testConfidence;
+                }
             }
         }
-        return 0;
+
+        logger.info(testResult.getWsdItem().getId() + ": "
+                + testResult.getDisambiguationMethod() + " total score: "
+                + confidence);
+
+        return confidence;
     }
 
     @Override
@@ -197,9 +238,9 @@ public class ConfusionMatrix
         System.out.println("Gold standard algorithm: " + goldStandardAlgorithm);
 
         System.out.println("\n            \tT2 incorrect\tT2   correct");
-        System.out.format("T1 incorrect\t%12d\t%12d\n", agreement[0][0],
+        System.out.format("T1 incorrect\t%12f\t%12f\n", agreement[0][0],
                 agreement[0][1]);
-        System.out.format("T1   correct\t%12d\t%12d\n", agreement[1][0],
+        System.out.format("T1   correct\t%12f\t%12f\n", agreement[1][0],
                 agreement[1][1]);
     }
 }
