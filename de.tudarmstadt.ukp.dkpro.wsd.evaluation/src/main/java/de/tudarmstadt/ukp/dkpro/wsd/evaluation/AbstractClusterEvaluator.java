@@ -45,10 +45,16 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
+// TODO: Revise computed random cluster score to allow for multiple gold-standard answers.  Perhaps this is as simple as multiplying the score by the number of gold-standard answers.
+
 /**
  * This class evaluates a clustering of word senses against a computed random
  * clustering of the same granularity, as described in R. Snow, S. Prakash, D.
- * Jurafsky, and A. Y. Ng, "Learning to Merge Word Senses" (2007).
+ * Jurafsky, and A. Y. Ng, "Learning to Merge Word Senses" (2007). It is assumed
+ * that there is only one correct gold standard answer for each instance. (The
+ * random baseline score is computed using this assumption, and the test
+ * clustering score adds together the confidence values of all gold-standard
+ * senses but caps the score at 1.0.)
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -254,8 +260,14 @@ public abstract class AbstractClusterEvaluator
         assert (scoreWithoutClustering >= 0.0);
         assert (scoreWithClustering >= 0.0);
         assert (scoreWithRandomClustering <= 1.0);
-        assert (scoreWithoutClustering <= 1.0);
-        assert (scoreWithClustering <= 1.0);
+//        assert (scoreWithoutClustering <= 1.0);
+        // assert (scoreWithClustering <= 1.0);
+        if (scoreWithClustering > 1.0) {
+            scoreWithClustering = 1.0;
+        }
+        if (scoreWithoutClustering > 1.0) {
+            scoreWithoutClustering = 1.0;
+        }
 
         // Store unclustered, clustered, and random-clustered scores
         if (scoreWithoutClustering > 0.0) {
