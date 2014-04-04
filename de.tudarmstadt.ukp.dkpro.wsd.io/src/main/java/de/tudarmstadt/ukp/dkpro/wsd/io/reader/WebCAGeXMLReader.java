@@ -74,8 +74,8 @@ public class WebCAGeXMLReader
     @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "GermaNet_8.0")
     private String senseInventory;
 
-    Element corpus = null;
-    Iterator<Element> textIterator = null;
+    protected Element corpus = null;
+    protected Iterator<Element> textIterator = null;
 
     @Override
     @SuppressWarnings("unchecked")
@@ -171,17 +171,15 @@ public class WebCAGeXMLReader
                 // Skip word forms without a POS
                 String pos = head.attributeValue(ATTR_POS);
                 if (pos == null) {
-                    logger.warn(
-                            "No POS provided for " + headId + "; skipping");
+                    logger.warn("No POS provided for " + headId + "; skipping");
                     continue;
                 }
                 try {
                     pos = webCAGePosToPOS(pos).toString();
                 }
                 catch (IllegalArgumentException e) {
-                    logger.warn(
-                            "Unrecognized POS " + pos + " provided for "
-                                    + headId + "; skipping");
+                    logger.warn("Unrecognized POS " + pos + " provided for "
+                            + headId + "; skipping");
                     continue;
                 }
 
