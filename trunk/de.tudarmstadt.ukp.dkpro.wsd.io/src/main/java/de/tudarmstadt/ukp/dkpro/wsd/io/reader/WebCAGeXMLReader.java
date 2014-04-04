@@ -166,10 +166,12 @@ public class WebCAGeXMLReader
                 String headId = head.attributeValue(ATTR_ID);
                 String lemma = head.attributeValue(ATTR_LEMMA);
 
+                logger.trace("Reading instance " + headId);
+
                 // Skip word forms without a POS
                 String pos = head.attributeValue(ATTR_POS);
                 if (pos == null) {
-                    getLogger().warn(
+                    logger.warn(
                             "No POS provided for " + headId + "; skipping");
                     continue;
                 }
@@ -177,7 +179,7 @@ public class WebCAGeXMLReader
                     pos = webCAGePosToPOS(pos).toString();
                 }
                 catch (IllegalArgumentException e) {
-                    getLogger().warn(
+                    logger.warn(
                             "Unrecognized POS " + pos + " provided for "
                                     + headId + "; skipping");
                     continue;
