@@ -45,16 +45,11 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
-// TODO: Revise computed random cluster score to allow for multiple gold-standard answers.  Perhaps this is as simple as multiplying the score by the number of gold-standard answers.
-
 /**
  * This class evaluates a clustering of word senses against a computed random
- * clustering of the same granularity, as described in R. Snow, S. Prakash, D.
- * Jurafsky, and A. Y. Ng, "Learning to Merge Word Senses" (2007). It is assumed
- * that there is only one correct gold standard answer for each instance. (The
- * random baseline score is computed using this assumption, and the test
- * clustering score adds together the confidence values of all gold-standard
- * senses but caps the score at 1.0.)
+ * clustering of the same granularity, a generalization of the method described
+ * in R. Snow, S. Prakash, D. Jurafsky, and A. Y. Ng,
+ * "Learning to Merge Word Senses" (2007).
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -78,8 +73,12 @@ public abstract class AbstractClusterEvaluator
     @ConfigurationParameter(name = PARAM_SHOW_CONFUSION_MATRIX, mandatory = false, description = "Whether to show a confusion matrix comparing the clustering with the random clustering", defaultValue = "true")
     protected boolean showConfusionMatrix;
 
+    public final static String PARAM_COUNT_UNASSIGNED_IN_CONFUSION_MATRIX = "countUnassignedInConfusionMatrix";
+    @ConfigurationParameter(name = PARAM_COUNT_UNASSIGNED_IN_CONFUSION_MATRIX, mandatory = false, description = "Whether to count unassigned instances in the confusion matrix", defaultValue = "true")
+    protected boolean countUnassignedInConfusionMatrix;
+
     public static final String PARAM_MCNEMAR_CORRECTION = "mcnemarCorrection";
-    @ConfigurationParameter(name = PARAM_MCNEMAR_CORRECTION, mandatory = false, description = "The correction to use for McNemar's test", defaultValue = "0.0")
+    @ConfigurationParameter(name = PARAM_MCNEMAR_CORRECTION, mandatory = false, description = "The correction to use for McNemar's test on the confusion matrix", defaultValue = "0.0")
     protected double mcnemarCorrection;
 
     public final static String PARAM_SHOW_IMPROVED_SODS = "showImprovedSods";
@@ -223,6 +222,9 @@ public abstract class AbstractClusterEvaluator
                 logger.info(wsdItem.getId() + ": no test annotation");
                 logger.info(wsdItem.getId() + ": " + testAlgorithm
                         + " total score: 0.0");
+                if (countUnassignedInConfusionMatrix == true) {
+                    agreement[0][0]++;
+                }
                 continue;
             }
 
@@ -254,13 +256,13 @@ public abstract class AbstractClusterEvaluator
         scoreWithoutClustering = getMatchingScore(testResult, goldResult);
         scoreWithClustering = getMatchingClusteredScore(testResult, goldResult);
         scoreWithRandomClustering = (scoreWithoutClustering > 0.0) ? scoreWithoutClustering
-                : getRandomScore(wsdItem, pos);
+                : getRandomScore(wsdItem, goldResult);
         assert (scoreWithoutClustering <= scoreWithClustering);
         assert (scoreWithRandomClustering >= 0.0);
         assert (scoreWithoutClustering >= 0.0);
         assert (scoreWithClustering >= 0.0);
         assert (scoreWithRandomClustering <= 1.0);
-//        assert (scoreWithoutClustering <= 1.0);
+        // assert (scoreWithoutClustering <= 1.0);
         // assert (scoreWithClustering <= 1.0);
         if (scoreWithClustering > 1.0) {
             scoreWithClustering = 1.0;
@@ -338,21 +340,26 @@ public abstract class AbstractClusterEvaluator
      * the clusters which contain these senses. We then assume that the senses
      * are randomly shuffled among these clusters, and return the probability
      * that an incorrectly chosen sense and the actual correct sense would be
-     * found in the same cluster. Note that this method assumes that there is a
-     * <i>single</i> correct sense.
+     * found in the same cluster.
      *
-     * @param subjectOfDisambiguation
+     * @param wsdItem
+     * @param pos
+     * @param numberOfCorrectSenses
      * @return
      * @throws SenseInventoryException
      */
-    protected Double getRandomScore(WSDItem wsdItem, POS pos)
+    protected Double getRandomScore(WSDItem wsdItem, WSDResult goldResult)
         throws SenseInventoryException
     {
+        POS pos = wsdItem.getPos() == null ? null : POS.valueOf(wsdItem
+                .getPos());
+        int numberOfCorrectSenses = goldResult.getSenses().size();
         String sod = wsdItem.getSubjectOfDisambiguation();
         String sodPos = sod + '/' + pos;
+        String sodPosGold = sod + '/' + pos + "/" + numberOfCorrectSenses;
 
         // Return cached score for this sod if it exists
-        Double cachedScore = cachedRandomWordScore.get(sodPos);
+        Double cachedScore = cachedRandomWordScore.get(sodPosGold);
         if (cachedScore == null) {
 
             // Compute score from random clustering
@@ -378,22 +385,21 @@ public abstract class AbstractClusterEvaluator
                     numberOfClusters++;
                     clusterSizes.add(Integer.valueOf(cluster.size()));
                     numberOfSenses += cluster.size();
-                    score += cluster.size() * (cluster.size() - 1);
                 }
             }
             if (numberOfSenses == 1) {
                 logger.warn("getRandomScore() unexpectedly called when there is only one cluster. Probably the answer key for "
                         + wsdItem.getId() + "/" + sodPos + " is wrong.");
-                score = 0.0;
             }
             else {
-                score /= numberOfSenses * (numberOfSenses - 1);
+                score = computeRandomScore(clusterSizes, numberOfSenses,
+                        numberOfCorrectSenses);
             }
             cachedScore = Double.valueOf(score);
-            cachedRandomWordScore.put(sodPos, cachedScore);
+            cachedRandomWordScore.put(sodPosGold, cachedScore);
             logger.info(wsdItem.getId() + '/' + sodPos + " has "
                     + numberOfClusters + " clusters over " + numberOfSenses
-                    + " senses with sizes " + clusterSizes);
+                    + " senses with sizes " + clusterSizes + "; score=" + score);
             if (cachedScore > 0.0) {
                 numberOfClusteredLexicalItems++;
             }
@@ -405,6 +411,46 @@ public abstract class AbstractClusterEvaluator
 
         logger.info(wsdItem.getId() + ": random cluster score: " + cachedScore);
         return cachedScore;
+    }
+
+    /**
+     * Given a list of sense cluster sizes C, the total number of senses in the
+     * clusters n, and the total number of senses whereof which are correct
+     * senses g, computes the probability that a chosen incorrect sense is
+     * clustered together with a correct sense -- i.e., $1 - \sum_{c \in C}
+     * \frac{\left|c\right| \left(n - \left|c\right|\right)! \left(n - g -
+     * 1\right)!}{n! \left(n - \left|c\right| - g\right)!}$ where the sum
+     * applies only to those clusters where $n - \left|c\right| \geq g$. Note
+     * this method doesn't compute the factorials directly, since for
+     * particularly large clusters the results won't fit into Java's integral
+     * types. Instead we simplify the formula to $1 - \sum_{c \in C}
+     * \frac{\left|c\right|(n - \left|c\right| - 0\right)\cdots\left(n -
+     * \left|c\right| - \left(g - 1\right)\right)}{\left(n -
+     * 0\right)\cdots\left(n - g\right)}$.
+     *
+     * @param clusterSizes
+     *            a list of sense cluster sizes
+     * @param n
+     *            the total number of senses
+     * @param g
+     *            the number of gold-standard ("correct") senses
+     * @return
+     */
+    private double computeRandomScore(List<Integer> clusterSizes, int n, int g)
+    {
+        double sum = 0.0;
+        for (int c : clusterSizes) {
+            double product = c;
+            for (int i = 0; i < g; i++) {
+                product *= (n - c - i);
+            }
+            sum += product;
+        }
+        double product = n;
+        for (int i = 1; i <= g; i++) {
+            product *= (n - i);
+        }
+        return 1.0 - sum / product;
     }
 
     /**
@@ -599,6 +645,7 @@ public abstract class AbstractClusterEvaluator
     private void showConfusionMatrix()
         throws IOException
     {
+        paragraph("Agreement matrix:");
         beginTable();
         beginTableRow();
         tableHeader("");
