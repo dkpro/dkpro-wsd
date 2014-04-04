@@ -541,14 +541,16 @@ public abstract class AbstractClusterEvaluator
             double clusteredScore = clusteredScoreByLemma.get(lemma);
             double randomClusteredScore = randomClusteredScoreByLemma
                     .get(lemma);
-            beginTableRow();
-            tableCell(String.format("%06.1f", clusteredScore
-                    - randomClusteredScore));
-            tableCell(String.format("%2.4f",
-                    (clusteredScore - randomClusteredScore)
-                            / randomClusteredScore));
-            tableCell(lemma);
-            endTableRow();
+            if (clusteredScore > randomClusteredScore) {
+                beginTableRow();
+                tableCell(String.format("%06.1f", clusteredScore
+                        - randomClusteredScore));
+                tableCell(String.format("%2.4f",
+                        (clusteredScore - randomClusteredScore)
+                                / randomClusteredScore));
+                tableCell(lemma);
+                endTableRow();
+            }
         }
         endTable();
     }
