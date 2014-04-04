@@ -100,13 +100,13 @@ public class MASCReader
     private static final String ATTR_ANCHORS = "anchors";
     private static final String ATTR_VALUE = "value";
 
-    HashMap<String, String> targetItems2sentences = new HashMap<String, String>();
-    HashMap<String, List<String>> targetItems2senses = new HashMap<String, List<String>>();
-    Document document = null;
-    Iterator<Element> nodeIterator = null;
-    Element root = null;
-    String pos = null;
-    String lemma = null;
+    protected HashMap<String, String> targetItems2sentences = new HashMap<String, String>();
+    protected HashMap<String, List<String>> targetItems2senses = new HashMap<String, List<String>>();
+    protected Document document = null;
+    protected Iterator<Element> nodeIterator = null;
+    protected Element root = null;
+    protected String pos = null;
+    protected String lemma = null;
 
     private final Logger logger = Logger.getLogger(getClass());
 
