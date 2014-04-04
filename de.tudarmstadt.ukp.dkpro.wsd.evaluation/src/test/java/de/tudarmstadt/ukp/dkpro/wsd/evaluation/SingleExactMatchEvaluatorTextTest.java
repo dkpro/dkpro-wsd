@@ -179,7 +179,7 @@ public class SingleExactMatchEvaluatorTextTest
         );
 
         Scanner in = new Scanner(new FileReader(tempFile));
-        for (int i = 0; i < 13; i++) {
+        for (int i = 0; i < 12; i++) {
             in.nextLine();
         }
         for (int i = 0; i < 5; i++) {
