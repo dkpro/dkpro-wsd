@@ -101,7 +101,8 @@ public abstract class AbstractClusterEvaluator
     protected Set<String> improvedSods;
     protected Map<String, Double> clusteredScoreByLemma;
     protected Map<String, Double> randomClusteredScoreByLemma;
-    protected double[][] agreement;
+    protected Map<POS, double[][]> agreement;
+    protected double totalAgreement[][];
 
     @Override
     public void initialize(UimaContext context)
@@ -114,7 +115,10 @@ public abstract class AbstractClusterEvaluator
             throw new ResourceInitializationException();
         }
 
-        agreement = new double[2][2];
+        agreement = new HashMap<POS, double[][]>();
+        for (POS pos : POS.values()) {
+            agreement.put(pos, new double[2][2]);
+        }
         improvedInstances = new ArrayList<String>();
         improvedSods = new HashSet<String>();
         numberOfClusteredLexicalItems = 0;
@@ -223,7 +227,7 @@ public abstract class AbstractClusterEvaluator
                 logger.info(wsdItem.getId() + ": " + testAlgorithm
                         + " total score: 0.0");
                 if (countUnassignedInConfusionMatrix == true) {
-                    agreement[0][0]++;
+                    agreement.get(pos)[0][0]++;
                 }
                 continue;
             }
@@ -308,12 +312,13 @@ public abstract class AbstractClusterEvaluator
         }
 
         // Update confusion matrix
-        agreement[1][1] += scoreWithRandomClustering * scoreWithClustering;
-        agreement[1][0] += scoreWithRandomClustering
-                * (1.0 - scoreWithClustering);
-        agreement[0][1] += (1.0 - scoreWithRandomClustering)
+        agreement.get(pos)[1][1] += scoreWithRandomClustering
                 * scoreWithClustering;
-        agreement[0][0] += (1.0 - scoreWithRandomClustering)
+        agreement.get(pos)[1][0] += scoreWithRandomClustering
+                * (1.0 - scoreWithClustering);
+        agreement.get(pos)[0][1] += (1.0 - scoreWithRandomClustering)
+                * scoreWithClustering;
+        agreement.get(pos)[0][0] += (1.0 - scoreWithRandomClustering)
                 * (1.0 - scoreWithClustering);
 
         // Make a note of any SoDs and Instances where clustering helped
@@ -493,6 +498,13 @@ public abstract class AbstractClusterEvaluator
     public void collectionProcessComplete()
         throws AnalysisEngineProcessException
     {
+        totalAgreement = new double[2][2];
+        for (POS pos : POS.values()) {
+            totalAgreement[0][0] += agreement.get(pos)[0][0];
+            totalAgreement[0][1] += agreement.get(pos)[0][1];
+            totalAgreement[1][0] += agreement.get(pos)[1][0];
+            totalAgreement[1][1] += agreement.get(pos)[1][1];
+        }
 
         try {
             beginDocument("Document");
@@ -587,6 +599,8 @@ public abstract class AbstractClusterEvaluator
         tableHeader("cluster");
         tableHeader("ΔF none");
         tableHeader("ΔF rand");
+        tableHeader("χ²");
+        tableHeader("b + c");
         endTableRow();
 
         int totalTestAnnotatedInstances = 0;
@@ -656,17 +670,23 @@ public abstract class AbstractClusterEvaluator
         endTableRow();
         beginTableRow();
         tableHeader(" rand -");
-        tableCell(String.format("%5.1f", agreement[0][0]));
-        tableCell(String.format("%5.1f", agreement[0][1]));
+        tableCell(String.format("%5.1f", totalAgreement[0][0]));
+        tableCell(String.format("%5.1f", totalAgreement[0][1]));
         endTableRow();
         beginTableRow();
         tableHeader(" rand +");
-        tableCell(String.format("%5.1f", agreement[1][0]));
-        tableCell(String.format("%5.1f", agreement[1][1]));
+        tableCell(String.format("%5.1f", totalAgreement[1][0]));
+        tableCell(String.format("%5.1f", totalAgreement[1][1]));
         endTableRow();
         endTable();
-        paragraph("McNemar's test (with correction " + mcnemarCorrection
-                + "): " + ConfusionMatrix.mcnemar(agreement, mcnemarCorrection));
+        paragraph("McNemar's test (with correction "
+                + mcnemarCorrection
+                + "): "
+                + String.format("%3.3f", ConfusionMatrix.mcnemar(
+                        totalAgreement, mcnemarCorrection))
+                + " (b + c = "
+                + String.format("%5.1f",
+                        (totalAgreement[0][1] + totalAgreement[1][0])) + ")");
     }
 
     /**
@@ -732,8 +752,18 @@ public abstract class AbstractClusterEvaluator
         if (randomClusteredWsdStats != null) {
             tableCell(String.format("%+1.4f", wsdStats.f1
                     - randomClusteredWsdStats.f1));
+            double[][] matrix = pos.equals("all") ? totalAgreement : agreement
+                    .get(POS.valueOf(pos));
+            double mcnemar = ConfusionMatrix.mcnemar(matrix, mcnemarCorrection);
+            if (Double.isInfinite(mcnemar)) {
+                mcnemar = 0.0;
+            }
+            tableCell(String.format("%2.6g", mcnemar));
+            tableCell(String.format("%2.6g", matrix[1][0] + matrix[0][1]));
         }
         else {
+            tableCell(String.format("%7s", "—"));
+            tableCell(String.format("%7s", "—"));
             tableCell(String.format("%7s", "—"));
         }
 
