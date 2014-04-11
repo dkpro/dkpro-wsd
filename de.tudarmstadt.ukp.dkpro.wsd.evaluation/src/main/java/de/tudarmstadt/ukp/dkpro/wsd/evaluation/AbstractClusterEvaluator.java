@@ -551,9 +551,9 @@ public abstract class AbstractClusterEvaluator
         endTableRow();
         for (String lemma : clusteredScoreByLemma.keySet()) {
             double clusteredScore = clusteredScoreByLemma.get(lemma);
-            double randomClusteredScore = randomClusteredScoreByLemma
+            Double randomClusteredScore = randomClusteredScoreByLemma
                     .get(lemma);
-            if (clusteredScore > randomClusteredScore) {
+            if (randomClusteredScore != null && clusteredScore > randomClusteredScore) {
                 beginTableRow();
                 tableCell(String.format("%06.1f", clusteredScore
                         - randomClusteredScore));
@@ -758,8 +758,8 @@ public abstract class AbstractClusterEvaluator
             if (Double.isInfinite(mcnemar)) {
                 mcnemar = 0.0;
             }
-            tableCell(String.format("%2.6g", mcnemar));
-            tableCell(String.format("%2.6g", matrix[1][0] + matrix[0][1]));
+            tableCell(String.format("%7.2g", mcnemar));
+            tableCell(String.format("%7.2g", (matrix[1][0] + matrix[0][1])));
         }
         else {
             tableCell(String.format("%7s", "—"));
