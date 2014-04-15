@@ -361,20 +361,37 @@ public abstract class AbstractClusterEvaluator
         int numberOfCorrectSenses = goldResult.getSenses().size();
         String sod = wsdItem.getSubjectOfDisambiguation();
         String sodPos = sod + '/' + pos;
-        String sodPosGold = sod + '/' + pos + "/" + numberOfCorrectSenses;
 
-        // Return cached score for this sod if it exists
+        // Sanity check #1: make sure this lexical item actually exists
+        // in the sense inventory. If not, return a score of 0.0, since
+        // in this case clustering can't help.
+        List<String> senses = inventory.getSenses(sod, pos);
+        if (senses.isEmpty()) {
+            logger.warn("No random clustering score for '" + sodPos
+                    + "'; subject of disambiguation not in sense inventory");
+            return Double.valueOf(0.0);
+        }
+
+        // Sanity check #2: How many of the senses specified by the gold
+        // standard are actually in the sense inventory? If none of them are
+        // there (e.g., they are all Senseval "P" or "U"), return a score of
+        // 0.0, since in this case clustering can't help.
+        int numberOfCorrectValidSenses = 0;
+        for (int i = 0; i < numberOfCorrectSenses; i++) {
+            if (senses.contains(goldResult.getSenses(i).getId())) {
+                numberOfCorrectValidSenses++;
+            }
+        }
+        if (numberOfCorrectValidSenses == 0) {
+            logger.warn("No random clustering score for '" + sodPos
+                    + "'; no gold standard senses in sense inventory");
+            return Double.valueOf(0.0);
+        }
+        numberOfCorrectSenses = numberOfCorrectValidSenses;
+
+        String sodPosGold = sod + '/' + pos + "/" + numberOfCorrectSenses;
         Double cachedScore = cachedRandomWordScore.get(sodPosGold);
         if (cachedScore == null) {
-
-            // Compute score from random clustering
-            List<String> senses = inventory.getSenses(sod, pos);
-            if (senses.isEmpty()) {
-                logger.warn("No random clustering score for '" + sodPos
-                        + "'; not in sense inventory");
-                return Double.valueOf(0.0);
-            }
-
             // Snow et al. set numberOfSenses to senses.size(), though this
             // assumes that all senses in a cluster share the same lexical item.
             // Instead we compute the number of senses based on the cardinality
@@ -392,8 +409,8 @@ public abstract class AbstractClusterEvaluator
                     numberOfSenses += cluster.size();
                 }
             }
-            if (numberOfSenses == 1) {
-                logger.warn("getRandomScore() unexpectedly called when there is only one cluster. Probably the answer key for "
+            if (numberOfSenses == 1 || numberOfCorrectSenses >= numberOfSenses) {
+                logger.warn("getRandomScore() unexpectedly called on a monosemous term. Probably the answer key for "
                         + wsdItem.getId() + "/" + sodPos + " is wrong.");
             }
             else {
@@ -443,6 +460,9 @@ public abstract class AbstractClusterEvaluator
      */
     private double computeRandomScore(List<Integer> clusterSizes, int n, int g)
     {
+        if (g >= n) {
+            throw new IllegalArgumentException();
+        }
         double sum = 0.0;
         for (int c : clusterSizes) {
             double product = c;
@@ -553,7 +573,8 @@ public abstract class AbstractClusterEvaluator
             double clusteredScore = clusteredScoreByLemma.get(lemma);
             Double randomClusteredScore = randomClusteredScoreByLemma
                     .get(lemma);
-            if (randomClusteredScore != null && clusteredScore > randomClusteredScore) {
+            if (randomClusteredScore != null
+                    && clusteredScore > randomClusteredScore) {
                 beginTableRow();
                 tableCell(String.format("%06.1f", clusteredScore
                         - randomClusteredScore));
