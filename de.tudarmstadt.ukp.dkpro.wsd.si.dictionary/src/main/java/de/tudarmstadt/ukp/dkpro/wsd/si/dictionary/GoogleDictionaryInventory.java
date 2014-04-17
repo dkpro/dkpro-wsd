@@ -152,6 +152,13 @@ public class GoogleDictionaryInventory
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public List<String> getSenses(String sod)
         throws SenseInventoryException
     {

@@ -780,7 +780,8 @@ public abstract class AbstractClusterEvaluator
                 mcnemar = 0.0;
             }
             tableCell(String.format("%7.2g", mcnemar));
-            tableCell(String.format("%7.2g", (matrix[1][0] + matrix[0][1])));
+            tableCell(String.format("%7.2g", (matrix[1][0])));
+            tableCell(String.format("%7.2g", (matrix[0][1])));
         }
         else {
             tableCell(String.format("%7s", "—"));

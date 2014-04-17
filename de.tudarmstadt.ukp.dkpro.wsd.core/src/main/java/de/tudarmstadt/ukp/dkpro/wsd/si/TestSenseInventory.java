@@ -121,4 +121,11 @@ public class TestSenseInventory
         return this.getClass().getCanonicalName();
     }
 
+    @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        return POS.NOUN;
+    }
+
 }

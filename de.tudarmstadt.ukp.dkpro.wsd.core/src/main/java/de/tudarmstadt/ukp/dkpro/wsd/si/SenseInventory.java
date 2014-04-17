@@ -100,12 +100,22 @@ public interface SenseInventory
     /**
      * @param senseId
      * @return A human readable description of the current sense represented by
-     *         its senseId or an empty string if no description is available.
-     *         A {@link SenseInventoryException} is thrown if the senseId is
+     *         its senseId or an empty string if no description is available. A
+     *         {@link SenseInventoryException} is thrown if the senseId is
      *         invalid.
      * @throws SenseInventoryException
      */
     public String getSenseDescription(String senseId)
+        throws SenseInventoryException;
+
+    /**
+     * @param senseId
+     * @return The part of speech of the sense represented by the given senseId.
+     *         A {@link SenseInventoryException} is thrown if the senseId is
+     *         invalid.
+     * @throws SenseInventoryException
+     */
+    public POS getPos(String senseId)
         throws SenseInventoryException;
 
     /**

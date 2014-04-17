@@ -130,6 +130,13 @@ public class UkbDictionaryInventory
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public Map<String, List<String>> getSenseInventory()
         throws SenseInventoryException
     {

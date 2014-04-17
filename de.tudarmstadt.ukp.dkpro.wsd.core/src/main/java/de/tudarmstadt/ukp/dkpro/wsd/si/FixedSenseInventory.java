@@ -96,4 +96,11 @@ public class FixedSenseInventory
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        return POS.NOUN;
+    }
+
 }

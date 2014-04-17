@@ -151,6 +151,7 @@ public abstract class WordNetSynsetSenseInventoryBase
         {
             super(senseId);
             synset = stringToSynset.transform(id);
+            pos = wordNetPosToSiPos.transform(synset.getPOS());
         }
 
         @Override
@@ -219,6 +220,12 @@ public abstract class WordNetSynsetSenseInventoryBase
             }
 
             return neighbours;
+        }
+
+        @Override
+        public POS getPos()
+        {
+            return pos;
         }
     }
 

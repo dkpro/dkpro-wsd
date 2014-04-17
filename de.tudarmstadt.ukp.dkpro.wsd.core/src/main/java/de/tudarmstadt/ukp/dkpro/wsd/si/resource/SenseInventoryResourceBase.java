@@ -161,6 +161,13 @@ public abstract class SenseInventoryResourceBase
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        return inventory.getPos(senseId);
+    }
+
+    @Override
     public String getSenseInventoryName()
     {
         if (senseInventoryName == null) {

@@ -39,13 +39,13 @@ public class InducedSenseInventory
 {
     /**
      * Associates the list of sense-ids to every lexical item in the inventory
-     * 
+     *
      */
     private final Map<String, List<String>> inventory = new TreeMap<String, List<String>>();
 
     /**
      * List of related terms per sense-id
-     * 
+     *
      */
     private final Map<String, List<String>> clusters = new TreeMap<String, List<String>>();;
 
@@ -62,13 +62,14 @@ public class InducedSenseInventory
     {
         sod = sod.toLowerCase().replace('_', ' ');
 
-        if (!inventory.containsKey(sod))
+        if (!inventory.containsKey(sod)) {
             // throw new SenseInventoryException("the item " + sod +
             // " is not part of this inventory");
             return new LinkedList<String>();
-        else
-
+        }
+        else {
             return inventory.get(sod);
+        }
 
     }
 
@@ -129,18 +130,20 @@ public class InducedSenseInventory
 
     /**
      * Adds a new sense to the inventory
-     * 
+     *
      * @param sod
      * @param senseId
      * @param cluster
      */
     public void addSense(String sod, String senseId, Collection<String> cluster)
     {
-        if (!inventory.containsKey(sod))
+        if (!inventory.containsKey(sod)) {
             inventory.put(sod, new LinkedList<String>());
+        }
         inventory.get(sod).add(senseId);
-        if (!clusters.containsKey(senseId))
+        if (!clusters.containsKey(senseId)) {
             clusters.put(senseId, new LinkedList<String>());
+        }
         clusters.get(senseId).addAll(cluster);
 
     }
@@ -165,7 +168,7 @@ public class InducedSenseInventory
 
     /**
      * Loads a serialized sense inventory from a json file
-     * 
+     *
      * @param fileName
      * @throws WSDException
      */
@@ -174,14 +177,16 @@ public class InducedSenseInventory
     {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            BufferedReader fileReader = new BufferedReader(new FileReader(fileName));
+            BufferedReader fileReader = new BufferedReader(new FileReader(
+                    fileName));
             JsonNode root = mapper.readTree(fileReader);
             Iterator<JsonNode> it = root.elements();
             while (it.hasNext()) {
                 JsonNode termNode = it.next();
                 if (termNode.has("term")) {
                     String term = termNode.get("term").textValue();
-                    Iterator<JsonNode> it2 = termNode.get("clusters").elements();
+                    Iterator<JsonNode> it2 = termNode.get("clusters")
+                            .elements();
                     int senseIndex = 0;
                     while (it2.hasNext()) {
                         String senseId = term + "_" + senseIndex++;
@@ -203,12 +208,19 @@ public class InducedSenseInventory
 
                 }
             }
-            System.out.println("loaded " + inventory.size() + " terms and " + clusters.size()
-                    + " sense clusters");
+            System.out.println("loaded " + inventory.size() + " terms and "
+                    + clusters.size() + " sense clusters");
         }
         catch (Exception e) {
             throw new WSDException(e);
         }
 
+    }
+
+    @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
     }
 }

@@ -95,6 +95,20 @@ public class LsrSenseInventory
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        Entity entity;
+        try {
+            entity = lsr.getEntityById(senseId);
+        }
+        catch (LexicalSemanticResourceException e) {
+            throw new SenseInventoryException(e);
+        }
+        return LsrSenseInventoryUtil.convertPos(entity.getPos());
+    }
+
+    @Override
     public Map<String, List<String>> getSenseInventory()
         throws SenseInventoryException
     {
@@ -192,4 +206,5 @@ public class LsrSenseInventory
     {
         throw new UnsupportedOperationException();
     }
+
 }
