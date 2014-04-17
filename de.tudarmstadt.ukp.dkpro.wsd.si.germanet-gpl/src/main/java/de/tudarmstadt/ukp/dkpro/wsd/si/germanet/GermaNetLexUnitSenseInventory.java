@@ -60,6 +60,7 @@ public class GermaNetLexUnitSenseInventory
     protected final SiPosToGermaNetPos siPosToWordNetPos = new SiPosToGermaNetPos();
     protected UndirectedGraph<String, UnorderedPair<String>> undirectedGnetGraph = null;
     protected String senseDescriptionFormat = "%w; %d";
+    protected GermaNetPosToSiPos germaNetPosToSiPos = new GermaNetPosToSiPos();
 
     public GermaNetLexUnitSenseInventory(String gnetDirectory)
         throws FileNotFoundException, XMLStreamException, IOException
@@ -331,6 +332,17 @@ public class GermaNetLexUnitSenseInventory
         return lexUnit.getSynset().getParaphrases().toString();
     }
 
+    @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        LexUnit lexUnit = gnet.getLexUnitByID(Integer.valueOf(senseId));
+        if (lexUnit == null) {
+            throw new SenseInventoryException("invalid LexUnit ID " + senseId);
+        }
+        return germaNetPosToSiPos.transform(lexUnit.getWordCategory());
+    }
+
     /**
      * Sets the format of the string to be returned by the {@link
      * getSenseDescription()} method. The following printf-style format
@@ -357,7 +369,7 @@ public class GermaNetLexUnitSenseInventory
     }
 
     /**
-     * Transforms a POS enum to a WordNet POS
+     * Transforms a POS enum to a GermaNet POS
      *
      * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
      *
@@ -375,6 +387,31 @@ public class GermaNetLexUnitSenseInventory
                 return WordCategory.verben;
             case ADJ:
                 return WordCategory.adj;
+            default:
+                return null;
+            }
+        }
+    }
+
+    /**
+     * Transforms a GermaNet POS into a POS enum
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected static class GermaNetPosToSiPos
+        implements Transformer<WordCategory, POS>
+    {
+        @Override
+        public POS transform(WordCategory pos)
+        {
+            switch (pos) {
+            case nomen:
+                return POS.NOUN;
+            case verben:
+                return POS.VERB;
+            case adj:
+                return POS.ADJ;
             default:
                 return null;
             }

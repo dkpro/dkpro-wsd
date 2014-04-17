@@ -87,6 +87,13 @@ public class TwsiSenseInventoryBase
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public String getMostFrequentSense(String sod, POS pos)
         throws SenseInventoryException, UnsupportedOperationException
     {
