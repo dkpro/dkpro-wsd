@@ -69,6 +69,7 @@ public class UbySenseInventory
     protected Lexicon lexicon;
     protected boolean allowMultiLingualAlignments = false;
     private final static SiPosToUbyPos siPosToUbyPos = new SiPosToUbyPos();
+    private final static UbyPosToSiPos ubyPosToSiPos = new UbyPosToSiPos();
     private final Log logger = LogFactory.getLog(getClass());
 
     // Variables and cache for sense descriptions
@@ -183,8 +184,7 @@ public class UbySenseInventory
      * @throws SenseInventoryException
      */
     public UbySenseInventory(String url, String jdbc_driver_class,
-            String db_vendor, String user, String password,
-            boolean showSQL)
+            String db_vendor, String user, String password, boolean showSQL)
         throws SenseInventoryException
     {
         this(new DBConfig(url, jdbc_driver_class, db_vendor, user, password,
@@ -302,6 +302,14 @@ public class UbySenseInventory
     }
 
     @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        CachedSense sense = getSense(senseId);
+        return sense.getPos();
+    }
+
+    @Override
     public String getSenseInventoryName()
     {
         if (lexicon == null) {
@@ -344,7 +352,9 @@ public class UbySenseInventory
         implements Transformer<POS, EPartOfSpeech[]>
     {
         protected final EPartOfSpeech UbyNounPOS[] = { EPartOfSpeech.noun,
-                EPartOfSpeech.nounCommon, EPartOfSpeech.nounProper };
+                EPartOfSpeech.nounCommon, EPartOfSpeech.nounProper,
+                EPartOfSpeech.nounProperFirstName,
+                EPartOfSpeech.nounProperLastName };
         protected final EPartOfSpeech UbyVerbPOS[] = { EPartOfSpeech.verb,
                 EPartOfSpeech.verbAuxiliary, EPartOfSpeech.verbMain,
                 EPartOfSpeech.verbModal };
@@ -370,6 +380,44 @@ public class UbySenseInventory
             }
 
             return null;
+        }
+    }
+
+    /**
+     * Transforms a Uby POS to a POS enum
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    public static class UbyPosToSiPos
+        implements Transformer<EPartOfSpeech, POS>
+    {
+        @Override
+        public POS transform(EPartOfSpeech pos)
+        {
+            if (pos == null) {
+                return null;
+            }
+
+            switch (pos) {
+            case noun:
+            case nounCommon:
+            case nounProper:
+            case nounProperFirstName:
+            case nounProperLastName:
+                return POS.NOUN;
+            case verb:
+            case verbAuxiliary:
+            case verbMain:
+            case verbModal:
+                return POS.VERB;
+            case adjective:
+                return POS.ADJ;
+            case adverb:
+                return POS.ADV;
+            default:
+                return null;
+            }
         }
     }
 
@@ -455,6 +503,7 @@ public class UbySenseInventory
         private final Sense sense;
         private final String definition;
         private final Synset synset;
+        private final POS pos;
         private Set<String> examples;
         private Set<String> words;
         private Set<String> neighbours;
@@ -471,6 +520,12 @@ public class UbySenseInventory
             sense = null;
             definition = null;
             synset = null;
+            pos = null;
+        }
+
+        public POS getPos()
+        {
+            return pos;
         }
 
         public String getLexiconSenseId()
@@ -538,6 +593,7 @@ public class UbySenseInventory
             try {
                 sense = uby.getSenseById(senseId);
                 synset = sense.getSynset();
+                pos = ubyPosToSiPos.transform(sense.getLexicalEntry().getPartOfSpeech());
             }
             catch (UbyInvalidArgumentException e) {
                 throw new SenseInventoryException(e);
@@ -689,4 +745,5 @@ public class UbySenseInventory
             return definition;
         }
     }
+
 }

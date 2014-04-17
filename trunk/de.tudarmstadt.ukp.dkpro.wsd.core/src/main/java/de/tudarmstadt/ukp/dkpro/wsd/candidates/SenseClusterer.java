@@ -42,8 +42,9 @@ import org.apache.log4j.Logger;
 import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
 
 /**
- * This class takes a pairwise mapping of senses and follows the transitive
- * relations to produce n-way mappings (clusters) of senses
+ * This class takes a pairwise (or n-wise, for n >= 2) mapping of senses and
+ * follows the transitive relations to produce n-way mappings (clusters) of
+ * senses
  *
  * @author Jungi Kim <kim@ukp.informatik.tu-darmstadt.de>
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
@@ -116,8 +117,8 @@ public class SenseClusterer
     }
 
     /**
-     * Given an array of sense IDs, returns a {@link Set} of sense IDs.  If
-     * a sense mapping exists, then apply it before returning the result.
+     * Given an array of sense IDs, returns a {@link Set} of sense IDs. If a
+     * sense mapping exists, then apply it before returning the result.
      *
      * @param lineParts
      *            an array containing sense IDs

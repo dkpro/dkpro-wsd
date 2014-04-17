@@ -30,24 +30,40 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
  */
 public final class LsrSenseInventoryUtil
 {
-	private LsrSenseInventoryUtil()
-	{
-		throw new AssertionError();
-	}
+    private LsrSenseInventoryUtil()
+    {
+        throw new AssertionError();
+    }
 
-	public static PoS convertPos(POS pos)
-	{
-		switch (pos) {
-		case NOUN:
-			return PoS.n;
-		case VERB:
-			return PoS.v;
-		case ADJ:
-			return PoS.adj;
-		case ADV:
-			return PoS.adv;
-		default:
-			return PoS.unk;
-		}
-	}
+    public static POS convertPos(PoS pos)
+    {
+        switch (pos) {
+        case n:
+            return POS.NOUN;
+        case v:
+            return POS.VERB;
+        case adj:
+            return POS.ADJ;
+        case adv:
+            return POS.ADV;
+        default:
+            return null;
+        }
+    }
+
+    public static PoS convertPos(POS pos)
+    {
+        switch (pos) {
+        case NOUN:
+            return PoS.n;
+        case VERB:
+            return PoS.v;
+        case ADJ:
+            return PoS.adj;
+        case ADV:
+            return PoS.adv;
+        default:
+            return PoS.unk;
+        }
+    }
 }

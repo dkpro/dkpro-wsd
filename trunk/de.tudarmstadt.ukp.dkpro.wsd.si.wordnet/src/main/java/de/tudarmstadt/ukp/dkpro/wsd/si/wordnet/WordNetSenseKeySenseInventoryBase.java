@@ -88,6 +88,7 @@ public abstract class WordNetSenseKeySenseInventoryBase
             try {
                 word = wn.getWordBySenseKey(senseId);
                 synset = word.getSynset();
+                pos = wordNetPosToSiPos.transform(word.getPOS());
             }
             catch (JWNLException e) {
                 throw new SenseInventoryException(e);
@@ -173,6 +174,12 @@ public abstract class WordNetSenseKeySenseInventoryBase
             }
 
             return neighbours;
+        }
+
+        @Override
+        public POS getPos()
+        {
+            return pos;
         }
     }
 

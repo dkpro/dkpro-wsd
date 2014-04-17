@@ -62,12 +62,13 @@ public abstract class WordNetSenseInventoryBase
     protected final SiPosToWordNetPos siPosToWordNetPos = new SiPosToWordNetPos();
 
     protected String senseDescriptionFormat = "%w; %d";
-    protected final static Pattern glossPattern = Pattern
+    protected static final Pattern glossPattern = Pattern
             .compile("(.*?)(; \".*)");
-    protected final SynsetToString synsetToString = new SynsetToString();
-    protected final WordNetPosToString wordNetPosToString = new WordNetPosToString();
+    protected static final SynsetToString synsetToString = new SynsetToString();
+    protected static final WordNetPosToString wordNetPosToString = new WordNetPosToString();
+    protected static final WordNetPosToSiPos wordNetPosToSiPos = new WordNetPosToSiPos();
     protected final StringToSynset stringToSynset = new StringToSynset();
-    protected final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
+    protected static final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
 
     @Override
     public void setUndirectedGraph(
@@ -294,7 +295,7 @@ public abstract class WordNetSenseInventoryBase
      * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
      *
      */
-    protected class SynsetToString
+    protected static class SynsetToString
         implements Transformer<Synset, String>
     {
         @Override
@@ -332,6 +333,13 @@ public abstract class WordNetSenseInventoryBase
         description = description.replace("%e", sense.getExamples().toString());
         description = description.replace("%w", sense.getSynonyms().toString());
         return description;
+    }
+
+    @Override
+    public POS getPos(String senseId)
+        throws SenseInventoryException
+    {
+        return getSense(senseId).getPos();
     }
 
     // /**
@@ -391,6 +399,7 @@ public abstract class WordNetSenseInventoryBase
         implements CachedDictionarySense, CachedTaxonomySense
     {
         protected final String id;
+        protected POS pos;
         protected Synset synset;
         protected String definition;
         protected Set<String> examples;
@@ -402,6 +411,8 @@ public abstract class WordNetSenseInventoryBase
         {
             id = senseId;
         }
+
+        abstract public POS getPos();
 
         @Override
         public Set<String> getExamples()
@@ -525,4 +536,30 @@ public abstract class WordNetSenseInventoryBase
         }
     }
 
+    /**
+     * Transforms a WordNet POS to a POS enum
+     *
+     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     *
+     */
+    protected static class WordNetPosToSiPos
+        implements Transformer<net.sf.extjwnl.data.POS, POS>
+    {
+        @Override
+        public POS transform(net.sf.extjwnl.data.POS pos)
+        {
+            switch (pos) {
+            case NOUN:
+                return POS.NOUN;
+            case VERB:
+                return POS.VERB;
+            case ADJECTIVE:
+                return POS.ADJ;
+            case ADVERB:
+                return POS.ADV;
+            }
+
+            return null;
+        }
+    }
 }
