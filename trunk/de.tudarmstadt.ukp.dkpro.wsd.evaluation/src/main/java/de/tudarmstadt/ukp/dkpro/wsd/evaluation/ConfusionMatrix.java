@@ -216,7 +216,7 @@ public class ConfusionMatrix
 
     public static double mcnemar(double[][] agreement, double mcnemarCorrection)
     {
-        double x = Math.abs(agreement[0][1] - agreement[1][0] - mcnemarCorrection);
+        double x = Math.abs(agreement[0][1] - agreement[1][0]) - mcnemarCorrection;
         return (x * x) / (agreement[0][1] + agreement[1][0]);
     }
 }

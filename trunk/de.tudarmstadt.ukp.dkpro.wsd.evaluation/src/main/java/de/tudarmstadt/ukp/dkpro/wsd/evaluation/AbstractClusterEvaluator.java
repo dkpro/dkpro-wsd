@@ -621,7 +621,8 @@ public abstract class AbstractClusterEvaluator
         tableHeader("ΔF none");
         tableHeader("ΔF rand");
         tableHeader("χ²");
-        tableHeader("b + c");
+        tableHeader("b");
+        tableHeader("c");
         endTableRow();
 
         int totalTestAnnotatedInstances = 0;
@@ -779,9 +780,9 @@ public abstract class AbstractClusterEvaluator
             if (Double.isInfinite(mcnemar)) {
                 mcnemar = 0.0;
             }
-            tableCell(String.format("%7.2g", mcnemar));
-            tableCell(String.format("%7.2g", (matrix[1][0])));
-            tableCell(String.format("%7.2g", (matrix[0][1])));
+            tableCell(String.format("%7.2f", mcnemar));
+            tableCell(String.format("%7.2f", (matrix[1][0])));
+            tableCell(String.format("%7.2f", (matrix[0][1])));
         }
         else {
             tableCell(String.format("%7s", "—"));
