@@ -72,7 +72,7 @@ DKPro WSD 0.9.1, released 2013-10-14
 
 
 
-DKPro WSD 0.9.0, released 2014-08-14 
+DKPro WSD 0.9.0, released 2013-08-14 
 ------------------------------------
 
 Initial public release.
