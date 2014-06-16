@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--  This is a sample extJWNL properties file which you can adapt. -->
+
 <jwnl_properties language="en">
     <version publisher="Princeton" number="3.0" language="en"/>
     <dictionary class="net.sf.extjwnl.dictionary.FileBackedDictionary">

@@ -27,8 +27,8 @@ import java.io.IOException;
 import org.apache.uima.UIMAException;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.collection.CollectionReader;
-import org.apache.uima.resource.ExternalResourceDescription;
 import org.apache.uima.fit.pipeline.SimplePipeline;
+import org.apache.uima.resource.ExternalResourceDescription;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithm.MostFrequentSenseBaseline;
 import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorContextPOS;
@@ -110,7 +110,7 @@ public class Senseval2EnLSExample
         // from a sense inventory. We will use JLSR as an interface to
         // the WordNet 1.7 prerelease. For this to work you will need
         // to have the WordNet 1.7 prerelease installed on your local system,
-        // and to have an appropriately configured WordNet properties file and
+        // and to have an appropriately configured extJWNL properties file and
         // DKPro LSR resources.xml file.
         ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
                 LsrSenseInventoryResource.class,
