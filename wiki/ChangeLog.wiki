@@ -1,5 +1,15 @@
 #summary DKPro WSD release and change history
 
+= 1.1.0 (released on 2014-06-16) =
+
+  * Evaluators now permit chaining of backoff algorithms (Issue 29)
+  * Added annotators that allow for disambiguating the complete text collectively (Issue 56)
+  * Added a weighted MFS baseline
+  * Sense cluster evaluator now computes McNemar's test
+  * Sense cluster evaluator now handles the case where there are multiple gold-standard senses, and includes undisambiguated instances in the confusion matrix
+  * Improved logging output
+  * Various bugfixes
+
 = 1.0.0 (released on 2013-11-29) =
 
 New features:
