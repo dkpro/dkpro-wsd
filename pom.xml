@@ -25,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
-	<version>1.1.0</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<dependencies>
 		<dependency>
@@ -49,67 +49,67 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.alignment</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.evaluation</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.io</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.lesk</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.uby</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -119,12 +119,12 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.wsi</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.testing</artifactId>
-				<version>1.1.0</version>
+				<version>1.2.0-SNAPSHOT</version>
 				<type>jar</type>
 				<scope>compile</scope>
 			</dependency>
@@ -200,9 +200,9 @@
 	<description>DKPro WSD is a UIMA framework for word sense disambiguation. It is designed to complement DKPro Core, a collection of software components for natural language processing (NLP) based on the Apache UIMA framework. </description>
 	<inceptionYear>2013</inceptionYear>
 	<scm>
-		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</url>
-		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</connection>
-		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</developerConnection>
+		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/trunk</url>
+		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/trunk</developerConnection>
 	</scm>
 	<issueManagement>
 		<system>Google Code</system>
