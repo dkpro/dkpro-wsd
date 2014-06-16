@@ -1,0 +1,78 @@
+Change log for DKPro WSD and DKPro WSD GPL
+==========================================
+
+
+
+DKPro WSD 1.1.0, released 2014-06-16
+------------------------------------
+
+In addition to various bug fixes, DKPro WSD 1.1.0 has the following new features and improvements over the previous release (1.0.0):
+
+* Evaluators now permit chaining of backoff algorithms (Issue 29)
+
+* Added annotators that allow for disambiguating the complete text collectively (Issue 56)
+
+* Added a weighted MFS baseline
+
+* Sense cluster evaluator now computes McNemar's test
+
+* Sense cluster evaluator now handles the case where there are multiple gold-standard senses, and includes undisambiguated instances in the confusion matrix
+
+* Improved logging output
+
+
+
+DKPro WSD 1.0.0, released 2013-11-29
+------------------------------------
+
+New features:
+
+* Support for the It Makes Sense (IMS) disambiguator. (Issue 20)
+
+* Added a sense inventory wrapping the GermaNet Java API. (Issue 47)
+
+* WebCAGe data set reader now works with the official release of WebCAGe. (Issue 13)
+
+* SemCor reader now optionally writes Token, Lemma, and POS annotations. (Issue 49)
+
+* Readers of XML-based data sets can now optionally ignore the DTD. (Issue 43)
+
+* New wrapper module for easy disambiguation of a text string. (Issue 38)
+
+* Senseval answer key readers now optionally normalize the sense confidence. (Issue 42)
+
+* Cluster evaluator's output is more verbose and informative.
+
+* Improved logging output in various modules.
+
+
+Bug fixes:
+
+* SemCor reader now sets correct annotation offsets. (Issue 52)
+
+* Methods in si.dictionary inventories now correctly throw an exception when passed an invalid sense ID. (Issue 45)
+
+
+API/dependency changes:
+
+* Restructured the package hierarchy.  Users will need to update some package references (e.g., in import statements). (Issue 48)
+
+* Upgraded to DKPro Lab 0.10.0 and TWSI 1.0.2. (Issue 33)
+
+
+
+DKPro WSD 0.9.1, released 2013-10-14 
+------------------------------------
+
+* Upgraded to DKPro Core 1.5.0, uimaFIT 2.0.0, UBY 0.4.0, and TWSI 1.0.1
+
+* Added module for word sense induction
+
+* Moved Wikipedia-specific graph algorithms to a separate module
+
+
+
+DKPro WSD 0.9.0, released 2014-08-14 
+------------------------------------
+
+Initial public release.
