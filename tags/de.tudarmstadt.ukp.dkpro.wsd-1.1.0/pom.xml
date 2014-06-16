@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Copyright 2013
+	Ubiquitous Knowledge Processing (UKP) Lab
+	Technische Universität Darmstadt
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>dkpro-parent-pom</artifactId>
+		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+		<version>6</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
+	<version>1.1.0</version>
+	<packaging>pom</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>uimafit-core</artifactId>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.core-asl</artifactId>
+				<version>1.5.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.alignment</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.evaluation</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.io</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.lesk</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.senseval</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.uby</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.si.tackbp</artifactId>
+				<version>1.1.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.wsi</artifactId>
+				<version>1.1.0</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.testing</artifactId>
+				<version>1.1.0</version>
+				<type>jar</type>
+				<scope>compile</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.core</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.io</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.linkbased.wikipedia</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.lsr</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.testing</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.evaluation</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.alignment</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.wordnet</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.uby</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.dictionary</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.lesk</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.tackbp</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.senseval</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.wsi</module>
+		<module>
+			de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.wikipedia
+		</module>
+	</modules>
+	<profiles>
+		<profile>
+			<id>rat-check</id>
+			<activation>
+				<file>
+					<exists>src/main/java</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.rat</groupId>
+						<artifactId>apache-rat-plugin</artifactId>
+						<version>0.10</version>
+						<executions>
+							<execution>
+								<id>default</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>check</goal>
+								</goals>
+								<configuration>
+									<excludes>
+										<exclude>.gitignore</exclude>
+										<!-- maven config files -->
+										<exclude>src/filter/**/*</exclude>
+										<!-- release generated artifact -->
+										<exclude>release.properties</exclude>
+										<exclude>CHANGES</exclude>
+										<exclude>NOTICE.txt</exclude>
+										<exclude>README.txt</exclude>
+										<exclude>src/main/resources/**/*</exclude>
+										<exclude>src/test/resources/**/*</exclude>
+										<!-- generated JCas wrappers -->
+										<exclude>src/main/java/**/type/**/*</exclude>
+									</excludes>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<name>DKPro WSD</name>
+	<url>https://code.google.com/p/dkpro-wsd/</url>
+	<description>DKPro WSD is a UIMA framework for word sense disambiguation. It is designed to complement DKPro Core, a collection of software components for natural language processing (NLP) based on the Apache UIMA framework. </description>
+	<inceptionYear>2013</inceptionYear>
+	<scm>
+		<url>https://code.google.com/p/dkpro-wsd/source/browse/#svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</url>
+		<connection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd.googlecode.com/svn/tags/de.tudarmstadt.ukp.dkpro.wsd-1.1.0</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>Google Code</system>
+		<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
+	</issueManagement>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
+	</build>
+	<repositories>
+		<repository>
+			<id>ukp-oss-releases</id>
+			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<developers>
+		<developer>
+			<id>miller</id>
+			<name>Tristan Miller</name>
+			<email>miller@ukp.informatik.tu-darmstadt.de</email>
+			<url>http://www.nothingisreal.com/</url>
+			<organization>Ubiquitous Knowledge Processing Lab, Department of Computer Science, Technische Universität Darmstadt</organization>
+			<organizationUrl>http://www.ukp.tu-darmstadt.de/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A permissive free software licence</comments>
+		</license>
+	</licenses>
+</project>

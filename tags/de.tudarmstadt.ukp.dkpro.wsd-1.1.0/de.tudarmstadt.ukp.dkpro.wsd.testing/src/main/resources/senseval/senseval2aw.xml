@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<corpus lang="en">
+<answer head="d000.s014.t014" senseid="1" />
+<text id="d000">
+He
+<head id="d000.s014.t014">thought</head>
+<sat id="d000.s014.t016">on</sat>
+<sat id="d000.s014.t017">the</sat>
+<head id="d000.s014.t018" sats="d000.s014.t016 d000.s014.t017 d000.s014.t019 d000.s014.t020 d000.s014.t021">spur</head>
+<sat id="d000.s014.t019">of</sat>
+<sat id="d000.s014.t020">the</sat>
+<sat id="d000.s014.t021">moment</sat>
+,
+<sat id="d000.s015.t000">as</sat>
+<sat id="d000.s015.t001">a</sat>
+<head id="d000.s015.t002" sats="d000.s015.t000 d000.s015.t001 d000.s015.t003 d000.s015.t004">matter</head>
+<sat id="d000.s015.t003">of</sat>
+<sat id="d000.s015.t004">fact</sat>
+.
+</text>
+<answer head="d000.s014.t014" senseid="1"/>
+<answer head="d000.s014.t018" senseid="2"/>
+<answer head="d000.s015.t002" senseid="3"/>
+</corpus>

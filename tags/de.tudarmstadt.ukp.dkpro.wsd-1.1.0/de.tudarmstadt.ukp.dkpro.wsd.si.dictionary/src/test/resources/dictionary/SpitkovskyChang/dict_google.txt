@@ -1,0 +1,2486 @@
+"1-800-Mattress"	1 1-800-Mattress KB W:2/2 W08 W09 WDB
+"1-800-Missing"	1 Missing_(Canadian_TV_series) KB W09 W08 WDB W:1/1
+"1-800_Contacts"	1 1-800_Contacts KB W09 W08 WDB W:1/1
+"1. April 2000 - Wikipedia, the free encyclopedia"	1 1._April_2000_(film) KB RWB W:2/2 W08 W09 WDB
+"1. April 2000"	1 1._April_2000_(film) KB RWB W08 W09 WDB Wx:2/2
+"1. Evangelium - Matthäus"	1 The_Gospel_According_to_St._Matthew_(film) KB W09 W08 WDB Wx:1/1
+"1. FSV Mainz 05"	1 1._FSV_Mainz_05 KB W09 W08 WDB W:1/1
+"1. Outside"	1 Outside_(album) D KB NR RWB W:5/5 W08 W09 WDB
+"1. SC Znojmo"	1 1._SC_Znojmo KB W09 W08 WDB W:1/1
+"1. deild karla"	1 1._deild_karla KB W:6/6 W08 W09 WDB
+"1. gardijske brigade "Tigrovi"	1 1st_Guard_Brigade_(Croatia) KB W09 W08 WDB NR RWB Wx:1/1
+"1.- No intentes tansformar aquello que no est	1 Marcus_Aurelius KB W09 W08 WDB Wx:1/1
+"1.22.03.Acoustic"	1 1.22.03.Acoustic KB W09 W08 WDB W:1/1
+"1.3.8."	1 1.3.8. KB W09 W08 WDB W:1/1
+"1.44 MB"	1 Floppy_disk KB D W09 W08 WDB W:1/1
+"1.44 MB" Floppy disk	1 Floppy_disk KB D W09 W08 WDB W:1/1
+"1.504"	1 Polymers_for_Advanced_Technologies KB W09 W08 WDB W:1/1
+"1.800.Vending"	1 1.800.Vending KB W09 W08 WDB W:1/1
+"1.9 16v"	1 Fiat_Linea KB W:2/2 W08 W09 WDB
+"1._Alliierte_Luftlandearmee"	1 First_Allied_Airborne_Army KB W08 W09 WDB Wx:3/3
+"1._April_2000"	1 1._April_2000_(film) KB RWB W08 W09 WDB Wx:3/3
+"1._Britische_Luftlandedivision"	1 1st_Airborne_Division_(United_Kingdom) KB W08 W09 WDB Wx:3/3
+"1._Buch_Mose"	1 Genesis_(film) D KB NR RWB W08 W09 WDB Wx:4/4
+"1._FSV_Mainz_05"	1 1._FSV_Mainz_05 KB W08 W09 WDB Wx:3/3
+"1._Gardepanzerarmee_(Rote_Armee)"	1 1st_Guards_Tank_Army_(Soviet_Union) KB W09 W08 WDB Wx:1/1
+"1._Golfkrieg"	1 Iran–Iraq_War KB W08 W09 WDB Wx:3/3
+"1._Indochinakrieg"	1 First_Indochina_War KB W09 W08 WDB Wx:1/1
+"1._Kreuzzug"	1 First_Crusade D KB W08 W09 WDB Wx:3/3
+"1._Luftarmee_(Rote_Armee)"	1 1st_Air_Army KB W08 W09 WDB Wx:2/2
+"1._Mose"	1 Genesis_(film) KB D W09 W08 WDB NR RWB Wx:1/1
+"1._Opiumkrieg"	1 First_Opium_War KB W08 W09 WDB Wx:2/2
+"1._Punischer_Krieg"	1 First_Punic_War KB W08 W09 WDB Wx:2/2
+"1._SS-Panzer-Division_Leibstandarte-SS_Adolf_Hitler"	1 1st_SS_Division_Leibstandarte_SS_Adolf_Hitler KB W08 W09 WDB Wx:3/3
+"1._US-Armee"	1 First_United_States_Army KB W08 W09 WDB Wx:3/3
+"1._US-Infanteriedivision"	1 1st_Infantry_Division_(United_States) KB W08 W09 WDB Wx:3/3
+"1._US-Marinedivision"	1 1st_Marine_Division_(United_States) KB W08 W09 WDB Wx:4/4
+"1._US-Panzerdivision"	1 1st_Armored_Division_(United_States) KB W08 W09 WDB Wx:3/3
+"1._Vaticanum"	1 First_Vatican_Council KB W08 W09 WDB Wx:2/2
+"1._deild_karla"	1 1._deild_karla KB W09 W08 WDB W:1/1
+"1/4life"	1 Quarterlife KB W:2/2 W08 W09 WDB
+"10 (film)"	1 10_(film) KB W:2/2 W08 W09 WDB
+"10 - die Traumfrau"	1 10_(film) KB W09 W08 WDB Wx:1/1
+"10 000 Hz Legend"	1 10_000_Hz_Legend KB W09 W08 WDB W:1/1
+"10 August 2005 helicopter crash near Tallinn"	1 Copterline_Flight_103 KB W:4/4 W08 W09 WDB
+"10 Coisas Que Eu Odeio Em Você"	1 10_Things_I_Hate_About_You KB W:2/2 W08 W09 WDB
+"10 Color Singles"	1 10_Color_Singles KB W09 W08 WDB W:1/1
+"10 Days Late"	1 10_Days_Late KB W09 W08 WDB W:1/1
+"10 Dinge die ich an dir hasse"	1 10_Things_I_Hate_About_You KB W08 W09 WDB Wx:3/3
+"10 Dinge, die ich an Dir hasse"	1 10_Things_I_Hate_About_You KB W09 W08 WDB Wx:1/1
+"10 Dinge, die ich an dir hasse"	1 10_Things_I_Hate_About_You KB W08 W09 WDB Wx:5/5
+"10 Downing Street"	1 10_Downing_Street KB W09 W08 WDB W:1/1
+"10 Hygiea"	1 10_Hygiea KB W:2/2 W08 W09 WDB
+"10 Items or Less (film) - Wikipedia, the free	1 10_Items_or_Less_(film) KB W09 W08 WDB W:1/1
+"10 Items or Less"	0.666667 10_Items_or_Less_(film) KB W:3/5 W08 W09 WDB w:1/1
+"10 Items or Less"	0.166667 10_Items_or_Less_(TV_series) KB W:1/5 W08 W09 WDB
+"10 Jahre Wikipedia"	1 Wikipedia D KB W08 W09 WDB Wx:3/3
+"10 Miles High"	0 Things_Falling_Apart H KB W08 W09 WDB
+"10 Minutes"	1 10_Minutes KB W09 W08 WDB W:1/1
+"10 Questions for the Dalai Lama"	1 10_Questions_for_the_Dalai_Lama KB W09 W08 WDB W:1/1
+"10 Song Demo"	1 10_Song_Demo KB W09 W08 WDB W:1/1
+"10 Songs"	1 10_Songs KB W09 W08 WDB W:1/1
+"10 Stories Down"	1 10_Stories_Down KB W09 W08 WDB W:1/1
+"10 Things I Hate About You	1 10_Things_I_Hate_About_You KB W09 W08 WDB W:1/1
+"10 Things I Hate About You - Wikipedia, the	1 10_Things_I_Hate_About_You KB W09 W08 WDB W:1/1
+"10 Things I Hate About You"	1 10_Things_I_Hate_About_You KB W:8/8 W08 W09 WDB
+"10 Things I Hate about You"	1 10_Things_I_Hate_About_You KB W:3/3 W08 W09 WDB
+"10 Xem thêm"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"10 Yard Fight."	1 10-Yard_Fight KB W:19/19 W08 W09 WDB
+"10 Years Younger (US)"	1 Ten_Years_Younger KB W08 NR RWB R09 RDB W:1/1
+"10 Years Younger"	1 10_Years_Younger D KB W:2/2 W08 W09 WDB
+"10 Years in Rage"	1 Rage_(band) KB W09 W08 WDB W:1/1
+"10 Years"	1 10_Years D KB W:7/7 W08 W09 WDB
+"10 cm K 17"	1 10_cm_K_17 KB W09 W08 WDB W:1/1
+"10 cosas que odio de ti"	1 10_Things_I_Hate_About_You KB W08 W09 WDB Wx:2/2
+"10 cose che odio di te",	1 10_Things_I_Hate_About_You KB W09 W08 WDB Wx:1/1
+"10 downing Street	1 10_Downing_Street KB W09 W08 WDB W:1/1
+"10 feet"	1 10_feet KB W09 W08 WDB W:1/1
+"10 from 6"	1 10_from_6 KB W:2/2 W08 W09 WDB
+"10 items or less",	1 10_Items_or_Less_(film) KB W:3/3 W08 W09 WDB
+"10 little niggers." By Agatha Christie	1 And_Then_There_Were_None KB W09 W08 WDB W:1/1
+"10 m Air Pistol"	1 10_metre_air_pistol KB W:3/3 W08 W09 WDB
+"10 m Air Rifle"	1 10_metre_air_rifle KB W:2/2 W08 W09 WDB
+"10 millÃ³n"	1 Nicholas_Hilliard KB W08 W09 WDB Wx:3/3
+"10 mm Auto"	1 10mm_Auto KB W09 W08 WDB W:1/1
+"10 mph"	1 10_MPH KB W:2/2 W08 W09 WDB
+"10 on Ten - Wikipedia, the free encyclopedia"	1 10_on_Ten KB W09 W08 WDB W:1/1
+"10 questions for the dalai lama wikipedia the	1 10_Questions_for_the_Dalai_Lama KB W:2/2 W08 W09 WDB
+"10 things I hate about you"	1 10_Things_I_Hate_About_You KB W:2/2 W08 W09 WDB
+"10 yen coin"	1 10_yen_coin KB W:2/2 W08 W09 WDB
+"10 zapovijedi"	1 The_Decalogue D KB W:9/9 W08 W09 WDB
+"10 дней, которые потрясли мир" Джона Рида	1 Ten_Days_that_Shook_the_World KB W:4/4 W08 W09 WDB
+"10 королевства"	1 The_10th_Kingdom KB W08 W09 WDB Wx:36/36 l
+"10 ноября 1989 совет народных депутатов Юго-Осетинской	1 South_Ossetia KB W08 W09 WDB Wx:178/178
+"10 тыс. лет до н.э."	1 10,000_BC_(film) KB W08 W09 WDB Wx:4/4
+"10 января 1954 первая Комета 1 вступившая в	1 De_Havilland_Comet KB W08 W09 WDB Wx:5/5
+"10"	0.571429 10_(film) KB W:20/30 W08 W09 WDB Wx:4/12
+"10".	0.333333 10_(film) KB W:2/6 W08 W09 WDB
+"10's_Collection_March"	1 10’s_Collection_March KB RWB W:2/2 W08 W09 WDB
+"10-4"	1 10-7 KB NR RWB W:3/3 W08 W09 WDB
+"10-8: Officers on Duty"	1 10-8:_Officers_on_Duty KB W:2/2 W08 W09 WDB
+"10-Yard Fight - Wikipedia, the free encyclopedia"	1 10-Yard_Fight KB W:2/2 W08 W09 WDB
+"10-Yard Fight - Wikipédia"	1 10-Yard_Fight KB W08 W09 WDB Wx:2/2
+"10-Yard_Fight"	1 10-Yard_Fight KB W09 W08 WDB W:1/1
+"10-Year-Old"	1 Knowing_Is_Half_the_Hassle KB W:2/2 W08 W09 WDB w:1/1 w':1/1
+"10-codes,"	1 10-7 KB NR RWB W:3/3 W08 W09 WDB
+"10-point must system"	1 Boxing D KB W:4/4 W08 W09 WDB
+"10. The one where Homer corrupts Ned Flanders	1 Viva_Ned_Flanders KB W:2/2 W08 W09 WDB
+"10.1 Người thân"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"10.2 Nghi vấn"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"10.5 cm FlaK 38"	1 10.5_cm_FlaK_38 KB W09 W08 WDB W:1/1
+"10.5 cm lefh 16 wikipedia the encyclopedia"	1 10.5_cm_leFH_16 KB W09 W08 WDB W:1/1
+"10.5"	1 10.5_(TV_miniseries) KB W09 W08 WDB Wx:1/1
+"10.5: Apocalypse"	1 10.5:_Apocalypse KB W09 W08 WDB W:1/1
+"10.5_cm_leFH_18"	1 10.5_cm_leFH_18 KB W09 W08 WDB W:1/1
+"10.SS-Panzerdivison 'Frundsberg'"	1 10th_SS_Panzer_Division_Frundsberg KB W:2/2 W08 W09 WDB
+"10._SS-Panzer-Division_Frundsberg"	1 10th_SS_Panzer_Division_Frundsberg KB W08 W09 WDB Wx:4/4
+"100 (DC Comics)"	1 100_(DC_Comics) KB W09 W08 WDB W:1/1
+"100 (disambiguation)"	1 100_(album) KB D W09 W08 WDB NR RWB W:1/1
+"100 Biggest Weather Moments"	1 100_Biggest_Weather_Moments KB W09 W08 WDB W:1/1
+"100 Broken Windows"	1 100_Broken_Windows KB W:2/2 W08 W09 WDB
+"100 Club Punk Festival"	1 100_Club_Punk_Festival KB W09 W08 WDB NR RWB W:1/1
+"100 Club"	1 100_Club KB W:2/2 W08 W09 WDB
+"100 Days (1991 film) - Wikipedia, the free encyclopedia	1 100_Days_(1991_film) KB W09 W08 WDB W:1/1
+"100 Days With Mr. Arrogant".	1 100_Days_with_Mr._Arrogant KB W:3/3 W08 W09 WDB
+"100 Days with Mr. Arrogant - Wikipedia, the free	1 100_Days_with_Mr._Arrogant KB W09 W08 WDB W:1/1
+"100 Days with Mr. Arrogant - Wikipédia"	1 100_Days_with_Mr._Arrogant KB W09 W08 WDB Wx:1/1
+"100 Days with Mr. Arrogant"	1 100_Days_with_Mr._Arrogant KB W09 W08 WDB W:1/1
+"100 East Pratt Street"	1 100_East_Pratt_Street KB W09 W08 WDB W:1/1
+"100 Feet"	1 100_Feet KB W09 W08 WDB W:1/1
+"100 Feet" sur Wikipédia (en)	1 100_Feet KB W09 W08 WDB W:1/1
+"100 Feet" sur Wikipédia (en) (http://en.wikipedia	1 100_Feet KB W:19/19 W08 W09 WDB
+"100 Girls - Wikipédia"	1 100_Girls KB W08 W09 WDB Wx:2/2
+"100 Girls"	1 100_Girls KB W:5/5 W08 W09 WDB
+"100 Greatest Artists of Hard Rock" (VH1)	1 Guns_N'_Roses KB W09 W08 WDB W:1/1
+"100 Mile Diet"	1 The_100-Mile_Diet KB W:6/6 W08 W09 WDB
+"100 Mile House, British Columbia"	1 100_Mile_House,_British_Columbia KB W09 W08 WDB W:1/1
+"100 North Main"	1 100_North_Main KB W09 W08 WDB W:1/1
+"100 Racks"	1 100_Racks KB W09 W08 WDB W:1/1
+"100 Reichsmark"	1 German_Reichsmark KB NR RWB W:4/4 W08 W09 WDB
+"100 Rifles"	1 100_Rifles KB W:2/2 W08 W09 WDB
+"100 Series Shinkansen"	1 100_Series_Shinkansen KB W09 W08 WDB W:1/1
+"100 Times"	1 100_Times KB W09 W08 WDB W:1/1
+"100 Wayz"	1 100_Wayz KB W09 W08 WDB W:1/1
+"100 Women"	1 100_Women KB W09 W08 WDB W:1/1
+"100 Years of Solitude"	1 One_Hundred_Years_of_Solitude KB W09 W08 WDB W:1/1
+"100 Years"	1 100_Years KB W09 W08 WDB W:1/1
+"100 años de Soledad"	1 One_Hundred_Years_of_Solitude KB W09 W08 WDB Wx:1/1
+"100 años de soledad"	1 One_Hundred_Years_of_Solitude KB W08 W09 WDB Wx:4/4
+"100 best comics of the century"	1 The_Comics_Journal KB W:202/202 W08 W09 WDB
+"100 höjdare - Wikipedia, the free encyclopedia"	1 100_höjdare KB W09 W08 WDB W:1/1
+"100 höjdare"	1 100_höjdare KB W:1/1 W08 W09 WDB Wx:18/18
+"100 mm air defense gun KS-19"	1 100_mm_air_defense_gun_KS-19 KB W09 W08 WDB W:1/1
+"100 years of Solitude"	1 One_Hundred_Years_of_Solitude KB W09 W08 WDB W:1/1
+"100"	0.0882353 Audi_100 KB W08 W09 WDB Wx:2/7 w:1/1
+"100% Pure Love" went #1 in USA, #2	1 100%_Pure_Love KB W:6/6 W08 W09 WDB
+"100%" (May Kiani song)	1 100%_(Mary_Kiani_song) KB W:1/1 W08 W09 WDB w':1/1
+"100%" (song)	1 100%_(song) KB W09 W08 WDB w':1/1
+"100-Mile Diet"	1 The_100-Mile_Diet KB W:14/14 W08 W09 WDB
+"100-mm_field_gun_M1944_(BS-3)"	1 100_mm_field_gun_M1944_(BS-3) KB W09 W08 WDB W:1/1
+"100.000 Dollar in der Sonne" auf Wikipedia.org	1 Henri_Verneuil KB W09 W08 WDB Wx:1/1
+"1000 Homo DJs"	1 1000_Homo_DJs KB W:3/3 W08 W09 WDB
+"1000 Hours"	1 1,000_Hours KB W09 W08 WDB W:1/1
+"1000 Hurts"	1 1000_Hurts KB W:2/2 W08 W09 WDB
+"1000 Hurts" by Shellac	1 1000_Hurts KB W09 W08 WDB W:1/1
+"1000 Kisses"	1 1000_Kisses KB W09 W08 WDB W:1/1
+"1000 Miles Away"	1 1000_Miles_Away KB W09 W08 WDB W:1/1
+"1000 Places To Go Before You Die"	1 1,000_Places_to_See_Before_You_Die_(TV_series) KB W09 W08 WDB W:1/1
+"1000 Places to See Before You Die (TV	1 1,000_Places_to_See_Before_You_Die_(TV_series) KB W09 W08 WDB W:1/1
+"1000 Vivos"	1 1000_Vivos KB W09 W08 WDB W:1/1
+"1000 Ways To Die".	1 1000_Ways_to_Die KB W:4/4 W08 W09 WDB
+"1000 Ways to Die"	1 1000_Ways_to_Die KB W:2/2 W08 W09 WDB
+"1000 Years of Popular Music"	1 1000_Years_of_Popular_Music KB W:2/2 W08 W09 WDB
+"1000 de La Gauchetière"	1 1000_de_La_Gauchetière KB W09 W08 WDB W:1/1
+"1000 formas de morir"	1 1000_Ways_to_Die KB W08 W09 WDB Wx:2/2
+"1000 maneras de morir"	1 1000_Ways_to_Die KB W08 W09 WDB Wx:29/29
+"1000 no Violin"	1 1000_no_Violin KB W09 W08 WDB W:1/1
+"1000 ways to die wikipedia the encyclopedia"	1 1000_Ways_to_Die KB W09 W08 WDB W:1/1
+"10000 B.C"	1 10,000_BC_(film) KB W:4/4 W08 W09 WDB
+"10000 B.C."	1 10,000_BC_(film) KB W:10/10 W08 W09 WDB
+"10000 BC (film)"	1 10,000_BC_(film) KB W09 W08 WDB W:1/1
+"10000 Day War"	1 Vietnam:_The_Ten_Thousand_Day_War KB W09 W08 WDB W:1/1
+"10000 Days"	1 10,000_Days KB W:5/5 W08 W09 WDB
+"10000 Maniacs - Wikipedia, the free encyclopedia"	1 10,000_Maniacs KB W09 W08 WDB W:1/1
+"10000 Maniacs - Wikipédia"	1 10,000_Maniacs KB W09 W08 WDB Wx:1/1
+"10000 Maniacs"	1 10,000_Maniacs KB W:18/18 W08 W09 WDB
+"10000 Miles" by Mary Chapin Carpenter	1 Mary_Chapin_Carpenter KB W09 W08 WDB W:1/1
+"10000 Shots"	1 10,000_Shots KB W09 W08 WDB W:1/1
+"100000 Airplanes"	1 100,000_Airplanes KB W:2/2 W08 W09 WDB
+"100000000 Bon Jovi Fans Can't Be Wrong	1 100,000,000_Bon_Jovi_Fans_Can't_Be_Wrong KB W:2/2 W08 W09 WDB
+"10000_Days"	1 10,000_Days KB W08 W09 WDB Wx:2/2
+"10000_Maniacs"	1 10,000_Maniacs KB W09 W08 WDB Wx:1/1
+"10000_Shots"	1 10,000_Shots KB W09 W08 WDB W:1/1
+"100019_Gregorianik"	1 100019_Gregorianik KB W09 W08 WDB W:1/1
+"100027 Hannaharendt"	1 100027_Hannaharendt KB W09 W08 WDB W:1/1
+"100027_Hannaharendt"	1 100027_Hannaharendt KB W09 W08 WDB W:1/1
+"100029_Varnhagen"	1 100029_Varnhagen KB W09 W08 WDB W:1/1
+"10004 Igormakarov"	1 10004_Igormakarov KB W09 W08 WDB W:1/1
+"100047_Leobaeck"	1 100047_Leobaeck KB W09 W08 WDB W:1/1
+"100049 Césarann"	1 100049_Césarann KB W09 W08 WDB W:1/1
+"100050 Carloshernandez"	1 100050_Carloshernandez KB W09 W08 WDB W:1/1
+"100050_Carloshernandez"	1 100050_Carloshernandez KB W09 W08 WDB W:1/1
+"100051 Davidhernandez"	1 100051_Davidhernandez KB W09 W08 WDB W:1/1
+"100051_Davidhernandez"	1 100051_Davidhernandez KB W09 W08 WDB W:1/1
+"1000_Hurts"	1 1000_Hurts KB W09 W08 WDB W:1/1
+"1000_Kisses"	1 1000_Kisses KB W09 W08 WDB W:1/1
+"1000_Smiling_Knuckles"	1 1000_Smiling_Knuckles KB W09 W08 WDB W:1/1
+"1000_Vivos"	1 1000_Vivos KB W09 W08 WDB W:1/1
+"1000_Years_Of_Popular_Music"	1 1000_Years_of_Popular_Music KB W09 W08 WDB W:1/1
+"1000_Years_of_Courage"	1 The_Chicken_from_Outer_Space KB l W09 W08 WDB NR RWB W:1/1
+"1000th_Satellite_Operations_Group"	1 6th_Space_Operations_Squadron KB W09 W08 WDB W:1/1
+"1001 Albums You Must Hear Before You Die	1 1001_Albums_You_Must_Hear_Before_You_Die KB W:5/5 W08 W09 WDB
+"1001 Discos para Ouvir Antes de Morrer"	1 1001_Albums_You_Must_Hear_Before_You_Die KB W08 W09 WDB Wx:3/3
+"1001 Gaussia"	1 1001_Gaussia KB W09 W08 WDB W:1/1
+"1001 Movies You Must See Before You Die	0.75 1001_Movies_You_Must_See_Before_You_Die KB W:3/4 W08 W09 WDB
+"1001 Movies You Must See Before You Die	0.25 1001_Albums_You_Must_Hear_Before_You_Die KB W:1/4 W08 W09 WDB
+"1001 Nights of Snowfall - Wikipedia, the free encyclopedia	1 1001_Nights_of_Snowfall KB W09 W08 WDB W:1/1
+"1001 Pattes - Wikipédia"	1 A_Bug's_Life KB W09 W08 WDB Wx:1/1
+"1001 Places to See Before You Die"	1 1,000_Places_to_See_Before_You_Die_(TV_series) KB W:5/5 W08 W09 WDB
+"1001 albums you must hear before you die	1 1001_Albums_You_Must_Hear_Before_You_Die KB W:3/3 W08 W09 WDB
+"1001 disco para ouvir antes de morrer"	1 1001_Albums_You_Must_Hear_Before_You_Die KB W:4/4 W08 W09 WDB
+"1001 discos para ouvir antes de morrer"	1 1001_Albums_You_Must_Hear_Before_You_Die KB W:7/7 W08 W09 WDB
+"1001 альбом, которые ты должен услышать, прежде чем	1 1001_Albums_You_Must_Hear_Before_You_Die KB W09 W08 WDB W:1/1
+"1001 фильм, который нужно увидеть прежде чем умереть	1 1001_Movies_You_Must_See_Before_You_Die KB W:32/32 W08 W09 WDB
+"10014 Shaim"	1 10014_Shaim KB W09 W08 WDB W:1/1
+"1001_Albums_You_Must_Hear_Before_You_Die"	1 1001_Albums_You_Must_Hear_Before_You_Die KB W09 W08 WDB W:1/1
+"1001_Movies_You_Must_See_Before_You_Die"	1 1001_Movies_You_Must_See_Before_You_Die KB W09 W08 WDB W:1/1
+"1001_Nights_of_Snowfall"	1 1001_Nights_of_Snowfall KB W09 W08 WDB W:1/1
+"1002 Olbersia"	1 1002_Olbersia KB W09 W08 WDB W:1/1
+"1002_Olbersia"	1 1002_Olbersia KB W09 W08 WDB W:1/1
+"10030 Philkeenan"	1 10030_Philkeenan KB W09 W08 WDB W:1/1
+"10048 (ZIP code)"	1 10048_(ZIP_code) KB W09 W08 WDB W:1/1
+"100_(Andy_Stochansky_Album)"	1 100_(Andy_Stochansky_album) KB W09 W08 WDB W:1/1
+"100_Books_by_August_Derleth"	1 100_Books_by_August_Derleth KB W09 W08 WDB W:1/1
+"100_Broken_Windows"	1 100_Broken_Windows KB W09 W08 WDB W:1/1
+"100_Club"	1 100_Club KB W08 W09 WDB Wx:4/4
+"100_Club_Punk_Festival"	1 100_Club_Punk_Festival KB W09 W08 WDB NR RWB W:1/1
+"100_Days_Before_the_Command"	1 100_Days_Before_the_Command KB W09 W08 WDB W:1/1
+"100_Days_With_Mr._Arrogant"	1 100_Days_with_Mr._Arrogant KB W09 W08 WDB W:1/1
+"100_Deeds_for_Eddie_McDowd"	1 100_Deeds_for_Eddie_McDowd KB W09 W08 WDB W:1/1
+"100_East_Wisconsin"	1 100_East_Wisconsin KB W09 W08 WDB W:1/1
+"100_Grand_Jin"	1 Jin_(rapper) KB W09 W08 WDB W:1/1
+"100_Hekate"	1 100_Hekate KB W09 W08 WDB W:1/1
+"100_Huntley_Street"	1 100_Huntley_Street KB W09 W08 WDB W:1/1
+"100_Mile_House"	1 100_Mile_House,_British_Columbia KB W09 W08 WDB W:1/1
+"100_Mile_House,_British_Columbia"	1 100_Mile_House,_British_Columbia KB W09 W08 WDB W:1/1
+"100_Miles_and_Runnin'"	1 100_Miles_and_Runnin' KB W09 W08 WDB W:1/1
+"100_Million"	1 100_Million KB W09 W08 WDB W:1/1
+"100_Million_Bon_Jovi_Fans_Can't_Be_Wrong"	1 100,000,000_Bon_Jovi_Fans_Can't_Be_Wrong KB W09 W08 WDB W:1/1
+"100_North_Main"	1 100_North_Main KB W09 W08 WDB W:1/1
+"100_Pine_Center"	1 100_Pine_Center KB W09 W08 WDB W:1/1
+"100_Women"	1 100_Women KB W09 W08 WDB W:1/1
+"100th Anniversary"	1 100th_Anniversary KB W09 W08 WDB W:1/1
+"100th Window"	1 100th_Window KB W:3/3 W08 W09 WDB Wx:1/1
+"100th episode"	1 All_That_Live!_(100th_episode) KB W09 W08 WDB w:1/1
+"100th_Anniversary"	1 100th_Anniversary KB W09 W08 WDB W:1/1
+"100th_Bomb_Group"	1 100th_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"100th_Infantry_Battalion"	1 100th_Infantry_Battalion_(United_States) KB W09 W08 WDB W:1/1
+"100th_Window"	1 100th_Window KB W09 W08 WDB W:1/1
+"101 (album)"	1 101_(album) KB W09 W08 WDB W:1/1
+"101 California Street (San Francisco)"	1 101_California_Street KB W09 W08 WDB W:1/1
+"101 Collins Street"	1 101_Collins_Street KB W09 W08 WDB W:1/1
+"101 Dalmatians (1996 film)"	1 101_Dalmatians_(1996_film) KB W09 W08 WDB W:1/1
+"101 Dalmatians"	0.25 101_Dalmatians_(1996_film) KB W:1/4 W08 W09 WDB
+"101 Dalmatiner" auf Wikipedia.org	1 The_Hundred_and_One_Dalmatians KB W09 W08 WDB Wx:1/1
+"101 Dalmations" what are	1 One_Hundred_and_One_Dalmatians KB W:2/2 W08 W09 WDB
+"101 Dam-Nations"	1 101_Dam-Nations KB W09 W08 WDB W:1/1
+"101 Hudson Street"	1 101_Hudson_Street KB W09 W08 WDB W:1/1
+"101 Most Dangerous Academics in America	1 The_Professors:_The_101_Most_Dangerous_Academics_in_America KB W:4/4 W08 W09 WDB
+"101 Most Dangerous Academics in America"	1 The_Professors:_The_101_Most_Dangerous_Academics_in_America KB W09 W08 WDB w:1/1
+"101 Ranch"	1 Miller_Brothers_101_Ranch KB D W09 W08 WDB W:1/1
+"101 Reykjavik"	1 101_Reykjavík KB W08 W09 WDB Wx:5/5
+"101 Second Street"	1 101_Second_Street KB W09 W08 WDB W:1/1
+"101 The Fox"	1 KCFX KB W08 W09 WDB w:1/1 w':1/1
+"101 The Fox" KCFX	1 KCFX KB W:2/2 W08 W09 WDB
+"101 Things You Can Do for Our Children's	1 Richard_Louv KB W09 W08 WDB W:1/1
+"101 Ways to Bug Your Teacher"	1 101_Ways_to_Bug_Your_Teacher KB W09 W08 WDB W:1/1
+"101"	0.1 101_(album) KB W:2/17 W08 W09 WDB
+"101".	1 101_(album) KB W08 W09 WDB Wx:11/11
+"101.7 WSFM"	1 101.7_WSFM KB W09 W08 WDB W:1/1
+"101.7_KKIQ"	1 KKIQ KB W09 W08 WDB W:1/1
+"101._US-Luftlandedivision"	1 101st_Airborne_Division_(United_States) KB RDB RWB W08 W09 Wx:4/4
+"101._US-Luftlandedivision?title=Spezial:Booksources&isbn=0743429907"	1 101st_Airborne_Division_(United_States) KB RDB RWB W08 W09 Wx:3/3
+"10111 Fresnel"	1 10111_Fresnel KB W09 W08 WDB W:1/1
+"101_Dalmatians:_Escape_from_DeVil_Manor"	1 101_Dalmatians:_Escape_from_DeVil_Manor KB W09 W08 WDB W:1/1
+"101_Dalmatians:_The_Series"	1 Disney's_101_Dalmatians:_The_Series KB l W08 RWB R09 W:1/1
+"101_Dalmatians_II:_Patch's_London_Adventure"	1 101_Dalmatians_II:_Patch's_London_Adventure KB W09 W08 WDB W:1/1
+"101_Dalmatiner"	1 The_Hundred_and_One_Dalmatians KB W08 W09 WDB Wx:4/4
+"101_Dalmatiner_(1961)"	1 One_Hundred_and_One_Dalmatians KB W08 W09 WDB Wx:4/4
+"101_Montgomery"	1 101_Montgomery KB W09 W08 WDB W:1/1
+"101_Second_Street"	1 101_Second_Street KB W09 W08 WDB W:1/1
+"101_Things_Removed_from_the_Human_Body"	1 101_Things_Removed_from_the_Human_Body KB W09 W08 WDB W:1/1
+"101st Brigade"	1 101_Logistic_Brigade_(United_Kingdom) KB D W09 W08 WDB NR RWB W:1/1
+"101st Logistic Brigade (United Kingdom)"	1 101_Logistic_Brigade_(United_Kingdom) KB D W09 W08 WDB NR RWB W:1/1
+"101st_Airborne_Division"	1 101st_Airborne_Division_(United_States) KB W09 W08 RWB RDB W:1/1
+"101st_Regiment_Indiana_Infantry"	1 101st_Indiana_Infantry_Regiment KB W09 W08 WDB W:1/1
+"101匹ニャンちゃん大行進"	1 One_Hundred_and_One_Dalmatians KB W09 W08 WDB Wx:1/1
+"102 Dalmatians"	1 102_Dalmatians KB W09 W08 WDB W:1/1
+"102 Dalmatians: Puppies to the Rescue"	1 102_Dalmatians:_Puppies_to_the_Rescue KB W09 W08 WDB W:1/1
+"102 Miriam"	1 102_Miriam KB W:1/1 W08 W09 WDB Wx:2/2
+"102.1 Bay Radio"	1 Swansea_Bay_Radio KB W08 NR RWB R09 RDB W:1/1
+"102.2 Smooth FM"	1 102.2_Smooth_FM KB W09 W08 WDB W:1/1
+"102.5 Clyde 1"	1 102.5_Clyde_1 KB W:5/5 W08 W09 WDB
+"102.7 Star FM"	1 DWSM KB W09 W08 WDB W:1/1
+"102.7_UPV_Radio"	1 DYUP KB W09 W08 WDB W:1/1
+"10203 Flinders"	1 10203_Flinders KB W09 W08 WDB W:1/1
+"10259 Osipovyurij"	1 10259_Osipovyurij KB W09 W08 WDB W:1/1
+"10269 Tusi"	1 10269_Tusi KB W09 W08 WDB W:1/1
+"102_Dalmatians:_Puppies_to_the_Rescue"	1 102_Dalmatians:_Puppies_to_the_Rescue KB W09 W08 WDB W:1/1
+"103 Squadron (Portugal)"	1 103_Squadron_(Portugal) KB W09 W08 WDB W:1/1
+"103 hera wikipedia the encyclopedia"	1 103_Hera KB W:2/2 W08 W09 WDB
+"103 hera Википедија"	1 103_Hera KB W09 W08 WDB Wx:1/1
+"1036 Ganymed"	1 1036_Ganymed KB W09 W08 WDB W:1/1
+"10361 Bunsen"	1 10361_Bunsen KB W09 W08 WDB W:1/1
+"1036_Ganymed"	1 1036_Ganymed KB W09 W08 WDB W:1/1
+"10385 amaterasu wikipedia the encyclopedia"	1 10385_Amaterasu KB W:2/2 W08 W09 WDB
+"103rd_Street-Corona_Plaza_(IRT_Flushing_Line)"	1 103rd_Street–Corona_Plaza_(IRT_Flushing_Line) KB W09 W08 WDB NR RWB W:1/1
+"104 Klymene"	1 104_Klymene KB W09 W08 WDB W:1/1
+"104.1 Territory FM"	1 104.1_Territory_FM KB W09 W08 WDB W:1/1
+"104.1 The Point"	1 KZJK KB W09 W08 WDB w:1/1
+"104.3 Business Radio"	1 DWBR KB W:4/4 W08 W09 WDB
+"104.3 MY FM"	1 KBIG-FM KB W09 W08 WDB W:1/1
+"104.3MY FM"	1 KBIG-FM KB W09 W08 WDB W:1/1
+"104.9 Imagine FM"	1 Imagine_FM KB W08 NR RWB R09 RDB W:1/1
+"10430 Martschmidt"	1 10430_Martschmidt KB W09 W08 WDB W:1/1
+"10431 Pottasch"	1 10431_Pottasch KB W09 W08 WDB W:1/1
+"10444 de Hevesy"	1 10444_de_Hevesy KB W09 W08 WDB W:1/1
+"10445 Coster"	1 10445_Coster KB W09 W08 WDB W:1/1
+"10449 Takuma"	1 10449_Takuma KB W09 W08 WDB W:1/1
+"104_Klymene"	1 104_Klymene KB W09 W08 WDB W:1/1
+"104th Ohio Infantry"	1 104th_Ohio_Infantry KB W09 W08 WDB W:1/1
+"104th_Street_(BMT_Jamaica_Line)"	1 104th_Street_(BMT_Jamaica_Line) KB W09 W08 WDB W:1/1
+"105 Artemis"	1 105_Artemis KB W09 W08 WDB W:1/1
+"105.4_Century_FM"	1 105.4_Century_Radio KB W09 W08 NR RWB RDB W:1/1
+"10506 Rydberg"	1 10506_Rydberg KB W09 W08 WDB W:1/1
+"1054_Forsytia"	1 1054_Forsytia KB W09 W08 WDB W:1/1
+"1055_Tynka"	1 1055_Tynka KB W09 W08 WDB W:1/1
+"1058 Grubba"	1 1058_Grubba KB W09 W08 WDB W:1/1
+"1058_Grubba"	1 1058_Grubba KB W:2/2 W08 W09 WDB
+"1059_Mussorgskia"	1 1059_Mussorgskia KB W09 W08 WDB W:1/1
+"106 & Park Top 10 Live" (2000)	1 106_&_Park KB W09 W08 WDB W:1/1
+"106 & Park"	1 106_&_Park KB W:2/2 W08 W09 WDB
+"106 Dione"	1 106_Dione KB W09 W08 WDB W:1/1
+"106.1 Rock Radio"	1 106.1_Rock_Radio KB W09 W08 WDB W:1/1
+"106.3_Bridge_FM"	1 106.3_Bridge_FM KB W09 W08 WDB W:1/1
+"1061_Paeonia"	1 1061_Paeonia KB W09 W08 WDB W:1/1
+"1062 Ljuba"	1 1062_Ljuba KB W09 W08 WDB W:1/1
+"1062_Ljuba"	1 1062_Ljuba KB W09 W08 WDB W:1/1
+"1065_Amundsenia"	1 1065_Amundsenia KB W09 W08 WDB W:1/1
+"1066 and All That"	1 1066_and_All_That KB W:2/2 W08 W09 WDB
+"1066 and All That: A Memorable History of	1 1066_and_All_That KB W:5/5 W08 W09 WDB
+"1066 and all that."	1 1066_and_All_That KB W09 W08 WDB W:1/1
+"1066, and all that"	1 1066_and_All_That KB W:2/2 W08 W09 WDB
+"1066_and_All_That"	1 1066_and_All_That KB W09 W08 WDB W:1/1
+"1068 Nofretete"	1 1068_Nofretete KB W09 W08 WDB W:1/1
+"1068_Nofretete"	1 1068_Nofretete KB W09 W08 WDB W:1/1
+"1069 Planckia"	1 1069_Planckia KB W09 W08 WDB W:1/1
+"1069_Planckia"	1 1069_Planckia KB W09 W08 WDB W:1/1
+"106Infantry Division.svg" on the Commons website	1 106th_Infantry_Division_(United_States) KB W09 W08 WDB Wx:1/1
+"106_and_Park"	1 106_&_Park KB W:2/2 W08 W09 WDB
+"106th Guards Airborne Division (Russia) - Wikipedia, the free	1 106th_Guards_Airborne_Division_(Russia) KB W09 W08 WDB W:1/1
+"106th_Guards_Tula_Airborne_Division"	1 106th_Guards_Airborne_Division_(Russia) KB W09 W08 WDB W:1/1
+"107 Camilla"	1 107_Camilla KB W09 W08 WDB W:1/1
+"107.1_Rugby_FM"	1 107.1_Rugby_FM KB W09 W08 WDB W:1/1
+"107.2_WIN_FM"	1 Dream_107.2 KB W09 W08 WDB W:1/1
+"107.3 Jack FM"	1 WKAZ-FM KB W09 W08 WDB w:1/1
+"107.5_Sovereign_Radio"	1 Sovereign_Radio KB W09 W08 WDB NR RWB W:1/1
+"107.6 Kestrel FM"	1 107.6_Kestrel_FM KB W09 W08 WDB RWB W:1/1
+"107.7_The_Wolf"	1 107.7FM_The_Wolf KB W08 RWB R09 RDB W:1/1
+"107.8_Arrow_FM"	1 107.8_Arrow_FM KB W09 W08 WDB NR RWB W:1/1
+"107.9 The End,"	1 WENZ KB D W09 W08 WDB w:1/1
+"1070 Tunica"	1 1070_Tunica KB W09 W08 WDB W:1/1
+"1071 Brita"	1 1071_Brita KB W09 W08 WDB W:1/1
+"1073_Gellivara"	1 1073_Gellivara KB W09 W08 WDB W:1/1
+"1074_Beljawskya"	1 1074_Beljawskya KB W:2/2 W08 W09 WDB
+"1075 Helina"	1 1075_Helina KB W09 W08 WDB W:1/1
+"1075_Helina"	1 1075_Helina KB W09 W08 WDB W:1/1
+"1076 Viola"	1 1076_Viola KB W09 W08 WDB W:1/1
+"10763 Hlawka"	1 10763_Hlawka KB W09 W08 WDB W:1/1
+"10767 Toyomasu" (Star Trek: Enterprise)	1 Twilight_(Star_Trek:_Enterprise) KB W09 W08 WDB W:1/1
+"1077_Campanula"	1 1077_Campanula KB W09 W08 WDB W:1/1
+"107_Camilla"	1 107_Camilla KB W09 W08 WDB W:1/1
+"107th (Ulster) Brigade"	1 107_(Ulster)_Brigade KB W09 W08 WDB NR RWB W:1/1
+"107th Street – Beverly Hills (Metra)"	1 107th_Street_-_Beverly_Hills_(Metra) KB W09 W08 WDB NR RWB W:1/1
+"108 (band)"	1 108_(band) KB W09 W08 WDB W:1/1
+"108 Mile Ranch Airport" article on wikipedia	1 108_Mile_Ranch_Airport KB W09 W08 WDB NR RWB W:1/1
+"1080° Avalanche"	1 1080°_Avalanche KB W09 W08 WDB W:1/1
+"1081_Reseda"	1 1081_Reseda KB W09 W08 WDB W:1/1
+"1082_Pirola"	1 1082_Pirola KB W09 W08 WDB W:1/1
+"1084 Tamariwa"	1 1084_Tamariwa KB W09 W08 WDB W:1/1
+"1084_Tamariwa"	1 1084_Tamariwa KB W:2/2 W08 W09 WDB
+"1086 Nata"	1 1086_Nata KB W09 W08 WDB W:1/1
+"1086_Nata"	1 1086_Nata KB W09 W08 WDB W:1/1
+"1087 Arabis"	1 1087_Arabis KB W:2/2 W08 W09 WDB
+"1088_Mitaka"	1 1088_Mitaka KB W09 W08 WDB W:1/1
+"108th Cavalry Regiment (United States) - Wikipedia, the free	1 108th_Cavalry_Regiment_(United_States) KB W:2/2 W08 W09 WDB
+"108th_Air_Defense_Artillery_Brigade"	1 108th_Air_Defense_Artillery_Brigade_(United_States) KB W09 W08 WDB W:1/1
+"1093 Freda"	1 1093_Freda KB W09 W08 WDB W:1/1
+"10959 Appennino"	1 10959_Appennino KB W09 W08 WDB W:1/1
+"1096 Reunerta"	1 1096_Reunerta KB W09 W08 WDB W:1/1
+"1096_Reunerta"	1 1096_Reunerta KB W09 W08 WDB W:1/1
+"109_Felicitas"	1 109_Felicitas KB W09 W08 WDB W:1/1
+"10CC"	1 10cc KB W08 W09 WDB Wx:3/3
+"10TP"	1 10TP KB W08 W09 WDB Wx:2/2
+"10_(Kate_Rusby_album)"	1 10_(Kate_Rusby_album) KB W09 W08 WDB W:1/1
+"10_-_Die_Traumfrau"	1 10_(film) KB W08 W09 WDB Wx:4/4
+"10_000_Hz_Legend"	1 10_000_Hz_Legend KB W09 W08 WDB W:1/1
+"10_August_2005_helicopter_crash_near_Tallinn"	1 Copterline_Flight_103 KB W09 W08 WDB W:1/1
+"10_CC"	1 10cc KB W08 W09 WDB Wx:3/3
+"10_Days_Late"	1 10_Days_Late KB W09 W08 WDB W:1/1
+"10_Dinge,_die_ich_an_Dir_hasse"	1 10_Things_I_Hate_About_You KB W08 W09 WDB Wx:4/4
+"10_Dinge,_die_ich_an_dir_hasse"	1 10_Things_I_Hate_About_You KB W08 W09 WDB Wx:2/2
+"10_Dinge_die_ich_an_dir_hasse"	1 10_Things_I_Hate_About_You KB W09 W08 WDB Wx:1/1
+"10_Downing_Street"	1 10_Downing_Street KB W:1/1 W08 W09 WDB Wx:3/3
+"10_Easy_Pieces_for_Piano"	1 10_Easy_Pieces_for_Piano KB W09 W08 WDB W:1/1
+"10_From_6"	1 10_from_6 KB W09 W08 WDB W:1/1
+"10_Hygiea"	1 10_Hygiea KB W09 W08 WDB W:1/1
+"10_Minute_Warning"	1 10_Minute_Warning KB W09 W08 WDB W:1/1
+"10_Pin_Deluxe"	1 10_Pin_Deluxe KB W09 W08 WDB W:1/1
+"10_Song_Demo"	1 10_Song_Demo KB W09 W08 WDB W:1/1
+"10_Stories_Down"	1 10_Stories_Down KB W09 W08 WDB W:1/1
+"10_Things_I_Hate_About_You"	1 10_Things_I_Hate_About_You KB W09 W08 WDB W:1/1
+"10_Years_After_(album)"	1 10_Years_After_(album) KB W09 W08 WDB W:1/1
+"10_Years_Live_Not_Dead"	1 10_Years_Live_Not_Dead KB W09 W08 WDB W:1/1
+"10_Years_Younger"	1 10_Years_Younger KB D W09 W08 WDB W:1/1
+"10_Years_of_Chaos_and_Confusion"	1 10_Years_of_Chaos_and_Confusion KB W:2/2 W08 W09 WDB
+"10_from_6"	1 10_from_6 KB W09 W08 WDB W:1/1
+"10_m_Air_Rifle"	1 10_metre_air_rifle KB W09 W08 WDB W:1/1
+"10_m_Running_Target"	1 10_metre_running_target KB W09 W08 WDB W:1/1
+"10_on_Broadway"	1 10_on_Broadway KB W09 W08 WDB W:1/1
+"10_on_Ten"	1 10_on_Ten KB W09 W08 WDB W:1/1
+"10_yen_coin"	1 10_yen_coin KB W09 W08 WDB W:1/1
+"10_–_Die_Traumfrau"	1 10_(film) KB W09 W08 WDB Wx:1/1
+"10cc (album)"	1 10cc_(album) KB W09 W08 WDB W:1/1
+"10cc"	1 10cc KB W:1/1 W08 W09 WDB Wx:4/4
+"10mm Auto"	1 10mm_Auto KB W09 W08 WDB W:1/1
+"10mm_Auto"	1 10mm_Auto KB W09 W08 WDB W:1/1
+"10th & Wolf"	1 10th_&_Wolf KB W:3/3 W08 W09 WDB
+"10th (Irish) Division"	1 10th_(Irish)_Division KB W09 W08 WDB W:1/1
+"10th Academy Awards"	1 10th_Academy_Awards KB W09 W08 WDB W:1/1
+"10th Georgia Infantry"	1 10th_Georgia_Regiment KB W09 W08 WDB NR RWB W:1/1
+"10th Group CIS"	1 10th_Group_CIS KB W09 W08 WDB W:1/1
+"10th Indian Infantry Division"	1 10th_Indian_Infantry_Division KB W09 W08 WDB W:1/1
+"10th Infantry Regiment (United States)"	1 10th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"10th Mountain Division"	1 10th_Mountain_Division_(United_States) KB W09 W08 WDB W:1/1
+"10th Princess Mary's Own Gurkha Rifles"	1 10th_Princess_Mary's_Own_Gurkha_Rifles KB W:3/3 W08 W09 WDB
+"10th SS Panzer Division Frundsberg"	1 10th_SS_Panzer_Division_Frundsberg KB W:2/2 W08 W09 WDB
+"10th Tactical Squadron"	1 10th_Tactical_Squadron KB W09 W08 WDB W:1/1
+"10th Tactical Wing"	1 10th_Tactical_Wing KB W09 W08 WDB W:1/1
+"10th Tony Awards"	1 10th_Tony_Awards KB W09 W08 WDB W:1/1
+"10th USAAF - Wikipédia"	1 Tenth_Air_Force KB W09 W08 WDB Wx:1/1
+"10th Virginia Regiment"	1 10th_Virginia_Regiment KB W09 W08 WDB W:1/1
+"10th_Armoured_Cavalry_Brigade"	1 10th_Armoured_Cavalry_Brigade_(Poland) KB W09 W08 WDB W:1/1
+"10th_Canadian_Infantry_Brigade"	1 10th_Canadian_Infantry_Brigade KB W09 W08 WDB W:1/1
+"10th_Indian_Infantry_Division"	1 10th_Indian_Infantry_Division KB W09 W08 WDB W:1/1
+"10th_Light_Horse"	1 10th_Light_Horse_Regiment_(Australia) KB W:2/2 W08 W09 WDB
+"10th_Line_Shore,_Ontario"	1 Beckwith,_Ontario KB W09 W08 WDB W:1/1
+"10th_Mountain_Division"	1 10th_Mountain_Division_(United_States) KB W09 W08 WDB W:1/1
+"10th_New_Jersey_Infantry"	1 10th_New_Jersey_Volunteer_Infantry KB W09 W08 WDB W:1/1
+"10th_Panchen_Lama"	1 Choekyi_Gyaltsen KB W09 W08 WDB NR RWB W:1/1
+"10th_Space_Warning_Squadron"	1 10th_Space_Warning_Squadron KB W09 W08 WDB W:1/1
+"11 (Harry Connick Jr. album)"	1 Eleven_(Harry_Connick_Jr._album) KB NR RDB RWB W:2/2 W08 W09
+"11 (The Smithereens album)"	1 11_(The_Smithereens_album) KB W09 W08 WDB W:1/1
+"11 April 2007 Algiers bombings"	1 11_April_2007_Algiers_bombings KB W09 W08 WDB W:1/1
+"11 Cameras"	1 11_Cameras KB W09 W08 WDB W:1/1
+"11 Chú thích"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"11 Dreams"	1 11_Dreams KB W:2/2 W08 W09 WDB
+"11 Gorkha Rifles"	1 11_Gorkha_Rifles KB W:2/2 W08 W09 WDB
+"11 Harrowhouse - Wikipedia, the free encyclopedia"	1 11_Harrowhouse KB W09 W08 WDB W:1/1
+"11 Harrowhouse"	1 11_Harrowhouse KB W09 W08 WDB W:1/1
+"11 July 2006 Mumbai train bombings"	1 11_July_2006_Mumbai_train_bombings KB W09 W08 WDB W:1/1
+"11 Parthenope"	1 11_Parthenope KB W:2/2 W08 W09 WDB
+"11 Tracks of Whack"	1 11_Tracks_of_Whack KB W09 W08 WDB W:1/1
+"11 de marzo"	1 11_March_2004_Madrid_train_bombings KB R09 RDB RWB W:9/9 W08
+"11 o'clock" show	1 The_11_O'Clock_Show KB W:2/2 W08 W09 WDB
+"11"	0.3125 11_(Bryan_Adams_album) KB W:4/9 W08 W09 WDB w:1/2
+"11"	0.125 11_(The_Smithereens_album) KB W:1/9 W08 W09 WDB w:1/2
+"11" by durik the temptress from the album	1 Tinnitus KB W09 W08 WDB W:1/1
+"11'09"01_–_September_11"	1 11'9"01_September_11 KB NR RWB W08 W09 WDB Wx:4/4
+"11'09'01"	1 11'9"01_September_11 KB NR RWB W08 W09 WDB Wx:3/3
+"11-M"	1 11_March_2004_Madrid_train_bombings KB W08 RWB R09 RDB Wx:1/1
+"11-ое чудо света"	1 Ein_Gedi,_Israel KB R09 RDB RWB W:4/4 W08
+"11.09.01"	1 11'9"01_September_11 KB NR RWB W08 W09 WDB Wx:37/37
+"11._Air_Manoeuvre_Brigade"	1 11_Luchtmobiele_Brigade KB W09 W08 WDB Wx:1/1
+"11._US-Luftlandedivision"	1 11th_Airborne_Division_(United_States) KB W08 W09 WDB Wx:2/2
+"110 Lydia"	1 110_Lydia KB W09 W08 WDB W:1/1
+"110 West 7th Building"	1 110_West_7th_Building KB W:2/2 W08 W09 WDB
+"110 in the Shade"	1 110_in_the_Shade KB W:2/2 W08 W09 WDB
+"11001 Andrewulff"	1 11001_Andrewulff KB W09 W08 WDB W:1/1
+"1103 Sequoia"	1 1103_Sequoia KB W09 W08 WDB W:1/1
+"11055 Honduras" no website Wikipedia	1 11055_Honduras KB W09 W08 WDB Wx:1/1
+"1105_Fragaria"	1 1105_Fragaria KB W09 W08 WDB W:1/1
+"1106 Cydonia"	1 1106_Cydonia KB W09 W08 WDB W:1/1
+"1108 Demeter"	1 1108_Demeter KB W09 W08 WDB W:1/1
+"110_Lydia"	1 110_Lydia KB W09 W08 WDB W:1/1
+"111 Ate"	1 111_Ate KB W09 W08 WDB W:1/1
+"111 Piccadilly"	1 111_Piccadilly KB W:5/5 W08 W09 WDB
+"1110 Jaroslawa"	1 1110_Jaroslawa KB W09 W08 WDB W:1/1
+"1112 Polonia"	1 1112_Polonia KB W09 W08 WDB W:1/1
+"1113 Katja"	1 1113_Katja KB W09 W08 WDB W:1/1
+"11150 Bragg"	1 11150_Bragg KB W09 W08 WDB W:1/1
+"11169_Alkon"	1 11169_Alkon KB W09 W08 WDB W:1/1
+"11195 Woomera"	1 11195_Woomera KB W09 W08 WDB W:1/1
+"111_Ate"	1 111_Ate KB W09 W08 WDB W:1/1
+"111_Centoundici"	1 111_Centoundici KB W09 W08 WDB W:1/1
+"111th Infantry Division (German Empire)"	1 111th_Infantry_Division_(German_Empire) KB W09 W08 WDB W:1/1
+"111th Street – Morgan Park (Metra)"	1 111th_Street_-_Morgan_Park_(Metra) KB W09 W08 WDB NR RWB W:1/1
+"112 (band)"	1 112_(band) KB W:2/2 W08 W09 WDB
+"112 Iphigenia"	1 112_Iphigenia KB W09 W08 WDB W:1/1
+"1121 Natascha"	1 1121_Natascha KB W09 W08 WDB W:1/1
+"11212 Tebbutt"	1 11212_Tebbutt KB W09 W08 WDB W:1/1
+"1123 Shapleya"	1 1123_Shapleya KB W09 W08 WDB W:1/1
+"11240 Piso"	1 11240_Piso KB W09 W08 WDB W:1/1
+"1125 China"	1 1125_China KB W09 W08 WDB W:1/1
+"11253 Mesyats"	1 11253_Mesyats KB W09 W08 WDB W:1/1
+"1127 Mimi"	1 1127_Mimi KB W09 W08 WDB W:1/1
+"1129 Neujmina"	1 1129_Neujmina KB W09 W08 WDB W:1/1
+"112_(Band)"	1 112_(band) KB W08 W09 WDB Wx:3/3
+"112th Infantry Regiment (United States) - Wikipedia, the free	1 112th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"112th Infantry Regiment (United States)"	1 112th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"113 AKA M113"	1 M113_Armored_Personnel_Carrier KB D W09 W08 RWB RDB W:1/1
+"1131 Porzia"	1 1131_Porzia KB W09 W08 WDB W:1/1
+"1133 Lugduna"	1 1133_Lugduna KB W09 W08 WDB W:1/1
+"1134 Kepler"	1 1134_Kepler KB W09 W08 WDB W:1/1
+"11356 Chuckjones"	1 11356_Chuckjones KB W09 W08 WDB W:1/1
+"1136 Mercedes"	1 1136_Mercedes KB W09 W08 WDB W:1/1
+"1137 Raïssa"	1 1137_Raïssa KB W09 W08 WDB W:1/1
+"1138 Attica"	1 1138_Attica KB W09 W08 WDB W:1/1
+"113_Amalthea"	1 113_Amalthea KB W09 W08 WDB W:1/1
+"113th Cavalry Regiment (United States)"	1 113th_Cavalry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"114 Kassandra"	1 114_Kassandra KB W09 W08 WDB W:1/1
+"1140 Crimea"	1 1140_Crimea KB W09 W08 WDB W:1/1
+"1141 Bohmia"	1 1141_Bohmia KB W09 W08 WDB W:1/1
+"1141_Bohmia"	1 1141_Bohmia KB W09 W08 WDB W:1/1
+"11437 Cardalda"	1 (11437)_1971_SB KB W09 W08 WDB NR RWB W:1/1
+"11438 Zeldovich"	1 11438_Zeldovich KB W09 W08 WDB W:1/1
+"1146 Biarmia"	1 1146_Biarmia KB W09 W08 WDB W:1/1
+"1147 Stavropolis"	1 1147_Stavropolis KB W09 W08 WDB W:1/1
+"115 series"	1 115_series KB W09 W08 WDB W:1/1
+"1152 Clyde 2"	1 1152_Clyde_2 KB W:3/3 W08 W09 WDB
+"1158 Luda"	1 1158_Luda KB W09 W08 WDB W:1/1
+"115_Thyra"	1 115_Thyra KB W09 W08 WDB W:1/1
+"115th Infantry Regiment (United States)"	1 115th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"11605 Ranfagni"	1 11605_Ranfagni KB W09 W08 WDB W:1/1
+"11606 Almary"	1 11606_Almary KB W09 W08 WDB W:1/1
+"11682 Shiwaku"	1 11682_Shiwaku KB W09 W08 WDB W:1/1
+"1169 Alwine"	1 1169_Alwine KB W09 W08 WDB W:1/1
+"1169_Alwine"	1 1169_Alwine KB W09 W08 WDB W:1/1
+"116th Street – Columbia University (IRT Broadway – Seventh Avenue	1 116th_Street–Columbia_University_(IRT_Broadway–Seventh_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"116th_Air_Control_Wing"	1 116th_Air_Control_Wing KB W09 W08 WDB W:1/1
+"117 Lomia"	1 117_Lomia KB W09 W08 WDB W:1/1
+"1170 Siva"	1 1170_Siva KB W09 W08 WDB W:1/1
+"11709 Eudoxos"	1 11709_Eudoxos KB W09 W08 WDB W:1/1
+"11728_Einer"	1 11728_Einer KB W09 W08 WDB W:1/1
+"117430 Achosyx"	1 117430_Achosyx KB W09 W08 WDB W:1/1
+"117439 Rosner"	1 117439_Rosner KB W09 W08 WDB W:1/1
+"11754_Herbig"	1 11754_Herbig KB W09 W08 WDB W:1/1
+"117572 Hutsebaut"	1 117572_Hutsebaut KB W09 W08 WDB W:1/1
+"11758 Sargent"	1 11758_Sargent KB W09 W08 WDB W:1/1
+"11781 Alexroberts"	1 11781_Alexroberts KB W09 W08 WDB W:1/1
+"117_Lomia"	1 117_Lomia KB W09 W08 WDB W:1/1
+"1180 Peachtree"	1 1180_Peachtree KB W09 W08 WDB W:1/1
+"118173 Barmen"	1 118173_Barmen KB W09 W08 WDB W:1/1
+"118401 LINEAR"	1 118401_LINEAR KB W09 W08 WDB W:1/1
+"1186 Turnera"	1 1186_Turnera KB W09 W08 WDB W:1/1
+"1189 Terentia"	1 1189_Terentia KB W09 W08 WDB W:1/1
+"118_Peitho"	1 118_Peitho KB W09 W08 WDB W:1/1
+"118th_Pennsylvania"	1 118th_Pennsylvania_Infantry KB W09 W08 WDB W:1/1
+"118th_Pennsylvania_Volunteer_Infantry"	1 118th_Pennsylvania_Infantry KB W09 W08 WDB W:1/1
+"1199SEIU United Healthcare Workers East"	1 1199SEIU_United_Healthcare_Workers_East KB W:2/2 W08 W09 WDB
+"1199SEIU_United_Healthcare_Workers_East"	1 1199SEIU_United_Healthcare_Workers_East KB W09 W08 WDB W:1/1
+"119_Althaea"	1 119_Althaea KB W09 W08 WDB W:1/1
+"11:02 AM (JST), at an altitude of	1 Fat_Man KB W:3/3 W08 W09 WDB
+"11:11 (Mac Lethal album)"	1 11:11_(Mac_Lethal_album) KB W09 W08 WDB W:1/1
+"11:11_(Regina_Spektor_album)"	1 11:11_(Regina_Spektor_album) KB W09 W08 WDB W:1/1
+"11:14 - elevenfourteen" auf Wikipedia.org	1 11:14 KB W09 W08 WDB Wx:1/1
+"11:14"	1 11:14 KB W:1/1 W08 W09 WDB Wx:6/6
+"11:57"	1 11:57 KB W09 W08 WDB W:1/1
+"11:59_(Voyager_episode)"	1 11:59 KB W09 W08 WDB W:1/1
+"11Alive"	0 WXIA-TV H KB W08 W09 WDB
+"11_Cameras"	1 11_Cameras KB W09 W08 WDB W:1/1
+"11_Gorkha_Rifles"	1 11_Gorkha_Rifles KB W09 W08 WDB W:1/1
+"11_Harrowhouse"	1 11_Harrowhouse KB W09 W08 WDB W:1/1
+"11_Parthenope"	1 11_Parthenope KB W09 W08 WDB W:1/1
+"11_Tracks_of_Whack"	1 11_Tracks_of_Whack KB W09 W08 WDB W:1/1
+"11th (Northern) Division"	1 11th_(Northern)_Division KB W:2/2 W08 W09 WDB
+"11th Academy Awards"	1 11th_Academy_Awards KB W:2/2 W08 W09 WDB
+"11th Army (Soviet Union)"	1 11th_Army_(Soviet_Union) KB W:2/2 W08 W09 WDB
+"11th Battalion"	1 11th_Battalion_(Australia) KB D W09 W08 WDB W:1/1
+"11th Hour TV series"	1 Eleventh_Hour_(U.S._TV_series) KB W09 W08 WDB W:1/1
+"11th Hour" (Lamb of God song)	1 As_the_Palaces_Burn KB W09 W08 WDB w':1/1
+"11th Infantry Brigade (United Kingdom)"	1 11th_Infantry_Brigade_(United_Kingdom) KB W09 W08 WDB W:1/1
+"11th Infantry Brigade (United States)"	1 11th_Infantry_Brigade_(United_States) KB W09 W08 WDB W:1/1
+"11th New York Infantry - Wikipedia, the free encyclopedia	1 11th_New_York_Volunteer_Infantry_Regiment KB RWB W:2/2 W08 W09 WDB
+"11th Operational Weather Squadron"	1 11th_Operational_Weather_Squadron KB W09 W08 WDB W:1/1
+"11th Pennsylvania Infantry"	1 11th_Pennsylvania_Infantry KB W09 W08 WDB W:1/1
+"11th Street (SEPTA Market–Frankford Line station)"	1 11th_Street_(SEPTA_Market–Frankford_Line_station) KB W09 W08 WDB W:1/1
+"11th Tony Awards"	1 11th_Tony_Awards KB W09 W08 WDB W:1/1
+"11th World Scout Jamboree"	1 11th_World_Scout_Jamboree KB W09 W08 WDB W:1/1
+"11th_(Northern)_Division"	1 11th_(Northern)_Division KB W09 W08 WDB W:1/1
+"11th_Airborne_Division_(United_States)"	1 11th_Airborne_Division_(United_States) KB W09 W08 WDB W:1/1
+"11th_Infantry_Brigade_(United_States)"	1 11th_Infantry_Brigade_(United_States) KB W09 W08 WDB W:1/1
+"11th_Milestone"	1 11th_Milestone KB W09 W08 WDB W:1/1
+"11th_New_York_Volunteer_Infantry_Regiment"	1 11th_New_York_Volunteer_Infantry_Regiment KB W09 W08 WDB RWB W:1/1
+"11th_Philippine_Scout_Battalion"	1 24th_Field_Artillery_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"11th_Regiment_of_Militia"	1 11th_Regiment_of_Connecticut_Militia KB W:2/2 W08 W09 WDB
+"11th_SS_Volunteer_Panzergrenadier_Division_Nordland"	1 11th_SS_Volunteer_Panzergrenadier_Division_Nordland KB W09 W08 WDB W:1/1
+"11th_Signal_Brigade"	1 11th_Signal_Brigade_(United_States) KB W09 W08 WDB W:1/1
+"11th_Street_(SEPTA_station)"	1 11th_Street_(SEPTA_Market–Frankford_Line_station) KB W09 W08 WDB W:1/1
+"11th_Virginia_Regiment"	1 11th_Virginia_Regiment KB W09 W08 WDB W:1/1
+"11th_Wisconsin_Volunteer_Infantry_Regiment"	1 11th_Wisconsin_Volunteer_Infantry_Regiment KB W09 W08 WDB W:1/1
+"12 (film) - Wikipédia"	1 12_(film) KB W09 W08 WDB Wx:1/1
+"12 (film)"	1 12_(film) KB W09 W08 WDB W:1/1
+"12 Angry Men"	1 12_Angry_Men D KB RWB W:51/51 W08 W09 WDB Wx:2/2
+"12 Angry Men" dramatizes how one juror can	1 12_Angry_Men D KB RWB W:2/2 W08 W09 WDB
+"12 Angry Men".	1 12_Angry_Men D KB RWB W:4/4 W08 W09 WDB
+"12 Angry Men,"	1 12_Angry_Men_(play) KB NR R09 RDB RWB W:2/2 W08
+"12 Angry Men."	1 12_Angry_Men D KB RWB W:6/6 W08 W09 WDB
+"12 Bar Club"	1 12_Bar_Club KB W09 W08 WDB W:1/1
+"12 Caesars"	1 The_Twelve_Caesars KB W:10/10 W08 W09 WDB
+"12 Corazones (12 Hearts)	1 12_Corazones KB W:3/3 W08 W09 WDB
+"12 Corazones - Wikipedia, la enciclopedia libre"	1 12_Corazones KB W09 W08 WDB Wx:1/1
+"12 Corazones - Wikipedia, the free encyclopedia"	1 12_Corazones KB W09 W08 WDB W:1/1
+"12 Day of Christmas"	1 Twelve_Days_of_Christmas KB W:2/2 W08 W09 WDB
+"12 Days of Brumalia"	1 12_Days_of_Brumalia KB W09 W08 WDB W:1/1
+"12 Days of Christmas"	0.666667 Twelve_Days_of_Christmas KB W:4/4 W08 W09 WDB
+"12 Days of Terror"	1 12_Days_of_Terror KB W09 W08 WDB W:1/1
+"12 Gardens Live"	1 12_Gardens_Live KB W09 W08 WDB W:1/1
+"12 Gold Bars"	1 12_Gold_Bars KB W09 W08 WDB W:1/1
+"12 Golden Country Greats"	1 12_Golden_Country_Greats KB W09 W08 WDB W:1/1
+"12 Inches of Snow"	1 12_Inches_of_Snow KB W09 W08 WDB W:1/1
+"12 Inches of Snow."	1 12_Inches_of_Snow KB W:6/6 W08 W09 WDB
+"12 Liên kết ngoài"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"12 Memories"	1 12_Memories KB W09 W08 WDB W:1/1
+"12 Monkeys"	1 Twelve_Monkeys KB RDB RWB W:27/27 W08 W09 Wx:5/5
+"12 Monkeys" bei Wikipedia	1 Twelve_Monkeys KB RDB RWB W08 W09 Wx:2/2
+"12 Rods"	1 12_Rods KB W09 W08 WDB W:1/1
+"12 Rounds (film) - Wikipedia, the free encyclopedia"	1 12_Rounds_(film) KB W09 W08 WDB W:1/1
+"12 Rounds (film)"	1 12_Rounds_(film) KB W09 W08 WDB W:1/1
+"12 Rounds - Wikipedia, the free encyclopedia"	1 12_Rounds KB W09 W08 RDB W:1/1
+"12 September 2008 Dujail bombing"	1 12_September_2008_Dujail_bombing KB W09 W08 WDB W:1/1
+"12 Songs (Randy Newman album)"	1 12_Songs_(Randy_Newman_album) KB W09 W08 WDB W:1/1
+"12 Stones (album)"	1 12_Stones_(album) KB W09 W08 WDB W:1/1
+"12 Stones"	1 12_Stones KB W:3/3 W08 W09 WDB
+"12 Uhr mittags"	1 High_Noon KB W09 W08 WDB Wx:1/1
+"12 Victoria"	1 12_Victoria KB W09 W08 WDB W:1/1
+"12 ahvi"	1 Twelve_Monkeys KB RDB RWB W:4/4 W08 W09
+"12 años del Balaguerismo"	1 Joaquín_Balaguer KB W08 W09 WDB Wx:22/22
+"12 e Régiment blindé du Canada"	1 12e_Régiment_blindé_du_Canada KB W09 W08 WDB W:1/1
+"12 hombres en pugna"	1 12_Angry_Men D KB RWB W08 W09 WDB Wx:8/8
+"12 hombres sin piedad"	1 12_Angry_Men KB D W09 W08 WDB RWB Wx:1/1
+"12 monkeys"	1 Twelve_Monkeys KB RDB RWB W08 W09 Wx:7/7
+"12 monos".	1 Twelve_Monkeys KB RDB RWB W08 W09 Wx:2/2
+"12 o'clock High" with Grego	1 Twelve_O'Clock_High KB W09 W08 WDB W:1/1
+"12 oz. Mouse"	1 12_oz._Mouse KB W:2/2 W08 W09 WDB
+"12 prac Asteriksa"	1 The_Twelve_Tasks_of_Asterix KB W08 W09 WDB Wx:2/2
+"12 Разгневанных Мужчин"	1 12_Angry_Men D KB RWB W:103/103 W08 W09 WDB
+"12 обезьян"	1 Twelve_Monkeys KB RDB RWB W08 W09 Wx:11/11
+"12 разгневанных мужчин"	1 12_Angry_Men D KB RWB W:1/1 W08 W09 WDB Wx:53/53
+"12 разгневанных мужчин" ("12 Angry Men")	1 12_Angry_Men D KB RWB W08 W09 WDB Wx:2/2
+"12 разгневанных мужчин" 1957 года	1 12_Angry_Men D KB RWB W08 W09 WDB Wx:2/2
+"12 разгневанных мужчин" 1957года	1 12_Angry_Men D KB RWB W08 W09 WDB Wx:5/5
+"12 разгневанных мужчин" Сидни Люмета	1 12_Angry_Men D KB RWB W08 W09 WDB Wx:3/3
+"12 сентября 2006 Бенедикт XVI выступил в университете	1 Pope_Benedict_XVI KB W08 W09 WDB Wx:3/3
+"12 הקופים"	1 Twelve_Monkeys KB W09 W08 RWB RDB Wx:1/1
+"12"	0.474576 12_(film) KB W:2/16 W08 W09 WDB Wx:26/43
+"12" by durik the temptress from the album	1 Tinnitus KB W09 W08 WDB W:1/1
+"12" Михалкова	1 12_(film) KB W08 W09 WDB Wx:2/2
+"12" Михалкова...	1 12_(film) KB W08 W09 WDB Wx:251/251
+"12,7_x_99_mm_NATO"	1 .50_BMG KB W08 W09 WDB Wx:4/4
+"12-Bar Original"	1 12-Bar_Original KB W09 W08 WDB W:1/1
+"12-Bar_Original"	1 12-Bar_Original KB W09 W08 WDB W:1/1
+"12-String Blues"	1 12-String_Blues KB W09 W08 WDB W:1/1
+"12-String_Blues"	1 12-String_Blues KB W09 W08 WDB W:1/1
+"12.1 Tác phẩm của Hồ Chí Minh"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"12.2 Viết về Hồ Chí Minh"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"12.3 Phim ảnh"	1 Ho_Chi_Minh KB W08 W09 WDB Wx:4/4
+"12.7 x 107 mm"	1 12.7x108mm KB NR RWB W:2/2 W08 W09 WDB
+"12.7_x_99_mm_NATO"	1 .50_BMG KB W08 W09 WDB Wx:3/3
+"12.7×108mm"	1 12.7x108mm KB NR RWB W:2/2 W08 W09 WDB
+"12.8 cm FlaK 40"	1 12.8_cm_FlaK_40 KB W:2/2 W08 W09 WDB
+"12.874752 Kilometers"	1 M-102_(Michigan_highway) KB W09 W08 WDB W:1/1
+"12._SS-Panzerdivision_Hitlerjugend"	1 12th_SS_Panzer_Division_Hitlerjugend KB W08 W09 WDB Wx:3/3
+"120	1 Love_Shack KB W09 W08 WDB W:1/1
+"120 Collins Street"	1 120_Collins_Street KB W09 W08 WDB W:1/1
+"120 Days (album)"	1 120_Days_(album) KB W09 W08 WDB W:1/1
+"120 Days of Sodom"	1 120_Days_of_Sodom KB RWB W:15/15 W08 W09 WDB
+"120 Days"	1 120_Days KB W:2/2 W08 W09 WDB
+"120 Lachesis"	1 120_Lachesis KB W09 W08 WDB W:1/1
+"120 Minutes - Wikipedia, the free encyclopedia"	1 120_Minutes KB W:2/2 W08 W09 WDB
+"120 Minutes"	1 120_Minutes KB W:3/3 W08 W09 WDB
+"120 days of Sodom"	1 120_Days_of_Sodom KB RWB W:12/12 W08 W09 WDB
+"120 mm M1 gun"	1 120_mm_M1_gun KB W09 W08 WDB W:1/1
+"120 μέρες στα Σόδομα"	1 Salò_(film) KB W09 W08 WDB NR RWB W:1/1
+"1200 Curfews"	1 1200_Curfews KB W09 W08 WDB W:1/1
+"1200 Imperatrix"	1 1200_Imperatrix KB W09 W08 WDB W:1/1
+"1200 Micrograms"	1 1200_Micrograms KB W09 W08 WDB W:1/1
+"1200 Techniques"	1 1200_Techniques KB W09 W08 WDB W:1/1
+"12012"	1 12012 KB W09 W08 WDB W:1/1
+"120347 Salacia"	1 (120347)_2004_SB60 KB NR RWB W:2/2 W08 W09 WDB
+"120361 Guido"	1 120361_Guido KB W09 W08 WDB W:1/1
+"12053 Turtlestar"	1 12053_Turtlestar KB W09 W08 WDB W:1/1
+"1206 Numerowia"	1 1206_Numerowia KB W09 W08 WDB W:1/1
+"12075 Legg"	1 12075_Legg KB W09 W08 WDB W:1/1
+"1208 (band)"	1 1208_(band) KB W09 W08 WDB W:1/1
+"1208 band wikipedia the encyclopedia"	1 1208_(band) KB W09 W08 WDB W:1/1
+"1209 Pumma"	1 1209_Pumma KB W09 W08 WDB W:1/1
+"120_Lachesis"	1 120_Lachesis KB W09 W08 WDB W:1/1
+"121 Hermione"	1 121_Hermione KB W09 W08 WDB W:1/1
+"1210 Morosovia"	1 1210_Morosovia KB W09 W08 WDB W:1/1
+"1211 Bressole"	1 1211_Bressole KB W09 W08 WDB W:1/1
+"12127 Mamiya"	1 12127_Mamiya KB W09 W08 WDB W:1/1
+"121_Hermione"	1 121_Hermione KB W09 W08 WDB W:1/1
+"122 Gerda"	1 122_Gerda KB W09 W08 WDB W:1/1
+"122 mm howitzer 2A18 (D-30)"	1 122_mm_howitzer_2A18_(D-30) KB W09 W08 WDB W:1/1
+"122-mm_howitzer_M1938_(M-30)"	1 122_mm_howitzer_M1938_(M-30) KB W:2/2 W08 W09 WDB
+"1221 Amor"	1 1221_Amor KB W:2/2 W08 W09 WDB
+"12211 Arnoschmidt"	1 12211_Arnoschmidt KB W09 W08 WDB W:1/1
+"1221_Amor"	1 1221_Amor KB W09 W08 WDB W:1/1
+"1224 Fantasia"	1 1224_Fantasia KB W09 W08 WDB W:1/1
+"122_Gerda"	1 122_Gerda KB W09 W08 WDB W:1/1
+"123 (film)"	1 123_(film) KB W09 W08 WDB W:1/1
+"12324 Van Rompaey"	1 12324_Van_Rompaey KB W09 W08 WDB W:1/1
+"1234 (song)"	1 1234_(song) KB W09 W08 WDB W:1/1
+"1234"	0.0338983 1234_(song) KB W:2/55 W08 W09 WDB
+"1234" (song)	1 1234_(song) KB W:2/2 W08 W09 WDB w':2/2
+"123_Brunhild"	1 123_Brunhild KB W09 W08 WDB W:1/1
+"123rd Illinois Volunteer Infantry Regiment"	1 123rd_Illinois_Volunteer_Infantry_Regiment KB W09 W08 WDB W:1/1
+"1240 Centenaria"	1 1240_Centenaria KB W09 W08 WDB W:1/1
+"1241 Dysona"	1 1241_Dysona KB W09 W08 WDB W:1/1
+"1242 Zambesia"	1 1242_Zambesia KB W09 W08 WDB W:1/1
+"124_Alkeste"	1 124_Alkeste KB W09 W08 WDB W:1/1
+"1250 WTAE"	1 WEAE KB W09 W08 WDB RWB w':1/1
+"1250_Poydras_Plaza"	1 1250_Poydras_Plaza KB W09 W08 WDB W:1/1
+"12513 Niven"	1 12513_Niven KB W09 W08 WDB W:1/1
+"1252 Celestia"	1 1252_Celestia KB W09 W08 WDB W:1/1
+"1254 Erfordia"	1 1254_Erfordia KB W09 W08 WDB W:1/1
+"1255 Schilowa"	1 1255_Schilowa KB W09 W08 WDB W:1/1
+"1256 Normannia"	1 1256_Normannia KB W09 W08 WDB W:1/1
+"125_Liberatrix"	1 125_Liberatrix KB W09 W08 WDB W:1/1
+"125th Anniversary of the Confederation of Canada Medal	1 125th_Anniversary_of_the_Confederation_of_Canada_Medal KB W09 W08 WDB W:1/1
+"125th Street (IND Eighth Avenue Line)"	1 125th_Street_(IND_Eighth_Avenue_Line) KB W:2/2 W08 W09 WDB
+"125th Street (IRT Broadway – Seventh Avenue Line)"	1 125th_Street_(IRT_Broadway–Seventh_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"125th Street (IRT Lexington Avenue Line)"	1 125th_Street_(IRT_Lexington_Avenue_Line) KB W09 W08 WDB W:1/1
+"125th Street Bridge"	1 125th_Street_Bridge KB W09 W08 WDB W:1/1
+"125th_Street_(IRT_Lenox_Avenue_Line)"	1 125th_Street_(IRT_Lenox_Avenue_Line) KB W09 W08 WDB W:1/1
+"1265 schweikarda Википедија"	1 1265_Schweikarda KB W09 W08 WDB Wx:1/1
+"12657 Bonch-Bruevich"	1 12657_Bonch-Bruevich KB W09 W08 WDB W:1/1
+"12658 Peiraios"	1 12658_Peiraios KB W09 W08 WDB W:1/1
+"1269 Rollandia"	1 1269_Rollandia KB W09 W08 WDB W:1/1
+"126_Velleda"	1 126_Velleda KB W09 W08 WDB W:1/1
+"126f Air Refuewing Wing – Wikipedia, de free encycwopedia	1 126th_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"126th Air Refueling Wing - Wikipedia, the free encyclopedia	1 126th_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"126th Air Refueling Wing – Sprinko Encyclopedia, the free	1 126th_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"126th Air Refueling Wing – Wikipedia, the free encyclopedia	1 126th_Air_Refueling_Wing KB W:8/8 W08 W09 WDB
+"127 Johanna"	1 127_Johanna KB W09 W08 WDB W:1/1
+"1271 Isergina"	1 1271_Isergina KB W09 W08 WDB W:1/1
+"1272 Gefion"	1 1272_Gefion KB W09 W08 WDB W:1/1
+"1276 Ucclia"	1 1276_Ucclia KB W09 W08 WDB W:1/1
+"127_Johanna"	1 127_Johanna KB W09 W08 WDB W:1/1
+"128 marklars,"	1 Starvin'_Marvin_in_Space KB W:3/3 W08 W09 WDB
+"1283 Komsomolia"	1 1283_Komsomolia KB W09 W08 WDB W:1/1
+"1287 Lorcia"	1 1287_Lorcia KB W09 W08 WDB W:1/1
+"1288 Santa"	1 1288_Santa KB W09 W08 WDB W:1/1
+"128_Nemesis"	1 128_Nemesis KB W09 W08 WDB W:1/1
+"129 West Trade"	1 129_West_Trade KB W09 W08 WDB W:1/1
+"1290 Albertine"	1 1290_Albertine KB W09 W08 WDB W:1/1
+"1292 Advanced Programmable Video System"	1 1292_Advanced_Programmable_Video_System KB W09 W08 WDB W:1/1
+"1292_Advanced_Programmable_Video_System"	1 1292_Advanced_Programmable_Video_System KB W09 W08 WDB W:1/1
+"1299 Mertona"	1 1299_Mertona KB W09 W08 WDB W:1/1
+"129th Rescue Wing"	1 129th_Rescue_Wing KB W09 W08 WDB W:1/1
+"129th_Rescue_Wing"	1 129th_Rescue_Wing KB W09 W08 WDB W:1/1
+"12:01 PM"	1 12:01_PM KB W:2/2 W08 W09 WDB
+"12:01"	1 12:01_(1993_film) KB W:1/1 W08 W09 WDB Wx:3/3
+"12:01_PM"	1 12:01_PM KB W09 W08 WDB W:1/1
+"12:08 East of Bucharest"	1 12:08_East_of_Bucharest KB W:2/2 W08 W09 WDB
+"12:5" dei Pain of Salvation	1 12:5 KB W09 W08 WDB Wx:1/1
+"12:51"	1 12:51 KB W:2/2 W08 W09 WDB
+"12:51" is the first single from Room	1 12:51 KB W09 W08 WDB W:1/1
+"12_Bar_Club"	1 12_Bar_Club KB W09 W08 WDB W:1/1
+"12_Days_of_Terror"	1 12_Days_of_Terror KB W09 W08 WDB W:1/1
+"12_February_2007_Baghdad_bombings"	1 12_February_2007_Baghdad_bombings KB W09 W08 WDB W:1/1
+"12_Gold_Bars"	1 12_Gold_Bars KB W09 W08 WDB W:1/1
+"12_Gold_Bars_Vol._2"	1 12_Gold_Bars_Vol._2 KB W09 W08 WDB W:1/1
+"12_Golden_Country_Greats"	1 12_Golden_Country_Greats KB W09 W08 WDB W:1/1
+"12_Horas"	1 12_Horas KB W09 W08 WDB W:1/1
+"12_Inch_Collection"	1 12_Inch_Collection_(1999_Rick_Astley_album) KB D W09 W08 WDB NR RWB W:1/1
+"12_Inches_of_Snow"	1 12_Inches_of_Snow KB W09 W08 WDB W:1/1
+"12_Mechanised_Brigade"	1 12th_Mechanised_Brigade_(United_Kingdom) KB W09 W08 WDB RWB W:1/1
+"12_Monkeys"	1 Twelve_Monkeys KB RDB RWB W08 W09 Wx:3/3
+"12_Rods"	1 12_Rods KB W09 W08 WDB W:1/1
+"12_Rounds"	1 12_Rounds KB W09 W08 RDB W:1/1
+"12_Stones"	1 12_Stones KB W09 W08 WDB Wx:1/1
+"12_Super_Exitos"	1 12_Super_Exitos KB W09 W08 WDB W:1/1
+"12_Uhr_mittags"	1 High_Noon KB W08 W09 WDB Wx:2/2
+"12_oz._Mouse"	1 12_oz._Mouse KB W09 W08 WDB W:1/1
+"12e Régiment blindé du Canada"	1 12e_Régiment_blindé_du_Canada KB W09 W08 WDB W:1/1
+"12th Cavalry (Frontier Force)"	1 12th_Cavalry_(Frontier_Force) KB W09 W08 WDB W:1/1
+"12th Division (Imperial Japanese Army)"	1 12th_Division_(Imperial_Japanese_Army) KB W09 W08 WDB W:1/1
+"12th Grammy Awards - Wikipedia, the free encyclopedia"	1 Grammy_Awards_of_1970 KB W09 W08 WDB NR RWB w':1/1
+"12th Indian Division"	1 12th_Indian_Division KB W09 W08 WDB W:1/1
+"12th Mechanized Brigade (United Kingdom)"	1 12th_Mechanised_Brigade_(United_Kingdom) KB W09 W08 WDB RWB W:1/1
+"12th Mechanized Infantry Division (Greece)"	1 12th_Mechanized_Infantry_Division_(Greece) KB W09 W08 WDB W:1/1
+"12th SS Panzer Division Hitlerjugend"	1 12th_SS_Panzer_Division_Hitlerjugend KB W:2/2 W08 W09 WDB
+"12th Tony Awards"	1 12th_Tony_Awards KB W09 W08 WDB W:1/1
+"12th World Scout Jamboree"	1 12th_World_Scout_Jamboree KB W09 W08 WDB W:1/1
+"12th night"	1 Twelfth_Night KB W:5/5 W08 W09 WDB
+"12th_Illinois_Cavalry"	1 12th_Illinois_Cavalry KB W09 W08 WDB W:1/1
+"12th_Marine_Regiment_(United_States)"	1 12th_Marine_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"12th_South_Carolina_Infantry_Regiment"	1 12th_South_Carolina_Infantry_Regiment KB W09 W08 WDB NR RWB W:1/1
+"12–13th & Locust (PATCO station)"	1 12–13th_&_Locust_(PATCO_station) KB W09 W08 WDB W:1/1
+"13 & God (album)"	1 13_&_God_(album) KB W09 W08 WDB W:1/1
+"13 (Blur album)"	1 13_(Blur_album) KB W09 W08 WDB W:1/1
+"13 (Solace album)"	1 13_(Solace_album) KB W09 W08 WDB W:1/1
+"13 (musical)"	1 13_(musical) KB W09 W08 WDB W:1/1
+"13 Egeria"	1 13_Egeria KB W:2/2 W08 W09 WDB
+"13 Engines"	1 13_Engines KB W09 W08 WDB W:1/1
+"13 Field Squadron, Royal Australian Engineers"	1 13_Field_Squadron,_Royal_Australian_Engineers KB W09 W08 WDB W:1/1
+"13 Flavours Of Doom"	1 13_Flavours_of_Doom KB W09 W08 WDB W:1/1
+"13 Ghosts (1960 film)"	1 13_Ghosts KB W09 W08 WDB W:1/1
+"13 Ghosts - Wikipedia, the free encyclopedia"	1 13_Ghosts KB W:2/2 W08 W09 WDB
+"13 Ghosts"	1 13_Ghosts KB W:2/2 W08 W09 WDB
+"13 Going On 30"	1 13_Going_on_30 KB W:8/8 W08 W09 WDB
+"13 Going on 30 (album)"	1 13_Going_on_30_(album) KB W09 W08 WDB NR RWB W:1/1
+"13 Going on 30"	1 13_Going_on_30 KB W:6/6 W08 W09 WDB
+"13 May 2007 Makhmour bombing"	1 13_May_2007_Makhmour_bombing KB W09 W08 WDB W:1/1
+"13 Moons - Wikipedia, the free encyclopedia"	1 13_Moons KB W09 W08 WDB W:1/1
+"13 Moons"	1 13_Moons KB W09 W08 WDB W:1/1
+"13 Rue Madeleine - Wikipedia, the free encyclopedia"	1 13_Rue_Madeleine KB W:2/2 W08 W09 WDB
+"13 Songs"	1 13_Songs KB W:5/5 W08 W09 WDB
+"13 Tzameti	1 13_Tzameti KB W09 W08 WDB W:1/1
+"13 Tzameti - Wikipedia, the free encyclopedia"	1 13_Tzameti KB W09 W08 WDB W:1/1
+"13 Tzameti - Wikipédia"	1 13_Tzameti KB W09 W08 WDB Wx:1/1
+"13 Tzameti"	1 13_Tzameti KB W09 W08 WDB W:1/1
+"13 Years (Best Of)"	1 13_Years_(Best_Of) KB W:4/4 W08 W09 WDB
+"13 dar"	1 Thirteen_Days_(film) KB W09 W08 WDB W:1/1
+"13 fantômes - Wikipédia"	1 Thir13en_Ghosts KB W08 RWB R09 RDB Wx:1/1
+"13 going on 30"	1 13_Going_on_30 KB W09 W08 WDB W:1/1
+"13 musical wikipedia the encyclopedia"	1 13_(musical) KB W:2/2 W08 W09 WDB
+"13 район"	1 District_13 KB W08 W09 WDB Wx:3/3
+"13 駭人遊戲"	1 13_Beloved KB W09 W08 WDB Wx:1/1
+"13"	0.103448 13_(The_Doors_album) KB W:3/17 W08 W09 WDB
+"13&God"	1 13_&_God KB W08 W09 WDB Wx:3/3
+"13, rue Madeleine - Wikipédia"	1 13_Rue_Madeleine KB W09 W08 WDB Wx:1/1
+"13. Unterseebootsflottille"	1 13._Unterseebootsflottille KB NR RWB W:2/2 W08 W09 WDB
+"13. piętro"	1 The_Thirteenth_Floor KB W:2/2 W08 W09 WDB
+"13.2_mm_Rifle_Anti-Tank_(Mauser)"	1 13.2_mm_Rifle_Anti-Tank_(Mauser) KB W09 W08 WDB NR RWB W:1/1
+"13._US-Luftlandedivision"	1 13th_Airborne_Division_(United_States) KB W08 W09 WDB Wx:3/3
+"130 Elektra"	1 130_Elektra KB W09 W08 WDB W:1/1
+"130 mm towed field gun M1954 (M-46	1 130_mm_towed_field_gun_M1954_(M-46) KB W09 W08 WDB W:1/1
+"1300 Marcelle"	1 1300_Marcelle KB W09 W08 WDB W:1/1
+"1300_Lafayette_East_Cooperative"	1 1300_Lafayette_East_Cooperative KB W09 W08 WDB W:1/1
+"13049 Butov"	1 13049_Butov KB W09 W08 WDB W:1/1
+"1305 Pongola"	1 1305_Pongola KB W09 W08 WDB W:1/1
+"1306 Scythia"	1 1306_Scythia KB W09 W08 WDB W:1/1
+"1307 Cimmeria"	1 1307_Cimmeria KB W09 W08 WDB W:1/1
+"1308 Halleria"	1 1308_Halleria KB W09 W08 WDB W:1/1
+"1309 Hyperborea"	1 1309_Hyperborea KB W09 W08 WDB W:1/1
+"1310% Флай мега эпик маунт"	1 Mikoyan_MiG-35 KB W09 W08 WDB Wx:1/1
+"1312 Vassar"	1 1312_Vassar KB W09 W08 WDB W:1/1
+"1328 Devota"	1 1328_Devota KB W09 W08 WDB W:1/1
+"1331 Solvejg"	1 1331_Solvejg KB W09 W08 WDB W:1/1
+"1337"	0.03125 Elite_(video_game) KB W:2/61 W08 W09 WDB
+"1346 Gotha"	1 1346_Gotha KB W09 W08 WDB W:1/1
+"1349 (EP)"	1 1349_(EP) KB W09 W08 WDB W:1/1
+"1349 (band)"	1 1349_(band) KB W:3/3 W08 W09 WDB
+"1349_(Band)"	1 1349_(band) KB W09 W08 WDB Wx:1/1
+"134_Sophrosyne"	1 134_Sophrosyne KB W09 W08 WDB W:1/1
+"134th_Pennsylvania_Volunteer_Infantry"	1 134th_Pennsylvania_Infantry KB W09 W08 WDB W:1/1
+"1351 Uzbekistania"	1 1351_Uzbekistania KB W09 W08 WDB W:1/1
+"13562 Bobeggleton"	1 13562_Bobeggleton KB W09 W08 WDB W:1/1
+"13579 Allodd"	1 13579_Allodd KB W09 W08 WDB W:1/1
+"135_Hertha"	1 135_Hertha KB W09 W08 WDB W:1/1
+"135th Street (IND Eighth Avenue Line)"	1 135th_Street_(IND_Eighth_Avenue_Line) KB W09 W08 WDB W:1/1
+"1361 Leuschneria"	1 1361_Leuschneria KB W09 W08 WDB W:1/1
+"136199_Eris"	1 Eris_(dwarf_planet) KB W09 W08 WDB W:1/1
+"13668 Tanner"	1 13668_Tanner KB W09 W08 WDB W:1/1
+"136th airlift squadron wikipedia the encyclopedia"	1 136th_Airlift_Squadron KB W09 W08 WDB W:1/1
+"136th airlift wing wikipedia the encyclopedia"	1 136th_Airlift_Wing KB W09 W08 WDB W:1/1
+"137 Meliboea"	1 137_Meliboea KB W09 W08 WDB W:1/1
+"13777 Cielobuio"	1 13777_Cielobuio KB W09 W08 WDB W:1/1
+"1378 Leonce"	1 1378_Leonce KB W09 W08 WDB W:1/1
+"1379 Lomonosowa"	1 1379_Lomonosowa KB W09 W08 WDB W:1/1
+"137_Meliboea"	1 137_Meliboea KB W09 W08 WDB W:1/1
+"137th_Street-City_College_(IRT_Broadway-Seventh_Avenue_Line)"	1 137th_Street–City_College_(IRT_Broadway–Seventh_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"138 Tolosa"	1 138_Tolosa KB W09 W08 WDB W:1/1
+"1381 Danubia"	1 1381_Danubia KB W09 W08 WDB W:1/1
+"1384 Kniertje"	1 1384_Kniertje KB W09 W08 WDB W:1/1
+"1385 Gelria"	1 1385_Gelria KB W09 W08 WDB W:1/1
+"1387 Kama"	1 1387_Kama KB W09 W08 WDB W:1/1
+"138th Street – Grand Concourse (IRT Jerome Avenue Line	1 138th_Street–Grand_Concourse_(IRT_Jerome_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"138th Street-Grand Concourse (IRT Jerome Avenue Line	1 138th_Street–Grand_Concourse_(IRT_Jerome_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"138th_Street-Grand_Concourse_(IRT_Jerome_Avenue_Line)"	1 138th_Street–Grand_Concourse_(IRT_Jerome_Avenue_Line) KB W09 W08 WDB NR RWB W:1/1
+"1390 Abastumani"	1 1390_Abastumani KB W09 W08 WDB W:1/1
+"13923 Peterhof"	1 13923_Peterhof KB W09 W08 WDB W:1/1
+"1398 Donnera"	1 1398_Donnera KB W09 W08 WDB W:1/1
+"139_Juewa"	1 139_Juewa KB W09 W08 WDB W:1/1
+"13AD"	1 13AD KB W09 W08 WDB W:1/1
+"13B"	1 Mazda_Wankel_engine KB D W09 W08 WDB W:1/1
+"13_(Die_Ärzte)"	1 13_(Die_Ärzte_album) KB W08 W09 WDB Wx:2/2
+"13_Flavours_Of_Doom"	1 13_Flavours_of_Doom KB W09 W08 WDB W:1/1
+"13_Frightened_Souls"	1 13_Frightened_Souls KB W09 W08 WDB W:1/1
+"13_Ghosts_(1960_film)"	1 13_Ghosts KB W09 W08 WDB W:1/1
+"13_Going_on_30"	1 13_Going_on_30 KB W09 W08 WDB W:1/1
+"13_Hedgehogs"	1 13_Hedgehogs KB W09 W08 WDB NR RWB W:1/1
+"13_RDP"	1 13th_Parachute_Dragoon_Regiment KB W09 W08 WDB W:1/1
+"13_Stairway_-_The_Children_of_the_Night"	1 13_Stairway_-_The_Children_of_the_Night KB W09 W08 WDB NR RWB W:1/1
+"13_Ways_to_Bleed_on_Stage"	1 13_Ways_to_Bleed_on_Stage KB D W09 W08 WDB W:1/1
+"13th (Western) Division"	1 13th_(Western)_Division KB W09 W08 WDB W:1/1
+"13th Air Force."	1 Thirteenth_Air_Force KB W09 W08 WDB W:1/1
+"13th Airlift Squadron"	1 13th_Airlift_Squadron KB W09 W08 WDB W:1/1
+"13th Floor Elevators"	1 13th_Floor_Elevators KB W09 W08 WDB W:1/1
+"13th Infantry Regiment (United States)"	1 13th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"13th Planet Records"	1 13th_Planet_Records KB W09 W08 WDB W:1/1
+"13th Star"	1 13th_Star KB W09 W08 WDB W:1/1
+"13th World Scout Jamboree"	1 13th_World_Scout_Jamboree KB W09 W08 WDB W:1/1
+"13th_(Western)_Division"	1 13th_(Western)_Division KB W09 W08 WDB W:1/1
+"13th_Bomb_Squadron"	1 13th_Bomb_Squadron KB W09 W08 WDB W:1/1
+"13th_Division_(German_Empire)"	1 13th_Division_(German_Empire) KB W09 W08 WDB W:1/1
+"13th_Field_Battery,_Royal_Australian_Artillery"	1 13th_Field_Battery,_Royal_Australian_Artillery KB W09 W08 WDB W:1/1
+"13th_Floor_Elevators"	1 13th_Floor_Elevators KB W08 W09 WDB Wx:2/2
+"13th_Parachute_Dragoon_Regiment"	1 13th_Parachute_Dragoon_Regiment KB W:2/2 W08 W09 WDB
+"13th_Pennsylvania_Regiment"	1 13th_Pennsylvania_Regiment KB W09 W08 WDB W:1/1
+"13th_Planet_Records"	1 13th_Planet_Records KB W09 W08 WDB W:1/1
+"13th_Scroll"	1 13th_Scroll KB W08 NR RWB R09 RDB W:1/1
+"13th_Street"	1 13th_Street KB W08 W09 WDB Wx:4/4
+"14 Carrot Rabbit - Wikipedia, the free encyclopedia"	1 14_Carrot_Rabbit KB W09 W08 WDB W:1/1
+"14 Carrot Rabbit - Wikipédia"	1 14_Carrot_Rabbit KB W09 W08 WDB Wx:1/1
+"14 Hits"	1 14_Hits KB W:1/1 W08 W09 WDB w:1/1
+"14 Iced Bears"	1 14_Iced_Bears KB W09 W08 WDB W:1/1
+"14 Irene"	1 14_Irene KB W09 W08 WDB W:1/1
+"14 Klassiker"	1 14_Klassiker KB W09 W08 WDB W:1/1
+"14 Message: Every Ballad Songs 2"	1 14_message_~every_ballad_songs_2~ KB W09 W08 WDB NR RWB W:1/1
+"14 September 2004 Baghdad bombing"	1 14_September_2004_Baghdad_bombing KB W09 W08 WDB W:1/1
+"14 September 2005 Baghdad bombings"	1 14_September_2005_Baghdad_bombings KB W09 W08 WDB W:1/1
+"14 Shades of Grey"	1 14_Shades_of_Grey KB W:2/2 W08 W09 WDB
+"14 Shots to the Dome"	1 14_Shots_to_the_Dome KB W09 W08 WDB W:1/1
+"14 irene wikipedia the encyclopedia"	1 14_Irene KB W09 W08 WDB W:1/1
+"14, rue de Galais - Wikipedia, the free encyclopedia	1 14,_rue_de_Galais KB W:2/2 W08 W09 WDB
+"14, rue de Galais - Wikipédia"	1 14,_rue_de_Galais KB W09 W08 WDB Wx:1/1
+"14.5 x 114 mm"	1 14.5x114mm KB W09 W08 WDB NR RWB W:1/1
+"14.5x114mm"	1 14.5x114mm KB W09 W08 WDB NR RWB W:1/1
+"14.5×114mm"	1 14.5x114mm KB W09 W08 WDB NR RWB W:1/1
+"1400 Smith Street"	1 1400_Smith_Street KB W09 W08 WDB W:1/1
+"1402 Eri"	1 1402_Eri KB W09 W08 WDB W:1/1
+"1403 Idelsonia"	1 1403_Idelsonia KB W09 W08 WDB W:1/1
+"1404 Ajax"	1 1404_Ajax KB W09 W08 WDB W:1/1
+"1408 (film)"	1 1408_(film) KB W09 W08 WDB W:1/1
+"1408 (short story)"	1 1408_(short_story) KB W:2/2 W08 W09 WDB
+"1408"	0.223404 1408_(film) KB W:5/73 W08 W09 WDB Wx:16/19
+"1408"	0.0531915 1408_(short_story) KB W:3/73 W08 W09 WDB w:1/1 w':1/1
+"1408" - Mikael Håfström	1 1408_(film) KB W08 W09 WDB Wx:103/103
+"1408,"	1 1408_(short_story) KB W:2/2 W08 W09 WDB
+"141 Lumen"	1 141_Lumen KB W09 W08 WDB W:1/1
+"14100 Weierstrass"	1 14100_Weierstrass KB W09 W08 WDB W:1/1
+"1411 Fourth Avenue Building"	1 1411_Fourth_Avenue_Building KB W09 W08 WDB W:1/1
+"14120 Espenak"	1 14120_Espenak KB W09 W08 WDB W:1/1
+"14145 Sciam"	1 14145_Sciam KB W09 W08 WDB W:1/1
+"1419 Danzig"	1 1419_Danzig KB W09 W08 WDB W:1/1
+"141st_Signal_Battalion"	1 141st_Signal_Battalion_(United_States) KB W09 W08 WDB W:1/1
+"142 Polana"	1 142_Polana KB W09 W08 WDB W:1/1
+"1421 hypothesis"	1 Gavin_Menzies KB W:3/3 W08 W09 WDB
+"1421: The Year China Discovered the World"	1 Gavin_Menzies KB W:2/2 W08 W09 WDB
+"1421:_The_Year_China_Discovered_the_World"	1 Gavin_Menzies KB W09 W08 WDB W:1/1
+"1426 Riviera"	1 1426_Riviera KB W09 W08 WDB W:1/1
+"1426713 personnel are currently on active duty"	1 Military_of_the_United_States D KB NR R09 RDB RWB W:5/5 W08
+"142_Polana"	1 142_Polana KB W09 W08 WDB W:1/1
+"142nd_Pennsylvania_Volunteer_Infantry"	1 142nd_Pennsylvania_Infantry KB W09 W08 WDB W:1/1
+"143 Records"	1 143_Records KB W:5/5 W08 W09 WDB
+"14310 Shuttleworth"	1 14310_Shuttleworth KB W09 W08 WDB W:1/1
+"14312 Polytech"	1 14312_Polytech KB W09 W08 WDB W:1/1
+"14313 Dodaira"	1 14313_Dodaira KB W09 W08 WDB W:1/1
+"1433 Geramtina"	1 1433_Geramtina KB W09 W08 WDB W:1/1
+"1434 Margot"	1 1434_Margot KB W09 W08 WDB W:1/1
+"1435 Garlena"	1 1435_Garlena KB W09 W08 WDB W:1/1
+"1439 Alice Street"	1 Lakeside_Apartments_District,_Oakland,_California KB W09 W08 WDB w:1/1
+"143_Adria"	1 143_Adria KB W09 W08 WDB W:1/1
+"1441 Bolyai"	1 1441_Bolyai KB W09 W08 WDB W:1/1
+"1449AM URB"	1 1449AM_URB KB W09 W08 WDB W:1/1
+"1449AM_URB"	1 1449AM_URB KB W09 W08 WDB W:1/1
+"144_Vibilia"	1 144_Vibilia KB W09 W08 WDB W:1/1
+"145_Adeona"	1 145_Adeona KB W09 W08 WDB W:1/1
+"145_Squadron,_Republic_of_Singapore_Air_Force"	1 145_Squadron,_Republic_of_Singapore_Air_Force KB W09 W08 WDB W:1/1
+"145th Street (IND Eighth Avenue Line)"	1 145th_Street_(IND_Eighth_Avenue_Line) KB W09 W08 WDB W:1/1
+"145th Street Bridge"	1 145th_Street_Bridge KB W:2/2 W08 W09 WDB
+"145th_Street_(IND_Eighth_Avenue_Line)"	1 145th_Street_(IND_Eighth_Avenue_Line) KB W09 W08 WDB W:1/1
+"146 Lucina"	1 146_Lucina KB W09 W08 WDB W:1/1
+"146_Lucina"	1 146_Lucina KB W09 W08 WDB W:1/1
+"1475 Yalta"	1 1475_Yalta KB W09 W08 WDB W:1/1
+"14789 GAISH"	1 14789_GAISH KB W09 W08 WDB W:1/1
+"14790 Beletskij"	1 14790_Beletskij KB W09 W08 WDB W:1/1
+"147_Protogeneia"	1 147_Protogeneia KB W09 W08 WDB W:1/1
+"14814 Gurij"	1 14814_Gurij KB W09 W08 WDB W:1/1
+"14815 Rutberg"	1 14815_Rutberg KB W09 W08 WDB W:1/1
+"14827 Hypnos"	1 14827_Hypnos KB W09 W08 WDB W:1/1
+"1483 Hakoila"	1 1483_Hakoila KB W09 W08 WDB W:1/1
+"1484 Postrema"	1 1484_Postrema KB W09 W08 WDB W:1/1
+"1485 Isa"	1 1485_Isa KB W09 W08 WDB W:1/1
+"1488 Aura"	1 1488_Aura KB W09 W08 WDB W:1/1
+"1491"	0.586957 1491:_New_Revelations_of_the_Americas_Before_Columbus KB W:81/138 W08 W09 WDB
+"1491: New Revelations of the Americas Before Columbus	1 1491:_New_Revelations_of_the_Americas_Before_Columbus KB W09 W08 WDB W:1/1
+"1492 : Christophe Colomb	1 1492:_Conquest_of_Paradise KB W09 W08 WDB Wx:1/1
+"1492 : Christophe Colomb - Wikipédia"	1 1492:_Conquest_of_Paradise KB W09 W08 WDB Wx:1/1
+"1492 conquest of paradise album wikipedia the "	1 1492:_Conquest_of_Paradise_(album) KB W:2/2 W08 W09 WDB
+"1492 conquest of paradise wikipedia the encyclopedia"	1 1492:_Conquest_of_Paradise KB W09 W08 WDB W:1/1
+"1492 – Die Eroberung des Paradieses"	1 1492:_Conquest_of_Paradise KB W08 W09 WDB Wx:5/5
+"1492" (song)	1 1492_(song) KB W09 W08 WDB w':1/1
+"1492: Conquest of Paradise"	1 1492:_Conquest_of_Paradise KB W:9/9 W08 W09 WDB
+"1492: La conquista del paraíso"	1 1492:_Conquest_of_Paradise KB W08 W09 WDB Wx:2/2
+"1492:_Conquest_of_Paradise"	1 1492:_Conquest_of_Paradise KB W09 W08 WDB W:1/1
+"1492_-_Die_Eroberung_des_Paradieses"	1 1492:_Conquest_of_Paradise KB W08 W09 WDB Wx:3/3
+"1492_–_Die_Eroberung_des_Paradieses"	1 1492:_Conquest_of_Paradise KB W08 W09 WDB Wx:4/4
+"1493 Sigrid"	1 1493_Sigrid KB W09 W08 WDB W:1/1
+"14965 Bonk"	1 14965_Bonk KB W09 W08 WDB W:1/1
+"1498 Lahti"	1 1498_Lahti KB W09 W08 WDB W:1/1
+"1499 Pori"	1 1499_Pori KB W09 W08 WDB W:1/1
+"149_Medusa"	1 149_Medusa KB W09 W08 WDB W:1/1
+"149th Street Tunnel"	1 149th_Street_Tunnel KB W09 W08 WDB W:1/1
+"149th_Fighter_Wing"	1 149th_Fighter_Wing KB W09 W08 WDB W:1/1
+"14:59"	1 14:59 KB W09 W08 WDB W:1/1
+"14:59" at Wikipedia	1 Sugar_Ray KB W09 W08 WDB W:1/1
+"14WE"	1 14WE KB W09 W08 W:1/1
+"14_Bis"	1 Santos-Dumont_14-bis KB W09 W08 WDB W:1/1
+"14_Carrot_Rabbit"	1 14_Carrot_Rabbit KB W09 W08 WDB W:1/1
+"14_Iced_Bears"	1 14_Iced_Bears KB W09 W08 WDB W:1/1
+"14_Nothelfer"	1 Fourteen_Holy_Helpers KB W08 W09 WDB Wx:4/4
+"14_September_2005_Baghdad_bombing"	1 14_September_2005_Baghdad_bombings KB W09 W08 WDB W:1/1
+"14_Shades_of_Grey"	1 14_Shades_of_Grey KB W09 W08 WDB W:1/1
+"14_Shots_to_the_Dome"	1 14_Shots_to_the_Dome KB W09 W08 WDB W:1/1
+"14_Weeks_of_Silence"	1 14_Weeks_of_Silence KB W:2/2 W08 W09 WDB
+"14_message_~every_ballad_songs_2~"	1 14_message_~every_ballad_songs_2~ KB W09 W08 WDB NR RWB W:1/1
+"14_year-old_Mother"	1 14-sai_no_Haha:_Aisuru_tame_ni_Umaretekita KB W09 W08 W:1/1
+"14dDawaiLama"	1 Tenzin_Gyatso,_14th_Dalai_Lama KB W08 NR RWB R09 RDB W:1/1
+"14th Armored Division (United States)"	1 14th_Armored_Division_(United_States) KB W09 W08 WDB W:1/1
+"14th Division (Imperial Japanese Army)"	1 14th_Division_(Imperial_Japanese_Army) KB W09 W08 WDB W:1/1
+"14th Prince of Wales's Own Scinde Horse"	1 14th_Prince_of_Wales's_Own_Scinde_Horse KB W09 W08 WDB W:1/1
+"14th Punjab Regiment"	1 14th_Punjab_Regiment KB W09 W08 WDB W:1/1
+"14th Street (Manhattan)"	1 14th_Street_(Manhattan) KB W09 W08 WDB W:1/1
+"14th Street Northwest and Southwest (Washington, D.C.)"	1 14th_Street_Northwest_and_Southwest_(Washington,_D.C.) KB W09 W08 WDB W:1/1
+"14th Street Tunnel"	1 14th_Street_Tunnel KB W09 W08 WDB W:1/1
+"14th Tony Awards"	1 14th_Tony_Awards KB W09 W08 WDB W:1/1
+"14th dalai lama wikipedia the encyclopedia"	1 Tenzin_Gyatso,_14th_Dalai_Lama KB NR R09 RDB RWB W:2/2 W08
+"14th" grades at Meridian High School, Meridian Community	1 Meridian_Community_College KB W:29/29 W08 W09 WDB
+"14thDalaiLama"	1 Tenzin_Gyatso,_14th_Dalai_Lama KB NR R09 RDB RWB W:15/15 W08 w':1/1
+"14th_Connecticut_Infantry"	1 14th_Connecticut_Infantry KB W09 W08 WDB W:1/1
+"14th_Continental_Regiment"	1 14th_Continental_Regiment KB W09 W08 WDB W:1/1
+"14th_Flying_Training_Wing"	1 14th_Flying_Training_Wing KB W09 W08 WDB W:1/1
+"14th_Indiana_Infantry_Regiment"	1 14th_Indiana_Infantry_Regiment KB W09 W08 WDB W:1/1
+"14th_New_Hampshire_Volunteer_Regiment"	1 14th_New_Hampshire_Volunteer_Regiment KB W09 W08 WDB NR RWB W:1/1
+"14th_Street_Theater"	1 14th_Street_Theater KB W09 W08 WDB NR RWB W:1/1
+"14th_Street_Tunnel"	1 14th_Street_Tunnel KB W09 W08 WDB W:1/1
+"15 (disambiguation)"	1 15_(album) D KB NR RWB W:2/2 W08 W09 WDB
+"15 (film) - Wikipedia, the free encyclopedia"	1 15_(film) KB W09 W08 WDB W:1/1
+"15 Again"	1 15_Again KB W09 W08 WDB W:1/1
+"15 Años"	1 15_Años KB W09 W08 WDB W:1/1
+"15 Eunomia"	1 15_Eunomia KB W09 W08 WDB W:1/1
+"15 Exitos"	1 15_Exitos KB W09 W08 WDB W:1/1
+"15 July 2008 Baquba bombings"	1 15_July_2008_Baquba_bombings KB W09 W08 WDB W:1/1
+"15 Maiden Lane"	1 15_Maiden_Lane KB W09 W08 WDB W:1/1
+"15 Minuten"	1 15_Minutes KB W09 W08 WDB Wx:1/1
+"15 Minutes"	1 15_Minutes KB W:5/5 W08 W09 WDB
+"15 Park Avenue - Wikipedia, the free encyclopedia"	1 15,_Park_Avenue KB W08 RWB R09 RDB W:1/1
+"15 Park Avenue"	1 15,_Park_Avenue KB W08 RWB R09 RDB W:1/1
+"15 September 2008 Balad Ruz bombing"	1 15_September_2008_Balad_Ruz_bombing KB W09 W08 WDB W:1/1
+"15 bis 11-jährig"	1 McDonnell_Douglas_MD-90 KB W08 W09 WDB Wx:3/3
+"15 cm sFH 18"	1 15_cm_sFH_18 KB W09 W08 WDB W:1/1
+"15 février 1839 - Wikipédia"	1 February_15,_1839 KB W09 W08 WDB Wx:1/1
+"15 minutes of fame"	0.0538462 Andy_Warhol KB W08 W09 WDB Wx:7/7
+"15 pieces of flair"	1 Office_Space KB W:4/4 W08 W09 WDB
+"15 דקות של תהילה"	1 Andy_Warhol KB W:7/7 W08 W09 WDB
+"15, Park Avenue"	1 15,_Park_Avenue KB W08 RWB R09 RDB W:1/1
+"15-2, 15-4 and a pair is	1 Cribbage KB W:2/2 W08 W09 WDB
+"150 California Street"	1 150_California_Street KB W09 W08 WDB W:1/1
+"150 Greenwich Street"	1 150_Greenwich_Street KB W09 W08 WDB NR RWB W:1/1
+"150-160"	1 Kim_Jong-il D KB W:2/2 W08 W09 WDB
+"1500 Louisiana Street"	1 1500_Louisiana_Street KB W09 W08 WDB W:1/1
+"15000_CCD"	1 15000_CCD KB W09 W08 WDB W:1/1
+"15017_Cuppy"	1 15017_Cuppy KB W09 W08 WDB W:1/1
+"1501_McGill_College"	1 1501_McGill_College KB W09 W08 WDB W:1/1
+"1503_A.D.:_The_New_World"	1 Anno_1503 KB W09 W08 WDB W:1/1
+"1505 Koranna"	1 1505_Koranna KB W09 W08 WDB W:1/1
+"1508 Kemi"	1 1508_Kemi KB W09 W08 WDB W:1/1
+"150_West_Jefferson"	1 150_West_Jefferson KB W:2/2 W08 W09 WDB
+"1512 Oulu"	1 1512_Oulu KB W09 W08 WDB W:1/1
+"1515 Marignan"	1 Battle_of_Marignano KB W09 W08 WDB Wx:1/1
+"151st_Air_Refueling_Wing"	1 151st_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"151st_Infantry_Brigade"	1 151st_Infantry_Brigade_(United_Kingdom) KB W09 W08 WDB W:1/1
+"152 mm gun 2A36"	1 152_mm_gun_2A36 KB W09 W08 WDB W:1/1
+"152 mm howitzer M1938 (M-10)"	1 152_mm_howitzer_M1938_(M-10) KB W09 W08 WDB W:1/1
+"152 mm howitzer M1943 (D-1)"	1 152_mm_howitzer_M1943_(D-1) KB W09 W08 WDB W:1/1
+"152 prisoners, more than under any other governor	1 George_W._Bush KB W:2/2 W08 W09 WDB
+"152-mm gun-howitzer M1937 (ML-20)"	1 152_mm_howitzer-gun_M1937_(ML-20) KB W:4/4 W08 W09 WDB
+"152-mm_howitzer_M1938_(M-10)"	1 152_mm_howitzer_M1938_(M-10) KB W09 W08 WDB W:1/1
+"152-mm_howitzer_M1943_(D-1)"	1 152_mm_howitzer_M1943_(D-1) KB W09 W08 WDB W:1/1
+"152-мм гаубица-пушка обр. 1937 года (МЛ	1 152_mm_howitzer-gun_M1937_(ML-20) KB W09 W08 WDB Wx:1/1
+"1527_Malmquista"	1 1527_Malmquista KB W09 W08 WDB W:1/1
+"1529_Oterma"	1 1529_Oterma KB W09 W08 WDB W:1/1
+"152d_Air_Operations_Group"	1 152d_Air_Operations_Group KB W09 W08 WDB W:1/1
+"152nd Infantry Brigade (United Kingdom)"	1 152nd_Infantry_Brigade_(United_Kingdom) KB W09 W08 WDB W:1/1
+"154 (album)"	1 154_(album) KB W09 W08 WDB W:1/1
+"15466 Barlow"	1 15466_Barlow KB W09 W08 WDB W:1/1
+"1548 Forth 2"	1 1548_Forth_2 KB W:3/3 W08 W09 WDB
+"1548_Forth_2"	1 1548_Forth_2 KB W09 W08 WDB W:1/1
+"155 GH 52 APU"	1 155_GH_52_APU KB W:2/2 W08 W09 WDB
+"1551 Argelander"	1 1551_Argelander KB W09 W08 WDB W:1/1
+"15559 Abigailhines"	1 15559_Abigailhines KB W09 W08 WDB W:1/1
+"1555_Dejan"	1 1555_Dejan KB W09 W08 WDB W:1/1
+"1555_Poydras"	1 1555_Poydras KB W09 W08 WDB W:1/1
+"15569 Feinberg"	1 15569_Feinberg KB W09 W08 WDB W:1/1
+"1559 painting Netherlandish Proverbs by Pieter Bruegel the	1 Fleet_Foxes_(album) KB W:4/4 W08 W09 WDB
+"155th Air Refueling Wing"	1 155th_Air_Refueling_Wing KB W09 W08 WDB W:1/1
+"155th Infantry Regiment (United States)"	1 Mississippi_Rifles KB W09 W08 WDB RWB W:1/1
+"15614 Pillinger"	1 15614_Pillinger KB W09 W08 WDB W:1/1
+"1566 Icarus"	1 1566_Icarus KB W:7/7 W08 W09 WDB
+"1567 Alikoski"	1 1567_Alikoski KB W09 W08 WDB W:1/1
+"156th Infantry Regiment (United States)"	1 156th_Infantry_Regiment_(United_States) KB W09 W08 WDB W:1/1
+"1570 Brunonia"	1 1570_Brunonia KB W09 W08 WDB W:1/1
+"1571 Cesco"	1 1571_Cesco KB W09 W08 WDB W:1/1
+"1572 Posnania"	1 1572_Posnania KB W09 W08 WDB W:1/1
+"157th Infantry Brigade (United States) - Wikipedia, the free	1 157th_Infantry_Brigade_(United_States) KB W:7/7 W08 W09 WDB
+"157th Maneuver Enhancement Brigade"	1 157th_Maneuver_Enhancement_Brigade KB W09 W08 WDB W:1/1
+"15846 Billfyfe"	1 15846_Billfyfe KB W09 W08 WDB W:1/1
+"159 Aemilia"	1 159_Aemilia KB W09 W08 WDB W:1/1
+"1590 Tsiolkovskaja"	1 1590_Tsiolkovskaja KB W09 W08 WDB W:1/1
+"1595 Tanga"	1 1595_Tanga KB W09 W08 WDB W:1/1
+"1599 Giomus"	1 1599_Giomus KB W09 W08 WDB W:1/1
+"15_Big_Ones"	1 15_Big_Ones KB W08 W09 WDB Wx:3/3
+"15_Global_Challenges"	1 State_of_the_Future KB W09 W08 WDB W:1/1
+"15_Maiden_Lane"	1 15_Maiden_Lane KB W09 W08 WDB W:1/1
+"15_Minute_Musical"	1 15_Minute_Musical KB W09 W08 WDB W:1/1
+"15_Park_Avenue"	1 15,_Park_Avenue KB W08 RWB R09 RDB W:1/1
+"15_Psychological_Operations_Group"	1 Defence_Intelligence_and_Security_Centre KB W09 W08 WDB W:1/1
+"15_Storeys_High"	1 15_Storeys_High KB W09 W08 WDB W:1/1
+"15_Westferry_Circus"	1 15_Westferry_Circus KB W09 W08 WDB W:1/1
+"15_Years_After"	1 15_Years_After KB W09 W08 WDB W:1/1
+"15_cm_sFH_18"	1 15_cm_sFH_18 KB W09 W08 WDB W:1/1
+"15th (Scottish) Infantry Division"	1 15th_(Scottish)_Infantry_Division KB W09 W08 WDB W:1/1
+"15th Academy Awards"	1 15th_Academy_Awards KB W09 W08 WDB W:1/1
+"15th Air Transport Wing"	1 15th_Air_Transport_Wing KB W09 W08 WDB W:1/1
+"15th Division (Imperial Japanese Army)"	1 15th_Division_(Imperial_Japanese_Army) KB W09 W08 WDB W:1/1
+"15th Hong Kong Film Awards"	1 15th_Hong_Kong_Film_Awards KB W09 W08 WDB W:1/1
+"15th Infantry Regiment (United States) - Wikipedia, the free	1 15th_Infantry_Regiment_(United_States) KB W:2/2 W08 W09 WDB
+"15th Marine Expeditionary Unit"	1 15th_Marine_Expeditionary_Unit KB W09 W08 WDB W:1/1
+"15th Operational Weather Squadron"	1 15th_Operational_Weather_Squadron KB W09 W08 WDB W:1/1
+"15th Sustainment Brigade"	1 15th_Sustainment_Brigade_(United_States) KB W09 W08 WDB RWB W:1/1
+"15th Tony Awards"	1 15th_Tony_Awards KB W09 W08 WDB W:1/1
+"15th Wisconsin Volunteer Regiment"	1 15th_Wisconsin_Volunteer_Regiment KB W09 W08 WDB W:1/1
+"15th_(Scottish)_Division"	1 15th_(Scottish)_Infantry_Division KB W09 W08 WDB W:1/1
+"15th_Airborne_Corps"	1 15th_Airborne_Corps KB W09 W08 WDB W:1/1
+"15th_Army_Group"	1 15th_Army_Group KB W09 W08 WDB W:1/1
+"15th_Continental_Regiment"	1 15th_Continental_Regiment KB W09 W08 WDB W:1/1
+"15th_Division_(Imperial_Japanese_Army)"	1 15th_Division_(Imperial_Japanese_Army) KB W09 W08 WDB W:1/1
+"15th_Field_Artillery_Regiment,_RCA"	1 15th_Field_Regiment,_Royal_Canadian_Artillery KB W09 W08 WDB W:1/1
+"15th_Northern_River_Lancers"	1 15th_Northern_River_Lancers KB W09 W08 WDB W:1/1
+"15th_Pennsylvania_Volunteer_Cavalry"	1 15th_Pennsylvania_Cavalry KB W09 W08 WDB W:1/1
+"15th_Street-Prospect_Park_(IND_Culver_Line)"	1 15th_Street–Prospect_Park_(IND_Culver_Line) KB W09 W08 WDB NR RWB W:1/1
+"15th_The_King's_Hussars"	1 15th_The_King's_Hussars KB W09 W08 WDB W:1/1
+"15th_Wisconsin_Volunteer_Regiment"	1 15th_Wisconsin_Volunteer_Regiment KB W:2/2 W08 W09 WDB
+"15–16th & Locust (PATCO station)"	1 15–16th_&_Locust_(PATCO_station) KB W09 W08 WDB W:1/1
+"16 Air Assault Brigade"	1 16th_Air_Assault_Brigade_(United_Kingdom) KB W09 W08 RWB RDB W:1/1
+"16 Alpini Regiment"	1 16_Alpini_Regiment KB W09 W08 WDB NR RWB W:1/1
+"16 April 2001: First 3G voice call on	1 Vodafone KB W:2/2 W08 W09 WDB l
+"16 Blocks"	1 16_Blocks KB W:2/2 W08 W09 WDB
+"16 Blocks" bei Wikipedia	1 16_Blocks KB W08 W09 WDB Wx:2/2
+"16 Candles"	1 Sixteen_Candles KB W:2/2 W08 W09 WDB
+"16 Days"	1 Laadam KB W:4/4 W08 W09 WDB c r t
+"16 December (film)"	1 16_December_(film) KB W09 W08 WDB W:1/1
+"16 Horsepower"	1 16_Horsepower KB W09 W08 WDB W:1/1
+"16 Lovers Lane"	1 16_Lovers_Lane KB W:2/2 W08 W09 WDB
+"16 Magazine"	1 16_Magazine KB W09 W08 WDB W:1/1
+"16 Military Wives"	1 16_Military_Wives KB W09 W08 WDB RWB W:1/1
+"16 Psyche"	1 16_Psyche KB W:2/2 W08 W09 WDB
+"16 Years of Alcohol"	1 16_Years_of_Alcohol KB W09 W08 WDB W:1/1
+"16 days"	0 Laadam KB W08 W09 WDB c t
+"16 magazine"	1 16_Magazine KB W09 W08 WDB W:1/1
+"16._Jahrhundert"	1 16th_century KB W09 W08 WDB CHRON:CENTURY Wx:1/1
+"160 Una"	1 160_Una KB W:3/3 W08 W09 WDB
+"1600 Candles"	1 1600_Candles KB W09 W08 WDB W:1/1
+"1600 Pennsylvania Avenue (musical)"	1 1600_Pennsylvania_Avenue_(musical) KB W:2/2 W08 W09 WDB
+"1600_Pacific_Tower"	1 1600_Pacific_Tower KB W09 W08 WDB W:1/1
+"1600_Pennsylvania_Avenue_(musical)"	1 1600_Pennsylvania_Avenue_(musical) KB W09 W08 WDB W:1/1
+"1601 Patry"	1 1601_Patry KB W09 W08 WDB W:1/1
+"1602"	1 Marvel_1602 KB W:11/11 W08 W09 WDB
+"1602",	1 Marvel_1602 KB W08 W09 WDB Wx:13/13
+"1603 Neva"	1 1603_Neva KB W09 W08 WDB W:1/1
+"1606 Jekhovsky"	1 1606_Jekhovsky KB W09 W08 WDB W:1/1
+"1607 Mavis"	1 1607_Mavis KB W09 W08 WDB W:1/1
+"1609 Brenda"	1 1609_Brenda KB W09 W08 WDB W:1/1
+"160_(Wales)_Brigade"	1 160th_(Wales)_Brigade KB W09 W08 WDB W:1/1
+"160_Una"	1 160_Una KB W09 W08 WDB W:1/1
+"160mm Mortar M1943"	1 160mm_Mortar_M1943 KB W09 W08 WDB W:1/1
+"160mm_Mortar_M1943"	1 160mm_Mortar_M1943 KB W09 W08 WDB W:1/1
+"160th (Wales) Brigade"	1 160th_(Wales)_Brigade KB W09 W08 WDB W:1/1
+"160th_SOAR"	1 160th_Special_Operations_Aviation_Regiment_(United_States) KB RWB W08 W09 WDB Wx:2/2
+"160th_Special_Operations_Aviation_Regiment"	1 160th_Special_Operations_Aviation_Regiment_(United_States) KB W09 W08 WDB RWB W:1/1
+"160th_Special_Operations_Aviation_Regiment_(Airborne)"	1 160th_Special_Operations_Aviation_Regiment_(United_States) KB RWB W08 W09 WDB Wx:4/4
+"1610 Mirnaya"	1 1610_Mirnaya KB W09 W08 WDB W:1/1
+"1611 Beyer"	1 1611_Beyer KB W09 W08 WDB W:1/1
+"16174 Parihar"	1 16174_Parihar KB W09 W08 WDB W:1/1
+"16197 Bluepeter"	1 16197_Bluepeter KB W09 W08 WDB W:1/1
+"161st Street – Yankee Stadium (New York City Subway	1 161st_Street–Yankee_Stadium_(New_York_City_Subway) KB W09 W08 WDB NR RWB W:1/1
+"1620 Geographos"	1 1620_Geographos KB W09 W08 WDB W:1/1
+"1620_Geographos"	1 1620_Geographos KB W09 W08 WDB W:1/1
+"1621 Druzhba"	1 1621_Druzhba KB W09 W08 WDB W:1/1
+!Qué bello es vivir!	1 It's_a_Wonderful_Life KB W:2/2 W08 W09 WDB
+!R35	1 IR35 W09 W08 WDB W:1/1
+!RKO!	1 Randy_Orton KB W:200/200 W08 W09 WDB l
+!RSQ!: Audi RSQ 2005 Audi RS 6 - I	1 Audi_S_and_RS_models W09 W08 WDB W:1/1
+!Runescape Gold--rs gold--cheap RS coins--cheap	1 Rupee W09 W08 WDB W:1/1
+!SPOILER!	1 Spoiler_(media) W08 W09 WDB Wx:7/7
+!San Blás¡	1 Saint_Blaise KB W08 W09 WDB Wx:2/2
+!Semantik	1 Semantics W08 W09 WDB Wx:9/9
+!Show Biz Grande Explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c r t
+!Show_Biz_Grande_Explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!Showbiz Grande Explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c r t
+!Showbiz_Grande_Explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!Snap	1 Snap! KB W09 W08 WDB W:1/1
+!So Far, So Good... So What	1 So_Far,_So_Good..._So_What! KB W:3/3 W08 W09 WDB
+!Solid	1 Kesha D W:4/4 W08 W09 WDB l
+!Space	1 Space D W08 W09 WDB c t w:1/1
+!Spacewar	1 Spacewar! KB W:4/4 W08 W09 WDB
+!Spoiler Alert!	1 Black_Book_(film) KB W:4/4 W08 W09 WDB
+!Squirrel Nest	1 Odyssey_(Magic:_The_Gathering) KB W:3/3 W08 W09 WDB
+!Super Taranta	1 Super_Taranta! KB W:4/4 W08 W09 WDB
+!Swiss Air Flight 111	1 Swissair_Flight_111 KB W:7/7 W08 W09 WDB
+!T	1 IT_(disambiguation) D RWB W:1/1
+!T O O H !	0 !T.O.O.H.! KB W08 W09 WDB c r t
+!T. O. O. H. !	0 !T.O.O.H.! KB W08 W09 WDB c r t
+!T.O.O.H	1 !T.O.O.H.! KB W:4/4 W08 W09 WDB
+!T.O.O.H!	1 !T.O.O.H.! KB W:5/5 W08 W09 WDB c r t w:2/2 w':1/1
+!T.O.O.H.!	1 !T.O.O.H.! KB W:109/109 W08 W09 WDB Wx:27/27 c t w:6/6 w':7/7 x
+!T.O.O.H.! - Wikipedia, the free encyclopedia	1 !T.O.O.H.! KB W:37/37 W08 W09 WDB
+!T.O.O.H.! |	1 !T.O.O.H.! KB W:8/8 W08 W09 WDB
+!T.O.O.H.! — Википедия	1 !T.O.O.H.! KB W09 W08 WDB Wx:1/1
+!T.O.O.H.!についてのWikipedia記事	1 !T.O.O.H.! KB W09 W08 WDB W:1/1
+!T._O._O._H._!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!TEKIJÄNOIKEUSLAKI!	1 Copyright W08 W09 WDB Wx:2/2
+!TH!NK	1 Think_Global KB W08 W09 WDB c t w:1/1
+!TOOH	1 !T.O.O.H.! KB W09 W08 WDB W:1/1
+!TOOH !	1 !T.O.O.H.! KB W:2/2 W08 W09 WDB c r t
+!TOOH!	0 !T.O.O.H.! KB W08 W09 WDB c r t
+!TOOH_!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!T_O_O_H_!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!Talk It	1 Talk_It! W:2/2 W08 W09 WDB
+!Tang	1 Tang D W08 W09 WDB c t w:1/1
+!Tchau Radar!	1 Tchau_Radar! c t w:2/2
+!Tchau_Radar!	0 Tchau_Radar! c t
+!Tchkung!	1 ¡Tchkung! KB W:4/4 W08 W09 WDB c r t
+!Tchkung! on Wikipedia	1 ¡Tchkung! KB W:4/4 W08 W09 WDB
+!The Persuaders	1 The_Persuaders! KB W:2/2 W08 W09 WDB
+!Three Amigos!	0 ¡Three_Amigos! D KB NR RWB W08 W09 WDB c r t
+!Three_Amigos!	0 ¡Three_Amigos! D KB NR RWB W08 W09 WDB c t
+!Tierra y Libertad!	0 Land_and_liberty_(slogan) W08 W09 WDB c r t
+!Tierra_y_Libertad!	0 Land_and_liberty_(slogan) W08 W09 WDB c t
+!Type:CCard	1 Quicken_Interchange_Format W:6/6 W08 W09 WDB
+!UP	1 1UP.com KB W08 W09 WDB w:1/1 w':1/1
+!V ?>;L	1 Simferopol KB W09 W08 WDB Wx:1/1
+!V ?>;LAL:89	1 Simferopol_Raion WDB Wx:1/1
+!Vamonos con Pancho Villa!	0 ¡Vámonos_con_Pancho_Villa! KB NR RWB W08 W09 WDB c r t
+!Vamonos_con_Pancho_Villa!	0 ¡Vámonos_con_Pancho_Villa! KB NR RWB W08 W09 WDB c t
+!Vampiros en La Habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c r t
+!Vampiros en la Habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c r t
+!Vampiros_en_La_Habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c t
+!Vampiros_en_la_Habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c t
+!Vanity is a Sin!	1 ¡Vanity_is_a_Sin! KB NR RWB W:2/2 W08 W09 WDB c r t
+!Vanity_is_a_Sin!	0 ¡Vanity_is_a_Sin! KB NR RWB W08 W09 WDB c t
+!Viva La Cobra!	0 ¡Viva_La_Cobra! D KB NR R09 RDB RWB W08 c r t
+!Viva Nueva!	1 ¡Viva_Nueva! KB W:1/1 W08 W09 WDB c r t
+!Viva Santana	0 Viva_Santana! KB W09 W08 WDB x
+!Viva Zapata!	1 ¡Viva_Zapata! KB W:1/1 W08 W09 WDB c r t
+!Viva Zapatero¡	1 Viva_Zapatero! W08 W09 WDB Wx:3/3
+!Viva los Muertos!	0 ¡Viva_los_Muertos! KB W08 W09 WDB c r t
+!Viva! Los Straitjackets	1 ¡Viva!_Los_Straitjackets KB W:1/1 W08 W09 WDB c r t
+!Viva! Vaughan	1 ¡Viva!_Vaughan KB W:2/2 W08 W09 WDB c r t
+!Viva!_Los_Straitjackets	0 ¡Viva!_Los_Straitjackets KB W08 W09 WDB c t
+!Viva!_Vaughan	0 ¡Viva!_Vaughan KB W08 W09 WDB c t
+!Viva_La_Cobra!	0 ¡Viva_La_Cobra! D KB NR R09 RDB RWB W08 c t
+!Viva_Nueva!	0 ¡Viva_Nueva! KB W08 W09 WDB c t
+!Viva_Zapata!	0 ¡Viva_Zapata! KB W08 W09 WDB c t
+!Viva_los_Muertos!	0 ¡Viva_los_Muertos! KB W08 W09 WDB c t
+!Vivo Latino!	0 List_of_programs_broadcast_by_The_N L NR RWB W08 W09 WDB c l r t
+!Vivo_Latino!	0 List_of_programs_broadcast_by_The_N L NR RWB W08 W09 WDB c l t
+!WIKIPEDIA KLIK!	1 PlayStation_3 KB W09 W08 WDB Wx:1/1
+!WOWOW	1 !WOWOW! W09 W08 WDB W:1/1
+!WOWOW!	1 !WOWOW! W:133/133 W08 W09 WDB c t w:6/6 w':12/12
+!WOWOW! - Wikipedia, the free encyclopedia	1 !WOWOW! W:43/43 W08 W09 WDB
+!WOWOW! on wikipedia.org	1 !WOWOW! W09 W08 WDB W:1/1
+!WOWOW!,	1 !WOWOW! W09 W08 WDB W:1/1
+!WOWOW!, the free encyclopedia - Wikipedia	1 !WOWOW! W09 W08 WDB W:1/1
+!WTH!	1 Kogel_mogel W08 W09 WDB Wx:2/2
+!William Huskisson	1 William_Huskisson W:2/2 W08 W09 WDB
+!Women Art Revolution	1 !Women_Art_Revolution W:30/30 c t w':4/4
+!Women Art Revolution - Wikipedia, the free encyclopedia	1 !Women_Art_Revolution W:6/6
+!Women Art Revolution film Aldığı Ödüller Nelerdir? En	1 Academy_Award_for_Best_Documentary_(Feature) W09 WDB RWB Wx:1/1
+!Women Art Revolution film En İyi Belgesel Film	1 Academy_Award_for_Best_Documentary_(Feature) W09 WDB RWB Wx:1/1
+!Women_Art_Revolution	0 !Women_Art_Revolution c t
+!Wowow!	1 !WOWOW! W09 W08 WDB W:1/1
+!X%C3%B3%C3%B5	0 Taa_language W08 W09 WDB x
+!X%C3%B3%C3%B5 bei der wikipedia	1 Taa_language W09 W08 WDB Wx:1/1
+!X%C3%B3%C3%B5-g%C3%BA	0 Taa_language W09 W08 WDB x
+!Xam	1 ǀXam_language D W:19/19 W08 W09 WDB c t w:1/1
+!Xam Khomani Heartland	1 ǀXam_and_ǂKhomani_heartland W:4/4 WDB c r t
+!Xam_Khomani_Heartland	1 ǀXam_and_ǂKhomani_heartland W:1/1 WDB c t
+!Xo language	0 Juǀʼhoan_language NR RWB W08 W09 WDB c r t
+!Xo_language	0 Juǀʼhoan_language NR RWB W08 W09 WDB c t
+!Xobile	0 Russell_Peters KB W08 W09 WDB c r t
+!Xoo	1 Taa_language W:3/3 W08 W09 WDB c r t
+!Xoo language	0 Taa_language W08 W09 WDB c r t
+!Xoo_language	0 Taa_language W08 W09 WDB c t
+!Xoong language	0 !Xoong_language R08 R09 RDB c t
+!Xoong language	0 Taa_language W08 W09 WDB r
+!Xoong_language	0 !Xoong_language R08 R09 RDB c t
+!Xoop	1 Taa_language W:2/2 W08 W09 WDB
+!Xoõ	1 Taa_language W:39/39 W08 W09 WDB
+!Xu	0.473684 ǃKung D W:8/16 W08 W09 WDB c r t w':1/2
+!Xu	0.315789 ǃXu_(god) W:4/16 W08 W09 WDB c w:1/1 w':1/2
+!Xu	0.210526 Juu_languages D KB NR RWB W:4/16 W08 W09 WDB r
+!Xu (god)	1 ǃXu_(god) W:6/6 W08 W09 WDB r t w':1/1
+!Xu (god); it is used under the	1 ǃXu_(god) W09 W08 WDB W:1/1
+!Xu language	1 Juu_languages D KB NR RWB W08 W09 WDB c r t w:3/3
+!Xu mythology	0 ǃKung_people W08 W09 WDB c r t
+!Xu; it is used under the	1 ǃKung D W09 W08 WDB W:1/1
+!Xu_(god)	0 ǃXu_(god) W09 W08 WDB t
+!Xu_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!Xu_mythology	0 ǃKung_people W08 W09 WDB c t
+!Xun	0.75 ǃKung D W:8/8 W08 W09 WDB c r t w':1/4
+!Xun	0.166667 ǃKung_people W08 W09 WDB w':2/4
+!Xun	0.0833333 Juu_languages D KB NR RWB W08 W09 WDB w':1/4
+!Xun language	1 Xun_language D W08 W09 WDB c t w:1/1
+!Xun language	0 Juu_languages D KB NR RWB W08 W09 WDB r
+!Xun und ‡Khomani	1 Khoisan KB W08 WDB R09 W:1/1
+!Xun; it is used under the	1 ǃKung D W09 W08 WDB W:1/1
+!Xun_language	0 Xun_language D W08 W09 WDB c t
+!Xung	1 ǃKung_people W09 W08 WDB W:1/1
+!Xung language	1 !Xung_language c t w:1/1
+!Xung_language	0 !Xung_language c t
+!XÃ³Ãµ	1 Taa_language W08 W09 WDB Wx:4/4
+!Xóõ	1 Taa_language W:272/272 W08 W09 WDB Wx:90/90 c r t w:8/8 w':14/14
+!Xóõ (aka Taa)	1 Taa_language W:5/5 W08 W09 WDB
+!Xóõ - Wikipedia	1 Taa_language W09 W08 WDB Wx:1/1
+!Xóõ and similar click languages	1 Click_consonant W:9/9 W08 W09 WDB
+!Xóõ in	1 Taa_language W08 W09 WDB Wx:2/2
+!Xóõ language	1 Taa_language W:25/25 W08 W09 WDB c r t w:1/1 w':3/3
+!Xóõ language - Wikipedia, the free encyclopedia	1 Taa_language W:2/2 W08 W09 WDB
+!Xóõ language; it is used under the	1 Taa_language W09 W08 WDB W:1/1
+!Xóõ – Wikipedia	1 Taa_language W08 W09 WDB Wx:2/2
+!Xóõ, !Xóõ, !Xóõ	1 Taa_language W:7/7 W08 W09 WDB
+!Xóõ-gú – Wikipedia	1 Taa_language W09 W08 WDB Wx:1/1
+!Xóõ; it is used under the	1 Taa_language W:2/2 W08 W09 WDB
+!Xóõ_language	0 Taa_language W08 W09 WDB c t
+!Xõó	0 Taa_language W08 W09 WDB c r t
+!Xũ	0.5 ǃKung D W:3/3 W08 W09 WDB c t
+!Xũ	0.333333 Khoisan_languages KB W08 W09 WDB Wx:2/2 l
+!Xũ	0.166667 ǃKung_people W08 W09 WDB w:1/1
+!Xũ	0 Juu_languages D KB NR RWB W08 W09 WDB r
+!Xũ mythology	0 ǃKung_people W08 W09 WDB c r t
+!Xũ_mythology	0 ǃKung_people W08 W09 WDB c t
+!Xσυ	1 Taa_language W09 W08 WDB W:1/1
+!X�õ	1 Taa_language W:5/5 W08 W09 WDB
+!X�� language	0 Taa_language W08 W09 WDB c r t
+!X��_language	0 Taa_language W08 W09 WDB c t
+!Y la cruz	1 Sayings_of_Jesus_on_the_cross W08 W09 WDB Wx:15/15
+!Ya basta!	0 ¡Ya_basta! W08 W09 WDB c r t
+!Ya_basta!	0 ¡Ya_basta! W08 W09 WDB c t
+!Yahoo	1 Yahoo! D KB W:1/1 W08 W09 WDB Wx:1/1
+!ZDROJ!	1 Earth_Day W08 W09 WDB Wx:2/2
+!ZDROJ-KLIK!	1 Inquisition D W08 W09 WDB Wx:2/2
+!Zanzibar!	1 Zanzibar KB D W09 W08 WDB W:1/1
+!Zardoz!	1 Zardoz KB W09 W08 WDB W:1/1
+!Zebop	0 Zebop! KB W09 W08 WDB x
+![power plug](/essays/english-universal-language.attachment/25	1 AC_power_plugs_and_sockets W:8/8 W08 W09 WDB
+![power plug](http://upload.wikimedia.org/wikipedia/commons	1 AC_power_plugs_and_sockets W:4/4 W08 W09 WDB
+!_(album)	0 !_(album) KB W09 W08 WDB t
+!_(chess)	0 Punctuation_(chess) W09 W08 WDB t
+!_(disambiguation)	0 !_(disambiguation) D W09 W08 WDB t
+!_(math)	0 Factorial W09 W08 WDB t
+!_20110417-PDLT_singularité_tech_10465-17.04.2011-ITEMA_20280272-0-.mp3	1 Technological_singularity W08 W09 WDB Wx:2/2
+!__the libertines__!	1 The_Libertines KB W:75/75 W08 W09 WDB
+!_http://fr.wikipedia.org/wiki/Vive_le_Qu%C3%A9bec_libre	1 Vive_le_Québec_libre W09 WDB R08 Wx:1/1
+!_point	0 Exclamation_mark D W08 W09 WDB c t
+!a luchar!	0 ¡A_Luchar! W08 W09 WDB c t
+!a_luchar!	0 ¡A_Luchar! W08 W09 WDB c t
+!aaaH-aH ,yawA eM ekaT oT gnimoC er	1 They're_Coming_to_Take_Me_Away_Ha-Haaa! KB NR RWB W:3/3 W08 W09 WDB
+!action pact!	0 !Action_Pact! KB W08 W09 WDB c t
+!action_pact!	0 !Action_Pact! KB W08 W09 WDB c t
+!adios amigos!	0 ¡Adios_Amigos! KB W08 W09 WDB c t
+!adios_amigos!	0 ¡Adios_Amigos! KB W08 W09 WDB c t
+!akatsuki	1 List_of_Naruto_antagonists L W08 W09 WDB Wx:82/82 l
+!alabadle!	0 ¡Alabadle! KB W08 W09 WDB c t
+!alarma!	0 ¡Alarma! D W08 W09 WDB c t
+!alarma!	0 ¡Alarma!_(album) KB W08 W09 WDB c
+!alarma!	0 ¡Alarma!_(magazine) W08 W09 WDB c
+!alarma! (album)	0 ¡Alarma!_(album) KB W09 W08 WDB t
+!alarma! (disambiguation)	0 ¡Alarma! D W09 W08 WDB t
+!alarma! (magazine)	0 ¡Alarma!_(magazine) W09 W08 WDB t
+!alarma! magazine	0 ¡Alarma!_(magazine) W08 W09 WDB c t
+!alarma! records	0 Alarma_Records KB W08 W09 WDB c t
+!alarma!_(album)	0 ¡Alarma!_(album) KB W09 W08 WDB t
+!alarma!_(disambiguation)	0 ¡Alarma! D W09 W08 WDB t
+!alarma!_(magazine)	0 ¡Alarma!_(magazine) W09 W08 WDB t
+!alarma!_magazine	0 ¡Alarma!_(magazine) W08 W09 WDB c t
+!alarma!_records	0 Alarma_Records KB W08 W09 WDB c t
+!alebrije ¡	1 Alebrije W:2/2 W08 W09 WDB
+!all-time quarterback!	0 ¡All-Time_Quarterback! W08 W09 WDB c t
+!all-time quarterback!	0 ¡All-Time_Quarterback!_(EP) KB W08 W09 WDB c
+!all-time quarterback!	0 ¡All-Time_Quarterback!_(album) KB W08 W09 WDB c
+!all-time quarterback! (album)	0 ¡All-Time_Quarterback!_(album) KB W09 W08 WDB t
+!all-time quarterback! (ep)	0 ¡All-Time_Quarterback!_(EP) KB W09 W08 WDB t
+!all-time_quarterback!	0 ¡All-Time_Quarterback! W08 W09 WDB c t
+!all-time_quarterback!	0 ¡All-Time_Quarterback!_(EP) KB W08 W09 WDB c
+!all-time_quarterback!	0 ¡All-Time_Quarterback!_(album) KB W08 W09 WDB c
+!all-time_quarterback!_(album)	0 ¡All-Time_Quarterback!_(album) KB W09 W08 WDB t
+!all-time_quarterback!_(ep)	0 ¡All-Time_Quarterback!_(EP) KB W09 W08 WDB t
+!alla tu!	0 ¡Allá_tú! W08 W09 WDB c t
+!alla_tu!	0 ¡Allá_tú! W08 W09 WDB c t
+!alo, Presidente!	0 Aló_Presidente W08 W09 WDB c r t
+!alo, presidente!	0 Aló_Presidente W08 W09 WDB c t
+!alo,_Presidente!	0 Aló_Presidente W08 W09 WDB c t
+!alo,_presidente!	0 Aló_Presidente W08 W09 WDB c t
+!amigos!	0 ¡Amigos! KB W08 W09 WDB c t
+!amigos! (arrested development episode)	0 ¡Amigos! KB W09 W08 WDB t
+!amigos!_(arrested_development_episode)	0 ¡Amigos! KB W09 W08 WDB t
+!analyze	1 WinDbg KB W:4/4 W08 W09 WDB
+!ask a mexican!	0 ¡Ask_a_Mexican! W08 W09 WDB c t
+!ask_a_mexican!	0 ¡Ask_a_Mexican! W08 W09 WDB c t
+!avast	1 Ampersand W08 W09 WDB Wx:4/4
+!ay, caramba!	0 ¡Ay,_caramba! W08 W09 WDB c t
+!ay, carmela!	0 ¡Ay_Carmela!_(film) KB W09 W08 WDB c
+!ay, carmela! (film)	0 ¡Ay_Carmela!_(film) KB W09 W08 WDB t
+!ay,_caramba!	0 ¡Ay,_caramba! W08 W09 WDB c t
+!ay,_carmela!	0 ¡Ay_Carmela!_(film) KB W09 W08 WDB c
+!ay,_carmela!_(film)	0 ¡Ay_Carmela!_(film) KB W09 W08 WDB t
+!bang elektronika	0 !Bang_Elektronika c t
+!bang!	1 !Bang! W:1/1 W08 W09 WDB c t
+!bang_elektronika	0 !Bang_Elektronika c t
+!basta ya!	0 ¡Basta_Ya! W08 W09 WDB c t
+!basta_ya!	0 ¡Basta_Ya! W08 W09 WDB c t
+!bastardos en vivo!	0 ¡Bastardos_en_Vivo! KB W08 W09 WDB c t
+!bastardos!	0 ¡Bastardos! KB W08 W09 WDB c t
+!bastardos! (album)	0 ¡Bastardos! KB W09 W08 WDB t
+!bastardos!_(album)	0 ¡Bastardos! KB W09 W08 WDB t
+!bastardos_en_vivo!	0 ¡Bastardos_en_Vivo! KB W08 W09 WDB c t
+!bienvenido, mr. marshall!	0 Welcome_Mr._Marshall! KB W08 W09 WDB c t
+!bienvenido,_mr._marshall!	0 Welcome_Mr._Marshall! KB W08 W09 WDB c t
+!bus	0 Bang_Bus W08 W09 WDB c r t
+!carlet	1 Carlet KB W09 W08 WDB Wx:1/1
+!ciauetistico!	0 ¡Ciaütistico! KB W08 W09 WDB c t
+!ciautistico!	0 ¡Ciaütistico! KB W08 W09 WDB c t
+!clic!	1 Pamphlet W08 W09 WDB Wx:4/4
+!click me for explanation!	1 Steam_(content_delivery) KB NR RWB W:4/4 W08 W09 WDB
+!click!	1 Parkour W08 W09 WDB Wx:9/9
+!cuanta mentira trajeron sus ondas!	1 Orson_Welles KB W08 W09 WDB Wx:9/9
+!dame! !dame! !dame!	0 Gimme!_Gimme!_Gimme!_(A_Man_After_Midnight) KB W08 W09 WDB c t
+!dame!_!dame!_!dame!	0 Gimme!_Gimme!_Gimme!_(A_Man_After_Midnight) KB W08 W09 WDB c t
+!danger!	1 Battery_(electricity) W:3/3 W08 W09 WDB
+!dea	1 Idea_cellular KB NR RDB RWB W:11/11 W08 W09 w:2/2
+!decapitacion!	0 ¡Decapitacion! KB W08 W09 WDB c t
+!diga queso!	0 ¡Diga_Queso! KB W08 W09 WDB c t
+!diga_queso!	0 ¡Diga_Queso! KB W08 W09 WDB c t
+!définition!	1 Ankh_(disambiguation) D W09 W08 WDB Wx:1/1
+!earshot	1 Exclaim! W:45/45 W08 W09 WDB c r t w:13/13 w':24/24
+!earshot Magazine	1 !earshot_Magazine c t w:1/1
+!earshot magazine	0 !earshot_Magazine c t
+!earshot; it is used under the	1 Exclaim! W:2/2 W08 W09 WDB
+!earshot_Magazine	0 !earshot_Magazine c t
+!earshot_magazine	0 !earshot_Magazine c t
+!eerste! link	1 Graphics_software W08 W09 WDB Wx:3/3
+!existe de verdad!	1 Elena_Poniatowska KB W09 W08 WDB Wx:1/1
+!explora! science center and children's museum	0 ¡Explora!_Science_Center_and_Children's_Museum W08 W09 WDB c t
+!explora!_science_center_and_children's_museum	0 ¡Explora!_Science_Center_and_Children's_Museum W08 W09 WDB c t
+!f	0 AFM_International_Independent_Film_Festival W08 W09 WDB c r t
+!f Istanbul	1 AFM_International_Independent_Film_Festival W09 W08 WDB w':1/1
+!f Istanbul Independent Film Festival	1 AFM_International_Independent_Film_Festival W08 W09 WDB c r t w:1/1 w':1/1
+!f Istanbul International Independent Film Festival	1 AFM_International_Independent_Film_Festival W:4/4 W08 W09 WDB c r t w:1/1 w':1/1
+!f istanbul independent film festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!f istanbul international independent film festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!f_Istanbul_Independent_Film_Festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!f_Istanbul_International_Independent_Film_Festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!f_istanbul_independent_film_festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!f_istanbul_international_independent_film_festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!fistanbul International Independent Film Festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c r t
+!fistanbul international independent film festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!fistanbul_International_Independent_Film_Festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!fistanbul_international_independent_film_festival	0 AFM_International_Independent_Film_Festival W08 W09 WDB c t
+!flesruoy rof eeS	1 Boustrophedon W09 W08 WDB W:1/1
+!forward russia!	0 ¡Forward,_Russia! KB W08 W09 WDB c t
+!forward, russia!	0 ¡Forward,_Russia! KB W08 W09 WDB c t
+!forward,_russia!	0 ¡Forward,_Russia! KB W08 W09 WDB c t
+!forward_russia!	0 ¡Forward,_Russia! KB W08 W09 WDB c t
+!gQWmt8Ogk2	1 Latin KB D W09 W08 WDB W:1/1
+!ga!ne language	0 Seroa_language NR RWB W08 W09 WDB c t
+!ga!ne_language	0 Seroa_language NR RWB W08 W09 WDB c t
+!ga!nge language	0 Seroa_language NR RWB W08 W09 WDB c t
+!ga!nge_language	0 Seroa_language NR RWB W08 W09 WDB c t
+!gag!	0 !GAG! c t
+!gau	1 Gau D W:4/4 W08 W09 WDB c r t w':1/1
+!grillen!	1 Grilling D W08 W09 WDB Wx:2/2
+!gã!ne language	0 Seroa_language NR RWB W08 W09 WDB c t
+!gã!ne_language	0 Seroa_language NR RWB W08 W09 WDB c t
+!gã!nge language	0 Seroa_language NR RWB W08 W09 WDB c t
+!gã!nge_language	0 Seroa_language NR RWB W08 W09 WDB c t
+!happy birthday guadaloupe!	0 ¡Happy_Birthday_Guadalupe! c t
+!happy birthday guadalupe!	0 ¡Happy_Birthday_Guadalupe! c t
+!happy_birthday_guadaloupe!	0 ¡Happy_Birthday_Guadalupe! c t
+!happy_birthday_guadalupe!	0 ¡Happy_Birthday_Guadalupe! c t
+!hello friends!	0 ¡Hello_Friends! KB W08 W09 WDB c t
+!hello_friends!	0 ¡Hello_Friends! KB W08 W09 WDB c t
+!here!	1 Recycling W09 W08 WDB W:1/1
+!hero	0 !Hero KB W08 W09 WDB c t
+!hero	0 !Hero_(album) KB W08 W09 WDB c
+!hero (album)	0 !Hero_(album) KB W09 W08 WDB t
+!hero_(album)	0 !Hero_(album) KB W09 W08 WDB t
+!heterosexual	1 Negation D W:2/2 W08 W09 WDB
+!hier!	0.5 Cannabis_(drug) W:1/1 W08 W09 WDB
+!hier!	0.5 History_of_association_football W08 W09 WDB Wx:1/1
+!hola!	0 ¡Hola! KB W08 W09 WDB c t
+!hola, mexico!	0 List_of_Barney_&_Friends_episodes_and_videos L NR RWB W08 W09 WDB c l t
+!hola,_mexico!	0 List_of_Barney_&_Friends_episodes_and_videos L NR RWB W08 W09 WDB c l t
+!hoy es el día!	1 Dagen_H W08 W09 WDB Wx:2/2
+!http://blogs.netapp.com/.a/6a00d8341ca27e53ef0133ecb0cff0970b-pi|title	1 Philosopher's_stone W:14/14 W08 W09 WDB
+!http://en.wikipedia.org/wiki/Duncan_Sandys	1 Duncan_Sandys KB W09 W08 WDB W:1/1
+!http://en.wikipedia.org/wiki/Einstein−Cartan_theory	1 Einstein–Cartan_theory W09 W08 WDB W:1/1
+!http://en.wikipedia.org/wiki/Mars_Climate_Orbiter	1 Mars_Climate_Orbiter W09 W08 WDB W:1/1
+!http://en.wikipedia.org/wiki/Porn_groove	1 Porn_groove W:3/3 W08 W09 WDB
+!http://en.wikipedia.org/wiki/RT−23_Molodets	1 RT-23_Molodets W09 W08 WDB W:1/1
+!http://en.wikipedia.org/wiki/Resveratrol	1 Resveratrol W09 W08 WDB W:1/1
+!http://en.wikipedia.org/wiki/System_on_	1 System-on-a-chip W09 W08 WDB W:1/1
+!http://ja.wikipedia.org/wiki/%E3%83%95	1 Fresh_Pretty_Cure! W09 WDB Wx:20/20
+!http://media.netapp.com/images/blogs-image_thumb_1.jpg	1 Bremner,_Bird_and_Fortune KB W:13/13 W08 W09 WDB
+!hu language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!hu_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!hukwe language	0 Kxoe_language NR RWB W08 W09 WDB c t
+!hukwe_language	0 Kxoe_language NR RWB W08 W09 WDB c t
+!ici!	0.5 Fall_Out_Boy KB W08 W09 WDB Wx:2/4
+!ici!	0.5 Sasuke_Uchiha KB W08 W09 WDB Wx:2/4
+!important	1 Cascading_Style_Sheets D KB W:31/31 W08 W09 WDB c r t
+!ive	1 Ive D W08 W09 WDB c t w:1/1
+!jOnAs BRoTHers!	1 Jonas_Brothers KB W08 W09 WDB Wx:17/17
+!k7	0.990099 The_Juan_MacLean KB W:200/202 W08 W09 WDB
+!k7	0.00495049 Kona_District,_Hawaii W:1/202 W08 W09 WDB
+!k7	0.00495049 Studio_!K7 KB W:1/202 W08 W09 WDB c l t
+!k7 Records	1 Studio_!K7 KB W08 W09 WDB c l t w:1/1
+!k7 records	1 Studio_!K7 KB W:8/8 W08 W09 WDB c l t
+!k7_Records	0 Studio_!K7 KB W08 W09 WDB c l t
+!k7_records	0 Studio_!K7 KB W08 W09 WDB c l t
+!ka-boom!	0 ¡Ka-Boom!_Estudio W08 W09 WDB c t
+!ka-boom! estudio	0 ¡Ka-Boom!_Estudio W08 W09 WDB c t
+!ka-boom!_estudio	0 ¡Ka-Boom!_Estudio W08 W09 WDB c t
+!kai! garib local municipality	0 Kai_!Garib_Local_Municipality c t
+!kai!_garib_local_municipality	0 Kai_!Garib_Local_Municipality c t
+!karapuri!	0 Karapuri! c t
+!keyword!	1 Candida_albicans D W:3/3 W08 W09 WDB
+!kheis local municipality	0 !Kheis_Local_Municipality c t
+!kheis_local_municipality	0 !Kheis_Local_Municipality c t
+!khung language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!khung_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!klick mich!	1 Thoth D W09 W08 WDB Wx:1/1
+!klick!	0.846154 Pi D W08 W09 WDB Wx:11/12
+!klick!	0.0769231 Induction_motor W08 W09 WDB Wx:1/12
+!klick!	0.0769231 Mike_the_Headless_Chicken W:1/1 W08 W09 WDB
+!kora language	0 Korana_language W08 W09 WDB c t
+!kora_language	0 Korana_language W08 W09 WDB c t
+!ku language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!ku_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!kun	1 Juu_languages D KB NR RWB W:1/1 W08 W09 WDB w:1/1 w':1/1
+!kung	0.5 ǃKung_people W:39/78 W08 W09 WDB
+!kung	0.384615 Bushmen KB W:30/78 W08 W09 WDB
+!kung	0.115385 Juu_languages D KB NR RWB W:9/78 W08 W09 WDB
+!kung	0 ǃKung D W08 W09 WDB c r t
+!kung (disambiguation)	0 ǃKung D W09 W08 WDB t
+!kung language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!kung mythology	0 ǃKung_people W08 W09 WDB c t
+!kung people	0 ǃKung_people W08 W09 WDB c t
+!kung san	1 Bushmen KB W:3/3 W08 W09 WDB
+!kung san	0 ǃKung_people W08 W09 WDB c t
+!kung san people	0 ǃKung_people W08 W09 WDB c t
+!kung tribe	1 ǃKung_people W09 W08 WDB W:1/1
+!kung_(disambiguation)	0 ǃKung D W09 W08 WDB t
+!kung_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!kung_mythology	0 ǃKung_people W08 W09 WDB c t
+!kung_people	0 ǃKung_people W08 W09 WDB c t
+!kung_san	0 ǃKung_people W08 W09 WDB c t
+!kung_san_people	0 ǃKung_people W08 W09 WDB c t
+!külső hivatkozás, lehetséges spam!	0.0282486 Cesc_Fàbregas KB W08 W09 WDB Wx:5/95
+!külső hivatkozás, lehetséges spam!	0.0282486 Real_Madrid_C.F. KB W:1/82 W08 W09 WDB Wx:4/95
+!külső hivatkozás, lehetséges spam!	0.0225989 Cristiano_Ronaldo D KB W08 W09 WDB Wx:4/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Chelsea_F.C. KB W:1/82 W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0169492 FC_Anzhi_Makhachkala W:3/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.0169492 José_Mourinho KB W08 W09 WDB Wx:3/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Marouane_Chamakh W:1/82 W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Málaga_CF W:1/82 W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Ronaldo W:2/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Sergio_Agüero W08 W09 WDB Wx:3/95
+!külső hivatkozás, lehetséges spam!	0.0169492 Zinedine_Zidane D KB W:1/82 W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Alex_Smithies W:2/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.0112994 Darío_Rodríguez W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Dimitar_Berbatov KB W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 F.C._Internazionale_Milano KB W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Jens_Lehmann KB W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Manchester_City_F.C. D W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Manchester_United_F.C. KB W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0112994 National_Hockey_League D KB W08 W09 WDB Wx:2/95 l
+!külső hivatkozás, lehetséges spam!	0.0112994 Park_Ji-Sung D KB W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Parma_F.C. W:2/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.0112994 Ramires W:1/82 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Samuel_Eto'o W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0112994 UEFA_Europa_League_2009–10 NR RWB W08 W09 WDB Wx:2/95
+!külső hivatkozás, lehetséges spam!	0.0112994 Villas_Boas_brothers NR RWB W:2/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 2002_UEFA_Champions_League_Final W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 2011_Copa_América KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 2011_Monaco_Grand_Prix Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 2012_UEFA_Europa_League_Final W:1/82 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 ACF_Fiorentina KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Adrian_Mutu D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Albert_Celades W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Andriy_Shevchenko KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Andriy_Voronin KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Andrés_Palop W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Anti-football W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Argentina D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Ballon_d'Or W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Borja_Fernández W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Brazil D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Brazil_national_football_team KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Bucharest_Metro KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 C.A._Peñarol W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Claudio_López D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Counter-Strike KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Cuauhtémoc_Blanco W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 César_Sánchez W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 David_Beckham KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 David_Luiz KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Defender_(association_football) D W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Denmark D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Diego_Milito W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Dutch_Footballer_of_the_Year W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Edwin_van_der_Sar KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 El_Clásico W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 England D KB W:1/82 W08 W09 WDB l
+!külső hivatkozás, lehetséges spam!	0.00564972 FA_Premier_League_2006–07 KB NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 FC_Argeş_Piteşti W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 FC_Bayern_Munich D KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 FC_Dinamo_Bucureşti W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 FC_Schalke_04 W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Ferencvárosi_TC W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Fernando_Morientes W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Fishsticks_(South_Park) WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 France D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Francisco_Pavón W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Franco_Zuculini W:1/82 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Gary_Neville W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Goalkeeper_(association_football) W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Hellas_Verona_F.C. W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Ibrahim_Afellay W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Iker_Casillas W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 International_Federation_of_Football_History_&_Statistics W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Isaac_Vorsah KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Iván_Helguera W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Javier_Mascherano KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Javier_Portillo W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Joel_Obi W:1/82
+!külső hivatkozás, lehetséges spam!	0.00564972 Jonathan_Woodgate KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 José_María_Gutiérrez NR RWB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Juventus_F.C. D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Kevin-Prince_Boateng KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Kevin_Kurányi W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 La_Liga KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 La_Liga_2003–04 NR RWB W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 La_Rioja_(Spain) W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 List_of_Formula_One_driver_records L W:1/82 W08 W09 WDB l
+!külső hivatkozás, lehetséges spam!	0.00564972 List_of_attendance_figures_at_domestic_professional_sports_leagues L W08 W09 WDB Wx:1/95 l
+!külső hivatkozás, lehetséges spam!	0.00564972 Luís_Figo KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Mame_Biram_Diouf W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Martín_Palermo KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Michael_Owen KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Michael_Schumacher W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Midfielder W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Mikel_John_Obi W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Mohamed_Zidan W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Míchel_Salgado W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 NK_Dinamo_Zagreb NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Neymar_da_Silva RWB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Nicolas_Anelka KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Ottokár_Prohászka W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Panic_attack KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Portugal D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Premier_League_2007–08 KB NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Premier_League_2008–09 NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Premier_League_2009–10 NR RWB W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Raúl_Bravo W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Raúl_González W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Ricardo_Quaresma W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Roberto_Carlos_(footballer) KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Romania_national_football_team KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Ruud_van_Nistelrooy KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 SV_Werder_Bremen W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Samir_Nasri KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Santiago_Bernabéu_Yeste W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Santiago_Solari W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Santos_FC KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Serie_A KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Spain D KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 St_James'_Park KB R09 RDB W:1/82 W08
+!külső hivatkozás, lehetséges spam!	0.00564972 Stadio_delle_Alpi KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Striker D NR R09 RDB RWB W:1/82 W08
+!külső hivatkozás, lehetséges spam!	0.00564972 Sweden D KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Sándor_Torghelle W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Thomas_Gravesen KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 UEFA KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 UEFA_Champions_League KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 UEFA_Champions_League_2005–06 KB NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 UEFA_Cup_2008–09 KB NR RWB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 UEFA_Euro_2012_qualifying_Group_E Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Urby_Emanuelson KB W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Uruguay_national_football_team KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Walter_Samuel W:1/82 W08 W09 WDB
+!külső hivatkozás, lehetséges spam!	0.00564972 Wayne_Rooney KB W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Wolverhampton_Wanderers_F.C. W08 W09 WDB Wx:1/95
+!külső hivatkozás, lehetséges spam!	0.00564972 Álvaro_Mejía_Pérez W:1/82 W08 W09 WDB
+!la milanesa¡,	1 Milanesa W09 W08 WDB Wx:1/1
+!lander	0 Zarch KB W08 W09 WDB c t
+!les	0 LES D KB W08 W09 WDB c t
+!link	1 Jelena_Jensen W:7/7 W08 W09 WDB
+!list	1 Pink_Floyd KB W:5/5 W08 W09 WDB
+!llmind	1 Illmind W:19/19 W08 W09 WDB c r t w':2/2
+!llmind on Wikipedia	1 Illmind W09 W08 WDB W:1/1
+!llmind's	1 Illmind W:3/3 W08 W09 WDB
+!mpact	0.851852 Impact_Comics W:19/20 W08 W09 WDB c r t w:1/4 w':3/3
+!mpact	0.148148 Impact_(comics) W:1/20 W08 W09 WDB w:3/4
+!mpact Comics	1 Impact_Comics W:10/10 W08 W09 WDB c r t
+!mpact comics	0 Impact_Comics W08 W09 WDB c t
+!mpact iteration of the characters	1 Impact_Comics W:3/3 W08 W09 WDB
+!mpact_Comics	0 Impact_Comics W08 W09 WDB c t
+!mpact_comics	0 Impact_Comics W08 W09 WDB c t
+!mpuls.gam!ng, and all the rest of	1 Spoiled_child W:2/2 W09 WDB
+!mucha lucha!	0 ¡Mucha_Lucha! KB W08 W09 WDB c t
+!mucha_lucha!	0 ¡Mucha_Lucha! KB W08 W09 WDB c t
+!muchalucha!	0 ¡Mucha_Lucha! KB W08 W09 WDB c t
+!n	1 Derangement W:3/3 W08 W09 WDB
+!n = n! - n!/1! + n!/2! - n!/3	1 Derangement W:3/3 W08 W09 WDB
+!nBev	1 InBev KB W08 W09 WDB Wx:6/6
+!nara	0.958333 Acanthosicyos_horridus W:20/21 W08 W09 WDB c r t w:1/1 w':2/2
+!nara	0.0416667 Hoodia_gordonii W:1/21 W08 W09 WDB
+!nara melon	1 Acanthosicyos_horridus W09 W08 WDB w':1/1
+!ndigo	1 Indigo_Books_and_Music KB W08 W09 WDB Wx:2/2
+!nfo @ wiki	1 Media_Player_Classic KB W:4/4 W08 W09 WDB
+!nfo buat Sheila gank...!!!	1 Sheila_on_7 W08 W09 WDB Wx:4/4
+!nka	1 Inka_Bause w':1/1
+!no pasaran!	0 They_shall_not_pass W08 W09 WDB c t
+!no_pasaran!	0 They_shall_not_pass W08 W09 WDB c t
+!nofeleTmahc	1 Bermuda_Triangle KB W09 W08 WDB Wx:1/1
+!nstant Theatre	1 !nstant_Theatre c t w:1/1
+!nstant theatre	0 !nstant_Theatre c t
+!nstant_Theatre	0 !nstant_Theatre c t
+!nstant_theatre	0 !nstant_Theatre c t
+!nvinsible Youth	1 Invincible_Youth W:1/1
+!o!kung language	0 ǃʼOǃKung c t
+!o!kung_language	0 ǃʼOǃKung c t
+!o!ung language	0 ǃʼOǃKung c t
+!o!ung_language	0 ǃʼOǃKung c t
+!oh gloria inmarcesible!	0 National_Anthem_of_Colombia KB W08 W09 WDB c t
+!oh, mi diosa!	0 !Oh,_Mi_Diosa! R08 R09 RDB c t
+!oh,_mi_diosa!	0 !Oh,_Mi_Diosa! R08 R09 RDB c t
+!oh_gloria_inmarcesible!	0 National_Anthem_of_Colombia KB W08 W09 WDB c t
+!oid, mortales!	0 Argentine_National_Anthem KB W08 W09 WDB c t
+!oid,_mortales!	0 Argentine_National_Anthem KB W08 W09 WDB c t
+!oka tokat	0 Oka_tokat NR RWB WDB c t
+!oka_tokat	0 Oka_tokat NR RWB WDB c t
+!ole torme!: mel torme goes south of the border with billy may	0 ¡Olé_Tormé!:_Mel_Tormé_Goes_South_of_the_Border_with_Billy_May KB W08 W09 WDB c t
+!ole_torme!:_mel_torme_goes_south_of_the_border_with_billy_may	0 ¡Olé_Tormé!:_Mel_Tormé_Goes_South_of_the_Border_with_Billy_May KB W08 W09 WDB c t
+!oohaY :aidepikiW	1 Yahoo! KB D W09 W08 WDB W:1/1
+!ora language	0 Korana_language W08 W09 WDB c t
+!ora_language	0 Korana_language W08 W09 WDB c t
+!overdreve!	1 Reusel W:2/2 W08 W09 WDB
+!oye esteban!	0 ¡Oye_Esteban! KB W08 W09 WDB c t
+!oye_esteban!	0 ¡Oye_Esteban! KB W08 W09 WDB c t
+!p!e	1 Épée W:5/5 W08 W09 WDB
+!pdf	0 Portable_Document_Format D KB W08 W09 WDB c t
+!ping	1 Ping D W:3/3 W08 W09 WDB
+!policia! - a tribute to the police	0 ¡Policia!_-_A_Tribute_to_the_Police KB NR RWB W08 W09 WDB c t
+!policia!_-_a_tribute_to_the_police	0 ¡Policia!_-_A_Tribute_to_the_Police KB NR RWB W08 W09 WDB c t
+!por que no te callas!	0 ¿Por_qué_no_te_callas? W08 W09 WDB c t
+!por_que_no_te_callas!	0 ¿Por_qué_no_te_callas? W08 W09 WDB c t
+!que negrota!	0 ¡Qué_negrota! KB W08 W09 WDB c t
+!que viva la musica!	0 ¡Que_viva_la_música! KB W08 W09 WDB c t
+!que_negrota!	0 ¡Qué_negrota! KB W08 W09 WDB c t
+!que_viva_la_musica!	0 ¡Que_viva_la_música! KB W08 W09 WDB c t
+!quiero vivir!	0 ¡Quiero_Vivir! KB W08 W09 WDB c t
+!quiero_vivir!	0 ¡Quiero_Vivir! KB W08 W09 WDB c t
+!quilombo!	0 Quilombo_(album) KB W08 W09 WDB c t
+!rewsna	1 T.I. KB W:2/2 W08 W09 WDB
+!road-movies!	1 Road_movie W:112/112 W08 W09 WDB
+!sal3nto!	1 Salento D W08 W09 WDB Wx:2/2
+!show biz grande explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!show_biz_grande_explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!showbiz grande explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!showbiz_grande_explosion!	0 Saturday_Night_Live_TV_show_sketches W08 W09 WDB c t
+!sic	1 Bronnt_Industries_Kapital W:2/2 W08 W09 WDB
+!source!	1 List_of_Beyblade_episodes L W:8/8 W08 W09 WDB l
+!space	0 Space D W08 W09 WDB c t
+!ssundaztood	1 Missundaztood KB W09 W08 WDB Wx:1/1
+!st earl of Kilsmui	1 David_Maxwell_Fyfe,_1st_Earl_of_Kilmuir W:2/2 W08 W09 WDB
+!t o o h !	0 !T.O.O.H.! KB W08 W09 WDB c t
+!t. o. o. h. !	0 !T.O.O.H.! KB W08 W09 WDB c t
+!t._o._o._h._!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!t.o.o.h!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!t.o.o.h.!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!t5 3@s!1'/ 0|V3 0|= 73h	1 Leet D W:8/8 W08 W09 WDB
+!t_o_o_h_!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!tang	0 Tang D W08 W09 WDB c t
+!tchau radar!	0 Tchau_Radar! c t
+!tchau_radar!	0 Tchau_Radar! c t
+!tchkung!	0 ¡Tchkung! KB W08 W09 WDB c t
+!tetris wikipedia	1 Tetris KB W:4/4 W08 W09 WDB
+!th!nk	0 Think_Global KB W08 W09 WDB c t
+!theory	1 Knot_theory W:2/2 W08 W09 WDB
+!three amigos!	0 ¡Three_Amigos! D KB NR RWB W08 W09 WDB c t
+!three_amigos!	0 ¡Three_Amigos! D KB NR RWB W08 W09 WDB c t
+!title	1 Element_Hunters Wx:1/1
+!title - Wikipedia	0.2 HeartCatch_PreCure! Wx:1/5
+!title - Wikipedia	0.2 Kobato NR RWB W08 W09 WDB Wx:1/5
+!title - Wikipedia	0.2 Macross_Frontier W08 W09 WDB Wx:1/5
+!title - Wikipedia	0.2 Telepathy_Shōjo_Ran_Jiken_Note W08 W09 WDB Wx:1/5
+!title - Wikipedia	0.2 Yumeiro_Patissiere Wx:1/5
+!tooh !	0 !T.O.O.H.! KB W08 W09 WDB c t
+!tooh!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!tooh_!	0 !T.O.O.H.! KB W08 W09 WDB c t
+!ugh	1 Operators_in_C_and_C++ W:7/7 W08 W09 WDB l
+!uinida	1 Damara_people W08 W09 WDB Wx:2/2
+!url!	0.0263916 German_battleship_Bismarck W08 W09 WDB Wx:55/1448
+!url!	0.0244722 Japanese_war_tuba W:51/636 W08 W09 WDB
+!url!	0.0244722 Unité_d'Habitation W08 W09 WDB Wx:51/1448
+!url!	0.0220729 Islam_in_France W08 W09 WDB Wx:46/1448
+!url!	0.0220729 À_prendre_ou_à_laisser W08 W09 WDB Wx:46/1448
+!url!	0.0215931 Pro-choice NR RWB W:45/636 W08 W09 WDB
+!url!	0.0211132 Underground_City,_Montreal W08 W09 WDB Wx:44/1448
+!url!	0.0191939 Ginette_Mathiot W08 W09 WDB Wx:40/1448
+!url!	0.0191939 Monty_Hall_problem W08 W09 WDB Wx:40/1448
+!url!	0.0182342 Lightning D W08 W09 WDB Wx:38/1448
+!url!	0.0172745 Kargil_War W:36/636 W08 W09 WDB
+!url!	0.0167946 British_anti-invasion_preparations_of_World_War_II W:35/636 W08 W09 WDB
+!url!	0.0163148 Infinite_monkey_theorem W08 W09 WDB Wx:34/1448
+!url!	0.0158349 Exchange_(organized_market) W09 WDB Wx:33/1448
+!url!	0.0158349 Mahmoud_Vahidnia W:33/636
+!url!	0.0153551 Hitler_Youth W08 W09 WDB Wx:32/1448
+!url!	0.0148752 Separation_of_church_and_state_in_the_United_States W:31/636 W08 W09 WDB
+!url!	0.0143954 Dreambox D W08 W09 WDB Wx:30/1448
+!url!	0.0143954 Europa_Europa KB W08 W09 WDB Wx:30/1448
+!url!	0.0143954 Thomas_Piketty WDB Wx:30/1448
+!url!	0.0139155 F-35_Lightning_II D KB RWB W:29/636 W08 W09 WDB
+!url!	0.0139155 Mexican_mole_lizard W09 WDB Wx:29/1448
+!url!	0.0139155 Michio_Hoshino W:29/636 W08 W09 WDB
+!url!	0.0139155 Veronica_Belmont KB W:29/636 W08 W09 WDB
+!url!	0.0134357 Mexico_–_United_States_border W:28/636 W09 WDB
+!url!	0.0134357 Saeculum_obscurum W09 WDB Wx:28/1448
+!url!	0.0129559 The_Third_Wave W08 W09 WDB Wx:27/1448
+!url!	0.012476 American_Psycho_(film) KB W08 W09 WDB Wx:26/1448
+!url!	0.012476 Government_of_France W08 W09 WDB Wx:26/1448
+!url!	0.012476 High-Definition_Multimedia_Interface KB NR R09 RDB RWB W:14/636 W08 Wx:12/1448
+!url!	0.0119962 Andy_Milonakis KB W:25/636 W08 W09 WDB
+!url!	0.0119962 Mourning W08 W09 WDB Wx:25/1448
+!url!	0.0119962 Operation_Lüttich KB W08 W09 WDB Wx:25/1448
+!url!	0.0119962 Pulp_(novel) W08 W09 WDB Wx:25/1448
+!url!	0.0110365 Charles_II_of_Spain KB W08 W09 WDB Wx:23/1448
+!url!	0.0110365 Doctors'_plot W08 W09 WDB Wx:23/1448
+!url!	0.0110365 Dragon's_Lair KB W08 W09 WDB Wx:23/1448
+!url!	0.0110365 Nikah_mut‘ah W08 W09 WDB Wx:23/1448
+!url!	0.0105566 Jerusalem_syndrome W08 W09 WDB Wx:22/1448
+!url!	0.0105566 Joseph_Kittinger KB W08 W09 WDB Wx:22/1448
+!url!	0.0105566 Salvia_divinorum W08 W09 WDB Wx:22/1448
+!url!	0.0100768 Françoise_de_Panafieu KB W08 W09 WDB Wx:21/1448
+!url!	0.0100768 Norwegian_literature W08 W09 WDB Wx:21/1448
+!url!	0.0100768 TRIM W:21/636
+!url!	0.0100768 Theremin W:21/636 W08 W09 WDB
+!url!	0.00959693 Religious_aspects_of_Nazism W08 W09 WDB Wx:20/1448
+!url!	0.00959693 Shark_finning W08 W09 WDB Wx:20/1448
+!url!	0.00911708 Cinematographer W08 W09 WDB Wx:19/1448 l
+!url!	0.00911708 Cognitive_dissonance W08 W09 WDB Wx:19/1448
+!url!	0.00911708 DynDNS KB W08 W09 WDB Wx:19/1448
+!url!	0.00911708 Group_Policy W:19/636 W08 W09 WDB
+!url!	0.00911708 List_of_musical_works_in_unusual_time_signatures L W:19/636 W08 W09 WDB l
+!url!	0.00911708 Money_(Pink_Floyd_song) KB W08 W09 WDB Wx:19/1448
+!url!	0.00911708 WASP-12b W:19/636 W08 W09 WDB
+!url!	0.00863724 Bucket_(computing) W:18/636 W08 W09 WDB
+!url!	0.00863724 Manga D W08 W09 WDB Wx:18/1448
+!url!	0.00815739 Agrippa_I W08 W09 WDB Wx:17/1448
+!url!	0.00815739 Herod_the_Great W08 W09 WDB Wx:17/1448
+!url!	0.00815739 Moral_panic W08 W09 WDB Wx:17/1448
+!url!	0.00815739 Target_fixation W:17/636 W08 W09 WDB
+!url!	0.00815739 Weatherman_(organization) D KB NR RWB W:17/636 W08 W09 WDB
+!url!	0.00815739 XIII_(comics) KB W08 W09 WDB Wx:17/1448
+!url!	0.00767754 Advent_calendar D W08 W09 WDB Wx:16/1448
+!url!	0.00767754 BeerTender W:16/636 W08 W09 WDB
+!url!	0.00767754 Patrick_Topaloff W08 W09 WDB Wx:16/1448
+!url!	0.00767754 Three_Prisoners_problem W08 W09 WDB Wx:16/1448
+!url!	0.00767754 Tupolev_Tu-144 KB W08 W09 WDB Wx:16/1448
+!url!	0.0071977 Philip_Connard W:15/636
+!url!	0.0071977 Racing_game NR RWB W:15/636 W08 W09 WDB
+!url!	0.0071977 Schizophrenia D KB W08 W09 WDB Wx:15/1448
+!url!	0.006238 Ice_Saints W08 W09 WDB Wx:13/1448
+!url!	0.006238 List_of_paradoxes L W:13/636 W08 W09 WDB l
+!url!	0.00575816 RPG-2 KB W08 W09 WDB Wx:12/1448
+!url!	0.00527831 Andy_Hunter° KB RWB W:11/636 W08 W09 WDB
+!url!	0.00527831 Boy_or_Girl_paradox W08 W09 WDB Wx:11/1448
+!url!	0.00527831 Race_(classification_of_human_beings) RWB W08 W09 WDB Wx:11/1448
+!url!	0.00479846 Alamut D W08 W09 WDB Wx:10/1448
+!url!	0.00479846 Black_Holes KB NR R09 RDB RWB W08 Wx:10/1448
+!url!	0.00479846 Demographics_of_France W08 W09 WDB Wx:10/1448
+!url!	0.00479846 MILF D W08 W09 WDB Wx:10/1448
+!url!	0.00479846 Old_Man_of_the_Mountain W08 W09 WDB Wx:10/1448
+!url!	0.00479846 Schwerer_Gustav KB W08 W09 WDB Wx:10/1448
+!url!	0.00431862 1980s CHRON:DECADE W08 W09 WDB Wx:9/1448
+!url!	0.00431862 Apache_(gang) W08 W09 WDB Wx:9/1448
+!url!	0.00431862 Crack_cocaine W:9/636 W08 W09 WDB
+!url!	0.00431862 Greaser_(subculture) W08 W09 WDB Wx:9/1448
+!url!	0.00383877 Afrikaner D KB W08 W09 WDB Wx:8/1448
+!url!	0.00383877 Fixing_Broken_Windows NR RWB W:8/636 W08 W09 WDB
+!url!	0.00383877 Goumier NR RWB W08 W09 WDB Wx:8/1448
+!url!	0.00383877 Jason_Momoa KB W08 W09 WDB Wx:8/1448
+!url!	0.00383877 Lionel_Poilâne W08 W09 WDB Wx:8/1448
+!url!	0.00383877 List_of_lemur_species L WDB Wx:8/1448 l
+!url!	0.00383877 Quick_(restaurant_chain) W08 W09 WDB Wx:8/1448
+!url!	0.00335893 Atheism D W08 W09 WDB Wx:7/1448
+!url!	0.00335893 Spencer_Elden W:7/636 W08 W09 WDB
+!url!	0.00287908 List_of_games_with_DirectX_11_support L W:6/636 l
+!url!	0.00287908 Screener W08 W09 WDB Wx:6/1448
+!used texts from web!	0.333333 As_I_Lay_Dying_(band) KB W:3/9 W08 W09 WDB
+!used texts from web!	0.333333 Last.fm KB W:3/9 W08 W09 WDB
+!used texts from web!	0.333333 Social_network W:3/9 W08 W09 WDB
+!vamonos con pancho villa!	0 ¡Vámonos_con_Pancho_Villa! KB NR RWB W08 W09 WDB c t
+!vamonos_con_pancho_villa!	0 ¡Vámonos_con_Pancho_Villa! KB NR RWB W08 W09 WDB c t
+!vampiros en la habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c t
+!vampiros_en_la_habana!	0 ¡Vampiros_en_La_Habana! KB R09 RDB RWB W08 c t
+!vanity is a sin!	0 ¡Vanity_is_a_Sin! KB NR RWB W08 W09 WDB c t
+!vanity_is_a_sin!	0 ¡Vanity_is_a_Sin! KB NR RWB W08 W09 WDB c t
+!viva los muertos!	0 ¡Viva_los_Muertos! KB W08 W09 WDB c t
+!viva nueva!	0 ¡Viva_Nueva! KB W08 W09 WDB c t
+!viva! los straitjackets	0 ¡Viva!_Los_Straitjackets KB W08 W09 WDB c t
+!viva! vaughan	0 ¡Viva!_Vaughan KB W08 W09 WDB c t
+!viva!_los_straitjackets	0 ¡Viva!_Los_Straitjackets KB W08 W09 WDB c t
+!viva!_vaughan	0 ¡Viva!_Vaughan KB W08 W09 WDB c t
+!viva_los_muertos!	0 ¡Viva_los_Muertos! KB W08 W09 WDB c t
+!viva_nueva!	0 ¡Viva_Nueva! KB W08 W09 WDB c t
+!vivo latino!	0 List_of_programs_broadcast_by_The_N L NR RWB W08 W09 WDB c l t
+!vivo_latino!	0 List_of_programs_broadcast_by_The_N L NR RWB W08 W09 WDB c l t
+!wenigen von uns !	1 Joseph_Tommasi W:9/9 W08 W09 WDB
+!wiki evolution	1 Evolution_Theory D KB NR R09 RDB RWB W:4/4 W08
+!wikipedia	1 View_(database) W09 W08 WDB Wx:1/1
+!wikipedia!	1 Paging W08 W09 WDB Wx:3/3
+!wikipedia.org!	1 Religion D W09 W08 WDB Wx:1/1
+!women art revolution	0 !Women_Art_Revolution c t
+!women_art_revolution	0 !Women_Art_Revolution c t
+!wowow!	1 !WOWOW! W:4/4 W08 W09 WDB c t
+!wowow! Art collective	1 !WOWOW! W:5/5 W08 W09 WDB
+!wowwow!	1 !WOWOW! W:5/5 W08 W09 WDB
+!xam	0 ǀXam_language D W08 W09 WDB c t
+!xam khomani heartland	0 ǀXam_and_ǂKhomani_heartland WDB c t
+!xam_khomani_heartland	0 ǀXam_and_ǂKhomani_heartland WDB c t
+!xbile	0 Russell_Peters KB W08 W09 WDB c r t
+!xo language	0 Juǀʼhoan_language NR RWB W08 W09 WDB c t
+!xo_language	0 Juǀʼhoan_language NR RWB W08 W09 WDB c t
+!xobile	0 Russell_Peters KB W08 W09 WDB c t
+!xoo	0 Taa_language W08 W09 WDB c r t
+!xoo language	0 Taa_language W08 W09 WDB c r t
+!xoo_language	0 Taa_language W08 W09 WDB c t
+!xoong language	0 !Xoong_language R08 R09 RDB c t
+!xoong_language	0 !Xoong_language R08 R09 RDB c t
+!xu	0 ǃKung D W08 W09 WDB c t
+!xu	0 ǃXu_(god) W08 W09 WDB c
+!xu (god)	0 ǃXu_(god) W09 W08 WDB t
+!xu language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!xu mythology	0 ǃKung_people W08 W09 WDB c t
+!xu_(god)	0 ǃXu_(god) W09 W08 WDB t
+!xu_language	0 Juu_languages D KB NR RWB W08 W09 WDB c t
+!xu_mythology	0 ǃKung_people W08 W09 WDB c t
+!xun	0 ǃKung D W08 W09 WDB c t
+!xun language	0 Xun_language D W08 W09 WDB c t
+!xun_language	0 Xun_language D W08 W09 WDB c t
+!xung language	0 !Xung_language c t
+!xung_language	0 !Xung_language c t
+!xóõ	1 Taa_language W:12/12 W08 W09 WDB Wx:1/1
+!xũ	0 ǃKung D W08 W09 WDB c t
+!xũ mythology	0 ǃKung_people W08 W09 WDB c t
+!xũ_mythology	0 ǃKung_people W08 W09 WDB c t
+!ya basta!	0 ¡Ya_basta! W08 W09 WDB c t
+!ya_basta!	0 ¡Ya_basta! W08 W09 WDB c t
+!~Klicken~!	1 TV_tuner_card W08 W09 WDB Wx:2/2
+!°*Link cn trama e giudizio lettori°*!	1 A_Song_of_Ice_and_Fire KB W09 W08 WDB Wx:1/1
+!¿ Š	1 John_Morgan_(mathematician) W09 W08 WDB W:1/1
+!Átame!	1 Tie_Me_Up!_Tie_Me_Down! KB W08 W09 WDB Wx:2/2
+!â€œ	0.5 Coup_d'état D W08 W09 WDB Wx:1/1
+!â€œ	0.5 World_War_II_casualties W:1/1 W08 W09 WDB l
+!ˆ¥à¹¤à ®¤à ¥à°¤à§¤à €¥à¹	1 Karma D W09 W08 WDB Wx:1/1
+!В октябре едем в Тай!	1 Thailand D KB W08 W09 WDB Wx:128/128
+!ЗДЕСЬ!	1 DjVu KB W08 W09 WDB Wx:31/31
+!Терские казаки — Википедия	1 Terek_Cossacks W09 W08 WDB Wx:1/1
+!источник!	1 Hieronymus_Bosch KB W08 W09 WDB Wx:2/2
+!тут!	1 Monty_Hall_problem W08 W09 WDB Wx:11/11
+!хонг	1 Taa_language W08 W09 WDB Wx:2/2
+!כאן!	1 Commodore_64 D KB W08 W09 WDB Wx:2/2
+!שנה טובה	1 Rosh_Hashanah D KB W:30/30 W08 W09 WDB
+!التعرف على محمد علي	1 Muhammad_Ali W08 W09 WDB Wx:2/2
+!الحمد لله	1 Alhamdulillah W09 W08 WDB W:1/1
+!انقلاب زندہ باد	1 Bhagat_Singh KB W09 W08 WDB W:1/1
+!مرحبا	1 Arabic_Wikipedia KB W08 W09 WDB Wx:5/5
+!कुंग	1 ǃKung_people W09 W08 WDB W:1/1
+!–9	0.461538 List_of_heavy_metal_bands L W:6/13 W08 W09 WDB l
+!–9	0.384615 List_of_nu_metal_bands L W:5/13 W08 W09 WDB l
+!–9	0.153846 List_of_manga_licensed_in_English L R08 W:2/13 W09 WDB l
+!’O-!khung language	0 Juu_languages D KB NR RWB W08 W09 WDB r
+!’O-!khung language	0 ǃʼOǃKung c r t
+!’O-!khung_language	0 ǃʼOǃKung c t
+!’o-!khung language	0 ǃʼOǃKung c t
+!’o-!khung_language	0 ǃʼOǃKung c t
+!∆! JAY-Z !∆!	1 Jay-Z KB W:39/39 W08 W09 WDB
+!『ウォーリーをさがせ!』 のような課題は視覚探索というのだそうです⇒リンク	1 Visual_search W08 W09 WDB Wx:2/2
+!日本賞櫻名所100選- Wikipedia	1 Shiga_Prefecture KB W08 W09 WDB Wx:2/2
+!쿵족	1 ǃKung_people W08 W09 WDB Wx:35/35
+"	0.490566 inch W09 w:78/159
+"	0.226415 Quotation_mark W08 W09 WDB r w:36/159
+"	0.119497 Inch D W08 W09 WDB w:19/159
+"	0.0628931 Shas KB W08 W09 WDB c t w:10/159
+"	0.0314465 arcsecond W09 w:5/159
+"	0.0314465 inches w:5/159
+"	0.0251572 Prime_(symbol) W08 W09 WDB w:4/159
+"	0.00628931 Minute_of_arc W08 W09 WDB w:1/159
+"	0.00628931 Visual_display_unit RWB W08 W09 WDB w:1/159
+" ! "	1 !_(album) KB W09 W08 WDB w:1/1
+" "	1 Plus_and_minus_signs W09 W08 WDB w:1/1
+" " ' " is a non-profit organization.	1 Mafia_Music W:1/1
+" " Customer Service " "	1 Customer_service W:4/4 W08 W09 WDB
+" " Lange	1 Robert_John_"Mutt"_Lange KB W09 W08 WDB W:1/1
+" " Tingwell	1 Bud_Tingwell W09 W08 WDB W:1/1
+" " USA	1 Military_history_of_the_United_States W:2/2 W08 W09 WDB
+" " Yankovic	1 "Weird_Al"_Yankovic KB W09 W08 WDB W:1/1
+" " el chojin	1 El_Chojín Wx:141/141
+" " les énergies renouvelables	1 Renewable_energy W08 W09 WDB Wx:2/2 l
+" " וייס סיטי	1 Grand_Theft_Auto:_Vice_City_soundtrack W:2/2 W08 W09 WDB l
+" "Ajax". Ingles na Wikipedia	1 Ajax_(cleanser) NR RWB W:17/17 W08 W09 WDB
+" "Heart of Glass"	1 Heart_of_Glass_(song) KB W:2/2 W08 W09 WDB
+" "Incubus"	1 Incubus_(1965_film) KB NR RWB W08 W09 WDB Wx:5/5
+" "More info""	1 Morpho R08 W:23/23 W09 WDB
+" "Seringapatnam	1 Battle_of_Seringapatam KB D W09 W08 WDB NR RWB W:1/1
+" "Source""	1 Morpho_peleides W:23/23 W08 W09 WDB
+" "Yemeni officials have said that Abdulmutallab traveled to	1 Umar_Farouk_Abdulmutallab W:1/1
+" "ZOOP" "	1 Zoop D KB W08 W09 WDB c t w:1/1
+" "classic liberal thinking" "	1 Classical_liberalism W:2/2 W08 W09 WDB
+" "sedevacantism."	1 Sedevacantism W:12/12 W08 W09 WDB
+" "zoop" "	0 Zoop D KB W08 W09 WDB c t
+" "Булатович, Александр Ксаверьевич"	1 Alexander_Bulatovich W09 W08 WDB Wx:1/1
+" "あなたの人生"	1 Twenty_Questions W08 W09 WDB Wx:8/8
+" "까마귀, 짐 점프	1 Jump_Jim_Crow W09 W08 WDB W:1/1
+" 'Allo 'Allo!"	1 'Allo_'Allo! KB W:6/6 W08 W09 WDB
+" 'Larry Fortensky' is also the nickname of a	1 Larry_Fortensky KB W09 W08 WDB W:1/1
+" 'Repent, Harlequin!' Said the Ticktockman"	1 "Repent,_Harlequin!"_Said_the_Ticktockman KB W:8/8 W08 W09 WDB
+" 'TARP' money"	1 Troubled_Assets_Relief_Program W09 W08 RWB RDB W:1/1
+" 'There Is Only the Fight...': An Analysis of	1 Hillary_Rodham_senior_thesis W:4/4 W08 W09 WDB
+" 'University' of California."	1 Diploma_mill W:7/7 W08 W09 WDB
+" 'Vitamin H' deficiency "	1 Haloperidol W:4/4 W08 W09 WDB
+" 'chaos theory' road to reductio ad absurdum"	1 Wickard_v._Filburn W:24/24 W08 W09 WDB
+" 'idiot' savants"	1 Savant_syndrome W:4/4 W08 W09 WDB
+" 'sto po' po' si roba"	1 Herma W09 W08 WDB Wx:1/1
+" ( 8/12/1943-21/10/2010 )	1 José_Carbajal_(Uruguayan_musician) Wx:2/2
+" ( Personnel	1 Bad_(Michael_Jackson_song) KB W09 W08 WDB W:1/1
+" (...)favoriser la fécondité des humains considérés comme supérieurs	1 Eugenics W08 W09 WDB Wx:16/16
+" (1	1 1981 W09 W08 WDB CHRON:YEAR Wx:1/1
+" (1901) by coating of the fruit. d 4	1 Apple D W09 W08 WDB Wx:1/1
+" (1945	1 Rome,_Open_City KB W08 W09 WDB Wx:4/4
+" (1965), "	1 The_Miracles KB W:3/3 W08 W09 WDB
+" (1982): Old Friends 4 One Nite Alone...Tour	1 Prince_(musician) KB W09 W08 WDB W:1/1
+" (2002). Dinner with Willie – "If You Love Symbol	1 Alphabet_St. KB W09 W08 WDB W:1/1
+" (2005, from Jeff Gannon).	1 Jeff_Gannon KB W:2/2 W08 W09 WDB
+" (6 June 2006)	1 Escolar W:2/2 W08 W09 WDB
+" (Enūma	1 Enûma_Eliš W09 W08 WDB W:1/1
+" (Futurama)	1 The_Sting_(Futurama) KB W:2/2 W08 W09 WDB
+" (Gyeonghoeru)"	1 Gyeongbokgung KB W08 W09 WDB Wx:2/2
+" (Jagyeongjeon)"	1 Gyeongbokgung KB W08 W09 WDB Wx:2/2
+" (Lewes 1875,	1 Emergence D W09 W08 WDB W:1/1
+" (Matthew	1 Gospel_of_Matthew W09 W08 WDB W:1/1
+" (Media Life Magazine).	1 Zoey_101:_Goodbye_Zoey? KB W:4/4 W08 W09 WDB
+" (PDF)	0.5 Chad D KB W:1/2 W08 W09 WDB
+" (PDF)	0.5 Standard_French W:1/2 W08 W09 WDB
+" (Quotations from Chaiman Mao)"	1 Quotations_from_Chairman_Mao_Zedong KB NR RWB W08 W09 WDB Wx:2/2
+" (Read: stolen)	1 Heart_of_Darkness KB W09 W08 WDB W:1/1
+" (Roger McGuinn, two consecutive New York City, White	1 Michael_Clarke_(musician) KB W09 W08 WDB W:1/1
+" (TIMTOWTDI	1 There's_more_than_one_way_to_do_it W09 WDB R08 W:1/1
+" (TTL, A través de o A lo largo	1 Advertising D W09 W08 WDB Wx:1/1
+" (The Office)	1 The_Sting_(The_Office) W:2/2
+" (Thomas Frank	1 Thomas_Frank W09 W08 WDB W:1/1
+" (VLS	1 Very-large-scale_integration W09 W08 WDB W:1/1
+" (Video)Backstage "	1 Backstage D W08 W09 WDB Wx:8/8
+" (WHO	1 World_Health_Organization KB W09 W08 WDB W:1/1
+" (WP)	0.543624 For_a_New_Liberty KB W:81/149 W08 W09 WDB
+" (WP)	0.161074 Power_and_Market W:24/149 W08 W09 WDB
+" (WP)	0.147651 Albert_Jay_Nock W:22/149 W08 W09 WDB
+" (WP)	0.147651 Man,_Economy,_and_State W:22/149 W08 W09 WDB
+" (Wikipedia 2009: "Messianic Judaism")	1 Messianic_Judaism l W09 W08 WDB W:1/1
+" (Wikipida	1 Environmental_racism W:2/2 W08 W09 WDB
+" (correlacionad	1 Autocorrelation W09 W08 WDB Wx:1/1
+" (da	1 Dramaturge W08 W09 WDB Wx:2/2
+" (featuring T-Pain) (200	1 Chamillionaire KB W09 W08 WDB W:1/1
+" (from the movie Top Gun) in 1986.	1 Top_Gun_(film) KB RWB W:5/5 W08 W09 WDB
+" (good ol'wiki)	1 Omelette W09 W08 WDB W:1/1
+" (h	1 Seal_of_the_President_of_the_United_States W:3/3 W08 W09 WDB
+" (http://en.wikipedia.org/wiki/Rahm_Emanuel).	1 Rahm_Emanuel KB W09 W08 WDB W:1/1
+" (in German). ) is a draw and regional Bavaria	1 Fußball-Bundesliga_1965–66 NR RWB W:2/2 W08 W09 WDB
+" (pl.wikipedia.org)	1 Rondo_1 Wx:38/38
+" (promo single, E. plumbing	1 SST_Records KB W:2/2 W08 W09 WDB
+" (rendirse)	1 Battle_of_Granada KB W09 W08 WDB Wx:1/1
+" (see, e.g. Court House	1 Montreal KB D W09 W08 WDB W:1/1
+" (web). You can click here	1 Dreidel W:2/2 W08 W09 WDB
+" (wikipedia).	1 Portuguese_Man_o'_War W09 W08 WDB W:1/1
+" (with The third daughter, The reasons for which	1 Russian_Guild_of_Film_Critics W:2/2 W08 W09 WDB
+" (wp)	1 Human_papillomavirus KB W:2/2 W08 W09 WDB
+" (פריירה)	1 Paulo_Freire KB W08 W09 WDB Wx:2/2
+" (ก	1 Greek_language KB D W09 W08 WDB Wx:1/1
+" *Corpus Callosum"	1 *Corpus_Callosum KB W09 W08 WDB W:1/1
+" + "http://en.wikipedia.org/wiki/Mandelbrot_set	1 Mandelbrot_set W:4/4 W08 W09 WDB
+" + \ " Wikipedia: List of HTTP status codes" +\ "	1 List_of_HTTP_status_codes L l W09 W08 WDB W:1/1
+" , A. View history Insemination Many · Mammary intercourse All	1 Cloaca D W09 W08 WDB W:1/1
+" - Cross	1 Bob_Wills W09 W08 WDB W:1/1
+" - I'm a little bit country! - I'm a little	1 I'm_a_Little_Bit_Country KB W08 W09 WDB Wx:12/12
+" - Noam Chomsky	1 Noam_Chomsky D KB W:6/6 W08 W09 WDB
+" - Wikipedia	1 Justin_Bieber l W:1/1
+" - desc	1 Pseudonym W09 W08 WDB W:1/1
+" - i	1 Electric_Light_Orchestra KB W09 W08 WDB W:1/1
+" - read more at Wikipedia	1 Genetically_modified_food W09 W08 WDB W:1/1
+" - steve albini	1 Steve_Albini KB W09 W08 WDB W:1/1
+" - which i	1 Brown_Eyed_Handsome_Man W09 W08 WDB W:1/1
+" - wiki	1 M116_howitzer KB W09 W08 WDB W:1/1
+" - אשרי, יתום אני!	1 Adventures_of_Mottel_the_Cantor's_Son NR RWB W08 W09 WDB Wx:7/7
+" -- From wikipedia	1 Groundhog_Day KB W:3/3 W08 W09 WDB
+" -- Wikipedia	1 Santiago_Apoala KB W:5/5 W08 W09 WDB
+" -- that little insurance lizard that talks."	1 GEICO KB W:2/2 W08 W09 WDB
+" . . . . .and stay off my side."	1 The_Abyss KB W:2/2 W08 W09 WDB
+" . . . I squash dead fish between my toes Try	1 Moon_Over_Marin KB W09 W08 WDB W:1/1
+" . . . from the hills above Glencar . . ."	1 The_Stolen_Child W09 W08 WDB W:1/1
+" .. Mit den 207 häufigsten Wörtern im Wortschatz eines	1 Word D W09 W08 WDB Wx:1/1
+" .. Nachbarin, Euer Fläschchen! .. "	1 Smelling_salts W09 W08 WDB Wx:1/1
+" .. the Hair Loss Fairy and the Eater of	1 Discworld_gods W:6/6 W08 W09 WDB
+" ... Da in der Zwischenzeit DDT-Resistenzen bei verschiedenen	1 DDT D W08 W09 WDB Wx:16/16
+" ... Die Namen der Spender nennt Kohl bis heute	1 1999_CDU_contributions_scandal W08 W09 WDB Wx:6/6
+" ... Norton was elected in 1990 as a Democratic	1 Eleanor_Holmes_Norton KB W:15/15 W08 W09 WDB
+" ... a pair of stick-limbed snack-boxes with	1 OS-tan W:2/2 W08 W09 WDB l
+" ... a riot broke out on day two..."	1 Stanford_prison_experiment W:2/2 W08 W09 WDB
+" ... daß die form immer der funktion folgt."	1 Form_follows_function W08 W09 WDB Wx:3/3
+" ... el aspecto inconsciente de la personalidad caracterizado por	1 Shadow_(psychology) W08 W09 WDB Wx:2/2
+" ... may be purposefully undertaken by butchering the corpse	1 Excarnation W09 W08 WDB W:1/1
+" ... more at Wikipedia's full biography of John Catron	1 John_Catron KB W09 W08 WDB W:1/1
+" ... more at Wikipedia.	1 Peter_Vivian_Daniel KB D W09 W08 WDB W:1/1
+" ... the very model of a modern Major-General	1 Major-General's_Song W08 W09 WDB w':2/2
+" ... the very model of a modern Major-General ..."	1 Major-General's_Song W09 W08 WDB w:1/1
+" .... دوره صفویه از مهمترین دوران تاریخی ایران محسوب	1 Safavid_dynasty KB W09 W08 WDB Wx:1/1
+" ...And Out Come the Wolves"	1 …And_Out_Come_the_Wolves KB NR RWB W:2/2 W08 W09 WDB
+" ...Forma je aktivni princip i uzrok (τὸ ὅθεν	1 Ancient_philosophy W08 W09 WDB Wx:2/2
+" ...Sa passion pour les crocodiles est filmée lors	1 Steve_Irwin KB W09 W08 WDB Wx:1/1
+" ...but shortly after his return from exile in	1 Ruhollah_Khomeini KB W09 W08 WDB W:1/1
+" ...el infierno son los otros"	1 Jean-Paul_Sartre KB W08 W09 WDB Wx:3/3
+" ...software developed under a license that permits users	1 Open_source_software W09 W08 WDB NR RWB W:1/1
+" ...v BIOS-u sem nastavil to in ono	1 BIOS KB W:2/2 W08 W09 WDB
+" ...в Северном полушарии	1 List_of_supercontinents L l W09 W08 WDB Wx:1/1
+" /> For further information regarding the Holocaust, please visit	1 Oskar_Schindler KB W09 W08 WDB W:1/1
+" /> PHP Introduction	1 Scripting_language W09 W08 WDB W:1/1
+" 007 James Bond Medley	1 James_Bond_(film_series) W:5/5 W08 W09 WDB
+" 1 / 3 regel"	1 Rule_of_thirds W09 W08 WDB W:1/1
+" 1 95/08" (2008)	1 Enrique_Iglesias KB W09 W08 WDB Wx:1/1
+" 1. FC Magdeburg"	1 1._FC_Magdeburg W09 W08 WDB Wx:1/1
+" 1. maja	1 May_1 CHRON:DATE W08 W09 WDB Wx:3/3
+" 1.5.2 está Bronx quemando”	1 Howard_Cosell KB W09 W08 WDB W:1/1
+" 100 лет одиночества "	1 One_Hundred_Years_of_Solitude KB W09 W08 WDB Wx:1/1
+" 13 flowers of Nanjing "	1 Nanking_Massacre W:5/5 W08 W09 WDB
+" 1408 "	1 1408_(film) KB W:3/3 W08 W09 WDB
+" 1517 died onboard the titanic"	1 RMS_Titanic D W09 W08 WDB W:1/1
+" 186	1 1864 W09 W08 WDB CHRON:YEAR Wx:1/1
+" 19	0.5 1922 CHRON:YEAR W08 W09 WDB Wx:1/1
+" 19	0.5 1973 CHRON:YEAR W:1/1 W08 W09 WDB
+" 1959	1 Bill_Dodd KB W:2/2 W08 W09 WDB
+" 1984 "	1 Nineteen_Eighty-Four KB W09 W08 WDB Wx:1/1
+" 1つの	1 Orson_Welles KB W09 W08 WDB Wx:1/1
+" 2001 - ODYSSEE IM WELTRAUM "	1 2001:_A_Space_Odyssey_(film) KB W08 W09 WDB Wx:4/4 l
+" 2008	1 2008_UEFA_Cup_Final W09 W08 WDB Wx:1/1
+" 2012 "	1 2012_(film) KB W09 W08 WDB Wx:1/1
+" 24	1 24_(TV_series) KB W:3/3 W08 W09 WDB l
+" 24: Rescate(amortización), "	1 24:_Redemption KB W09 W08 WDB W:1/1
+" 299792458 m/s "	1 Speed_of_light D W09 W08 WDB Wx:1/1
+" 2nd Amendement " ?	1 Second_Amendment_to_the_United_States_Constitution W:2/2 W08 W09 WDB
+" 3 "	1 Mansour_bin_Zayed_Al_Nahyan W08 W09 WDB Wx:10/10
+" 3D printing"	1 3D_printing W09 W08 WDB W:1/1
+" 4'33" "	1 4′33″ W09 W08 WDB W:1/1
+" 4. Etappe - Die großen israelischen Offensiven (9. Juli	1 1948_Arab–Israeli_War D W09 W08 WDB Wx:1/1
+" 404 page	1 HTTP_404 W:65/65 W08 W09 WDB
+" 7 "	1 Paris KB D W09 W08 WDB W:1/1
+" 7 Continents "	1 Continent W:3/3 W08 W09 WDB l
+" 8 июня 2000 года, видя скорый развал правящей	1 Leszek_Balcerowicz W08 W09 WDB Wx:4/4
+" 9 апреля 2009 года главный государственный санитарный врач	1 Salvia_divinorum W09 W08 WDB Wx:1/1
+" 9th Annual IMA winner"	1 Independent_Music_Awards W:2/2
+" 9th Annual Independent Music Awards winner"	1 Independent_Music_Awards W:4/4
+" ; willing suspension of disbelief "	1 Suspension_of_disbelief W08 W09 WDB Wx:4/4
+" >Korean typefounding	1 History_of_typography_in_East_Asia NR RWB W:3/3 W08 W09 WDB
+" >abstracted	1 Chinese_character_classification W:3/3 W08 W09 WDB
+" >pink underwear	1 Joe_Arpaio W:2/2 W08 W09 WDB
+" A Bela e a Fera"	1 Beauty_and_the_Beast_(1991_film) KB W08 W09 WDB Wx:4/4
+" A Bit of Fry and Laurie"	1 A_Bit_of_Fry_and_Laurie KB RWB W:3/3 W08 W09 WDB
+" A Brief History of Time" by Stephen Hawking	1 A_Brief_History_of_Time KB W:8/8 W08 W09 WDB
+" A Fool in Love"	1 A_Fool_in_Love W:2/2 W08 W09 WDB
+" A March, 1974 U.S. State Department report cited	1 Chile_under_Pinochet KB NR RWB W:4/4 W08 W09 WDB
+" A Midsummers Night Dream".	1 A_Midsummer_Night's_Dream KB W:2/2 W08 W09 WDB
+" A Million Little Pieces"	1 A_Million_Little_Pieces KB W09 W08 WDB W:1/1
+" A Serbian Film"	1 A_Serbian_Film W:2/2
+" A Very Long Engagement"	1 A_Very_Long_Engagement KB W09 W08 WDB W:1/1
+" A big man from Pale_Blue_Dot": Carl Sagan →	1 Pale_Blue_Dot W09 W08 WDB W:1/1
+" A canticle for Leibowitz",	1 A_Canticle_for_Leibowitz KB W:3/3 W08 W09 WDB
+" A certain history(story) of the internet "	1 Internet D W08 W09 WDB Wx:2/2
+" A christmas memory" by Truman Capote	1 A_Christmas_Memory W:2/2 W08 W09 WDB
+" A la Maison Blanche "	1 The_West_Wing KB W08 W09 WDB Wx:2/2
+" A midsummer night's dream"	1 A_Midsummer_Night's_Dream KB W:3/3 W08 W09 WDB
+" A picture is worth a thousand words".	1 A_picture_is_worth_a_thousand_words W09 W08 WDB W:1/1
+" A por ellos que son pocos y cobardes	1 Loquillo_(singer) W09 WDB Wx:1/1
+" A ruler, or rule, is an instrument used	1 Ruler D W:5/5 W08 W09 WDB
+" A segmento de mercado es un subconjunto de	1 Market_segment W09 W08 WDB NR RWB W:1/1
+" A um Passo da Eternidade"	1 From_Here_to_Eternity KB W08 W09 WDB Wx:2/2
+" A walk to remamber"	1 A_Walk_to_Remember KB W08 W09 WDB Wx:4/4
+" A"	1 Atlanta,_Georgia D KB NR R09 RDB RWB W:19/19 W08 l
+" AIDS was first recognized by the U.S. Centers	1 AIDS KB D W09 W08 WDB W:1/1
+" AJAX library"	1 List_of_Ajax_frameworks L W:2/2 W08 W09 WDB l
+" ALF, "	1 ALF_(TV_series) W:3/3 W08 W09 WDB
+" AMADEUS "	1 Amadeus_(film) KB W09 W08 WDB Wx:1/1
+" AMERICAN PSYCHO "	1 American_Psycho KB W09 W08 WDB Wx:1/1
+" APIX DORSATA "	1 Apis_dorsata W09 W08 WDB Wx:1/1
+" AQUI "	0.5 2008_Summer_Olympics W08 W09 WDB Wx:8/16
+" AQUI "	0.5 Fernando_Pessoa KB W08 W09 WDB Wx:8/16
+" ARABE"	1 Arabic_language KB W08 W09 WDB Wx:6/6
+" ARIA "	1 Aria_(Belgian_comic) W08 W09 WDB Wx:3/3
+" AU NOM DU PERE "	1 In_the_Name_of_the_Father_(film) KB W09 W08 WDB Wx:1/1
+" Abadas"	0.333333 Charitas W08 W09 WDB Wx:1/3
+" Abadas"	0.333333 Fecal_coliforms NR RWB W08 W09 WDB Wx:1/3
+" Abadas"	0.333333 Indiaroba W08 W09 WDB Wx:1/3
+" Abbey Road "	1 Abbey_Road_(album) D KB NR RWB W08 W09 WDB Wx:2/2
+" Abra definición de la fuente "	1 Open_Source_Definition W09 W08 WDB Wx:1/1
+" Absence of evidence is not evidence of absence	1 Evidence_of_absence W:6/6 W08 W09 WDB
+" Abu Abdullah Muhammad Ibn Abdullah Al Lawati Al	1 Ibn_Battuta KB W:2/2 W08 W09 WDB
+" Abzatz "	1 New_Chronology_(Fomenko) W09 WDB R08 Wx:1/1
+" Accelerate "	1 Accelerate_(R.E.M._album) D KB W:3/3 W08 W09 WDB
+" According to Wikipedia's article on Cartoon pornography . .	1 Cartoon_pornography W:2/2 W08 W09 WDB
+" According to the Israeli scholar Reuven Paz "approximately	1 Hamas KB W:2/2 W08 W09 WDB
+" Ace of Spades"	1 Ace_of_Spades_(song) KB W:8/8 W08 W09 WDB
+" Achilli prueba(juicio) "	1 Giacinto_Achilli W09 W08 WDB W:1/1
+" Acornsoft "	1 Acornsoft KB W09 W08 WDB W:1/1
+" Actuaalmente se le encuentra en aislamiento completo y	1 Osiel_Cárdenas KB W09 W08 WDB NR RWB Wx:1/1
+" Ad hoc "	1 Ad_hoc W09 W08 WDB Wx:1/1
+" Adquisición de Cosas Hechas " (GTD)	1 Getting_Things_Done KB W09 W08 WDB W:1/1
+" Afocal projection is the method most commonly associated	1 Digiscoping W:2/2 W08 W09 WDB
+" Age of Innocence ".	1 The_Age_of_Innocence KB W:3/3 W08 W09 WDB
+" Age of Innocence. "	1 The_Age_of_Innocence KB W09 W08 WDB W:1/1
+" Agustina De Aragón ", "La Artillera"	1 Agustina_de_Aragón KB W08 W09 WDB Wx:17/17
+" Ahí, "	1 Over_There_(TV_series) KB W09 W08 WDB W:1/1
+" Aidez vos pièces elles vous aideront! "	1 Paul_Morphy D KB W08 W09 WDB Wx:33/33
+" Airstrip One "	1 Nations_of_Nineteen_Eighty-Four W:3/3 W08 W09 WDB
+" Aisha " Movie Reviews - Bollywood Mania Club Indonesia	1 Aisha_(film) W:4/4
+" Ajenos en América . "	1 Aliens_in_America KB l W09 W08 WDB W:1/1
+" Aksjonærene " i alle pyramidespill er fornøyd så lenge	1 Bernard_Madoff W09 WDB Wx:2/2
+" Akumajo Dracula / Castlevania "	1 Castlevania_(video_game) KB W08 W09 WDB Wx:2/2
+" Aladin et la lampe merveilleuse "	1 Aladdin D W08 W09 WDB Wx:2/2
+" Alanis Morissette once said herself that the biggest	1 Ironic_(song) W09 W08 WDB W:1/1
+" Alas Babylon "by Pat Frank	1 Alas,_Babylon KB W:2/2 W08 W09 WDB
+" Alcool e gasolina a confronto"	0.333333 Charitas W08 W09 WDB Wx:1/3
+" Alcool e gasolina a confronto"	0.333333 Fecal_coliforms NR RWB W08 W09 WDB Wx:1/3
+" Alcool e gasolina a confronto"	0.333333 Indiaroba W08 W09 WDB Wx:1/3
+" Alex Darwin"	0 Adel_Darwish W08 W09 WDB c r t
+" Alfa Romeo	1 Alfa_Romeo KB W09 W08 WDB W:1/1
+" All's Well That Ends Wel l"	1 All's_Well_That_Ends_Well_(album) D KB NR RWB W:2/2 W08 W09 WDB
+" Alpargata "	1 Espadrilles W09 W08 WDB Wx:1/1
+" Als Palästinenser galten ursprünglich alle Bewohner des gesamten	1 Palestinian_people KB D W09 W08 WDB Wx:1/1
+" Alvear"	1 Argentine_War_of_Independence KB W08 W09 WDB Wx:4/4
+" Alí Baba y los cuarenta ladrones"	1 Ali_Baba W09 W08 WDB Wx:1/1
+" American	1 American_Political_Science_Review KB W09 W08 WDB W:1/1
+" An Officer and A Gentleman"	1 An_Officer_and_a_Gentleman KB W:4/4 W08 W09 WDB
+" An experiment with Time"	1 An_Experiment_with_Time KB W:5/5 W08 W09 WDB
+" Andreas Stihl	1 Andreas_Stihl W:43/43 W08 W09 WDB
+" Androids dream about electric sheeps "	1 Do_Androids_Dream_of_Electric_Sheep? KB W08 W09 WDB Wx:2/2
+" Andy Rooney	1 Andy_Rooney KB W09 W08 WDB W:1/1
+" Angel, "	1 Angel_(TV_series) KB W:5/5 W08 W09 WDB l
+" Angel. "	1 Angel_(TV_series) KB l W09 W08 WDB W:1/1
+" Angolszász országok alatt értjük azokat az államokat, országokat	1 Anglosphere D W08 W09 WDB Wx:7/7
+" Animal"	1 Animal_(Muppet) KB W:2/2 W08 W09 WDB
+" Anti-Counterfeiting Trade Agreement ", ACTA	1 Anti-Counterfeiting_Trade_Agreement W:2/2 W08 W09 WDB
+" Antillas Holandesas "	1 Netherlands_Antilles KB W08 W09 WDB Wx:3/3
+" Antoni Gaudí".	1 Antoni_Gaudí D KB W08 W09 WDB Wx:6/6
+" Apart from a little dampness, Herman, how's everything	1 Jim_Unger W09 W08 WDB W:1/1
+" Apolo 13, "	1 Apollo_13_(film) KB W:2/2 W08 W09 WDB
+" Appalachian Trail"	1 Mark_Sanford_disappearance_and_extramarital_affair W:1/1
+" Apparently, one reason Maddow's ratings are down is	1 Rachel_Maddow KB W:2/2 W08 W09 WDB
+" Aprende a mirar donde ya miraste y trata	1 Creativity D W08 W09 WDB Wx:5/5
+" Aquelarre " en Entrenamiento	1 Witches_(Discworld) W09 W08 WDB Wx:1/1
+" Aqui"	1 Death_Note W08 W09 WDB Wx:2/2
+" Archangel Sealtiel "	1 Selaphiel W:2/2 W08 W09 WDB
+" Architecture in Helsinki"	1 Architecture_in_Helsinki KB W08 W09 WDB Wx:2/2
+" Are you pondering what I am pondering ?"	1 Pinky_and_the_Brain KB W:2/2 W08 W09 WDB
+" Art " - Wikipédia	1 'Art'_(play) KB W08 W09 WDB Wx:2/2
+" Artemisia princeps"	1 Artemisia_princeps W09 W08 WDB W:1/1
+" Artículo por el Doctor Carlos González, en la	1 Carlos_González D W09 W08 WDB Wx:1/1
+" Asesinato en el expreso de Oriente"	1 Murder_on_the_Orient_Express_(disambiguation) D W08 W09 WDB Wx:2/2
+" Asian long-horned beetle causes widespread mortality of	1 Asian_long-horned_beetle W:3/3 W08 W09 WDB
+" Aspergers syndrom	1 Asperger_syndrome KB W08 W09 WDB Wx:21/21 l
+" Aspre Tarantino "	1 Quentin_Tarantino KB W08 W09 WDB Wx:2/2
+" Astor Piazzola"	1 Ástor_Piazzolla KB W08 W09 WDB Wx:2/2
+" At the time it was meant to have	1 Brazilian_real D KB W:2/2 W08 W09 WDB
+" Attack of the Clones "	1 Star_Wars_Episode_II:_Attack_of_the_Clones KB W09 W08 WDB W:1/1
+" Attempt of exhaustion of a Parisian place "	1 Tentative_d'épuisement_d'un_lieu_parisien W08 W09 WDB Wx:3/3
+" Auf der anderen Seite schrieb Golda Meïr später	1 Évian_Conference W09 W08 WDB Wx:1/1
+" Aufstieg und Fall der Stadt Mahagonny" (Oper)	1 Rise_and_Fall_of_the_City_of_Mahagonny W08 W09 WDB Wx:155/155
+" Avanti ! "	1 Avanti!_(Italian_newspaper) W08 W09 WDB Wx:2/2
+" Aventuras en la Ciudad	1 Adventures_in_Babysitting KB W08 W09 WDB Wx:2/2
+" Awamori "	1 Awamori W:3/3 W08 W09 WDB
+" Awesome " - Wikipedia, the free encyclopedia	1 "Awesome" W09 W08 WDB W:1/1
+" Axis powers "	1 Axis_powers KB W09 W08 WDB W:1/1
+" Azúcar Negra"	1 Azucar_Negra KB W09 W08 WDB W:1/1
+" BOTTARGA "	1 Botargo W:2/2 W08 W09 WDB
+" BYO Split Series, Vol 3	1 BYO_Split_Series,_Vol._3 KB NR RWB W:2/2 W08 W09 WDB
+" Babilonia 5. "	1 Babylon_5 KB W09 W08 WDB W:1/1
+" Baby Vangy"	1 Baba_Vanga KB W:2/2 W08 W09 WDB
+" Bad "	1 Bad_Manners KB W:2/2 W08 W09 WDB
+" Bahai "	1 Bahá'í_Faith W09 W08 WDB W:1/1
+" Bailes con Lobos, "	1 Dances_with_Wolves KB W:3/3 W08 W09 WDB
+" Balvan revolucija "	1 Log_Revolution W09 W08 WDB Wx:1/1
+" Bamboo shoot "	1 Bamboo_shoot W:2/2 W08 W09 WDB
+" Bandaid - Do they know it's Christmas? "	1 Do_They_Know_It's_Christmas? KB W:8/8 W08 W09 WDB
+" Barbarella"	1 Barbarella_(comics) W08 W09 WDB Wx:10/10
+" Bardo Thodol "	1 Bardo_Thodol R08 W:2/2 W09 WDB
+" Baron Carrickfergus	1 Baron_Carrickfergus W:3/3
+" Barrer"	1 Barrer W:2/2 W08 W09 WDB
+" Basashi "	1 Horse_meat W09 W08 WDB W:1/1
+" Basashi 馬刺 "	1 Horse_meat W09 W08 WDB W:1/1
+" Batalla de Guam "	1 Battle_of_Guam_(1944) KB W08 W09 WDB Wx:4/4
+" Batman: The Dark Knight Returns "	1 Batman:_The_Dark_Knight_Returns KB W09 W08 WDB RWB W:1/1
+" Battle Royal "	1 Battle_Royale_(film) KB W08 W09 WDB Wx:23/23
+" Battle for Haditha" (2007)	1 Battle_for_Haditha_(film) KB W:5/5 W08 W09 WDB
+" Battlestar Galactica. "	1 Battlestar_Galactica_(1978_TV_series) KB W09 W08 WDB W:1/1
+" Becker, "	1 Becker_(TV_series) KB W09 W08 WDB W:1/1
+" Beethoven	1 Ludwig_van_Beethoven D W:6/6 W08 W09 WDB
+" Before the Wall Street Crash of 1929, there	1 Securities_regulation_in_the_United_States W09 W08 WDB W:1/1
+" Belleza y la Bestia. "	1 Beauty_and_the_Beast_(TV_series) KB W:5/5 W08 W09 WDB
+" Berlín, sinfonía de una gran ciudad"	1 Berlin:_Symphony_of_a_Great_City KB NR RWB W:5/5 W08 W09 WDB
+" Beste Mommie. "	1 Mommie_Dearest_(film) KB W:2/2 W08 W09 WDB
+" BetiZFest "	1 Flatcat_(band) W09 W08 WDB Wx:1/1
+" Bibliotek " อนุสรณ์	1 Micha_Ullman WDB Wx:1/1
+" Bicentennial Man "	1 Bicentennial_Man_(film) KB W:3/3 W08 W09 WDB
+" Big Al"	1 Allosaurus W09 W08 WDB Wx:1/1
+" Big Dig "	1 Big_Dig D W09 W08 RDB W:1/1
+" Big Man "	1 Ampersand W08 W09 WDB Wx:5/5
+" Big River"	1 Highwayman_(The_Highwaymen_album) Wx:1/1
+" Big Whiskey and the GrooGrux King"	1 Big_Whiskey_and_the_GrooGrux_King W:8/8 WDB
+" Bigmouth Strikes Again"	1 Bigmouth_Strikes_Again KB W:4/4 W08 W09 WDB
+" Bill Nighy	1 Bill_Nighy KB W:3/3 W08 W09 WDB
+" Binaural beats "	1 Binaural_beats W:4/4 W08 W09 WDB
+" Binchōtan "	1 Binchōtan W:5/5 W08 W09 WDB
+" Binchōtan 備長炭 "	1 Binchōtan W09 W08 WDB W:1/1
+" Bio et Activités récentes de George Fitzgerald Smoot	1 George_Smoot KB W09 W08 WDB Wx:1/1
+" Bird's Nest."	1 Beijing_National_Stadium KB W:5/5 W08 W09 WDB
+" Biserica Ortodoxă Ucraineenă a Canadei "	1 Ukrainian_Orthodox_Church_of_Canada W:15/15 W08 W09 WDB
+" Black Album " ( O Álbum Negro )	1 Metallica_(album) KB W08 W09 WDB Wx:2/2
+" Black Books"	1 Black_Books KB W08 W09 WDB Wx:8/8
+" Blackadder, "	1 Blackadder D KB W:3/3 W08 W09 WDB
+" Blending Modes "	1 Blend_modes W:4/4 W08 W09 WDB
+" Blind from shortly after birth,[3] "	1 Stevie_Wonder KB W:11/11 W08 W09 WDB
+" Blink "	1 Blink_(book) KB W09 W08 WDB W:1/1
+" Blood in blood out"	1 Blood_in_Blood_Out KB RWB W08 W09 WDB Wx:4/4
+" Blood's and Crips"	1 Bloods_&_Crips KB W:2/2 W08 W09 WDB
+" Blue Moon "	1 Blue_moon W09 W08 WDB Wx:1/1
+" Blue water navy "	1 Blue-water_navy W:5/5 W08 W09 WDB
+" Blues de Calle de Colina "	1 Hill_Street_Blues KB W:10/10 W08 W09 WDB l
+" Bo le Lavabo "	1 Bo_le_lavabo W09 W08 WDB Wx:1/1
+" Bob Burn	1 Bob_Burns D W09 W08 WDB W:1/1
+" Bob Ross "	1 Bob_Ross KB W:2/2 W08 W09 WDB
+" Bockscar "	1 Bockscar W09 W08 WDB w:1/1
+" Bohol"	1 Bohol KB W08 W09 WDB Wx:2/2
+" Bolsa de Mareo" y "Toco Fondo"	1 Fome KB W08 W09 WDB Wx:3/3
+" Bon-Odori "	1 Bon_Festival W09 W08 WDB W:1/1
+" Bonus Army "	1 Bonus_Army W:5/5 W08 W09 WDB
+" Boot Camp, a software assistant for the installation	1 Mac_OS_X_v10.5 KB W09 W08 WDB RWB W:1/1
+" Boston Legal, "	1 Boston_Legal KB W:5/5 W08 W09 WDB
+" Boston Tea Party "	1 Boston_Tea_Party W08 W09 WDB Wx:2/2
+" Botox"	1 Botulinum_toxin W09 W08 WDB Wx:1/1
+" Bovine Spongiform Encephalopathy"	1 Bovine_spongiform_encephalopathy D W09 W08 WDB W:1/1
+" Bracken 蕨 starch "	1 Bracken W:2/2 W08 W09 WDB
+" Brain Strom"	1 Brainstorming W:3/3 W08 W09 WDB
+" Brainerd	1 Fargo_(film) KB W09 W08 WDB W:1/1
+" Bramwell Booth	1 Bramwell_Booth KB W09 W08 WDB W:1/1
+" Brasinca "	1 Brasinca_Uirapuru Wx:1/1
+" Brave New World "	1 Brave_New_World D KB W:27/27 W08 W09 WDB
+" Break the ice"	1 Blackout_(Britney_Spears_album) KB W08 W09 WDB Wx:3/3
+" Breakin ' "	1 Breakin' KB W09 W08 WDB W:1/1
+" Breakin ' 2: Boogaloo Eléctrico "	1 Breakin'_2:_Electric_Boogaloo KB W09 W08 WDB W:1/1
+" Bridgend Suicide Incidents "	1 Bridgend_suicide_incidents W09 W08 WDB W:1/1
+" Brigade Karelia "	1 Karelia_Brigade W:3/3 W08 W09 WDB
+" Broken China"	1 Broken_China KB W09 W08 WDB W:1/1
+" Brook`s Law"	1 Brooks's_law W09 W08 WDB W:1/1
+" Brothers in armis"	1 Brothers_in_Arms_(album) D KB NR RWB W08 W09 WDB Wx:2/2
+" Brujas "	1 Umineko_no_Naku_Koro_ni W09 W08 WDB Wx:1/1
+" Bubaspitzle"	1 Schupfnudel W09 WDB Wx:1/1
+" Bucossi is one of the assassins contracted to	1 List_of_characters_from_The_Sopranos_in_the_Lupertazzi_crime_family L l W09 W08 WDB W:1/1
+" Budweise	1 Budweiser_(Anheuser-Busch) KB W09 W08 WDB W:1/1
+" Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo	1 Buffalo_buffalo_Buffalo_buffalo_buffalo_buffalo_Buffalo_buffalo W:2/2 W08 W09 WDB
+" Buffy el Asesino de Vampiro "	1 Buffy_the_Vampire_Slayer_(TV_series) KB W:7/7 W08 W09 WDB l
+" Bugs " Moran - Wicipedia	1 Bugs_Moran W09 W08 WDB Wx:1/1
+" Buri-kama "	1 Japanese_amberjack W08 W09 WDB Wx:2/2
+" Burke and Hare murders	1 Burke_and_Hare_murders KB W:7/7 W08 W09 WDB
+" Burning of Books and Burying of Scholars"	1 Burning_of_books_and_burying_of_scholars W09 W08 WDB W:1/1
+" But the person who scored well on an	1 William_Julius_Wilson W:30/30 W08 W09 WDB
+" Butch Cassidy y el Niño de Sundance, "	1 Butch_Cassidy_and_the_Sundance_Kid KB W09 W08 WDB W:1/1
+" Buzz Lightyear "	1 Buzz_Lightyear W09 W08 WDB W:1/1
+" Bồ Đào Nhà..."	1 Portuguese_language KB W:2/2 W08 W09 WDB
+" CANONICI PREMOSTRATENSI "	1 Premonstratensian W08 W09 WDB Wx:3/3
+" CHIENLIT "	1 Chienlit W09 W08 WDB Wx:1/1
+" CHITRA-Pajaros perdidos" de Rabindranath Tagore [ fragmento ]	1 Rabindranath_Tagore D KB W08 W09 WDB Wx:2/2
+" CHOCOLATE SANTA CLAUS SING'S " A STONETHUG XMAS	1 Juggling_balls W09 W08 WDB NR RWB W:1/1
+" CIDR	1 Classless_Inter-Domain_Routing W09 W08 WDB W:1/1
+" CIDR (Classless inter-domain routing)"	1 Classless_Inter-Domain_Routing W:18/18 W08 W09 WDB
+" CLICK HERE."	1 Omkara D NR RDB RWB W:2/2 W08 W09
+" CONAN, THE BOY IN FUTURE "	1 Future_Boy_Conan W:2/2 W08 W09 WDB
+" Ca. Phytoplasma"	1 Phytoplasma W:2/2 W08 W09 WDB
+" Cabeza de mujer llorando con pañuelo" Pablo Picasso	1 Pablo_Picasso D KB W08 W09 WDB Wx:3/3
+" Cabin	1 Cabin_fever D W:2/2 W08 W09 WDB
+" Cable en la Sangre, "	1 Wire_in_the_Blood KB W09 W08 WDB W:1/1
+" Cailloux dans le ciel "	1 Pebble_in_the_Sky KB W09 W08 WDB Wx:1/1
+" Calhoun was dumped	1 Nullification_Crisis W:13/13 W08 W09 WDB
+" Call of Duty	1 Call_of_Duty KB W:3/3 W08 W09 WDB l
+" Calyx Krater "	1 Krater W:2/2 W08 W09 WDB
+" Cambalache"	1 Cambalache Wx:2/2
+" Camellia "	1 Camellia D W09 W08 WDB W:1/1
+" Camellia Oil "	1 Tea_seed_oil W09 W08 WDB W:1/1
+" Campionamento "	1 Sampling_(signal_processing) W08 W09 WDB Wx:8/8
+" Can you tell the difference between Swarovski Crystals	1 Swarovski KB W:2/2 W08 W09 WDB
+" Canary Islands "	1 Canary_Islands D KB W:207/207 W08 W09 WDB
+" Capricci",	1 Caprichos W08 W09 WDB Wx:5/5
+" Carbonara "	1 Carbonara KB W:2/2 W08 W09 WDB
+" Carillon "	1 Musical_box W08 W09 WDB Wx:8/8
+" Carne vegetal"	1 Wheat W09 W08 WDB Wx:1/1
+" Carpe diem "	1 Carpe_diem W08 W09 WDB Wx:9/9
+" Carta Abierta A La Junta Militar "	1 Rodolfo_Walsh KB W09 W08 WDB Wx:1/1
+" Carteira assinada"	0.333333 Charitas W08 W09 WDB Wx:1/3
+" Carteira assinada"	0.333333 Fecal_coliforms NR RWB W08 W09 WDB Wx:1/3
+" Carteira assinada"	0.333333 Indiaroba W08 W09 WDB Wx:1/3
+" Casa de Monstruo "	1 Monster_House_(U.S._TV_series) W:3/3
+" Casa de Monstruo, "	1 Monster_House_(TV_series) KB D W09 W08 WDB NR RWB W:1/1
+" Casa de muñecas, "	1 Dollhouse_(TV_series) KB W09 W08 WDB W:1/1
+" Catch me if you can"	1 Catch_Me_If_You_Can KB W:5/5 W08 W09 WDB
+" Catherine Clinton	1 Catherine_Clinton W09 W08 WDB W:1/1
+" Cats "	1 Cats_(musical) KB W08 W09 WDB Wx:4/4
+" Catástrofe de Malthus "	1 Malthusian_catastrophe W08 W09 WDB Wx:5/5
+" Caveat emptor "	1 Caveat_emptor W:2/2 W08 W09 WDB
+" Cebu"	1 Cebu_City KB W09 W08 WDB Wx:1/1
+" Censorship of Video Games and Internet sites hosted	1 Censorship_in_Australia W09 W08 WDB W:1/1
+" Chanel Iman"	1 Chanel_Iman KB W09 W08 WDB W:1/1
+" Chaqueta Llena Metálica "	1 Full_Metal_Jacket KB W:2/2 W08 W09 WDB
+" Charata"	1 Charata W08 W09 WDB Wx:6/6
+" Charitas"	0.6 Charitas W08 W09 WDB Wx:3/5
+" Charitas"	0.2 Fecal_coliforms NR RWB W08 W09 WDB Wx:1/5
+" Charitas"	0.2 Indiaroba W08 W09 WDB Wx:1/5
+" Chateauneuf-De-Pape".	1 Châteauneuf-du-Pape_AOC KB W08 W09 WDB Wx:4/4
+" Chazuke "	1 Chazuke W:3/3 W08 W09 WDB
+" Chemin des Dames"	1 Chemin_des_Dames W08 W09 WDB Wx:2/2
+" Cherrelle"	1 Cherrelle KB W:5/5 W08 W09 WDB
+" Chicago "	1 History_of_Chicago W:2/2 W08 W09 WDB
+" Chicken Breeds	1 List_of_chicken_breeds L l W09 W08 WDB W:1/1
+" Chicken Neck"	1 Chicken D W:5/5 W08 W09 WDB
+" Chidomegusa = Hydrocotyle "	1 Hydrocotyle W09 W08 WDB W:1/1
+" Chiffre/Nombre d'or "	1 Golden_ratio W09 W08 WDB Wx:1/1
+" Chinese Hymen "	1 Artificial_hymen W:21/21
+" Chirri "	1 Fiat_CR.32 KB W08 W09 WDB Wx:5/5
+" Chistian Death " wiki	1 Christian_Death KB W09 W08 WDB Wx:1/1
+" Cho ANIKI "	1 Cho_Aniki KB W09 W08 WDB Wx:1/1
+" Christian Lacroix "	1 Christian_Lacroix W:1/1 W08 W09 WDB Wx:1/1
+" Chungking Express"	1 Chungking_Express KB W:2/2 W08 W09 WDB
+" Cibuti" - Wikipediya Zazaki, ensiklopediya xosere	1 Djibouti KB W09 W08 WDB Wx:1/1
+" Cicada "	1 Cicada D W:2/2 W08 W09 WDB
+" Cinque Terre "	1 Cinque_Terre KB W08 W09 WDB Wx:8/8
+" Cinta de Hermanos. "	1 Band_of_Brothers_(TV_miniseries) WDB W:1/1
+" Circus "	1 Circus_(Britney_Spears_album) KB W09 W08 WDB Wx:1/1
+" Cisero.	1 Rule_of_law W:4/4 W08 W09 WDB
+" Citizens: A Chronicle of the French Revolution".	1 Citizens_(book) KB W:2/2 W08 W09 WDB
+" Citron" Gonepteryx rhamni	1 Common_Brimstone W08 W09 WDB Wx:3/3
+" Claude Monet	0.666666 Claude_Monet KB W09 W08 WDB W:100/61
+" Claude Monet	0.1755 Claude_Something KB W09 W08 WDB W:71/51
+" Claude Monet	0.05 Claude_Anything KB W09 W08 WDB W:12/11
+" Claymation"	1 Clay_animation W09 W08 WDB Wx:1/1
+" Click "	1 Four_Year_Strong KB W:4/4 W08 W09 WDB
