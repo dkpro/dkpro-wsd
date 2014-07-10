@@ -174,6 +174,12 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 		String text;
 		Element textNode = bodyNode.getChild("TEXT");
 		if(textNode.getChild("POST") != null){
+		    text = "";
+            List list = bodyNode.getChildren("POST");
+            for (int i = 0; i < list.size(); i++) {
+                Element node = (Element) list.get(i);
+                text += node.getTextNormalize() + "\n";
+            }
 			text = textNode.getChild("POST").getTextNormalize();
 		}
 		else{
