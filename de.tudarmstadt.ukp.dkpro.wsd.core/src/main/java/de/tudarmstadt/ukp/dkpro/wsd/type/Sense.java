@@ -29,8 +29,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Dec 19 12:03:46 CET 2011
- * XML source: /home/miller/workspace/de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd.common/src/main/resources/desc/type/WSDResult.xml
+ * Updated by JCasGen Fri Jul 18 16:45:45 CEST 2014
+ * XML source: /home/miller/workspace/de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd.core/src/main/resources/desc/type/WSDResult.xml
  * @generated */
 public class Sense extends Annotation {
   /** @generated
@@ -46,7 +46,7 @@ public class Sense extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Sense() {}
+  protected Sense() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
@@ -69,10 +69,13 @@ public class Sense extends Annotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
+  /** 
+   * <!-- begin-user-doc -->
     * Write your own initialization here
     * <!-- end-user-doc -->
-  @generated modifiable */
+  *
+   * @generated modifiable 
+   */
   private void readObject() {}
      
  
@@ -81,14 +84,18 @@ public class Sense extends Annotation {
   //* Feature: id
 
   /** getter for id - gets The id of the sense
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getId() {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_id == null)
       jcasType.jcas.throwFeatMissing("id", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Sense_Type)jcasType).casFeatCode_id);}
     
   /** setter for id - sets The id of the sense 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setId(String v) {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_id == null)
       jcasType.jcas.throwFeatMissing("id", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");
@@ -99,14 +106,18 @@ public class Sense extends Annotation {
   //* Feature: confidence
 
   /** getter for confidence - gets The confidence of the sense
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public double getConfidence() {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_confidence == null)
       jcasType.jcas.throwFeatMissing("confidence", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");
     return jcasType.ll_cas.ll_getDoubleValue(addr, ((Sense_Type)jcasType).casFeatCode_confidence);}
     
   /** setter for confidence - sets The confidence of the sense 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setConfidence(double v) {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_confidence == null)
       jcasType.jcas.throwFeatMissing("confidence", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");
@@ -117,14 +128,18 @@ public class Sense extends Annotation {
   //* Feature: description
 
   /** getter for description - gets A textual representation of the sense
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getDescription() {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_description == null)
       jcasType.jcas.throwFeatMissing("description", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Sense_Type)jcasType).casFeatCode_description);}
     
   /** setter for description - sets A textual representation of the sense 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setDescription(String v) {
     if (Sense_Type.featOkTst && ((Sense_Type)jcasType).casFeat_description == null)
       jcasType.jcas.throwFeatMissing("description", "de.tudarmstadt.ukp.dkpro.wsd.type.Sense");

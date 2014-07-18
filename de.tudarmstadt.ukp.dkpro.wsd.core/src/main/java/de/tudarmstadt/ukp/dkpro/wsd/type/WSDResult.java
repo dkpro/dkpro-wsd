@@ -27,14 +27,10 @@ import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
-/**
- * Updated by JCasGen Mon Dec 19 12:03:46 CET 2011 XML source:
- * /home/miller/workspace
- * /de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd
- * .common/src/main/resources/desc/type/WSDResult.xml
- *
- * @generated
- */
+/** 
+ * Updated by JCasGen Fri Jul 18 16:45:45 CEST 2014
+ * XML source: /home/miller/workspace/de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd.core/src/main/resources/desc/type/WSDResult.xml
+ * @generated */
 public class WSDResult
 extends Annotation
 {
@@ -42,8 +38,7 @@ extends Annotation
 	 * @generated
 	 * @ordered
 	 */
-	public final static int typeIndexID = JCasRegistry
-	.register(WSDResult.class);
+	public final static int typeIndexID = JCasRegistry.register(WSDResult.class);
 	/**
 	 * @generated
 	 * @ordered
@@ -52,46 +47,38 @@ extends Annotation
 
 	/** @generated */
 	@Override
-	public int getTypeIndexID()
-	{
-		return typeIndexID;
-	}
-
+	public int getTypeIndexID() {return typeIndexID;}
+ 
 	/**
 	 * Never called. Disable default constructor
 	 *
 	 * @generated
 	 */
-	protected WSDResult()
-	{
-	}
-
+	protected WSDResult() {/* intentionally empty block */}
+    
 	/**
 	 * Internal - constructor used by generator
 	 *
 	 * @generated
 	 */
-	public WSDResult(int addr, TOP_Type type)
-	{
-		super(addr, type);
-		readObject();
-	}
+	public WSDResult(int addr, TOP_Type type) {
+    super(addr, type);
+    readObject();
+  }
+  
+	/** @generated */
+	public WSDResult(JCas jcas) {
+    super(jcas);
+    readObject();   
+  } 
 
 	/** @generated */
-	public WSDResult(JCas jcas)
-	{
-		super(jcas);
-		readObject();
-	}
-
-	/** @generated */
-	public WSDResult(JCas jcas, int begin, int end)
-	{
-		super(jcas);
-		setBegin(begin);
-		setEnd(end);
-		readObject();
-	}
+	public WSDResult(JCas jcas, int begin, int end) {
+    super(jcas);
+    setBegin(begin);
+    setEnd(end);
+    readObject();
+  }   
 
 	/**
 	 * <!-- begin-user-doc --> Write your own initialization here <!--
@@ -103,81 +90,50 @@ extends Annotation
 	{
 	}
 
-	// *--------------*
-	// * Feature: senses
+  //*--------------*
+  //* Feature: senses
 
-	/**
-	 * getter for senses - gets
-	 *
-	 * @generated
-	 */
-	public FSArray getSenses()
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senses == null) {
-			jcasType.jcas.throwFeatMissing("senses",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		return (FSArray) (jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas
-				.ll_getRefValue(addr,
-						((WSDResult_Type) jcasType).casFeatCode_senses)));
-	}
+  /** getter for senses - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public FSArray getSenses() {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senses == null)
+      jcasType.jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses)));}
+    
+  /** setter for senses - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setSenses(FSArray v) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senses == null)
+      jcasType.jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.ll_cas.ll_setRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for senses - gets an indexed value - 
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
+  public Sense getSenses(int i) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senses == null)
+      jcasType.jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses), i);
+    return (Sense)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses), i)));}
 
-	/**
-	 * setter for senses - sets
-	 *
-	 * @generated
-	 */
-	public void setSenses(FSArray v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senses == null) {
-			jcasType.jcas.throwFeatMissing("senses",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.ll_cas.ll_setRefValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_senses, jcasType.ll_cas
-				.ll_getFSRef(v));
-	}
-
-	/**
-	 * indexed getter for senses - gets an indexed value -
-	 *
-	 * @generated
-	 */
-	public Sense getSenses(int i)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senses == null) {
-			jcasType.jcas.throwFeatMissing("senses",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_senses), i);
-		return (Sense) (jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas
-				.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr,
-						((WSDResult_Type) jcasType).casFeatCode_senses), i)));
-	}
-
-	/**
-	 * indexed setter for senses - sets an indexed value -
-	 *
-	 * @generated
-	 */
-	public void setSenses(int i, Sense v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senses == null) {
-			jcasType.jcas.throwFeatMissing("senses",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_senses), i);
-		jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(
-				addr, ((WSDResult_Type) jcasType).casFeatCode_senses), i,
-				jcasType.ll_cas.ll_getFSRef(v));
-	}
-
+  /** indexed setter for senses - sets an indexed value - 
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
+  public void setSenses(int i, Sense v) { 
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senses == null)
+      jcasType.jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senses), i, jcasType.ll_cas.ll_getFSRef(v));}
+   
+    
 	// *--------------*
 	// * Feature: disambiguationMethod
 
@@ -187,37 +143,23 @@ extends Annotation
 	 *
 	 * @generated
 	 */
-	public String getDisambiguationMethod()
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_disambiguationMethod == null) {
-			jcasType.jcas.throwFeatMissing("disambiguationMethod",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		return jcasType.ll_cas.ll_getStringValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_disambiguationMethod);
-	}
-
+	public String getDisambiguationMethod() {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_disambiguationMethod == null)
+      jcasType.jcas.throwFeatMissing("disambiguationMethod", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_disambiguationMethod);}
+    
 	/**
 	 * setter for disambiguationMethod - sets The method name which is used to
 	 * determine senses
 	 *
 	 * @generated
 	 */
-	public void setDisambiguationMethod(String v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_disambiguationMethod == null) {
-			jcasType.jcas.throwFeatMissing("disambiguationMethod",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.ll_cas
-		.ll_setStringValue(
-				addr,
-				((WSDResult_Type) jcasType).casFeatCode_disambiguationMethod,
-				v);
-	}
-
+	public void setDisambiguationMethod(String v) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_disambiguationMethod == null)
+      jcasType.jcas.throwFeatMissing("disambiguationMethod", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.ll_cas.ll_setStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_disambiguationMethod, v);}    
+   
+    
 	// *--------------*
 	// * Feature: senseInventory
 
@@ -227,71 +169,45 @@ extends Annotation
 	 *
 	 * @generated
 	 */
-	public String getSenseInventory()
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senseInventory == null) {
-			jcasType.jcas.throwFeatMissing("senseInventory",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		return jcasType.ll_cas.ll_getStringValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_senseInventory);
-	}
-
+	public String getSenseInventory() {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senseInventory == null)
+      jcasType.jcas.throwFeatMissing("senseInventory", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senseInventory);}
+    
 	/**
 	 * setter for senseInventory - sets The textual represenatation of the used
 	 * sense inventory
 	 *
 	 * @generated
 	 */
-	public void setSenseInventory(String v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_senseInventory == null) {
-			jcasType.jcas.throwFeatMissing("senseInventory",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.ll_cas.ll_setStringValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_senseInventory, v);
-	}
+	public void setSenseInventory(String v) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_senseInventory == null)
+      jcasType.jcas.throwFeatMissing("senseInventory", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.ll_cas.ll_setStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_senseInventory, v);}    
+   
+    
+  //*--------------*
+  //* Feature: wsdItem
 
-	// *--------------*
-	// * Feature: wsdItem
-
-	/**
-	 * getter for wsdItem - gets The corresponding WSDItem for this WSDResult
-	 *
-	 * @generated
-	 */
-	public WSDItem getWsdItem()
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_wsdItem == null) {
-			jcasType.jcas.throwFeatMissing("wsdItem",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		return (WSDItem) (jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas
-				.ll_getRefValue(addr,
-						((WSDResult_Type) jcasType).casFeatCode_wsdItem)));
-	}
-
-	/**
-	 * setter for wsdItem - sets The corresponding WSDItem for this WSDResult
-	 *
-	 * @generated
-	 */
-	public void setWsdItem(WSDItem v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_wsdItem == null) {
-			jcasType.jcas.throwFeatMissing("wsdItem",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.ll_cas.ll_setRefValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_wsdItem,
-				jcasType.ll_cas.ll_getFSRef(v));
-	}
-
+  /** getter for wsdItem - gets The corresponding WSDItem for this WSDResult
+   * @generated
+   * @return value of the feature 
+   */
+  public WSDItem getWsdItem() {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_wsdItem == null)
+      jcasType.jcas.throwFeatMissing("wsdItem", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    return (WSDItem)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_wsdItem)));}
+    
+  /** setter for wsdItem - sets The corresponding WSDItem for this WSDResult 
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setWsdItem(WSDItem v) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_wsdItem == null)
+      jcasType.jcas.throwFeatMissing("wsdItem", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.ll_cas.ll_setRefValue(addr, ((WSDResult_Type)jcasType).casFeatCode_wsdItem, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
 	// *--------------*
 	// * Feature: comment
 
@@ -300,34 +216,21 @@ extends Annotation
 	 *
 	 * @generated
 	 */
-	public String getComment()
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_comment == null) {
-			jcasType.jcas.throwFeatMissing("comment",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		return jcasType.ll_cas.ll_getStringValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_comment);
-	}
-
+	public String getComment() {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_comment == null)
+      jcasType.jcas.throwFeatMissing("comment", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_comment);}
+    
 	/**
 	 * setter for comment - sets
 	 *
 	 * @generated
 	 */
-	public void setComment(String v)
-	{
-		if (WSDResult_Type.featOkTst
-				&& ((WSDResult_Type) jcasType).casFeat_comment == null) {
-			jcasType.jcas.throwFeatMissing("comment",
-			"de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
-		}
-		jcasType.ll_cas.ll_setStringValue(addr,
-				((WSDResult_Type) jcasType).casFeatCode_comment, v);
-	}
-
-	private final static Logger logger = Logger.getLogger(WSDResult.class.getName());
+	public void setComment(String v) {
+    if (WSDResult_Type.featOkTst && ((WSDResult_Type)jcasType).casFeat_comment == null)
+      jcasType.jcas.throwFeatMissing("comment", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
+    jcasType.ll_cas.ll_setStringValue(addr, ((WSDResult_Type)jcasType).casFeatCode_comment, v);}    
+      	private final static Logger logger = Logger.getLogger(WSDResult.class.getName());
 
 	/**
 	 * Normalizes all the weights (confidence values) of senses in the
