@@ -32,7 +32,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Dec 19 12:03:46 CET 2011
+ * Updated by JCasGen Fri Jul 18 16:45:45 CEST 2014
  * @generated */
 public class WSDResult_Type extends Annotation_Type {
   /** @generated */
@@ -63,19 +63,29 @@ public class WSDResult_Type extends Annotation_Type {
   final Feature casFeat_senses;
   /** @generated */
   final int     casFeatCode_senses;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getSenses(int addr) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
     return ll_cas.ll_getRefValue(addr, casFeatCode_senses);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setSenses(int addr, int v) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
     ll_cas.ll_setRefValue(addr, casFeatCode_senses, v);}
     
-   /** @generated */
+   /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @return value at index i in the array 
+   */
   public int getSenses(int addr, int i) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
@@ -85,7 +95,11 @@ public class WSDResult_Type extends Annotation_Type {
   return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_senses), i);
   }
    
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param i index of item in the array
+   * @param v value to set
+   */ 
   public void setSenses(int addr, int i, int v) {
         if (featOkTst && casFeat_senses == null)
       jcas.throwFeatMissing("senses", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
@@ -136,13 +150,19 @@ public class WSDResult_Type extends Annotation_Type {
   final Feature casFeat_wsdItem;
   /** @generated */
   final int     casFeatCode_wsdItem;
-  /** @generated */ 
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @return the feature value 
+   */ 
   public int getWsdItem(int addr) {
         if (featOkTst && casFeat_wsdItem == null)
       jcas.throwFeatMissing("wsdItem", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");
     return ll_cas.ll_getRefValue(addr, casFeatCode_wsdItem);
   }
-  /** @generated */    
+  /** @generated
+   * @param addr low level Feature Structure reference
+   * @param v value to set 
+   */    
   public void setWsdItem(int addr, int v) {
         if (featOkTst && casFeat_wsdItem == null)
       jcas.throwFeatMissing("wsdItem", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult");

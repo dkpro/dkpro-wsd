@@ -30,8 +30,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Dec 19 12:03:46 CET 2011
- * XML source: /home/miller/workspace/de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd.common/src/main/resources/desc/type/WSDResult.xml
+ * Updated by JCasGen Fri Jul 18 16:45:45 CEST 2014
+ * XML source: /home/miller/workspace/de.tudarmstadt.ukp.dkpro.wsd/de.tudarmstadt.ukp.dkpro.wsd.core/src/main/resources/desc/type/WSDResult.xml
  * @generated */
 public class WSDItem extends Annotation {
   /** @generated
@@ -47,7 +47,7 @@ public class WSDItem extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected WSDItem() {}
+  protected WSDItem() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
@@ -70,10 +70,13 @@ public class WSDItem extends Annotation {
     readObject();
   }   
 
-  /** <!-- begin-user-doc -->
+  /** 
+   * <!-- begin-user-doc -->
     * Write your own initialization here
     * <!-- end-user-doc -->
-  @generated modifiable */
+  *
+   * @generated modifiable 
+   */
   private void readObject() {}
      
  
@@ -82,14 +85,18 @@ public class WSDItem extends Annotation {
   //* Feature: subjectOfDisambiguation
 
   /** getter for subjectOfDisambiguation - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getSubjectOfDisambiguation() {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_subjectOfDisambiguation == null)
       jcasType.jcas.throwFeatMissing("subjectOfDisambiguation", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
     return jcasType.ll_cas.ll_getStringValue(addr, ((WSDItem_Type)jcasType).casFeatCode_subjectOfDisambiguation);}
     
   /** setter for subjectOfDisambiguation - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setSubjectOfDisambiguation(String v) {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_subjectOfDisambiguation == null)
       jcasType.jcas.throwFeatMissing("subjectOfDisambiguation", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
@@ -100,14 +107,18 @@ public class WSDItem extends Annotation {
   //* Feature: constituents
 
   /** getter for constituents - gets Array of all constituents for this WSDItem.
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public FSArray getConstituents() {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_constituents == null)
       jcasType.jcas.throwFeatMissing("constituents", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
     return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((WSDItem_Type)jcasType).casFeatCode_constituents)));}
     
   /** setter for constituents - sets Array of all constituents for this WSDItem. 
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setConstituents(FSArray v) {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_constituents == null)
       jcasType.jcas.throwFeatMissing("constituents", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
@@ -134,14 +145,18 @@ public class WSDItem extends Annotation {
   //* Feature: id
 
   /** getter for id - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getId() {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_id == null)
       jcasType.jcas.throwFeatMissing("id", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
     return jcasType.ll_cas.ll_getStringValue(addr, ((WSDItem_Type)jcasType).casFeatCode_id);}
     
   /** setter for id - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setId(String v) {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_id == null)
       jcasType.jcas.throwFeatMissing("id", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
@@ -152,14 +167,18 @@ public class WSDItem extends Annotation {
   //* Feature: pos
 
   /** getter for pos - gets 
-   * @generated */
+   * @generated
+   * @return value of the feature 
+   */
   public String getPos() {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_pos == null)
       jcasType.jcas.throwFeatMissing("pos", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");
     return jcasType.ll_cas.ll_getStringValue(addr, ((WSDItem_Type)jcasType).casFeatCode_pos);}
     
   /** setter for pos - sets  
-   * @generated */
+   * @generated
+   * @param v value to set into the feature 
+   */
   public void setPos(String v) {
     if (WSDItem_Type.featOkTst && ((WSDItem_Type)jcasType).casFeat_pos == null)
       jcasType.jcas.throwFeatMissing("pos", "de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem");

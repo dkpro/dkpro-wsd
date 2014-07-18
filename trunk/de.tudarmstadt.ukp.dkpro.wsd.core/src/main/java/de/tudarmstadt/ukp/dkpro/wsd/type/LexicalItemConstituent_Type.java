@@ -32,7 +32,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Dec 19 12:03:46 CET 2011
+ * Updated by JCasGen Fri Jul 18 16:45:45 CEST 2014
  * @generated */
 public class LexicalItemConstituent_Type extends Annotation_Type {
   /** @generated */
