@@ -5,8 +5,8 @@
   <version>1.0</version>
   <vendor/>
   <imports>
-    <import name="desc.type.Sense"/>
     <import name="desc.type.WSDItem"/>
+  <import name="desc.type.Sense"/>
   </imports>
   <types>
     <typeDescription>
@@ -28,7 +28,7 @@
         </featureDescription>
         <featureDescription>
           <name>senseInventory</name>
-          <description>The textual represenatation of the used sense inventory</description>
+          <description>The textual representation of the used sense inventory</description>
           <rangeTypeName>uima.cas.String</rangeTypeName>
         </featureDescription>
         <featureDescription>
