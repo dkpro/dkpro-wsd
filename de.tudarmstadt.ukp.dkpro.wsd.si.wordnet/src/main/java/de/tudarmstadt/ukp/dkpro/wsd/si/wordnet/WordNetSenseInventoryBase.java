@@ -21,7 +21,6 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.si.wordnet;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -39,6 +38,7 @@ import org.apache.commons.collections15.Transformer;
 import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseDictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 import edu.uci.ics.jung.graph.UndirectedGraph;
@@ -50,7 +50,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public abstract class WordNetSenseInventoryBase
+public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
     implements SenseDictionary, SenseTaxonomy
 {
 
@@ -83,18 +83,6 @@ public abstract class WordNetSenseInventoryBase
         throws SenseInventoryException
     {
         throw new UnsupportedOperationException();
-    }
-
-    @Override
-    public List<String> getSenses(String sod)
-        throws SenseInventoryException
-    {
-        List<String> senses = new ArrayList<String>();
-
-        for (Object pos : net.sf.extjwnl.data.POS.getAllPOS()) {
-            senses.addAll(getSenses(sod, (net.sf.extjwnl.data.POS) pos));
-        }
-        return senses;
     }
 
     /**
@@ -311,13 +299,6 @@ public abstract class WordNetSenseInventoryBase
         throws SenseInventoryException
     {
         return getSenses(sod, siPosToWordNetPos.transform(pos));
-    }
-
-    @Override
-    public String getMostFrequentSense(String sod)
-        throws SenseInventoryException, UnsupportedOperationException
-    {
-        throw new UnsupportedOperationException();
     }
 
     @Override
