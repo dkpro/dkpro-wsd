@@ -36,6 +36,7 @@ import org.apache.commons.logging.LogFactory;
 import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseDictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 import de.tuebingen.uni.sfs.germanet.api.Example;
@@ -52,6 +53,7 @@ import edu.uci.ics.jung.graph.util.Graphs;
  *
  */
 public class GermaNetLexUnitSenseInventory
+    extends SenseInventoryBase
     implements SenseDictionary, SenseTaxonomy
 {
     private final Log logger = LogFactory.getLog(getClass());
