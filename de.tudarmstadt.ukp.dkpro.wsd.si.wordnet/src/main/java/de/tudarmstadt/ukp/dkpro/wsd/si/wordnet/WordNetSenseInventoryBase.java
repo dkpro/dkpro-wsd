@@ -342,6 +342,13 @@ public abstract class WordNetSenseInventoryBase
         return getSense(senseId).getPos();
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        return getSense(senseId).getUseCount();
+    }
+
     // /**
     // * Retrieves a sense from the cache, or creates one and adds it to the
     // cache
@@ -399,6 +406,7 @@ public abstract class WordNetSenseInventoryBase
         implements CachedDictionarySense, CachedTaxonomySense
     {
         protected final String id;
+        protected int useCount;
         protected POS pos;
         protected Synset synset;
         protected String definition;
@@ -412,7 +420,14 @@ public abstract class WordNetSenseInventoryBase
             id = senseId;
         }
 
-        abstract public POS getPos();
+        public POS getPos()
+        {
+            return pos;
+        }
+
+        public int getUseCount() {
+            return useCount;
+        }
 
         @Override
         public Set<String> getExamples()

@@ -103,4 +103,11 @@ public class FixedSenseInventory
         return POS.NOUN;
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        return 1;
+    }
+
 }

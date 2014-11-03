@@ -163,4 +163,10 @@ public class UkbDictionaryInventory
         return dictionary.getTargets(sod);
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }
