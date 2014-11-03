@@ -32,6 +32,7 @@ import java.util.Map;
  *
  */
 public class TestSenseInventory
+    extends SenseInventoryBase
     implements SenseInventory
 {
 
@@ -132,22 +133,22 @@ public class TestSenseInventory
     public int getUseCount(String senseId)
         throws SenseInventoryException
     {
-            if (senseId.equals("bat1")) {
-                return 5;
-            }
-            if (senseId.equals("bat2")) {
-                return 4;
-            }
-            if (senseId.equals("bank1")) {
-                return 3;
-            }
-            if (senseId.equals("bank2")) {
-                return 2;
-            }
-            if (senseId.equals("test1")) {
-                return 1;
-            }
-            throw new SenseInventoryException("Unknown sense ID: " + senseId);
+        if (senseId.equals("bat1")) {
+            return 5;
+        }
+        if (senseId.equals("bat2")) {
+            return 4;
+        }
+        if (senseId.equals("bank1")) {
+            return 3;
+        }
+        if (senseId.equals("bank2")) {
+            return 2;
+        }
+        if (senseId.equals("test1")) {
+            return 1;
+        }
+        throw new SenseInventoryException("Unknown sense ID: " + senseId);
     }
 
 }

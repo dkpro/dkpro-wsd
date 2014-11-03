@@ -36,6 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.UnorderedPair;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseAlignment;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseDictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 import de.tudarmstadt.ukp.lmf.api.Uby;
@@ -62,7 +63,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public class UbySenseInventory
+public class UbySenseInventory extends SenseInventoryBase
     implements SenseTaxonomy, SenseDictionary, SenseAlignment
 {
     protected Uby uby;
@@ -263,7 +264,7 @@ public class UbySenseInventory
         List<LexicalEntry> entries = getLexicalEntriesByPOS(
                 sod.replace('_', ' '), pos);
         Sense mostFrequentSense = null;
-        int maxFrequency = -1;
+        int maxFrequency = Integer.MIN_VALUE;
         for (LexicalEntry lexicalEntry : entries) {
             for (Sense sense : lexicalEntry.getSenses()) {
                 int senseFrequency = 0;
@@ -608,13 +609,13 @@ public class UbySenseInventory
                 sense = uby.getSenseById(senseId);
                 synset = sense.getSynset();
                 pos = ubyPosToSiPos.transform(sense.getLexicalEntry().getPartOfSpeech());
-                List<Frequency> frequencies = sense.getFrequencies();
-                if (frequencies.isEmpty()) {
-                    useCount = 0;
+
+                // Sum frequencies over all corpora and generators
+                int senseFrequency = 0;
+                for (Frequency frequency : sense.getFrequencies()) {
+                    senseFrequency += frequency.getFrequency();
                 }
-                else {
-                    useCount = frequencies.get(0).getFrequency();
-                }
+                useCount = senseFrequency;
             }
             catch (UbyInvalidArgumentException e) {
                 throw new SenseInventoryException(e);
