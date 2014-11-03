@@ -168,6 +168,13 @@ public abstract class SenseInventoryResourceBase
     }
 
     @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        return inventory.getUseCount(senseId);
+    }
+
+    @Override
     public String getSenseInventoryName()
     {
         if (senseInventoryName == null) {

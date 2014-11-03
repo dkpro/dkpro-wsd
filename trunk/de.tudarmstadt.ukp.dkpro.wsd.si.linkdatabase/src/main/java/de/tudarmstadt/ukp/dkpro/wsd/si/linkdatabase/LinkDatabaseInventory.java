@@ -183,4 +183,11 @@ public class LinkDatabaseInventory
 	{
 		return reader.getNumberOfSenses();
 	}
+
+	@Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }

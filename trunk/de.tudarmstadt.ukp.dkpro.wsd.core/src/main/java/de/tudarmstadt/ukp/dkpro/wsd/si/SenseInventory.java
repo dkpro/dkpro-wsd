@@ -119,6 +119,16 @@ public interface SenseInventory
         throws SenseInventoryException;
 
     /**
+     * @param senseId
+     * @return The number of times the sense occurred in a semantic concordance.
+     *         A {@link SenseInventoryException} is thrown if the senseId is
+     *         invalid.
+     * @throws SenseInventoryException
+     */
+    public int getUseCount(String senseId)
+        throws SenseInventoryException;
+
+    /**
      * @return The name of the sense inventory.
      */
     public String getSenseInventoryName();

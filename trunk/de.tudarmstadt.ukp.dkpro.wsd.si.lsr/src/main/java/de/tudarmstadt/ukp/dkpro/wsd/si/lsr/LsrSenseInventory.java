@@ -207,4 +207,10 @@ public class LsrSenseInventory
         throw new UnsupportedOperationException();
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }

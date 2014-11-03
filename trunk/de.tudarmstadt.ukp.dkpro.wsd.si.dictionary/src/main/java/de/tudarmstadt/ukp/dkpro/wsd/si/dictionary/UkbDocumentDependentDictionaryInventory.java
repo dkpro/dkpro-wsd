@@ -144,4 +144,10 @@ public class UkbDocumentDependentDictionaryInventory
         return dictionary.getTargets(sod);
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }

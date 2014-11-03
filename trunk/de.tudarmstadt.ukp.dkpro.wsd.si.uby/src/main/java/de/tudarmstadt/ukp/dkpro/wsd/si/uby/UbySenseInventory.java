@@ -310,6 +310,13 @@ public class UbySenseInventory
     }
 
     @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public String getSenseInventoryName()
     {
         if (lexicon == null) {
@@ -504,6 +511,7 @@ public class UbySenseInventory
         private final String definition;
         private final Synset synset;
         private final POS pos;
+        private final int useCount;
         private Set<String> examples;
         private Set<String> words;
         private Set<String> neighbours;
@@ -521,6 +529,12 @@ public class UbySenseInventory
             definition = null;
             synset = null;
             pos = null;
+            useCount = 0;
+        }
+
+        public int getUseCount()
+        {
+            return useCount;
         }
 
         public POS getPos()
@@ -594,6 +608,13 @@ public class UbySenseInventory
                 sense = uby.getSenseById(senseId);
                 synset = sense.getSynset();
                 pos = ubyPosToSiPos.transform(sense.getLexicalEntry().getPartOfSpeech());
+                List<Frequency> frequencies = sense.getFrequencies();
+                if (frequencies.isEmpty()) {
+                    useCount = 0;
+                }
+                else {
+                    useCount = frequencies.get(0).getFrequency();
+                }
             }
             catch (UbyInvalidArgumentException e) {
                 throw new SenseInventoryException(e);

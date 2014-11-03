@@ -61,6 +61,7 @@ public class WordNetSynsetSenseInventoryTest
             System.out.println("Examples: " + si.getSenseExamples(sense));
             System.out.println("Words: " + si.getSenseWords(sense));
             System.out.println("Neighbours: " + si.getSenseNeighbours(sense));
+            System.out.println("Use count: " + si.getUseCount(sense));
             System.out.println();
         }
 

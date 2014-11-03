@@ -204,4 +204,10 @@ public class GoogleDictionaryInventory
         return null;
     }
 
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }
