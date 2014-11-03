@@ -417,4 +417,11 @@ public class GermaNetLexUnitSenseInventory
             }
         }
     }
+
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedOperationException();
+    }
 }

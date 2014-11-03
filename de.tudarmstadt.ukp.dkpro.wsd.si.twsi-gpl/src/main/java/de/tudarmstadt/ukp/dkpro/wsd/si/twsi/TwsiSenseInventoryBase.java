@@ -189,4 +189,11 @@ public class TwsiSenseInventoryBase
     {
         return twsiConfigFile;
     }
+
+    @Override
+    public int getUseCount(String senseId)
+        throws SenseInventoryException
+    {
+        throw new UnsupportedAddressTypeException();
+    }
 }
