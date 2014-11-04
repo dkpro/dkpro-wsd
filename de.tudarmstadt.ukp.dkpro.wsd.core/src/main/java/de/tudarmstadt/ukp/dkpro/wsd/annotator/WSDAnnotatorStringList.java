@@ -24,15 +24,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.uima.UimaContext;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.descriptor.ExternalResource;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectiveBasic;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 
 /**
- * 
+ *
  * An annotator for diambiguating a list of sods collectively
  * @author nico.erbs@gmail.com
  *
@@ -80,7 +80,7 @@ public class WSDAnnotatorStringList
 				.getDisambiguation(subjectsOfDisambiguation);
 		Map<WSDItem, Map<String, Double>> resultsByWSDItem = new HashMap<WSDItem, Map<String, Double>>();
 		for (WSDItem wsdItem : wsdItems) {
-			Map<String, Double> senseMap = resultsByToken.get(wsdItem);
+			Map<String, Double> senseMap = resultsByToken.get(wsdItem.getSubjectOfDisambiguation());
 			if (senseMap != null) {
 				resultsByWSDItem.put(wsdItem, senseMap);
 			}
