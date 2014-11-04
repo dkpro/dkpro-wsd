@@ -82,7 +82,7 @@ public class WSDAnnotatorStringList
 		for (WSDItem wsdItem : wsdItems) {
 			Map<String, Double> senseMap = resultsByToken.get(wsdItem);
 			if (senseMap != null) {
-				resultsByWSDItem.put(wsdItem, resultsByToken.get(wsdItem));
+				resultsByWSDItem.put(wsdItem, senseMap);
 			}
 		}
 		return resultsByWSDItem;
