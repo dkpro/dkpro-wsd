@@ -40,7 +40,6 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 import de.tudarmstadt.ukp.lmf.api.Uby;
-import de.tudarmstadt.ukp.lmf.exceptions.UbyInvalidArgumentException;
 import de.tudarmstadt.ukp.lmf.model.core.LexicalEntry;
 import de.tudarmstadt.ukp.lmf.model.core.Lexicon;
 import de.tudarmstadt.ukp.lmf.model.core.Sense;
@@ -83,7 +82,7 @@ public class UbySenseInventory extends SenseInventoryBase
         try {
             uby = new Uby(dbConfig);
         }
-        catch (UbyInvalidArgumentException e) {
+        catch (IllegalArgumentException e) {
             throw new SenseInventoryException(e);
         }
     }
@@ -137,7 +136,7 @@ public class UbySenseInventory extends SenseInventoryBase
         try {
             lexicon = uby.getLexiconByName(lexiconName);
         }
-        catch (UbyInvalidArgumentException e) {
+        catch (IllegalArgumentException e) {
             throw new SenseInventoryException(e);
         }
         if (this.lexicon != null) {
@@ -617,7 +616,7 @@ public class UbySenseInventory extends SenseInventoryBase
                 }
                 useCount = senseFrequency;
             }
-            catch (UbyInvalidArgumentException e) {
+            catch (IllegalArgumentException e) {
                 throw new SenseInventoryException(e);
             }
             definition = constructDefinition();
