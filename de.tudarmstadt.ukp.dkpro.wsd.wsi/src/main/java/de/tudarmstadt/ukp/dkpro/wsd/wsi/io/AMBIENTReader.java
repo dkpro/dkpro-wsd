@@ -35,35 +35,33 @@ import java.util.TreeMap;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.uima.UimaContext;
-import org.apache.uima.cas.CAS;
-import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.internal.util.XMLUtils;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.jsoup.Jsoup;
-import org.apache.uima.fit.component.CasCollectionReader_ImplBase;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import com.ibm.icu.text.CharsetDetector;
 
+import de.tudarmstadt.ukp.dkpro.core.api.io.JCasResourceCollectionReader_ImplBase;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.wsd.wsi.type.WSITopic;
 
 /**
  * Reader for the AMBIENT,MORESQUE and SemEval 2013 Task 11 WSI Datasets
- * 
+ *
  * @author zorn
- * 
+ *
  */
 public class AMBIENTReader
-    extends CasCollectionReader_ImplBase
+    extends JCasResourceCollectionReader_ImplBase
 {
 
     /**
-     * 
+     *
      */
     public static final String PARAM_FILE = "File";
     @ConfigurationParameter(name = PARAM_FILE, mandatory = true)
@@ -72,7 +70,7 @@ public class AMBIENTReader
     /**
      * Set this to true if the reader should attempt to download the webpage, clean it and append
      * the content to the snippet
-     * 
+     *
      */
     public static final String PARAM_DOWNLOAD_HTML = "downloadHTML";
     @ConfigurationParameter(name = PARAM_DOWNLOAD_HTML, mandatory = false, defaultValue = "false")
@@ -259,6 +257,7 @@ public class AMBIENTReader
         return this.pointer < this.results.size() - 1;
     }
 
+    @Override
     public void getNext(JCas jCas)
         throws IOException, CollectionException
     {
@@ -274,8 +273,9 @@ public class AMBIENTReader
             wsiTopic.setId(result.id);
             wsiTopic.setSubjectOfDisambiguation(this.topics.get(result.topic));
             wsiTopic.addToIndexes();
-            if (downloadHTML == true)
+            if (downloadHTML == true) {
                 downloadHTMLPage(jCas, result);
+            }
         }
         catch (final Exception e) {
 
@@ -317,10 +317,12 @@ public class AMBIENTReader
                 cleanedText.delete(index, index + 1);
                 index = XMLUtils.checkForNonXmlCharacters(cleanedText.toString(), false);
             }
-            if (StringUtils.isAsciiPrintable(cleanedText.toString()))
+            if (StringUtils.isAsciiPrintable(cleanedText.toString())) {
                 jCas.setDocumentText(result.text + " " + cleanedText.toString());
-            else
+            }
+            else {
                 jCas.setDocumentText(result.text);
+            }
         }
         catch (Exception e) {
             getLogger().warn(
@@ -342,21 +344,9 @@ public class AMBIENTReader
         return offset;
     }
 
-    @Override
-    public void getNext(CAS aCAS)
-        throws IOException, CollectionException
-    {
-        try {
-            getNext(aCAS.getJCas());
-        }
-        catch (final CASException e) {
-            throw new CollectionException();
-        }
-    }
-
     /**
      * Sets the metadata of the current document.
-     * 
+     *
      * @param jCas
      * @param documentId
      *            An identifier for the current document.
