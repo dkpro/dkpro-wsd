@@ -25,8 +25,6 @@ import java.util.Iterator;
 
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
-import org.apache.uima.cas.CAS;
-import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.Type;
 import org.apache.uima.collection.CollectionException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
@@ -39,7 +37,7 @@ import org.dom4j.Element;
 import org.dom4j.Node;
 import org.dom4j.io.SAXReader;
 
-import de.tudarmstadt.ukp.dkpro.core.api.io.ResourceCollectionReaderBase;
+import de.tudarmstadt.ukp.dkpro.core.api.io.JCasResourceCollectionReader_ImplBase;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.resources.MappingProvider;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
@@ -60,7 +58,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  */
 public class SemCorXMLReader
-    extends ResourceCollectionReaderBase
+    extends JCasResourceCollectionReader_ImplBase
 {
     public static final String DISAMBIGUATION_METHOD_NAME = SemCorXMLReader.class
             .getName();
@@ -145,18 +143,10 @@ public class SemCorXMLReader
 
     @Override
     @SuppressWarnings("unchecked")
-    public void getNext(CAS aCAS)
+    public void getNext(JCas jCas)
         throws IOException, CollectionException
     {
-        mappingProvider.configure(aCAS);
-
-        JCas jCas;
-        try {
-            jCas = aCAS.getJCas();
-        }
-        catch (CASException e) {
-            throw new CollectionException(e);
-        }
+        mappingProvider.configure(jCas.getCas());
 
         // Open the next file
         Document document;
