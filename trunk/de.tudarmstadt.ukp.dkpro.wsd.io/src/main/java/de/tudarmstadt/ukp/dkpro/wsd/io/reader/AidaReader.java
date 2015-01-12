@@ -29,6 +29,7 @@ import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.uima.UimaContext;
 import org.apache.uima.collection.CollectionException;
+import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
@@ -36,7 +37,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 
-import de.tudarmstadt.ukp.dkpro.core.api.io.JCasResourceCollectionReader_ImplBase;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
@@ -50,7 +50,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
  */
 public class AidaReader
-    extends JCasResourceCollectionReader_ImplBase
+    extends JCasCollectionReader_ImplBase
 {
     public static final String PARAM_SENSE_INVENTORY = "senseInventory";
     @ConfigurationParameter(name = PARAM_SENSE_INVENTORY, mandatory = false, description = "The sense inventory used by the answer key", defaultValue = "WIKIPEDIA_EN")
