@@ -30,6 +30,7 @@ import org.apache.uima.resource.ResourceSpecifier;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.uby.UbySenseInventory;
+import de.tudarmstadt.ukp.lmf.api.Uby;
 
 /**
  * A resource wrapping {@link UbySenseInventory}
@@ -75,6 +76,15 @@ public class UbySenseInventoryResource
     public final static String PARAM_ALLOW_MULTILINGUAL_ALIGNMENTS = "allowMultilingualAlignments";
     @ConfigurationParameter(name = PARAM_ALLOW_MULTILINGUAL_ALIGNMENTS, mandatory = false, description = "Whether to return multilingual alignments", defaultValue = "false")
     protected String allowMultilingualAlignments;
+
+    /**
+     * Returns the underlying Uby object.
+     *
+     * @return
+     */
+    public Uby getUnderlyingResource() {
+        return ((UbySenseInventory) inventory).getUnderlyingResource();
+    }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override

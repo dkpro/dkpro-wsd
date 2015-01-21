@@ -29,6 +29,7 @@ import org.apache.uima.resource.ResourceSpecifier;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.GoogleDictionaryInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.IGoogleDictionary;
+import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.util.GoogleDictionary;
 import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 
 public class GoogleDictionaryInventoryResource
@@ -46,6 +47,15 @@ public class GoogleDictionaryInventoryResource
     public static final String PARAM_NEEDED_MENTIONS_PATH = "NeededMentionsPath";
     @ConfigurationParameter(name = PARAM_NEEDED_MENTIONS_PATH, mandatory = true)
     protected String neededMentionsPath;
+
+    /**
+     * Returns the underlying GoogleDictionary object.
+     *
+     * @return
+     */
+    public GoogleDictionary getUnderlyingResource() {
+        return ((GoogleDictionaryInventory)inventory).getUnderlyingResource();
+    }
 
     @Override
     public boolean initialize(ResourceSpecifier aSpecifier,

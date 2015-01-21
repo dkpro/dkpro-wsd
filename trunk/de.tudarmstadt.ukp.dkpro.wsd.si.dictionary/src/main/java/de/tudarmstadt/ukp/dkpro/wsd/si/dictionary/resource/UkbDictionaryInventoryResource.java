@@ -29,6 +29,7 @@ import org.apache.uima.resource.ResourceSpecifier;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.IUkbDictionary;
 import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.UkbDictionaryInventory;
+import de.tudarmstadt.ukp.dkpro.wsd.si.dictionary.util.UkbDictionary;
 import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 
 public class UkbDictionaryInventoryResource
@@ -46,6 +47,15 @@ public class UkbDictionaryInventoryResource
     public static final String PARAM_NEEDED_MENTIONS_PATH = "NeededMentionsPath";
     @ConfigurationParameter(name = PARAM_NEEDED_MENTIONS_PATH, mandatory = true)
     protected String neededMentionsPath;
+
+    /**
+     * Returns the underlying GoogleDictionary object.
+     *
+     * @return
+     */
+    public UkbDictionary getUnderlyingResource() {
+        return ((UkbDictionaryInventory)inventory).getUnderlyingResource();
+    }
 
     @Override
     public boolean initialize(ResourceSpecifier aSpecifier,
