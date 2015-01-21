@@ -49,7 +49,7 @@ public class UkbDictionaryInventoryResource
     protected String neededMentionsPath;
 
     /**
-     * Returns the underlying GoogleDictionary object.
+     * Returns the underlying UkbDictionary object.
      *
      * @return
      */
