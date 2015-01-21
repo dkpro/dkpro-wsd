@@ -30,6 +30,7 @@ import org.apache.uima.resource.ResourceSpecifier;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.germanet.GermaNetLexUnitSenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
+import de.tuebingen.uni.sfs.germanet.api.GermaNet;
 
 /**
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
@@ -45,6 +46,15 @@ public class GermaNetLexUnitSenseInventoryResource
     public static final String PARAM_SENSE_DESCRIPTION_FORMAT = "senseDescriptionFormat";
     @ConfigurationParameter(name = PARAM_SENSE_DESCRIPTION_FORMAT, description = "A format string specifying how sense descriptions should be printed", mandatory = false)
     protected String senseDescriptionFormat;
+
+    /**
+     * Returns the underlying GermaNet object.
+     *
+     * @return
+     */
+    public GermaNet getUnderlyingResource() {
+        return ((GermaNetLexUnitSenseInventory)inventory).getUnderlyingResource();
+    }
 
     @SuppressWarnings({ "rawtypes", "unchecked" })
     @Override

@@ -64,6 +64,15 @@ public class GermaNetLexUnitSenseInventory
     protected String senseDescriptionFormat = "%w; %d";
     protected GermaNetPosToSiPos germaNetPosToSiPos = new GermaNetPosToSiPos();
 
+    /**
+     * Returns the underlying GermaNet object.
+     *
+     * @return
+     */
+    public GermaNet getUnderlyingResource() {
+        return gnet;
+    }
+
     public GermaNetLexUnitSenseInventory(String gnetDirectory)
         throws FileNotFoundException, XMLStreamException, IOException
     {
