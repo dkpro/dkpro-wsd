@@ -70,6 +70,15 @@ public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
     protected final StringToSynset stringToSynset = new StringToSynset();
     protected static final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
 
+    /**
+     * Returns the underlying extJWNL Dictionary object.
+     *
+     * @return
+     */
+    public Dictionary getUnderlyingResource() {
+        return wn;
+    }
+
     @Override
     public void setUndirectedGraph(
             UndirectedGraph<String, UnorderedPair<String>> graph)

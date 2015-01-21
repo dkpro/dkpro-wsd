@@ -76,6 +76,15 @@ public class UbySenseInventory extends SenseInventoryBase
     private String senseDescriptionFormat = "%w; %d";
     private final Map<String, CachedSense> senses = new HashMap<String, CachedSense>();
 
+    /**
+     * Returns the underlying Uby object.
+     *
+     * @return
+     */
+    public Uby getUnderlyingResource() {
+        return uby;
+    }
+
     public UbySenseInventory(DBConfig dbConfig)
         throws SenseInventoryException
     {

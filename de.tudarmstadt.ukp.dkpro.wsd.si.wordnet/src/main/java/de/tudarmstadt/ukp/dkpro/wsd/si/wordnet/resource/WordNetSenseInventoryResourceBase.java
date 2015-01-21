@@ -21,6 +21,8 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource;
 
+import net.sf.extjwnl.dictionary.Dictionary;
+
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
@@ -41,6 +43,15 @@ public class WordNetSenseInventoryResourceBase
     public static final String PARAM_SENSE_DESCRIPTION_FORMAT = "senseDescriptionFormat";
     @ConfigurationParameter(name = PARAM_SENSE_DESCRIPTION_FORMAT, description = "A format string specifying how sense descriptions should be printed", mandatory = false)
     protected String senseDescriptionFormat;
+
+    /**
+     * Returns the underlying extJWNL Dictionary object.
+     *
+     * @return
+     */
+    public Dictionary getUnderlyingResource() {
+        return ((WordNetSenseInventoryBase) inventory).getUnderlyingResource();
+    }
 
     /**
      * Given a lemma and a string representing a synset + part of speech,

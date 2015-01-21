@@ -20,10 +20,11 @@ package de.tudarmstadt.ukp.dkpro.wsd.si.lsr.resource;
 
 import java.util.Map;
 
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
 
+import de.tudarmstadt.ukp.dkpro.lexsemresource.LexicalSemanticResource;
 import de.tudarmstadt.ukp.dkpro.lexsemresource.exception.ResourceLoaderException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
@@ -44,6 +45,15 @@ public class LsrSenseInventoryResource
     public static final String PARAM_RESOURCE_NAME = "lsrName";
     @ConfigurationParameter(name = PARAM_RESOURCE_NAME, description = "The name of the lexical-semantic resource", mandatory = true)
     private String lsrName;
+
+    /**
+     * Returns the underlying LexicalSemanticResource object.
+     *
+     * @return
+     */
+    public LexicalSemanticResource getUnderlyingResource() {
+        return ((LsrSenseInventory)inventory).getUnderlyingResource();
+    }
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     @Override

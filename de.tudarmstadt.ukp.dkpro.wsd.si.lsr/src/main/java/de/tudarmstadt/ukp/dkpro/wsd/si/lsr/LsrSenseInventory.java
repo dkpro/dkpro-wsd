@@ -50,6 +50,15 @@ public class LsrSenseInventory
 
     private final LexicalSemanticResource lsr;
 
+    /**
+     * Returns the underlying LexicalSemanticResource object.
+     *
+     * @return
+     */
+    public LexicalSemanticResource getUnderlyingResource() {
+        return lsr;
+    }
+
     public LsrSenseInventory(String resource, String language)
         throws ResourceLoaderException
     {

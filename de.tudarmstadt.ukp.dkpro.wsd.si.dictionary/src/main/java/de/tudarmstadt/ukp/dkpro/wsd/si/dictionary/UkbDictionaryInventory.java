@@ -46,6 +46,15 @@ public class UkbDictionaryInventory
 
     private UkbDictionary dictionary;
 
+    /**
+     * Returns the underlying GoogleDictionary object.
+     *
+     * @return
+     */
+    public UkbDictionary getUnderlyingResource() {
+        return dictionary;
+    }
+
     public UkbDictionaryInventory(String inputPath, String serializiblePath,
             String neededMentionsPath)
         throws FileNotFoundException, IOException

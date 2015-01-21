@@ -52,6 +52,15 @@ public class GoogleDictionaryInventory
 
     private GoogleDictionary dictionary;
 
+    /**
+     * Returns the underlying GoogleDictionary object.
+     *
+     * @return
+     */
+    public GoogleDictionary getUnderlyingResource() {
+        return dictionary;
+    }
+
     public GoogleDictionaryInventory(String inputPath, String serializiblePath,
             String neededMentionsPath)
         throws FileNotFoundException, IOException
