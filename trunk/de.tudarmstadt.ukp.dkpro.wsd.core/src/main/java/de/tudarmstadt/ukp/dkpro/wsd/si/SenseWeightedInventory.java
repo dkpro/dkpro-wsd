@@ -23,12 +23,12 @@ import java.util.Map;
 
 /**
  * A SenseInventory with initial weights for each entry
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */
 public interface SenseWeightedInventory extends SenseInventory {
-		
-		public Map<String,Double> getWeightedSenses(String sod) throws SenseInventoryException;
+
+		Map<String,Double> getWeightedSenses(String sod) throws SenseInventoryException;
 
 }

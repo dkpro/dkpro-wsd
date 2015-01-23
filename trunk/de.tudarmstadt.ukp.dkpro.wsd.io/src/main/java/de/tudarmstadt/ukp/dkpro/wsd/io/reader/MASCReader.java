@@ -221,7 +221,7 @@ public class MASCReader
     public boolean hasNext()
         throws IOException, CollectionException
     {
-        return (nodeIterator != null && nodeIterator.hasNext())
+        return nodeIterator != null && nodeIterator.hasNext()
                 || super.hasNext();
     }
 

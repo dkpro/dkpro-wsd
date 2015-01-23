@@ -32,7 +32,7 @@ import edu.uci.ics.jung.graph.Graph;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public interface GraphVisualizer
+interface GraphVisualizer
 {
     /**
      * Initialize the visualization frame
@@ -41,7 +41,7 @@ public interface GraphVisualizer
      *            The graph to display
      * @param inventory
      */
-    public void initialize(
+    void initialize(
             final Graph<String, UnorderedPair<String>> graph);
     /**
      * Sets the dimensions (in pixels) of the animation visualization frame.
@@ -49,21 +49,21 @@ public interface GraphVisualizer
      * @param width
      * @param height
      */
-    public void setAnimationDimensions(int width, int height);
+    void setAnimationDimensions(int width, int height);
 
     /**
      * Determines whether the graph is interactive.
      *
      * @param interactive
      */
-    public void setInteractive(boolean interactive);
+    void setInteractive(boolean interactive);
 
     /**
      * Sets the minimum delay (in milliseconds) between animation steps.
      *
      * @param ms
      */
-    public void setAnimationDelay(long ms);
+    void setAnimationDelay(long ms);
 
 
     /**
@@ -80,7 +80,7 @@ public interface GraphVisualizer
      * @param delayTime
      * @throws InterruptedException
      */
-    public void animate(final Graph<String, UnorderedPair<String>> graph,
+    void animate(final Graph<String, UnorderedPair<String>> graph,
             UnorderedPair<String> edge, String vertex1, String vertex2);
 
     /**
@@ -88,7 +88,7 @@ public interface GraphVisualizer
      *
      * @param numberOfColors
      */
-    public void initializeColorMap(int numberOfColors);
+    void initializeColorMap(int numberOfColors);
 
     /**
      * Sets the colour for a vertex label
@@ -96,25 +96,25 @@ public interface GraphVisualizer
      * @param label The label whose colour to set
      * @param index The index of the colour from the colour map
      */
-    public void setColor(String label, int colorIndex);
+    void setColor(String label, int colorIndex);
 
     /**
      * Refreshes the visualization display
      *
      */
-    public void refresh();
+    void refresh();
 
     /**
      * Permanently highlights the given vertex label
      *
      * @param label
      */
-    public void highlight(String label);
+    void highlight(String label);
 
     /**
      * Sets the vertex tooltip Transformer
      *
      * @param label
      */
-    public void setVertexToolTipTransformer(Transformer<String,String> vertexToolTipTransformer);
+    void setVertexToolTipTransformer(Transformer<String,String> vertexToolTipTransformer);
 }

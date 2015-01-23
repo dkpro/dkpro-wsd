@@ -39,7 +39,7 @@ public interface SenseTaxonomy
      *
      * @return An undirected graph representing the sense inventory
      */
-    public UndirectedGraph<String, UnorderedPair<String>> getUndirectedGraph()
+    UndirectedGraph<String, UnorderedPair<String>> getUndirectedGraph()
         throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -50,7 +50,7 @@ public interface SenseTaxonomy
     * @param graph  The graph to set.
     *
     */
-   public void setUndirectedGraph(UndirectedGraph<String, UnorderedPair<String>> graph)
+   void setUndirectedGraph(UndirectedGraph<String, UnorderedPair<String>> graph)
        throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -61,7 +61,7 @@ public interface SenseTaxonomy
      * @throws SenseInventoryException
      * @throws UnsupportedOperationException
      */
-    public Set<String> getSenseNeighbours(String senseId)
+    Set<String> getSenseNeighbours(String senseId)
         throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -73,9 +73,9 @@ public interface SenseTaxonomy
      * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
      *
      */
-    public interface CachedTaxonomySense
+    interface CachedTaxonomySense
     {
-        public Set<String> getNeighbours() throws SenseInventoryException;
+        Set<String> getNeighbours() throws SenseInventoryException;
     }
 
 }

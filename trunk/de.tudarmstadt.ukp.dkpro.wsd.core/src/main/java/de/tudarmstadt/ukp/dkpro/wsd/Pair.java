@@ -94,7 +94,7 @@ public class Pair<A, B>
      */
     protected final boolean equals(Object x, Object y)
     {
-        return (x == null && y == null) || (x != null && x.equals(y));
+        return x == null && y == null || x != null && x.equals(y);
     }
 
     @Override

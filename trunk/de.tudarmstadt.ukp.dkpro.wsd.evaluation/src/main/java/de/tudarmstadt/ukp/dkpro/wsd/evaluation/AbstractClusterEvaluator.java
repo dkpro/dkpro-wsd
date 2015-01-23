@@ -259,15 +259,15 @@ public abstract class AbstractClusterEvaluator
         // Calculate unclustered, clustered, and random-clustered scores
         scoreWithoutClustering = getMatchingScore(testResult, goldResult);
         scoreWithClustering = getMatchingClusteredScore(testResult, goldResult);
-        scoreWithRandomClustering = (scoreWithoutClustering > 0.0) ? scoreWithoutClustering
+        scoreWithRandomClustering = scoreWithoutClustering > 0.0 ? scoreWithoutClustering
                 : getRandomScore(wsdItem, goldResult);
-        assert (scoreWithoutClustering <= scoreWithClustering);
-        assert (scoreWithRandomClustering >= 0.0);
-        assert (scoreWithoutClustering >= 0.0);
-        assert (scoreWithClustering >= 0.0);
-        assert (scoreWithRandomClustering <= 1.0);
-        // assert (scoreWithoutClustering <= 1.0);
-        // assert (scoreWithClustering <= 1.0);
+        assert scoreWithoutClustering <= scoreWithClustering;
+        assert scoreWithRandomClustering >= 0.0;
+        assert scoreWithoutClustering >= 0.0;
+        assert scoreWithClustering >= 0.0;
+        assert scoreWithRandomClustering <= 1.0;
+        // assert scoreWithoutClustering <= 1.0;
+        // assert scoreWithClustering <= 1.0;
         if (scoreWithClustering > 1.0) {
             scoreWithClustering = 1.0;
         }
@@ -467,13 +467,13 @@ public abstract class AbstractClusterEvaluator
         for (int c : clusterSizes) {
             double product = c;
             for (int i = 0; i < g; i++) {
-                product *= (n - c - i);
+                product *= n - c - i;
             }
             sum += product;
         }
         double product = n;
         for (int i = 1; i <= g; i++) {
-            product *= (n - i);
+            product *= n - i;
         }
         return 1.0 - sum / product;
     }
@@ -708,7 +708,7 @@ public abstract class AbstractClusterEvaluator
                         totalAgreement, mcnemarCorrection))
                 + " (b + c = "
                 + String.format("%5.1f",
-                        (totalAgreement[0][1] + totalAgreement[1][0])) + ")");
+                        totalAgreement[0][1] + totalAgreement[1][0]) + ")");
     }
 
     /**
@@ -781,8 +781,8 @@ public abstract class AbstractClusterEvaluator
                 mcnemar = 0.0;
             }
             tableCell(String.format("%7.2f", mcnemar));
-            tableCell(String.format("%7.2f", (matrix[1][0])));
-            tableCell(String.format("%7.2f", (matrix[0][1])));
+            tableCell(String.format("%7.2f", matrix[1][0]));
+            tableCell(String.format("%7.2f", matrix[0][1]));
         }
         else {
             tableCell(String.format("%7s", "—"));

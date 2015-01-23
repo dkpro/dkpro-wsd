@@ -56,10 +56,10 @@ public class UnorderedPair<A>
             return false;
         }
         UnorderedPair<?> otherPair = (UnorderedPair<?>) other;
-        return (equals(first, otherPair.getFirst()) && equals(second,
-                otherPair.getSecond()))
-                || (equals(first, otherPair.getSecond()) && equals(second,
-                        otherPair.getFirst()));
+        return equals(first, otherPair.getFirst())
+                && equals(second, otherPair.getSecond())
+                || equals(first, otherPair.getSecond())
+                && equals(second, otherPair.getFirst());
     }
 
     @Override

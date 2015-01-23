@@ -42,7 +42,7 @@ public interface SenseDictionary
      * @return A set of example sentences for the given sense.
      * @throws SenseInventoryException
      */
-    public Set<String> getSenseExamples(String senseId)
+    Set<String> getSenseExamples(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -54,7 +54,7 @@ public interface SenseDictionary
      * @return The set of lemmas for the given sense
      * @throws SenseInventoryException
      */
-    public Set<String> getSenseWords(String senseId)
+    Set<String> getSenseWords(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -66,7 +66,7 @@ public interface SenseDictionary
      * @return The definition of the given sense.
      * @throws SenseInventoryException
      */
-    public String getSenseDefinition(String senseId)
+    String getSenseDefinition(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -78,12 +78,12 @@ public interface SenseDictionary
      * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
      *
      */
-    public interface CachedDictionarySense
+    interface CachedDictionarySense
     {
-        public Set<String> getSynonyms() throws SenseInventoryException;
+        Set<String> getSynonyms() throws SenseInventoryException;
 
-        public Set<String> getExamples() throws SenseInventoryException;
+        Set<String> getExamples() throws SenseInventoryException;
 
-        public String getDefinition() throws SenseInventoryException;
+        String getDefinition() throws SenseInventoryException;
     }
 }
