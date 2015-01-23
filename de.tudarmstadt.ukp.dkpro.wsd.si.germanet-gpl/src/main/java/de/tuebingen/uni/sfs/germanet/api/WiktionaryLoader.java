@@ -195,8 +195,8 @@ class WiktionaryLoader {
 
         @Override
         public boolean accept(File directory, String name) {
-            return (name.endsWith("xml")
-                    && (name.startsWith("wiktionaryParaphrases")));
+            return name.endsWith("xml")
+                    && name.startsWith("wiktionaryParaphrases");
         }
     }
 }

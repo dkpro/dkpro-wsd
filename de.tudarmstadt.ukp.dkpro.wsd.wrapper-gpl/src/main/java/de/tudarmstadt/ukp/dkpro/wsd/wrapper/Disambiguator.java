@@ -27,23 +27,23 @@ import java.util.List;
  *
  */
 public interface Disambiguator {
-	
+
     /**
      * @param inputText The input text.
-     *  
+     *
      * @return
      *   The list of string with the senses disambiguated in the input text.
      */
-	public List<String> disambiguate(String inputText) throws IOException;
-	
+	List<String> disambiguate(String inputText) throws IOException;
+
     /**
      * @return The name of the disambiguator.
      */
-	public String getName();
-	
+	String getName();
+
     /**
      * @return Returns a string with the configuration details of this word sense disambiguator.
      */
-	public String getConfigurationDetails();
-	
+	String getConfigurationDetails();
+
 }

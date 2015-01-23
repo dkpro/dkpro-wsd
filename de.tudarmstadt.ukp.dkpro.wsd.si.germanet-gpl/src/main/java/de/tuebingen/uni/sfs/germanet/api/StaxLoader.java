@@ -186,7 +186,7 @@ class StaxLoader {
     private class RelationFilter implements FilenameFilter {
         @Override
         public boolean accept(File directory, String name) {
-            return (name.equals("gn_relations.xml"));
+            return name.equals("gn_relations.xml");
         }
     }
 }

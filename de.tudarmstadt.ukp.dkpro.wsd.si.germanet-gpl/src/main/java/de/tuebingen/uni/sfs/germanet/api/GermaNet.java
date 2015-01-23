@@ -250,7 +250,7 @@ public class GermaNet {
                     entryName = entryName.split(File.separator)[entryName.split(File.separator).length - 1];
                 }
                 nameList.add(entryName);
-                InputStream stream = (zipFile.getInputStream(entry));
+                InputStream stream = zipFile.getInputStream(entry);
                 inputStreamList.add(stream);
             }
             inputStreams = inputStreamList;

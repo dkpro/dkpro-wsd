@@ -31,5 +31,5 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 public interface TwsiSenseInventory
     extends SenseInventory
 {
-    public File getConfigFile();
+    File getConfigFile();
 }
