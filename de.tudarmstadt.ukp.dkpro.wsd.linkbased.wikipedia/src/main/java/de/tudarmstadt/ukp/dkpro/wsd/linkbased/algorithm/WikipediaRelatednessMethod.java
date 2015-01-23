@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.LinkDatabaseInventoryResourc
 
 /**
  * An disambiguation algorithm based on the relatedness of two links, which is based on thr formula by Milne & Witten
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */
@@ -99,7 +99,7 @@ public class WikipediaRelatednessMethod extends AbstractWSDAlgorithm implements 
 
 		return ListUtils.intersection(
 				incomingLinksList.get(candidate0),
-				incomingLinksList.get(candidate0))
+				incomingLinksList.get(candidate1))
 				.size();
 	}
 
@@ -118,7 +118,7 @@ public class WikipediaRelatednessMethod extends AbstractWSDAlgorithm implements 
 			counter++;
 			relatedness +=
 				(Math.log(maxIncomingLinks) - Math.log(countIncomingSharedLinks(candidate, otherCandidate))) /
-				(Math.log(numberOfSenses) - (Math.log(minIncomingLinks))) ;
+				(Math.log(numberOfSenses) - Math.log(minIncomingLinks)) ;
 		}
 
 		//Formula by Milne & Witten
