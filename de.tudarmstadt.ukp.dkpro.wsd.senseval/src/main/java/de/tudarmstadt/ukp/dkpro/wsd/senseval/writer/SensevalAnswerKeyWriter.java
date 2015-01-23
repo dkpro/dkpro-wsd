@@ -25,11 +25,11 @@ import java.io.OutputStreamWriter;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.component.JCasConsumer_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
@@ -121,8 +121,7 @@ public class SensevalAnswerKeyWriter
                 s += " " + r.getSenses(i).getId();
             }
             if (includeConfidenceValues) {
-                s += "/"
-                        + new Double(r.getSenses(i).getConfidence()).toString();
+                s += "/" + r.getSenses(i).getConfidence();
             }
         }
         if (r.getComment() != null) {

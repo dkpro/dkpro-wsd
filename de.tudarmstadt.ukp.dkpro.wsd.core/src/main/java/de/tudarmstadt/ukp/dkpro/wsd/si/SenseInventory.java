@@ -39,7 +39,7 @@ public interface SenseInventory
      *         sense inventory.
      * @throws SenseInventoryException
      */
-    public Map<String, List<String>> getSenseInventory()
+    Map<String, List<String>> getSenseInventory()
         throws SenseInventoryException;
 
     /**
@@ -50,7 +50,7 @@ public interface SenseInventory
      *         SoD.
      * @throws SenseInventoryException
      */
-    public List<String> getSenses(String sod)
+    List<String> getSenses(String sod)
         throws SenseInventoryException;
 
     /**
@@ -63,7 +63,7 @@ public interface SenseInventory
      *         SoD.
      * @throws SenseInventoryException
      */
-    public List<String> getSenses(String sod, POS pos)
+    List<String> getSenses(String sod, POS pos)
         throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -79,7 +79,7 @@ public interface SenseInventory
      * @throws SenseInventoryException
      * @throws UnsupportedOperationException
      */
-    public String getMostFrequentSense(String sod)
+    String getMostFrequentSense(String sod)
         throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -94,7 +94,7 @@ public interface SenseInventory
      * @throws SenseInventoryException
      * @throws UnsupportedOperationException
      */
-    public String getMostFrequentSense(String sod, POS pos)
+    String getMostFrequentSense(String sod, POS pos)
         throws SenseInventoryException, UnsupportedOperationException;
 
     /**
@@ -105,7 +105,7 @@ public interface SenseInventory
      *         invalid.
      * @throws SenseInventoryException
      */
-    public String getSenseDescription(String senseId)
+    String getSenseDescription(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -115,7 +115,7 @@ public interface SenseInventory
      *         invalid.
      * @throws SenseInventoryException
      */
-    public POS getPos(String senseId)
+    POS getPos(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -125,11 +125,11 @@ public interface SenseInventory
      *         invalid.
      * @throws SenseInventoryException
      */
-    public int getUseCount(String senseId)
+    int getUseCount(String senseId)
         throws SenseInventoryException;
 
     /**
      * @return The name of the sense inventory.
      */
-    public String getSenseInventoryName();
+    String getSenseInventoryName();
 }

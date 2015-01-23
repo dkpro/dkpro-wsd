@@ -41,7 +41,7 @@ public interface SenseAlignment
      *
      * @throws SenseInventoryException
      */
-    public Set<String> getSenseAlignments(String senseId)
+    Set<String> getSenseAlignments(String senseId)
         throws SenseInventoryException;
 
     /**
@@ -55,7 +55,7 @@ public interface SenseAlignment
      */
     public interface CachedAlignedSense
     {
-        public Set<String> getAlignments()
+        Set<String> getAlignments()
             throws SenseInventoryException;
     }
 

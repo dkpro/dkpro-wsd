@@ -33,5 +33,5 @@ public interface TokenizationStrategy
 	 * @param s	the string to tokenize
      * @return	a list of strings
 	 */
-	public List<String> tokenize(String s);
+	List<String> tokenize(String s);
 }

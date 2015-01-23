@@ -28,7 +28,7 @@ import java.util.Random;
 
 /**
  * A cache for similarity values. Increases speed dramatically.
- * 
+ *
  * @author nico.erbs@gmail.com
  *
  */
@@ -37,7 +37,7 @@ public class SimilarityCache extends HashMap<String, Double> {
 	private static String CACHE_FILE_PATH = "/srv/experiments/ned/aida/cache.ser";
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 
@@ -72,9 +72,9 @@ public class SimilarityCache extends HashMap<String, Double> {
 	}
 
 	public static boolean contains(String keyPart0, String keyPart1){
-		return 
-				(cache.containsKey(keyPart0 + KEY_IDENTIFIER + keyPart1)) ||
-				(cache.containsKey(keyPart1 + KEY_IDENTIFIER + keyPart0));
+		return
+				cache.containsKey(keyPart0 + KEY_IDENTIFIER + keyPart1) ||
+				cache.containsKey(keyPart1 + KEY_IDENTIFIER + keyPart0);
 	}
 
 	public static void serialize() {
@@ -88,14 +88,14 @@ public class SimilarityCache extends HashMap<String, Double> {
 		catch(Exception e) {
 			System.out.println("Exception during serialization: " + e);
 			e.printStackTrace();
-		} 
+		}
 
 	}
-	
+
 	public static SimilarityCache deSerialize() {
 		SimilarityCache cache = null;
 		try{
-			ObjectInputStream in = new ObjectInputStream( 
+			ObjectInputStream in = new ObjectInputStream(
 					new FileInputStream(CACHE_FILE_PATH));
 			cache = (SimilarityCache) in.readObject();
 			in.close();

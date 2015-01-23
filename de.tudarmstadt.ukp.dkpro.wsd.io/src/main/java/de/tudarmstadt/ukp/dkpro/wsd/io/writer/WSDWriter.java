@@ -18,20 +18,23 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.io.writer;
 
+import static java.lang.Math.log10;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.fit.component.JCasConsumer_ImplBase;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
 
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
 import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
-import static java.lang.Math.*;
 
 /**
  * WSDWriter outputs all the WSDResults in a CAS in human-readable format.
- * 
+ *
  * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  */
 public class WSDWriter extends JCasConsumer_ImplBase {
@@ -42,7 +45,7 @@ public class WSDWriter extends JCasConsumer_ImplBase {
 	private final static String beginItemMarkup = ">";
 	private final static String endItemMarkup = "<";
 	private final static boolean shortNames = false;
-	
+
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
 		String document = jCas.getDocumentText();
@@ -54,34 +57,36 @@ public class WSDWriter extends JCasConsumer_ImplBase {
 			int digitsRequired = (int)log10(document.length()) + 1;
 			String senseInventoryName = result.getSenseInventory();
 			String disambiguationMethodName = result.getDisambiguationMethod();
-			
+
 			if (shortNames) {
 				disambiguationMethodName = shorten(disambiguationMethodName);
 			}
 
 			System.out.format("[%" + idLength + "s] [%" + digitsRequired +"d,%" + digitsRequired + "d] [%s] ", item.getId(), item.getBegin(), item.getEnd(), item.getPos());
-			if (leftContextBegin > 0)
-				System.out.print(ellipsis);
+			if (leftContextBegin > 0) {
+                System.out.print(ellipsis);
+            }
 
-			if (leftContextLength > 0 && (leftContextBegin != item.getBegin())) {
+			if (leftContextLength > 0 && leftContextBegin != item.getBegin()) {
 				System.out.print(document.substring(max(0, item.getBegin() - leftContextLength - 1), max(0, item.getBegin() - 1)) + ' ');
 			}
-			
+
 			System.out.print(beginItemMarkup + item.getCoveredText() + endItemMarkup);
 
 			if (item.getEnd() != document.length()) {
 				int rightContextEnd = min(document.length(), item.getEnd() + 1 + rightContextLength);
 				System.out.print(document.substring(item.getEnd(), min(document.length(), item.getEnd() + 1 + rightContextLength)));
-				if (rightContextEnd != document.length())
-					System.out.print(ellipsis);
+				if (rightContextEnd != document.length()) {
+                    System.out.print(ellipsis);
+                }
 			}
 
 			System.out.println();
-				
+
 			FSArray senses = result.getSenses();
 			for (int i=0; i < senses.size(); i++) {
 				Sense s = (Sense) senses.get(i);
-				System.out.format("\t%01.5f\t%s %s/%s (%s)\n", s.getConfidence(), 
+				System.out.format("\t%01.5f\t%s %s/%s (%s)\n", s.getConfidence(),
 						disambiguationMethodName, senseInventoryName, s.getId(), s.getDescription());
 			}
 		}
@@ -90,15 +95,17 @@ public class WSDWriter extends JCasConsumer_ImplBase {
 
 	/**
 	 * Returns the last element of a dotted-label string.
-	 * 
+	 *
      * @param s	A dotted-label string.
      * @return	The last element of s.
 	 */
 	private static String shorten(String s) {
-		if (s.lastIndexOf('.') > 0)
-		    return s.substring(s.lastIndexOf('.') + 1);
-		else
-			return s;
+		if (s.lastIndexOf('.') > 0) {
+            return s.substring(s.lastIndexOf('.') + 1);
+        }
+        else {
+            return s;
+        }
 	}
-	
+
 }

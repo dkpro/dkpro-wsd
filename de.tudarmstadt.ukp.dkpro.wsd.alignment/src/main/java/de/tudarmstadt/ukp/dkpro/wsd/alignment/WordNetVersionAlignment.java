@@ -60,8 +60,8 @@ public class WordNetVersionAlignment
 		@Override
 		public int compare(Pair<Integer, Double> o1, Pair<Integer, Double> o2)
 		{
-			return (o1.getSecond() < o2.getSecond() ? -1
-					: (o1.getSecond() == o2.getSecond() ? 0 : 1));
+			return o1.getSecond() < o2.getSecond() ? -1
+					: (o1.getSecond() == o2.getSecond() ? 0 : 1);
 		}
 	}
 

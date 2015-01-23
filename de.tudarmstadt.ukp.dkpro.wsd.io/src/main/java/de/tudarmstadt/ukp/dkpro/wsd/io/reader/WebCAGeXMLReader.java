@@ -122,7 +122,7 @@ public class WebCAGeXMLReader
     public boolean hasNext()
         throws IOException, CollectionException
     {
-        return (textIterator != null && textIterator.hasNext())
+        return textIterator != null && textIterator.hasNext()
                 || super.hasNext();
     }
 

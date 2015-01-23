@@ -35,5 +35,5 @@ public interface NormalizationStrategy
 	 * @param o2	the second array of objects
 	 * @return	a divisor for normalization
 	 */
-	public double normalizer(List<String> o1, List<String> o2);
+	double normalizer(List<String> o1, List<String> o2);
 }

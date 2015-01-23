@@ -34,6 +34,5 @@ public interface OverlapStrategy
 	 * @param o2	the second array of objects to be compared
      * @return	the number of overlaps between the two arrays
 	 */
-	public double overlap(List<String> o1, List<String> o2);
-
+	double overlap(List<String> o1, List<String> o2);
 }
