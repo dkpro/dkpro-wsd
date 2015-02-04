@@ -590,6 +590,13 @@ public abstract class WordNetSenseInventoryBase
         }
     }
 
+    /**
+     * Returns true if the given String corresponds to a valid synset offset + POS
+     *
+     * @param synset
+     * @return
+     * @throws SenseInventoryException
+     */
     public boolean isSynset(String synset)
         throws SenseInventoryException
     {
