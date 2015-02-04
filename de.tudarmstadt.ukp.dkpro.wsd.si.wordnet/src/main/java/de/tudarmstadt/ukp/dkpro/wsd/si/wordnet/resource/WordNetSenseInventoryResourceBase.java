@@ -82,4 +82,31 @@ public class WordNetSenseInventoryResourceBase
         return ((WordNetSenseInventoryBase) inventory)
                 .senseKeyToSynsetOffsetAndPos(senseKey);
     }
+
+    /**
+     * Returns true if the given String corresponds to a valid sense key
+     *
+     * @param senseKey
+     * @return
+     * @throws SenseInventoryException
+     */
+    public boolean isSenseKey(String senseKey)
+        throws SenseInventoryException
+    {
+        return ((WordNetSenseInventoryBase) inventory).isSenseKey(senseKey);
+    }
+
+    /**
+     * Returns true if the given String corresponds to a valid synset offset + POS
+     *
+     * @param synset
+     * @return
+     * @throws SenseInventoryException
+     */
+    public boolean isSynset(String synset)
+        throws SenseInventoryException
+    {
+        return ((WordNetSenseInventoryBase) inventory).isSynset(synset);
+    }
+
 }
