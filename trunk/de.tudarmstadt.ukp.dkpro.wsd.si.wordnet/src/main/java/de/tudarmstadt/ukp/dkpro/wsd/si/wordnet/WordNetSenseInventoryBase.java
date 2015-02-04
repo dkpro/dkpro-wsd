@@ -50,7 +50,8 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
  */
-public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
+public abstract class WordNetSenseInventoryBase
+    extends SenseInventoryBase
     implements SenseDictionary, SenseTaxonomy
 {
 
@@ -75,7 +76,8 @@ public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
      *
      * @return
      */
-    public Dictionary getUnderlyingResource() {
+    public Dictionary getUnderlyingResource()
+    {
         return wn;
     }
 
@@ -200,7 +202,8 @@ public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
         try {
             Word w = wn.getWordBySenseKey(senseKey);
             if (w == null) {
-                throw new SenseInventoryException("Sense key " + senseKey + " not found");
+                throw new SenseInventoryException("Sense key " + senseKey
+                        + " not found");
             }
             return synsetToString.transform(w.getSynset());
         }
@@ -415,7 +418,8 @@ public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
             return pos;
         }
 
-        public int getUseCount() {
+        public int getUseCount()
+        {
             return useCount;
         }
 
@@ -566,5 +570,35 @@ public abstract class WordNetSenseInventoryBase extends SenseInventoryBase
 
             return null;
         }
+    }
+
+    /**
+     * Returns true if the given String corresponds to a valid sense key
+     *
+     * @param senseKey
+     * @return
+     * @throws SenseInventoryException
+     */
+    public boolean isSenseKey(String senseKey)
+        throws SenseInventoryException
+    {
+        try {
+            return (wn.getWordBySenseKey(senseKey) != null);
+        }
+        catch (JWNLException e) {
+            throw new SenseInventoryException(e);
+        }
+    }
+
+    public boolean isSynset(String synset)
+        throws SenseInventoryException
+    {
+        try {
+            stringToSynset.transform(synset);
+        }
+        catch (IllegalArgumentException e) {
+            return false;
+        }
+        return true;
     }
 }
