@@ -586,7 +586,10 @@ public abstract class WordNetSenseInventoryBase
             return (wn.getWordBySenseKey(senseKey) != null);
         }
         catch (JWNLException e) {
-            throw new SenseInventoryException(e);
+            return false;
+        }
+        catch (StringIndexOutOfBoundsException e) {
+            return false;
         }
     }
 
