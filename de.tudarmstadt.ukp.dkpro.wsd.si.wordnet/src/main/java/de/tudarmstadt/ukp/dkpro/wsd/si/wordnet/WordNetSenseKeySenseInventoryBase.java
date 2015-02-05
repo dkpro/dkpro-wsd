@@ -70,7 +70,6 @@ public abstract class WordNetSenseKeySenseInventoryBase
     // we cache them in a map
     private final Map<String, List<String>> senseKeyMap = new HashMap<String, List<String>>();
 
-
     /**
      * A class for the textual information associated with a WordNet sense
      *
@@ -78,9 +77,10 @@ public abstract class WordNetSenseKeySenseInventoryBase
      *
      */
     private class CachedSense
-    extends CachedWordNetSense
+        extends CachedWordNetSense
     {
         Word word;
+
         public CachedSense(String senseId)
             throws SenseInventoryException
         {
@@ -112,38 +112,38 @@ public abstract class WordNetSenseKeySenseInventoryBase
 
         @Override
         protected void setDefinitionAndExamples()
-                throws SenseInventoryException
-            {
-                examples = new HashSet<String>();
-                String gloss;
-                try {
-                    gloss = synset.getGloss();
-                }
-                catch (IllegalArgumentException e) {
-                    throw new SenseInventoryException(e);
-                }
-                if (gloss == null) {
-                    if (senseDescriptionFormat.matches(".*%[de].*")) {
-                        logger.warn("Sense " + id + " has no gloss");
-                    }
-                    definition = "";
-                    return;
-                }
-                Matcher glossMatcher = glossPattern.matcher(gloss);
-
-                if (glossMatcher.matches()) {
-                    definition = glossMatcher.group(1);
-                    Scanner scanner = new Scanner(glossMatcher.group(2));
-                    scanner.useDelimiter("(\"$)|(\"?; \")");
-                    while (scanner.hasNext()) {
-                        examples.add(scanner.next());
-                    }
-                    scanner.close();
-                }
-                else {
-                    definition = gloss;
-                }
+            throws SenseInventoryException
+        {
+            examples = new HashSet<String>();
+            String gloss;
+            try {
+                gloss = synset.getGloss();
             }
+            catch (IllegalArgumentException e) {
+                throw new SenseInventoryException(e);
+            }
+            if (gloss == null) {
+                if (senseDescriptionFormat.matches(".*%[de].*")) {
+                    logger.warn("Sense " + id + " has no gloss");
+                }
+                definition = "";
+                return;
+            }
+            Matcher glossMatcher = glossPattern.matcher(gloss);
+
+            if (glossMatcher.matches()) {
+                definition = glossMatcher.group(1);
+                Scanner scanner = new Scanner(glossMatcher.group(2));
+                scanner.useDelimiter("(\"$)|(\"?; \")");
+                while (scanner.hasNext()) {
+                    examples.add(scanner.next());
+                }
+                scanner.close();
+            }
+            else {
+                definition = gloss;
+            }
+        }
 
         @Override
         public Set<String> getNeighbours()
@@ -155,29 +155,33 @@ public abstract class WordNetSenseKeySenseInventoryBase
 
             neighbours = new HashSet<String>();
 
-            // Add sense keys for all words in a lexical relationship
-            for (Pointer p : word.getPointers()) {
-                PointerTarget t = p.getTarget();
-                if (t instanceof Word) {
-                    neighbours.add(((Word) t).getSenseKey());
-                }
-            }
-
-            // Add sense keys for all words of all synsets in a semantic
-            // relationship
-            for (Pointer p : synset.getPointers()) {
-                PointerTarget t = p.getTarget();
-                if (t instanceof Synset) {
-                    for (Word w : ((Synset) t).getWords()) {
-                        neighbours.add(w.getSenseKey());
+            try {
+                // Add sense keys for all words in a lexical relationship
+                for (Pointer p : word.getPointers()) {
+                    PointerTarget t = p.getTarget();
+                    if (t instanceof Word) {
+                        neighbours.add(((Word) t).getSenseKey());
                     }
                 }
+
+                // Add sense keys for all words of all synsets in a semantic
+                // relationship
+                for (Pointer p : synset.getPointers()) {
+                    PointerTarget t = p.getTarget();
+                    if (t instanceof Synset) {
+                        for (Word w : ((Synset) t).getWords()) {
+                            neighbours.add(w.getSenseKey());
+                        }
+                    }
+                }
+            }
+            catch (JWNLException e) {
+                throw new SenseInventoryException(e);
             }
 
             return neighbours;
         }
     }
-
 
     @Override
     protected List<String> getSenses(String sod, net.sf.extjwnl.data.POS pos)
@@ -281,35 +285,41 @@ public abstract class WordNetSenseKeySenseInventoryBase
                     senseKeyCount++;
                     Set<String> targetSenseKeys = new HashSet<String>();
 
-                    // Create list of lexical relation targets
-                    for (Pointer p : w.getPointers()) {
-                        PointerTarget t = p.getTarget();
-                        if (t instanceof Word) {
-                            pointerCount++;
-                            targetSenseKeys.add(((Word) t).getSenseKey());
+                    try {
+                        // Create list of lexical relation targets
+                        for (Pointer p : w.getPointers()) {
+                            PointerTarget t = p.getTarget();
+                            if (t instanceof Word) {
+                                pointerCount++;
+                                targetSenseKeys.add(((Word) t).getSenseKey());
+                            }
                         }
-                    }
 
-                    // Create list of semantic relation targets
-                    for (Pointer p : s.getPointers()) {
-                        PointerTarget t = p.getTarget();
-                        if (t instanceof Synset) {
-                            pointerCount++;
-                            for (Word targetWord : ((Synset) t).getWords()) {
-                                targetSenseKeys.add(targetWord.getSenseKey());
+                        // Create list of semantic relation targets
+                        for (Pointer p : s.getPointers()) {
+                            PointerTarget t = p.getTarget();
+                            if (t instanceof Synset) {
+                                pointerCount++;
+                                for (Word targetWord : ((Synset) t).getWords()) {
+                                    targetSenseKeys.add(targetWord
+                                            .getSenseKey());
+                                }
+                            }
+                        }
+
+                        // Add vertices and edges to graph
+                        undirectedWNGraph.addVertex(w.getSenseKey());
+                        for (String targetSenseKey : targetSenseKeys) {
+                            UnorderedPair<String> e = new UnorderedPair<String>(
+                                    w.getSenseKey(), targetSenseKey);
+                            if (!undirectedWNGraph.containsEdge(e)) {
+                                undirectedWNGraph.addEdge(e, w.getSenseKey(),
+                                        targetSenseKey);
                             }
                         }
                     }
-
-                    // Add vertices and edges to graph
-                    undirectedWNGraph.addVertex(w.getSenseKey());
-                    for (String targetSenseKey : targetSenseKeys) {
-                        UnorderedPair<String> e = new UnorderedPair<String>(
-                                w.getSenseKey(), targetSenseKey);
-                        if (!undirectedWNGraph.containsEdge(e)) {
-                            undirectedWNGraph.addEdge(e, w.getSenseKey(),
-                                    targetSenseKey);
-                        }
+                    catch (JWNLException e) {
+                        throw new SenseInventoryException(e);
                     }
                 }
 
