@@ -41,7 +41,7 @@
   	<dependency>
   		<groupId>net.sf.extjwnl</groupId>
   		<artifactId>extjwnl</artifactId>
-  		<version>1.6.10</version>
+  		<version>1.8.0</version>
   	</dependency>
   </dependencies>
   <name>DKPro WSD - WordNet</name>

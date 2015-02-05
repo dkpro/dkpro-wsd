@@ -219,8 +219,13 @@ public abstract class WordNetSynsetSenseInventoryBase
 
             // Add neighbours
             for (Pointer pointer : synset.getPointers()) {
-                neighbours.add(synsetToString.transform(pointer
-                        .getTargetSynset()));
+                try {
+                    neighbours.add(synsetToString.transform(pointer
+                            .getTargetSynset()));
+                }
+                catch (JWNLException e) {
+                    throw new SenseInventoryException(e);
+                }
             }
 
             return neighbours;
@@ -330,8 +335,13 @@ public abstract class WordNetSynsetSenseInventoryBase
             else {
                 source = (Synset) pt;
             }
-            return synsetToString.transform(source) + " -> "
-                    + synsetToString.transform(p.getTargetSynset());
+            try {
+                return synsetToString.transform(source) + " -> "
+                        + synsetToString.transform(p.getTargetSynset());
+            }
+            catch (JWNLException e) {
+                throw new IllegalArgumentException(e);
+            }
         }
     }
 
@@ -358,8 +368,14 @@ public abstract class WordNetSynsetSenseInventoryBase
             else {
                 source = (Synset) pt;
             }
-            return new UnorderedPair<String>(synsetToString.transform(source),
-                    synsetToString.transform(p.getTargetSynset()));
+            try {
+                return new UnorderedPair<String>(
+                        synsetToString.transform(source),
+                        synsetToString.transform(p.getTargetSynset()));
+            }
+            catch (JWNLException e) {
+                throw new IllegalArgumentException(e);
+            }
         }
     }
 

@@ -134,7 +134,12 @@ public abstract class WordNetSenseInventoryBase
         }
         for (Word w : s.getWords()) {
             if (w.getLemma().equals(lemma)) {
-                return w.getSenseKey();
+                try {
+                    return w.getSenseKey();
+                }
+                catch (JWNLException e) {
+                    throw new SenseInventoryException(e);
+                }
             }
         }
         throw new SenseInventoryException("No sense key for " + offset + "/"
