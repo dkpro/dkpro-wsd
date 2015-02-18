@@ -68,7 +68,7 @@ public class SensevalAnswerKeyWriter
                 if (!algorithm.equals(r.getDisambiguationMethod())) {
                     continue;
                 }
-                output.write(toSensevalAnswerKey(r));
+                output.write(toSensevalAnswerKey(r, replaceApostrophes, includeConfidenceValues));
                 output.newLine();
             }
             catch (IOException e) {
