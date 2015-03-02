@@ -2,6 +2,28 @@ Change log for DKPro WSD and DKPro WSD GPL
 ==========================================
 
 
+DKPro WSD 1.2.0, released 2015-03-02
+------------------------------------
+
+New features:
+
+* Sense inventories now provide sense frequency information (Issue 60)
+
+* Certain sense inventories now allow direct access to the underlying LSR (Issue 72)
+
+
+Bug fixes:
+
+* TAC KBP reader now properly reads all posts in a document
+
+* Senseval answer key writer now correctly processes all configuration parameters
+
+
+API/dependency changes:
+
+* Upgraded to DKPro 1.6.2, UBY 0.6.0, and extJWNL 1.8.0
+
+
 
 DKPro WSD 1.1.0, released 2014-06-16
 ------------------------------------
