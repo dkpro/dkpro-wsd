@@ -26,7 +26,7 @@ You can then add individual DKPro WSD artifacts to your POM.  For example:
 <dependency>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 </dependency>
 }}}
 
