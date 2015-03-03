@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus lang="en">
+<text id="doc.1">
+<head id="head.1">foo</head>
+<head id="head.2">foo</head>
+</text>
+<text id="doc.2">
+<head id="head.3">foo</head>
+<head id="head.4">foo</head>
+</text>
+</corpus>
