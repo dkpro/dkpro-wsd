@@ -42,15 +42,13 @@ import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.PairedOverlap;
 import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceIndividualPOS;
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.Senseval2LSReader;
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
-import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrToWordNetSynsetOffset;
-import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.resource.LsrSenseInventoryResource;
-import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.candidates.WordNetSenseKeyToSynset;
+import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource.WordNetSenseKeySenseInventoryResource;
 
 /**
  * This class illustrates a pipeline which runs various WSD baselines on the
  * Senseval-2 English Lexical Sample training data. It uses the
- * {@link LsrSenseInventoryResource} resource to access WordNet via the DKPro
- * LSR library.
+ * {@link WordNetSenseKeySenseInventoryResource} resource to access WordNet via
+ * the extJWNL library.
  *
  * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
  *
@@ -106,44 +104,20 @@ public class Senseval2EnLSExample
                 2, SenseMapper.PARAM_VALUE_COLUMN, 1,
                 SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
 
-        // The WSD baseline algorithms we will be using need to select senses
-        // from a sense inventory. We will use JLSR as an interface to
-        // the WordNet 1.7 prerelease. For this to work you will need
-        // to have the WordNet 1.7 prerelease installed on your local system,
-        // and to have an appropriately configured extJWNL properties file and
-        // DKPro LSR resources.xml file.
+        // This Senseval data set uses an unpublished pre-release version of
+        // WordNet 1.7 as its sense inventory. This pre-release version is
+        // lost. Here we use WordNet 1.7 instead, though some of the sense
+        // keys are slightly different. You need to create an extJWNL
+        // properties file and change the value of the
+        // PARAM_WORDNET_PROPERTIES_URL to point to its location on your file
+        // system.
+        final String wordnetInventoryName = "WordNet_1.7pre_sensekey";
         ExternalResourceDescription wordnet1_7 = createExternalResourceDescription(
-                LsrSenseInventoryResource.class,
-                LsrSenseInventoryResource.PARAM_RESOURCE_NAME, "wordnet17",
-                LsrSenseInventoryResource.PARAM_RESOURCE_LANGUAGE, "en");
-
-        // WordNet 1.7-prerelease sense keys are not unique identifiers for
-        // WordNet synsets (that is, multiple sense keys map to the same synset)
-        // so we use another annotator to convert them to strings comprised of
-        // the WordNet synset offset plus part of speech. These strings uniquely
-        // identify WordNet senses. You need to change the value of the
-        // PARAM_INDEX_SENSE_FILE to point to the location of the WordNet
-        // index.sense file on your file system.
-        final String wordnet17SynsetInventoryName = "WordNet_1.7pre_synset";
-        AnalysisEngineDescription convertSensekeyToSynset = createEngineDescription(
-                WordNetSenseKeyToSynset.class,
-                WordNetSenseKeyToSynset.PARAM_INDEX_SENSE_FILE,
-                "/home/miller/share/WordNet/WordNet-1.7/dict/index.sense",
-                SenseMapper.PARAM_SOURCE_SENSE_INVENTORY_NAME,
-                wordnet17SenseKeyInventoryName,
-                SenseMapper.PARAM_TARGET_SENSE_INVENTORY_NAME,
-                wordnet17SynsetInventoryName,
-                SenseMapper.PARAM_IGNORE_UNKNOWN_SENSES, true);
-
-        // The sense identifiers returned by JLSR are also proprietary, so we
-        // use this AE to convert them to strings comprised of the
-        // WordNet 1.7-prerelease synset offset plus part of speech.
-        AnalysisEngineDescription convertLSRtoSynset = createEngineDescription(
-                LsrToWordNetSynsetOffset.class,
-                LsrToWordNetSynsetOffset.PARAM_SOURCE_SENSE_INVENTORY_NAME,
-                "WordNet_3.0_LSR",
-                LsrToWordNetSynsetOffset.PARAM_TARGET_SENSE_INVENTORY_NAME,
-                wordnet17SynsetInventoryName);
+                WordNetSenseKeySenseInventoryResource.class,
+                WordNetSenseKeySenseInventoryResource.PARAM_WORDNET_PROPERTIES_URL,
+                "/home/miller/share/WordNet/WordNet-1.7pre/extjwnl18_properties.xml",
+                WordNetSenseKeySenseInventoryResource.PARAM_SENSE_INVENTORY_NAME,
+                wordnetInventoryName);
 
         // Here's a resource encapsulating the most frequent sense baseline
         // algorithm, which we bind to the JLSR sense inventory.
@@ -204,8 +178,8 @@ public class Senseval2EnLSExample
 
         // Here we run the pipeline
         SimplePipeline.runPipeline(reader, answerReader,
-                convertSensevalToSensekey, convertSensekeyToSynset,
-                mfsBaseline, simplifiedLesk, convertLSRtoSynset, evaluator);
+                convertSensevalToSensekey,
+                mfsBaseline, simplifiedLesk, evaluator);
     }
 
 }
