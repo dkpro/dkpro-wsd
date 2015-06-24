@@ -1,0 +1,56 @@
+/*******************************************************************************
+ * IMS (It Makes Sense) -- NUS WSD System
+ * Copyright (c) 2013 National University of Singapore.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ ******************************************************************************/
+
+package sg.edu.nus.comp.nlp.ims.util;
+
+/**
+ * POS tagger interface.
+ *
+ * @author zhongzhi
+ *
+ */
+public interface IPOSTagger {
+	/**
+	 * tag a tokenized input sentence
+	 *
+	 * @param input
+	 *            a tokenized sentence
+	 * @return sentence with tag for each token
+	 */
+	public String tag(String input);
+
+	/**
+	 * get the tag of a tagged token
+	 *
+	 * @param input
+	 *            a tagged token
+	 * @return tag
+	 */
+	public String getTag(String input);
+
+	/**
+	 * get the original token of a tagged token
+	 *
+	 * @param input
+	 *            a tagged token
+	 * @return original token
+	 */
+	public String getToken(String input);
+
+}

@@ -1,0 +1,178 @@
+<!--
+
+    Copyright 2015
+    Ubiquitous Knowledge Processing (UKP) Lab
+    Technische Universität Darmstadt
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses />.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
+		<artifactId>dkpro-parent-pom</artifactId>
+		<version>9</version>
+	</parent>
+	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+	<artifactId>de.tudarmstadt.ukp.dkpro.wsd-gpl</artifactId>
+	<version>1.3.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.twsi-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.examples-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.wrapper-gpl</module>
+		<module>de.tudarmstadt.ukp.dkpro.wsd.si.germanet-gpl</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
+				<version>1.2.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.si.twsi-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.examples-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<name>DKPro WSD GPL</name>
+	<url>https://code.google.com/p/dkpro-wsd-gpl/</url>
+	<description>DKPro WSD is a UIMA framework for word sense disambiguation licensed under the Apache License 2.0. This project contains GPL-licensed components for use with the main DKPro WSD project. </description>
+	<inceptionYear>2013</inceptionYear>
+	<scm>
+		<url>https://code.google.com/p/dkpro-wsd-gpl/source/browse/#svn/trunk</url>
+		<connection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://dkpro-wsd-gpl.googlecode.com/svn/trunk</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>Google Code</system>
+		<url>https://code.google.com/p/dkpro-wsd/issues/list</url>
+	</issueManagement>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<inherited>true</inherited>
+				<groupId>com.mycila</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<header>${basedir}/.license-header.txt</header>
+					<failIfMissing>true</failIfMissing>
+					<strictCheck>true</strictCheck>
+							<properties>
+								<year>2015</year>
+							</properties>
+					<excludes>
+						<exclude>release.properties</exclude>
+						<exclude>CHANGES</exclude>
+						<exclude>ChangeLog.txt</exclude>
+						<exclude>NOTICE.txt</exclude>
+						<exclude>README.txt</exclude>
+						<exclude>LICENSE.txt</exclude>
+						<exclude>src/main/java/sg/**/*</exclude>
+						<exclude>src/main/java/de/tuebingen/**/*</exclude>
+						<exclude>src/main/resources/**/*</exclude>
+						<exclude>src/test/resources/**/*</exclude>
+						<exclude>.license-header.txt</exclude>
+						<exclude>pom.xml</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>check-headers</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-releases-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>ukp-oss</id>
+			<url>dav:https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-snapshots-local</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>ukp-oss-releases</id>
+			<url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
+		</repository>
+	</repositories>
+	<developers>
+		<developer>
+			<id>miller</id>
+			<name>Tristan Miller</name>
+			<email>miller@ukp.informatik.tu-darmstadt.de</email>
+			<url>http://www.nothingisreal.com/</url>
+			<organization>Ubiquitous Knowledge Processing Lab, Department of Computer Science, Technische Universität Darmstadt</organization>
+			<organizationUrl>http://www.ukp.tu-darmstadt.de/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>The GNU General Public License, version 3.0</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+			<distribution>repo</distribution>
+			<comments>A free software licence</comments>
+		</license>
+	</licenses>
+</project>
