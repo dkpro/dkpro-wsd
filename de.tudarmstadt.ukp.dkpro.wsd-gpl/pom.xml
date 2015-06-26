@@ -25,9 +25,7 @@
 		<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
 		<version>1.3.0-SNAPSHOT</version>
 	</parent>
-	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd-gpl</artifactId>
-	<version>1.3.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
 		<module>../de.tudarmstadt.ukp.dkpro.wsd.si.twsi-gpl</module>
@@ -42,9 +40,23 @@
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 				<artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
-				<version>1.2.0</version>
+				<version>1.3.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.wrapper-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+				<artifactId>
+  				de.tudarmstadt.ukp.dkpro.wsd.si.germanet-gpl
+  			</artifactId>
+				<version>1.3.0-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -78,7 +90,7 @@
 	</dependencyManagement>
 	<name>DKPro WSD GPL</name>
 	<url>https://code.google.com/p/dkpro-wsd-gpl/</url>
-	<description>DKPro WSD is a UIMA framework for word sense disambiguation licensed under the Apache License 2.0. This project contains GPL-licensed components for use with the main DKPro WSD project. </description>
+	<description>DKPro WSD is a UIMA framework for word sense disambiguation. This project contains GPL-licensed components for use with the main DKPro WSD project.</description>
 	<inceptionYear>2013</inceptionYear>
 	<build>
 		<plugins>
