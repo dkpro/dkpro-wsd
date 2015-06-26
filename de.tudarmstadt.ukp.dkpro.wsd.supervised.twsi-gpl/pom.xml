@@ -23,6 +23,7 @@
   <parent>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd-gpl</artifactId>
+    <relativePath>../de.tudarmstadt.ukp.dkpro.wsd-gpl</relativePath>
     <version>1.3.0-SNAPSHOT</version>
   </parent>
   <artifactId>de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi-gpl</artifactId>
