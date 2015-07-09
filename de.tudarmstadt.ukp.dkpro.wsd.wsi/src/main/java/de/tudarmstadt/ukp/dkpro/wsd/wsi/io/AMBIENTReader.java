@@ -197,7 +197,6 @@ public class AMBIENTReader
         return null;
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void initialize(UimaContext context)
         throws ResourceInitializationException
@@ -209,8 +208,7 @@ public class AMBIENTReader
 
         }
         catch (final IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            throw new ResourceInitializationException(e);
         }
 
     }
@@ -293,7 +291,7 @@ public class AMBIENTReader
     private void downloadHTMLPage(JCas jCas, final Result result)
     {
         try {
-            URL inputURL = new URL(URLDecoder.decode(result.url));
+            URL inputURL = new URL(URLDecoder.decode(result.url, "UTF-8"));
             URLConnection conn = inputURL.openConnection();
             conn.setReadTimeout(30000);
             InputStream is = conn.getInputStream();

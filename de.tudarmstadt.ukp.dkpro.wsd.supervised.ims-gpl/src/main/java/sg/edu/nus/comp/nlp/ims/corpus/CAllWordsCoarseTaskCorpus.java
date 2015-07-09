@@ -30,7 +30,10 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.input.SAXBuilder;
 
-import sg.edu.nus.comp.nlp.ims.util.*;
+import sg.edu.nus.comp.nlp.ims.util.ILemmatizer;
+import sg.edu.nus.comp.nlp.ims.util.IPOSTagger;
+import sg.edu.nus.comp.nlp.ims.util.ISentenceSplitter;
+import sg.edu.nus.comp.nlp.ims.util.ITokenizer;
 
 /**
  * SemEval 2007 coarse-grained all-words task test corpus.
@@ -69,7 +72,6 @@ public class CAllWordsCoarseTaskCorpus extends CLexicalCorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.CLexicalCorpus#load(java.io.BufferedReader)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean load(Reader p_Reader) throws Exception {
 		SAXBuilder builder = new SAXBuilder();
@@ -93,8 +95,8 @@ public class CAllWordsCoarseTaskCorpus extends CLexicalCorpus {
 	 * @return paragraphs
 	 * @throws Exception exception when loading text element
 	 */
-	@SuppressWarnings("unchecked")
-	protected ArrayList<String> loadText(Element p_Text) throws Exception {
+	@SuppressWarnings("rawtypes")
+    protected ArrayList<String> loadText(Element p_Text) throws Exception {
 		ArrayList<String> text = new ArrayList<String>();
 		List sentences = p_Text.getChildren();
 		for (int i = 0; i < sentences.size(); i++) {
@@ -152,7 +154,8 @@ public class CAllWordsCoarseTaskCorpus extends CLexicalCorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.CLexicalCorpus#genInfo()
 	 */
-	protected void genInfo() {
+	@Override
+    protected void genInfo() {
 
 	}
 

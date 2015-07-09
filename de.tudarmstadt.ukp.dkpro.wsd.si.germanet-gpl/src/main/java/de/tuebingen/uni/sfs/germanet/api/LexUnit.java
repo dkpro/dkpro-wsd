@@ -19,7 +19,10 @@
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A <code>LexUnit</code> consists of an orthForm (represented as a String),
@@ -30,12 +33,12 @@ import java.util.*;
  * attributes: styleMarking (boolean), sense (int), styleMarking (boolean),
  * artificial (boolean), namedEntity (boolean), and source (String).<br>
  * A <code>LexUnit</code> also has the lexical relations: <br><br>
- * 
+ *
  * <code>LexRel.has_antonym</code>, <code>LexRel.has_synonym</code>,
  * <code>LexRel.has_pertainym</code>, <code>LexRel.has_participle</code><br><br>
- * 
+ *
  * Methods are provided to get each of the attributes.<br><br>
- * 
+ *
  * The orthographic form can be retrieved:<br>
  * <code>
  * &nbsp;&nbsp;&nbsp;String orthForm = aLexUnit.getOrthForm();<br><br>
@@ -47,7 +50,7 @@ import java.util.*;
  * <code>
  * &nbsp;&nbsp;&nbsp;List&lt;String&gt; forms = aLexUnit.getAllOrthForms();<br><br>
  * </code>
- * 
+ *
  * Lexical relations can be retrieved:<br>
  * <code>
  * &nbsp;&nbsp;&nbsp;List&lt;LexUnit&gt; antonyms = aLexUnit.getRelatedLexUnits(LexRel.antonymy);<br><br>
@@ -58,25 +61,25 @@ import java.util.*;
  * </code>
  *
  * Unless otherwise stated, methods will return an empty List rather than null
- * to indicate that no objects exist for the given request. 
- * 
+ * to indicate that no objects exist for the given request.
+ *
  * @author University of Tuebingen, Department of Linguistics (germanetinfo at uni-tuebingen.de)
  * @version 8.0
  */
 public class LexUnit {
 
-    private int id;
-    private String source;
-    private boolean styleMarking, artificial, namedEntity;
-    private Synset synset;
-    private String orthForm, orthVar, oldOrthForm, oldOrthVar;
-    private int sense;
-    private ArrayList<Frame> frames;
-    private ArrayList<Example> examples;
-    private ArrayList<IliRecord> iliRecords;
-    private ArrayList<WiktionaryParaphrase> wiktionaryParaphrases;
+    private final int id;
+    private final String source;
+    private final boolean styleMarking, artificial, namedEntity;
+    private final Synset synset;
+    private final String orthForm, orthVar, oldOrthForm, oldOrthVar;
+    private final int sense;
+    private final ArrayList<Frame> frames;
+    private final ArrayList<Example> examples;
+    private final ArrayList<IliRecord> iliRecords;
+    private final ArrayList<WiktionaryParaphrase> wiktionaryParaphrases;
     // Relations of this LexUnit
-    private EnumMap<LexRel, ArrayList<LexUnit>> relations;
+    private final EnumMap<LexRel, ArrayList<LexUnit>> relations;
     private CompoundInfo compoundInfo;
 
     /**
@@ -363,6 +366,7 @@ public class LexUnit {
      * @return a <code>List</code> of this <code>LexUnit</code>'s
      * <code>Examples</code>
      */
+    @SuppressWarnings("unchecked")
     public List<Example> getExamples() {
         return (List<Example>) this.examples.clone();
     }
@@ -373,6 +377,7 @@ public class LexUnit {
      * @return a <code>List</code> of this <code>LexUnit</code>'s
      * <code>Frames</code>
      */
+    @SuppressWarnings("unchecked")
     public List<Frame> getFrames() {
         return (List<Frame>) this.frames.clone();
     }
@@ -434,6 +439,7 @@ public class LexUnit {
      * Return a <code>List</code> of <code>IliRecords</code> for this <code>LexUnit</code>.
      * @return <code>List</code> of <code>IliRecords</code> for this <code>LexUnit</code>
      */
+    @SuppressWarnings("unchecked")
     public List<IliRecord> getIliRecords() {
         return (List<IliRecord>) this.iliRecords.clone();
     }
@@ -468,6 +474,7 @@ public class LexUnit {
      * @return <code>List</code> of <code>WiktionaryParaphrase</code>
      * for this <code>LexUnit</code>
      */
+    @SuppressWarnings("unchecked")
     public List<WiktionaryParaphrase> getWiktionaryParaphrases() {
         return (List<WiktionaryParaphrase>) this.wiktionaryParaphrases.clone();
     }
@@ -479,7 +486,7 @@ public class LexUnit {
     public void addWiktionaryParaphrase(WiktionaryParaphrase paraphrase) {
         wiktionaryParaphrases.add(paraphrase);
     }
-    
+
     /**
      * Return true if this <code>LexUnit</code> is equal to another <code>LexUnit</code>.
      * @param other the <code>LexUnit</code> to compare to

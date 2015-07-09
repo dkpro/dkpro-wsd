@@ -75,7 +75,6 @@ public class CAllWordsResultWriter implements IResultWriter {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.io.IResultWriter#write(java.lang.Object)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void write(Object p_Result) throws IOException {
 		if (List.class.isInstance(p_Result)) {

@@ -188,8 +188,8 @@ public final class CAmendLexeltCorpus {
 		return null;
 	}
 
-	@SuppressWarnings("unchecked")
-	private ArrayList<Element> amendInstance(Element p_Instance) {
+	@SuppressWarnings("rawtypes")
+    private ArrayList<Element> amendInstance(Element p_Instance) {
 		ArrayList<Element> instances = new ArrayList<Element>();
 		ArrayList<Element> contents = new ArrayList<Element>();
 		if (p_Instance != null) {

@@ -54,8 +54,8 @@ public class CSurroundingWordFeatureSelector implements IFeatureSelector {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IFeatureSelector#filter(sg.edu.nus.comp.nlp.ims.lexelt.IStatistic)
 	 */
-	@SuppressWarnings("unchecked")
-	public void filter(IStatistic p_Stat) {
+	@Override
+    public void filter(IStatistic p_Stat) {
 		String surroundingWord = CSurroundingWord.class.getName();
 		int keySize = p_Stat.getKeys().size();
 		for (int iKey = 0; iKey < keySize; iKey++) {

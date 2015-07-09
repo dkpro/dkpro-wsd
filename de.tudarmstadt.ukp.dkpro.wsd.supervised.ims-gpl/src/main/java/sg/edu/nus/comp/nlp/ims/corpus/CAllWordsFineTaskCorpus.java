@@ -26,10 +26,16 @@ import java.util.Arrays;
 //import java.util.List;
 import java.util.regex.Pattern;
 
-import org.jdom.*;
+import org.jdom.Attribute;
+import org.jdom.Content;
+import org.jdom.Document;
+import org.jdom.Element;
 import org.jdom.input.SAXBuilder;
 
-import sg.edu.nus.comp.nlp.ims.util.*;
+import sg.edu.nus.comp.nlp.ims.util.ILemmatizer;
+import sg.edu.nus.comp.nlp.ims.util.IPOSTagger;
+import sg.edu.nus.comp.nlp.ims.util.ISentenceSplitter;
+import sg.edu.nus.comp.nlp.ims.util.ITokenizer;
 
 /**
  * SensEval-2/3 and SemEval 2007 fine-grained all-words task test corpus.
@@ -70,7 +76,6 @@ public final class CAllWordsFineTaskCorpus extends CLexicalCorpus {
 	 * @see supreclass.CCorpus#load(java.io.InputStream)
 	 */
 	@Override
-	@SuppressWarnings("unchecked")
 	public boolean load(Reader p_Reader) throws Exception {
 		SAXBuilder builder = new SAXBuilder();
 		Document doc = builder.build(p_Reader);
@@ -154,13 +159,14 @@ public final class CAllWordsFineTaskCorpus extends CLexicalCorpus {
 		return builder.toString().trim();
 	}
 
-	private Pattern m_BePattern = Pattern.compile("'([sm]|re)");
+	private final Pattern m_BePattern = Pattern.compile("'([sm]|re)");
 
 	/*
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.CLexicalCorpus#genInfo()
 	 */
-	protected void genInfo() {
+	@Override
+    protected void genInfo() {
 		super.genInfo();
 		for (int i = 0; i < this.m_IDs.size(); i++) {
 			IItem item = this.m_Sentences.get(this.m_SentenceIDs.get(i)).getItem(this.m_Indice.get(i));

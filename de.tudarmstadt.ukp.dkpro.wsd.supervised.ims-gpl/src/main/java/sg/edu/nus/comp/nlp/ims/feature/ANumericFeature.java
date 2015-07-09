@@ -24,6 +24,7 @@ package sg.edu.nus.comp.nlp.ims.feature;
  * @author zhongzhi
  *
  */
+@SuppressWarnings("serial")
 public abstract class ANumericFeature implements IFeature {
 
 	protected String m_Key;

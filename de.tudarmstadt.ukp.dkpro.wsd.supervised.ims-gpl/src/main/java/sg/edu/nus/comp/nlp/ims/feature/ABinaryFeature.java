@@ -24,6 +24,7 @@ package sg.edu.nus.comp.nlp.ims.feature;
  * @author zhongzhi
  *
  */
+@SuppressWarnings("serial")
 public abstract class ABinaryFeature implements IFeature {
 
 	// feature key
@@ -36,7 +37,8 @@ public abstract class ABinaryFeature implements IFeature {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.feature.IFeature#getKey()
 	 */
-	public String getKey() {
+	@Override
+    public String getKey() {
 		return this.m_Key;
 	}
 
@@ -44,7 +46,8 @@ public abstract class ABinaryFeature implements IFeature {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.feature.IFeature#getValue()
 	 */
-	public String getValue() {
+	@Override
+    public String getValue() {
 		if (this.m_Value) {
 			return "1";
 		}
@@ -55,7 +58,8 @@ public abstract class ABinaryFeature implements IFeature {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.feature.IFeature#setKey(java.lang.String)
 	 */
-	public boolean setKey(String p_Key) {
+	@Override
+    public boolean setKey(String p_Key) {
 		if (p_Key != null) {
 			p_Key = p_Key.trim();
 			if (!p_Key.isEmpty()) {
@@ -70,7 +74,8 @@ public abstract class ABinaryFeature implements IFeature {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.feature.IFeature#setValue(java.lang.String)
 	 */
-	public boolean setValue(String p_Value) {
+	@Override
+    public boolean setValue(String p_Value) {
 		if (p_Value != null) {
 			p_Value = p_Value.trim();
 			if (p_Value.equals("0")) {
@@ -89,5 +94,6 @@ public abstract class ABinaryFeature implements IFeature {
 	 * (non-Javadoc)
 	 * @see java.lang.Object#clone()
 	 */
-	public abstract Object clone();
+	@Override
+    public abstract Object clone();
 }

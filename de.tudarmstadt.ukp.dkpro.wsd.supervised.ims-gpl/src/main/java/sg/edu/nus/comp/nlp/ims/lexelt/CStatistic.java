@@ -120,7 +120,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#addInstance(sg.edu.nus.comp.nlp.ims.instance.IInstance)
 	 */
-	public boolean addInstance(IInstance p_Instance) {
+	@Override
+    public boolean addInstance(IInstance p_Instance) {
 		if (p_Instance != null) {
 			ArrayList<Integer> tagIndice = new ArrayList<Integer>();
 			int size = p_Instance.size();
@@ -136,7 +137,7 @@ public class CStatistic implements IStatistic {
 				this.m_Size++;
 			}
 			for (int i = 0; i < size; i++) {
-				String key = (String) p_Instance.getFeatureName(i);
+				String key = p_Instance.getFeatureName(i);
 				IFeature feature = p_Instance.getFeature(i);
 				String value = feature.getValue();
 				if (!this.m_KeyMap.containsKey(key)) {
@@ -204,7 +205,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#removeInstance(sg.edu.nus.comp.nlp.ims.instance.IInstance)
 	 */
-	public boolean removeInstance(IInstance p_iInstance) {
+	@Override
+    public boolean removeInstance(IInstance p_iInstance) {
 		return false;
 	}
 
@@ -212,7 +214,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getKeys()
 	 */
-	public List<String> getKeys() {
+	@Override
+    public List<String> getKeys() {
 		return this.m_Keys;
 	}
 
@@ -220,7 +223,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getParameter(java.lang.String)
 	 */
-	public int getParameter(String p_Parameter) {
+	@Override
+    public int getParameter(String p_Parameter) {
 		return this.m_M2;
 	}
 
@@ -228,7 +232,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#loadFromFile(java.lang.String)
 	 */
-	@SuppressWarnings("unchecked")
+	@Override
+    @SuppressWarnings("unchecked")
 	public boolean loadFromFile(String p_FileName) {
 		this.clear();
 		try {
@@ -250,9 +255,9 @@ public class CStatistic implements IStatistic {
 			}
 			line = reader.readLine();
 			tokens = this.m_SplitPattern.split(line);
-			for (int i = 0; i < tokens.length; i++) {
+			for (String token : tokens) {
 				this.m_TypeEnum.add((Class<? extends IFeature>) Class
-						.forName(tokens[i]));
+						.forName(token));
 			}
 			while ((line = reader.readLine()) != null) {
 				Hashtable<String, Integer> valueMap = new Hashtable<String, Integer>();
@@ -283,7 +288,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#setParameter(java.lang.String, int)
 	 */
-	public boolean setParameter(String p_Parameter, int p_Value) {
+	@Override
+    public boolean setParameter(String p_Parameter, int p_Value) {
 		if (p_Value < 0) {
 			p_Value = 0;
 		}
@@ -295,7 +301,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#writeToFile(java.lang.String)
 	 */
-	public boolean writeToFile(String p_FileName) {
+	@Override
+    public boolean writeToFile(String p_FileName) {
 		try {
 			BufferedWriter writer;
 			if (p_FileName.endsWith(".gz")) {
@@ -327,9 +334,9 @@ public class CStatistic implements IStatistic {
 				for (String value : valueMap.keySet()) {
 					values[valueMap.get(value)] = value;
 				}
-				for (int iValue = 0; iValue < values.length; iValue++) {
+				for (String value : values) {
 					writer.write(SEPARATOR);
-					writer.write(values[iValue]);
+					writer.write(value);
 				}
 				writer.write("\n");
 			}
@@ -346,7 +353,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see java.lang.Object#clone()
 	 */
-	@SuppressWarnings("unchecked")
+	@Override
+    @SuppressWarnings({ "unchecked", "rawtypes" })
 	public Object clone() {
 		CStatistic clone = new CStatistic();
 		clone.m_Keys = (ArrayList<String>) this.m_Keys.clone();
@@ -389,7 +397,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#contains(int, java.lang.String)
 	 */
-	public boolean contains(int p_KeyIndex, String p_Value) {
+	@Override
+    public boolean contains(int p_KeyIndex, String p_Value) {
 		if (p_KeyIndex >= 0 && p_KeyIndex < this.m_Keys.size()) {
 			return this.m_Values.get(p_KeyIndex).containsKey(p_Value);
 		}
@@ -400,7 +409,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getCount(java.lang.String, java.lang.String)
 	 */
-	public int getCount(String p_Key, String p_Value) {
+	@Override
+    public int getCount(String p_Key, String p_Value) {
 		int keyIndex = this.m_KeyMap.get(p_Key);
 		return this.getCount(keyIndex, p_Value);
 	}
@@ -409,7 +419,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getCount(int, java.lang.String)
 	 */
-	public int getCount(int p_Index, String p_Value) {
+	@Override
+    public int getCount(int p_Index, String p_Value) {
 		if (p_Index >= 0 && p_Index < this.m_Keys.size()) {
 			ArrayList<Integer> counts = this.m_ValueCount.get(p_Index);
 			Hashtable<String, Integer> values = this.m_Values.get(p_Index);
@@ -436,7 +447,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getIndex(java.lang.String)
 	 */
-	public int getIndex(String p_Key) {
+	@Override
+    public int getIndex(String p_Key) {
 		if (this.m_KeyMap.containsKey(p_Key)) {
 			return this.m_KeyMap.get(p_Key);
 		}
@@ -447,7 +459,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getKey(int)
 	 */
-	public String getKey(int p_Index) {
+	@Override
+    public String getKey(int p_Index) {
 		if (p_Index >= 0 && p_Index < this.m_Keys.size()) {
 			return this.m_Keys.get(p_Index);
 		}
@@ -458,7 +471,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#size()
 	 */
-	public int size() {
+	@Override
+    public int size() {
 		return this.m_Size;
 	}
 
@@ -466,7 +480,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getType(int)
 	 */
-	public String getType(int p_Index) {
+	@Override
+    public String getType(int p_Index) {
 		if (p_Index >= 0 && p_Index < this.m_Keys.size()) {
 			// return this.m_Types.get(p_Index).name();
 			return this.m_TypeEnum.get(this.m_Types.get(p_Index)).getName();
@@ -478,7 +493,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getType(java.lang.String)
 	 */
-	public String getType(String p_Key) {
+	@Override
+    public String getType(String p_Key) {
 		int index = this.m_KeyMap.get(p_Key);
 		return this.getType(index);
 	}
@@ -487,7 +503,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getValue(int)
 	 */
-	public List<String> getValue(int p_Index) {
+	@Override
+    public List<String> getValue(int p_Index) {
 		if (p_Index >= 0 && p_Index < this.m_Keys.size()) {
 			String[] values = new String[this.m_Values.get(p_Index).size()];
 			for (Map.Entry<String, Integer> i : this.m_Values.get(p_Index)
@@ -503,7 +520,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getValue(java.lang.String)
 	 */
-	public List<String> getValue(String p_Key) {
+	@Override
+    public List<String> getValue(String p_Key) {
 		int index = this.m_KeyMap.get(p_Key);
 		return this.getValue(index);
 	}
@@ -512,7 +530,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#clear()
 	 */
-	public void clear() {
+	@Override
+    public void clear() {
 		this.m_KeyMap.clear();
 		this.m_Keys.clear();
 		this.m_Types.clear();
@@ -531,7 +550,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getTags()
 	 */
-	public Set<String> getTags() {
+	@Override
+    public Set<String> getTags() {
 		return this.m_TagMap.keySet();
 	}
 
@@ -539,7 +559,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getTagsInOrder()
 	 */
-	public List<String> getTagsInOrder() {
+	@Override
+    public List<String> getTagsInOrder() {
 		return this.m_Tags;
 	}
 
@@ -547,7 +568,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getTagCount(java.lang.String)
 	 */
-	public int getTagCount(String p_Tag) {
+	@Override
+    public int getTagCount(String p_Tag) {
 		int i = this.m_TagMap.get(p_Tag);
 		if (i >= 0) {
 			return this.m_TagCount.get(i);
@@ -559,7 +581,8 @@ public class CStatistic implements IStatistic {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.lexelt.IStatistic#getDefaultValue()
 	 */
-	public String getDefaultValue() {
+	@Override
+    public String getDefaultValue() {
 		return this.m_Default;
 	}
 

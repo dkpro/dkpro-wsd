@@ -30,7 +30,6 @@ import java.util.List;
 import sg.edu.nus.comp.nlp.ims.corpus.AItem;
 import sg.edu.nus.comp.nlp.ims.corpus.ICorpus;
 import sg.edu.nus.comp.nlp.ims.corpus.ISentence;
-import sg.edu.nus.comp.nlp.ims.io.IResultWriter;
 import sg.edu.nus.comp.nlp.ims.lexelt.CResultInfo;
 import sg.edu.nus.comp.nlp.ims.util.CArgumentManager;
 
@@ -211,7 +210,6 @@ public class CPlainCorpusResultWriter implements IResultWriter {
 	/* (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.io.IResultWriter#write(java.lang.Object)
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void write(Object result) throws IOException {
 		OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(this.m_SavePath));

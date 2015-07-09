@@ -223,6 +223,7 @@ public class CScorer {
 			}
             scorer.setKey(id, ins);
 		}
+		reader.close();
 
 		// load answer file
 		reader = new BufferedReader(new InputStreamReader(new FileInputStream(argmgr.get(0))));

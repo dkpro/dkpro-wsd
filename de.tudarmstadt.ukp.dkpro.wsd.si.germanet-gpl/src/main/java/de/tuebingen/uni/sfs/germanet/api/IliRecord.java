@@ -19,7 +19,8 @@
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * An <code>IliRecord</code> consists of a German word, corresponding English word
@@ -35,14 +36,14 @@ import java.util.*;
  */
 public class IliRecord {
 
-    private int lexUnitId;
-    private EwnRel ewnRelation;
-    private String pwnWord;
-    private String pwn20Id;
-    private String pwn30Id;
+    private final int lexUnitId;
+    private final EwnRel ewnRelation;
+    private final String pwnWord;
+    private final String pwn20Id;
+    private final String pwn30Id;
     private String pwn20paraphrase = "";
-    private String source;
-    private ArrayList<String> englishSynonyms;
+    private final String source;
+    private final ArrayList<String> englishSynonyms;
 
     /**
      * Constructs an <code>IliRecord</code> with the specified attributes.
@@ -63,7 +64,9 @@ public class IliRecord {
         this.pwnWord = pwnWord;
         this.pwn20Id = pwn20Id;
         this.pwn30Id = pwn30Id;
-        if (pwn20paraphrase != null) this.pwn20paraphrase = pwn20paraphrase;
+        if (pwn20paraphrase != null) {
+            this.pwn20paraphrase = pwn20paraphrase;
+        }
         this.source = source;
         this.englishSynonyms = new ArrayList<String>();
     }
@@ -76,7 +79,7 @@ public class IliRecord {
         this.englishSynonyms.add(synonym);
     }
 
-    
+
     /**
      * Returns the identifier of the <code>LexUnit</code>
      * corresponding to this <code>IliRecord</code>.
@@ -141,10 +144,11 @@ public class IliRecord {
      * @return a <code>List</code> of this <code>IliRecord</code>'s
      * English synonyms from PWN 2.0
      */
+    @SuppressWarnings("unchecked")
     public List<String> getEnglishSynonyms() {
         return (List<String>) this.englishSynonyms.clone();
     }
-    
+
     /**
      * Returns a <code>String</code> representation of this <code>IliRecord</code>.
      * @return a <code>String</code> representation of this <code>IliRecord</code>
@@ -161,12 +165,14 @@ public class IliRecord {
                 ", source: " + this.source;
         if (englishSynonyms.size() > 0) {
             stringIli += "\nEnglish synonyms from PWN 2.0: ";
-            for (String synonym : englishSynonyms)
+            for (String synonym : englishSynonyms) {
                 stringIli += synonym + ", ";
+            }
             stringIli = stringIli.substring(0, stringIli.length() - 2);
         }
-        if (pwn20paraphrase.length() > 0)
+        if (pwn20paraphrase.length() > 0) {
             stringIli += "\nEnglish paraphrase from PWN 2.0: " + pwn20paraphrase;
+        }
         return stringIli;
     }
 }

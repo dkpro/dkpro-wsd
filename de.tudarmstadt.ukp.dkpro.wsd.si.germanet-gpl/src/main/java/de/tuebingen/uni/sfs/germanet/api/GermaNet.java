@@ -225,6 +225,7 @@ public class GermaNet {
      * @throws javax.xml.stream.XMLStreamException
      * @throws javax.xml.stream.IOException
      */
+    @SuppressWarnings("rawtypes")
     public GermaNet(File dir, boolean ignoreCase) throws FileNotFoundException, XMLStreamException, IOException {
         checkMemory();
         this.ignoreCase = ignoreCase;
@@ -425,6 +426,7 @@ public class GermaNet {
      * Returns a <code>List</code> of all <code>Synsets</code>.
      * @return a <code>list</code> of all <code>Synsets</code>
      */
+    @SuppressWarnings("rawtypes")
     public List<Synset> getSynsets() {
         List<Synset> rval = new ArrayList<Synset>(synsets.size());
         Iterator iter = synsets.iterator();
@@ -735,6 +737,7 @@ public class GermaNet {
      * @return a <code>List</code> of <code>LexUnits</code> with the specified
      * <code>orthForm</code> and <code>wordCategory</code>.
      */
+    @SuppressWarnings("unchecked")
     public List<LexUnit> getLexUnits(String orthForm, WordCategory wordCategory,
             boolean considerMainOrthFormOnly) {
         List<LexUnit> rval = null;
@@ -772,6 +775,7 @@ public class GermaNet {
      * <code>wordCategory</code>. If no <code>LexUnits</code> were found, this
      * is a <code>List</code> containing no <code>LexUnits</code>.
      */
+    @SuppressWarnings("unchecked")
     public List<LexUnit> getLexUnits(WordCategory wordCategory) {
         ArrayList<LexUnit> rval = new ArrayList<LexUnit>();
         HashMap<String, ArrayList<LexUnit>> map;
@@ -877,6 +881,7 @@ public class GermaNet {
      * Returns a <code>List</code> of all <code>IliRecords</code>.
      * @return a <code>List</code> of all <code>IliRecords</code>
      */
+    @SuppressWarnings("unchecked")
     public List<IliRecord> getIliRecords() {
         return (List<IliRecord>) iliRecords.clone();
     }
@@ -949,6 +954,7 @@ public class GermaNet {
      * Returns a <code>List</code> of all <code>WiktionaryParaphrases</code>.
      * @return a <code>List</code> of all <code>WiktionaryParaphrases</code>
      */
+    @SuppressWarnings("unchecked")
     public List<WiktionaryParaphrase> getWiktionaryParaphrases() {
         return (List<WiktionaryParaphrase>) wiktionaryParaphrases.clone();
     }

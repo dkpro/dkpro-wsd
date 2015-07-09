@@ -259,7 +259,8 @@ public final class CJWNL {
 	private static Pattern LEGALPATTERN = Pattern.compile("^[a-z\\-_ \\.\\/']*$");
 
 	// delimiter pattern
-	private static Pattern DELIMITERPATTERN = Pattern.compile("[\\-_ \\/]");
+	@SuppressWarnings("unused")
+    private static Pattern DELIMITERPATTERN = Pattern.compile("[\\-_ \\/]");
 
 	@SuppressWarnings("unchecked")
 	private static String getRootForm(POS p_POS, String p_Token) throws JWNLException {

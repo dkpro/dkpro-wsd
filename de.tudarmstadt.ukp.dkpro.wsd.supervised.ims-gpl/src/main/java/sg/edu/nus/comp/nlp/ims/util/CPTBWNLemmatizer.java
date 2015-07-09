@@ -73,7 +73,8 @@ public class CPTBWNLemmatizer implements ILemmatizer {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.util.ILemmatizer#getLexelt(java.lang.String[])
 	 */
-	public String getLexelt(String[] input) {
+	@Override
+    public String getLexelt(String[] input) {
 		String lemma = input[0].toLowerCase();
 		String pos = APTBPOSTagger.getShortForm(input[1]);
 		String def = null;
@@ -111,5 +112,6 @@ public class CPTBWNLemmatizer implements ILemmatizer {
 			}
 			System.out.println();
 		}
+		reader.close();
 	}
 }

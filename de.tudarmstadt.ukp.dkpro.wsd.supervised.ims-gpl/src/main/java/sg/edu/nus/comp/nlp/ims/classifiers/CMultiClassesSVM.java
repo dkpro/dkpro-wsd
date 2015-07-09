@@ -285,8 +285,8 @@ public class CMultiClassesSVM extends Classifier implements
 	 * (non-Javadoc)
 	 * @see weka.core.OptionHandler#listOptions()
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
+	@SuppressWarnings("rawtypes")
+    @Override
 	public Enumeration listOptions() {
 		Vector<Object> vec = new Vector<Object>(1);
 		vec.addElement(new Option("\tSets the index of instance id.", "I", 1,

@@ -124,6 +124,7 @@ public class CWordNetSenseIndex implements ISenseIndex {
 					this.m_FirstSenses.put(lemma + "." + pos, sense);
 				}
 			} else {
+			    reader.close();
 				throw new IOException("Error format of sense index file! ["
 						+ line + "]");
 			}

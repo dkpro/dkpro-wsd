@@ -19,7 +19,10 @@
  */
 package de.tuebingen.uni.sfs.germanet.api;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * A <code>Synset</code> belongs to a <code>WordCategory</code>
@@ -30,7 +33,7 @@ import java.util.*;
  * A <code>Synset</code> also has the conceptual relations (<code>ConRel</code>),
  * of which hypernymy, hyponymy, meronymy, and holonymy
  * are transitive:<br><br>
- * 
+ *
  * <code>ConRel.has_hypernym</code>, <code>ConRel.has_hyponym</code>,<br>
  * <code>ConRel.has_component_meronym</code>, <code>ConRel.has_component_holonym</code>,<br>
  * <code>ConRel.has_member_meronym</code>, <code>ConRel.has_member_holonym</code>,<br>
@@ -42,7 +45,7 @@ import java.util.*;
  *
  * Methods are provided to get the <code>WordCategory</code>, paraphrase, and
  * the <code>LexUnit</code>s.<br><br>
-* 
+*
  * Conceptual relations can be retrieved:<br>
  * <code>
  * &nbsp;&nbsp;&nbsp;List&lt;Synset&gt; hypernyms = aSynset.getRelatedLexUnits(ConRel.has_hypernym);<br><br>
@@ -56,22 +59,23 @@ import java.util.*;
  * <code>
  * &nbsp;&nbsp;&nbsp;List&lt;Synset&gt; neighbors = aSynset.getRelatedLexUnits();<br><br>
  * </code>
- *  
+ *
  * Unless otherwise stated, methods will return an empty List rather than null
- * to indicate that no objects exist for the given request. 
+ * to indicate that no objects exist for the given request.
 
  * @author University of Tuebingen, Department of Linguistics (germanetinfo at uni-tuebingen.de)
  * @version 8.0
  */
+@SuppressWarnings("rawtypes")
 public class Synset implements Comparable {
-    private int id;
-    private WordCategory wordCategory;
+    private final int id;
+    private final WordCategory wordCategory;
     private WordClass wordClass;
-    private ArrayList<LexUnit> lexUnits;
+    private final ArrayList<LexUnit> lexUnits;
     private String paraphrase;
 
     // Relations of this Synset
-    private EnumMap<ConRel, ArrayList<Synset>> relations;
+    private final EnumMap<ConRel, ArrayList<Synset>> relations;
 
     /**
      * Constructs a <code>Synset</code> with the specified attributes.
@@ -264,6 +268,7 @@ public class Synset implements Comparable {
      * For example, hypernyms of this <code>Synset</code> can be retrieved with
      * the type <code>ConRel.has_hypernym</code>
      */
+    @SuppressWarnings("unchecked")
     public List<Synset> getRelatedSynsets(ConRel type) {
         ArrayList<Synset> rval = this.relations.get(type);
         if (rval == null) {
@@ -361,7 +366,7 @@ public class Synset implements Comparable {
         }
         return iliRecords;
     }
-    
+
     /**
      * Return true if this <code>Synset</code> is equal to another <code>Synset</code>.
      * @param other the <code>Synset</code> to compare to
@@ -382,6 +387,6 @@ public class Synset implements Comparable {
      */
     @Override
     public int compareTo(Object otherSynset) {
-        return ((Integer) this.getId()).compareTo((Integer) ((Synset) otherSynset).getId());
+        return ((Integer) this.getId()).compareTo(((Synset) otherSynset).getId());
     }
 }
