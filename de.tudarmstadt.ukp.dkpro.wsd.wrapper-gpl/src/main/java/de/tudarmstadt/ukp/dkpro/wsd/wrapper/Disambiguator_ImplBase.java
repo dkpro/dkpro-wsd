@@ -18,8 +18,8 @@
  */
 package de.tudarmstadt.ukp.dkpro.wsd.wrapper;
 
-import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngine;
+import static org.apache.uima.fit.factory.AnalysisEngineFactory.createEngineDescription;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -53,13 +53,13 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 	/**
 	 * Default is Token ("Token.class.getName()").
 	 */
-	private String featurePath = Token.class.getName();
+	private final String featurePath = Token.class.getName();
 
 	/**
 	 * Default is true.
 	 */
 	private boolean filterStopwords = true;
-	
+
 	/**
 	 * the disambiguation engine that is used for this wrapper
 	 */
@@ -72,7 +72,7 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-	
+
 	/**
 	 * sets whether stopwords should be filtered our
 	 * @param filterStopwords
@@ -81,7 +81,8 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 		this.filterStopwords = filterStopwords;
 	}
 
-	public List<String> disambiguate(String inputText) throws IOException {
+	@Override
+    public List<String> disambiguate(String inputText) throws IOException {
 
 		JCas jcas = null;
 		try {
@@ -126,10 +127,11 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 		return disambiguationEngine;
 			}
 
-	public String getConfigurationDetails() {
+	@Override
+    public String getConfigurationDetails() {
 
 		StringBuilder sb = new StringBuilder();
-		
+
 		sb.append("Disambiguation" + "\t" + getName() + "\n");
 		sb.append("Language" + "\t" + language + "\n");
 		sb.append("Feature path" + "\t" + featurePath + "\n");
@@ -181,11 +183,11 @@ public abstract class Disambiguator_ImplBase implements Disambiguator {
 			preprocessing.add(
 					createEngineDescription(
 							StanfordSegmenter.class));
-			
+
 			if(filterStopwords){
 				preprocessing.add(
 						createEngineDescription(StopWordRemover.class,
-								StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES, new String[]{
+								StopWordRemover.PARAM_PATHS, new String[]{
 							"[*]classpath:/stopwords/punctuation.txt",
 							"[de]classpath:/stopwords/german_stopwords.txt",
 							"[en]classpath:/stopwords/english_stopwords.txt"}));

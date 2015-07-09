@@ -37,7 +37,7 @@ public class TacKbpDocumentCreator {
 
 	public static List<TacKbpDocument> getTacKbpDocuments(File xmlFile) throws JDOMException, IOException {
 		SAXBuilder builder = new SAXBuilder();
-		Document document = (Document) builder.build(xmlFile);
+		Document document = builder.build(xmlFile);
 		Element rootNode = document.getRootElement();
 		List list = rootNode.getChildren("query");
 
@@ -54,7 +54,7 @@ public class TacKbpDocumentCreator {
 
 			String begin = node.getChildTextNormalize("startoffset");
 			if(begin != null){
-				tacKbpDocument.setBegin(Integer.valueOf(begin));				
+				tacKbpDocument.setBegin(Integer.valueOf(begin));
 			}
 			else{
 				tacKbpDocument.setBegin(0);
@@ -62,7 +62,7 @@ public class TacKbpDocumentCreator {
 
 			String end = node.getChildTextNormalize("endoffset");
 			if(begin != null){
-				tacKbpDocument.setEnd(Integer.valueOf(end));				
+				tacKbpDocument.setEnd(Integer.valueOf(end));
 			}
 			else{
 				tacKbpDocument.setEnd(0);

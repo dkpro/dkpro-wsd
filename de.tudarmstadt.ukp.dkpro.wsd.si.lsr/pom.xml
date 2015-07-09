@@ -49,23 +49,33 @@
   		<artifactId>
   			de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl
   		</artifactId>
-  		<version>0.8.0</version>
   	</dependency>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.lexsemresource</groupId>
   		<artifactId>
   			de.tudarmstadt.ukp.dkpro.lexsemresource.wordnet-asl
   		</artifactId>
-  		<version>0.8.0</version>
   	</dependency>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.lexsemresource</groupId>
   		<artifactId>
   			de.tudarmstadt.ukp.dkpro.lexsemresource.wiktionary-asl
   		</artifactId>
-  		<version>0.8.0</version>
   	</dependency>
   </dependencies>
   <name>DKPro WSD - LSR</name>
   <description>DKPro WSD modules for using DKPro LSR as a sense inventory</description>
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>de.tudarmstadt.ukp.dkpro.lexsemresource</groupId>
+  			<artifactId>
+  				de.tudarmstadt.ukp.dkpro.lexsemresource-asl
+  			</artifactId>
+  			<version>0.8.1-SNAPSHOT</version>
+  			<type>pom</type>
+  			<scope>import</scope>
+  		</dependency>
+  	</dependencies>
+  </dependencyManagement>
 </project>

@@ -60,7 +60,7 @@ public class EnglishStopLemmatizer
                     createEngineDescription(StanfordLemmatizer.class),
                     createEngineDescription(
                             StopWordRemover.class,
-                            StopWordRemover.PARAM_STOP_WORD_LIST_FILE_NAMES,
+                            StopWordRemover.PARAM_PATHS,
                             new String[] { "classpath:/stopwords/stoplist_en.txt" }));
             engine = createEngine(lemmatizer);
         }

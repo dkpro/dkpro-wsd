@@ -71,7 +71,6 @@
   		<artifactId>
   			de.tudarmstadt.ukp.dkpro.wsd.supervised.ims-gpl
   		</artifactId>
-	    <version>1.3.0-SNAPSHOT</version>
   	</dependency>
   	<dependency>
   		<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
@@ -83,7 +82,7 @@
   		<dependency>
   			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
   			<artifactId>de.tudarmstadt.ukp.dkpro.core-gpl</artifactId>
-  			<version>1.6.2</version>
+  			<version>1.7.0</version>
   			<type>pom</type>
   			<scope>import</scope>
   		</dependency>
