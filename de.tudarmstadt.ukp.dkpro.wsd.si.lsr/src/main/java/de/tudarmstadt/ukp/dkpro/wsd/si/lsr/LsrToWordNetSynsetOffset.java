@@ -28,7 +28,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseConverter;
  * Converts all sense IDs in LSR sense key format to WordNet synset
  * offsets.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class LsrToWordNetSynsetOffset
 	extends SenseConverter

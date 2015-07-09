@@ -50,7 +50,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * gold standard. The criteria are defined by Agirre &amp; Edmonds, pp. 78-79.
  * It is assumed that sense weights given by the test algorithm are normalized.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de> Andriy
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a> Andriy
  *         Nadolskyy
  */
 public abstract class AbstractSingleExactMatchEvaluator
@@ -347,7 +347,7 @@ public abstract class AbstractSingleExactMatchEvaluator
     /**
      * A helper class for computing statistics (precision, recall, etc.)
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     class WSDStats

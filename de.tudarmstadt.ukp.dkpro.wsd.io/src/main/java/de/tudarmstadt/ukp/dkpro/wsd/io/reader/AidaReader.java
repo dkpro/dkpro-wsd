@@ -47,7 +47,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * "http://www.mpi-inf.mpg.de/yago-naga/aida/downloads.html" >AIDA</a> based on
  * <a href= "http://www.cnts.ua.ac.be/conll2003/ner/">CoNLL</a>.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  */
 public class AidaReader
     extends JCasCollectionReader_ImplBase

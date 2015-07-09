@@ -30,12 +30,12 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.FSArray;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.fit.component.JCasAnnotator_ImplBase;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.util.JCasUtil;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.annotator.WSDAnnotatorBase.TieStrategy;
 import de.tudarmstadt.ukp.dkpro.wsd.type.Sense;
@@ -45,7 +45,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * Collapses the confidence scores of senses in {@link WSDResult}s according to
  * the provided clustering of senses
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+ *         Miller</a>
  */
 public class SenseConfidenceClusterer
     extends JCasAnnotator_ImplBase
@@ -128,12 +129,11 @@ public class SenseConfidenceClusterer
     // TODO: Instead of destroying the old sense array, create a new
     // WSDResult for the clustered senses.
     /**
-     * Returns a new sense array which merges senses belonging to the same
-     * cluster. Confidence values are summed.
+     * Merges senses belonging to the same cluster. Confidence values are
+     * summed.
      *
      * @param senseArray
      * @param aJCas
-     * @return
      */
     void clusterSenses(WSDResult wsdResult, JCas aJCas)
     {

@@ -31,7 +31,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.supervised.twsi.TwsiWsdDisambiguator;
 /**
  * A resource wrapping {@link TwsiWsdDisambiguator}
  *
- * @author Daniel Bär <baer@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:baer@ukp.informatik.tu-darmstadt.de">Daniel Bär</a>
  *
  */
 public class TwsiWsdDisambiguatorResource

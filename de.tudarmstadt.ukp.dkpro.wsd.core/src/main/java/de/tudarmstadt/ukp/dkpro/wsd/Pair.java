@@ -26,7 +26,7 @@ package de.tudarmstadt.ukp.dkpro.wsd;
  * @param <B>
  *            the type of the second member
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 @SuppressWarnings("serial")
 public class Pair<A, B>

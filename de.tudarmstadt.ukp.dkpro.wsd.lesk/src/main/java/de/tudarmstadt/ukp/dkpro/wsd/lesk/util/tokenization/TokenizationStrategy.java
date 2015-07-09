@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Strategies for tokenizing a string into a list of strings
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public interface TokenizationStrategy
 {

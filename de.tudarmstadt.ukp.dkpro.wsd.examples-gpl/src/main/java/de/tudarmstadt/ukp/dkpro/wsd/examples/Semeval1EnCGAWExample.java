@@ -50,7 +50,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource.WordNetSenseKeySenseInve
  * A sample pipeline which disambiguates a subset of the Semeval-1 English
  * coarse-grained all-words data set, and opens the results in a web browser.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class Semeval1EnCGAWExample

@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * {@link String}s and their associated parts of speech. Each subject is
  * assigned a mapping of sense IDs to confidence values.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface WSDAlgorithmCollectivePOS

@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * disambiguation, looks up all the candidate senses in the sense inventory and
  * chooses one marked as most frequently used.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class MostFrequentSenseBaseline

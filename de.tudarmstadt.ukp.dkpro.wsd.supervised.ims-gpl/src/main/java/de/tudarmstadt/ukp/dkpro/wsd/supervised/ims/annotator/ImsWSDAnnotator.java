@@ -35,7 +35,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An abstract class for annotators which call a disambiguation algorithm taking
  * as a parameter the id of the document.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public class ImsWSDAnnotator

@@ -35,7 +35,7 @@ import edu.uci.ics.jung.graph.Graph;
 /**
  * A resource wrapping {@link GraphVisualizer}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class GraphVisualizerResource

@@ -28,7 +28,7 @@ import java.util.Map;
  * A simple sense inventory with hard-coded entries. Useful for testing
  * purposes.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class TestSenseInventory

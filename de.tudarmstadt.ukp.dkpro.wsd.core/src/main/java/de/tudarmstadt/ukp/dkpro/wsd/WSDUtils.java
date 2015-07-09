@@ -35,7 +35,7 @@ import com.google.common.collect.Multimap;
 /**
  * I/O utilities for WSD
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class WSDUtils
 {
@@ -219,7 +219,7 @@ public class WSDUtils
      *
      * @param string
      * @param length
-     * @return
+     * @return The string truncated to the given length
      */
     public static String truncate(String string, int length)
     {

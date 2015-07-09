@@ -26,7 +26,7 @@ import java.util.Map;
  * (usually lemmas) to sense IDs, and return various types of information on
  * senses
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface SenseInventory

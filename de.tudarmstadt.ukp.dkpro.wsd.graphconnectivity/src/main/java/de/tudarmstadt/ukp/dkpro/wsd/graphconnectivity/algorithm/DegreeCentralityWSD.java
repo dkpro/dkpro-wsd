@@ -36,7 +36,7 @@ import edu.uci.ics.jung.graph.Graph;
  * Disambiguate words by constructing a disambiguation graph as per Navigli &
  * Lapata (2010) and then finding the senses with the highest degree
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class DegreeCentralityWSD

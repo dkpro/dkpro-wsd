@@ -30,7 +30,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * A sense inventory for WordNet, based on extJWNL. Sense keys are used as sense
  * IDs.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetSenseKeySenseInventory

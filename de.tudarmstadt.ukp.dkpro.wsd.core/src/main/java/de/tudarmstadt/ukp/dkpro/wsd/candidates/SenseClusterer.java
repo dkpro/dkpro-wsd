@@ -46,8 +46,8 @@ import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
  * follows the transitive relations to produce n-way mappings (clusters) of
  * senses
  *
- * @author Jungi Kim <kim@ukp.informatik.tu-darmstadt.de>
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:kim@ukp.informatik.tu-darmstadt.de">Jungi Kim</a>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class SenseClusterer
@@ -192,7 +192,7 @@ public class SenseClusterer
      * return a new cluster containing only the sense ID.
      *
      * @param sense
-     * @return
+     * @return The cluster containing the given sense
      */
     public Set<String> getCluster(String sense)
     {

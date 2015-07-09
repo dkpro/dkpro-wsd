@@ -29,7 +29,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 /**
  * An interface for sense inventories which encode relationships between senses
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface SenseTaxonomy
@@ -70,7 +70,7 @@ public interface SenseTaxonomy
      * methods cache their sense details so that they need be computed only
      * once.
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     interface CachedTaxonomySense

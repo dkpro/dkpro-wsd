@@ -28,7 +28,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.uby.resource.UbySenseInventoryResource;
 /**
  * Converts all Uby sense IDs to WordNet sense keys.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class UbySenseIdToWordNetSenseKey
     extends SenseConverter

@@ -30,7 +30,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseWeightedInventory;
  * chooses all of them, weighting them according to their score. This approach is
  * more useful than the all senses baseline as its results are weighted.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public class FrequencyWeightedAllSensesBaseline

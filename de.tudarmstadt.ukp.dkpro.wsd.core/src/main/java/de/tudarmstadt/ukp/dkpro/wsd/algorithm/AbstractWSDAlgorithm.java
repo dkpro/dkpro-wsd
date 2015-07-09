@@ -26,7 +26,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 /**
  * An abstract class for word sense disambiguation algorithms.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class AbstractWSDAlgorithm

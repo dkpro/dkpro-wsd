@@ -38,7 +38,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.io.reader.SemCorXMLReader;
 import de.tudarmstadt.ukp.dkpro.wsd.senseval.reader.SensevalAnswerKeyReader;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class SingleExactMatchEvaluatorTextTest

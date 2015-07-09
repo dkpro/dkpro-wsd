@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
 import edu.uci.ics.jung.graph.Graph;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetPlusPlusSenseInventoryTest

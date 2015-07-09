@@ -34,7 +34,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * Converts WordNet synset offsets+POS to sense keys
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetSynsetToSenseKey

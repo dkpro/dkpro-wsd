@@ -33,7 +33,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceContextPOS;
 /**
  * A resource for {@link SimplifiedLesk}.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class WSDResourceSimplifiedLesk
     extends WSDResourceContextPOS

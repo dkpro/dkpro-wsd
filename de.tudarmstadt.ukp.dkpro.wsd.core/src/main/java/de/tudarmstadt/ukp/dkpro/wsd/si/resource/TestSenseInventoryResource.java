@@ -28,7 +28,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.TestSenseInventory;
 /**
  * A resource wrapping sense inventories of type {@link TestSenseInventory}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class TestSenseInventoryResource extends SenseInventoryResourceBase {

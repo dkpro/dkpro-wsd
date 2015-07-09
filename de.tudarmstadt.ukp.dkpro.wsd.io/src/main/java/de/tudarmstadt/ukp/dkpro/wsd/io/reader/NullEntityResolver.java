@@ -28,7 +28,7 @@ import org.xml.sax.SAXException;
 /**
  * Returns a null {@link EntityResolver} to bypass DTD processing
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class NullEntityResolver

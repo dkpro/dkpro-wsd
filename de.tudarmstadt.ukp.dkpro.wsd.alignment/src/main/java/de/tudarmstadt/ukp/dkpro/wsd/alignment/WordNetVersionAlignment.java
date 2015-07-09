@@ -47,7 +47,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.Pair;
  * "http://www.talp.upc.edu/index.php/technology/resources/multilingual-lexicons-and-machine-translation-resources/multilingual-lexicons/98-wordnet-mappings"
  * >UPC WordNet Mappings</a>
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetVersionAlignment
@@ -188,7 +188,7 @@ public class WordNetVersionAlignment
 	 * skipUnknownKeys is true.
 	 *
 	 * @param map
-	 * @return
+	 * @return a new mapping with each synset replaced with its best alignment
 	 * @throws Exception
 	 */
 	public <V> Map<Integer, V> convertMapKeys(Map<Integer, V> map,
@@ -218,7 +218,7 @@ public class WordNetVersionAlignment
 	 * synset is not in the alignment, unless skipUnknownKeys is true.
 	 *
 	 * @param map
-	 * @return
+	 * @return a new multimapping with each synset replaced with its alignment
 	 * @throws Exception
 	 */
 	public <V> Multimap<Integer, V> convertMultimapKeys(Map<Integer, V> map,

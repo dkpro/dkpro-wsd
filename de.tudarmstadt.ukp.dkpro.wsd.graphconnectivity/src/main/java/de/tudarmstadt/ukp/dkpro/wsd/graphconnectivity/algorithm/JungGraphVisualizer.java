@@ -49,7 +49,7 @@ import edu.uci.ics.jung.visualization.util.Animator;
 /**
  * Handles visualizations for the graph connectivity algorithms
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class JungGraphVisualizer
@@ -208,7 +208,7 @@ public class JungGraphVisualizer
     /**
      * Determines how vertex (i.e., sense) labels will be visualized
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     protected static class VertexLabelTransformer
@@ -225,23 +225,22 @@ public class JungGraphVisualizer
     /**
      * Associate a unique color with each subject of disambiguation
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     protected class VertexPainter
         implements Transformer<String, Paint>
     {
 
+        private final Color[] colors;
+        Map<String, Color> colorMap = new HashMap<String, Color>();
+
         /**
          * Generate an array of unique colours
          *
          * @param num_colors
          *            Number of colours to generate
-         * @return
          */
-        private final Color[] colors;
-        Map<String, Color> colorMap = new HashMap<String, Color>();
-
         public VertexPainter(int num_colors)
         {
             colors = new Color[num_colors];

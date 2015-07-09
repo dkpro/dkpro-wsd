@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 /**
  * An sense inventory for the Turk Bootstrap Word Sense Inventory
  *
- * @author Daniel Bär <baer@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:baer@ukp.informatik.tu-darmstadt.de">Daniel Bär</a>
  *
  */
 public class TwsiSenseInventoryBase

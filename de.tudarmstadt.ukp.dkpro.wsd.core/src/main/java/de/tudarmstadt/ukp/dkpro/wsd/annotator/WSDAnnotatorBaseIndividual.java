@@ -31,7 +31,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An abstract annotator which calls the disambiguation algorithm once for each
  * {@link WSDItem} in the document.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class WSDAnnotatorBaseIndividual

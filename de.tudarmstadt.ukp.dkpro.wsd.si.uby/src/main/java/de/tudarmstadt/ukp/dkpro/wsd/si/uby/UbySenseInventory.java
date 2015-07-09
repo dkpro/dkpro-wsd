@@ -59,7 +59,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 /**
  * A sense inevntory for UBY
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class UbySenseInventory extends SenseInventoryBase
@@ -77,9 +77,9 @@ public class UbySenseInventory extends SenseInventoryBase
     private final Map<String, CachedSense> senses = new HashMap<String, CachedSense>();
 
     /**
-     * Returns the underlying Uby object.
+     * Returns the underlying {@link Uby} object.
      *
-     * @return
+     * @return the underlying {@link Uby} object
      */
     public Uby getUnderlyingResource() {
         return uby;
@@ -96,25 +96,6 @@ public class UbySenseInventory extends SenseInventoryBase
         }
     }
 
-    /**
-     * Sets the format of the string to be returned by the {@link
-     * getSenseDescription()} method. The following printf-style format
-     * specifiers are recognized:
-     *
-     * <dl>
-     * <dt>%d</dt>
-     * <dd>the sense's definition</dd>
-     * <dt>%w</dt>
-     * <dd>the sense's lemmas</dd>
-     * <dt>%e</dt>
-     * <dd>the sense's example sentences</dd>
-     * </dl>
-     *
-     * A null format string is equivalent to "%d".
-     *
-     * @param format
-     *            A format string as described in the format string syntax.
-     */
     public void setSenseDescriptionFormat(String format)
     {
         if (format == null) {
@@ -156,7 +137,7 @@ public class UbySenseInventory extends SenseInventoryBase
     }
 
     /**
-     * Determines whether {@link getSenseAlignments} should also return
+     * Determines whether {@link #getSenseAlignments(String)} should also return
      * alignments to senses in other languages.
      *
      * @param allow
@@ -361,7 +342,7 @@ public class UbySenseInventory extends SenseInventoryBase
     /**
      * Transforms a POS enum to a Uby POS
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     public static class SiPosToUbyPos
@@ -402,7 +383,7 @@ public class UbySenseInventory extends SenseInventoryBase
     /**
      * Transforms a Uby POS to a POS enum
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     public static class UbyPosToSiPos
@@ -462,7 +443,7 @@ public class UbySenseInventory extends SenseInventoryBase
      * Given a Uby sense ID, return the sense ID used by the underlying lexicon
      *
      * @param senseId
-     * @return
+     * @return the sense ID used by the underlying lexicon
      * @throws SenseInventoryException
      */
     public String getLexiconSenseId(String senseId)
@@ -475,7 +456,7 @@ public class UbySenseInventory extends SenseInventoryBase
      * Given a Uby sense ID, return the synset ID used by the underlying lexicon
      *
      * @param senseId
-     * @return
+     * @return the synset ID used by the underlying lexicon
      * @throws SenseInventoryException
      */
     public String getLexiconSynsetId(String senseId)

@@ -41,7 +41,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * Senseval2LSReader reads the XML data sets for the Senseval-2 lexical sample
  * tasks.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class Senseval2LSReader
     extends SensevalReader

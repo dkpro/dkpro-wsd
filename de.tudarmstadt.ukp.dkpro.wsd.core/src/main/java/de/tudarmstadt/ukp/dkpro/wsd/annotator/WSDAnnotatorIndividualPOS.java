@@ -34,7 +34,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An annotator which calls a {@link WSDAlgorithmIndividualPOS} disambiguation
  * algorithm once for each {@link WSDItem} in the document.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WSDAnnotatorIndividualPOS

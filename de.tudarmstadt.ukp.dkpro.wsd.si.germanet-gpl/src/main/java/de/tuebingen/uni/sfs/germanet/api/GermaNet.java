@@ -183,7 +183,7 @@ public class GermaNet {
      * @param dirName the directory where the GermaNet data files are located
      * @throws java.io.FileNotFoundException
      * @throws javax.xml.stream.XMLStreamException
-     * @throws javax.xml.stream.IOException
+     * @throws IOException
      */
     public GermaNet(String dirName) throws FileNotFoundException, XMLStreamException, IOException {
         this(new File(dirName), false);
@@ -197,7 +197,7 @@ public class GermaNet {
      * sensitive searches
      * @throws java.io.FileNotFoundException
      * @throws javax.xml.stream.XMLStreamException
-     * @throws javax.xml.stream.IOException
+     * @throws IOException
      */
     public GermaNet(String dirName, boolean ignoreCase) throws FileNotFoundException, XMLStreamException, IOException {
         this(new File(dirName), ignoreCase);
@@ -209,7 +209,7 @@ public class GermaNet {
      * @param dir location of the GermaNet data files
      * @throws java.io.FileNotFoundException
      * @throws javax.xml.stream.XMLStreamException
-     * @throws javax.xml.stream.IOException
+     * @throws IOException
      */
     public GermaNet(File dir) throws FileNotFoundException, XMLStreamException, IOException {
         this(dir, false);
@@ -223,7 +223,7 @@ public class GermaNet {
      * sensitive searches
      * @throws java.io.FileNotFoundException
      * @throws javax.xml.stream.XMLStreamException
-     * @throws javax.xml.stream.IOException
+     * @throws IOException
      */
     @SuppressWarnings("rawtypes")
     public GermaNet(File dir, boolean ignoreCase) throws FileNotFoundException, XMLStreamException, IOException {

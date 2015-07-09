@@ -46,7 +46,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
  * 32(4):678–692, 2010). When the class is run, a window will appear showing a
  * sense graph. Clicking anywhere on the graph will step through the algorithm.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class GraphVisualizationExample
@@ -102,7 +102,7 @@ public class GraphVisualizationExample
     /**
      * Reads in a serialized WordNet graph.
      *
-     * @return
+     * @return the WordNet graph
      * @throws IOException
      * @throws ClassNotFoundException
      */

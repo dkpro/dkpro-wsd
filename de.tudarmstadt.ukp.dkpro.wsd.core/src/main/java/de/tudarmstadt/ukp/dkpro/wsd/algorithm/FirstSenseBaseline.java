@@ -29,7 +29,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * A word sense disambiguation algorithm which, given a subject of
  * disambiguation, returns the first associated sense from the sense inventory.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class FirstSenseBaseline

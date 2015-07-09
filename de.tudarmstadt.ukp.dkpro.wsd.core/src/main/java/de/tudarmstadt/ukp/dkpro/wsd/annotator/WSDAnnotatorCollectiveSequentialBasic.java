@@ -43,7 +43,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An annotator which calls a {@link WSDAlgorithmCollectiveSequentialBasic}
  * disambiguation algorithm on a collection of {@link WSDItem}s.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public class WSDAnnotatorCollectiveSequentialBasic

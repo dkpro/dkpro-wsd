@@ -49,9 +49,9 @@ public class UkbDictionaryInventoryResource
     protected String neededMentionsPath;
 
     /**
-     * Returns the underlying UkbDictionary object.
+     * Returns the underlying {@link UkbDictionary} object.
      *
-     * @return
+     * @return the underlying {@link UkbDictionary} object
      */
     public UkbDictionary getUnderlyingResource() {
         return ((UkbDictionaryInventory)inventory).getUnderlyingResource();

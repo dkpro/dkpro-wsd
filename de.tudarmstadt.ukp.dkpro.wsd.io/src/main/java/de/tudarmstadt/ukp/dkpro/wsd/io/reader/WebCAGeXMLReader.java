@@ -45,7 +45,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * A collection reader the WebCAGe 1.0 corpus.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class WebCAGeXMLReader
     extends JCasResourceCollectionReader_ImplBase

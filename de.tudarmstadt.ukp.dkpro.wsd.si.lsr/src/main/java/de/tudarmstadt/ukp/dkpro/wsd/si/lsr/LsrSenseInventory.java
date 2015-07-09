@@ -41,7 +41,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 /**
  * A sense inventory wrapping JLSR
  *
- * @author Torsten Zesch <zesch@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:zesch@ukp.informatik.tu-darmstadt.de">Torsten Zesch</a>
  *
  */
 public class LsrSenseInventory
@@ -51,9 +51,9 @@ public class LsrSenseInventory
     private final LexicalSemanticResource lsr;
 
     /**
-     * Returns the underlying LexicalSemanticResource object.
+     * Returns the underlying {@link LexicalSemanticResource} object.
      *
-     * @return
+     * @return the underlying {@link LexicalSemanticResource} object
      */
     public LexicalSemanticResource getUnderlyingResource() {
         return lsr;

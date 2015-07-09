@@ -34,7 +34,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * reproducible; the score for repeated runs of the random sense baseline will
  * converge to that of this algorithm anyway.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class AllSensesBaseline

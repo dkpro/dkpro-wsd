@@ -44,7 +44,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * An abstract class for annotators which call a WSD algorithm in order to
  * disambiguate one or more {@link WSDItem}s in a document.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class WSDAnnotatorBase

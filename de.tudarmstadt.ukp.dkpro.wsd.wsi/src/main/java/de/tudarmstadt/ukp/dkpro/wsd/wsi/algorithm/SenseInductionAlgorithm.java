@@ -26,9 +26,8 @@ public interface SenseInductionAlgorithm
 {
     /**
      * Starts a batch induction
-     * 
+     *
      * @param targetWords
-     * @return
      */
     public SenseInventory induce(Collection<String> targetWords);
 
@@ -39,10 +38,5 @@ public interface SenseInductionAlgorithm
     public void induceSenses(String term)
         throws WSDException;
 
-    /**
-     * Returns
-     * 
-     * @return
-     */
     public SenseInventory getSenseInventory();
 }

@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.WSDUtils;
  * those of a target sense inventory.  The sense IDs to search for and their
  * replacements are given by columns of a delimited text file.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SenseMapper
 	extends SenseConverter

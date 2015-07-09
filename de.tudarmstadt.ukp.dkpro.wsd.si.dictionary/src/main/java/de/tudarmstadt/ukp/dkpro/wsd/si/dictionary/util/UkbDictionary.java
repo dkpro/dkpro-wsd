@@ -35,7 +35,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * The UKB Sense inventory 
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  */
 public class UkbDictionary extends AbstractDictionary{
 

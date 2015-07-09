@@ -29,7 +29,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * and the associated part of speech, and return a map of sense IDs to
  * confidence values.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface WSDAlgorithmIndividualPOS

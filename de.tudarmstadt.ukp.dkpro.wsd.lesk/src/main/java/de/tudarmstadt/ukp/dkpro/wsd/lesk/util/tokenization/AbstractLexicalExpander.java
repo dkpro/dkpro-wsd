@@ -23,7 +23,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.lesk.util.tokenization;
  * removes stop words and then applies lexical expansion to the remaining
  * tokens.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class AbstractLexicalExpander
@@ -38,7 +38,7 @@ public abstract class AbstractLexicalExpander
      * A class which stores the number of lexical expansions to use for
      * adjectives, nouns, adverbs, verbs, and words of other parts of speech
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     public static class Expansion

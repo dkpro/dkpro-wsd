@@ -28,7 +28,7 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 /**
  * A {@link AbstractSingleExactMatchEvaluator} with HTML output.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SingleExactMatchEvaluatorHTML
     extends AbstractSingleExactMatchEvaluator

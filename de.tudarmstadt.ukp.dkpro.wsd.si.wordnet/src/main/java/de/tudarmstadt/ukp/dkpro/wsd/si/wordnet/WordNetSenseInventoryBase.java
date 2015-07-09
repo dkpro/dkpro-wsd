@@ -47,7 +47,8 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
  * Abstract class for WordNet-like sense inventories, where synset IDs are used
  * as sense IDs.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+ *         Miller</a>
  *
  */
 public abstract class WordNetSenseInventoryBase
@@ -72,9 +73,9 @@ public abstract class WordNetSenseInventoryBase
     protected static final StringToWordNetPos stringToWordNetPos = new StringToWordNetPos();
 
     /**
-     * Returns the underlying extJWNL Dictionary object.
+     * Returns the underlying {@link Dictionary} object.
      *
-     * @return
+     * @return the underlying {@link Dictionary} object
      */
     public Dictionary getUnderlyingResource()
     {
@@ -99,10 +100,10 @@ public abstract class WordNetSenseInventoryBase
     /**
      * Given a synset offset, lemma, and POS, returns a corresponding sense key.
      *
-     * @param senseId
+     * @param offset
      * @param lemma
-     * @param POS
-     * @return
+     * @param pos
+     * @return the corresponding sense key
      * @throws SenseInventoryException
      */
     public String getWordNetSenseKey(long offset, String lemma, POS pos)
@@ -152,7 +153,7 @@ public abstract class WordNetSenseInventoryBase
      *
      * @param senseId
      * @param lemma
-     * @return
+     * @return the corresponding sense key
      * @throws SenseInventoryException
      */
     abstract public String getWordNetSenseKey(String senseId, String lemma)
@@ -163,7 +164,7 @@ public abstract class WordNetSenseInventoryBase
      * corresponding WordNet synset offset + POS
      *
      * @param senseId
-     * @return
+     * @return the correspending synset offset and part of speech
      * @throws SenseInventoryException
      */
     abstract public String getWordNetSynsetAndPos(String senseId)
@@ -179,7 +180,7 @@ public abstract class WordNetSenseInventoryBase
      *
      * @param senseId
      * @param lemma
-     * @return
+     * @return the corresponding sense key
      * @throws SenseInventoryException
      */
     public String synsetOffsetAndPosToSenseKey(String senseId, String lemma)
@@ -198,7 +199,7 @@ public abstract class WordNetSenseInventoryBase
      * Given a WordNet sense key, returns the corresponding synset offset + POS
      *
      * @param senseKey
-     * @return
+     * @return the corresponding synset offset and part of speech
      * @throws SenseInventoryException
      */
     public String senseKeyToSynsetOffsetAndPos(String senseKey)
@@ -221,7 +222,8 @@ public abstract class WordNetSenseInventoryBase
      * Transforms a String to a WordNet POS by performing the inverse of
      * WordNetPosToString
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class StringToWordNetPos
@@ -251,7 +253,8 @@ public abstract class WordNetSenseInventoryBase
     /**
      * Transforms a WordNet POS to a String
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class WordNetPosToString
@@ -268,7 +271,8 @@ public abstract class WordNetSenseInventoryBase
      * Transforms a String to a WordNet Synset by doing the inverse of
      * SynsetToString
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected class StringToSynset
@@ -297,7 +301,8 @@ public abstract class WordNetSenseInventoryBase
     /**
      * Transforms a WordNet synset to a unique string representation
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class SynsetToString
@@ -370,9 +375,9 @@ public abstract class WordNetSenseInventoryBase
         throws SenseInventoryException;
 
     /**
-     * Sets the format of the string to be returned by the {@link
-     * getSenseDescription()} method. The following printf-style format
-     * specifiers are recognized:
+     * Sets the format of the string to be returned by the
+     * {@link #getSenseDescription(String)} method. The following printf-style
+     * format specifiers are recognized:
      *
      * <dl>
      * <dt>%d</dt>
@@ -397,7 +402,8 @@ public abstract class WordNetSenseInventoryBase
     /**
      * A class for the textual information associated with a WordNet synset
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     abstract protected class CachedWordNetSense
@@ -526,7 +532,8 @@ public abstract class WordNetSenseInventoryBase
     /**
      * Transforms a POS enum to a WordNet POS
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class SiPosToWordNetPos
@@ -553,7 +560,8 @@ public abstract class WordNetSenseInventoryBase
     /**
      * Transforms a WordNet POS to a POS enum
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class WordNetPosToSiPos
@@ -581,7 +589,7 @@ public abstract class WordNetSenseInventoryBase
      * Returns true if the given String corresponds to a valid sense key
      *
      * @param senseKey
-     * @return
+     * @return true if the given String corresponds to a valid sense key
      * @throws SenseInventoryException
      */
     public boolean isSenseKey(String senseKey)
@@ -599,10 +607,12 @@ public abstract class WordNetSenseInventoryBase
     }
 
     /**
-     * Returns true if the given String corresponds to a valid synset offset + POS
+     * Returns true if the given String corresponds to a valid synset offset +
+     * POS
      *
      * @param synset
-     * @return
+     * @return true if the given String corresponds to a valid synset offset +
+     *         POS
      * @throws SenseInventoryException
      */
     public boolean isSynset(String synset)

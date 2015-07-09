@@ -29,7 +29,7 @@ import de.tudarmstadt.ukp.lmf.model.enums.EPartOfSpeech;
 /**
  * Converts all Uby sense IDs to WordNet synset offsets
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class UbySenseIdToWordNetSynset
     extends SenseConverter

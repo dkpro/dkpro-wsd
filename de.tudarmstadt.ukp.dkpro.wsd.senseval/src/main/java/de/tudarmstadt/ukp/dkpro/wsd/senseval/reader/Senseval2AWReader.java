@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * Senseval2AWReader reads the XML data sets for the Senseval-2 all-words
  * tasks.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class Senseval2AWReader
 	extends SensevalAWReader

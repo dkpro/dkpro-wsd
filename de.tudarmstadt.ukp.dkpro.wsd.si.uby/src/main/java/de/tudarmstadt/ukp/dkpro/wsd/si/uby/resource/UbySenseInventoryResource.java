@@ -35,7 +35,7 @@ import de.tudarmstadt.ukp.lmf.api.Uby;
 /**
  * A resource wrapping {@link UbySenseInventory}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class UbySenseInventoryResource
@@ -78,9 +78,9 @@ public class UbySenseInventoryResource
     protected String allowMultilingualAlignments;
 
     /**
-     * Returns the underlying Uby object.
+     * Returns the underlying {@link Uby} object.
      *
-     * @return
+     * @return the underlying {@link Uby} object
      */
     public Uby getUnderlyingResource() {
         return ((UbySenseInventory) inventory).getUnderlyingResource();

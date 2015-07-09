@@ -26,7 +26,7 @@ import java.util.Set;
 /**
  * An interface for sense inventories which encode alignments between senses
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface SenseAlignment
@@ -50,7 +50,7 @@ public interface SenseAlignment
      * such methods cache their sense details so that they need be computed only
      * once.
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     public interface CachedAlignedSense

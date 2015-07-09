@@ -41,7 +41,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * defined by Agirre &amp; Edmonds, pp. 78-79. It is assumed that sense weights
  * given by the test algorithm are normalized.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class MultipleExactMatchEvaluator
     extends AbstractWSDEvaluator
@@ -159,7 +159,7 @@ public class MultipleExactMatchEvaluator
     /**
      * A helper class for computing statistics (precision, recall, etc.)
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     class WSDStats

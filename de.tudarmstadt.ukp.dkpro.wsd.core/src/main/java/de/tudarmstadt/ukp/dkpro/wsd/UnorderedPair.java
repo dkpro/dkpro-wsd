@@ -24,7 +24,7 @@ package de.tudarmstadt.ukp.dkpro.wsd;
  * @param <A>
  *            Type of both members
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 @SuppressWarnings("serial")
 public class UnorderedPair<A>

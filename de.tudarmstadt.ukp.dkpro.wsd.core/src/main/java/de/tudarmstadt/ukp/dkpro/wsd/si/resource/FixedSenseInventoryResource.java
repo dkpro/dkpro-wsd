@@ -29,7 +29,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.FixedSenseInventory;
 /**
  * A resource wrapping sense inventories of type {@link FixedSenseInventory}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class FixedSenseInventoryResource

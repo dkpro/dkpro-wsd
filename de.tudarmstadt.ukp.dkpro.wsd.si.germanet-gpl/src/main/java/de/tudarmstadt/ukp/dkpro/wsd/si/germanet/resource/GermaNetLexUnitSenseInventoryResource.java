@@ -33,7 +33,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 import de.tuebingen.uni.sfs.germanet.api.GermaNet;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class GermaNetLexUnitSenseInventoryResource
@@ -48,9 +48,9 @@ public class GermaNetLexUnitSenseInventoryResource
     protected String senseDescriptionFormat;
 
     /**
-     * Returns the underlying GermaNet object.
+     * Returns the underlying {@link GermaNet} object.
      *
-     * @return
+     * @return the underlying {@link GermaNet} object
      */
     public GermaNet getUnderlyingResource() {
         return ((GermaNetLexUnitSenseInventory)inventory).getUnderlyingResource();

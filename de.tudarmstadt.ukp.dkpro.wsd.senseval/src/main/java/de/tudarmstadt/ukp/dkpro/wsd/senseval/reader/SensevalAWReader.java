@@ -32,7 +32,7 @@ import org.dom4j.Element;
  * which read the XML data sets for the Senseval and Semeval all-words
  * tasks.
  * 
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public abstract class SensevalAWReader
 	extends SensevalReader

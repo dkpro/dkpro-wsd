@@ -49,9 +49,9 @@ public class GoogleDictionaryInventoryResource
     protected String neededMentionsPath;
 
     /**
-     * Returns the underlying GoogleDictionary object.
+     * Returns the underlying {@link GoogleDictionary} object.
      *
-     * @return
+     * @return the underlying {@link GoogleDictionary} object
      */
     public GoogleDictionary getUnderlyingResource() {
         return ((GoogleDictionaryInventory)inventory).getUnderlyingResource();

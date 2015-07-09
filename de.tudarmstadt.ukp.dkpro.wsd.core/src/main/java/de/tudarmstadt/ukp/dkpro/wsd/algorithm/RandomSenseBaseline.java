@@ -34,7 +34,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * AllSensesBaseline, whose performance is consistent and exactly equal to
  * what this one converges to.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class RandomSenseBaseline

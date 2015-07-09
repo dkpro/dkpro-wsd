@@ -30,7 +30,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * {@link String}s. Each subject is assigned a mapping of sense IDs to
  * confidence values.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public interface WSDAlgorithmCollectiveBasic

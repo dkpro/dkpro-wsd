@@ -31,7 +31,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.tokenization.AbstractLexicalExpand
 /**
  * A resource for {@link SimplifiedExtendedLesk}.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WSDResourceSimplifiedExpandedLesk

@@ -41,7 +41,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.tokenization.TokenizationStrategy;
  * lemmatizes and removes stop words from strings. This class is specific to
  * English.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class EnglishStopLemmatizer
@@ -74,8 +74,7 @@ public class EnglishStopLemmatizer
      * non-alphabetic and stop words removed
      *
      * @param text
-     * @return
-     * @throws Exception
+     * @return a list of lemmatized forms with non-alphabetic and stop words removed
      */
     @Override
     public List<String> tokenize(String text)

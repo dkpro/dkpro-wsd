@@ -23,7 +23,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 /**
  * A basic interface for word sense disambiguation algorithms.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface WSDAlgorithm {

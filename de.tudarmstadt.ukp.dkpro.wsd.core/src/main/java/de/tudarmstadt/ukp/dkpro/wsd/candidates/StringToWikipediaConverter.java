@@ -24,7 +24,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.candidates;
  * article titles; some Wikipedia sense inventories (such as UBY) handle
  * underscores only.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class StringToWikipediaConverter
 	extends SenseConverter

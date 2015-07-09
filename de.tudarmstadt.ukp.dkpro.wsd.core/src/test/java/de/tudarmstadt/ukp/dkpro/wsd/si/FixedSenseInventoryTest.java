@@ -29,7 +29,7 @@ import java.util.List;
 import org.junit.Test;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class FixedSenseInventoryTest

@@ -35,7 +35,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * WSDWriter outputs all the WSDResults in a CAS in human-readable format.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class WSDWriter extends JCasConsumer_ImplBase {
 

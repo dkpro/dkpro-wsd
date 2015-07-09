@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
  * definitions of the subject of disambiguation, augmented with those of related
  * senses, are compared against its context
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SimplifiedExtendedLesk
     extends SimplifiedLesk
@@ -42,7 +42,8 @@ public class SimplifiedExtendedLesk
     /**
      * @param overlapStrategy
      * @param normalizationStrategy
-     * @param tokenizationStrategy
+     * @param senseTokenizationStrategy
+     * @param contextTokenizationStrategy
      */
     public SimplifiedExtendedLesk(SenseTaxonomy inventory,
             OverlapStrategy overlapStrategy,

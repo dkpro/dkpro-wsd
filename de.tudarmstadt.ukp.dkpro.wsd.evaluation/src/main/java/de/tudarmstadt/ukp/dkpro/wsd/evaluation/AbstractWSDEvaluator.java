@@ -41,7 +41,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * An abstract class for annotators which evaluate WSD results in some way
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class AbstractWSDEvaluator

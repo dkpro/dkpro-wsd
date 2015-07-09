@@ -28,7 +28,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * along with the context in which this subject occurs (represented by another
  * {@link String}), and return a map of sense IDs to confidence values.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public interface WSDAlgorithmContextBasic

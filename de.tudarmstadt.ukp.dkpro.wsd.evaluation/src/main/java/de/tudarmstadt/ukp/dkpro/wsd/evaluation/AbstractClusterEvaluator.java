@@ -51,7 +51,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * in R. Snow, S. Prakash, D. Jurafsky, and A. Y. Ng,
  * "Learning to Merge Word Senses" (2007).
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class AbstractClusterEvaluator

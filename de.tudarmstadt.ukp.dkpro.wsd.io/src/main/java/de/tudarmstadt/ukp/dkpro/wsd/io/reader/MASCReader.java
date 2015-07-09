@@ -59,7 +59,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * A collection reader for the WordNet senses in the MASC corpus.
  *
- * @author Kostadin Cholakov <cholakov@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:cholakov@ukp.informatik.tu-darmstadt.de">Kostadin Cholakov</a>
  */
 
 public class MASCReader

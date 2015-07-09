@@ -54,7 +54,7 @@ import edu.uci.ics.jung.graph.util.Graphs;
  * Abstract class for WordNet-like sense inventories, where sense keys are used
  * as sense IDs.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class WordNetSenseKeySenseInventoryBase
@@ -73,7 +73,7 @@ public abstract class WordNetSenseKeySenseInventoryBase
     /**
      * A class for the textual information associated with a WordNet sense
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     private class CachedSense
@@ -250,8 +250,7 @@ public abstract class WordNetSenseKeySenseInventoryBase
     /**
      * Read WordNet into a graph
      *
-     * @param g
-     * @throws JWNLException
+     * @throws SenseInventoryException
      */
     @Override
     public UndirectedGraph<String, UnorderedPair<String>> getUndirectedGraph()

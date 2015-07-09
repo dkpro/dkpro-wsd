@@ -25,7 +25,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.candidates.SenseConverter;
  * key format by replacing apostrophes with hyphens.  Note that this
  * has the potential to be a lossy conversion!
  * 
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class WordNetSenseKeyToSenseval
 	extends SenseConverter

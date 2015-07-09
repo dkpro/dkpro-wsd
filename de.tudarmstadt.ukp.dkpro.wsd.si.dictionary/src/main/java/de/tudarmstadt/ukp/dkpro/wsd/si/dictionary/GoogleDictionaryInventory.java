@@ -53,9 +53,9 @@ public class GoogleDictionaryInventory
     private GoogleDictionary dictionary;
 
     /**
-     * Returns the underlying GoogleDictionary object.
+     * Returns the underlying {@link GoogleDictionary} object.
      *
-     * @return
+     * @return the underlying {@link GoogleDictionary} object
      */
     public GoogleDictionary getUnderlyingResource() {
         return dictionary;

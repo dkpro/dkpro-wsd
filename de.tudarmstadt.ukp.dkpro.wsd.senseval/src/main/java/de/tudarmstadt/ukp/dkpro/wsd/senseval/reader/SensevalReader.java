@@ -53,7 +53,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * read the XML data sets for the Senseval and Semeval all-words and lexical
  * sample tasks.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public abstract class SensevalReader
     extends JCasCollectionReader_ImplBase

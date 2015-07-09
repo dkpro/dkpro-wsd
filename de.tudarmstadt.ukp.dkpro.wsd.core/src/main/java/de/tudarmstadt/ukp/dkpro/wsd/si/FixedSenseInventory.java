@@ -26,7 +26,7 @@ import java.util.Map;
  * A simple sense inventory that always returns the same sense ID and
  * description, no matter what word is queried. Useful for testing purposes.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class FixedSenseInventory

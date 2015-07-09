@@ -25,7 +25,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.lsr.LsrSenseInventory;
 /**
  * Utility class for {@link LsrSenseInventory}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public final class LsrSenseInventoryUtil

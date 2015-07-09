@@ -38,7 +38,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * those of a target sense inventory.  Sense IDs are modified in accordance with
  * the abstract convert() method.
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public abstract class SenseConverter
 	extends JCasAnnotator_ImplBase

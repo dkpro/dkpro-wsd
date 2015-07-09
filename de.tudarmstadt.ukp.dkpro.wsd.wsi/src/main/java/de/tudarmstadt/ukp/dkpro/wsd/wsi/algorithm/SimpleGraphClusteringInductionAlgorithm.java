@@ -71,12 +71,9 @@ public class SimpleGraphClusteringInductionAlgorithm
      * take the original feature vector for each new tag_n: mask the features that are zero in all
      * feature-vectors of the cluster-members
      *
-     * @param tagid
-     * @param data
+     * @param term
      * @param similars
-     * @param vectorsize
      * @param clusters
-     * @return
      * @throws SimilarityException
      */
     public void createNewSenses(String term, Set<Entity> similars, List<List<String>> clusters)
@@ -88,11 +85,9 @@ public class SimpleGraphClusteringInductionAlgorithm
      * Clusters a set of terms given a similarity function.
      *
      * @param term
-     *            TODO
-     * @param similars
+     * @param similarEntities
      *
-     *
-     * @return
+     * @return clusters of terms
      */
     public List<List<String>> cluster(String term, Set<Entity> similarEntities)
     {

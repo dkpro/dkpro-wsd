@@ -44,7 +44,7 @@ import edu.uci.ics.jung.graph.UndirectedGraph;
 /**
  * An abstract resource wrapping sense inventories
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class SenseInventoryResourceBase

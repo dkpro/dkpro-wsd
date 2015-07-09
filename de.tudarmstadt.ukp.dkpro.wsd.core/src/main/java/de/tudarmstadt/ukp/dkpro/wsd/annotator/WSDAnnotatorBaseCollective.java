@@ -40,7 +40,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * as a parameter all the {@link WSDItem}s in the document so that the algorithm
  * can disambiguate them all simultaneously.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class WSDAnnotatorBaseCollective

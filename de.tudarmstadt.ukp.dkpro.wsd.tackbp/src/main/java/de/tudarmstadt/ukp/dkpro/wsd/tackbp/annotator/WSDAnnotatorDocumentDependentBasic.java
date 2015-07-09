@@ -35,7 +35,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An annotator which calls a {@link WSDAlgorithmDocumentDependentBasic}
  * disambiguation algorithm once for each {@link WSDItem} in the document.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public class WSDAnnotatorDocumentDependentBasic

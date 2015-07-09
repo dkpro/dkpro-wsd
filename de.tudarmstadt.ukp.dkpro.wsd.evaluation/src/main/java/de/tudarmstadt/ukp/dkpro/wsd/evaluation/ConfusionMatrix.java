@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * the test algorithms. Note that the two test algorithms must assign senses
  * with a probability of 1.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class ConfusionMatrix
     extends AbstractWSDEvaluator

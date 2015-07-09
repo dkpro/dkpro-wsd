@@ -92,7 +92,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * &lt;comment&gt; ::= text string
  * </p>
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SensevalAnswerKeyReader
     extends JCasAnnotator_ImplBase
@@ -115,8 +115,8 @@ public class SensevalAnswerKeyReader
     private Map<String, String> answerKey;
 
     /**
-     * @param args
-     * @throws IOException
+     * @param context
+     * @throws ResourceInitializationException
      */
     @Override
     public void initialize(UimaContext context)
@@ -190,7 +190,7 @@ public class SensevalAnswerKeyReader
      * @param jCas
      * @param answerKey
      *            A string containing a line from a Senseval answer key file
-     * @param WSDItem
+     * @param w
      *            The WSD item the answer key applies to, or null if this is not
      *            known.
      */

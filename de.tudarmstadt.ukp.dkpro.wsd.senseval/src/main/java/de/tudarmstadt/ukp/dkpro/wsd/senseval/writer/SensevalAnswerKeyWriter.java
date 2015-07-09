@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 /**
  * Writes all WSDResults to Senseval answer key format
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SensevalAnswerKeyWriter
     extends JCasConsumer_ImplBase

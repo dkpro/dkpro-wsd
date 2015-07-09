@@ -37,7 +37,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * Disambiguates words using the simplified Lesk algorithm -- i.e., the
  * definitions of the subject of disambiguation are compared against its context
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SimplifiedLesk
     extends Lesk
@@ -76,7 +76,7 @@ public class SimplifiedLesk
      * Determines whether to prefilter the subject of disambiguation from the
      * untokenized contexts and sense descriptions
      *
-     * @param unfilterSod
+     * @param prefilterSod
      *            If true, filter the subject of disambiguation from the
      *            untokenized contexts and sense descriptions
      */

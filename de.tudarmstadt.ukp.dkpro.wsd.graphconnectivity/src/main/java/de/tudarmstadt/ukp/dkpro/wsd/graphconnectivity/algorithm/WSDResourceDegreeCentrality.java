@@ -29,9 +29,9 @@ import de.tudarmstadt.ukp.dkpro.wsd.resource.WSDResourceCollectivePOS;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseTaxonomy;
 
 /**
- * A resource for {@link DegreeCentrality}.
+ * A resource for {@link DegreeCentralityWSD}.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WSDResourceDegreeCentrality

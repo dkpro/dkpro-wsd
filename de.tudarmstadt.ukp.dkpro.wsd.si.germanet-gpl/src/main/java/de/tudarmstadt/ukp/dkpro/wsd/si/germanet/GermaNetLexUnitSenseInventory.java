@@ -49,7 +49,8 @@ import edu.uci.ics.jung.graph.UndirectedSparseGraph;
 import edu.uci.ics.jung.graph.util.Graphs;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+ *         Miller</a>
  *
  */
 public class GermaNetLexUnitSenseInventory
@@ -65,11 +66,12 @@ public class GermaNetLexUnitSenseInventory
     protected GermaNetPosToSiPos germaNetPosToSiPos = new GermaNetPosToSiPos();
 
     /**
-     * Returns the underlying GermaNet object.
+     * Returns the underlying {@link GermaNet} object.
      *
-     * @return
+     * @return the underlying {@link GermaNet} object
      */
-    public GermaNet getUnderlyingResource() {
+    public GermaNet getUnderlyingResource()
+    {
         return gnet;
     }
 
@@ -355,9 +357,9 @@ public class GermaNetLexUnitSenseInventory
     }
 
     /**
-     * Sets the format of the string to be returned by the {@link
-     * getSenseDescription()} method. The following printf-style format
-     * specifiers are recognized:
+     * Sets the format of the string to be returned by the
+     * {@link de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory#getSenseDescription(java .lang.String)}
+     * method. The following printf-style format specifiers are recognized:
      *
      * <dl>
      * <dt>%d</dt>
@@ -382,7 +384,8 @@ public class GermaNetLexUnitSenseInventory
     /**
      * Transforms a POS enum to a GermaNet POS
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class SiPosToGermaNetPos
@@ -407,7 +410,8 @@ public class GermaNetLexUnitSenseInventory
     /**
      * Transforms a GermaNet POS into a POS enum
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+     *         Miller</a>
      *
      */
     protected static class GermaNetPosToSiPos

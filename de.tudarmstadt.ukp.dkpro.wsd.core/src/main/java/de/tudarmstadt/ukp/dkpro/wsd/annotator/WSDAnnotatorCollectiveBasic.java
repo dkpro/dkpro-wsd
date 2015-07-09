@@ -36,7 +36,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * An annotator which calls a {@link WSDAlgorithmCollectiveBasic} disambiguation
  * algorithm on a collection of {@link WSDItem}s.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WSDAnnotatorCollectiveBasic

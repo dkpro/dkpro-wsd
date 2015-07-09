@@ -27,7 +27,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
  * A resource wrapping algorithms of type
  * {@link WSDAlgorithmDocumentDependentBasic}
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public class WSDResourceDocumentDependentBasic

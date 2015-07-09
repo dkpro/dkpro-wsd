@@ -29,7 +29,7 @@ import edu.uci.ics.jung.graph.Graph;
 /**
  * A visualizer for graphs used in graph connectivity WSD algorithms
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 interface GraphVisualizer
@@ -78,7 +78,6 @@ interface GraphVisualizer
      * @param vertex2
      *            The other of the edge's vertices
      * @param delayTime
-     * @throws InterruptedException
      */
     void animate(final Graph<String, UnorderedPair<String>> graph,
             UnorderedPair<String> edge, String vertex1, String vertex2);

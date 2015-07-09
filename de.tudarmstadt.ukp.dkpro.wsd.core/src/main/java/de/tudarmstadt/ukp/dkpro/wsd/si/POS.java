@@ -24,7 +24,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.si;
 /**
  * A simple enumeration for parts of speech
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public enum POS

@@ -56,7 +56,7 @@ import edu.uci.ics.jung.graph.util.Graphs;
  * Abstract class for WordNet-like sense inventories, where synset IDs are used
  * as sense IDs.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class WordNetSynsetSenseInventoryBase
@@ -139,7 +139,7 @@ public abstract class WordNetSynsetSenseInventoryBase
     /**
      * A class for the textual information associated with a WordNet synset
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     private class CachedSense
@@ -235,8 +235,7 @@ public abstract class WordNetSynsetSenseInventoryBase
     /**
      * Read WordNet into a graph
      *
-     * @param g
-     * @throws JWNLException
+     * @throws SenseInventoryException
      */
     @Override
     public UndirectedGraph<String, UnorderedPair<String>> getUndirectedGraph()
@@ -288,7 +287,7 @@ public abstract class WordNetSynsetSenseInventoryBase
     /**
      * Compact string representation of a <Synset, Pointer> graph
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     private class GraphToString
@@ -318,7 +317,7 @@ public abstract class WordNetSynsetSenseInventoryBase
      * its source and target synsets. (Note that the output does not uniquely
      * identify the pointer, since type information is not included.)
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     private class PointerToString
@@ -351,7 +350,7 @@ public abstract class WordNetSynsetSenseInventoryBase
      * uniquely identify the pointer, since type information is not included,
      * and because the directionality of the pointer is not preserved.)
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     private class PointerToUnorderedPair

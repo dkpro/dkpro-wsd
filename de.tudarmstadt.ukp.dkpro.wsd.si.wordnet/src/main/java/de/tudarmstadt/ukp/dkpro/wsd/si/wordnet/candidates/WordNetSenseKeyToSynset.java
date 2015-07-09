@@ -41,7 +41,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.resource.WordNetSenseInventoryRes
 /**
  * Converts WordNet sense keys to synset offset+POS
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetSenseKeyToSynset

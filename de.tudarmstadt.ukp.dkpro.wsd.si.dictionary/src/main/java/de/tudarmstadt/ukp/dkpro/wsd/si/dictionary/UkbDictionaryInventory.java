@@ -47,9 +47,9 @@ public class UkbDictionaryInventory
     private UkbDictionary dictionary;
 
     /**
-     * Returns the underlying GoogleDictionary object.
+     * Returns the underlying {@link UkbDictionary} object.
      *
-     * @return
+     * @return the underlying {@link UkbDictionary} object
      */
     public UkbDictionary getUnderlyingResource() {
         return dictionary;

@@ -30,7 +30,8 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.WordNetSenseInventoryBase;
 
 /**
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan
+ *         Miller</a>
  *
  */
 public class WordNetSenseInventoryResourceBase
@@ -45,11 +46,12 @@ public class WordNetSenseInventoryResourceBase
     protected String senseDescriptionFormat;
 
     /**
-     * Returns the underlying extJWNL Dictionary object.
+     * Returns the underlying {@link Dictionary} object.
      *
-     * @return
+     * @return the underlying {@link Dictionary} object
      */
-    public Dictionary getUnderlyingResource() {
+    public Dictionary getUnderlyingResource()
+    {
         return ((WordNetSenseInventoryBase) inventory).getUnderlyingResource();
     }
 
@@ -59,7 +61,7 @@ public class WordNetSenseInventoryResourceBase
      *
      * @param senseId
      * @param lemma
-     * @return
+     * @return the corresponding sense key
      * @throws SenseInventoryException
      */
     public String getWordNetSenseKey(String senseId, String lemma)
@@ -72,8 +74,8 @@ public class WordNetSenseInventoryResourceBase
     /**
      * Given a WordNet sense key, return a synset offset + POS
      *
-     * @param senseId
-     * @return
+     * @param senseKey
+     * @return the synset offset and part of speech
      * @throws SenseInventoryException
      */
     public String getWordNetSynsetOffsetAndPos(String senseKey)
@@ -87,7 +89,7 @@ public class WordNetSenseInventoryResourceBase
      * Returns true if the given String corresponds to a valid sense key
      *
      * @param senseKey
-     * @return
+     * @return true if the given String corresponds to a valid sense key
      * @throws SenseInventoryException
      */
     public boolean isSenseKey(String senseKey)
@@ -97,10 +99,12 @@ public class WordNetSenseInventoryResourceBase
     }
 
     /**
-     * Returns true if the given String corresponds to a valid synset offset + POS
+     * Returns true if the given String corresponds to a valid synset offset +
+     * POS
      *
      * @param synset
-     * @return
+     * @return true if the given String corresponds to a valid synset offset +
+     *         POS
      * @throws SenseInventoryException
      */
     public boolean isSynset(String synset)

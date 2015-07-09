@@ -35,7 +35,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDItem;
  * as a parameter the text in the document so that the algorithm
  * can disambiguate them all simultaneously.
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  *
  */
 public abstract class WSDAnnotatorBaseDocumentCollective

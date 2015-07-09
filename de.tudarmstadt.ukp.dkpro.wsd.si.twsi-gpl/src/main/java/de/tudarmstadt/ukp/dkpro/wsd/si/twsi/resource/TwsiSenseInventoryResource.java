@@ -33,7 +33,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.twsi.TwsiSenseInventoryBase;
 /**
  * A resource wrapping {@link TwsiSenseInventory}
  *
- * @author Daniel Bär <baer@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:baer@ukp.informatik.tu-darmstadt.de">Daniel Bär</a>
  *
  */
 public class TwsiSenseInventoryResource

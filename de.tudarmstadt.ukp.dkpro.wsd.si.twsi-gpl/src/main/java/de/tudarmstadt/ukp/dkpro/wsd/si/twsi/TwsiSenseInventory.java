@@ -25,7 +25,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 /**
  * An interface for the Turk Bootstrap Word Sense Inventory
  *
- * @author Daniel Bär <baer@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:baer@ukp.informatik.tu-darmstadt.de">Daniel Bär</a>
  *
  */
 public interface TwsiSenseInventory

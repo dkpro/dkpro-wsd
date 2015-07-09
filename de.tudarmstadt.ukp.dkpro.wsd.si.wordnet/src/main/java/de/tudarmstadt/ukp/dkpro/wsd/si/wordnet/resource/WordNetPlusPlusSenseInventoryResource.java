@@ -37,7 +37,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.wordnet.WordNetPlusPlusSenseInventory;
 /**
  * A resource wrapping {@link WordNetPlusPlusSenseInventory}
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class WordNetPlusPlusSenseInventoryResource

@@ -41,7 +41,7 @@ import edu.uci.ics.jung.graph.UndirectedSparseGraph;
  * An implementation of the unsupervised graph connectivity WSD from Navigli &
  * Lapata (2010).
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public abstract class GraphConnectivityWSD
@@ -88,7 +88,7 @@ public abstract class GraphConnectivityWSD
     /**
      * Determines how vertex (i.e., sense) labels will be visualized
      *
-     * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+     * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
     class VertexToolTipTransformer

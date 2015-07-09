@@ -37,7 +37,7 @@ import org.apache.commons.io.FileUtils;
  * A Cross-Lingual Dictionary for English Wikipedia Concepts.
  * In Proceedings of the Eighth International Conference on Language Resources and Evaluation (LREC 2012).)
  *
- * @author Nicolai Erbs <erbs@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
  */
 public class GoogleDictionary extends AbstractDictionary {
 

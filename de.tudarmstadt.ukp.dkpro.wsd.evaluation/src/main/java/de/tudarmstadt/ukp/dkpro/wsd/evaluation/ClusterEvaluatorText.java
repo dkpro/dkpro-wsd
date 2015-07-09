@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * A {@link AbstractClusterEvaluator} with plain text output
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  *
  */
 public class ClusterEvaluatorText

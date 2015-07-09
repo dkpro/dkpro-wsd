@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.resource.SenseInventoryResourceBase;
 /**
  * A resource wrapping {@link LsrSenseInventory}
  *
- * @author Torsten Zesch <zesch@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:zesch@ukp.informatik.tu-darmstadt.de">Torsten Zesch</a>
  *
  */
 public class LsrSenseInventoryResource
@@ -47,9 +47,9 @@ public class LsrSenseInventoryResource
     private String lsrName;
 
     /**
-     * Returns the underlying LexicalSemanticResource object.
+     * Returns the underlying {@link LexicalSemanticResource} object.
      *
-     * @return
+     * @return {@link LexicalSemanticResource} object
      */
     public LexicalSemanticResource getUnderlyingResource() {
         return ((LsrSenseInventory)inventory).getUnderlyingResource();

@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * Strategies for normalizing the overlap measure
  *
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public interface NormalizationStrategy
 {

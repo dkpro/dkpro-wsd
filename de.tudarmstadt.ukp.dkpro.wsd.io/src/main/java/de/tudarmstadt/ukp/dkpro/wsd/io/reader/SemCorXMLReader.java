@@ -56,7 +56,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
  * "http://nltk.googlecode.com/svn/trunk/nltk_data/packages/corpora/semcor.zip"
  * >NLTK's XML conversion of the SemCor pseudo-SGML</a>.
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class SemCorXMLReader
     extends JCasResourceCollectionReader_ImplBase

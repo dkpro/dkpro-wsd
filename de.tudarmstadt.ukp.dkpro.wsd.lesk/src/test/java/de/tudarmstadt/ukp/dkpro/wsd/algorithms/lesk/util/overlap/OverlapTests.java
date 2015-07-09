@@ -32,7 +32,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.PairedOverlap;
 import de.tudarmstadt.ukp.dkpro.wsd.lesk.util.overlap.SetOverlap;
 
 /**
- * @author	Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public class OverlapTests
 {

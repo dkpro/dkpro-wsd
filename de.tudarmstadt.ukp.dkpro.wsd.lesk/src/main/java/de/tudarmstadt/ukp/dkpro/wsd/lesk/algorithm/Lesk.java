@@ -40,7 +40,7 @@ import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 /**
  * Base class for algorithms which disambiguate words using Lesk-like algorithms
  *
- * @author Tristan Miller <miller@ukp.informatik.tu-darmstadt.de>
+ * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
  */
 public abstract class Lesk
     extends AbstractWSDAlgorithm
