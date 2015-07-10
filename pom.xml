@@ -22,6 +22,10 @@
 		<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 		<version>10</version>
 	</parent>
+    <properties>
+        <dkpro.core.version>1.7.0</dkpro.core.version>
+        <jung.version>2.0.1</jung.version>
+    </properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
 	<artifactId>de.tudarmstadt.ukp.dkpro.wsd</artifactId>
