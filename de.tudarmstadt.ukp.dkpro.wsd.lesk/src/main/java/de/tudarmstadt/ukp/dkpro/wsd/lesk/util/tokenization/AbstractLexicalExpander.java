@@ -18,6 +18,8 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.lesk.util.tokenization;
 
+import java.util.Arrays;
+
 /**
  * A TokenizationStrategy for use with the Lesk family of algorithms which
  * removes stop words and then applies lexical expansion to the remaining
@@ -62,7 +64,7 @@ public abstract class AbstractLexicalExpander
         public Expansion(int[] pos)
         {
             if (pos.length != 5) {
-                throw new IllegalArgumentException("Cannot parse array: " + pos);
+                throw new IllegalArgumentException("Cannot parse array: " + Arrays.toString(pos));
             }
             this.a = pos[0];
             this.n = pos[1];
