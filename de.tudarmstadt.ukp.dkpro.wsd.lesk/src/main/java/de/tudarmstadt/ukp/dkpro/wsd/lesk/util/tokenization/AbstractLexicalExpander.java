@@ -79,11 +79,11 @@ public abstract class AbstractLexicalExpander
             if (t.length != 5) {
                 throw new IllegalArgumentException("Cannot parse string: " + s);
             }
-            a = Integer.valueOf(t[0]);
-            n = Integer.valueOf(t[1]);
-            r = Integer.valueOf(t[2]);
-            v = Integer.valueOf(t[3]);
-            o = Integer.valueOf(t[4]);
+            a = Integer.parseInt(t[0]);
+            n = Integer.parseInt(t[1]);
+            r = Integer.parseInt(t[2]);
+            v = Integer.parseInt(t[3]);
+            o = Integer.parseInt(t[4]);
         }
 
         public int[] toArray()
