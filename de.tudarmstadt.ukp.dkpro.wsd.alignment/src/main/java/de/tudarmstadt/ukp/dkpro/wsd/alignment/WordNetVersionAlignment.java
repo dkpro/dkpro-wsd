@@ -92,6 +92,9 @@ public class WordNetVersionAlignment
 			}
 			s.close();
 		}
+
+		br.close();
+		is.close();
 	}
 
 	/**
