@@ -17,9 +17,9 @@ DKPro WSD is not a standalone WSD system, but rather a development framework and
 
 Data and resources such as sense inventories and sense-annotated corpora are not included with DKPro WSD.  These can be many gigabytes in size, and are usually not freely redistributable by third parties such as us, so you need to obtain them yourself.                                                                                    
                                                                                                                 
-Our [table of WSD corpora](/corpora/) includes links to where you can download the most commonly used WSD data sets, including those from the Senseval and SemEval tasks.  Be aware that these data sets often have syntax errors and other problems which make them impossible to use as-is.  We provide patches and conversion scripts to fix many of these problems.                                                                                 
+Our [table of WSD corpora](/dkpro-wsd/corpora/) includes links to where you can download the most commonly used WSD data sets, including those from the Senseval and SemEval tasks.  Be aware that these data sets often have syntax errors and other problems which make them impossible to use as-is.  We provide patches and conversion scripts to fix many of these problems.                                                                                 
                                                                                                                 
-Our [table of lexical semantic resources](/lsr/) includes links to where you can download the most commonly used sense inventories.
+Our [table of lexical semantic resources](/dkpro-wsd/lsr/) includes links to where you can download the most commonly used sense inventories.
 
 ### Example code
 
