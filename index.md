@@ -12,7 +12,7 @@ title: "DKPro WSD"
 
 ## What is DKPro WSD?
 
-DKPro WSD provides *UIMA components* which encapsulate [WSDCorpora corpus readers], linguistic annotators, [LSRs lexical semantic resources](FIXME), WSD algorithms, and evaluation and reporting tools.  You configure the components, or write new ones, and arrange them into a *data processing pipeline*.
+DKPro WSD provides *UIMA components* which encapsulate [corpus readers](/corpora/), linguistic annotators, [lexical semantic resources](/lsr/), WSD algorithms, and evaluation and reporting tools.  You configure the components, or write new ones, and arrange them into a *data processing pipeline*.
 
 DKPro WSD is *modular* and *flexible*.  Components which provide the same functionality can be *freely swapped*. You can easily run the same algorithm on different data sets, or test several different algorithms on the same data set.
 
@@ -43,7 +43,7 @@ With DKPro WSD, you can...
 
 DKPro WSD has out-of-the-box support for many different data sets, WSD algorithms, and lexical semantic resources:
 
-  * *[WSDCorpora sense-annotated corpora and data sets](FIXME)*
+  * *[sense-annotated corpora and data sets](/corpora/)*
     * Senseval and SemEval tasks (all-words, lexical sample, WSI)
     * AIDA CoNLL-YAGO
     * TAC KBP entity linking tasks
@@ -58,7 +58,7 @@ DKPro WSD has out-of-the-box support for many different data sets, WSD algorithm
     * Personalized PageRank
     * supervised TWSI
     * It Makes Sense (IMS)
-  * *[LSRs word sense inventories](FIXME)*
+  * *[word sense inventories](/lsr/)*
     * WordNet 1.7 through 3.1
     * EuroWordNet
     * TWSI
@@ -71,7 +71,3 @@ DKPro WSD has out-of-the-box support for many different data sets, WSD algorithm
     * OpenThesaurus
     * DKPro LSR
     * UBY
-
-## Getting started
-
-To get started with DKPro WSD, please visit the *[DKPro WSD wiki](FIXME)*, where you will find setup information, user documentation, example code, and a *[FAQ]*. You can also join our *[user discussion list](http://groups.google.com/group/dkpro-wsd-users)*.
