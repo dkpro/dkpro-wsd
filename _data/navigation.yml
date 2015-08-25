@@ -13,11 +13,11 @@
 - title: Documentation
   url: "/documentation/"
   side: left
-#  dropdown:
-#  - title: "Components"
-#    url: "/components/"
-#  - title: "Models"
-#    url: "/models/"
+  dropdown:
+  - title: "Getting started"
+    url: "/gettingstarted/"
+  - title: "FAQ"
+    url: "/faq/"
 #  - title: "Formats"
 #    url: "/formats/"
 #  - title: "Typesystem"
