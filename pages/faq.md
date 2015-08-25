@@ -39,7 +39,7 @@ You can use the following BibTeX entry:
 <pre>
 @InProceedings{miller2013dkpro,
   author =    {Tristan Miller and Nicolai Erbs and Hans-Peter Zorn and Torsten Zesch and Iryna Gurevych},
-  title =     {\{DKPro} {WSD}: A Generalized {UIMA}-based Framework for Word Sense Disambiguation},
+  title =     {&#x7b;DKPro} {WSD}: A Generalized {UIMA}-based Framework for Word Sense Disambiguation},
   booktitle = {Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (System Demonstrations) (ACL 2013)},
   year =      2013,
   month =     aug,
