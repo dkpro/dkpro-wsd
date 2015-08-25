@@ -4,9 +4,7 @@ title: "WSD corpora"
 permalink: "/corpora/"
 ---
 
-## WSD corpora
-
-### Table of WSD corpora
+## Table of WSD corpora
 
 | **Date** | **Corpus** | **Language** | **Style** | **Train** | **Format** | **Inventory** | **POS** | **Lemma** | **Sent.** | **Notes** |
 |:---------|:-----------|:-------------|:----------|:----------|:-----------|:--------------|:--------|:----------|:----------|:----------|
@@ -95,7 +93,7 @@ permalink: "/corpora/"
 | 2012     | [MASC](http://www.anc.org/MASC/) | en           | LS        | no        | MASC       | WordNet 3.1, FrameNet | yes     | yes       | yes       |           |
 | 2013     | [WebCAGe](http://www.sfs.uni-tuebingen.de/GermaNet/tools.shtml) | de           | LS        | no        | WebCAGe    | GermaNet      | yes     | yes       | yes       |           |
 
-#### Legend
+### Legend
 
   * **Date**:	The date the corpus (or the original corpus upon which this version is based) was first published
   * **Corpus**:	The name of the corpus, possibly with a hyperlink to where it can be obtained
@@ -109,12 +107,12 @@ permalink: "/corpora/"
   * **Sent.**:	Whether the corpus has sentence annotations
   * **Notes**:	Notes (see below)
 
-#### Notes
+### Notes
   1. Incomplete mappings from HECTOR to WordNet 1.5 and WordNet 1.6 are available on the Senseval-1 web page.
   1. According to Christiane Fellbaum, the WordNet 1.7 pre-release is missing and presumed lost. A third-party copy provided to us by German Rigau was found to be incompatible with the Senseval-2 sense keys.
   1. These data sets contain errors (incorrect POS tags, mismatched ID references, invalid XML, etc.).  We provide [patches and conversion scripts](https://github.com/dkpro/dkpro-wsd/tree/master/de.tudarmstadt.ukp.dkpro.wsd.senseval/src/main/resources) to fix them.
 
-### Formats supported by DKPro WSD
+## Formats supported by DKPro WSD
 
 DKPro WSD supports many (but not all) of the formats in the table above.  The table below shows the DKPro WSD reader classes for supported formats:
 
