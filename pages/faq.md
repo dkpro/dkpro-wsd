@@ -35,7 +35,8 @@ To reference DKPro WSD, please cite the following paper:
 > Tristan Miller, Nicolai Erbs, Hans-Peter Zorn, Torsten Zesch, and Iryna Gurevych. [DKPro WSD: A generalized UIMA-based framework for word sense disambiguation](http://aclweb.org/anthology//P/P13/P13-4007.pdf). In _Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (System Demonstrations) (ACL 2013)_, pages 37–42, August 2013.
 
 You can use the following BibTeX entry:
-{% highlight bibtex %}
+
+```
 @InProceedings{miller2013dkpro,
   author =    {Tristan Miller and Nicolai Erbs and Hans-Peter Zorn and Torsten Zesch and Iryna Gurevych},
   title =     {\{DKPro} {WSD}: A Generalized {UIMA}-based Framework for Word Sense Disambiguation},
@@ -45,7 +46,7 @@ You can use the following BibTeX entry:
   pages =     {37--42},
   pdf =       {http://aclweb.org/anthology//P/P13/P13-4007.pdf}
 }
-{% endhighlight bibtex %}
+```
 
 ## Using DKPro WSD
 
