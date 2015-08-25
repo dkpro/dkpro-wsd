@@ -36,7 +36,7 @@ To reference DKPro WSD, please cite the following paper:
 
 You can use the following BibTeX entry:
 
-```
+<pre>
 @InProceedings{miller2013dkpro,
   author =    {Tristan Miller and Nicolai Erbs and Hans-Peter Zorn and Torsten Zesch and Iryna Gurevych},
   title =     {\{DKPro} {WSD}: A Generalized {UIMA}-based Framework for Word Sense Disambiguation},
@@ -46,7 +46,7 @@ You can use the following BibTeX entry:
   pages =     {37--42},
   pdf =       {http://aclweb.org/anthology//P/P13/P13-4007.pdf}
 }
-```
+</pre>
 
 ## Using DKPro WSD
 
