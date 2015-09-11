@@ -86,7 +86,7 @@
 	  		<artifactId>
 	  			de.tudarmstadt.ukp.dkpro.lexsemresource.api-asl
 	  		</artifactId>
-	  		<version>0.8.1-SNAPSHOT</version>
+	  		<version>0.8.1</version>
 	  	</dependency>
 		<dependency>
 			<groupId>dkpro.similarity</groupId>
