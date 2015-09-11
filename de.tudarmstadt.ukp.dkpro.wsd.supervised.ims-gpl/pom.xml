@@ -50,9 +50,7 @@
 		<dependency>
 			<groupId>nz.ac.waikato.cms.weka</groupId>
 			<artifactId>weka-stable</artifactId>
-			<version>3.6.9</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>3.6.12</version>
 		</dependency>
 		<dependency>
 			<groupId>opennlp</groupId>
@@ -69,11 +67,9 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>jdom</groupId>
+			<groupId>org.jdom</groupId>
 			<artifactId>jdom</artifactId>
-			<version>1.0</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<version>2.0.2</version>
 		</dependency>
 		<dependency>
 			<groupId>net.sf.jwordnet</groupId>
@@ -96,7 +92,7 @@
 		<dependency>
 			<groupId>tw.edu.ntu.csie</groupId>
 			<artifactId>libsvm</artifactId>
-			<version>3.1</version>
+			<version>3.17</version>
 		</dependency>
 		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>

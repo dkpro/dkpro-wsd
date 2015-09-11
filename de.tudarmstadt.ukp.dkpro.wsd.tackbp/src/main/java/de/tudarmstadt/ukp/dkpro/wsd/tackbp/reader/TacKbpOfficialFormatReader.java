@@ -26,16 +26,16 @@ import java.util.List;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.collection.CollectionException;
+import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
+import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
-import org.apache.uima.fit.component.JCasCollectionReader_ImplBase;
-import org.apache.uima.fit.descriptor.ConfigurationParameter;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
 
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.wsd.si.POS;
@@ -57,7 +57,7 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 	public static final String PARAM_DOCUMENT_COLLECTIONS = "DocumentCollections";
 	@ConfigurationParameter(name=PARAM_DOCUMENT_COLLECTIONS, mandatory=true)
 	private String documentCollections;
-	
+
 	private List<TacKbpDocument> tacKbpDocuments;
 	private int position;
 	private SAXBuilder saxBuilder;;
@@ -97,7 +97,7 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 	@Override
 	public void getNext(JCas jCas) throws IOException, CollectionException {
 
-		TacKbpDocument tacKbpDocument = tacKbpDocuments.get(position); 
+		TacKbpDocument tacKbpDocument = tacKbpDocuments.get(position);
 		File baseDocument = getDocument(tacKbpDocument.getDocumentUri());
 		String[] documentContent;
 		try {
@@ -117,8 +117,8 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 
 		jCas.setDocumentLanguage("en");
 
-		String documentText = documentContent[1];	
-		
+		String documentText = documentContent[1];
+
 		jCas.setDocumentText(documentText);
 
 		//create WSDItem
@@ -132,7 +132,7 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 		int end;
 		if(tacKbpDocument.getEnd() != 0){
 			begin = tacKbpDocument.getBegin();
-			end = tacKbpDocument.getEnd();	
+			end = tacKbpDocument.getEnd();
 		}
 		else if(documentText.contains(mention)){
 			begin = documentText.indexOf(mention);
@@ -143,7 +143,7 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 			end = documentText.length();
 		}
 		wsdItem.setBegin(begin);
-		wsdItem.setEnd(end);	
+		wsdItem.setEnd(end);
 
 
 		wsdItem.setSubjectOfDisambiguation(mention);
@@ -163,7 +163,7 @@ public class TacKbpOfficialFormatReader extends JCasCollectionReader_ImplBase
 	}
 
 	protected String[] getDocumentContent (File baseDocument) throws JDOMException, IOException {
-		Document document = (Document) saxBuilder.build(baseDocument);
+		Document document = saxBuilder.build(baseDocument);
 		Element rootNode = document.getRootElement();
 		//		System.out.println("File: " + baseDocument.getAbsolutePath());
 		Element bodyNode = rootNode.getChild("BODY");

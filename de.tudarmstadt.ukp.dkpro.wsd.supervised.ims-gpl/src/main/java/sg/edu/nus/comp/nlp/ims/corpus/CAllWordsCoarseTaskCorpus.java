@@ -24,11 +24,11 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jdom.Attribute;
-import org.jdom.Content;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Attribute;
+import org.jdom2.Content;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 
 import sg.edu.nus.comp.nlp.ims.util.ILemmatizer;
 import sg.edu.nus.comp.nlp.ims.util.IPOSTagger;
@@ -116,7 +116,7 @@ public class CAllWordsCoarseTaskCorpus extends CLexicalCorpus {
 		StringBuilder builder = new StringBuilder("");
 		for (int i = 0; i < p_Sentence.getContentSize(); i++) {
 			Content cont = p_Sentence.getContent(i);
-			if (org.jdom.Text.class.isInstance(cont)) {
+			if (org.jdom2.Text.class.isInstance(cont)) {
 				String value = cont.getValue().replaceAll("[\r\n]", " ").trim();
 				builder.append(value + " ");
 			} else {

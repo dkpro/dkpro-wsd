@@ -26,13 +26,16 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.jdom.Attribute;
-import org.jdom.Content;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Attribute;
+import org.jdom2.Content;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 
-import sg.edu.nus.comp.nlp.ims.util.*;
+import sg.edu.nus.comp.nlp.ims.util.ILemmatizer;
+import sg.edu.nus.comp.nlp.ims.util.IPOSTagger;
+import sg.edu.nus.comp.nlp.ims.util.ISentenceSplitter;
+import sg.edu.nus.comp.nlp.ims.util.ITokenizer;
 
 /**
  * SensEval-2 lexical sample task test corpus. (Also used for training.)
@@ -89,7 +92,8 @@ public class CLexicalCorpus extends ACorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#load(java.io.BufferedReader)
 	 */
-	public boolean load(Reader p_Reader) throws Exception {
+	@Override
+    public boolean load(Reader p_Reader) throws Exception {
 		SAXBuilder builder = new SAXBuilder();
 		Document doc = builder.build(p_Reader);
 		Element root = doc.getRootElement(); // corpus
@@ -126,7 +130,7 @@ public class CLexicalCorpus extends ACorpus {
 		StringBuilder builder = new StringBuilder();
 		for (int i = 0; i < context.getContentSize(); i++) {
 			Content content = context.getContent(i);
-			if (org.jdom.Text.class.isInstance(content)) {
+			if (org.jdom2.Text.class.isInstance(content)) {
 				builder.append(" " + content.getValue());
 			} else {
 				Element element = (Element) content;
@@ -191,7 +195,8 @@ public class CLexicalCorpus extends ACorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ACorpus#tokenizeSentence(java.lang.String)
 	 */
-	protected void tokenizeSentence(String p_Sentence) {
+	@Override
+    protected void tokenizeSentence(String p_Sentence) {
 		ISentence sentence = new CSentence();
 		String[] tokens = null;
 		if (this.m_Tokenized) {
@@ -268,7 +273,8 @@ public class CLexicalCorpus extends ACorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ACorpus#genInfo()
 	 */
-	protected void genInfo() {
+	@Override
+    protected void genInfo() {
 		super.genInfo();
 		for (int i = 0; i < this.m_IDs.size(); i++) {
 			if (this.m_LexeltIDs.size() > i) {

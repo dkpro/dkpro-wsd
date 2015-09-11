@@ -26,11 +26,11 @@ import java.util.Arrays;
 //import java.util.List;
 import java.util.regex.Pattern;
 
-import org.jdom.Attribute;
-import org.jdom.Content;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.input.SAXBuilder;
+import org.jdom2.Attribute;
+import org.jdom2.Content;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
 
 import sg.edu.nus.comp.nlp.ims.util.ILemmatizer;
 import sg.edu.nus.comp.nlp.ims.util.IPOSTagger;
@@ -120,7 +120,7 @@ public final class CAllWordsFineTaskCorpus extends CLexicalCorpus {
 		StringBuilder builder = new StringBuilder("");
 		for (int i = 0; i < p_Text.getContentSize(); i++) {
 			Content cont = p_Text.getContent(i);
-			if (org.jdom.Text.class.isInstance(cont)) {
+			if (org.jdom2.Text.class.isInstance(cont)) {
 				String value = cont.getValue().replaceAll("[\r\n]", " ").trim();
 				value = this.m_CleanPattern.matcher(value).replaceAll(" ");
 				builder.append(value + " ");

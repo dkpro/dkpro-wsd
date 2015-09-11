@@ -31,13 +31,12 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.jdom.Content;
-import org.jdom.DocType;
-import org.jdom.Document;
-import org.jdom.Element;
-import org.jdom.JDOMException;
-import org.jdom.input.SAXBuilder;
-import org.jdom.output.XMLOutputter;
+import org.jdom2.Content;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.XMLOutputter;
 
 /**
  * amend senseval 3 lexical sample task training corpus. because in SensEval 3
@@ -163,12 +162,12 @@ public final class CAmendLexeltCorpus {
 		SAXBuilder builder = new SAXBuilder();
 		Document doc = builder.build(reader);
 		Element root = doc.getRootElement();
-		Element newRoot = (Element) root.clone();
+		Element newRoot = root.clone();
 		newRoot.removeChildren("lexelt");
 		for (Object lexelt : root.getChildren("lexelt")) {
 			newRoot.addContent(this.amendLexelt((Element) lexelt));
 		}
-		Document newDoc = new Document(newRoot, (DocType) doc.getDocType()
+		Document newDoc = new Document(newRoot, doc.getDocType()
 				.clone());
 		XMLOutputter outputter = new XMLOutputter();
 		FileWriter writer = new FileWriter(p_XmlFile + ".new");
@@ -178,7 +177,7 @@ public final class CAmendLexeltCorpus {
 
 	private Element amendLexelt(Element p_Lexelt) {
 		if (p_Lexelt != null) {
-			Element amend = (Element) p_Lexelt.clone();
+			Element amend = p_Lexelt.clone();
 			amend.removeChildren("instance");
 			for (Object instance : p_Lexelt.getChildren("instance")) {
 				amend.addContent(this.amendInstance((Element) instance));
@@ -200,16 +199,16 @@ public final class CAmendLexeltCorpus {
 				String id = p_Instance.getAttributeValue("id");
 				String docID = p_Instance.getAttributeValue("docsrc");
 				List answers = p_Instance.getChildren("answer");
-				Element element = (Element) p_Instance.clone();
+				Element element = p_Instance.clone();
 				element.removeContent();
 				for (int i = 0; i < context.getChildren("head").size(); i++) {
-					Element newInstance = (Element) element.clone();
+					Element newInstance = element.clone();
 					newInstance.setAttribute("id", id + "-" + i);
 					newInstance.setAttribute("docsrc", docID);
 					ArrayList<Element> newAnswers = new ArrayList<Element>();
 					if (answers != null && answers.size() > 0) {
 						for (Object obj : answers) {
-							Element answer = (Element) ((Element) obj).clone();
+							Element answer = ((Element) obj).clone();
 							answer.setAttribute("instance", id + "-" + i);
 							newAnswers.add(answer);
 						}
@@ -221,7 +220,7 @@ public final class CAmendLexeltCorpus {
 					instances.add(newInstance);
 				}
 				for (Object content : context.getContent()) {
-					if (content.getClass().equals(org.jdom.Text.class)) {
+					if (content.getClass().equals(org.jdom2.Text.class)) {
 						for (Element newContext : contents) {
 							newContext.addContent(((Content) content)
 									.getValue());
@@ -232,7 +231,7 @@ public final class CAmendLexeltCorpus {
 							for (int i = 0; i < instances.size(); i++) {
 								if (i == index) {
 									contents.get(i).addContent(
-											(Element) ((Element) content)
+											((Element) content)
 													.clone());
 								} else {
 									contents.get(i).addContent(
@@ -247,7 +246,7 @@ public final class CAmendLexeltCorpus {
 					}
 				}
 			} else {
-				instances.add((Element) p_Instance.clone());
+				instances.add(p_Instance.clone());
 			}
 			return instances;
 		}

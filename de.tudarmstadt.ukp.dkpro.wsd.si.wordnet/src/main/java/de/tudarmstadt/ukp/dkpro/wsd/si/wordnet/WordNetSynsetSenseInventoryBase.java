@@ -290,6 +290,7 @@ public abstract class WordNetSynsetSenseInventoryBase
      * @author <a href="mailto:miller@ukp.informatik.tu-darmstadt.de">Tristan Miller</a>
      *
      */
+    @SuppressWarnings("unused")
     private class GraphToString
         implements Transformer<Graph<Synset, Pointer>, String>
     {
