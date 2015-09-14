@@ -87,4 +87,8 @@
 			<timezone>Europe/Berlin</timezone>
 		</developer>
 	</developers>
+	<organization>
+		<url>https://www.ukp.tu-darmstadt.de/</url>
+		<name>Ubiquitous Knowledge Processing (UKP) Lab, Technische Universität Darmstadt</name>
+	</organization>
 </project>
