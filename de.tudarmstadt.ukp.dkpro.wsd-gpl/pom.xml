@@ -89,7 +89,6 @@
 		</dependencies>
 	</dependencyManagement>
 	<name>DKPro WSD GPL</name>
-	<url>https://code.google.com/p/dkpro-wsd-gpl/</url>
 	<description>DKPro WSD is a UIMA framework for word sense disambiguation. This project contains GPL-licensed components for use with the main DKPro WSD project.</description>
 	<inceptionYear>2013</inceptionYear>
 	<build>
