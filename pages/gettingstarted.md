@@ -19,7 +19,7 @@ The GitHub repository contains [https://github.com/dkpro/dkpro-wsd](source code 
 
 If you are a Maven user, you can obtain prepackaged artifacts by adding the following repository section to your project:
 
-```
+```xml
 <repositories>
   <repository>
     <id>ukp-oss-releases</id>
@@ -29,7 +29,7 @@ If you are a Maven user, you can obtain prepackaged artifacts by adding the foll
 ```
 
 You can then add individual DKPro WSD artifacts to your POM.  For example:
-```
+```xml
 <dependency>
     <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
     <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
