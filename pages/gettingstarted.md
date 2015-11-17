@@ -13,6 +13,33 @@ permalink: "/gettingstarted/"
 
 DKPro WSD is not a standalone WSD system, but rather a development framework and library consisting of a type system, a Java API, and Apache UIMA components.  To use it you will need a Java development framework and runtime environment supporting Java 7 or later.
 
+### Obtaining DKPro WSD ###
+
+The GitHub repository contains [https://github.com/dkpro/dkpro-wsd](source code for DKPro WSD).
+
+If you are a Maven user, you can obtain prepackaged artifacts by adding the following repository section to your project:
+
+```
+<repositories>
+  <repository>
+    <id>ukp-oss-releases</id>
+    <url>http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-releases</url>
+   </repository>
+</repositories>
+```
+
+You can then add individual DKPro WSD artifacts to your POM.  For example:
+```
+<dependency>
+    <groupId>de.tudarmstadt.ukp.dkpro.wsd</groupId>
+    <artifactId>de.tudarmstadt.ukp.dkpro.wsd.core</artifactId>
+    <version>1.2.0</version>
+</dependency>
+```
+
+(Of course, you will probably always want to use the latest available version.)
+
+
 ### Obtaining data and resources
 
 Data and resources such as sense inventories and sense-annotated corpora are not included with DKPro WSD.  These can be many gigabytes in size, and are usually not freely redistributable by third parties such as us, so you need to obtain them yourself.                                                                                    
