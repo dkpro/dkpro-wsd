@@ -107,8 +107,6 @@
 							</properties>
 					<excludes>
 						<exclude>release.properties</exclude>
-						<exclude>CHANGES</exclude>
-						<exclude>ChangeLog.txt</exclude>
 						<exclude>NOTICE.txt</exclude>
 						<exclude>README.txt</exclude>
 						<exclude>LICENSE.txt</exclude>
