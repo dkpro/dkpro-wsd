@@ -97,9 +97,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>liblinear</groupId>
+			<groupId>de.bwaldvogel</groupId>
 			<artifactId>liblinear</artifactId>
-			<version>1.7</version>
+			<version>1.7.1</version>
 		</dependency>
 	</dependencies>
 	<name>DKPro WSD GPL - IMS</name>
