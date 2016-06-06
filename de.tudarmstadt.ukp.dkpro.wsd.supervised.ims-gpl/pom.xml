@@ -79,11 +79,6 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>liblinear</groupId>
-			<artifactId>liblinear</artifactId>
-			<version>1.51</version>
-		</dependency>
-		<dependency>
 			<groupId>de.tudarmstadt.ukp.dkpro.core</groupId>
 			<artifactId>
     		de.tudarmstadt.ukp.dkpro.core.api.resources-asl
@@ -100,6 +95,11 @@
 				de.tudarmstadt.ukp.dkpro.wsd.evaluation
 			</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>liblinear</groupId>
+			<artifactId>liblinear</artifactId>
+			<version>1.7</version>
 		</dependency>
 	</dependencies>
 	<name>DKPro WSD GPL - IMS</name>
