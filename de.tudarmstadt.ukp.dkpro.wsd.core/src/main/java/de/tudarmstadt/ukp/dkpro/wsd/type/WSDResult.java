@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015
+ * Copyright 2016
  * Ubiquitous Knowledge Processing (UKP) Lab
  * Technische Universität Darmstadt
  *
@@ -270,7 +270,7 @@ extends Annotation
 	 * Returns the sense with the highest score (returns first one if multiple exist)
 	 */
 	public Sense getBestSense(){
-		double highestConfidence = 0.0;
+		double highestConfidence = Double.NEGATIVE_INFINITY;
 		int numSenses = getSenses().size();
 		Sense bestSense = null;
 
