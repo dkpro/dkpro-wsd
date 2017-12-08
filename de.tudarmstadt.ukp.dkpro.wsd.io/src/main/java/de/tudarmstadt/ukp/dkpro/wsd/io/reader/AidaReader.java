@@ -246,8 +246,6 @@ public class AidaReader
      *
      * @param jCas
      *            The CAS in which to create the annotation.
-     * @param id
-     *            An identifier for the annotation.
      * @param offset
      *            The index of the first character of the annotation in the
      *            document.

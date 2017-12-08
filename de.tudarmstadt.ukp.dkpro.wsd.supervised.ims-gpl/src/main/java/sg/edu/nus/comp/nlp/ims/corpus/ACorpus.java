@@ -226,13 +226,15 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#load(java.io.Reader)
 	 */
-	public abstract boolean load(Reader p_Reader) throws Exception;
+	@Override
+    public abstract boolean load(Reader p_Reader) throws Exception;
 
 	/*
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getSentence(int)
 	 */
-	public ISentence getSentence(int p_SentenceID) {
+	@Override
+    public ISentence getSentence(int p_SentenceID) {
 		if (this.isValidSentence(p_SentenceID)) {
 			return this.m_Sentences.get(p_SentenceID);
 		}
@@ -243,7 +245,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getIndexInSentence(int)
 	 */
-	public int getIndexInSentence(int p_Index) {
+	@Override
+    public int getIndexInSentence(int p_Index) {
 		if (this.isValidInstance(p_Index)) {
 			return this.m_Indice.get(p_Index);
 		}
@@ -254,7 +257,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getLength(int)
 	 */
-	public int getLength(int p_Index) {
+	@Override
+    public int getLength(int p_Index) {
 		if (this.isValidInstance(p_Index)) {
 			return this.m_Lengths.get(p_Index);
 		}
@@ -265,7 +269,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#size()
 	 */
-	public int size() {
+	@Override
+    public int size() {
 		return this.m_IDs.size();
 	}
 
@@ -273,7 +278,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#numOfSentences()
 	 */
-	public int numOfSentences() {
+	@Override
+    public int numOfSentences() {
 		return this.m_Sentences.size();
 	}
 
@@ -281,7 +287,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getSentenceID(int)
 	 */
-	public int getSentenceID(int p_Index) {
+	@Override
+    public int getSentenceID(int p_Index) {
 		if (this.isValidInstance(p_Index)) {
 			return this.m_SentenceIDs.get(p_Index);
 		}
@@ -292,7 +299,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getTag(int)
 	 */
-	public String[] getTag(int p_Index) {
+	@Override
+    public String[] getTag(int p_Index) {
 		if (this.isValidInstance(p_Index)) {
 			if (this.m_Tags.size() == 0) {
 				return new String[] { "?" };
@@ -306,7 +314,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#clear()
 	 */
-	public void clear() {
+	@Override
+    public void clear() {
 		this.m_Ready = false;
 		this.m_Indice.clear();
 		this.m_Lengths.clear();
@@ -330,7 +339,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getLowerBoundary(int)
 	 */
-	public int getLowerBoundary(int p_Sentence) {
+	@Override
+    public int getLowerBoundary(int p_Sentence) {
 		if (this.isValidSentence(p_Sentence)) {
 			int upper = this.m_Boundaries.size();
 			int lower = 0;
@@ -360,7 +370,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getUpperBoundary(int)
 	 */
-	public int getUpperBoundary(int p_Sentence) {
+	@Override
+    public int getUpperBoundary(int p_Sentence) {
 		if (this.isValidSentence(p_Sentence)) {
 			int upper = this.m_Boundaries.size();
 			int lower = 0;
@@ -390,7 +401,8 @@ public abstract class ACorpus implements ICorpus {
 	 * (non-Javadoc)
 	 * @see sg.edu.nus.comp.nlp.ims.corpus.ICorpus#getValue(int, java.lang.String)
 	 */
-	public String getValue(int p_Index, String p_Key) {
+	@Override
+    public String getValue(int p_Index, String p_Key) {
 		if (p_Key == null || !this.isValidInstance(p_Index)) {
 			return null;
 		}
@@ -466,7 +478,6 @@ public abstract class ACorpus implements ICorpus {
 	/**
 	 * tokenize the texts
 	 * @param p_Texts texts
-	 * @throws Exception
 	 */
 	protected void tokenize(ArrayList<ArrayList<String>> p_Texts) {
 		for (ArrayList<String> text : p_Texts) {

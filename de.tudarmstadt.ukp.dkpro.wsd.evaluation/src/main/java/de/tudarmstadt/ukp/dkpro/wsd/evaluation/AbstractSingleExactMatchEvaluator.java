@@ -524,13 +524,10 @@ public abstract class AbstractSingleExactMatchEvaluator
     /**
      * Print the statistics for this algorithm/POS combination.
      *
-     * @param algorithm
-     *            The name of the disambiguation method
      * @param pos
      *            The part of speech
      * @param wsdStats
      *            A @link{WSDStats} object containing the statistics
-     * @throws IOException
      */
     protected void putWSDStats(String pos, WSDStats wsdStats, boolean backoff)
         throws IOException

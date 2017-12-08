@@ -176,9 +176,6 @@ public abstract class AbstractWSDEvaluator
 
     /**
      * Returns the senses with the highest non-zero confidence score.
-     *
-     * @param wsdResult
-     * @return
      */
     protected Set<Sense> getBestSenses(FSArray senseArray)
     {

@@ -348,9 +348,6 @@ public abstract class AbstractClusterEvaluator
      * found in the same cluster.
      *
      * @param wsdItem
-     * @param pos
-     * @param numberOfCorrectSenses
-     * @return
      * @throws SenseInventoryException
      */
     protected Double getRandomScore(WSDItem wsdItem, WSDResult goldResult)
@@ -714,15 +711,10 @@ public abstract class AbstractClusterEvaluator
     /**
      * Print the statistics for this algorithm/POS combination.
      *
-     * @param algorithm
-     *            The name of the disambiguation method
      * @param pos
      *            The part of speech
      * @param wsdStats
      *            A @link{WSDStats} object containing the statistics
-     * @param mark
-     *            Whether to mark this entry
-     * @throws IOException
      */
     protected void putWSDStats(String pos, WSDStats wsdStats,
             String clustering, WSDStats unclusteredWsdStats,

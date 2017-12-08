@@ -362,7 +362,7 @@ public class LexUnit {
 
     /**
      * Returns a <code>List</code> of this <code>LexUnit</code>'s
-     * <code>Examples/code>.
+     * <code>Examples</code>.
      * @return a <code>List</code> of this <code>LexUnit</code>'s
      * <code>Examples</code>
      */

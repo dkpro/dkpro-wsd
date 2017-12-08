@@ -42,7 +42,7 @@ public class CWordNetSenseIndex implements ISenseIndex {
 	protected static Pattern POSPATTERN = Pattern.compile("\\%(\\d)");
 
 	/**
-	 * first sense of each lexelt lexelt -> first sense
+	 * first sense of each lexelt lexelt -&gt; first sense
 	 */
 	protected Hashtable<String, String> m_FirstSenses = new Hashtable<String, String>();
 	// offsets of lexelts

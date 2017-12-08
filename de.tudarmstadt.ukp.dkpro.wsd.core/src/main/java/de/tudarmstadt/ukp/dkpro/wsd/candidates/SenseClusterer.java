@@ -42,7 +42,7 @@ import org.apache.log4j.Logger;
 import de.tudarmstadt.ukp.dkpro.core.api.resources.ResourceUtils;
 
 /**
- * This class takes a pairwise (or n-wise, for n >= 2) mapping of senses and
+ * This class takes a pairwise (or n-wise, for n &lt;= 2) mapping of senses and
  * follows the transitive relations to produce n-way mappings (clusters) of
  * senses
  *

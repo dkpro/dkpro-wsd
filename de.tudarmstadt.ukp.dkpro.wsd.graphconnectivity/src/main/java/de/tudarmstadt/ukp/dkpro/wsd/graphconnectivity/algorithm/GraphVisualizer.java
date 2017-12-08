@@ -39,7 +39,6 @@ interface GraphVisualizer
      *
      * @param graph
      *            The graph to display
-     * @param inventory
      */
     void initialize(
             final Graph<String, UnorderedPair<String>> graph);
@@ -77,7 +76,6 @@ interface GraphVisualizer
      *            One of the edge's vertices
      * @param vertex2
      *            The other of the edge's vertices
-     * @param delayTime
      */
     void animate(final Graph<String, UnorderedPair<String>> graph,
             UnorderedPair<String> edge, String vertex1, String vertex2);
@@ -93,7 +91,7 @@ interface GraphVisualizer
      * Sets the colour for a vertex label
      *
      * @param label The label whose colour to set
-     * @param index The index of the colour from the colour map
+     * @param colorIndex The index of the colour from the colour map
      */
     void setColor(String label, int colorIndex);
 
@@ -112,8 +110,6 @@ interface GraphVisualizer
 
     /**
      * Sets the vertex tooltip Transformer
-     *
-     * @param label
      */
     void setVertexToolTipTransformer(Transformer<String,String> vertexToolTipTransformer);
 }

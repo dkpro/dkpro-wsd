@@ -41,9 +41,9 @@ import org.jdom2.output.XMLOutputter;
 /**
  * amend senseval 3 lexical sample task training corpus. because in SensEval 3
  * lexical sample task training corpus, there may be two or more training
- * instances in one <instance> tag. this file is to separate the instances
+ * instances in one &lt;instance&gt; tag. this file is to separate the instances
  * described above. I will add a "-number" at the end of the instance id and
- * create a file with only one instance in one <instance> tag.
+ * create a file with only one instance in one &lt;instance&gt; tag.
  *
  * @author zhongzhi
  *

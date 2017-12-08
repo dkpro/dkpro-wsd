@@ -85,7 +85,7 @@ import org.apache.commons.logging.LogFactory;
  * <code>Synsets</code> or <code>LexUnits</code>, given
  * an orthForm or a WordCategory.  For example,<br><br><code>
  *    List&lt;LexUnit&gt; lexList = gnet.getLexUnits("Bank");<br>
- *    List&lt;LexUnit&gt;> verbenLU = gnet.getLexUnits(WordCategory.verben);<br>
+ *    List&lt;LexUnit&gt; verbenLU = gnet.getLexUnits(WordCategory.verben);<br>
  *    List&lt;Synset&gt; synList = gnet.getSynsets("gehen");<br>
  *    List&lt;Synset&gt; adjSynsets = gnet.getSynsets(WordCategory.adj);<br><br>
  * </code>
@@ -988,7 +988,6 @@ public class GermaNet {
      * Checks whether the <code>File</code> is a <code>ZipFile</code>.
      * @param file the <code>File</code> to check
      * @return true if this <code>File</code> is a <code>ZipFile</code>
-     * @throws javax.xml.stream.IOException
      */
     protected static boolean isZipFile(File file) throws IOException {
         RandomAccessFile raf = new RandomAccessFile(file, "r");
