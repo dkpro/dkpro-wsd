@@ -107,7 +107,17 @@ public interface SenseInventory
      */
     String getSenseDescription(String senseId)
         throws SenseInventoryException;
-
+    /**
+     * @param senseId
+     * @return A human readable description of the current sense represented by
+     *         its senseId or an empty string if no description is available. A
+     *         {@link SenseInventoryException} is thrown if the senseId is
+     *         invalid.
+     * @throws SenseInventoryException
+     */
+    String getSenseDescription(String senseId,boolean seclang)
+        throws SenseInventoryException;
+    
     /**
      * @param senseId
      * @return The part of speech of the sense represented by the given senseId.
