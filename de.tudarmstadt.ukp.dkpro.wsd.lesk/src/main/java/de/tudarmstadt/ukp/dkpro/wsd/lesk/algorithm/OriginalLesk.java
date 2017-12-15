@@ -1,6 +1,6 @@
 package de.tudarmstadt.ukp.dkpro.wsd.lesk.algorithm;
 /*******************************************************************************
- * Copyright 2016
+ * Copyright 2017
  * Ubiquitous Knowledge Processing (UKP) Lab
  * Technische Universität Darmstadt
  *

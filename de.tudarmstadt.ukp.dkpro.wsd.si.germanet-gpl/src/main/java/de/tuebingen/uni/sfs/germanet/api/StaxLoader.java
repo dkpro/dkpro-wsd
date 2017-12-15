@@ -2,7 +2,7 @@
  * Copyright (C) 2012 Department of General and Computational Linguistics,
  * University of Tuebingen
  *
- * Copyright 2016
+ * Copyright 2017
  * Ubiquitous Knowledge Processing (UKP) Lab
  * Technische Universität Darmstadt
  *
