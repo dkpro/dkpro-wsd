@@ -20,9 +20,9 @@ package de.tudarmstadt.ukp.dkpro.wsd.io.reader;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringEscapeUtils;
@@ -44,10 +44,10 @@ import de.tudarmstadt.ukp.dkpro.wsd.type.WSDResult;
 
 /**
  * A collection reader for <a href=
- * "http://www.mpi-inf.mpg.de/yago-naga/aida/downloads.html" >AIDA</a> based on
- * <a href= "http://www.cnts.ua.ac.be/conll2003/ner/">CoNLL</a>.
+ * "https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/"
+ * >AIDA</a> based on <a href= "http://www.cnts.ua.ac.be/conll2003/ner/">CoNLL</a>.
  *
- * @author <a href="mailto:erbs@ukp.informatik.tu-darmstadt.de">Nicolai Erbs</a>
+ * @author Nicolai Erbs
  */
 public class AidaReader
     extends JCasCollectionReader_ImplBase
@@ -88,7 +88,7 @@ public class AidaReader
             throw new ResourceInitializationException(e);
         }
 
-        corpus = new HashMap<String, String[]>();
+        corpus = new TreeMap<String, String[]>();
 
         String docId;
         String docText;
