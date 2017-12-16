@@ -61,9 +61,18 @@ public class WSDAnnotatorContextPOS
         // TODO: Currently this just passes the covered text as the context.
         // It might be better to pass a collection of annotations (for example,
         // lemmas)
-        return wsdMethod.getDisambiguation(
-                wsdItem.getSubjectOfDisambiguation(),
-                POS.valueOf(wsdItem.getPos()), context.getCoveredText());
+    	try {
+    		return wsdMethod.getDisambiguation(
+    				wsdItem.getSubjectOfDisambiguation(),
+    				POS.valueOf(wsdItem.getPos()), context.getCoveredText());
+
+    	} catch (Exception e){
+    	    // System.out.println("Exception " + wsdItem.getCoveredText()+ "--"+ wsdItem.getPos());
+    		// as pos is unknown use NOUN, or try it with null... 
+    	    return wsdMethod.getDisambiguation(wsdItem.getSubjectOfDisambiguation(),POS.NOUN,context.getCoveredText()); 
+        	// or  throw exception 
+        	// throw e;
+        }
     }
 
     @Override
