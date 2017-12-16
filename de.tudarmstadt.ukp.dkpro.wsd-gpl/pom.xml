@@ -103,7 +103,7 @@
 					<failIfMissing>true</failIfMissing>
 					<strictCheck>true</strictCheck>
 							<properties>
-								<year>2016</year>
+								<year>2017</year>
 							</properties>
 					<excludes>
 						<exclude>release.properties</exclude>
