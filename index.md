@@ -5,7 +5,7 @@
 # this work, you have to use › layout: frontpage
 #
 layout: frontpage
-title: "DKPro WSD"
+title: "Welcome"
 ---
 
 *DKPro WSD* is a modular, extensible Java framework for word sense disambiguation.  It is based on [Apache UIMA](https://uima.apache.org/), an industry standard for text processing.

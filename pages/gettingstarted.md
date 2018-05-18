@@ -4,8 +4,8 @@ title: "Getting started"
 permalink: "/gettingstarted/"
 ---
 
-{% assign stable = (site.data.releases | where:"status", "stable" | first) %}
-{% assign unstable = (site.data.releases | where:"status", "unstable" | first) %}
+{% assign stable = site.data.releases | where: "status", "stable" | first %}
+{% assign unstable = site.data.releases | where: "status", "unstable" | first %}
 
 ## Getting started with DKPro WSD
 

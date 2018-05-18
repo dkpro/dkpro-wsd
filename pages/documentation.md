@@ -4,8 +4,8 @@ title: "Documentation"
 permalink: "/documentation/"
 ---
 
-{% assign stable = (site.data.releases | where:"status", "stable" | first) %}
-{% assign unstable = (site.data.releases | where:"status", "unstable" | first) %}
+{% assign stable = site.data.releases | where: "status", "stable" | first %}
+{% assign unstable = site.data.releases | where: "status", "unstable" | first %}
 
 Full reference documentation for DKPro WSD is under construction.  In the meantime, the following resources will help you get up and running with DKPro WSD:
 
