@@ -1,0 +1,16 @@
+sudo: false
+language: java
+jdk:
+- openjdk7
+- openjdk8
+- oraclejdk7
+- oraclejdk8
+- oraclejdk9
+before_install:
+- wget 'https://downloads.sourceforge.net/project/maxent/Maxent/2.5.1/maxent-2.5.1.tgz' && tar zxf maxent-2.5.1.tgz && cd maxent-2.5.1 && ./build.sh && mvn install:install-file -Dfile=$PWD/output/maxent-2.5.1.jar -DgroupId=opennlp -DartifactId=maxent -Dversion=2.5.1 -Dpackaging=jar
+- sed -re 's/([.@])Test/\1Ignore/g' -i "$TRAVIS_BUILD_DIR/de.tudarmstadt.ukp.dkpro.wsd.io/src/test/java/de/tudarmstadt/ukp/dkpro/wsd/io/reader/AidaReaderTest.java"
+script: mvn test -B -f "$TRAVIS_BUILD_DIR/pom.xml"
+matrix:
+  allow_failures:
+  - jdk: oraclejdk7
+  - jdk: oraclejdk9
