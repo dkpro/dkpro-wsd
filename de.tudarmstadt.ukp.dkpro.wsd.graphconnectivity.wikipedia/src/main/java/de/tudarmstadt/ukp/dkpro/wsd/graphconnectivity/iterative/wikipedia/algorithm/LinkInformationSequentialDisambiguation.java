@@ -21,6 +21,7 @@ package de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.wikipedia.algor
 import java.util.List;
 
 import org.apache.commons.collections15.ListUtils;
+import org.dkpro.similarity.algorithms.api.SimilarityException;
 import org.junit.Before;
 
 import de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.algorithm.SequentialGraphDisambiguation;
@@ -28,7 +29,6 @@ import de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.wikipedia.util.I
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.linkdatabase.PerformanceLinkInformationReader;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiApiException;
-import dkpro.similarity.algorithms.api.SimilarityException;
 
 /**
  * A class for sequential disambiguation using Wikipedia links from a special database as weights between senses

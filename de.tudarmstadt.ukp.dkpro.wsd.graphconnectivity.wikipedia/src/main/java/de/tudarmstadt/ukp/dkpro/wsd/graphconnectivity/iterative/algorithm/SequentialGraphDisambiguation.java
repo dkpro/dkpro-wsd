@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.dkpro.similarity.algorithms.api.SimilarityException;
 
 import de.tudarmstadt.ukp.dkpro.wsd.algorithm.AbstractWSDAlgorithm;
 import de.tudarmstadt.ukp.dkpro.wsd.algorithm.WSDAlgorithmCollectiveSequentialBasic;
@@ -38,7 +39,6 @@ import de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.wikipedia.util.S
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventoryException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseWeightedInventory;
-import dkpro.similarity.algorithms.api.SimilarityException;
 import edu.uci.ics.jung.algorithms.scoring.PageRankWithPriors;
 import edu.uci.ics.jung.graph.DirectedSparseGraph;
 import edu.uci.ics.jung.graph.Graph;

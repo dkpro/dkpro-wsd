@@ -25,11 +25,11 @@ import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.fit.descriptor.ExternalResource;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceSpecifier;
+import org.dkpro.similarity.algorithms.api.SimilarityException;
+import org.dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.LexicalSemanticResource;
 import de.tudarmstadt.ukp.dkpro.wsd.wsi.algorithm.SimpleGraphClusteringInductionAlgorithm;
-import dkpro.similarity.algorithms.api.SimilarityException;
-import dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 
 /**
  * @author zorn

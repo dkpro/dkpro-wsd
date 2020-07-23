@@ -18,6 +18,9 @@
 
 package de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.wikipedia.algorithm;
 
+import org.dkpro.similarity.algorithms.api.SimilarityException;
+import org.dkpro.similarity.algorithms.wikipedia.measures.WikiLinkComparator;
+
 import de.tudarmstadt.ukp.dkpro.wsd.graphconnectivity.iterative.algorithm.SequentialGraphDisambiguation;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
 import de.tudarmstadt.ukp.wikipedia.api.DatabaseConfiguration;
@@ -25,8 +28,6 @@ import de.tudarmstadt.ukp.wikipedia.api.WikiConstants.Language;
 import de.tudarmstadt.ukp.wikipedia.api.Wikipedia;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiApiException;
 import de.tudarmstadt.ukp.wikipedia.api.exception.WikiInitializationException;
-import dkpro.similarity.algorithms.api.SimilarityException;
-import dkpro.similarity.algorithms.wikipedia.measures.WikiLinkComparator;
 
 /**
  * A class for sequential disambiguation using Wikipedia links as weights between senses

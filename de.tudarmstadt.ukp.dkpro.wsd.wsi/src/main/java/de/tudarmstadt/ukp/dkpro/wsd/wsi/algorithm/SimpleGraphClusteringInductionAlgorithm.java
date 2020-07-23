@@ -25,14 +25,14 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.collections15.Transformer;
+import org.dkpro.similarity.algorithms.api.SimilarityException;
+import org.dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 
 import de.tudarmstadt.ukp.dkpro.lexsemresource.Entity;
 import de.tudarmstadt.ukp.dkpro.lexsemresource.LexicalSemanticResource;
 import de.tudarmstadt.ukp.dkpro.lexsemresource.exception.LexicalSemanticResourceException;
 import de.tudarmstadt.ukp.dkpro.wsd.WSDException;
 import de.tudarmstadt.ukp.dkpro.wsd.si.SenseInventory;
-import dkpro.similarity.algorithms.api.SimilarityException;
-import dkpro.similarity.algorithms.api.TermSimilarityMeasure;
 import edu.uci.ics.jung.algorithms.cluster.EdgeBetweennessClusterer;
 import edu.uci.ics.jung.algorithms.cluster.WeakComponentClusterer;
 import edu.uci.ics.jung.algorithms.filters.FilterUtils;
