@@ -106,14 +106,14 @@
     <developer>
       <id>miller</id>
       <name>Tristan Miller</name>
-      <email>miller@ukp.informatik.tu-darmstadt.de</email>
-      <url>http://www.nothingisreal.com/</url>
-      <organization>Ubiquitous Knowledge Processing Lab, Department of Computer Science, Technische Universität Darmstadt</organization>
-      <organizationUrl>https://www.ukp.tu-darmstadt.de/</organizationUrl>
+      <email>tristan.miller@ofai.at</email>
+      <url>https://logological.org/</url>
+      <organization>Austrian Research Institute for Artificial Intelligence</organization>
+      <organizationUrl>http://ofai.at/</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
-      <timezone>Europe/Berlin</timezone>
+      <timezone>Europe/Vienna</timezone>
     </developer>
   </developers>
   <organization>
