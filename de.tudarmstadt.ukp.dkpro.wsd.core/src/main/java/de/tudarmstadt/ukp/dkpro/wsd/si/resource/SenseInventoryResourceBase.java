@@ -161,6 +161,13 @@ public abstract class SenseInventoryResourceBase
     }
 
     @Override
+    public String getSenseDescription(String senseId, boolean lang)
+    	throws SenseInventoryException
+    {
+    	return inventory.getSenseDescription(senseId,lang);
+    }
+    
+    @Override
     public POS getPos(String senseId)
         throws SenseInventoryException
     {

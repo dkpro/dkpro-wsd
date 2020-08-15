@@ -121,6 +121,11 @@ public class InducedSenseInventory
         }
         return resBuilder.toString().trim();
     }
+    
+    @Override
+    public String getSenseDescription(String senseId, boolean seclang) throws SenseInventoryException {
+		return getSenseDescription(senseId);
+	}
 
     @Override
     public String getSenseInventoryName()
