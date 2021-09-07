@@ -102,7 +102,12 @@ public class LsrSenseInventory
             throw new SenseInventoryException(e);
         }
     }
-
+    
+    @Override
+    public String getSenseDescription(String senseId, boolean seclang) throws SenseInventoryException {
+		return getSenseDescription(senseId);
+	}
+    
     @Override
     public POS getPos(String senseId)
         throws SenseInventoryException

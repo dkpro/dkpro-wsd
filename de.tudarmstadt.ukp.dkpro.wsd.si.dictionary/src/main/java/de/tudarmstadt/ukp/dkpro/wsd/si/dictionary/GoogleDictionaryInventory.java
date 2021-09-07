@@ -133,7 +133,12 @@ public class GoogleDictionaryInventory
             throw new SenseInventoryException("invalid sense ID " + senseId);
         }
     }
-
+    
+    @Override
+    public String getSenseDescription(String senseId, boolean seclang) throws SenseInventoryException {
+		return getSenseDescription(senseId);
+	}
+    
     @Override
     public Map<String, List<String>> getSenseInventory()
         throws SenseInventoryException

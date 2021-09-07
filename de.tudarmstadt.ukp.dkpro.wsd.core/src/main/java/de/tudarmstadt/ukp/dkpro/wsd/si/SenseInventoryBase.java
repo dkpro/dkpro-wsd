@@ -70,4 +70,12 @@ public abstract class SenseInventoryBase
         }
         return mostFrequentSense;
     }
+    
+    @Override
+    public String getSenseDescription(String senseId,boolean seclang)
+        throws SenseInventoryException
+    {
+    	return  getSenseDescription(senseId);
+    }
+    
 }
